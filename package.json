@@ -1,0 +1,70 @@
+{
+  "name": "johnywalves.github.io",
+  "private": true,
+  "description": "A page to share knowlegde and personal achievement",
+  "version": "0.1.0",
+  "author": "Johny W. Alves <johnywalves@gmail.com>",
+  "dependencies": {
+    "@material-ui/core": "4.7.0",
+    "@material-ui/icons": "4.5.1",
+    "@types/react": "^16.9.13",
+    "algoliasearch": "^3.35.1",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.18.3",
+    "gatsby-image": "^2.2.33",
+    "gatsby-plugin-algolia-search": "^0.5.6",
+    "gatsby-plugin-manifest": "^2.2.16",
+    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-react-helmet": "^3.1.7",
+    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-transition-link": "^1.17.7",
+    "gatsby-remark-images": "^3.1.32",
+    "gatsby-remark-lazy-load": "^1.0.2",
+    "gatsby-remark-prismjs": "^3.3.24",
+    "gatsby-remark-relative-images": "^0.2.3",
+    "gatsby-source-filesystem": "^2.1.22",
+    "gatsby-transformer-remark": "^2.6.32",
+    "gatsby-transformer-sharp": "^2.2.16",
+    "gsap": "^3.0.4",
+    "lazysizes": "^5.2.0-beta1",
+    "prismjs": "^1.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-disqus-comments": "^1.4.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-instantsearch-dom": "^6.0.0",
+    "react-localization": "^1.0.15",
+    "react-vertical-timeline-component": "^2.5.0",
+    "styled-components": "^4.4.1",
+    "styled-icons": "^9.0.1",
+    "styled-media-query": "^2.1.2",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.5",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "gatsby",
+    "develop",
+    "personal"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnywalves/johnywalves.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/johnywalves/johnywalves.github.io/issues"
+  }
+}
