@@ -114,7 +114,7 @@ ggplot(episodeRatingSerie, aes(x = ordemEpisode, y = averageRating)) +
   theme_minimal()
 ```
 
-![plot of chunk serie](/assets/Rfig/serie-1.svg)
+![plot of chunk serie](/assets/img/serie-1.svg)
 
 #### Inclusão de comparações
 
@@ -158,7 +158,7 @@ ggplot(mediaTemporada, aes(x=seasonNumber, y=averageRating)) +
     theme_minimal()
 ```
 
-![plot of chunk temporadas](/assets/Rfig/temporadas-1.svg)
+![plot of chunk temporadas](/assets/img/temporadas-1.svg)
 
 ### Comparação entre Séries
 
@@ -201,7 +201,7 @@ ggplot(grupoSeries, aes(x=seasonNumber, y=averageRating)) +
     theme_minimal()
 ```
 
-![plot of chunk comparacao](/assets/Rfig/comparacao-1.svg)
+![plot of chunk comparacao](/assets/img/comparacao-1.svg)
 
 ```r
 # Quais as melhores de todos os tempos

@@ -2,7 +2,7 @@
 date: 2018-10-25 20:33:15 -0300
 title: Controle da evolução corporal
 description: Lorem lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm
-category: Py
+category: Python
 tags: [Python, Visualização]
 featuredImage: ../static/assets/img/balance-1.jpg
 highlight: true
@@ -154,7 +154,7 @@ plt.savefig('evolution.png', dpi=300)
 plt.show()
 ```
 
-![plot of chunk controle_peso](/./assets/Rfig/controle_peso-1.svg)
+![plot of chunk controle_peso](/assets/img/controle_peso-1.svg)
 
 ### Visualização da Tabela
 

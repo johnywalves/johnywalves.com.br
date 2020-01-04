@@ -2,7 +2,7 @@
 date: 2018-09-24 22:17:00 -0300
 title: Configurar Jupyter para Servidor
 description: Lorem lipsunm
-category: Py
+category: Python
 tags: [Python, Jupyter]
 featuredImage: ../static/assets/img/jupiter-1.jpg
 ---

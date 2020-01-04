@@ -2,8 +2,8 @@
 date: 2017-10-04 11:03:00 -0300
 title: Biblioteca Steam
 description: Lorem lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm
-category: Web
-tags: [Web, JavaScript, HTML, CSS]
+category: JS
+tags: [JavaScript, HTML, CSS]
 featuredImage: ../static/assets/img/steam-1.jpg
 highlight: true
 ---

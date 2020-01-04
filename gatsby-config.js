@@ -73,6 +73,7 @@ module.exports = {
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
+        'gatsby-plugin-netlify-cms',
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -84,18 +85,18 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [{
-                        resolve: "gatsby-remark-relative-images",
-                        options: {
-                            name: "uploads",
-                        },
+                    resolve: "gatsby-remark-relative-images",
+                    options: {
+                        name: "uploads",
                     },
-                    {
-                        resolve: "gatsby-remark-images",
-                        options: {
-                            maxWidth: 960,
-                            linkImagesToOriginal: false,
-                        },
+                },
+                {
+                    resolve: "gatsby-remark-images",
+                    options: {
+                        maxWidth: 960,
+                        linkImagesToOriginal: false,
                     },
+                },
                     `gatsby-remark-lazy-load`,
                     `gatsby-remark-prismjs`,
                 ],

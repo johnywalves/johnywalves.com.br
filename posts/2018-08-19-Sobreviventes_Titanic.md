@@ -188,7 +188,7 @@ ggplot(rankImportance, aes(x = reorder(Variables, Importance),
   theme_minimal()
 ```
 
-![plot of chunk titanic_importancia](/./assets/Rfig/titanic_importancia-1.svg)
+![plot of chunk titanic_importancia](/assets/img/titanic_importancia-1.svg)
 
 ### Visualização
 
@@ -214,7 +214,7 @@ ggplot(train, aes(as.factor(Title), fill=Sub, colour=Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_titulos](/./assets/Rfig/titanic_titulos-1.svg)
+![plot of chunk titanic_titulos](/assets/img/titanic_titulos-1.svg)
 
 No gráfico mostra a segunda característica em importância, crianças de até possuem mais possibilidades de adultos de 16 a 35 anos
 
@@ -228,7 +228,7 @@ ggplot(train, aes(Age, fill = Sub, colour = Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_idade](/./assets/Rfig/titanic_idade-1.svg)
+![plot of chunk titanic_idade](/assets/img/titanic_idade-1.svg)
 
 Infelizmente as pessoas que pagaram menos pela passagem, por estarem mais longes dos botes ou por outros fatores, é o terceiro critério
 
@@ -242,7 +242,7 @@ ggplot(train, aes(Fare, fill = Sub, colour = Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_preco](/./assets/Rfig/titanic_preco-1.svg)
+![plot of chunk titanic_preco](/assets/img/titanic_preco-1.svg)
 
 Embora seja o sétimo o tamanho da família é um dados interessante, proporcionalmente os solteiros tiveram a menor oportunidade de sobrevivência
 
@@ -258,4 +258,4 @@ ggplot(train, aes(as.numeric(Familia), fill=Sub, colour=Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_familia](/./assets/Rfig/titanic_familia-1.svg)
+![plot of chunk titanic_familia](/assets/img/titanic_familia-1.svg)

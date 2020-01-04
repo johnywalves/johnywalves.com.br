@@ -2,7 +2,7 @@
 date: 2018-12-11 16:22:15 -0200
 title: Render Web Template (Python Flask)
 description: Lorem lipsunm
-category: Py
+category: Python
 tags: [Web, Python, Flask]
 topics: [Montagem do Modelo, Preparação, Interpretação, Arquivos Estáticos, Favicon, Execução]
 featuredImage: ../static/assets/img/gearspy-1.jpg

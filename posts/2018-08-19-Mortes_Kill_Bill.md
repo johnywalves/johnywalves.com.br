@@ -31,8 +31,7 @@ Carregando os dados através do *csv* na pasta e a visualização proporcionou u
 
 ```r
 # Carregar os dados do arquivo csv
-tarantino <- read.csv('tarantino.csv')
-# Visualizar os primeiros registros do data.frame
+tarantino <- read.csv('tarantino.csv')../static
 head(tarantino)
 ```
 
@@ -97,7 +96,7 @@ graph <- ggplot(mortes, aes(x=qtd, y=minutes_in)) +
 graph
 ```
 
-![plot of chunk killbill_mortes](/assets/Rfig/killbill_mortes-1.svg)
+![plot of chunk killbill_mortes](/assets/img/killbill_mortes-1.svg)
 
 Por final, gerei o arquivo com as informações na variável `graph` para visualização futura e divulgação no site
 

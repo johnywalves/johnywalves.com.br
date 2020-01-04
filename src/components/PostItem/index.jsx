@@ -9,9 +9,7 @@ const PostItem = ({ slug, date, timeToRead, title, description, featuredImage, b
             {featuredImage ?
                 <S.PostItemImage fixed={featuredImage.childImageSharp.fixed} />
                 :
-                <S.PostItemTag background={background}>
-                    {category}
-                </S.PostItemTag>
+                <S.PostItemTag>{category}</S.PostItemTag>
             }
             <S.PostItemInfo>
                 <S.PostItemDate>

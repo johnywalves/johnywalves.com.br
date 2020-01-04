@@ -2,7 +2,7 @@
 date: 2019-06-20 19:35:00 -0300
 title: Flask LiveReload
 description: Lorem lipsunm
-category: Py
+category: Python
 tags: [Flask, Python, Web]
 featuredImage: ../static/assets/img/python-1.jpg
 published: false

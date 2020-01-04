@@ -2,8 +2,8 @@
 date: 2019-05-24 19:52:13 -0300
 title: Começando com Jekyll
 description: Lorem lipsunm
-category: Ruby
-tags: [Web, CMS, Ruby]
+category: Jekyll
+tags: [Web, CMS, Jekyll]
 featuredImage: ../static/assets/img/jekyll-1.jpg
 ---
 

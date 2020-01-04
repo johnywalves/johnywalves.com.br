@@ -2,7 +2,7 @@
 date: 2019-02-06 16:22:15 -0200
 title: Arquivos de texto grandes com PowerShell
 description: Lorem lipsunm
-category: PS
+category: Windows
 tags: [PowerShell, Arquivos]
 featuredImage: ../static/assets/img/files-1.jpg
 ---

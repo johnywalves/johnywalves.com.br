@@ -2,7 +2,7 @@
 date: 2019-06-20 19:35:00 -0300
 title: Classificação de Texto com NLTK
 description: Lorem lipsunm
-category: Py
+category: Python
 tags: ["Linguagem Natural", "Machine Learning", Python]
 featuredImage: ../static/assets/img/python-1.jpg
 published: false
