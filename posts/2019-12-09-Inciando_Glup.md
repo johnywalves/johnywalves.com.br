@@ -4,7 +4,7 @@ title: Iniciando com Gulp
 description: Automação de processo de desenvolvimento Web com hot reloading e minify
 category: Web
 tags: [HTML, CSS, Automação]
-featuredImage: ../static/assets/img/alchemy-1.jpg
+featuredImage: ../static/assets/img/gulp-1.jpg
 ---
 
 Desenvolvimento Web é simples de começar, HTML + CSS são de fácil compressão para iniciar e pode escalar como se fosso eterno, para facilitar esse proceso existe várias ferramentas um das mais fáceis de iniciar é o Gulp
@@ -12,9 +12,9 @@ Desenvolvimento Web é simples de começar, HTML + CSS são de fácil compressã
 ## Instalação
 
 Instalar o [NodeJS](https://nodejs.org/), podemos dar sequência com uso de npm ou [Yarn](https://yarnpkg.com/) configurando um ambiente para desenvolvimento com Node  
-Para começar um projeto e criar o `package.json` com o assiste 
+Para começar um projeto e criar o `package.json` com o assiste
 
-```bash 
+```bash
 yarn init
 # ou
 npm init
@@ -28,7 +28,7 @@ npm install gulp
 
 ## Compilação
 
-Código simples para iniciar com 
+Código simples para iniciar com
 
 ```javascript
 const gulp = require('gulp')

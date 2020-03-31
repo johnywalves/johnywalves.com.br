@@ -39,14 +39,14 @@ export default {
         by: "por",
         laboratory: {
             title: "blog",
-            link: "/blog"
+            link: "/blog/"
         },
         list: [
             { title: "posts", link: "#posts" },
             { title: "conhecimentos", link: "#skills" },
             { title: "história", link: "#history" },
             { title: "contato", link: "#contact" },
-            { title: "blog", link: "/blog", icon: true }
+            { title: "blog", link: "/blog/", icon: true }
         ]
     },
     contact: {
@@ -225,7 +225,8 @@ export default {
             title: "Analista Desenvolvedor",
             institution: "Invillia",
             description: [
-                "Desenvolvimento Web (JavaScript, TypeScript, React, HTML e CSS)"
+                "Planejamento e desenvolvimento de ferramentas para gestão de equipes remotas e distribuição de conhecimentos",
+                "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)"
             ],
             type: "work"
         },
@@ -272,7 +273,7 @@ export default {
             ],
             production: [{
                 title: "Título: ForeSeries - Uma abordagem para predição de valores em séries temporais",
-                file: "/docs/fore_series_johnywalves_pt.pdf",
+                file: "/assets/docs/fore_series_johnywalves_pt.pdf",
             }],
             type: "education"
         },

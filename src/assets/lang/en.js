@@ -39,14 +39,14 @@ export default {
         by: "by",
         laboratory: {
             title: "blog",
-            link: "/blog"
+            link: "/blog/"
         },
         list: [
             { title: "posts", link: "#posts" },
             { title: "skills", link: "#skills" },
             { title: "timeline", link: "#history" },
             { title: "contact", link: "#contact" },
-            { title: "blog", link: "/blog", icon: true }
+            { title: "blog", link: "/blog/", icon: true }
         ]
     },
     contact: {
@@ -225,7 +225,8 @@ export default {
             title: "Developer",
             institution: "Invillia",
             description: [
-                "Web Development (JavaScript, TypeScript, React, HTML e CSS)"
+                "Design and development of tools for remote team management and knowledge distribution",
+                "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, NextJS)"
             ],
             type: "work"
         },
@@ -272,7 +273,7 @@ export default {
             ],
             production: [{
                 title: "Essay: ForeSeries - An approach to predicting values in time series (Portuguese)",
-                file: "/docs/fore_series_johnywalves_pt.pdf"
+                file: "/assets/docs/fore_series_johnywalves_pt.pdf"
             }],
             type: "education"
         },

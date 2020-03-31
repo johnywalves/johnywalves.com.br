@@ -1,9 +1,9 @@
 const links = [{
         label: "Home",
-        url: "/blog"
+        url: "/blog/"
     },
     {
-        label: "Sobre Mim",
+        label: "Sobre",
         url: "/"
     }
 
