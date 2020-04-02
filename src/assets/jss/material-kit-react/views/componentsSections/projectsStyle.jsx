@@ -74,5 +74,11 @@ export default {
   },
   cardBody: {
     padding: 0
-  }
+  },
+  imgProject: {
+    content: "''",
+    height: "15rem",
+    width: "100%",
+    backgroundSize: "cover",
+  },
 };

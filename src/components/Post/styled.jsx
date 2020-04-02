@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import Img from "gatsby-image";
 
 export const PostHeader = styled.header`
   color: var(--texts);
@@ -14,7 +13,11 @@ export const PostHeader = styled.header`
   `}  
 `
 
-export const PostFeaturedImage = styled(Img)`
+export const PostCoverImage = styled.div`
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 `
 
 export const PostTitle = styled.h1`

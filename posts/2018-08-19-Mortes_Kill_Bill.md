@@ -4,7 +4,7 @@ title: Mortes em Kill Bill
 description: Visualização de dados de filmes do Tarantino com a linguagem R
 category: R
 tags: [Visualização, R]
-featuredImage: ../static/assets/img/kill-bill-1.jpg
+coverImage: /assets/img/kill-bill-1.jpg
 highlight: true
 ---
 

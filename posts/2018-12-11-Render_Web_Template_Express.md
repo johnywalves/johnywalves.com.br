@@ -5,7 +5,7 @@ description: Lorem lipsunm
 category: JS
 tags: [Web, JavaScript, Express]
 topics: [Montagem do Modelo, Preparação, Interpretação, Arquivos Estáticos, Favicon, Execução]
-featuredImage: ../static/assets/img/gearsjs-1.jpg
+coverImage: /assets/img/gearsjs-1.jpg
 ---
 
 Entregar páginas Web intepretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponiveis somente neste ambiente

@@ -4,7 +4,7 @@ title: Classificação de Texto com NLTK
 description: Lorem lipsunm
 category: Python
 tags: ["Linguagem Natural", "Machine Learning", Python]
-featuredImage: ../static/assets/img/python-1.jpg
+coverImage: /assets/img/python-1.jpg
 published: false
 ---
 

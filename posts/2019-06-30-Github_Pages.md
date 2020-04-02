@@ -4,7 +4,7 @@ title: GitHub Pages
 description: Alguns exemplos de uso da provedor de páginas estáticas do GitHub
 category: Web
 tags: [GitHub, HTML, Ruby]
-featuredImage: ../static/assets/img/gitpages-1.jpg
+coverImage: /assets/img/gitpages-1.jpg
 highlight: true
 ---
 
@@ -26,7 +26,7 @@ Alguns páginas estáticas
 
 Alguns exemplos com Jekyll
 
-[Esta página](https://johnywalves.github.io) / [Código Fonte](https://github.com/johnywalves/johnywalves.github.io)  
+[Blog Antigo](https://johnywalves.github.io) / [Código Fonte](https://github.com/johnywalves/johnywalves.github.io)  
 [Mapa](https://johnywalves.github.io/wolt) / [Código Fonte](https://github.com/johnywalves/wolt)  
 
 ## Referências

@@ -4,7 +4,7 @@ title: IDEs Python (Jupyter e Spyder)
 description: Lorem lipsunm
 category: Py
 tags: [Ambiente, Python, Jupyter, Spyder]
-featuredImage: ../static/assets/img/jupiter-1.jpg
+coverImage: /assets/img/jupiter-1.jpg
 ---
 
 Ambientes de Desenvolvimentos ou IDE (Integrated Development Environment) são ferramentas para auxliar o desenvolvimento com validações de sintaxe, autopreencimento de comandos, automação para executar e publicar o projeto devenvolvido  

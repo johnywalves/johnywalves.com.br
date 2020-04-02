@@ -1,6 +1,5 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import Img from "gatsby-image";
 // nodejs library that concatenates classes
 import classNames from "classnames"
 
@@ -31,13 +30,7 @@ const SectionPosts = ({ classes }) => {
                 title
                 tags
                 description
-                featuredImage {
-                    childImageSharp {
-                      fixed(width: 304, height: 228) {
-                        ...GatsbyImageSharpFixed_tracedSVG
-                      }
-                    }
-                }
+                coverImage
             }
             timeToRead
             fields {
@@ -49,7 +42,7 @@ const SectionPosts = ({ classes }) => {
     }
   `)
 
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery)
+  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery, classes.imgProject)
   const navCardHeader = classNames(classes.imgRounded, classes.cardHeader)
   const navCardBody = classNames(classes.cardBody, classes.textCenter)
 
@@ -68,11 +61,7 @@ const SectionPosts = ({ classes }) => {
               <Card>
                 <div className={classes.cardProject}>
                   <CardHeader className={navCardHeader}>
-                    <Img
-                      alt={node.frontmatter.title}
-                      fixed={node.frontmatter.featuredImage.childImageSharp.fixed}
-                      className={navImageClasses}
-                    />
+                    <div className={navImageClasses} style={{ backgroundImage: `url(${node.frontmatter.coverImage})` }} />
                   </CardHeader>
                   <CardBody className={navCardBody} justify="center">
                     <h4 style={{ marginBottom: 0 }} >{node.frontmatter.title}</h4>

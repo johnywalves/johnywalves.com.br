@@ -26,7 +26,7 @@ const BlogList = props => {
       <S.ListWrapper>
         {postList.map(({
           node: {
-            frontmatter: { date, title, category, description, featuredImage },
+            frontmatter: { date, title, category, description, coverImage },
             timeToRead,
             fields: { slug }
           }
@@ -39,7 +39,7 @@ const BlogList = props => {
             timeToRead={timeToRead}
             title={title}
             description={description}
-            featuredImage={featuredImage}
+            coverImage={coverImage}
           />)}
       </S.ListWrapper>
       <Pagination
@@ -69,13 +69,7 @@ export const query = graphql`
             title
             category
             description
-            featuredImage {
-              childImageSharp {
-                fixed(width: 120, height: 120) {
-                  ...GatsbyImageSharpFixed_tracedSVG
-                }
-              }
-            }
+            coverImage
           }
           timeToRead
           fields {

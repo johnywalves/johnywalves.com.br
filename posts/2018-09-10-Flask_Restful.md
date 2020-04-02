@@ -5,7 +5,7 @@ description: Lorem lipsunm
 category: Py
 tags: [Flask, Python, Web, API]
 topics: [Ambiente, Flask, REST, JSON, Token, Testando, Criptografia Hash, Compilando]
-featuredImage: ../static/assets/img/flask-1.jpg
+coverImage: /assets/img/flask-1.jpg
 ---
 
 A vantagem de utilizar uma Web API para garantir o acesso e manipulação de dados de uma aplicação possibilita controlar a disponibilidade, segurança e formato dos dados  

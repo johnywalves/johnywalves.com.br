@@ -5,7 +5,7 @@ description: Lorem lipsunm
 category: Linux
 tags: [Linux, Bash, Shell]
 topics: [Arquivos e Diretórios, Redes, Usuário e Acessos, CRON, Processos, Serviços]
-featuredImage: ../static/assets/img/pinguim-1.jpg
+coverImage: /assets/img/pinguim-1.jpg
 ---
 
 Recentemente me deparei com a necessidade de aprender a lidar com o linux, sem uma interface gráfica, amei  

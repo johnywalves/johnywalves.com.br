@@ -4,7 +4,7 @@ title: Controle da evolução corporal
 description: Lorem lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm
 category: Python
 tags: [Python, Visualização]
-featuredImage: ../static/assets/img/balance-1.jpg
+coverImage: /assets/img/balance-1.jpg
 highlight: true
 ---
 

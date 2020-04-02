@@ -16,6 +16,7 @@ const postQuery = `{
                     date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                     description
                     tags
+                    coverImage
                 }
                 excerpt(pruneLength: 5000)
                 timeToRead

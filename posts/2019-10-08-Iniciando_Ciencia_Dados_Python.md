@@ -5,7 +5,7 @@ description: Lorem lipsunm
 category: Python
 tags: [Python, Pandas, "Ciência de Dados"]
 topics: [Ambiente, "Instalação de Pacotes", "Carregar e Entender os dados"]
-featuredImage: ../static/assets/img/alchemy-1.jpg
+coverImage: /assets/img/alchemy-1.jpg
 published: false
 ---
 

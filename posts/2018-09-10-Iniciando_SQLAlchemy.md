@@ -4,7 +4,7 @@ title: Iniciando com SQLAlchemy
 description: Lorem lipsunm
 category: Py
 tags: [SQLAlchemy, Python, "Serialização"]
-featuredImage: ../static/assets/img/alchemy-1.jpg
+coverImage: /assets/img/alchemy-1.jpg
 ---
 
 Instalar o pacote do SQLAlchemy pelo repositório PiPy

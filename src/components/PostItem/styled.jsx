@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import Img from "gatsby-image";
 import Anilink from "gatsby-plugin-transition-link/AniLink";
 
 export const PostItemLink = styled(Anilink)`
@@ -38,7 +37,7 @@ export const PostItemWrapper = styled.section`
     `}    
 `
 
-export const PostItemImage = styled(Img)`
+export const PostItemImage = styled.div`
     align-items: center;
     border-radius: 50%;
     color: var(--white);
@@ -46,8 +45,10 @@ export const PostItemImage = styled(Img)`
     font-size: 1.3rem;
     font-weight: 700;
     justify-content: center;
-    min-height: 90px;
-    min-width: 90px;
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: cover;
 
     ${media.lessThan("large")`
         border-radius: 0;

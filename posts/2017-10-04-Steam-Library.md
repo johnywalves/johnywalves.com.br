@@ -4,7 +4,7 @@ title: Biblioteca Steam
 description: Lorem lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm
 category: JS
 tags: [JavaScript, HTML, CSS]
-featuredImage: ../static/assets/img/steam-1.jpg
+coverImage: /assets/img/steam-1.jpg
 highlight: true
 ---
 

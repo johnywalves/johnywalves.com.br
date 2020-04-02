@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import * as S from "./styled";
 
-const PostItem = ({ slug, date, timeToRead, title, description, featuredImage, background, category }) => (
+const PostItem = ({ slug, date, timeToRead, title, description, coverImage, category }) => (
     <S.PostItemLink to={slug} cover direction="left" bg="var(--background)" duration={0.6}>
         <S.PostItemWrapper>
-            {featuredImage ?
-                <S.PostItemImage fixed={featuredImage.childImageSharp.fixed} />
+            {coverImage ?
+                <S.PostItemImage style={{ backgroundImage: `url(${coverImage})` }} />
                 :
                 <S.PostItemTag>{category}</S.PostItemTag>
             }

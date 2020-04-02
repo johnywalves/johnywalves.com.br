@@ -4,7 +4,7 @@ title: Configurar Jupyter para Servidor
 description: Lorem lipsunm
 category: Python
 tags: [Python, Jupyter]
-featuredImage: ../static/assets/img/jupiter-1.jpg
+coverImage: /assets/img/jupiter-1.jpg
 ---
 
 Para usar o notebook em um servidor é necessário alterar o arquivo de configuração, que pode ser gerado pelo comando

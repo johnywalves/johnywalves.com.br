@@ -4,7 +4,7 @@ title: PipEnv e Virtual Enviroment
 description: Lorem lipsunm
 category: Py
 tags: [Ambiente, Python]
-featuredImage: ../static/assets/img/library-1.jpg
+coverImage: /assets/img/library-1.jpg
 ---
 
 Para facilitar o controle de dependências de uma projeto Python podemos isolar um ambiente para executar com um versão controlada do Python e dos seus pacotes  

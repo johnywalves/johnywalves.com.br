@@ -4,7 +4,7 @@ title: Previsão de Sobreviventes do Titanic
 description: Visualização de dados e machine learning com o desafio do Kaggle do Titanic
 category: R
 tags: [Machine Learning, R]
-featuredImage: ../static/assets/img/titanic-1.jpg
+coverImage: /assets/img/titanic-1.jpg
 highlight: true
 ---
 
