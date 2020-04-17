@@ -17,7 +17,8 @@ export default {
     socialLabel: "Soft Skills",
     socialSubLabel: "Some of the my interpersonal skills",
     socialSkills: ["Friendly", "Regardful", "Teamwork", "Provision for Learning"],
-    services: [{
+    services: [
+        {
             title: "Software Engineer",
             color: "primary",
             description: "Experience in structuring and managing software development, with process processes and business process modeling"
@@ -55,78 +56,126 @@ export default {
         email: "E-mail",
         phone: "Phone",
         message: "Message",
-        send: "Send Message"
+        send: "Send Message",
+        socialMedia: "I'm on social media",
+        or: "or",
+        emailInstead: "If you prefer a more traditional way, send me an email"
     },
     skillsLabel: "Hard Skills",
     skillsSubLabel: "Things that I believe possess the capacity to be productive and I like to work",
     skills: [{
-            type: "Languages",
-            list: [
-                { title: "C#", level: 55 },
-                { title: "Delphi", level: 60 },
-                { title: "HTML e CSS", level: 80 },
-                { title: "Java", level: 60 },
-                { title: "JavaScript", level: 90 },
-                { title: "Python", level: 70 },
-                { title: "TypeScript", level: 60 }
-            ]
-        },
-        {
-            type: "Frameworks e Libraries",
-            list: [
-                { title: "Angular", level: 30 },
-                { title: "Bootstrap", level: 85 },
-                { title: "Express", level: 80 },
-                { title: "Flask", level: 60 },
-                { title: "Ionic", level: 20 },
-                { title: "Gatsby", level: 40 },
-                { title: "Jekyll", level: 60 },
-                { title: "NextJS", level: 50 },
-                { title: "Node", level: 60 },
-                { title: "PicassoJS", level: 20 },
-                { title: "React", level: 80 },
-                { title: "React Native", level: 60 },
-                { title: "Redux", level: 75 },
-                { title: "Sprint Boot", level: 70 },
-                { title: "SQLAlchemy", level: 60 },
-                { title: "Thymeleaf", level: 35 },
-                { title: "Wordpress", level: 20 }
-            ]
-        },
-        {
-            type: "Data Manipulation",
-            list: [
-                { title: "Cassandra", level: 20 },
-                { title: "SQL Server", level: 80 },
-                { title: "MySQL", level: 80 },
-                { title: "Pentaho", level: 40 },
-                { title: "PostgreSQL", level: 60 },
-                { title: "Python", level: 60 },
-                { title: "Oracle PL/SQL", level: 40 },
-                { title: "Qlik Sense", level: 20 },
-                { title: "R", level: 40 }
-            ]
-        },
-        {
-            type: "Tools",
-            list: [
-                { title: "BPM", level: 60 },
-                { title: "Docker", level: 20 },
-                { title: "Firebase", level: 30 },
-                { title: "Git", level: 90 },
-                { title: "Google Cloud", level: 20 },
-                { title: "Scrum", level: 60 },
-                { title: "SVN", level: 80 },
-                { title: "Jenkins", level: 40 },
-                { title: "VS Code", level: 60 }
-            ]
-        }
+        type: "Languages",
+        list: [
+            { title: "C#", level: 55 },
+            { title: "Delphi", level: 60 },
+            { title: "HTML e CSS", level: 80 },
+            { title: "Java", level: 60 },
+            { title: "JavaScript", level: 90 },
+            { title: "Python", level: 70 },
+            { title: "TypeScript", level: 60 }
+        ]
+    },
+    {
+        type: "Frameworks e Libraries",
+        list: [
+            { title: "Angular", level: 30 },
+            { title: "Bootstrap", level: 85 },
+            { title: "Express", level: 80 },
+            { title: "Flask", level: 60 },
+            { title: "Ionic", level: 20 },
+            { title: "Gatsby", level: 40 },
+            { title: "Jekyll", level: 60 },
+            { title: "NextJS", level: 50 },
+            { title: "Node", level: 60 },
+            { title: "PicassoJS", level: 20 },
+            { title: "React", level: 80 },
+            { title: "React Native", level: 60 },
+            { title: "Redux", level: 75 },
+            { title: "Sprint Boot", level: 70 },
+            { title: "SQLAlchemy", level: 60 },
+            { title: "Thymeleaf", level: 35 },
+            { title: "Wordpress", level: 20 }
+        ]
+    },
+    {
+        type: "Data Manipulation",
+        list: [
+            { title: "Cassandra", level: 20 },
+            { title: "SQL Server", level: 80 },
+            { title: "MySQL", level: 80 },
+            { title: "Pentaho", level: 40 },
+            { title: "PostgreSQL", level: 60 },
+            { title: "Python", level: 60 },
+            { title: "Oracle PL/SQL", level: 40 },
+            { title: "Qlik Sense", level: 20 },
+            { title: "R", level: 40 }
+        ]
+    },
+    {
+        type: "Tools",
+        list: [
+            { title: "BPM", level: 60 },
+            { title: "Docker", level: 20 },
+            { title: "Firebase", level: 30 },
+            { title: "Git", level: 90 },
+            { title: "Google Cloud", level: 20 },
+            { title: "Scrum", level: 60 },
+            { title: "SVN", level: 80 },
+            { title: "Jenkins", level: 40 },
+            { title: "VS Code", level: 60 }
+        ]
+    }
     ],
     posts: {
         label: "Highlights Posts",
         subLabel: "Some chooose posts from",
         detail: "Go to post",
     },
+    awards: [
+        {
+            year: 2018,
+            name: "Highest Score Award",
+            who: "Fatec São Paulo"
+        },
+        {
+            year: 2018,
+            name: "Best Undergraduate Project Award",
+            who: "Fatec São Paulo"
+        }
+    ],
+    certification: [],
+    courses: [
+        {
+            year: 2018,
+            hours: 37,
+            description: "Data Science with Python, Qlik Sense and Neural Networks",
+            institution: "Igor Alcantara (Workshops)"
+        },
+        {
+            year: 2018,
+            hours: 29,
+            description: "React + Redux: Fundamentals",
+            institution: "Cod3r (Udemy)"
+        },
+        {
+            year: 2018,
+            hours: 40,
+            description: "Games 2D",
+            institution: "Senac São Paulo"
+        },
+        {
+            year: 2017,
+            hours: 24,
+            description: "Data Science with R and Machine Learning",
+            institution: "Igor Alcantara (Workshops)"
+        },
+        {
+            year: 2010,
+            hours: 128,
+            description: "Java Academy",
+            institution: "Globalcode"
+        }
+    ],
     projectsLabel: "Projects & developments",
     projectsSubLabel: "Some projects and experiments developed by me",
     projectsTerms: {
@@ -139,7 +188,8 @@ export default {
         category: "Category",
         tools: "Tools"
     },
-    projects: [{
+    projects: [
+        {
             title: "Github Pages",
             date: "June 2019",
             image: "steamuniverse.jpg",
@@ -220,7 +270,8 @@ export default {
     ],
     timelimeLabel: "Timeline",
     timelimeSubLabel: "My history in education and work experience",
-    timelime: [{
+    timelime: [
+        {
             date: "Nov 2019 - Atual",
             title: "Developer",
             institution: "Invillia",
@@ -231,13 +282,12 @@ export default {
             type: "work"
         },
         {
-            date: "Mar 2018 - Present",
+            date: "Mar 2018 - Mar 2020",
             title: "Specialization in Big Data",
             institution: "Senac Sao Paulo",
             description: [
                 "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
             ],
-            status: "Running",
             type: "education"
         },
         {
@@ -290,7 +340,7 @@ export default {
         },
         {
             date: "Oct 2013 - Set 2017",
-            title: "Senior Developer",
+            title: "Senior Software Developer",
             institution: "Emais Urbanismo",
             description: [
                 "Maintenance, support and development of internal ERP and CRM for fiscal, accounting, financial and real estate portfolio control (Delphi and Microsoft SQL Server)"
@@ -300,18 +350,18 @@ export default {
         {
             date: "Nov 2011 - Jun 2013",
             title: "Full Developer",
-            institution: "Terceiros",
+            institution: "Freelancer",
             description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "Provision of services for adjustments and automation of tax obligation deliveries (.Net C #)"
             ],
             type: "work"
         },
         {
             date: "Jan 2011 - Nov 2011",
-            title: "Developer",
+            title: "Software Developer",
             institution: "Dual Consultoria e Sistemas",
             description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "Development of management software for distributors with a focus on financial transactions and tax obligations (Progress)"
             ],
             type: "work"
         },
@@ -326,28 +376,28 @@ export default {
         },
         {
             date: "Mar 2008 - Jan 2011",
-            title: "Developer",
+            title: "Software Developer",
             institution: "Hexa Informática",
             description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "Engineering, development and implementation of a management and sales system for an optical network (Delphi and Microsoft SQL Server)"
             ],
             type: "work"
         },
         {
             date: "Dec 2005 - Mar 2008",
-            title: "Developer",
+            title: "Software Developer",
             institution: "Condor Informática",
             description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "ERP development for financial control, inventory and generation of deliveries for tax obligations (Delphi and Firebase)"
             ],
             type: "work"
         },
         {
             date: "Dec 2004 - Dec 2005",
-            title: "Developer",
+            title: "Software Developer",
             institution: "SOC Informática",
             description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                "Consulting and provision of services in accounting and information technology for individuals and companies (Delphi and Firebase)"
             ],
             type: "work"
         },

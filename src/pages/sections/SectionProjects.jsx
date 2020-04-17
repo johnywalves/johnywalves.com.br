@@ -27,7 +27,7 @@ function Transition(props) {
   return <Slide direction="down" {...props} />;
 }
 
-class ProfilePage extends React.Component {
+class SectionProjects extends React.Component {
   constructor(props) {
     super(props);
     this.state = { modal: Strings.projects.map(() => false) };
@@ -152,4 +152,4 @@ class ProfilePage extends React.Component {
   }
 }
 
-export default withStyles(projectsStyle)(ProfilePage);
+export default withStyles(projectsStyle)(SectionProjects);

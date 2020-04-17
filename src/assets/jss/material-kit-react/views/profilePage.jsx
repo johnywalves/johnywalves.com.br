@@ -61,7 +61,13 @@ const profilePageStyle = {
     "&:hover": {
       color: primaryColor
     }
-  }
+  },
+  socialMail: {
+    "& span, & svg": {
+      height: "36px",
+      width: "36px",
+    }
+  },
 };
 
 export default profilePageStyle;

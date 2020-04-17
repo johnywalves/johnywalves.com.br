@@ -11,7 +11,7 @@ import Strings from "components/strings";
 // styles
 import LanguageStyle from "assets/jss/material-kit-react/views/componentsSections/languageStyle";
 
-const SectionServices = ({ classes }) => (
+const SectionLanguage = ({ classes }) => (
   <div id="social" className={classes.section}>
     <div className={classes.container}>
       <GridContainer justify="center">
@@ -37,4 +37,4 @@ const SectionServices = ({ classes }) => (
   </div >
 )
 
-export default withStyles(LanguageStyle)(SectionServices)
+export default withStyles(LanguageStyle)(SectionLanguage)

@@ -11,7 +11,7 @@ import Button from "components/MaterialUI/CustomButtons/Button";
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
 import Icons from "components/SocialLinks/icons";
 
-const SectionSocialMedia = props => {
+const SectionMail = props => {
     const { classes, className } = props;
     const classButtom = classNames(classes.SocialMediaRealce, classes.socialMail, className)
     return (
@@ -29,4 +29,4 @@ const SectionSocialMedia = props => {
     )
 }
 
-export default withStyles(profilePageStyle)(SectionSocialMedia);
+export default withStyles(profilePageStyle)(SectionMail);

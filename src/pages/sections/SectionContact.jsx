@@ -15,7 +15,7 @@ import Strings from "components/strings"
 import SectionSocialMedia from "./SectionSocialMedia"
 import SectionMail from "./SectionMail"
 
-class SectionLogin extends React.Component {
+class SectionContact extends React.Component {
   constructor(props) {
     super(props)
 
@@ -78,10 +78,10 @@ class SectionLogin extends React.Component {
               <Card>
                 <CardHeader color="primary" className={classes.cardHeader}>
                   <h3>{Strings.contact.label}</h3>
-                  <h4>Estou nas redes sociais</h4>
+                  <h4>{Strings.contact.socialMedia}</h4>
                   <SectionSocialMedia className={classes.buttomSocialMedia} />
-                  <h5>ou</h5>
-                  <h4>Se preferir um meio mais tradicional, me mande um e-mail</h4> 
+                  <h5>{Strings.contact.or}</h5>
+                  <h4>{Strings.contact.emailInstead}</h4>
                   <SectionMail className={classes.buttomSocialMedia} />
                 </CardHeader>
               </Card>
@@ -93,4 +93,4 @@ class SectionLogin extends React.Component {
   }
 }
 
-export default withStyles(loginStyle)(SectionLogin);
+export default withStyles(loginStyle)(SectionContact);

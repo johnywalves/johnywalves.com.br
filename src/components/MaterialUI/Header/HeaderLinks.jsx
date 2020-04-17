@@ -63,27 +63,37 @@ const HeaderLinks = ({ classes, updateLanguage }) => {
     updateLanguage();
   }, [load, setLoad, lang, setLanguage]);
 
+  const moveSector = e => {
+    window.scrollTo({
+      top: document.querySelector(e.target.getAttribute("link")).offsetTop + document.querySelector("header").clientHeight * 4,
+      behavior: "smooth"
+    });
+  }
+
   return (
     <List className={classes.list}>
       {Strings.pages.list.map(({ link, icon, title }, index) => (
-        <ListItem className={classes.listItem} key={index} >
+        <ListItem className={classes.listItem} key={index}>
           {icon ?
             <Anilink
-
               to={link}
               className={classes.navLink}
-              cover direction="left" bg="var(--background)" duration={0.6}
+              cover
+              duration={0.6}
+              direction="left"
+              bg="var(--background)"
             >
               <Launch className={classes.icons} /> {title}
             </Anilink>
             :
-            <a
-              href={link}
+            <p
+              link={link}
               color="transparent"
               className={classes.navLink}
+              onClick={moveSector}
             >
               {title}
-            </a>
+            </p>
           }
         </ListItem>)
       )}

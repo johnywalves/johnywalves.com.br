@@ -25,14 +25,17 @@ class Header extends React.Component {
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);
   }
+
   handleDrawerToggle() {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   }
+
   componentDidMount() {
     if (this.props.changeColorOnScroll) {
       window.addEventListener("scroll", this.headerColorChange);
     }
   }
+
   headerColorChange() {
     const { classes, color, changeColorOnScroll } = this.props;
     const windowsScrollTop = window.pageYOffset;
@@ -52,11 +55,13 @@ class Header extends React.Component {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   }
+
   componentWillUnmount() {
     if (this.props.changeColorOnScroll) {
       window.removeEventListener("scroll", this.headerColorChange);
     }
   }
+
   render() {
     const {
       classes,
@@ -67,13 +72,16 @@ class Header extends React.Component {
       fixed,
       absolute
     } = this.props;
+
     const appBarClasses = classNames({
       [classes.appBar]: true,
       [classes[color]]: color,
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button href='#root' className={classes.title}>{brand}</Button>;
+
+    const brandComponent = <Button className={classes.title} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{brand}</Button>;
+
     return (
       <AppBar className={appBarClasses} style={{ paddingBottom: 0 }}>
         <Toolbar className={classes.container}>

@@ -8,10 +8,10 @@ import SectionServices from "./SectionServices";
 // styles
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
 
-const SectionDescription = ({ classes }) => (
+const SectionProducts = ({ classes }) => (
     <div id="description" className={classes.container}>
         <SectionServices />
     </div>
 )
 
-export default withStyles(profilePageStyle)(SectionDescription);
+export default withStyles(profilePageStyle)(SectionProducts);

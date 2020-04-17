@@ -54,14 +54,10 @@ const VitaePage = props => {
         <SEO title="Sobre" />
         <Header color="transparent"
             brand={title}
-            rightLinks={< HeaderLinks updateLanguage={
-                () => SetToggle(!toggle)
-            }
-            />}
+            rightLinks={<HeaderLinks updateLanguage={() => SetToggle(!toggle)} />}
             fixed
-            changeColorOnScroll={
-                { height: 150, color: "white" }
-            } {...rest}
+            changeColorOnScroll={{ height: 150, color: "white" }}
+            {...rest}
         />
         <Parallax small filter image={imageHeader} />
         <div className={classNames(classes.main, classes.mainRaised)} >
@@ -70,7 +66,7 @@ const VitaePage = props => {
             <SectionPosts />
             <SectionLanguage />
             <SectionSkills />
-            <SectionSocial />                        
+            <SectionSocial />
             <SectionHistory />
             <SectionContact />
         </div>

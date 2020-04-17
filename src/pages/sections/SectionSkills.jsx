@@ -12,7 +12,7 @@ import Strings from "components/strings";
 // style classes
 import basicsStyle from "assets/jss/material-kit-react/views/componentsSections/basicsStyle";
 
-class SectionBasics extends Component {
+class SectionSkills extends Component {
   constructor(props) {
     super(props)
     this.state = { completed: 0 }
@@ -89,4 +89,4 @@ class SectionBasics extends Component {
   }
 }
 
-export default withStyles(basicsStyle)(SectionBasics)
+export default withStyles(basicsStyle)(SectionSkills)
