@@ -146,6 +146,12 @@ export default {
     certification: [],
     courses: [
         {
+            year: 2020,
+            hours: 9,
+            description: "Gatsby: Build a site PWA with React, GraphQL and Netlify CMS",
+            institution: "Willian Justen (Udemy)"
+        },
+        {
             year: 2018,
             hours: 37,
             description: "Data Science with Python, Qlik Sense and Neural Networks",

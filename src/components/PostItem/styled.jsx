@@ -49,8 +49,9 @@ export const PostItemImage = styled.div`
     width: 120px;
     background-position: center;
     background-size: cover;
-
+ 
     ${media.lessThan("large")`
+        display: none;
         border-radius: 0;
         font-size: 1rem;
         min-height: auto;

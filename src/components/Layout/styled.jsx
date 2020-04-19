@@ -19,7 +19,6 @@ export const LayoutMain = styled.main`
     grid-template-areas:
       "posts"
       "pagination";
-          
   }
 
   ${media.lessThan("large")`
