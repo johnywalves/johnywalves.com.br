@@ -31,7 +31,7 @@ Carregando os dados através do *csv* na pasta e a visualização proporcionou u
 
 ```r
 # Carregar os dados do arquivo csv
-tarantino <- read.csv('tarantino.csv')../static
+tarantino <- read.csv('tarantino.csv')
 head(tarantino)
 ```
 
