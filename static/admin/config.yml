@@ -2,7 +2,7 @@ backend:
   name: github
   repo: johnywalves/gatsby-site
   branch: master
-  site_domain: http://johnywalves.netlify.com/
+  site_domain: johnywalves.com.br
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"

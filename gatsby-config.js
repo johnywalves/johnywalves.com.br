@@ -6,7 +6,7 @@ module.exports = {
     siteMetadata: {
         title: `Johny W. Alves`,
         position: `FullStack Developer`,
-        description: `Meu nome é Johny William de Oliveira Alves amo aprender, criei esse espaço para organizar meus estudos, compartilhar e receber feedback`,
+        description: `Meu nome é Johny criei esse espaço para organizar meus estudos, compartilhar e receber feedback`,
         author: `@johnywalves`,
         siteUrl: `https://www.johnywalves.com.br`
     },
