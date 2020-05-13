@@ -324,8 +324,11 @@ export default {
             title: "Graduação em Informática para Negócios",
             institution: "Fatec Rio Preto",
             description: [
-                "Informática para Negócios, Desenvolvimento de Sistemas e Administração Empresarial",
-                "Premiações de Maior Média e Melhor Trabalho de Graduação"
+                "Informática para Negócios, Desenvolvimento de Sistemas e Administração Empresarial"
+            ],
+            awards: [
+                "Premiação de Maior Média",
+                "Premiação Melhor Trabalho de Graduação"
             ],
             production: [{
                 title: "Título: ForeSeries - Uma abordagem para predição de valores em séries temporais",

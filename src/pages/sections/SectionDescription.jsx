@@ -37,7 +37,7 @@ const SectionDescription = ({ classes }) => {
             <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={6}>
                     <div className={classes.profile}>
-                        <Img fixed={avatarImage.childImageSharp.fixed} className={imageClasses} />*/}
+                        <Img fixed={avatarImage.childImageSharp.fixed} className={imageClasses} />
                         <div className={classes.name}>
                             <h1 className={classes.title}>Johny W. Alves</h1>
                             <h4>{Strings.position}</h4>

@@ -6,6 +6,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
+import EmojiEventsOutlinedIcon from '@material-ui/icons/EmojiEventsOutlined';
 
 // core components
 import GridContainer from "components/MaterialUI/Grid/GridContainer"
@@ -39,6 +40,10 @@ const SectionHistory = ({ classes }) => (
               <h3 className="vertical-timeline-element-title">{elem.title}{elem.status && ` (${elem.status})`}</h3>
               <h4 className="vertical-timeline-element-subtitle">{elem.institution}</h4>
               {elem.description && elem.description.map((text, index) => <p key={index}>{text}</p>)}
+              {elem.awards && elem.awards.map((text, index) => <div className={classes.award}>
+                <EmojiEventsOutlinedIcon className={classes.awardIcon} />
+                <p key={index} className={classes.awardText}>{text}</p>
+              </div>)}
               {elem.production && elem.production.map((prod, index) =>
                 <p key={index}><a href={prod.file} target="_blank" rel="noopener noreferrer">{prod.title}</a></p>
               )}

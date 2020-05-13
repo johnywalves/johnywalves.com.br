@@ -49,6 +49,13 @@ module.exports = {
                 path: `${__dirname}/posts`,
             }
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `markdown-pages`,
+                path: `${__dirname}/posts`,
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-sitemap`,
@@ -65,13 +72,6 @@ module.exports = {
             }
         },
         'gatsby-plugin-netlify-cms',
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `markdown-pages`,
-                path: `${__dirname}/posts`,
-            },
-        },
         {
             resolve: `gatsby-transformer-remark`,
             options: {

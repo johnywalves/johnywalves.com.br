@@ -2,7 +2,7 @@
   "name": "johnywalves.com.br",
   "private": true,
   "description": "A page to share knowlegde and personal achievement",
-  "version": "0.1.0",
+  "version": "1.6.1",
   "author": "Johny W. Alves <johnywalves@gmail.com>",
   "dependencies": {
     "@material-ui/core": "4.7.0",

@@ -324,8 +324,11 @@ export default {
             title: "Professional in Business Informatics",
             institution: "Fatec Rio Preto",
             description: [
-                "Informatics for Business, Software Development and Manager Business",
-                "Highest Score Award and Best Undergraduate Project Award"
+                "Informatics for Business, Software Development and Manager Business"
+            ],
+            awards: [
+                "Highest Score Award",
+                "Best Undergraduate Project Award"
             ],
             production: [{
                 title: "Essay: ForeSeries - An approach to predicting values in time series (Portuguese)",
