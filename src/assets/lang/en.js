@@ -46,6 +46,7 @@ export default {
             { title: "posts", link: "#posts" },
             { title: "skills", link: "#skills" },
             { title: "timeline", link: "#history" },
+            { title: "projects", link: "#projects" },
             { title: "contact", link: "#contact" },
             { title: "blog", link: "/blog/", icon: true }
         ]
@@ -196,82 +197,34 @@ export default {
     },
     projects: [
         {
-            title: "Github Pages",
+            title: "Map navigation",
             date: "June 2019",
-            image: "steamuniverse.jpg",
-            tech: "Frontend (HTML5/CSS3/JS) e Jekyll",
-            fullTech: "Jekyll (Ruby e Liquid) e Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
-            sourceCode: "https://github.com/johnywalves?tab=repositories",
-            view: "https://johnywalves.github.io/Github_Pages",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ]
-        },
-        {
-            title: "Fuel Prices",
-            date: "March 2019",
-            image: "fuel.jpg",
-            tech: "Analytics Temporal Series",
-            fullTech: "Cassandra, Python and Jupyter Notebook",
-            sourceCode: "https://github.com/johnywalves/PyStudies/blob/master/Cassandra_Gas_Price/gas_price.ipynb",
-            article: "https://github.com/johnywalves/PyStudies/tree/master/Cassandra_Gas_Price",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ]
+            image: "treasure-map.jpg",
+            tech: "Frontend (HTML5/CSS3/JS) and Jekyll",
+            fullTech: "Jekyll (Ruby e Liquid) and Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
+            sourceCode: "https://github.com/johnywalves/wolt",
+            view: "https://johnywalves.github.io/wolt/",
+            description: []
         },
         {
             title: "Laboratory",
             date: "December 2018",
             image: "files.jpg",
-            tech: "Web Developer",
-            fullTech: "Markdown, JeKyll and Github Pages",
-            sourceCode: "https://github.com/johnywalves/johnywalves.github.io",
-            view: "https://johnywalves.github.io",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ]
-        },
-        {
-            title: "Survivor Predictions",
-            date: "April 2018",
-            image: "titanic.jpg",
-            tech: "Machine Learning",
-            fullTech: "R Language e R Studio",
-            sourceCode: "https://github.com/johnywalves/RStudies/tree/master/Sobreviventes_Titanic",
-            article: "https://johnywalves.github.io/Sobreviventes_Titanic",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ]
+            tech: "Web (HTML5/CSS3) and Gatsby",
+            fullTech: "Web (HTML5 e CSS3), Markdown, Gatsby and Github Pages",
+            sourceCode: "https://github.com/johnywalves/gatsby-site",
+            view: "https://johnywalves.com.br/blog/",
+            description: []
         },
         {
             title: "Steam library",
             date: "October 2017",
             image: "steamuniverse.jpg",
             tech: "Frontend (HTML5/CSS3/JS)",
-            fullTech: "JavaScript (Modernizr e jQuery), JSON, HTML5 e CSS3",
+            fullTech: "JavaScript (Modernizr e jQuery), JSON, HTML5 and CSS3",
             sourceCode: "https://github.com/johnywalves/steamlibrary",
             view: "https://johnywalves.github.io/steamlibrary/",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ]
-        },
-        {
-            title: "Kill Bill Deaths",
-            date: "December 2017",
-            image: "killbill.jpg",
-            tech: "Data Visualization",
-            fullTech: "R Language e R Studio",
-            article: "https://johnywalves.github.io/Mortes_Kill_Bill",
-            sourceCode: "https://github.com/johnywalves/RStudies/tree/master/Mortes_Kill_Bill",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            ]
+            description: []
         }
     ],
     timelimeLabel: "Timeline",
@@ -292,7 +245,8 @@ export default {
             title: "Specialization in Big Data",
             institution: "Senac Sao Paulo",
             description: [
-                "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
+                "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence",
+                "Essay: Proposta para aplicação de Regras de Associação para varejos online (Portuguese)"
             ],
             type: "education"
         },

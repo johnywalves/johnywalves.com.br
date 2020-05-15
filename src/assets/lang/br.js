@@ -46,6 +46,7 @@ export default {
             { title: "posts", link: "#posts" },
             { title: "conhecimentos", link: "#skills" },
             { title: "história", link: "#history" },
+            { title: "projetos", link: "#projects" },
             { title: "contato", link: "#contact" },
             { title: "blog", link: "/blog/", icon: true }
         ]
@@ -196,54 +197,24 @@ export default {
     },
     projects: [
         {
-            title: "Github Pages",
+            title: "Navegação de mapa",
             date: "Junho 2019",
-            image: "githubpages.jpg",
+            image: "treasure-map.jpg",
             tech: "Frontend (HTML5/CSS3/JS) e Jekyll",
             fullTech: "Jekyll (Ruby e Liquid) e Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
-            sourceCode: "https://github.com/johnywalves?tab=repositories",
-            view: "https://johnywalves.github.io/Github_Pages",
-            description: [
-                "Usando a hospedagem embutida GitHub, disponibilizei algumas páginas como forma de praticar alguns conceitos em Web Designer"
-            ]
-        },
-        {
-            title: "Preço de Combustíveis",
-            date: "Março 2019",
-            image: "fuel.jpg",
-            tech: "Análise de Séries Temporais",
-            fullTech: "Cassandra, Python e Jupyter Notebook",
-            sourceCode: "https://github.com/johnywalves/PyStudies/blob/master/Cassandra_Gas_Price/gas_price.ipynb",
-            article: "https://github.com/johnywalves/PyStudies/tree/master/Cassandra_Gas_Price",
-            description: [
-                "Nas aulas de pós graduação fomos apresentados ao Cassandra, fazendo uso do Python, Docker e Jupyter Notebook realizamos algumas análises de dados disponibilizados pela ANP que gerou um notebook com definição de classes, carga e geração de visualizações"
-            ]
+            sourceCode: "https://github.com/johnywalves/wolt",
+            view: "https://johnywalves.github.io/wolt/",
+            description: []
         },
         {
             title: "Laboratório",
             date: "Dezembro 2018",
             image: "files.jpg",
-            tech: "Desenvolvedor Web",
-            fullTech: "Markdown, JeKyll e Github Pages",
-            sourceCode: "https://github.com/johnywalves/johnywalves.github.io",
-            view: "https://johnywalves.github.io",
-            description: [
-                "Páginas com artigos realizados ou em construção para registrar algumas coisas que estou estudando no processo de evoluir como profisional da área técnica"
-            ]
-        },
-        {
-            title: "Previsão de Sobreviventes",
-            date: "Abril 2018",
-            image: "titanic.jpg",
-            tech: "Aprendizado de Máquina (Machine Learning)",
-            fullTech: "Linguagem R e R Studio",
-            sourceCode: "https://github.com/johnywalves/RStudies/tree/master/Sobreviventes_Titanic",
-            article: "https://johnywalves.github.io/Sobreviventes_Titanic",
-            description: [
-                "Recentemente fui apresentado para o site Kaggle, um organizador de competições para cientistas de dados, o desafio inicial dele é a previsão dos sobreviventes da viagem inaugural do RMS TItanic.",
-                "Com vários dados sobre os passageiros como nome, idade, família, gênero... aplicando um algoritmo de floresta aletória (Random Florest) podemos prever a chance de sobrevivência.",
-                "Os detalhes do desenvolvimento e o resultado pode ser encontrado no link abaixo."
-            ]
+            tech: "Web (HTML5/CSS3) e Gatsby",
+            fullTech: "Web (HTML5 e CSS3), Markdown, Gatsby e Github Pages",
+            sourceCode: "https://github.com/johnywalves/gatsby-site",
+            view: "https://johnywalves.com.br/blog/",
+            description: []
         },
         {
             title: "Biblioteca Steam",
@@ -253,25 +224,7 @@ export default {
             fullTech: "JavaScript (Modernizr e jQuery), JSON, HTML5 e CSS3",
             sourceCode: "https://github.com/johnywalves/steamlibrary",
             view: "https://johnywalves.github.io/steamlibrary/",
-            description: [
-                "Amo o Steam, uma maneira rápida, barata e inteligente de ter acesso a jogos de qualidade e divertidos, também amo a plataforma de APIs que a Valve criou para o Steam e sua comunidade uma deles a maneira de consultar os usuários e suas propriedades como seus jogos na biblioteca.",
-                "Fazendo uso desta API e a liberdade de acesso da CDN do ambiente da Valve desenvolvi um visualizador da minha biblioteca de jogos."
-            ]
-        },
-        {
-            title: "Mortes em Kill Bill",
-            date: "Dezembro 2017",
-            image: "killbill.jpg",
-            tech: "Visualização de Dados",
-            fullTech: "Linguagem R e R Studio",
-            article: "https://johnywalves.github.io/Mortes_Kill_Bill",
-            sourceCode: "https://github.com/johnywalves/RStudies/tree/master/Mortes_Kill_Bill",
-            description: [
-                "Estava em casa brincando com uns dados entregue pelo Igor Alcantara em um dos workshops dele.",
-                "No meio deles achei um conjunto de dados sobre filmes do Tarantino, resolvi experiementar alguns conceitos.",
-                "Comparação das mortes por tempo de filme do Kill Bill (Volume 1 &amp; 2) com 74 mortes no total.",
-                "Os detalhes do desenvolvimento e o resultado pode ser encontrado nos links abaixo."
-            ]
+            description: []
         }
     ],
     timelimeLabel: "Linha do Tempo",
@@ -292,7 +245,8 @@ export default {
             title: "Pós-Graduação em Big Data",
             institution: "Senac Sao Paulo",
             description: [
-                "Processamento e armazenamento distribuído, projetos de visualização e carga de dados, introdução a estátistica e business intelligence"
+                "Processamento e armazenamento distribuído, projetos de visualização e carga de dados, introdução a estátistica e business intelligence",
+                "Título: Proposta para aplicação de Regras de Associação para varejos online"
             ],
             type: "education"
         },

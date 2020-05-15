@@ -21,7 +21,7 @@ import SectionSocial from "./sections/SectionSocial";
 import SectionPosts from "./sections/SectionPosts";
 import SectionHistory from "./sections/SectionHistory";
 import SectionContact from "./sections/SectionContact";
-//import SectionProjects from "./sections/SectionProjects";
+import SectionProjects from "./sections/SectionProjects";
 
 // styles
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
@@ -68,6 +68,7 @@ const VitaePage = props => {
             <SectionSkills />
             <SectionSocial />
             <SectionHistory />
+            <SectionProjects />
             <SectionContact />
         </div>
         <Footer />
