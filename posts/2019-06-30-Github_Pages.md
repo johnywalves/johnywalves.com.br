@@ -5,7 +5,6 @@ description: Alguns exemplos de uso da provedor de páginas estáticas do GitHub
 category: Web
 tags: [GitHub, HTML, Ruby]
 coverImage: /assets/img/gitpages-1.jpg
-highlight: true
 ---
 
 O GitHub é atualmente a maior plataforma de compartilhamento de código fonte do mundo, para facilitar a consumação desse conteúdo ele possuir um intepretador de markdown embutido, portanto um arquivo em HTML ou markdown pode ser usado como gerar uma documentação  
@@ -26,7 +25,7 @@ Alguns páginas estáticas
 
 Alguns exemplos com Jekyll
 
-[Blog Antigo](https://johnywalves.github.io) / [Código Fonte](https://github.com/johnywalves/johnywalves.github.io)  
+[Blog Antigo](https://johnywalves.github.io/jekyll-blog) / [Código Fonte](https://github.com/johnywalves/jekyll-blog)  
 [Mapa](https://johnywalves.github.io/wolt) / [Código Fonte](https://github.com/johnywalves/wolt)  
 
 ## Referências

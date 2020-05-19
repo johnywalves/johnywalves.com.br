@@ -44,9 +44,9 @@ export default {
         },
         list: [
             { title: "posts", link: "#posts" },
+            { title: "projects", link: "#projects" },
             { title: "skills", link: "#skills" },
             { title: "timeline", link: "#history" },
-            { title: "projects", link: "#projects" },
             { title: "contact", link: "#contact" },
             { title: "blog", link: "/blog/", icon: true }
         ]

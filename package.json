@@ -65,9 +65,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnywalves/johnywalves.github.io"
+    "url": "https://github.com/johnywalves/gatsby-site"
   },
   "bugs": {
-    "url": "https://github.com/johnywalves/johnywalves.github.io/issues"
+    "url": "https://github.com/johnywalves/gatsby-site/issues"
   }
 }

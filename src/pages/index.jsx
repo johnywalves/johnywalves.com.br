@@ -64,11 +64,11 @@ const VitaePage = props => {
             <SectionDescription />
             <SectionDownload />
             <SectionPosts />
+            <SectionProjects />
             <SectionLanguage />
             <SectionSkills />
             <SectionSocial />
             <SectionHistory />
-            <SectionProjects />
             <SectionContact />
         </div>
         <Footer />
