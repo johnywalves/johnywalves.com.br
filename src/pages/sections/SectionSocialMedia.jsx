@@ -57,15 +57,6 @@ const SectionSocialMedia = props => {
             <Button
                 justIcon
                 link
-                href="https://fb.com/johnywalves"
-                target="_blank"
-                className={classButtom}
-            >
-                <Icons.Facebook />
-            </Button>
-            <Button
-                justIcon
-                link
                 href={Strings.lattes}
                 target="_blank"
                 className={classButtom}

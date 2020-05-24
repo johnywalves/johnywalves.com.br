@@ -204,7 +204,9 @@ export default {
             fullTech: "Jekyll (Ruby e Liquid) e Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
             sourceCode: "https://github.com/johnywalves/wolt",
             view: "https://johnywalves.github.io/wolt/",
-            description: []
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
+            ]
         },
         {
             title: "Laboratório",
@@ -214,7 +216,9 @@ export default {
             fullTech: "Web (HTML5 e CSS3), Markdown, Gatsby e Github Pages",
             sourceCode: "https://github.com/johnywalves/gatsby-site",
             view: "https://johnywalves.com.br/blog/",
-            description: []
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
+            ]
         },
         {
             title: "Biblioteca Steam",
@@ -224,7 +228,9 @@ export default {
             fullTech: "JavaScript (Modernizr e jQuery), JSON, HTML5 e CSS3",
             sourceCode: "https://github.com/johnywalves/steamlibrary",
             view: "https://johnywalves.github.io/steamlibrary/",
-            description: []
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
+            ]
         }
     ],
     timelimeLabel: "Linha do Tempo",

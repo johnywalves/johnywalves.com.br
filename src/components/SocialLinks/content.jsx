@@ -20,11 +20,6 @@ const links = [
         url: "https://twitter.com/johnywalves"
     },
     {
-        label: "Facebook",
-        icon: "Facebook",
-        url: "https://fb.com/johnywalves"
-    },
-    {
         label: "CNPq",
         icon: "University",
         url: "http://lattes.cnpq.br/0468996619713052"
