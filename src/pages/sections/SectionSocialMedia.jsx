@@ -24,6 +24,7 @@ const SectionSocialMedia = props => {
                 href="https://github.com/johnywalves"
                 target="_blank"
                 className={classButtom}
+                rel="noreferrer"
             >
                 <Icons.Github />
             </Button>
@@ -33,6 +34,7 @@ const SectionSocialMedia = props => {
                 href="https://www.linkedin.com/in/johnywalves"
                 target="_blank"
                 className={classButtom}
+                rel="noreferrer"
             >
                 <Icons.Linkedin />
             </Button>
@@ -42,6 +44,7 @@ const SectionSocialMedia = props => {
                 href="https://instagram.com/johnywalves"
                 target="_blank"
                 className={classButtom}
+                rel="noreferrer"
             >
                 <Icons.Instagram />
             </Button>
@@ -51,6 +54,7 @@ const SectionSocialMedia = props => {
                 href="https://twitter.com/johnywalves"
                 target="_blank"
                 className={classButtom}
+                rel="noreferrer"
             >
                 <Icons.Twitter />
             </Button>
@@ -60,6 +64,7 @@ const SectionSocialMedia = props => {
                 href={Strings.lattes}
                 target="_blank"
                 className={classButtom}
+                rel="noreferrer"
             >
                 <Icons.University />
             </Button>

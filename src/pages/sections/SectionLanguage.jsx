@@ -12,7 +12,7 @@ import Strings from "components/strings";
 import LanguageStyle from "assets/jss/material-kit-react/views/componentsSections/languageStyle";
 
 const SectionLanguage = ({ classes }) => (
-  <div id="social" className={classes.section}>
+  <div id="language" className={classes.section}>
     <div className={classes.container}>
       <GridContainer justify="center">
         <div className={classes.textCenter}>

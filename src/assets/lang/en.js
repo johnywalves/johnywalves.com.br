@@ -81,6 +81,7 @@ export default {
         list: [
             { title: "Angular", level: 30 },
             { title: "Bootstrap", level: 85 },
+            { title: "D3", level: 40 },
             { title: "Express", level: 80 },
             { title: "Flask", level: 60 },
             { title: "Ionic", level: 20 },
@@ -94,7 +95,6 @@ export default {
             { title: "Redux", level: 75 },
             { title: "Sprint Boot", level: 70 },
             { title: "SQLAlchemy", level: 60 },
-            { title: "Thymeleaf", level: 35 },
             { title: "Wordpress", level: 20 }
         ]
     },
@@ -167,7 +167,7 @@ export default {
         {
             year: 2018,
             hours: 40,
-            description: "Games 2D",
+            description: "Unity - Games 2D",
             institution: "Senac São Paulo"
         },
         {
@@ -186,7 +186,7 @@ export default {
     projectsLabel: "Projects & developments",
     projectsSubLabel: "Some projects and experiments developed by me",
     projectsTerms: {
-        detail: "Read more",
+        detail: "know project",
         close: "CLOSE",
         view: "View",
         article: "Article (PT BR)",
@@ -241,7 +241,7 @@ export default {
             title: "Developer",
             institution: "Invillia",
             description: [
-                "Design and development of tools for remote team management and knowledge distribution",
+                "Part of the development and maintenance team for the Invillia Apps application suite, rich interfaces for data visualization and employee training",
                 "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, NextJS)"
             ],
             type: "work"

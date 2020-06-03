@@ -81,6 +81,7 @@ export default {
         list: [
             { title: "Angular", level: 30 },
             { title: "Bootstrap", level: 85 },
+            { title: "D3", level: 40 },
             { title: "Express", level: 80 },
             { title: "Flask", level: 60 },
             { title: "Gatsby", level: 40 },
@@ -94,7 +95,6 @@ export default {
             { title: "Redux", level: 75 },
             { title: "Sprint Boot", level: 70 },
             { title: "SQLAlchemy", level: 60 },
-            { title: "Thymeleaf", level: 35 },
             { title: "Wordpress", level: 20 }
         ]
     },
@@ -167,7 +167,7 @@ export default {
         {
             year: 2018,
             hours: 40,
-            description: "Games 2D",
+            description: "Unity - Games 2D",
             institution: "Senac São Paulo"
         },
         {
@@ -186,7 +186,7 @@ export default {
     projectsLabel: "Projetos e desenvolvimentos",
     projectsSubLabel: "Alguns projetos e experimentações desenvolvidas por mim",
     projectsTerms: {
-        detail: "Leia mais",
+        detail: "Conhecer projeto",
         close: "FECHAR",
         view: "Visualizar",
         article: "Artigo",
@@ -241,7 +241,7 @@ export default {
             title: "Analista Desenvolvedor",
             institution: "Invillia",
             description: [
-                "Planejamento e desenvolvimento de ferramentas para gestão de equipes remotas e distribuição de conhecimentos",
+                "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da Invillia Apps, intefaces ricas para visualização de dados e treinamento dos colaboradores",
                 "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)"
             ],
             type: "work"

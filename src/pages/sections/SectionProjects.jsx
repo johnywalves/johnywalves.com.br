@@ -23,9 +23,9 @@ import projectsStyle from "assets/jss/material-kit-react/views/componentsSection
 // resources
 import Strings from "components/strings"
 
-function Transition(props) {
-  return <Slide direction="down" {...props} />;
-}
+const Transition = React.forwardRef((props, ref) => {
+  return <Slide direction="down" {...props} ref={ref} />
+});
 
 class SectionProjects extends React.Component {
   constructor(props) {

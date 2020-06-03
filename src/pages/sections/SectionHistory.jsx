@@ -40,7 +40,7 @@ const SectionHistory = ({ classes }) => (
               <h3 className="vertical-timeline-element-title">{elem.title}{elem.status && ` (${elem.status})`}</h3>
               <h4 className="vertical-timeline-element-subtitle">{elem.institution}</h4>
               {elem.description && elem.description.map((text, index) => <p key={index}>{text}</p>)}
-              {elem.awards && elem.awards.map((text, index) => <div className={classes.award}>
+              {elem.awards && elem.awards.map((text, index) => <div key={index} className={classes.award}>
                 <EmojiEventsOutlinedIcon className={classes.awardIcon} />
                 <p key={index} className={classes.awardText}>{text}</p>
               </div>)}
