@@ -2,8 +2,8 @@ export default {
     description: "Desenvolvedor full stack web com mais de 15 anos de experiência e estudante de ciência de dados, apaixonado por aprender e entregar soluções que automatizem processos e entreguem métricas",
     position: "Engenheiro e Desenvolvedor Full Stack",
     files: [
-        { name: "VERSÃO COLORIDA", file: "/assets/docs/cv_johnywalves_pt_c.pdf" },
-        { name: "VERSÃO IMPRESSÃO", file: "/assets/docs/cv_johnywalves_pt_g.pdf" }
+        { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },
+        { name: "VERSÃO IMPRESSÃO", file: "/docs/cv_johnywalves_pt_g.pdf" }
     ],
     status: "Brasileiro, Solteiro, 32 anos",
     live: "Sao José do Rio Preto, São Paulo, Brasil",
@@ -199,7 +199,6 @@ export default {
         {
             title: "Navegação de mapa",
             date: "Junho 2019",
-            image: "treasure-map.jpg",
             tech: "Frontend (HTML5/CSS3/JS) e Jekyll",
             fullTech: "Jekyll (Ruby e Liquid) e Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
             sourceCode: "https://github.com/johnywalves/wolt",
@@ -211,7 +210,6 @@ export default {
         {
             title: "Laboratório",
             date: "Dezembro 2018",
-            image: "files.jpg",
             tech: "Web (HTML5/CSS3) e Gatsby",
             fullTech: "Web (HTML5 e CSS3), Markdown, Gatsby e Github Pages",
             sourceCode: "https://github.com/johnywalves/gatsby-site",
@@ -223,7 +221,6 @@ export default {
         {
             title: "Biblioteca Steam",
             date: "Outubro 2017",
-            image: "steamuniverse.jpg",
             tech: "Frontend (HTML5/CSS3/JS)",
             fullTech: "JavaScript (Modernizr e jQuery), JSON, HTML5 e CSS3",
             sourceCode: "https://github.com/johnywalves/steamlibrary",
@@ -292,7 +289,7 @@ export default {
             ],
             production: [{
                 title: "Título: ForeSeries - Uma abordagem para predição de valores em séries temporais",
-                file: "/assets/docs/fore_series_johnywalves_pt.pdf",
+                file: "/docs/fore_series_johnywalves_pt.pdf",
             }],
             type: "education"
         },

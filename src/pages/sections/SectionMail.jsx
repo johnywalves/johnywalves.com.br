@@ -22,6 +22,7 @@ const SectionMail = props => {
                 href={"mailto:contato@johnywalves.com.br"}
                 target="_blank"
                 className={classButtom}
+                aria-label="E-mail"
             >
                 <Icons.MailSend />
             </Button>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 import Anilink from "gatsby-plugin-transition-link/AniLink";
+import Img from "gatsby-image";
 
 export const PostItemLink = styled(Anilink)`
     color: var(--texts);
@@ -37,7 +38,31 @@ export const PostItemWrapper = styled.section`
     `}    
 `
 
-export const PostItemImage = styled.div`
+export const PostItemImageFeatured = styled(Img)`
+    align-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 700;
+    justify-content: center;
+ 
+    ${media.lessThan("large")`
+        display: none;
+        border-radius: 0;
+        font-size: 1rem;
+        min-height: auto;
+        min-width: auto;
+        padding: .2rem .5rem;
+        margin-bottom: .7rem;
+    `}    
+
+    body#grid & {
+        margin-bottom: 1.5rem;
+    }
+`
+
+export const PostItemCoverImage = styled.div`
     align-items: center;
     border-radius: 50%;
     color: var(--white);
@@ -49,7 +74,7 @@ export const PostItemImage = styled.div`
     width: 120px;
     background-position: center;
     background-size: cover;
- 
+
     ${media.lessThan("large")`
         display: none;
         border-radius: 0;

@@ -4,7 +4,8 @@ title: Controle da evolução corporal
 description: Lorem lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm
 category: Python
 tags: [Python, Visualização]
-coverImage: /assets/img/balance-1.jpg
+featuredImage: ./featured/balance-1.jpg
+coverImage: /figures/balance-1.jpg
 highlight: true
 ---
 
@@ -154,7 +155,7 @@ plt.savefig('evolution.png', dpi=300)
 plt.show()
 ```
 
-![plot of chunk controle_peso](/assets/img/controle_peso-1.svg)
+![plot of chunk controle_peso](/figures/controle_peso-1.svg)
 
 ### Visualização da Tabela
 

@@ -4,7 +4,8 @@ title: Classificação de Séries IMDb
 description: Visualização de dados da base dados do IMDb com a linguagem R
 category: R
 tags: [Visualização, R]
-coverImage: /assets/img/imdb-1.jpg
+featuredImage: ./featured/imdb-1.jpg
+coverImage: /figures/imdb-1.jpg
 ---
 
 IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematografica apartir de *Passage de Venus* de 1874 por *Pierre Jules César Janssen* até os não lançados em pré-produção.  
@@ -114,7 +115,7 @@ ggplot(episodeRatingSerie, aes(x = ordemEpisode, y = averageRating)) +
   theme_minimal()
 ```
 
-![plot of chunk serie](/assets/img/serie-1.svg)
+![plot of chunk serie](/figures/serie-1.svg)
 
 #### Inclusão de comparações
 
@@ -158,7 +159,7 @@ ggplot(mediaTemporada, aes(x=seasonNumber, y=averageRating)) +
     theme_minimal()
 ```
 
-![plot of chunk temporadas](/assets/img/temporadas-1.svg)
+![plot of chunk temporadas](/figures/temporadas-1.svg)
 
 ### Comparação entre Séries
 
@@ -201,7 +202,7 @@ ggplot(grupoSeries, aes(x=seasonNumber, y=averageRating)) +
     theme_minimal()
 ```
 
-![plot of chunk comparacao](/assets/img/comparacao-1.svg)
+![plot of chunk comparacao](/figures/comparacao-1.svg)
 
 ```r
 # Quais as melhores de todos os tempos

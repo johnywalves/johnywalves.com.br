@@ -4,7 +4,8 @@ title: Http Server para arquivos estáticos (Python e JavaScript)
 description: Compartilhar arquivos ou testar um site rápido
 category: Web
 tags: [Web, Python, JavaScript]
-coverImage: /assets/img/gift-1.jpg
+featuredImage: ./featured/gift-1.jpg
+coverImage: /figures/gift-1.jpg
 highlight: true
 ---
 

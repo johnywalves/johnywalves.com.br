@@ -4,7 +4,8 @@ title: Previsão de Sobreviventes do Titanic
 description: Visualização de dados e machine learning com o desafio do Kaggle do Titanic
 category: R
 tags: [Machine Learning, R]
-coverImage: /assets/img/titanic-1.jpg
+featuredImage: ./featured/titanic-1.jpg
+coverImage: /figures/titanic-1.jpg
 highlight: true
 ---
 
@@ -188,7 +189,7 @@ ggplot(rankImportance, aes(x = reorder(Variables, Importance),
   theme_minimal()
 ```
 
-![plot of chunk titanic_importancia](/assets/img/titanic_importancia-1.svg)
+![plot of chunk titanic_importancia](/figures/titanic_importancia-1.svg)
 
 ### Visualização
 
@@ -214,7 +215,7 @@ ggplot(train, aes(as.factor(Title), fill=Sub, colour=Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_titulos](/assets/img/titanic_titulos-1.svg)
+![plot of chunk titanic_titulos](/figures/titanic_titulos-1.svg)
 
 No gráfico mostra a segunda característica em importância, crianças de até possuem mais possibilidades de adultos de 16 a 35 anos
 
@@ -228,7 +229,7 @@ ggplot(train, aes(Age, fill = Sub, colour = Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_idade](/assets/img/titanic_idade-1.svg)
+![plot of chunk titanic_idade](/figures/titanic_idade-1.svg)
 
 Infelizmente as pessoas que pagaram menos pela passagem, por estarem mais longes dos botes ou por outros fatores, é o terceiro critério
 
@@ -242,7 +243,7 @@ ggplot(train, aes(Fare, fill = Sub, colour = Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_preco](/assets/img/titanic_preco-1.svg)
+![plot of chunk titanic_preco](../static/figures/titanic_preco-1.svg")
 
 Embora seja o sétimo o tamanho da família é um dados interessante, proporcionalmente os solteiros tiveram a menor oportunidade de sobrevivência
 
@@ -258,4 +259,4 @@ ggplot(train, aes(as.numeric(Familia), fill=Sub, colour=Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_familia](/assets/img/titanic_familia-1.svg)
+![plot of chunk titanic_familia](/figures/titanic_familia-1.svg)

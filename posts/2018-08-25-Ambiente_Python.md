@@ -4,7 +4,8 @@ title: Preparando Ambiente Python e Pacotes
 description: Visualização de dados e machine learning com o desafio do Kaggle do Titanic
 category: Python
 tags: [Ambiente, Python]
-coverImage: /assets/img/python-2.jpg
+featuredImage: ./featured/python-2.jpg
+coverImage: /figures/python-2.jpg
 ---
 
 Python é uma linguagem de programação simples e elegante, vem junto com muito amor e facilidade de desenvolvimento, tem até um poema para ensinar o jeito Python de programar

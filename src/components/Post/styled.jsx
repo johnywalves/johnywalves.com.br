@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import Img from "gatsby-image";
 
 export const PostHeader = styled.header`
   color: var(--texts);
@@ -13,11 +14,7 @@ export const PostHeader = styled.header`
   `}  
 `
 
-export const PostCoverImage = styled.div`
-  height: 50vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+export const PostFeaturedImage = styled(Img)`
 `
 
 export const PostTitle = styled.h1`
@@ -218,5 +215,15 @@ export const MainContent = styled.section`
     &:hover {
       opacity: 0.8;
     }
+  }
+  table {
+    color: var(--texts);
+    border-collapse: separate;
+    border-spacing: .5rem;
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  table tr:nth-child(even) {
+    background-color: var(--mediumBackground);
   }
 `

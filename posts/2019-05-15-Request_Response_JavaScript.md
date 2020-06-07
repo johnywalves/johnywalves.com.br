@@ -4,7 +4,8 @@ title: Comunicação HTTP Servidor e Client
 description: Lorem lipsunm
 category: JS
 tags: [Web, Server, Client, Request, Response, JavaScript]
-coverImage: /assets/img/mail-1.jpg
+featuredImage: ./featured/mail-1.jpg
+coverImage: /figures/mail-1.jpg
 ---
 
 Usar a mesma linguagem na ponta-a-ponta em um ambiente favorece a troca de conhecimento entre equipes e atualmente JavaScript é uma ótima opção, pois tem suporte nativo nos navegadores e facilidade desenvolvimento com o Node

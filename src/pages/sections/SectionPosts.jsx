@@ -1,17 +1,18 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 // nodejs library that concatenates classes
-import classNames from "classnames"
+import classNames from "classnames";
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles"
+import withStyles from "@material-ui/core/styles/withStyles";
 // core components
-import Button from "components/MaterialUI/CustomButtons/Button"
-import GridContainer from "components/MaterialUI/Grid/GridContainer"
-import GridItem from "components/MaterialUI/Grid/GridItem"
-import Card from "components/MaterialUI/Card/Card"
-import CardHeader from "components/MaterialUI/Card/CardHeader"
-import CardBody from "components/MaterialUI/Card/CardBody"
+import Button from "components/MaterialUI/CustomButtons/Button";
+import GridContainer from "components/MaterialUI/Grid/GridContainer";
+import GridItem from "components/MaterialUI/Grid/GridItem";
+import Card from "components/MaterialUI/Card/Card";
+import CardHeader from "components/MaterialUI/Card/CardHeader";
+import CardBody from "components/MaterialUI/Card/CardBody";
 
 // resources
 import Strings from "components/strings"
@@ -26,11 +27,17 @@ const SectionPosts = ({ classes }) => {
         edges {
           node {
             frontmatter {
-                date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
-                title
-                tags
-                description
-                coverImage
+              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+              title
+              tags
+              description
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 500) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
             }
             timeToRead
             fields {
@@ -42,9 +49,9 @@ const SectionPosts = ({ classes }) => {
     }
   `)
 
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery, classes.imgProject)
-  const navCardHeader = classNames(classes.imgRounded, classes.cardHeader)
-  const navCardBody = classNames(classes.cardBody, classes.textCenter)
+  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
+  const navCardHeader = classNames(classes.imgRounded, classes.cardHeader);
+  const navCardBody = classNames(classes.cardBody, classes.textCenter);
 
   return (
     <div id="posts" className={classes.section} >
@@ -61,7 +68,12 @@ const SectionPosts = ({ classes }) => {
               <Card>
                 <div className={classes.cardProject}>
                   <CardHeader className={navCardHeader}>
-                    <div className={navImageClasses} style={{ backgroundImage: `url(${node.frontmatter.coverImage})` }} />
+                    {node.frontmatter.featuredImage &&
+                      <Img
+                        alt={node.frontmatter.title}
+                        fluid={{ ...node.frontmatter.featuredImage.childImageSharp.fluid, aspectRatio: 1.5 }}
+                        className={navImageClasses}
+                      />}
                   </CardHeader>
                   <CardBody className={navCardBody} justify="center">
                     <h4 style={{ marginBottom: 0 }} >{node.frontmatter.title}</h4>

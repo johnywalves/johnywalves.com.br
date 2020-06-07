@@ -4,7 +4,8 @@ title: Arquivos de texto grandes com PowerShell
 description: Lorem lipsunm
 category: Windows
 tags: [PowerShell, Arquivos]
-coverImage: /assets/img/files-1.jpg
+featuredImage: ./featured/files-1.jpg
+coverImage: /figures/files-1.jpg
 ---
 
 Lidar com arquivos de texto extensos pode ser um pouco dificil ou demorado, mas podemos facilitar com algumas funções em PowerShell

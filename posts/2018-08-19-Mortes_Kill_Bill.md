@@ -4,7 +4,8 @@ title: Mortes em Kill Bill
 description: Visualização de dados de filmes do Tarantino com a linguagem R
 category: R
 tags: [Visualização, R]
-coverImage: /assets/img/kill-bill-1.jpg
+featuredImage: ./featured/kill-bill-1.jpg
+coverImage: /figures/kill-bill-1.jpg
 ---
 
 Quando estava aprendendo o básico da **Linguagem R** e o **R Studio** em uma workshop do Igor Alcantara, ele disponibilizou algumas bases de dados dentre eles com ofecenças e mortes em filmes do Quentin Tarantino.  
@@ -95,7 +96,7 @@ graph <- ggplot(mortes, aes(x=qtd, y=minutes_in)) +
 graph
 ```
 
-![plot of chunk killbill_mortes](/assets/img/killbill_mortes-1.svg)
+![plot of chunk killbill_mortes](/figures/killbill_mortes-1.svg)
 
 Por final, gerei o arquivo com as informações na variável `graph` para visualização futura e divulgação no site
 

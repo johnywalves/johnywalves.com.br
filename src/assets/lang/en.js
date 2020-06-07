@@ -2,8 +2,8 @@ export default {
     description: "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
     position: "Full Stack Engineer and Developer",
     files: [
-        { name: "COLORFUL VERSION", file: "/assets/docs/cv_johnywalves_en_c.pdf" },
-        { name: "PRINT VERSION", file: "/assets/docs/cv_johnywalves_en_g.pdf" }
+        { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
+        { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" }
     ],
     status: "Brazilian, Single, 32 years old",
     live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
@@ -199,7 +199,6 @@ export default {
         {
             title: "Map navigation",
             date: "June 2019",
-            image: "treasure-map.jpg",
             tech: "Frontend (HTML5/CSS3/JS) and Jekyll",
             fullTech: "Jekyll (Ruby e Liquid) and Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
             sourceCode: "https://github.com/johnywalves/wolt",
@@ -211,7 +210,6 @@ export default {
         {
             title: "Laboratory",
             date: "December 2018",
-            image: "files.jpg",
             tech: "Web (HTML5/CSS3) and Gatsby",
             fullTech: "Web (HTML5 e CSS3), Markdown, Gatsby and Github Pages",
             sourceCode: "https://github.com/johnywalves/gatsby-site",
@@ -223,7 +221,6 @@ export default {
         {
             title: "Steam library",
             date: "October 2017",
-            image: "steamuniverse.jpg",
             tech: "Frontend (HTML5/CSS3/JS)",
             fullTech: "JavaScript (Modernizr e jQuery), JSON, HTML5 and CSS3",
             sourceCode: "https://github.com/johnywalves/steamlibrary",
@@ -292,7 +289,7 @@ export default {
             ],
             production: [{
                 title: "Essay: ForeSeries - An approach to predicting values in time series (Portuguese)",
-                file: "/assets/docs/fore_series_johnywalves_pt.pdf"
+                file: "/docs/fore_series_johnywalves_pt.pdf"
             }],
             type: "education"
         },

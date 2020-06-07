@@ -5,8 +5,8 @@ backend:
   site_domain: johnywalves.com.br
 
 publish_mode: editorial_workflow
-media_folder: "static/assets/img"
-public_folder: "assets/img"
+media_folder: "static/figures"
+public_folder: "figures"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog

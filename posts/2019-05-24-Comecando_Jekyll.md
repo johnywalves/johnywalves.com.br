@@ -4,7 +4,8 @@ title: Começando com Jekyll
 description: Lorem lipsunm
 category: Jekyll
 tags: [Web, CMS, Jekyll]
-coverImage: /assets/img/jekyll-1.jpg
+featuredImage: ./featured/jekyll-1.jpg
+coverImage: /figures/jekyll-1.jpg
 ---
 
 Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos poderar    CMS, Sistema de gerenciamento de conteúdo,

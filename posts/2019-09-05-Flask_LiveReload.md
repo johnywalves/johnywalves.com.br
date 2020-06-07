@@ -4,7 +4,8 @@ title: Flask LiveReload
 description: Lorem lipsunm
 category: Python
 tags: [Flask, Python, Web]
-coverImage: /assets/img/python-1.jpg
+featuredImage: ./featured/python-1.jpg
+coverImage: /figures/python-1.jpg
 published: false
 ---
 

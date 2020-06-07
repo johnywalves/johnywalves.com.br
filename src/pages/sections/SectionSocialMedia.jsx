@@ -25,6 +25,7 @@ const SectionSocialMedia = props => {
                 target="_blank"
                 className={classButtom}
                 rel="noreferrer"
+                aria-label="GitHub"
             >
                 <Icons.Github />
             </Button>
@@ -35,6 +36,7 @@ const SectionSocialMedia = props => {
                 target="_blank"
                 className={classButtom}
                 rel="noreferrer"
+                aria-label="LinkedIn"
             >
                 <Icons.Linkedin />
             </Button>
@@ -45,6 +47,7 @@ const SectionSocialMedia = props => {
                 target="_blank"
                 className={classButtom}
                 rel="noreferrer"
+                aria-label="Instagram"
             >
                 <Icons.Instagram />
             </Button>
@@ -55,6 +58,7 @@ const SectionSocialMedia = props => {
                 target="_blank"
                 className={classButtom}
                 rel="noreferrer"
+                aria-label="Twitter"
             >
                 <Icons.Twitter />
             </Button>
@@ -65,6 +69,7 @@ const SectionSocialMedia = props => {
                 target="_blank"
                 className={classButtom}
                 rel="noreferrer"
+                aria-label="Lattes"
             >
                 <Icons.University />
             </Button>
