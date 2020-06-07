@@ -5,29 +5,26 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-
 // core components
 import parallaxStyle from "assets/jss/material-kit-react/components/parallaxStyle";
+
+//import BackgroundImage from "gatsby-background-image";
 
 class Parallax extends React.Component {
 
   constructor(props) {
     super(props);
     if (typeof window !== `undefined`) {
-      var windowScrollTop = window.pageYOffset / 3;
-      this.state = {
-        transform: "translate3d(0," + windowScrollTop + "px,0)"
-      };
+      const windowScrollTop = window.pageYOffset / 3;
+      this.state = { transform: "translate3d(0," + windowScrollTop + "px,0)" };
       this.resetTransform = this.resetTransform.bind(this);
     }
   }
 
   componentDidMount() {
     if (typeof window !== `undefined`) {
-      var windowScrollTop = window.pageYOffset / 3;
-      this.setState({
-        transform: "translate3d(0," + windowScrollTop + "px,0)"
-      });
+      const windowScrollTop = window.pageYOffset / 3;
+      this.setState({ transform: "translate3d(0," + windowScrollTop + "px,0)" });
       window.addEventListener("scroll", this.resetTransform);
     }
   }
@@ -40,10 +37,8 @@ class Parallax extends React.Component {
 
   resetTransform() {
     if (typeof window !== `undefined`) {
-      var windowScrollTop = window.pageYOffset / 3;
-      this.setState({
-        transform: "translate3d(0," + windowScrollTop + "px,0)"
-      });
+      const windowScrollTop = window.pageYOffset / 3;
+      this.setState({ transform: "translate3d(0," + windowScrollTop + "px,0)" });
     }
   }
 
@@ -57,12 +52,14 @@ class Parallax extends React.Component {
       image,
       small
     } = this.props;
+
     const parallaxClasses = classNames({
       [classes.parallax]: true,
       [classes.filter]: filter,
       [classes.small]: small,
       [className]: className !== undefined
     });
+
     return (
       <div
         className={parallaxClasses}

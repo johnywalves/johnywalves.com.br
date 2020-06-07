@@ -20,7 +20,7 @@ import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
 const SectionDescription = ({ classes }) => {
 
     const imageClasses = classNames(classes.imgRaised, classes.imgRoundedCircle, classes.imgFluid, classes.avatar);
-    
+
     const { avatarImage } = useStaticQuery(graphql`
         query {
             avatarImage: file(relativePath: { eq: "johnywalves.jpg" }) {

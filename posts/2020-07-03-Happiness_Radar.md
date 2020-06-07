@@ -120,7 +120,7 @@ countries.head()
 ```
 
 | **Country** | **Area in km²** | **Population** | **Continent** |
-|---|---|---|---|
+|---|---:|---:|---|
 | Andorra | 468.0 | 77006 | EU |
 | United Arab Emirates | 82880.0 | 9630959 | AS |
 | Afghanistan | 647500.0 | 37172386 | AS |
@@ -146,7 +146,7 @@ data.head()
 ```
 
 | **Rank** | **Region** | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** | **Area** | **Population** | **Continent** |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | 1 | Finland | 7.769 | 1.340 | 1.587 | 0.986 | 0.596 | 0.153 | 0.393 | 337030.0 | 5518050 | EU |
 | 2 | Denmark | 7.600 | 1.383 | 1.573 | 0.996 | 0.592 | 0.252 | 0.410 | 43094.0 | 5797446 | EU |
 | 3 | Norway | 7.554 | 1.488 | 1.582 | 1.028 | 0.603 | 0.271 | 0.341 | 324220.0 | 5314336 | EU |
@@ -192,7 +192,7 @@ coods.head()
 ```
 
 | **country** | **latitude** | **longitude** | **name** |
-|---|---|---|---|
+|---|---:|---:|---|
 | AD | 42.546245 | 1.601554 | Andorra |
 | AE | 23.424076 | 53.847818 | United Arab Emirates |
 | AF | 33.939110 | 67.709953 | Afghanistan |
@@ -215,7 +215,7 @@ cc.head()
 ```
 
 | **Rank** | **Region** | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** | **Area** | **Population** | **Continent** | **latitude** | **longitude** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|---:|
 | 1 | Finland | 7.769 | 1.340 | 1.587 | 0.986 | 0.596 | 0.153 | 0.393 | 337030.0 | 5518050 | EU | 61.924110 | 25.748151 |
 | 2 | Denmark | 7.600 | 1.383 | 1.573 | 0.996 | 0.592 | 0.252 | 0.410 | 43094.0 | 5797446 | EU | 56.263920 | 9.501785 |
 | 3 | Norway | 7.554 | 1.488 | 1.582 | 1.028 | 0.603 | 0.271 | 0.341 | 324220.0 | 5314336 | EU | 60.472024 | 8.468946 |
@@ -257,6 +257,14 @@ plt.show()
 ```
 
 ![World Map](/figures/radar_world_map.svg)
+
+Salvando a fonte de dados tratada para futuros usos
+
+```python
+cc.to_csv("./countries.csv", index = False, header=True)
+```
+
+Você pode baixar aqui: [Countries with Coordenates](/data/countries.csv)
 
 ## Referências
 

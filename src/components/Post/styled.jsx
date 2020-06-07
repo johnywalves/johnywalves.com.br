@@ -49,7 +49,7 @@ export const PostDate = styled.p`
 
   ${media.lessThan("large")`
     padding: 0 1rem;
-  `}  
+  `} 
 `
 
 export const MainContent = styled.section`
@@ -219,9 +219,12 @@ export const MainContent = styled.section`
   table {
     color: var(--texts);
     border-collapse: separate;
-    border-spacing: .5rem;
+    border-spacing: .2rem;
     width: 100%;
     margin-bottom: 1.6rem;
+  }
+  table td {
+    padding: .2rem;
   }
   table tr:nth-child(even) {
     background-color: var(--mediumBackground);
