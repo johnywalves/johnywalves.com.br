@@ -10,8 +10,7 @@ import ListItem from "@material-ui/core/ListItem";
 // components
 import CustomDropdown from "../CustomDropdown/CustomDropdown";
 import Button from "../CustomButtons/Button";
-import Anilink from "gatsby-plugin-transition-link/AniLink";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 // resources
 import Strings from "components/strings";
@@ -75,7 +74,7 @@ const HeaderLinks = ({ classes, updateLanguage }) => {
       {Strings.pages.list.map(({ link, icon, title }, index) => (
         <ListItem className={classes.listItem} key={index}>
           {icon ?
-            <Anilink
+            <Link
               to={link}
               className={classes.navLink}
               cover
@@ -84,7 +83,7 @@ const HeaderLinks = ({ classes, updateLanguage }) => {
               bg="var(--background)"
             >
               <Launch className={classes.icons} /> {title}
-            </Anilink>
+            </Link>
             :
             <p
               link={link}

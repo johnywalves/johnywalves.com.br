@@ -24,7 +24,6 @@
     "gatsby-plugin-react-helmet": "^3.1.7",
     "gatsby-plugin-sharp": "^2.2.25",
     "gatsby-plugin-sitemap": "^2.3.4",
-    "gatsby-plugin-transition-link": "^1.17.7",
     "gatsby-remark-images": "^3.1.32",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-remark-prismjs": "^3.3.24",
