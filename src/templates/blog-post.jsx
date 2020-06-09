@@ -9,8 +9,10 @@ import Comments from "components/Comments";
 import * as S from "components/Post/styled";
 
 const BlogPost = ({ data, pageContext }) => {
-    const post = data.markdownRemark
-    const { nextPost, previousPost } = pageContext
+
+    const post = data.markdownRemark;
+    const { nextPost, previousPost, slug } = pageContext;
+
     return (
         <Layout>
             <SEO
@@ -30,7 +32,7 @@ const BlogPost = ({ data, pageContext }) => {
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </S.MainContent>
             <RecommendedPost next={nextPost} previous={previousPost} />
-            <Comments title={post.frontmatter.title} url={pageContext.slug} />
+            <Comments title={post.frontmatter.title} url={slug} />
         </Layout>
     )
 }

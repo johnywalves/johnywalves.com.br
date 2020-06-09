@@ -1,16 +1,13 @@
 ---
 date: 2018-09-24 22:17:00 -0300
-title: Comandos Básicos Linux para Consulta
-description: Lorem lipsunm
+title: Linux - My Cheatsheet
+description: Comandos Básicos Linux para Consulta
 category: Linux
 tags: [Linux, Bash, Shell]
 topics: [Arquivos e Diretórios, Redes, Usuário e Acessos, CRON, Processos, Serviços]
 featuredImage: ./featured/pinguim-1.jpg
 coverImage: /figures/pinguim-1.jpg
 ---
-
-Recentemente me deparei com a necessidade de aprender a lidar com o linux, sem uma interface gráfica, amei  
-Dentro do uso com o shell do Linux para mim foi a dificuldade de memorizar os comandos, então criei um guia pequeno para consultar constantemente
 
 ## Arquivos e Diretórios
 
@@ -32,10 +29,10 @@ Excluir arquivo
 rm <nome do arquivo>
 ```
 
-Excluir diretório
+Excluir diretório com conteúdo
 
 ```bash
-rm -r <nome do diretório>
+rm -rf <nome do diretório>
 ```
 
 Ler conteúdo de um arquivo
@@ -71,6 +68,12 @@ hostname -i
 ```
 
 ## Compreeender Ambiente
+
+Visualizar pasta atual
+
+```bash
+echo $PWD
+```
 
 Visualizar pasta de instalação de um comando
 
@@ -143,9 +146,12 @@ ps -ef
 Visualizar todos os serviços
 
 ```bash
-# Todos os serviços
 systemctl
-# Todos os serviços executando
+```
+
+Visualizar todos os serviços executando
+
+```bash
 systemctl list-unit-files | grep enable
 ```
 
