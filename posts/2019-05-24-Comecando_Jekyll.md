@@ -1,14 +1,14 @@
 ---
 date: 2019-05-24 19:52:13 -0300
 title: Começando com Jekyll
-description: Lorem lipsunm
+description: Geração de páginas estáticas com Jekyll e Markdown
 category: Jekyll
 tags: [Web, CMS, Jekyll]
 featuredImage: ./featured/jekyll-1.jpg
 coverImage: /figures/jekyll-1.jpg
 ---
 
-Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos poderar    CMS, Sistema de gerenciamento de conteúdo,
+Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos poderar CMS, Sistema de gerenciamento de conteúdo,
 
 ## Instalação
 
