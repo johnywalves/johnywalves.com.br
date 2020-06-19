@@ -4,8 +4,8 @@ title: Começando com Jekyll
 description: Geração de páginas estáticas com Jekyll e Markdown
 category: Jekyll
 tags: [Web, CMS, Jekyll]
-featuredImage: ./featured/jekyll-1.jpg
-coverImage: /figures/jekyll-1.jpg
+featuredImage: ./featured/jekyll-1.png
+coverImage: /figures/jekyll-1.png
 ---
 
 Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos poderar CMS, Sistema de gerenciamento de conteúdo,

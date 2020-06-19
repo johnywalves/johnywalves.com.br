@@ -38,7 +38,7 @@ const SectionProjects = props => {
 
   const { project1, project2, project3 } = useStaticQuery(graphql`
     query {
-      project1: file(relativePath: { eq: "treasure-map.jpg" }) {
+      project1: file(relativePath: { eq: "daisy.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -46,7 +46,7 @@ const SectionProjects = props => {
         }
       }
 
-      project2: file(relativePath: { eq: "files.jpg" }) {
+      project2: file(relativePath: { eq: "treasure-map.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid_tracedSVG

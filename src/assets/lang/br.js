@@ -67,8 +67,7 @@ export default {
     skills: [{
         type: "Linguagens",
         list: [
-            { title: "C#", level: 55 },
-            { title: "Delphi", level: 60 },
+            { title: "C#", level: 40 },
             { title: "HTML e CSS", level: 80 },
             { title: "Java", level: 60 },
             { title: "JavaScript", level: 90 },
@@ -80,18 +79,18 @@ export default {
         type: "Frameworks e Bibliotecas",
         list: [
             { title: "Angular", level: 30 },
-            { title: "Bootstrap", level: 85 },
+            { title: "Bootstrap", level: 80 },
             { title: "D3", level: 40 },
-            { title: "Express", level: 80 },
-            { title: "Flask", level: 60 },
-            { title: "Gatsby", level: 40 },
+            { title: "Express", level: 60 },
+            { title: "Flask", level: 40 },
+            { title: "Gatsby", level: 60 },
             { title: "Ionic", level: 20 },
             { title: "Jekyll", level: 60 },
             { title: "NextJS", level: 50 },
             { title: "Node", level: 60 },
             { title: "PicassoJS", level: 20 },
-            { title: "React", level: 80 },
-            { title: "React Native", level: 60 },
+            { title: "React", level: 90 },
+            { title: "React Native", level: 40 },
             { title: "Redux", level: 75 },
             { title: "Sprint Boot", level: 70 },
             { title: "SQLAlchemy", level: 60 },
@@ -197,23 +196,22 @@ export default {
     },
     projects: [
         {
+            title: "Daisy Bell",
+            date: "Junho 2020",
+            tech: "Web (HTML5/CSS3) e React",
+            fullTech: "Frontend Web (JavaScript, JSON, HTML5 e CSS3), React e Netlify",
+            view: "https://daisy.johnywalves.com.br",
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
+            ]
+        },
+        {
             title: "Navegação de mapa",
             date: "Junho 2019",
             tech: "Frontend (HTML5/CSS3/JS) e Jekyll",
             fullTech: "Jekyll (Ruby e Liquid) e Frontend Web (JavaScript, JSON, HTML5 e CSS3)",
             sourceCode: "https://github.com/johnywalves/wolt",
             view: "https://johnywalves.github.io/wolt/",
-            description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
-            ]
-        },
-        {
-            title: "Laboratório",
-            date: "Dezembro 2018",
-            tech: "Web (HTML5/CSS3) e Gatsby",
-            fullTech: "Web (HTML5 e CSS3), Markdown, Gatsby e Github Pages",
-            sourceCode: "https://github.com/johnywalves/gatsby-site",
-            view: "https://johnywalves.com.br/blog/",
             description: [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
             ]

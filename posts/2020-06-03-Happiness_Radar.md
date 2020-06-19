@@ -8,6 +8,7 @@ category: Py
 tags:
   - Python
   - Pandas
+highlight: true
 ---
 
 Entre várias fontes de dados no Kaggle uma delas é a relação de felicidade com algumas estátisticas de uma país o [World Happiness Report](https://www.kaggle.com/unsdsn/world-happiness) vamos gerar algumas visualizações
