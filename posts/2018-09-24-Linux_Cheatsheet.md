@@ -127,6 +127,12 @@ Conceder acesso para um usuário
 chmod <código do acesso> <usuário> <nome do diretório / nome do arquivo / * para todos os arquivos>
 ```
 
+Conceder acesso para um usuário recursivamente
+
+```bash
+chmod -R <código do acesso> <usuário> <nome do diretório / nome do arquivo / * para todos os arquivos>
+```
+
 Verificar dono e acesso de arquivos e diretório
 
 ```bash

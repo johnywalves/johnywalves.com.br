@@ -236,7 +236,7 @@ export default {
             title: "Analista Desenvolvedor",
             institution: "Invillia",
             description: [
-                "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da Invillia Apps, intefaces ricas para visualização de dados e treinamento dos colaboradores",
+                "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da Invillia Apps, interfaces ricas para visualização de dados e treinamento dos colaboradores",
                 "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)"
             ],
             type: "work"

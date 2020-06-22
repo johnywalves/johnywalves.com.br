@@ -1,7 +1,7 @@
 ---
 title: Biblioteca Steam
 description: Visualização da biblioteca de jogos com JavaScript apartir de um JSON
-date: '2020-04-10 11:03:00'
+date: 2020-04-10 11:03:00 -0300
 featuredImage: ./featured/steam-1.jpg
 coverImage: /figures/steam-1.jpg
 category: JS
