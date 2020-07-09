@@ -1,20 +1,19 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import GridContainer from "components/MaterialUI/Grid/GridContainer";
 import Badge from "components/MaterialUI/Badge/Badge";
-
 // resources
 import Strings from "components/strings";
 // styles
 import SocialStyle from "assets/jss/material-kit-react/views/componentsSections/socialStyle";
 
 const SectionServices = ({ classes }) => {
+
   const colors = ["success", "info", "warning", "danger", "primary", "rose"];
+
   const skills = classNames(classes.textCenter, classes.typo, classes.boxSocial);
 
   return (

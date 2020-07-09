@@ -1,58 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
-
+import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import GridContainer from "components/MaterialUI/Grid/GridContainer";
 import GridItem from "components/MaterialUI/Grid/GridItem";
-import CustomLinearProgress from "components/MaterialUI/CustomLinearProgress/CustomLinearProgress";
-
+import Badge from "components/MaterialUI/Badge/Badge";
 // resources
 import Strings from "components/strings";
 // style classes
-import basicsStyle from "assets/jss/material-kit-react/views/componentsSections/basicsStyle";
+import SocialStyle from "assets/jss/material-kit-react/views/componentsSections/socialStyle";
 
 const SectionSkills = ({ classes }) => {
 
-  const colors = ["success", "info", "warning", "danger"];
-
-  const progressRef = useRef();
-
-  const [startedLoad, setStaredLoad] = useState(false);
-  const [completed, setCompleted] = useState(0);
-
-  useEffect(() => {
-    if (startedLoad) {
-      return true;
-    }
-
-    const isInViewport = () => {
-      if (progressRef.current) {
-        const bounding = progressRef.current.getBoundingClientRect();
-        return bounding.top <= (window.innerHeight || document.documentElement.clientHeight);
-      }
-      return false;
-    }
-
-    const progress = loaded => {
-      if (loaded > 1) {
-        setCompleted(1);
-      } else {
-        setCompleted(loaded);
-        setTimeout(() => progress(loaded + .1), 100)
-      }
-    }
-
-    const handleScroll = () => {
-      if (!startedLoad && isInViewport()) {
-        setStaredLoad(true);
-        setTimeout(() => progress(.1), 50)
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, false);
-    return () => window.removeEventListener("scroll", handleScroll, false);;
-  }, [startedLoad]);
+  const colors = ["success", "info", "warning", "danger"]
 
   return (
     <div id="skills" className={classes.sections}>
@@ -63,7 +23,7 @@ const SectionSkills = ({ classes }) => {
             <h4>{Strings.skillsSubLabel}</h4>
           </div>
         </GridContainer>
-        <div id="progress" ref={progressRef}>
+        <div id="progress">
           {Strings.skills.map((type, i) =>
             <GridContainer key={i}>
               <GridItem xs={12}>
@@ -73,8 +33,11 @@ const SectionSkills = ({ classes }) => {
               </GridItem>
               {type.list.map((elem, index) => (
                 <GridItem key={index} xs={6} sm={4} md={3} lg={2}>
-                  {elem.title}<span className="percent">{` (${Math.round(completed * elem.level)}%)`}</span>
-                  <CustomLinearProgress variant="determinate" color={colors[i]} value={Math.round(completed * elem.level)} />
+                  <Badge color={colors[i]}>
+                    <p className={classes.skills}>
+                      {elem.title}
+                    </p>
+                  </Badge>
                 </GridItem>
               ))}
             </GridContainer>
@@ -85,4 +48,4 @@ const SectionSkills = ({ classes }) => {
   )
 }
 
-export default withStyles(basicsStyle)(SectionSkills)
+export default withStyles(SocialStyle)(SectionSkills)

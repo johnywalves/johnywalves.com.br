@@ -11,8 +11,7 @@ const productStyle = {
     marginRight: "auto",
   },
   skillsBadge: {
-    display: "inline-block",
-    marginBottom: "5px"
+    display: "inline-block"
   },
   skills: {
     margin: "8px 4px 4px 4px",

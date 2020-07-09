@@ -32,6 +32,7 @@ import "assets/Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons.css";
 const VitaePage = props => {
 
     const { classes, ...rest } = props;
+
     const [toggle, SetToggle] = useState(false);
 
     const {
@@ -63,8 +64,8 @@ const VitaePage = props => {
         <div className={classNames(classes.main, classes.mainRaised)} >
             <SectionDescription />
             <SectionDownload />
-            <SectionPosts />
             <SectionProjects />
+            <SectionPosts />
             <SectionLanguage />
             <SectionSkills />
             <SectionSocial />
