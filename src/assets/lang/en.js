@@ -43,8 +43,8 @@ export default {
             link: "/blog/"
         },
         list: [
-            { title: "posts", link: "#posts" },
             { title: "projects", link: "#projects" },
+            { title: "posts", link: "#posts" },
             { title: "skills", link: "#skills" },
             { title: "timeline", link: "#history" },
             { title: "contact", link: "#contact" },
