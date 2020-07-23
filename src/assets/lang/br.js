@@ -102,7 +102,7 @@ export default {
             { title: "Pentaho" },
             { title: "PostgreSQL" },
             { title: "Python" },
-            { title: "Oracle PL/SQL" },
+            { title: "PL/SQL" },
             { title: "Qlik Sense" },
             { title: "R" }
         ]
