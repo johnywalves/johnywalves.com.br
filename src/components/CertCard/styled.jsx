@@ -1,30 +1,54 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const Card = styled.div`
-    position: absolute;
+export const Card = styled.a`
+  position: relative;
+  width: 20rem;
+  margin: 2.5rem 1rem 1rem 1rem;
+  color: var(--texts);
+  text-align: center;
 
-    left: ${props => props.open ? "0" : `${props.index % 4 * 23 + 2}%`};
-    top: ${props => props.open ? "0" : `${Math.trunc(props.index / 4) * 25}vh`};
-    width: ${props => props.open ? "100%" : "20%"};
-    height: ${props => props.open ? "100vh" : "22vh"};
-    z-index: ${props => props.open ? "1" : "0"};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: left 1.5s, top 1.5s, width 1.5s, height 1.5s, box-shadow 0.3s;
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: 4px 4px 8px 0 var(--texts);
+  transition: box-shadow 0.3s;
 
-    &:hover {
-        cursor: pointer;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
+  &:visited {
+    color: var(--texts);
+  }
 
-    figure {
-        margin: 0;
-        width: 100%;
-        height: 80%;
-        background-image: url(${props => props.img});
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+  &:hover {
+    color: var(--highlight);
+    cursor: pointer;
+    box-shadow: 8px 8px 16px 0 var(--texts);
+  }
+`
+
+export const Icon = styled.div`
+  height: 5rem;
+  width: 5rem;
+  transform: translateY(-25%);
+  margin: 0 auto;
+
+  & svg {
+    height: 100%;
+    width: 100%;
+  }
+`
+
+export const Name = styled.header`
+  padding: 0 1rem 0.25rem 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+`
+
+export const Institute = styled.div`
+  padding: 0 1rem 0.25rem;
+`
+
+export const Moment = styled.div`
+  padding: 0.5rem 1rem 1.5rem 1rem;
 `

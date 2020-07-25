@@ -186,10 +186,21 @@ export default {
         article: "Article (PT BR)",
         sourceCode: "Source Code",
         date: "Date",
-        category: "Category",
+    category: "Category",
         tools: "Tools"
     },
     projects: [
+        {
+            title: "Bom dia, equipes dev",
+            date: "Julho 2020",
+            tech: "Web (HTML5/CSS3) e React",
+            fullTech: "Frontend Web (JavaScript, JSON, HTML5 e CSS3), React e Netlify",
+            sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
+            view: "https://bomdiaequipesdev.com.br/",
+            description: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec. Vivamus bibendum rhoncus hendrerit. Nullam volutpat semper venenatis. Nam eleifend vitae risus at facilisis. Phasellus pharetra tellus sem, varius volutpat dui bibendum quis. Fusce eu mi nunc. Etiam sem turpis, convallis ut malesuada eget, laoreet eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin facilisis lacinia tempor. Integer sit amet sapien sit amet sapien finibus tincidunt. Cras tincidunt at turpis eget dictum. Morbi sit amet eros felis. Donec porttitor risus ut suscipit scelerisque. Duis vel odio risus. Nam nec tincidunt nunc. Sed lobortis dictum justo, et venenatis nulla mattis sit amet."
+            ]
+        },
         {
             title: "Daisy Bell",
             date: "June 2020",
