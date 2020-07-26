@@ -1,6 +1,6 @@
 export default {
     description: "Desenvolvedor full stack web com mais de 15 anos de experiência e estudante de ciência de dados, apaixonado por aprender e entregar soluções que automatizem processos e entreguem métricas",
-    position: "Engenheiro e Desenvolvedor Full Stack",
+    position: "Desenvolvedor Web",
     files: [
         { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },
         { name: "VERSÃO IMPRESSÃO", file: "/docs/cv_johnywalves_pt_g.pdf" }

@@ -63,12 +63,12 @@ const VitaePage = props => {
         <Parallax small filter image={imageHeader} />
         <div className={classNames(classes.main, classes.mainRaised)} >
             <SectionDescription />
-            <SectionDownload />
             <SectionProjects />
             <SectionPosts />
             <SectionLanguage />
             <SectionSkills />
             <SectionSocial />
+            <SectionDownload />
             <SectionHistory />
             <SectionContact />
         </div>

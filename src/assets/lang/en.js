@@ -1,6 +1,6 @@
 export default {
     description: "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
-    position: "Full Stack Engineer and Developer",
+    position: "Web Developer",
     files: [
         { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
         { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" }
