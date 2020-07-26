@@ -47,9 +47,6 @@ const SectionDescription = ({ classes }) => {
                     </div>
                 </GridItem>
             </GridContainer>
-            <div className={classes.description}>
-                <h4>{Strings.description}{" "}</h4>
-            </div>
         </div>
     )
 }
