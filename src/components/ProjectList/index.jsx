@@ -6,10 +6,10 @@ import HomeList from "components/HomeList"
 
 const ProjectList = () => (
   <HomeList
-    title={Strings.projectsLabel}
-    description={Strings.projectsSubLabel}
+    title={Strings.projects.title}
+    description={Strings.projects.description}
   >
-    {Strings.projects.map((project, index) => (
+    {Strings.projects.list.map((project, index) => (
       <HomeCard key={index} {...project} />
     ))}
   </HomeList>

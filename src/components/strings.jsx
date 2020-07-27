@@ -1,9 +1,9 @@
-import LocalizedStrings from 'react-localization';
+import LocalizedStrings from "react-localization"
 
-import brazilian from 'assets/lang/br'
-import english from 'assets/lang/en'
+import brazilian from "assets/lang/br"
+//import english from 'assets/lang/en'
 
 export default new LocalizedStrings({
-    br: brazilian,
-    en: english
+  br: brazilian,
+  //en: english
 })

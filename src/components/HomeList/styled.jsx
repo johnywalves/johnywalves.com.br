@@ -18,7 +18,7 @@ export const Title = styled.h1`
 export const Description = styled.h4`
   text-align: center;
   font-size: 1.1rem;
-  margin: .5rem 0 1.2rem;
+  margin: .5rem 0 1.5rem;
   opacity: .75;
 `
 

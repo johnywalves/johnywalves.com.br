@@ -41,7 +41,10 @@ const PostsList = () => {
   `)
 
   return (
-    <HomeList title={Strings.posts.label} description={Strings.posts.subLabel}>
+    <HomeList
+      title={Strings.posts.title}
+      description={Strings.posts.description}
+    >
       {edges.map(({ node }, index) => (
         <Link to={node.fields.slug}>
           <HomeCard

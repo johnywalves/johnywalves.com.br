@@ -1,12 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { FileDownload } from "@styled-icons/fa-solid/FileDownload"
 
 import Badge from "components/Badge"
 import Strings from "components/strings"
 import Layout from "components/Layout"
 import SEO from "components/seo"
+import Experience from "components/Experience"
 
-import { Content, Band, Avatar } from "components/About/styled"
+import * as S from "components/About/styled"
 
 const About = () => {
   const { avatarImage } = useStaticQuery(graphql`
@@ -24,40 +26,60 @@ const About = () => {
   return (
     <Layout>
       <SEO title="Sobre" />
-      <Content>
-        <Avatar fixed={avatarImage.childImageSharp.fixed} />
+      <S.Forehead>
+        <S.Avatar fixed={avatarImage.childImageSharp.fixed} />
+      </S.Forehead>
+      <S.Content>
         <h1>Johny W. Alves</h1>
         <h5>{Strings.description}</h5>
 
-        <h2>{Strings.languagesLabel}</h2>
-        <h5>{Strings.languagesSubLabel}</h5>
-        <Band>
-          {Strings.languages.map((language, index) => (
+        <S.Curriculium>
+          {Strings.files.map((file, index) => (
+            <a
+              key={index}
+              href={file.file}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FileDownload />
+              <p>{file.name}</p>
+            </a>
+          ))}
+        </S.Curriculium>
+
+        <h2>{Strings.languages.title}</h2>
+        <h5>{Strings.languages.description}</h5>
+        <S.Band>
+          {Strings.languages.list.map((language, index) => (
             <Badge key={index}>{language.name}</Badge>
           ))}
-        </Band>
+        </S.Band>
 
-        <h2>{Strings.skillsLabel}</h2>
-        <h5>{Strings.skillsSubLabel}</h5>
-        {Strings.skills.map((group, index) => (
+        <h2>{Strings.hardSkills.title}</h2>
+        <h5>{Strings.hardSkills.description}</h5>
+        {Strings.hardSkills.list.map((group, index) => (
           <div key={index}>
             <h3>{group.type}</h3>
-            <Band>
+            <S.Band>
               {group.list.map((skill, idx) => (
                 <Badge key={idx}>{skill.title}</Badge>
               ))}
-            </Band>
+            </S.Band>
           </div>
         ))}
 
-        <h2>{Strings.socialLabel}</h2>
-        <h5>{Strings.socialSubLabel}</h5>
-        <Band>
-          {Strings.socialSkills.map((skill, index) => (
-            <Badge key={index}>{skill}</Badge>
-          ))}
-        </Band>
-      </Content>
+        <h2>{Strings.experience.title}</h2>
+        <h5>{Strings.experience.description}</h5>
+        {Strings.experience.list.slice(0, 3).map((exp, index) => (
+          <Experience key={index} {...exp} />
+        ))}
+
+        <h2>{Strings.education.title}</h2>
+        <h5>{Strings.education.description}</h5>
+        {Strings.education.list.map((edu, index) => (
+          <Experience key={index} {...edu} />
+        ))}
+      </S.Content>
     </Layout>
   )
 }

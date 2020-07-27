@@ -90,8 +90,8 @@ const SectionProjects = (props) => {
       <div className={classes.container}>
         <GridContainer justify="center">
           <div className={classes.textCenter}>
-            <h3>{Strings.projectsLabel}</h3>
-            <h4>{Strings.projectsSubLabel}</h4>
+            <h3>{Strings.projects.title}</h3>
+            <h4>{Strings.projects.description}</h4>
           </div>
         </GridContainer>
         <GridContainer justify="center">
