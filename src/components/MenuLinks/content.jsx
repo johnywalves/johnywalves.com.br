@@ -1,12 +1,15 @@
 const links = [{
         label: "Home",
+        url: "/"
+    },
+    {
+        label: "Artigos",
         url: "/blog/"
     },
     {
         label: "Sobre",
-        url: "/"
+        url: "/about"
     }
-
 ]
 
 export default links;

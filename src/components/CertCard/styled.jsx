@@ -6,28 +6,30 @@ export const Card = styled.a`
   margin: 2.5rem 1rem 1rem 1rem;
   color: var(--texts);
   text-align: center;
+  text-decoration: none;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  border-radius: 1rem;
+  border-radius: 0.25rem;
   background-color: var(--white);
-  box-shadow: 4px 4px 8px 0 var(--texts);
-  transition: box-shadow 0.3s;
+  box-shadow: 0 1px 4px var(--shadowColors);
+  transition: all 0.2s ease-out;
 
   &:visited {
     color: var(--texts);
   }
 
   &:hover {
-    color: var(--highlight);
     cursor: pointer;
-    box-shadow: 8px 8px 16px 0 var(--texts);
+    box-shadow: 0 8px 16px var(--shadowColors);
+    transform: translateY(-1px);
   }
 `
 
 export const Icon = styled.div`
+  color: var(--highlight);
   height: 5rem;
   width: 5rem;
   transform: translateY(-25%);

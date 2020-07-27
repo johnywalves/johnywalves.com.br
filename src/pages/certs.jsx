@@ -1,5 +1,5 @@
 import React from "react"
-// components
+
 import CertCard from "components/CertCard"
 import CertList from "components/CertList"
 import Layout from "components/Layout"

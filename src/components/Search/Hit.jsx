@@ -10,6 +10,7 @@ const Hit = ({ hit }) => (
         timeToRead={hit.timeToRead}
         title={hit.title}
         description={hit.description}
+        tags={hit.tags}
         coverImage={hit.coverImage}
     />
 )

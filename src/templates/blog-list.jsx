@@ -1,47 +1,59 @@
+import React from "react"
+import { graphql } from "gatsby"
 
-import React from "react";
-import { graphql } from "gatsby";
+import Layout from "components/Layout"
+import SEO from "components/seo"
+import PostItem from "components/PostItem"
+import Pagination from "components/Pagination"
 
-// 
-import * as S from "components/ListWrapper/styled";
+import * as S from "components/ListWrapper/styled"
 
-// Components
-import Layout from "components/Layout";
-import SEO from "components/seo";
-import PostItem from "components/PostItem";
-import Pagination from "components/Pagination";
+const BlogList = (props) => {
+  const postList = props.data.allMarkdownRemark.edges
 
-const BlogList = props => {
-  const postList = props.data.allMarkdownRemark.edges;
-
-  const { currentPage, numPages } = props.pageContext;
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? `/blog/` : `/page/${currentPage - 1}`;
-  const nextPage = `/page/${currentPage + 1}`;
+  const { currentPage, numPages } = props.pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = currentPage - 1 === 1 ? `/blog/` : `/page/${currentPage - 1}`
+  const nextPage = `/page/${currentPage + 1}`
 
   return (
     <Layout>
       <SEO title="Blog" />
       <S.ListWrapper>
-        {postList.map(({
-          node: {
-            frontmatter: { date, title, category, description, coverImage, featuredImage },
-            timeToRead,
-            fields: { slug }
-          }
-        }, index) =>
-          <PostItem
-            key={index}
-            slug={slug}
-            category={category}
-            date={date}
-            timeToRead={timeToRead}
-            title={title}
-            description={description}
-            coverImage={coverImage}
-            featuredImage={featuredImage}
-          />)}
+        {postList.map(
+          (
+            {
+              node: {
+                frontmatter: {
+                  date,
+                  title,
+                  category,
+                  description,
+                  tags,
+                  coverImage,
+                  featuredImage,
+                },
+                timeToRead,
+                fields: { slug },
+              },
+            },
+            index
+          ) => (
+            <PostItem
+              key={index}
+              slug={slug}
+              category={category}
+              date={date}
+              timeToRead={timeToRead}
+              title={title}
+              description={description}
+              tags={tags}
+              coverImage={coverImage}
+              featuredImage={featuredImage}
+            />
+          )
+        )}
       </S.ListWrapper>
       <Pagination
         isFirst={isFirst}
@@ -58,10 +70,10 @@ const BlogList = props => {
 export const query = graphql`
   query PostList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-        sort: {fields: frontmatter___date, order: DESC},
-        filter: {frontmatter: {published: {ne: false}}},
-        limit: $limit,
-        skip: $skip
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { published: { ne: false } } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
@@ -70,14 +82,15 @@ export const query = graphql`
             title
             category
             description
+            tags
             coverImage
             featuredImage {
-              childImageSharp {	
+              childImageSharp {
                 fixed(width: 120, height: 120) {
-                  ...GatsbyImageSharpFixed_tracedSVG	
-                }	
+                  ...GatsbyImageSharpFixed_tracedSVG
+                }
               }
-            }            
+            }
           }
           timeToRead
           fields {
