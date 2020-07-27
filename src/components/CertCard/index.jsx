@@ -1,11 +1,12 @@
 import React from "react"
-// style
-import { Card, Icon, Name, Institute, Moment } from "./styled"
-// assets
 import { Tools } from "@styled-icons/fa-solid/Tools"
 import { University } from "@styled-icons/fa-solid/University"
 import { Award } from "@styled-icons/fa-solid/Award"
 import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
+
+import HomeCard from "components/HomeCard"
+
+import { Icon } from "./styled"
 
 const FormatDate = (text) => {
   const date = new Date(text),
@@ -17,17 +18,22 @@ const FormatDate = (text) => {
 
 const CertCard = ({ name, date, institute, img, icon }) => {
   return (
-    <Card href={img} target="_blank">
-      <Icon>
-        {icon === "tools" && <Tools />}
-        {icon === "university" && <University />}
-        {icon === "award" && <Award />}
-        {icon === "chartpie" && <ChartPie />}
-      </Icon>
-      <Name>{name}</Name>
-      <Institute>{institute}</Institute>
-      <Moment>{FormatDate(date)}</Moment>
-    </Card>
+    <a href={img}>
+      <HomeCard
+        title={name}
+        subtitle={FormatDate(date)}
+        description={institute}
+        centerDescription={true}
+        cover={
+          <Icon>
+            {icon === "tools" && <Tools />}
+            {icon === "university" && <University />}
+            {icon === "award" && <Award />}
+            {icon === "chartpie" && <ChartPie />}
+          </Icon>
+        }
+      />
+    </a>
   )
 }
 

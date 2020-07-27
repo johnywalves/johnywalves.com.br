@@ -1,11 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Badge from "components/Badge"
 import Strings from "components/strings"
 import Layout from "components/Layout"
 import SEO from "components/seo"
 
-import { Content, Avatar } from "components/About/styled"
+import { Content, Band, Avatar } from "components/About/styled"
 
 const About = () => {
   const { avatarImage } = useStaticQuery(graphql`
@@ -26,36 +27,36 @@ const About = () => {
       <Content>
         <Avatar fixed={avatarImage.childImageSharp.fixed} />
         <h1>Johny W. Alves</h1>
-        <p>{Strings.description}</p>
+        <h5>{Strings.description}</h5>
 
         <h2>{Strings.languagesLabel}</h2>
-        <p>{Strings.languagesSubLabel}</p>
-        <ul>
+        <h5>{Strings.languagesSubLabel}</h5>
+        <Band>
           {Strings.languages.map((language, index) => (
-            <li key={index}>{language.name}</li>
+            <Badge key={index}>{language.name}</Badge>
           ))}
-        </ul>
+        </Band>
 
         <h2>{Strings.skillsLabel}</h2>
-        <p>{Strings.skillsSubLabel}</p>
+        <h5>{Strings.skillsSubLabel}</h5>
         {Strings.skills.map((group, index) => (
           <div key={index}>
             <h3>{group.type}</h3>
-            <ul>
-              {group.list.map((skill) => (
-                <li>{skill.title}</li>
+            <Band>
+              {group.list.map((skill, idx) => (
+                <Badge key={idx}>{skill.title}</Badge>
               ))}
-            </ul>
+            </Band>
           </div>
         ))}
 
         <h2>{Strings.socialLabel}</h2>
-        <p>{Strings.socialSubLabel}</p>
-        <ul>
+        <h5>{Strings.socialSubLabel}</h5>
+        <Band>
           {Strings.socialSkills.map((skill, index) => (
-            <li key={index}>{skill}</li>
+            <Badge key={index}>{skill}</Badge>
           ))}
-        </ul>
+        </Band>
       </Content>
     </Layout>
   )

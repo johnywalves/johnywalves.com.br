@@ -40,7 +40,7 @@ export const Title = styled.h2`
   font-size: 1.2rem;
   font-weight: 700;
 
-  height: 2.5rem;
+  min-height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ export const Description = styled.p`
   color: var(--Texts);
   margin: 1.25rem 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: ${(props) => (props.centerDescription ? "center" : "left")};
 `
 
 export const Navicon = styled.div`
@@ -68,7 +68,7 @@ export const Navicon = styled.div`
 
 export const Icon = styled.a`
   display: block;
-  height: 1.5rem;
+  min-height: 1.5rem;
   width: 1.5rem;
   margin: 0 1rem 0 0;
 
@@ -79,17 +79,9 @@ export const Icon = styled.a`
 `
 
 export const Tags = styled.div`
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: flex-end;
-
-  p {
-    font-weight: 700;
-    padding: .5rem;
-    margin: 0 0 0 .5rem;
-    border-radius: .25rem;
-    color: var(--white);
-    background-color: var(--highlight);
-  }
 `

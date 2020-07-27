@@ -1,11 +1,11 @@
-import React from "react";
-// style
-import { List } from "./styled";
+import React from "react"
+
+import HomeList from "components/HomeList"
 
 const CertList = ({ children }) => (
-    <List>
-        {children}
-    </List>
+  <HomeList title="Certificados" description="Lista de certificados">
+    {children}
+  </HomeList>
 )
 
-export default CertList;
+export default CertList

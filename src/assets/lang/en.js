@@ -49,7 +49,6 @@ export default {
             { title: "Express" },
             { title: "Flask" },
             { title: "Gatsby" },
-            { title: "Ionic" },
             { title: "Jekyll" },
             { title: "NextJS" },
             { title: "Node" },
