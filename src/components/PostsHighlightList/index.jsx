@@ -7,6 +7,8 @@ import HomeCard from "components/HomeCard"
 import HomeList from "components/HomeList"
 import Strings from "components/strings"
 
+import { ImageHightlight } from "components/PostItem/styled"
+
 const PostsList = () => {
   const {
     allMarkdownRemark: { edges },
@@ -62,11 +64,9 @@ const PostsList = () => {
             tags={node.frontmatter.tags}
             cover={
               node.frontmatter.featuredImage && (
-                <Img
-                  alt={node.frontmatter.title}
+                <ImageHightlight
                   fluid={{
                     ...node.frontmatter.featuredImage.childImageSharp.fluid,
-                    aspectRatio: 1.5,
                   }}
                 />
               )

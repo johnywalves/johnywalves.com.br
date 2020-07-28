@@ -38,6 +38,13 @@ export const PostItemWrapper = styled.section`
     `}
 `
 
+export const ImageHightlight = styled(Img)`
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+`
+
 export const PostItemImageFeatured = styled(Img)`
   align-items: center;
   border-radius: 50%;
@@ -145,4 +152,3 @@ export const PostItemTags = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
 `
-

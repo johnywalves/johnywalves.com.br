@@ -15,7 +15,6 @@ const HomeCard = ({
   sourceCode,
   view,
   cover,
-  centerDescription,
 }) => {
   return (
     <S.Wrapper cover={cover}>
@@ -23,7 +22,7 @@ const HomeCard = ({
       <S.Content>
         {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
         <S.Title>{title}</S.Title>
-        <S.Description centerDescription={centerDescription}>
+        <S.Description>
           {description}
         </S.Description>
         {(sourceCode || view) && (
@@ -64,7 +63,6 @@ HomeCard.propTypes = {
   code: PropTypes.string,
   view: PropTypes.string,
   to: PropTypes.string,
-  centerDescription: PropTypes.bool,
 }
 
 export default HomeCard

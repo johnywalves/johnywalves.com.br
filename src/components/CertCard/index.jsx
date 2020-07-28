@@ -23,7 +23,6 @@ const CertCard = ({ name, date, institute, img, icon }) => {
         title={name}
         subtitle={FormatDate(date)}
         description={institute}
-        centerDescription={true}
         cover={
           <Icon>
             {icon === "tools" && <Tools />}

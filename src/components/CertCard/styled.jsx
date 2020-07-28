@@ -4,8 +4,7 @@ export const Icon = styled.div`
   color: var(--highlight);
   height: 5rem;
   width: 5rem;
-  transform: translateY(-25%);
-  margin: 0 auto;
+  margin: 0 auto 0;
 
   & svg {
     height: 100%;

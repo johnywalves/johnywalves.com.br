@@ -3,7 +3,7 @@ import media from "styled-media-query"
 
 export const Wrapper = styled.div`
   color: var(--texts);
-  padding: 2rem;
+  padding: 1rem;
 
   a {
     text-decoration: none;
@@ -25,9 +25,9 @@ export const Description = styled.h4`
 
 export const List = styled.div`
   display: grid;
-  grid-template-columns: 32% 32% 32%;
-  grid-row-gap: 2rem;
-  grid-column-gap: 2%;
+  grid-template-columns: 32.333333333% 32.333333333% 32.333333333%;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1.5%;
 
   ${media.lessThan("large")`
     grid-template-columns: 48% 48%;
