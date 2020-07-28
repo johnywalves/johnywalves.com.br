@@ -38,13 +38,6 @@ export const PostItemWrapper = styled.section`
     `}
 `
 
-export const ImageHightlight = styled(Img)`
-  height: 120px;
-  width: 120px;
-  margin: 0 auto;
-  border-radius: 50%;
-`
-
 export const PostItemImageFeatured = styled(Img)`
   align-items: center;
   border-radius: 50%;
@@ -121,8 +114,8 @@ export const PostItemInfo = styled.div`
   margin-left: 1.5rem;
 
   ${media.lessThan("large")`
-        margin: 0;
-    `}
+    margin: 0;
+  `}
 `
 
 export const PostItemDate = styled.time`

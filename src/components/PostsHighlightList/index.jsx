@@ -1,12 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
+import Img from "gatsby-image"
 
 import HomeCard from "components/HomeCard"
 import HomeList from "components/HomeList"
 import Strings from "components/strings"
-
-import { ImageHightlight } from "components/PostItem/styled"
 
 const PostsList = () => {
   const {
@@ -63,9 +62,11 @@ const PostsList = () => {
             tags={node.frontmatter.tags}
             cover={
               node.frontmatter.featuredImage && (
-                <ImageHightlight
+                <Img
+                  alt={node.frontmatter.title}
                   fluid={{
                     ...node.frontmatter.featuredImage.childImageSharp.fluid,
+                    aspectRatio: 1.5,
                   }}
                 />
               )

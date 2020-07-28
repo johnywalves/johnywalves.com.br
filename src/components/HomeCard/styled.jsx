@@ -7,7 +7,6 @@ export const Wrapper = styled.article`
   height: 100%;
   border-top: ${(props) =>
     props.cover ? "none" : "3px var(--highlight) solid"};
-  padding-top: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0 1px 4px var(--shadowColors);
   transition: all 0.2s ease-out;
@@ -48,7 +47,7 @@ export const Subtitle = styled.h3`
 
 export const Title = styled.h2`
   color: var(--Texts);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   display: flex;
   margin: 1rem 0;
@@ -57,7 +56,7 @@ export const Title = styled.h2`
 export const Description = styled.p`
   color: var(--Texts);
   margin: 1rem 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 `
 
 export const Navicon = styled.div`

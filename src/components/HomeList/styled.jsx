@@ -3,31 +3,40 @@ import media from "styled-media-query"
 
 export const Wrapper = styled.div`
   color: var(--texts);
-  padding: 1rem;
+  padding: 2rem;
 
   a {
     text-decoration: none;
   }
 `
 
+export const Header = styled.header`
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+`
+
 export const Title = styled.h1`
+  margin: 0 0.5rem 0 0;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
 `
 
 export const Description = styled.h4`
+  margin: 0;
   text-align: center;
   font-size: 1.1rem;
-  margin: 0.5rem 0 1.5rem;
   opacity: 0.75;
 `
 
 export const List = styled.div`
   display: grid;
-  grid-template-columns: 32.333333333% 32.333333333% 32.333333333%;
+  grid-template-columns: 32% 32% 32%;
   grid-row-gap: 1rem;
-  grid-column-gap: 1.5%;
+  grid-column-gap: 2%;
 
   ${media.lessThan("large")`
     grid-template-columns: 48% 48%;
