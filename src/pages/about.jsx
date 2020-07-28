@@ -68,17 +68,29 @@ const About = () => {
           </div>
         ))}
 
+        <h2>{Strings.softSkills.title}</h2>
+        <h5>{Strings.softSkills.description}</h5>
+        <S.Band>
+          {Strings.softSkills.list.map((skill, index) => (
+            <Badge key={index}>{skill}</Badge>
+          ))}
+        </S.Band>
+
         <h2>{Strings.experience.title}</h2>
         <h5>{Strings.experience.description}</h5>
-        {Strings.experience.list.slice(0, 3).map((exp, index) => (
-          <Experience key={index} {...exp} />
-        ))}
+        <div>
+          {Strings.experience.list.slice(0, 3).map((exp, index) => (
+            <Experience key={index} {...exp} />
+          ))}
+        </div>
 
         <h2>{Strings.education.title}</h2>
         <h5>{Strings.education.description}</h5>
-        {Strings.education.list.map((edu, index) => (
-          <Experience key={index} {...edu} />
-        ))}
+        <div>
+          {Strings.education.list.map((edu, index) => (
+            <Experience key={index} {...edu} />
+          ))}
+        </div>
       </S.Content>
     </Layout>
   )

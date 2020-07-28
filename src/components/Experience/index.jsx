@@ -13,7 +13,7 @@ const Experience = ({
 }) => (
   <S.Content>
     <S.Title>
-      {title} - <S.Institution>{institution}</S.Institution>{" "}
+      {title}<S.Institution> - {institution}</S.Institution>
     </S.Title>
     <S.Date>{date}</S.Date>
     <S.Description>

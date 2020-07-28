@@ -99,6 +99,7 @@ const MenuBar = () => {
         </S.MenuBarItem>
         <S.MenuBarItem
           title="Mudar visualização"
+          className="display"
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}

@@ -35,29 +35,29 @@ export const Content = styled.div`
   padding: 1rem 1.5rem 0.5rem;
 `
 
-export const Title = styled.h2`
-  color: var(--Texts);
-  font-size: 1.2rem;
-  font-weight: 700;
-
-  min-height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
 export const Subtitle = styled.h3`
   color: var(--Texts);
   margin: 0.4rem 0 0.2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
   opacity: 0.85;
 `
 
+export const Title = styled.h2`
+  color: var(--Texts);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  min-height: 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+`
+
 export const Description = styled.p`
   color: var(--Texts);
-  margin: 1.25rem 0;
-  font-size: 1rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
   text-align: ${(props) => (props.centerDescription ? "center" : "left")};
 `
 

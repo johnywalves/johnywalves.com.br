@@ -7,4 +7,5 @@ export const Text = styled.p`
   border-radius: 0.25rem;
   color: var(--white);
   background-color: var(--highlight);
+  opacity: .75;
 `

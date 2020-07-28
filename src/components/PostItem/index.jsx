@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Badge from "components/Badge"
+
 import * as S from "./styled"
 
 const PostItem = ({
@@ -42,7 +44,7 @@ const PostItem = ({
         {tags && (
           <S.PostItemTags>
             {tags.map((tag, index) => (
-              <p key={index}>{tag}</p>
+              <Badge key={index}>{tag}</Badge>
             ))}
           </S.PostItemTags>
         )}

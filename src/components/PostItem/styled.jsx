@@ -48,14 +48,14 @@ export const PostItemImageFeatured = styled(Img)`
   justify-content: center;
 
   ${media.lessThan("large")`
-        display: none;
-        border-radius: 0;
-        font-size: 1rem;
-        min-height: auto;
-        min-width: auto;
-        padding: .2rem .5rem;
-        margin-bottom: .7rem;
-    `}
+    display: none;
+    border-radius: 0;
+    font-size: 1rem;
+    min-height: auto;
+    min-width: auto;
+    padding: .2rem .5rem;
+    margin-bottom: .7rem;
+  `}
 
   body#grid & {
     margin-bottom: 1.5rem;
@@ -144,14 +144,5 @@ export const PostItemTags = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-
-  p {
-    font-weight: 700;
-    padding: 0.5rem;
-    margin: 0 0.5rem 0 0;
-    border-radius: 0.25rem;
-    color: var(--white);
-    background-color: var(--highlight);
-    opacity: 0.6;
-  }
 `
+

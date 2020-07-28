@@ -21,8 +21,8 @@ const HomeCard = ({
     <S.Wrapper cover={cover}>
       {cover}
       <S.Content>
-        <S.Title>{title}</S.Title>
         {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
+        <S.Title>{title}</S.Title>
         <S.Description centerDescription={centerDescription}>
           {description}
         </S.Description>

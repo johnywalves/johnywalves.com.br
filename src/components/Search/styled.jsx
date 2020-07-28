@@ -72,3 +72,19 @@ export const SearchWrapper = styled.section`
     display: none;
   }
 `
+
+export const PowerBy = styled.div`
+  color: var(--texts);
+  font-weight: 700;
+  height: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  svg {
+    height: 100%;
+    margin: 0.5rem;
+  }
+`
