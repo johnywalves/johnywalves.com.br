@@ -13,7 +13,7 @@ Kaggle, um organizador de competições para cientistas de dados, o desafio inic
 
 ### Ambiente
 
-Configurei o ambiente como costumo fazer setando o diretório de trabalho, substituindo o *"."* pelo caminho dos arquivos de dados, e limpando as viáveis de ambiente
+Configurei o ambiente como costumo fazer setando o diretório de trabalho, substituindo o _"."_ pelo caminho dos arquivos de dados, e limpando as viáveis de ambiente
 
 ```r
 setwd('.')
@@ -27,7 +27,7 @@ test <- read.csv("test.csv")
 train <- read.csv("train.csv")
 ```
 
-E unindo as bases de dados para tratar ambas da mesma forma, adicionando a coluna Sobrevivente (Survived) para a test, para poder utilizar o comando *rbind*
+E unindo as bases de dados para tratar ambas da mesma forma, adicionando a coluna Sobrevivente (Survived) para a test, para poder utilizar o comando _rbind_
 
 ```r
 test$Survived <- NA
@@ -155,7 +155,7 @@ rm(combi)
 
 ### Floresta Aletória
 
-Aplicando Floresta Aletória (*Random Florest*)
+Aplicando Floresta Aletória (_Random Florest_)
 
 ```r
 library("randomForest")
@@ -222,7 +222,7 @@ No gráfico mostra a segunda característica em importância, crianças de até 
 ```r
 ggplot(train, aes(Age, fill = Sub, colour = Sub)) +
   labs(x = "Idade", y = "Quantidade", fill = "Sobreviventes", colour = "Sobreviventes") +
-  geom_density(position = "identity", alpha = 0.2) +  
+  geom_density(position = "identity", alpha = 0.2) +
   xlim(0, max(train$Age)) +
   theme_minimal() +
   scale_fill_manual(values=cbPalette) +
@@ -236,7 +236,7 @@ Infelizmente as pessoas que pagaram menos pela passagem, por estarem mais longes
 ```r
 ggplot(train, aes(Fare, fill = Sub, colour = Sub)) +
   labs(x = "Passagem", y = "Quantidade", fill = "Sobreviventes", colour = "Sobreviventes") +
-  geom_density(alpha = 0.3) +  
+  geom_density(alpha = 0.3) +
   xlim(0, 150) +
   theme_minimal() +
   scale_fill_manual(values=cbPalette) +

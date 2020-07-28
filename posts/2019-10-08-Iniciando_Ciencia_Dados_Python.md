@@ -15,7 +15,7 @@ Apresentação da aplicação de conceitos de estátisticas (média, mediana, ou
 ## Ambiente
 
 Python é uma ótima ferramenta para lidar com Ciência de dados com ferramentas simples e intuitivas, vou demonstrar um pouco como lidar com elas  
-As ferramentas do Python e do Pip, configuradas na versão 3.5 ou superior, instruções no artigo [Ambiente Python](/Ambiente_Python), podemos verificar a versão com os comandos  
+As ferramentas do Python e do Pip, configuradas na versão 3.5 ou superior, instruções no artigo [Ambiente Python](/Ambiente_Python), podemos verificar a versão com os comandos
 
 ```bash
 python --version
@@ -28,7 +28,7 @@ pip --version
 
 Instalar a biblioteca que vamos utilizar:
 
-* Pandas
+- Pandas
 
 ```bash
 pip install pandas numpy matplotlib sklearn jupyter

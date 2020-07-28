@@ -8,14 +8,14 @@ featuredImage: ./featured/imdb-1.jpg
 coverImage: /figures/imdb-1.jpg
 ---
 
-IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematografica apartir de *Passage de Venus* de 1874 por *Pierre Jules César Janssen* até os não lançados em pré-produção.  
-Atualizada diáriamente [Base de dados](https://datasets.imdbws.com/) possuem uma [Estrutura fácil de entender](https://www.imdb.com/interfaces/)  
-  
-Esse artigo foi utilizado os arquivos  
+IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematografica apartir de _Passage de Venus_ de 1874 por _Pierre Jules César Janssen_ até os não lançados em pré-produção.  
+Atualizada diáriamente [Base de dados](https://datasets.imdbws.com/) possuem uma [Estrutura fácil de entender](https://www.imdb.com/interfaces/)
 
-* **title.ratings.tsv.gz**: Classificação dos **títulos** feitos para os usuários  
-* **title.episode.tsv.gz**: Classificação dos **episódios** das séries feitos para os usuários  
-* **title.basics.tsv.gz*`**: Nome dos títulos  
+Esse artigo foi utilizado os arquivos
+
+- **title.ratings.tsv.gz**: Classificação dos **títulos** feitos para os usuários
+- **title.episode.tsv.gz**: Classificação dos **episódios** das séries feitos para os usuários
+- **title.basics.tsv.gz\*`**: Nome dos títulos
 
 ### Ambiente
 
@@ -111,7 +111,7 @@ ggplot(episodeRatingSerie, aes(x = ordemEpisode, y = averageRating)) +
   labs(x = "Episódio", y = "Média de pontuação") +
   geom_line(color=rainbow[1]) +
   geom_segment(color=rainbow[2], size=0.8,
-               aes(x=1, xend=nrow(episodeRatingSerie), y=mediaSerie, yend=mediaSerie), alpha = 0.5) +  
+               aes(x=1, xend=nrow(episodeRatingSerie), y=mediaSerie, yend=mediaSerie), alpha = 0.5) +
   theme_minimal()
 ```
 
@@ -119,7 +119,7 @@ ggplot(episodeRatingSerie, aes(x = ordemEpisode, y = averageRating)) +
 
 #### Inclusão de comparações
 
-Gerar um *data frame* com a média por temporada de todas as séries
+Gerar um _data frame_ com a média por temporada de todas as séries
 
 ```r
 mediaTemporada = aggregate(episodeRatingSerie$averageRating,
@@ -143,7 +143,7 @@ ggplot(mediaTemporada, aes(x=seasonNumber, y=averageRating)) +
     geom_segment(color=rainbow[3], size=1,
                  aes(x=1, xend=nrow(mediaTemporada), y=mediaCurvaA, yend=mediaCurvaA), alpha=0.5) +
     geom_segment(color=rainbow[4], size=1,
-                 aes(x=1, xend=nrow(mediaTemporada), y=mediaCurvaB, yend=mediaCurvaB), alpha=0.5) +  
+                 aes(x=1, xend=nrow(mediaTemporada), y=mediaCurvaB, yend=mediaCurvaB), alpha=0.5) +
     geom_segment(color=rainbow[5], size=1,
                  aes(x=1, xend=nrow(mediaTemporada), y=mediaCurvaC, yend=mediaCurvaC), alpha=0.5) +
 
@@ -165,15 +165,15 @@ ggplot(mediaTemporada, aes(x=seasonNumber, y=averageRating)) +
 
 Para dar continuidade selecionei minhas séries favoritas
 
-Séries para ser comparadas:  
+Séries para ser comparadas:
 
-* [tt0407362](https://www.imdb.com/title/tt0407362/) : Battlestar Galactica  
-* [tt0903747](https://www.imdb.com/title/tt0903747/) : Breaking Bad  
-* [tt0944947](https://www.imdb.com/title/tt0944947/) : Game of Thrones  
-* [tt0411008](https://www.imdb.com/title/tt0411008/) : Lost  
-* [tt0141842](https://www.imdb.com/title/tt0141842/) : The Sopranos  
-  
-Para realizar a leitura temos de mudar algumas coisas, *quote*, limitador de texto, padrão é o "'" e *comment.char*, reconhecedor de comentários, é o "#", mas alguns nomes possuem eles sendo necessário configurar para ignorar essas entradas
+- [tt0407362](https://www.imdb.com/title/tt0407362/) : Battlestar Galactica
+- [tt0903747](https://www.imdb.com/title/tt0903747/) : Breaking Bad
+- [tt0944947](https://www.imdb.com/title/tt0944947/) : Game of Thrones
+- [tt0411008](https://www.imdb.com/title/tt0411008/) : Lost
+- [tt0141842](https://www.imdb.com/title/tt0141842/) : The Sopranos
+
+Para realizar a leitura temos de mudar algumas coisas, _quote_, limitador de texto, padrão é o "'" e _comment.char_, reconhecedor de comentários, é o "#", mas alguns nomes possuem eles sendo necessário configurar para ignorar essas entradas
 
 ```r
 # Importar títulos das séries
@@ -197,7 +197,7 @@ grupoSeries <- cbind(titlesSeries[match(grupoSeries$parentTconst, titlesSeries$t
 
 ```r
 ggplot(grupoSeries, aes(x=seasonNumber, y=averageRating)) +
-    labs(x = "Temporada", y = "Média de pontuação", colour = "Séries") +  
+    labs(x = "Temporada", y = "Média de pontuação", colour = "Séries") +
     geom_line(aes(group = primaryTitle, colour = primaryTitle)) +
     theme_minimal()
 ```

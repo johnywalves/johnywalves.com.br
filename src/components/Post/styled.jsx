@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-import Img from "gatsby-image";
+import styled from "styled-components"
+import media from "styled-media-query"
+import Img from "gatsby-image"
 
 export const PostHeader = styled.header`
   color: var(--texts);
@@ -11,11 +11,10 @@ export const PostHeader = styled.header`
   ${media.lessThan("large")`
     padding: 3rem 0 0;
     max-width: 100%;
-  `}  
+  `}
 `
 
-export const PostFeaturedImage = styled(Img)`
-`
+export const PostFeaturedImage = styled(Img)``
 
 export const PostTitle = styled.h1`
   font-size: 4rem;
@@ -27,7 +26,7 @@ export const PostTitle = styled.h1`
     font-size: 2.8rem;
     line-height: 1.1;
     padding: 0 1rem;
-  `}  
+  `}
 `
 
 export const PostDescription = styled.h2`
@@ -39,7 +38,7 @@ export const PostDescription = styled.h2`
     font-size: 1.6rem;
     line-height: 1.3;
     padding: 0 1rem;
-  `}  
+  `}
 `
 
 export const PostDate = styled.p`
@@ -49,7 +48,7 @@ export const PostDate = styled.p`
 
   ${media.lessThan("large")`
     padding: 0 1rem;
-  `} 
+  `}
 `
 
 export const MainContent = styled.section`
@@ -161,14 +160,14 @@ export const MainContent = styled.section`
 
     ${media.lessThan("large")`
       font-size: 1.375rem;
-    `}    
+    `}
   }
   h3 {
     font-size: 1.6rem;
 
     ${media.lessThan("large")`
       font-size: 1.125rem;
-    `}    
+    `}
   }
   h4 {
     font-size: 1.4rem;
@@ -199,7 +198,7 @@ export const MainContent = styled.section`
 
     ${media.lessThan("large")`
       padding: 0;
-    `}    
+    `}
   }
   .instagram-media {
     margin: 1rem auto !important;
@@ -219,12 +218,12 @@ export const MainContent = styled.section`
   table {
     color: var(--texts);
     border-collapse: separate;
-    border-spacing: .2rem;
+    border-spacing: 0.2rem;
     width: 100%;
     margin-bottom: 1.6rem;
   }
   table td {
-    padding: .2rem;
+    padding: 0.2rem;
   }
   table tr:nth-child(even) {
     background-color: var(--mediumBackground);

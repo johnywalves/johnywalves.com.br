@@ -11,7 +11,7 @@ tags:
   - HTTP
 ---
 
-Podemos realizações de requisições HTTP para automatiza processos de testes 
+Podemos realizações de requisições HTTP para automatiza processos de testes
 
 ## Instalação
 
@@ -49,4 +49,4 @@ r.json()
 
 ## Referências
 
-[Requests: HTTP for Humans](https://requests.readthedocs.io/en/master/)  
+[Requests: HTTP for Humans](https://requests.readthedocs.io/en/master/)

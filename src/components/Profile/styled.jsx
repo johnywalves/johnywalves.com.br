@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-import Anilink from "gatsby-plugin-transition-link/AniLink";
+import styled from "styled-components"
+import media from "styled-media-query"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const ProfileWrapper = styled.section`
   color: var(--texts);
@@ -17,7 +17,7 @@ export const ProfileLink = styled(Anilink)`
     display: flex;
     text-align: left;
   `}
-  
+
   &:hover {
     color: var(--highlight);
   }
@@ -30,7 +30,7 @@ export const ProfileAuthor = styled.h1`
   ${media.lessThan("large")`
     font-size: 1.2rem;
     margin: 0 0 0 10px;
-  `}  
+  `}
 `
 
 export const ProfilePosition = styled.small`
@@ -41,7 +41,7 @@ export const ProfilePosition = styled.small`
   ${media.lessThan("large")`
     font-size: 0.8rem;
     margin-top: 0.2rem;
-  `}  
+  `}
 `
 
 export const ProfileDescription = styled.p`

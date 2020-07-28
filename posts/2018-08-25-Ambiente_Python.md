@@ -93,7 +93,7 @@ import this
 
 Em uma tradução:
 
-> O Zen do Python, por Tim Peters  
+> O Zen do Python, por Tim Peters
 >
 > Bonito é melhor que feio.  
 > Explícito é melhor que implícito.  
@@ -113,6 +113,6 @@ Em uma tradução:
 > Embora nunca freqüentemente seja melhor que já.  
 > Se a implementação é difícil de explicar, é uma má idéia.  
 > Se a implementação é fácil de explicar, pode ser uma boa idéia.  
-> Namespaces são uma grande idéia — vamos ter mais dessas!  
-  
+> Namespaces são uma grande idéia — vamos ter mais dessas!
+
 Eu disse que tem muito amor no Python

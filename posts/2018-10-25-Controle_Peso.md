@@ -30,7 +30,7 @@ Data,Peso,Imagem,AtividadeFisica,AlimentacaoTipo,AlimentacaoNivel,AlimentacaoCon
 2018-09-26,94.4,,,'["Frutas", "Raízes"]',Moderada,
 ```
 
-Carregando os dados as bibliotecas de *pandas*, manipular os dados, e *numpy*, funções matemáticas.  
+Carregando os dados as bibliotecas de _pandas_, manipular os dados, e _numpy_, funções matemáticas.  
 Lendo e carregando o arquivo convertendo os textos em json, para acumular os históricos de atividades físicas e tipo de alimentação ambos objetos com listagens
 
 ```python

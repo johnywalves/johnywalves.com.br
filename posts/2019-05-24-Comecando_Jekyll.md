@@ -64,11 +64,11 @@ exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
 ```
 
 Ele apresenta `title` o título do projeto, `permalink` o endereço dos projetos e `exclude` uma listagem dos arquivos que serão ignorados na compilação do projeto  
-Qualquer variável pode ser declarada nessa parte e acessada  
+Qualquer variável pode ser declarada nessa parte e acessada
 
-* **_posts**: Arquivos em markdown (MD) com os conteúdos dos posts
-* **_layouts**: Arquivos em HTML com a estrutura das visualizações dos layouts com o conteúdo no trecho `{{ content }}` ou `{{ content | markdownify }}`
-* **_includes**: Arquivos em HTML que podem ser usado para adicionar os trechos de código nas páginas, como no exemplo para adicionar footer.html: `{% include footer.html %}`
+- **\_posts**: Arquivos em markdown (MD) com os conteúdos dos posts
+- **\_layouts**: Arquivos em HTML com a estrutura das visualizações dos layouts com o conteúdo no trecho `{{ content }}` ou `{{ content | markdownify }}`
+- **\_includes**: Arquivos em HTML que podem ser usado para adicionar os trechos de código nas páginas, como no exemplo para adicionar footer.html: `{% include footer.html %}`
 
 ## Variáveis
 
@@ -82,23 +82,24 @@ As páginas devem possuir no topo o front matter com as informações da página
 ---
 nome_variavel: valor_variavel
 ---
+
 ```
 
-Com as variáveis padrão de `layout` com layout será usado, da pasta **_layouts**, `permalink` o endereço para acessar a página e `published` se o arquivo será disponibilizado no build do projeto
+Com as variáveis padrão de `layout` com layout será usado, da pasta **\_layouts**, `permalink` o endereço para acessar a página e `published` se o arquivo será disponibilizado no build do projeto
 
 ### Uso de variáveis
 
 As variáveis podem ser usadas com o declaração de raiz + ponto + nome da variável
 
-* `site` Contidos no arquivo `_config.yml`
-* `page` Valores localizado no front matter da página atual
-* `layout` Valores localizado no front matter do layout
+- `site` Contidos no arquivo `_config.yml`
+- `page` Valores localizado no front matter da página atual
+- `layout` Valores localizado no front matter do layout
 
 Exemplo para pegar e imprimir o valor do título declarado no front matter como `title: Título` com `{% page.title %}` podendo ser usando em tags e diretivas
 
 ### Listar posts
 
-Usando o foreach na linguagem Liquid, para pegar os valores do front matter dos arquivos contidos na pasta **_posts**
+Usando o foreach na linguagem Liquid, para pegar os valores do front matter dos arquivos contidos na pasta **\_posts**
 
 ```html
 {% for post in site.posts %}
@@ -111,9 +112,8 @@ O foreach pode ser usando como qual qualquer listagem, talvez para listar as tag
 ### Estrutura condicional
 
 ```html
-{%' if post.tipo == "ingredientes" %}
-{% elsif post.tipo == "receitas" %}
-{% endif %}
+{%' if post.tipo == "ingredientes" %} {% elsif post.tipo == "receitas" %} {%
+endif %}
 ```
 
 ## Referências

@@ -13,21 +13,21 @@ Brincando um pouco a base encontrei uma lista de mortes em ambos volumes de Kill
 
 ### Ambiente e Dados
 
-Para preparar o ambiente informei o diretório de trabalho indicado pelo *"."* e limpei todas as variáveis de ambiente após pesquisar todas pelo *list = ls()*
+Para preparar o ambiente informei o diretório de trabalho indicado pelo _"."_ e limpei todas as variáveis de ambiente após pesquisar todas pelo _list = ls()_
 
 ```r
 setwd(".")
 rm(list = ls())
 ```
 
-Carreguei a bilbioteca do *tidyverse* pois contém a *ggplot2*, geração de gráfico, e a *dplyr*, consulta para manipulação de dados
+Carreguei a bilbioteca do _tidyverse_ pois contém a _ggplot2_, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
 
 ```r
 # Instalar caso necessário com o comando: install.packages('tidyverse')
 library('tidyverse')
 ```
 
-Carregando os dados através do *csv* na pasta e a visualização proporcionou uma análise exploratória
+Carregando os dados através do _csv_ na pasta e a visualização proporcionou uma análise exploratória
 
 ```r
 # Carregar os dados do arquivo csv
@@ -49,7 +49,7 @@ Os dados estão organizados com os nomes dos filmes, acontecimento de tempo em m
 
 ### Organização
 
-Somente me interessa os dados de mortes dos volumes 1 e 2 de Kill Bill, um consulta um filtro usuando a bibliote *dplyr* que faz parte da *tidyverse*, apliquei um filtro pelo nome do Filme e tipo de evento
+Somente me interessa os dados de mortes dos volumes 1 e 2 de Kill Bill, um consulta um filtro usuando a bibliote _dplyr_ que faz parte da _tidyverse_, apliquei um filtro pelo nome do Filme e tipo de evento
 
 ```r
 mortes <-
@@ -74,12 +74,12 @@ mortes[(mortes$movie == 'Kill Bill: Vol. 2'),]$minutes_in <-
 
 ### Visualização
 
-Com os dados organaizados, o uso do *ggplot2* com os comandos:  
+Com os dados organaizados, o uso do _ggplot2_ com os comandos:
 
-* **labs** Legendas do gráfico  
-* **geom_point** Visualização dos dados por pontos  
-* **geom_segment** Linha vermelha para separar o momento entre os dois filmes  
-* **theme_minimal** Interface com mínimo de recursos  
+- **labs** Legendas do gráfico
+- **geom_point** Visualização dos dados por pontos
+- **geom_segment** Linha vermelha para separar o momento entre os dois filmes
+- **theme_minimal** Interface com mínimo de recursos
 
 Guardando na variável `graph` para usarmos depois e expondo ela
 

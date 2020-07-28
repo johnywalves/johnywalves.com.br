@@ -1,7 +1,7 @@
 ---
 title: Automação de screenshot com Selenium
 description: Gerar telas de páginas Web para testes Web com Selenium e Python
-date: '2020-06-20 17:50:32'
+date: "2020-06-20 17:50:32"
 featuredImage: ./featured/robot-1.jpg
 coverImage: /figures/robot-1.jpg
 category: Py
@@ -47,7 +47,7 @@ Podemos criar o drive como Google Chrome `driver = webdriver.Chrome()` ou Mozill
   options = Options()
   options.add_argument("--headless")
   driver = webdriver.Chrome(chrome_options = options)
-```  
+```
 
 ou com Firefox
 
@@ -59,7 +59,7 @@ ou com Firefox
   options.binary = "/usr/bin/firefox"
   options.add_argument("-headless")
   driver = webdriver.Firefox(firefox_options = options)
-```  
+```
 
 ## Navegar e esperar construção da página
 

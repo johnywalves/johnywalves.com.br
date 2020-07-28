@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import media from "styled-media-query";
+import styled from "styled-components"
+import media from "styled-media-query"
 
 export const CommentsWrapper = styled.section`
   margin: auto;
@@ -14,7 +14,7 @@ export const CommentsWrapper = styled.section`
   iframe[src*="ads-iframe"] {
     display: none;
   }
-  
+
   #disqus_thread {
     a {
       color: var(--highlight) !important;

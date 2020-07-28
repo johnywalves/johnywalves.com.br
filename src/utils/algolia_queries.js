@@ -25,21 +25,23 @@ const postQuery = `{
     }
 }`
 
-const flatten = arr =>
-    arr.map(({ node: { frontmatter, fields, ...rest } }) => ({
-        ...frontmatter,
-        ...fields,
-        date_timestamp: parseInt(
-            (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0)
-        ),
-        ...rest,
-    }))
+const flatten = (arr) =>
+  arr.map(({ node: { frontmatter, fields, ...rest } }) => ({
+    ...frontmatter,
+    ...fields,
+    date_timestamp: parseInt(
+      (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0)
+    ),
+    ...rest,
+  }))
 
-const queries = [{
+const queries = [
+  {
     query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges),
     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
     settings: { attributesToSnippet: [`excerpt:20`] },
-}, ]
+  },
+]
 
 module.exports = queries

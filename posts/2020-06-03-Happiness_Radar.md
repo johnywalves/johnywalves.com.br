@@ -1,6 +1,6 @@
 ---
 title: Happiness Radar
-description: Uma análise de dados do que influência na facilidade geral de uma nação 
+description: Uma análise de dados do que influência na facilidade geral de uma nação
 date: 2020-06-03 23:32:15 -0300
 featuredImage: ./featured/happy-1.jpg
 coverImage: /figures/happy-1.jpg
@@ -38,12 +38,12 @@ df.head()
 ```
 
 | **Overall rank** | **Country or region** | **Score** | **GDP per capita** | **Social support** | **Healthy life expectancy** | **Freedom to make life choices** | **Generosity** | **Perceptions of corruption** |
-|---:|:---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | Finland | 7.769 | 1.340 | 1.587 | 0.986 | 0.596 | 0.153 | 0.393 |
-| 2 | Denmark | 7.600 | 1.383 | 1.573 | 0.996 | 0.592 | .252 | 0.410 |
-| 3 | Norway | 7.554 | 1.488 | 1.582 | 1.028 | 0.603 | 0.271 | 0.341 |
-| 4 | Iceland | 7.494 | 1.380 | 1.624 | 1.026 | 0.591 | 0.354 | 0.118 |
-| 5 | Netherlands | 7.488 | 1.396 | 1.522 | 0.999 | 0.557 | 0.322 | 0.298 |
+| ---------------: | :-------------------- | --------: | -----------------: | -----------------: | --------------------------: | -------------------------------: | -------------: | ----------------------------: |
+|                1 | Finland               |     7.769 |              1.340 |              1.587 |                       0.986 |                            0.596 |          0.153 |                         0.393 |
+|                2 | Denmark               |     7.600 |              1.383 |              1.573 |                       0.996 |                            0.592 |           .252 |                         0.410 |
+|                3 | Norway                |     7.554 |              1.488 |              1.582 |                       1.028 |                            0.603 |          0.271 |                         0.341 |
+|                4 | Iceland               |     7.494 |              1.380 |              1.624 |                       1.026 |                            0.591 |          0.354 |                         0.118 |
+|                5 | Netherlands           |     7.488 |              1.396 |              1.522 |                       0.999 |                            0.557 |          0.322 |                         0.298 |
 
 Trabalhar com esses nomes é muito chato, vamos simplificar um pouco, renomeando as colunas
 
@@ -64,15 +64,15 @@ corr
 
 A ideia da matrix de correlação é encontrar o resultado mais longe do zero ou seja mais perto de 1 ou -1
 
-| | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** |
-|---:|---:|---:|---:|---:|---:|---:|---:|
-| **Score** | 1.000000 | **0.793883** | 0.777058 | **0.779883** | 0.566742 | 0.075824 | 0.385613 |
-| **GDP** | **0.793883** | 1.000000 | 0.754906 | 0.835462 | 0.379079 | -0.079662 | 0.298920 |
-| **Social** | 0.777058 | 0.754906 | 1.000000 | 0.719009 | 0.447333 | -0.048126 | 0.181899 |
-| **Healthy** | **0.779883** | 0.835462 | 0.719009 | 1.000000 | 0.390395 | -0.029511 | 0.295283 |
-| **Freedom** | 0.566742 | 0.379079 | 0.447333 | 0.390395 | 1.000000 | 0.269742 | 0.438843 |
-| **Generosity** | 0.075824 | -0.079662 | -0.048126 | -0.029511 | 0.269742 | 1.000000 | 0.326538 |
-| **Corruption** | 0.385613 | 0.298920 | 0.181899 | 0.295283 | 0.438843 | 0.326538 | 1.000000 |
+|                |    **Score** |      **GDP** | **Social** |  **Healthy** | **Freedom** | **Generosity** | **Corruption** |
+| -------------: | -----------: | -----------: | ---------: | -----------: | ----------: | -------------: | -------------: |
+|      **Score** |     1.000000 | **0.793883** |   0.777058 | **0.779883** |    0.566742 |       0.075824 |       0.385613 |
+|        **GDP** | **0.793883** |     1.000000 |   0.754906 |     0.835462 |    0.379079 |      -0.079662 |       0.298920 |
+|     **Social** |     0.777058 |     0.754906 |   1.000000 |     0.719009 |    0.447333 |      -0.048126 |       0.181899 |
+|    **Healthy** | **0.779883** |     0.835462 |   0.719009 |     1.000000 |    0.390395 |      -0.029511 |       0.295283 |
+|    **Freedom** |     0.566742 |     0.379079 |   0.447333 |     0.390395 |    1.000000 |       0.269742 |       0.438843 |
+| **Generosity** |     0.075824 |    -0.079662 |  -0.048126 |    -0.029511 |    0.269742 |       1.000000 |       0.326538 |
+| **Corruption** |     0.385613 |     0.298920 |   0.181899 |     0.295283 |    0.438843 |       0.326538 |       1.000000 |
 
 O valor mais próximos **Score** são os **Gross Domestic Product (GDP) per capita** e **Healthy life expectancy**, mas podemos visualizar isso em gráfico
 
@@ -120,13 +120,13 @@ countries = table_countries[["Country", "Area in km²", "Population", "Continent
 countries.head()
 ```
 
-| **Country** | **Area in km²** | **Population** | **Continent** |
-|---|---:|---:|---|
-| Andorra | 468.0 | 77006 | EU |
-| United Arab Emirates | 82880.0 | 9630959 | AS |
-| Afghanistan | 647500.0 | 37172386 | AS |
-| Antigua and Barbuda | 443.0 | 96286 | NT |
-| Anguilla | 102.0 | 13254 | NT |
+| **Country**          | **Area in km²** | **Population** | **Continent** |
+| -------------------- | --------------: | -------------: | ------------- |
+| Andorra              |           468.0 |          77006 | EU            |
+| United Arab Emirates |         82880.0 |        9630959 | AS            |
+| Afghanistan          |        647500.0 |       37172386 | AS            |
+| Antigua and Barbuda  |           443.0 |          96286 | NT            |
+| Anguilla             |           102.0 |          13254 | NT            |
 
 Normalmente trabalhando com várias bases de dados é comum as informações não cruzam, no caso de países tem visões diferentes de mundo
 
@@ -136,7 +136,7 @@ set(df["Region"]) - set(countries["Country"])
 
 Como vamos tem alguns países diferentes, por ausência ou concepção de nomenclaturas
 
-> {'Congo (Brazzaville)', 'Congo (Kinshasa)',  'Czech Republic', 'Northern Cyprus', 'Palestinian Territories', 'Swaziland', 'Trinidad & Tobago'}
+> {'Congo (Brazzaville)', 'Congo (Kinshasa)', 'Czech Republic', 'Northern Cyprus', 'Palestinian Territories', 'Swaziland', 'Trinidad & Tobago'}
 
 Vamos unir os países existentes em ambas as bases
 
@@ -146,13 +146,13 @@ data = data.rename(columns={"Area in km²": "Area"})
 data.head()
 ```
 
-| **Rank** | **Region** | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** | **Area** | **Population** | **Continent** |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| 1 | Finland | 7.769 | 1.340 | 1.587 | 0.986 | 0.596 | 0.153 | 0.393 | 337030.0 | 5518050 | EU |
-| 2 | Denmark | 7.600 | 1.383 | 1.573 | 0.996 | 0.592 | 0.252 | 0.410 | 43094.0 | 5797446 | EU |
-| 3 | Norway | 7.554 | 1.488 | 1.582 | 1.028 | 0.603 | 0.271 | 0.341 | 324220.0 | 5314336 | EU |
-| 4 | Iceland | 7.494 | 1.380 | 1.624 | 1.026 | 0.591 | 0.354 | 0.118 | 103000.0 | 353574 | EU |
-| 5 | Netherlands | 7.488 | 1.396 | 1.522 | 0.999 | 0.557 | 0.322 | 0.298 | 41526.0 | 17231017 | EU |
+| **Rank** |  **Region** | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** | **Area** | **Population** | **Continent** |
+| -------: | ----------: | --------: | ------: | ---------: | ----------: | ----------: | -------------: | -------------: | -------: | -------------: | ------------- |
+|        1 |     Finland |     7.769 |   1.340 |      1.587 |       0.986 |       0.596 |          0.153 |          0.393 | 337030.0 |        5518050 | EU            |
+|        2 |     Denmark |     7.600 |   1.383 |      1.573 |       0.996 |       0.592 |          0.252 |          0.410 |  43094.0 |        5797446 | EU            |
+|        3 |      Norway |     7.554 |   1.488 |      1.582 |       1.028 |       0.603 |          0.271 |          0.341 | 324220.0 |        5314336 | EU            |
+|        4 |     Iceland |     7.494 |   1.380 |      1.624 |       1.026 |       0.591 |          0.354 |          0.118 | 103000.0 |         353574 | EU            |
+|        5 | Netherlands |     7.488 |   1.396 |      1.522 |       0.999 |       0.557 |          0.322 |          0.298 |  41526.0 |       17231017 | EU            |
 
 E finalmente gerar um gráfico com o Score de felicidade e as informações que são mais correlacionadas, com o tamanho dos circulos pela pontuação de estimativa de vida e separado por cores de continentes
 
@@ -192,13 +192,13 @@ coods = pd.read_csv("./datasets_2312_3908_countries.csv")
 coods.head()
 ```
 
-| **country** | **latitude** | **longitude** | **name** |
-|---|---:|---:|---|
-| AD | 42.546245 | 1.601554 | Andorra |
-| AE | 23.424076 | 53.847818 | United Arab Emirates |
-| AF | 33.939110 | 67.709953 | Afghanistan |
-| AG | 17.060816 | -61.796428 | Antigua and Barbuda |
-| AI | 18.220554 | -63.068615 | Anguilla |
+| **country** | **latitude** | **longitude** | **name**             |
+| ----------- | -----------: | ------------: | -------------------- |
+| AD          |    42.546245 |      1.601554 | Andorra              |
+| AE          |    23.424076 |     53.847818 | United Arab Emirates |
+| AF          |    33.939110 |     67.709953 | Afghanistan          |
+| AG          |    17.060816 |    -61.796428 | Antigua and Barbuda  |
+| AI          |    18.220554 |    -63.068615 | Anguilla             |
 
 Novamente vamos conferir as informações divergentes
 
@@ -215,13 +215,13 @@ cc = pd.merge(data, coods, left_on="Region", right_on="name").drop(["name", "cou
 cc.head()
 ```
 
-| **Rank** | **Region** | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** | **Area** | **Population** | **Continent** | **latitude** | **longitude** |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|---:|
-| 1 | Finland | 7.769 | 1.340 | 1.587 | 0.986 | 0.596 | 0.153 | 0.393 | 337030.0 | 5518050 | EU | 61.924110 | 25.748151 |
-| 2 | Denmark | 7.600 | 1.383 | 1.573 | 0.996 | 0.592 | 0.252 | 0.410 | 43094.0 | 5797446 | EU | 56.263920 | 9.501785 |
-| 3 | Norway | 7.554 | 1.488 | 1.582 | 1.028 | 0.603 | 0.271 | 0.341 | 324220.0 | 5314336 | EU | 60.472024 | 8.468946 |
-| 4 | Iceland | 7.494 | 1.380 | 1.624 | 1.026 | 0.591 | 0.354 | 0.118 | 103000.0 | 353574 | EU | 64.963051 | -19.020835 |
-| 5 | Netherlands | 7.488 | 1.396 | 1.522 | 0.999 | 0.557 | 0.322 | 0.298 | 41526.0 | 17231017 | EU | 52.132633 | 5.291266 |
+| **Rank** | **Region**  | **Score** | **GDP** | **Social** | **Healthy** | **Freedom** | **Generosity** | **Corruption** | **Area** | **Population** | **Continent** | **latitude** | **longitude** |
+| -------- | ----------- | --------: | ------: | ---------: | ----------: | ----------: | -------------: | -------------: | -------: | -------------: | ------------- | -----------: | ------------: |
+| 1        | Finland     |     7.769 |   1.340 |      1.587 |       0.986 |       0.596 |          0.153 |          0.393 | 337030.0 |        5518050 | EU            |    61.924110 |     25.748151 |
+| 2        | Denmark     |     7.600 |   1.383 |      1.573 |       0.996 |       0.592 |          0.252 |          0.410 |  43094.0 |        5797446 | EU            |    56.263920 |      9.501785 |
+| 3        | Norway      |     7.554 |   1.488 |      1.582 |       1.028 |       0.603 |          0.271 |          0.341 | 324220.0 |        5314336 | EU            |    60.472024 |      8.468946 |
+| 4        | Iceland     |     7.494 |   1.380 |      1.624 |       1.026 |       0.591 |          0.354 |          0.118 | 103000.0 |         353574 | EU            |    64.963051 |    -19.020835 |
+| 5        | Netherlands |     7.488 |   1.396 |      1.522 |       0.999 |       0.557 |          0.322 |          0.298 |  41526.0 |       17231017 | EU            |    52.132633 |      5.291266 |
 
 Gerar o gráfico de scatter com posicionamento do geográfico
 
@@ -250,7 +250,7 @@ plt.figure(figsize=(18, 9))
 continents = cc["Continent"].unique()
 for continent in continents:
     dc = cc[cc["Continent"] == continent]
-    plt.scatter(dc["longitude"], dc["latitude"], s=dc["Score"].pow(3), alpha=0.6) #  
+    plt.scatter(dc["longitude"], dc["latitude"], s=dc["Score"].pow(3), alpha=0.6) #
 
 plt.imshow(world_img, extent=[-149, 190, -75, 105], alpha=0.25) # left, right, bottom, top
 plt.savefig("radar_world_map.svg", formatstr="svg")
@@ -269,4 +269,4 @@ Você pode baixar aqui: [Countries with Coordenates](/data/countries.csv)
 
 ## Referências
 
-[Python Data Science Handbook - Customizing Plot Legends](https://jakevdp.github.io/PythonDataScienceHandbook/04.06-customizing-legends.html)  
+[Python Data Science Handbook - Customizing Plot Legends](https://jakevdp.github.io/PythonDataScienceHandbook/04.06-customizing-legends.html)

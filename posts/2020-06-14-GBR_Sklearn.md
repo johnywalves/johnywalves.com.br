@@ -54,26 +54,26 @@ df.head(3)
 
 (10692, 13)
 
-| | **city** | **area** | **rooms** | **bathroom** | **parking spaces** | **floor** | **animal** | **furniture** | **hoa (R$)** | **rent amount (R$)** | **property tax (R$)** | **fire insurance (R$)** | **total (R$)** |
-|:---:|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
-| 0 | São Paulo | 70 | 2 | 1 | 1 | 7 | acept | furnished | 2065 | 3300 | 211 | 42 | 5618 |
-| 1 | São Paulo | 320 | 4 | 4 | 0 | 20 | acept | not furnished | 1200 | 4960 | 1750 | 63 | 7973 |
-| 2 | Porto Alegre | 80 | 1 | 1 | 1 | 6 | acept | not furnished | 1000 | 2800 | 0 | 41 | 3841 |
+|     | **city**     | **area** | **rooms** | **bathroom** | **parking spaces** | **floor** | **animal** | **furniture** | **hoa (R\$)** | **rent amount (R\$)** | **property tax (R\$)** | **fire insurance (R\$)** | **total (R\$)** |
+| :-: | ------------ | -------: | --------: | -----------: | -----------------: | --------: | ---------- | ------------- | ------------: | --------------------: | ---------------------: | -----------------------: | --------------: |
+|  0  | São Paulo    |       70 |         2 |            1 |                  1 |         7 | acept      | furnished     |          2065 |                  3300 |                    211 |                       42 |            5618 |
+|  1  | São Paulo    |      320 |         4 |            4 |                  0 |        20 | acept      | not furnished |          1200 |                  4960 |                   1750 |                       63 |            7973 |
+|  2  | Porto Alegre |       80 |         1 |            1 |                  1 |         6 | acept      | not furnished |          1000 |                  2800 |                      0 |                       41 |            3841 |
 
 ```python
 dropped = df.drop(["hoa (R$)", "rent amount (R$)", "property tax (R$)", "fire insurance (R$)"], axis=1)
 dropped.dtypes
 ```
 
-city              object
-area               int64
-rooms              int64
-bathroom           int64
-parking spaces     int64
-floor             object
-animal            object
-furniture         object
-total (R$)         int64
+city object
+area int64
+rooms int64
+bathroom int64
+parking spaces int64
+floor object
+animal object
+furniture object
+total (R\$) int64
 dtype: object
 
 ```python
@@ -142,10 +142,10 @@ def fitness(params):
     min_samples_split = params[2]
     min_samples_leaf = params[3]
 
-    model_gbr = GradientBoostingRegressor(learning_rate=learning_rate, 
+    model_gbr = GradientBoostingRegressor(learning_rate=learning_rate,
                                         n_estimators=n_estimators,
-                                        min_samples_split=min_samples_split.astype(int), 
-                                        min_samples_leaf=min_samples_leaf.astype(int), 
+                                        min_samples_split=min_samples_split.astype(int),
+                                        min_samples_leaf=min_samples_leaf.astype(int),
                                         random_state=42)
 
     model_gbr.fit(x_train, y_train)
@@ -166,4 +166,4 @@ print(resultado_gp.fun)
 ## Referências
 
 [How to Automate Hyperparameter Optimization](https://www.kdnuggets.com/2019/06/automate-hyperparameter-optimization.html)  
-[scikit-learn: sklearn.ensemble.GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)  
+[scikit-learn: sklearn.ensemble.GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)

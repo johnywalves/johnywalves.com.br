@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import media from "styled-media-query";
+import styled from "styled-components"
+import media from "styled-media-query"
 
-export const SocialLinksWrapper = styled.nav `
+export const SocialLinksWrapper = styled.nav`
   margin: 2rem auto;
   width: 100%;
 
@@ -10,25 +10,25 @@ export const SocialLinksWrapper = styled.nav `
   `}
 `
 
-export const SocialLinksList = styled.ul `
+export const SocialLinksList = styled.ul`
   align-items: center;
   display: flex;
   justify-content: space-around;
   list-style: none;
 `
 
-export const SocialLinksItem = styled.li ``
+export const SocialLinksItem = styled.li``
 
-export const SocialLinksLink = styled.a `
+export const SocialLinksLink = styled.a`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
-    &:hover {
+  &:hover {
     color: var(--highlight);
   }
 `
 
-export const IconWrapper = styled.div `
+export const IconWrapper = styled.div`
   fill: #bbb;
   width: 1.5rem;
   height: 1.5rem;

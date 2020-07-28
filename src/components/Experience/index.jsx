@@ -29,7 +29,11 @@ const Experience = ({
         </S.Award>
       ))}
     {production && (
-      <S.Production href={production.file} target="_blank" rel="noreferrer noopener">
+      <S.Production
+        href={production.file}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         {production.title}
       </S.Production>
     )}

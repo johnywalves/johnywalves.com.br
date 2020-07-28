@@ -4,7 +4,8 @@ title: Linux - My Cheatsheet
 description: Comandos Básicos Linux para Consulta
 category: Linux
 tags: [Linux, Bash, Shell]
-topics: [Arquivos e Diretórios, Redes, Usuário e Acessos, CRON, Processos, Serviços]
+topics:
+  [Arquivos e Diretórios, Redes, Usuário e Acessos, CRON, Processos, Serviços]
 featuredImage: ./featured/pinguim-1.jpg
 coverImage: /figures/pinguim-1.jpg
 ---

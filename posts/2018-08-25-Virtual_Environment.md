@@ -11,12 +11,12 @@ coverImage: /figures/library-1.jpg
 Para facilitar o controle de dependências de uma projeto Python podemos isolar um ambiente para executar com um versão controlada do Python e dos seus pacotes  
 Com um [Ambiente Python](../Ambiente_Python) preparado podemos instalar o pacote do pipenv, nosso gestor de ambientes virtuais, com ele podemos:
 
-* Controlar os pacotes  
-* Isolar para execução  
-* Saber as dependências do projeto  
-* Faciliitar a duplicação do ambiente para produção e desenvolvimento  
-  
-Instalando pelo **pip** do repositório do [PyPi](https://pypi.org/)  
+- Controlar os pacotes
+- Isolar para execução
+- Saber as dependências do projeto
+- Faciliitar a duplicação do ambiente para produção e desenvolvimento
+
+Instalando pelo **pip** do repositório do [PyPi](https://pypi.org/)
 
 ```bash
 pip install pipenv
@@ -57,7 +57,7 @@ pipenv lock
 
 Gerando o arquivo **Pipfile.lock** com as versões dos pacotes  
 Para instalar um ambiente apartir de um já configurado basta executar novamente o comando em uma pasta com os **Pipfile** e o **Pipfile.lock**  
-No exemplo a seguir vamos usar o pacote flask, que mesmo instalado no ambiente da máquina, precisa estar no *Virtual*, ou somente no virtual
+No exemplo a seguir vamos usar o pacote flask, que mesmo instalado no ambiente da máquina, precisa estar no _Virtual_, ou somente no virtual
 
 ```bash
 pipenv install flask
@@ -65,7 +65,7 @@ pipenv install flask
 
 ## Programa
 
-Com biblioteca do *Flask* instalada, basta criar um arquivo **app.py** desta maneira
+Com biblioteca do _Flask_ instalada, basta criar um arquivo **app.py** desta maneira
 
 ```python
 import os

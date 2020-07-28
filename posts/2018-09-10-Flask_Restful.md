@@ -4,7 +4,8 @@ title: Web API Python com Flask, Restful e Token
 description: Lorem lipsunm
 category: Py
 tags: [Flask, Python, Web, API]
-topics: [Ambiente, Flask, REST, JSON, Token, Testando, Criptografia Hash, Compilando]
+topics:
+  [Ambiente, Flask, REST, JSON, Token, Testando, Criptografia Hash, Compilando]
 featuredImage: ./featured/flask-1.jpg
 coverImage: /figures/flask-1.jpg
 ---
@@ -21,21 +22,21 @@ pip install pipenv
 ```
 
 Iniciar o ambiente virtual, onde o desenvolvimento será isolado, para gerenciar as dependências  
-Dentro da pasta do projeto onde os fontes serão criados  
+Dentro da pasta do projeto onde os fontes serão criados
 
 ```bash
 pipenv shell
 ```
 
-Dentro do *pipenv*, os comandos ignoram os pacotes no ambiente externo, sendo necessário instalar os que serão utilizados
+Dentro do _pipenv_, os comandos ignoram os pacotes no ambiente externo, sendo necessário instalar os que serão utilizados
 
 ```bash
 pipenv install flask flask-restful flask-jwt-extended passlib
 ```
 
-## Flask  
+## Flask
 
-O pacote do **Flask** possibilita escutar uma porta para garantir uma aplicação *Web*  
+O pacote do **Flask** possibilita escutar uma porta para garantir uma aplicação _Web_  
 Criar um arquivo **app.py** com o conteúdo abaixo, esse nome é um dos padrões do Flask, aconselhavél seu uso
 
 ```python
@@ -64,14 +65,14 @@ Acessando pelo navegador o endereço [http://localhost:5000/](http://localhost:5
 
 ## REST
 
-De forma simplicitada uma REST faz referência a um CRUD através de requisições HTTP, onde o servidor e cliente possui uma comunicação completa sem a necessidade de armazenar informações  
-  
-- **POST:** Inserir uma ou várias instâncias  
-- **GET:** Consultar instâncias  
-- **PUT:** Atualizar as informações de uma ou várias instâncias  
-- **DELETE:** Deletar uma instância  
-  
-Aplicando a leitura das requisições dos HTTP  
+De forma simplicitada uma REST faz referência a um CRUD através de requisições HTTP, onde o servidor e cliente possui uma comunicação completa sem a necessidade de armazenar informações
+
+- **POST:** Inserir uma ou várias instâncias
+- **GET:** Consultar instâncias
+- **PUT:** Atualizar as informações de uma ou várias instâncias
+- **DELETE:** Deletar uma instância
+
+Aplicando a leitura das requisições dos HTTP
 
 ```python
 from flask_restful import Resource, Api
@@ -104,13 +105,13 @@ Para testar a execução podemos utiliza o [PostMan](https://www.getpostman.com/
 pip install requests
 ```
 
-Através do shell do Python, comando *python* no shell, carregamos os objetos para cada tipo de requisição
+Através do shell do Python, comando _python_ no shell, carregamos os objetos para cada tipo de requisição
 
 ```python
 from requests import put, get, post, delete
 ```
 
-No trecho abaixo realizamos as requisições informando a URL completa, com a função *.json()* forçando uma resposta em json
+No trecho abaixo realizamos as requisições informando a URL completa, com a função _.json()_ forçando uma resposta em json
 
 ```python
 post('http://localhost:5000/response').json()
@@ -163,7 +164,7 @@ class readJSON(Resource):
 api.add_resource(readJSON, '/readjson')
 ```
 
-Realizando um teste pela biblioteca *request*, fazendo um post informando o conteúdo através do parametro *json* e visualizando a impressão na parte do servidor
+Realizando um teste pela biblioteca _request_, fazendo um post informando o conteúdo através do parametro _json_ e visualizando a impressão na parte do servidor
 
 ```python
 post('http://localhost:5000/readjson', json={'name':'cake', 'categories':[{'name':'sweet'}, {'name':'wheat'}], 'steps':[{'ingredient':'sugar'}, {'ingredient':'flour'}]}).json()
@@ -190,7 +191,7 @@ class response(Resource):
         return {'post':'Resposta de POST'}
 ```
 
-Como resultado ao realizar a requisição POST sem o token, o sistema bloqueia com o erro interno *Missing Authorization Header* e retornando para o cliente *Internal Server Error*
+Como resultado ao realizar a requisição POST sem o token, o sistema bloqueia com o erro interno _Missing Authorization Header_ e retornando para o cliente _Internal Server Error_
 
 ```python
 post('http://localhost:5000/v1.0/posts').json()
@@ -253,7 +254,7 @@ Claro que este trecho funciona melhor com uma base de dados consultando o nome d
 
 ## Compilando
 
-Para facilitar o código completo gerado nas etapas anteriores que devem conter no *app.py* para rodar com o \'flask run\'  
+Para facilitar o código completo gerado nas etapas anteriores que devem conter no _app.py_ para rodar com o \'flask run\'  
 Não esquencendo de alterar a `<Chave Secreta JWT>` para sua chave particular
 
 ```python

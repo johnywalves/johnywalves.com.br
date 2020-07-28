@@ -9,7 +9,7 @@ coverImage: /figures/python-1.jpg
 published: false
 ---
 
-Rodando *app.py*
+Rodando _app.py_
 
 ```bash
 set FLASK_APP=development
@@ -29,4 +29,4 @@ pip install livereload
 
 ### Referências
 
-[React - Tutorial](https://reactjs.org/tutorial/tutorial.html)  
+[React - Tutorial](https://reactjs.org/tutorial/tutorial.html)

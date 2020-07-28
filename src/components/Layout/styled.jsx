@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import media from "styled-media-query";
+import styled from "styled-components"
+import media from "styled-media-query"
 
 export const LayoutWrapper = styled.section`
   display: flex;

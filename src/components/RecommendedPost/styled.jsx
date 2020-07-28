@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-import Anilink from "gatsby-plugin-transition-link/AniLink";
+import styled from "styled-components"
+import media from "styled-media-query"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid var(--borders);
@@ -24,7 +24,7 @@ export const RecommendedLink = styled(Anilink)`
     line-height: 1.3;
     font-size: .9rem;
   `}
-  
+
   &:hover {
     background: var(--borders);
   }
@@ -41,7 +41,7 @@ export const RecommendedLink = styled(Anilink)`
     content: "\\2190";
     margin-right: 0.5rem;
   }
-  
+
   &.next:after {
     content: "\\2192";
     margin-left: 0.5rem;
