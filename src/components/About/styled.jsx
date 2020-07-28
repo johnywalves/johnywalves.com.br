@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Content = styled.article`
   color: var(--texts);
@@ -9,16 +10,16 @@ export const Content = styled.article`
     color: var(--titles);
     font-size: 2rem;
     font-weight: 700;
-    text-align: center;
-    margin: 0.8rem 0;
+    text-align: left;
+    margin: 0 0 0.25rem 0;
   }
 
   h2 {
     color: var(--titles);
     font-size: 1.5rem;
     font-weight: 700;
-    text-align: center;
-    margin: 2rem 0 0.15rem;
+    text-align: left;
+    margin: 0 0.5rem 0 0;
   }
 
   h3 {
@@ -30,15 +31,25 @@ export const Content = styled.article`
   h5 {
     font-size: 1rem;
     font-weight: 400;
-    text-align: center;
-    margin: 0.5rem 10%;
-    width: 80%;
+    text-align: left;
+  }
+`
+
+export const HeadSector = styled.div`
+  margin: 3.5rem 0 1rem 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  :first-child& {
+    margin-top: 0;
   }
 `
 
 export const Curriculium = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 1rem 0;
 
@@ -69,12 +80,13 @@ export const Band = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0;
 `
 
 export const Forehead = styled.div`
   position: relative;
   height: 12rem;
+  background: linear-gradient(to bottom, var(--highlight) 20%, #ffffff00 20%);
 `
 
 export const Avatar = styled(Img)`
@@ -82,4 +94,23 @@ export const Avatar = styled(Img)`
   top: 50%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+`
+
+export const SeeMore = styled.p`
+  cursor: pointer;
+  margin-left: 4rem;
+  color: var(--highlight);
+`
+
+export const FullHistory = styled.div`
+  max-height: ${(props) => (props.open ? "50rem" : "0rem")};
+  opacity: ${(props) => (props.open ? 1 : 0)};
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.07, 0.38, 0.58, 1);
+`
+
+export const SeeCertificates = styled(Anilink)`
+  cursor: pointer;
+  margin-left: 4rem;
+  color: var(--highlight);
 `

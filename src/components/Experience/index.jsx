@@ -13,14 +13,17 @@ const Experience = ({
 }) => (
   <S.Content>
     <S.Title>
-      {title}<S.Institution> - {institution}</S.Institution>
+      {title}
+      <S.Institution> - {institution}</S.Institution>
     </S.Title>
     <S.Date>{date}</S.Date>
-    <S.Description>
-      {description.map((text, index) => (
-        <p key={index}>{text}</p>
-      ))}
-    </S.Description>
+    {description && (
+      <S.Description>
+        {description.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
+      </S.Description>
+    )}
     {awards &&
       awards.map((text, index) => (
         <S.Award key={index}>

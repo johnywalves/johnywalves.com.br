@@ -15,14 +15,24 @@ export const SocialLinksList = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
+
+  &.about {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `
 
-export const SocialLinksItem = styled.li``
+export const SocialLinksItem = styled.li`
+  .about & {
+    margin-right: 1rem;
+  }
+`
 
 export const SocialLinksLink = styled.a`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
+
   &:hover {
     color: var(--highlight);
   }

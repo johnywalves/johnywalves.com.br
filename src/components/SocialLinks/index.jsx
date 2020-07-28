@@ -5,10 +5,10 @@ import links from "./content"
 // Style
 import * as S from "./styled"
 
-const SocialLinks = () => {
+const SocialLinks = ({ about }) => {
   return (
     <S.SocialLinksWrapper>
-      <S.SocialLinksList>
+      <S.SocialLinksList className={   about ? 'about' : '' }>
         {links.map((link, i) => {
           const Icon = Icons[link.icon]
           return (

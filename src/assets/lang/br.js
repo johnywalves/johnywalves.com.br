@@ -10,15 +10,8 @@ export default {
   live: "Sao José do Rio Preto, São Paulo, Brasil",
   lattes: "http://lattes.cnpq.br/0468996619713052",
   contact: {
-    label: "Contato",
-    name: "Nome",
-    email: "E-mail",
-    phone: "Telefone",
-    message: "Mensagem",
-    send: "Enviar Mensagem",
-    socialMedia: "Estou nas redes sociais",
-    or: "ou",
-    emailInstead: "Se preferir um meio mais tradicional, me mande um e-mail",
+    title: "Contato",
+    description: "Você pode falar comigo em uma das redes sociais",
   },
   posts: {
     title: "Posts em destaque",
@@ -105,6 +98,10 @@ export default {
         ],
       },
     ],
+  },
+  courses: {
+    title: "Cursos Complementares",
+    description: "Alguns cursos para adicionar algumas habilidades e conhecimentos",
   },
   certification: {
     title: "Certificados",
