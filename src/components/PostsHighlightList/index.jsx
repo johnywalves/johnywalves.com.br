@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
-import Img from "gatsby-image"
 
 import HomeCard from "components/HomeCard"
 import HomeList from "components/HomeList"
