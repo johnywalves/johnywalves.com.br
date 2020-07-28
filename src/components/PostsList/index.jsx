@@ -1,5 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
 
 import HomeCard from "components/HomeCard"
@@ -46,9 +47,15 @@ const PostsList = () => {
       description={Strings.posts.description}
     >
       {edges.map(({ node }, index) => (
-        <Link to={node.fields.slug}>
+        <Anilink
+          key={index}
+          to={node.fields.slug}
+          cover
+          direction="left"
+          bg="var(--background)"
+          duration={0.6}
+        >
           <HomeCard
-            key={index}
             title={node.frontmatter.title}
             subtitle={`${node.frontmatter.date} ● ${node.timeToRead} min de leitura`}
             description={node.frontmatter.description}
@@ -65,7 +72,7 @@ const PostsList = () => {
               )
             }
           />
-        </Link>
+        </Anilink>
       ))}
     </HomeList>
   )

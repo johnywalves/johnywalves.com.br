@@ -22,7 +22,7 @@ const HomeCard = ({
       {cover}
       <S.Content>
         <S.Title>{title}</S.Title>
-        <S.Subtitle>{subtitle}</S.Subtitle>
+        {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
         <S.Description centerDescription={centerDescription}>
           {description}
         </S.Description>
@@ -57,18 +57,14 @@ const HomeCard = ({
 }
 
 HomeCard.propTypes = {
-  centerDescription: false,
-}
-
-HomeCard.propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array,
   code: PropTypes.string,
   view: PropTypes.string,
   to: PropTypes.string,
-  centerDescription: PropTypes.bool.isRequired,
+  centerDescription: PropTypes.bool,
 }
 
 export default HomeCard

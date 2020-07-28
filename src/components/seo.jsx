@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import React from "react"
+import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
@@ -21,7 +21,7 @@ function SEO({ description, lang, meta, title, image }) {
 
   const metaDescription = description || site.siteMetadata.description
   const url = site.siteMetadata.siteUrl
-  const ogImage = `${url}${image || "/figures/thumbnail.jpg"}`
+  const ogImage = `${url}${image || "/figures/thumbnail.png"}`
 
   return (
     <Helmet
@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           name: `twitter:image:src`,
-          content: ogImage
+          content: ogImage,
         },
         {
           name: `twitter:creator`,

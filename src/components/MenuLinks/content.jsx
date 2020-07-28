@@ -8,7 +8,7 @@ const links = [{
     },
     {
         label: "Sobre",
-        url: "/about"
+        url: "/about/"
     }
 ]
 

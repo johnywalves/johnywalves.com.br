@@ -16,7 +16,7 @@ export const Content = styled.article`
   h2 {
     color: var(--titles);
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
     margin: 2rem 0 0.15rem;
   }

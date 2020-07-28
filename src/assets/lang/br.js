@@ -197,29 +197,29 @@ export default {
         description: "Alguns projetos e experimentações desenvolvidas por mim",
         list: [
             {
-                title: "Bom dia, equipes dev",
+                title: "Bom dia, equipes dev!",
                 sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
                 view: "https://bomdiaequipesdev.com.br/",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec"
+                description: "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã"
             },
             {
                 title: "Daisy Bell",
                 sourceCode: "https://github.com/johnywalves/daisy-bell",
                 view: "https://daisy.johnywalves.com.br",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec"
+                description: "Compartilhamento de imagens com contexto"
             },
             {
                 title: "Navegação de mapa",
                 sourceCode: "https://github.com/johnywalves/wolt",
                 view: "https://johnywalves.github.io/wolt/",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec"
+                description: "Projeto para construção de visualização de mapas"
             },
             {
                 title: "Biblioteca Steam",
                 tech: "Frontend (HTML5/CSS3/JS)",
                 sourceCode: "https://github.com/johnywalves/steamlibrary",
                 view: "https://johnywalves.github.io/steamlibrary/",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nibh ligula, vitae pretium sem dapibus nec"
+                description: "Visualização de biblioteca de jogos Steam"
             }
         ]
     },

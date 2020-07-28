@@ -7,7 +7,7 @@ import PostsList from "components/PostsList"
 
 const Home = () => (
   <Layout>
-    <SEO />
+    <SEO title="Home" />
     <PostsList />
     <ProjectList />
   </Layout>
