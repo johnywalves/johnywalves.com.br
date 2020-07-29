@@ -15,7 +15,7 @@ export default {
   },
   posts: {
     title: "Posts em destaque",
-    description: "Alguns posts selecionados",
+    description: "Alguns posts selecionados pela qualidade ou por amor mesmo",
   },
   languages: {
     title: "Idiomas",
@@ -204,6 +204,13 @@ export default {
     title: "Projetos e desenvolvimentos",
     description: "Alguns projetos e experimentações desenvolvidas por mim",
     list: [
+      {
+        title: "Devflix",
+        sourceCode: "https://github.com/johnywalves/devflix",
+        view: "https://devflix.johnywalves.com.br",
+        description:
+          "Projeto desenvolvido na Imersão Alura para distribuição de vídeos",
+      },
       {
         title: "Bom dia, equipes dev!",
         sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
