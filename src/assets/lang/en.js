@@ -42,7 +42,6 @@ export default {
     {
       type: "Linguagens",
       list: [
-        { title: "C#" },
         { title: "HTML e CSS" },
         { title: "Java" },
         { title: "JavaScript" },

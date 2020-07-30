@@ -45,7 +45,6 @@ export default {
       {
         type: "Linguagens",
         list: [
-          { title: "C#" },
           { title: "HTML e CSS" },
           { title: "Java" },
           { title: "JavaScript" },
@@ -209,7 +208,7 @@ export default {
         sourceCode: "https://github.com/johnywalves/devflix",
         view: "https://devflix.johnywalves.com.br",
         description:
-          "Projeto desenvolvido na Imersão Alura para distribuição de vídeos",
+          "Plataforma para compartilhando de informação para área da desenvolvimento de software em língua brasileira",
       },
       {
         title: "Bom dia, equipes dev!",

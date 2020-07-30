@@ -66,8 +66,8 @@ export const Navicon = styled.div`
 
 export const Icon = styled.a`
   display: block;
-  min-height: 1.5rem;
-  width: 1.5rem;
+  min-height: 2rem;
+  width: 2rem;
   margin: 0 1rem 0 0;
 
   &:hover {

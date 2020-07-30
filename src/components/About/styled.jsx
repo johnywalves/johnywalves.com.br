@@ -103,7 +103,7 @@ export const SeeMore = styled.p`
 `
 
 export const FullHistory = styled.div`
-  max-height: ${(props) => (props.open ? "50rem" : "0rem")};
+  max-height: ${(props) => (props.open ? "60rem" : "0rem")};
   opacity: ${(props) => (props.open ? 1 : 0)};
   overflow: hidden;
   transition: all 1s cubic-bezier(0.07, 0.38, 0.58, 1);

@@ -65,7 +65,9 @@ const About = () => {
         </S.HeadSector>
         <S.Band>
           {Strings.languages.list.map((language, index) => (
-            <Badge key={index}>{language.name}</Badge>
+            <Badge key={index} skill>
+              {language.name}
+            </Badge>
           ))}
         </S.Band>
 
@@ -78,7 +80,9 @@ const About = () => {
             <h3>{group.type}</h3>
             <S.Band>
               {group.list.map((skill, idx) => (
-                <Badge key={idx}>{skill.title}</Badge>
+                <Badge key={idx} skill>
+                  {skill.title}
+                </Badge>
               ))}
             </S.Band>
           </div>
@@ -90,7 +94,9 @@ const About = () => {
         </S.HeadSector>
         <S.Band>
           {Strings.softSkills.list.map((skill, index) => (
-            <Badge key={index}>{skill}</Badge>
+            <Badge key={index} skill>
+              {skill}
+            </Badge>
           ))}
         </S.Band>
 

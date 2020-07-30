@@ -6,6 +6,6 @@ export const Text = styled.p`
   margin: 0.2rem;
   border-radius: 0.25rem;
   color: var(--white);
-  background-color: var(--highlight);
-  opacity: .75;
+  background-color: ${({ skill }) =>
+    skill ? "var(--bagdeSkill)" : "var(--highlight)"};
 `
