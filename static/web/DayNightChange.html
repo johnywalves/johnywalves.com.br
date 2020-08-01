@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Day Night Effect</title>
+</head>
+
+<style>
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #282c35;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .astro {
+        margin: 0;
+        width: 300px;
+        height: 300px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        border: solid 10px;
+        transition: all .5s ease-in;
+        cursor: pointer;
+        background-color: #ebf3fe;
+        box-shadow: inset -40px 0px 0px #d8e8f7,
+            inset 20px 0px 0px #ffffff,
+            inset -50px 0px 0px 20px #e2eefa,
+            0px 0px 0px 20px #ffffff0c,
+            0px 0px 0px 40px #ffffff08,
+            0px 0px 0px 40px #ffffff05;
+    }
+
+    .astro:after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #d8e8f7;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transition: all .5s ease-in;
+        box-shadow: 40px -20px 0px -10px #d8e8f7, 40px 10px 0px -15px #d8e8f7;
+    }
+
+    .light .astro {
+        background-color: #ffdb01 !important;
+        box-shadow: inset -40px 0px 0px #ff8603,
+            inset 20px 0px 0px #ffffffcc,
+            inset -50px 0px 0px 20px #ffd201,
+            0px 0px 0px 20px #ffd20133,
+            0px 0px 0px 40px #ffd20133,
+            0px 0px 0px 60px #ffd20111,
+            0px 0px 0px 50vh #fff,
+            0px 0px 0px 50vw #fff,
+            0px 0px 0px 100vh #ffffff55,
+            0px 0px 0px 100vw #ffffff55;
+    }
+
+    .light .astro:after {
+        background-color: #ffd201;
+        box-shadow: 40px -20px 0px -10px #ffd201, 40px 10px 0px -15px #ffd201;
+    }
+</style>
+
+<body class="light">
+    <div class="astro"></div>
+</body>
+
+<script>
+    document.querySelector('.astro').addEventListener("click", function () {
+        document.querySelector('body').classList.toggle("light");
+    });
+</script>
+
+</html>

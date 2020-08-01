@@ -208,7 +208,7 @@ export default {
         sourceCode: "https://github.com/johnywalves/devflix",
         view: "https://devflix.johnywalves.com.br",
         description:
-          "Plataforma para compartilhando de informação para área da desenvolvimento de software em língua brasileira",
+          "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira",
       },
       {
         title: "Bom dia, equipes dev!",
