@@ -249,8 +249,12 @@ export default {
         institution: "Senac Sao Paulo",
         description: [
           "Processamento e armazenamento distribuído, projetos de visualização e carga de dados, introdução a estátistica e business intelligence",
-          "Título: Proposta para aplicação de Regras de Associação para varejos online",
         ],
+        production: {
+          title:
+            "Título: Proposta para aplicação de Regras de Associação para varejos online",
+          file: "/docs/associacao_varejo_online.pdf",
+        },
       },
       {
         date: "Jan 2015 - Dez 2017",
