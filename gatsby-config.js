@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Johny W. Alves`,
     position: `FullStack Developer`,
-    description: `Meu nome é Johny criei esse espaço para organizar meus estudos, compartilhar e receber feedback`,
+    description: `Página pessoal por Johny W. Alves. Sempre aprendendo a codificar, projetar e tentando entendo o motivo`,
     author: `@johnywalves`,
     siteUrl: `https://www.johnywalves.com.br`,
   },
@@ -84,6 +84,62 @@ module.exports = {
           `gatsby-remark-prismjs`,
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.excerpt }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { published: { ne: false } } }
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        date
+                        title
+                        description
+                      }
+                      excerpt
+                      fields {
+                        slug 
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Johny W. Alves's RSS Feed",
+          },
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-algolia-search`,
