@@ -1,5 +1,5 @@
 ---
-title: Requests Pyhton
+title: Requests Python
 description: Realização de Requisições HTTP com pyhton
 date: 2020-06-10 20:30:23 -0300
 featuredImage: ./featured/mailbox-1.jpg

@@ -2,17 +2,23 @@
 title: Loading com CSS 
 description: Animação de loading com HTML e CSS
 date: "2020-08-04 18:50:32"
+featuredImage: ./featured/hourglass-1.jpg
+coverImage: /figures/hourglass-1.jpg
 category: CSS
 tags:
   - Web
   - CSS
 ---
 
-Pode não parecer, mas essa é uma div simples girando com CSS, pode ser vista em funcionamento em [Loading Spinner](/web/loadingspinner)
+Pode não parecer, mas essa é uma div simples girando com CSS
 
 <video width="480" height="320" muted autoplay loop style="display: block; margin: 0 auto;" >
   <source src="/videos/spinnerloader.mp4" type="video/mp4">
 </video>
+
+Pode ser vista em funcionamento em [Loading Spinner](/web/loadingspinner)
+
+## Como fazer
 
 Adicionando uma div com a classe `spinner`
 
@@ -20,7 +26,7 @@ Adicionando uma div com a classe `spinner`
 <div class="spinner"></div>
 ```
 
-Aplicação de estilo, após um reset de CSS
+Aplicação de estilo, em uma página HTML com o [básico](/html-started)
 
 ```css
 body {
