@@ -12,7 +12,7 @@ tags:
 
 Pode não parecer, mas essa é uma div simples girando com CSS
 
-<video width="480" height="320" muted autoplay loop style="display: block; margin: 0 auto;" >
+<video width="480" height="320" muted autoplay loop style="display: block; margin: 1rem auto;" >
   <source src="/videos/spinnerloader.mp4" type="video/mp4">
 </video>
 
