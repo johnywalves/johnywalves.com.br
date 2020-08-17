@@ -1,27 +1,42 @@
 ---
-date: 2019-06-20 19:35:00 -0300
-title: Classificação de Texto com NLTK
+date: 2020-08-10 19:35:00 -0300
+title: Classificação de Texto em Python
 description: Lorem lipsunm
 category: Python
-tags: ["Linguagem Natural", "Machine Learning", Python]
 featuredImage: ./featured/python-1.jpg
 coverImage: /figures/python-1.jpg
-published: false
+tags:
+  - Linguagem Natural
+  - Machine Learning
+  - Python
+published: false 
 ---
+
+Lorem lipsum, Lorem lipsum, Lorem lipsum
+
+```bash
+pip install nltk7
+```
+
+Lorem lipsum, Lorem lipsum, Lorem lipsum
 
 ```python
 import nltk
 import json
-#nltk.download()
-#nltk.download('rslp')
-#nltk.download('stopwords')
+
+nltk.download('rslp')
+nltk.download('stopwords')
 ```
+
+Lorem lipsum, Lorem lipsum, Lorem lipsum
 
 ```python
 stopwordsnltk = nltk.corpus.stopwords.words('portuguese')
 stopwordsnltk.append('vou')
 stopwordsnltk.append('tão')
 ```
+
+Lorem lipsum, Lorem lipsum, Lorem lipsum
 
 ```python
 def aplicastemmer(texto):
@@ -71,8 +86,12 @@ baseCompletaTreinamento = nltk.classify.apply_features(extratorPalavrasTreinamen
 baseCompletaTeste = nltk.classify.apply_features(extratorPalavrasTeste, frasescomstemmerTeste)
 
 classificador = nltk.NaiveBayesClassifier.train(baseCompletaTreinamento)
+```
 
-teste = "A noite está escuro"
+Lorem lipsum, Lorem lipsum, Lorem lipsum
+
+```python
+teste = "A noite está escura"
 testeStemming = []
 #deixando somente radicais
 stemmer = nltk.stem.RSLPStemmer()
