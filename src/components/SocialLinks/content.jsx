@@ -10,14 +10,14 @@ const links = [
     url: "https://www.linkedin.com/in/johnywalves",
   },
   {
-    label: "Instagram",
-    icon: "Instagram",
-    url: "https://instagram.com/johnywalves",
-  },
-  {
     label: "Twitter",
     icon: "Twitter",
     url: "https://twitter.com/johnywalves",
+  },
+  {
+    label: "Instagram",
+    icon: "Instagram",
+    url: "https://instagram.com/johnywalves",
   },
   {
     label: "CNPq",

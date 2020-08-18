@@ -13,16 +13,22 @@ tags:
 
 ## Docker
 
+Executar comando dentro do container, no caso o `ls` ou o `bash` para ter acesso direto
+
+```bash
+docker exec -it <container_id_ou_nome> ls
+```
+
 Evitar container ficar reiniciando mesmo quando parado
 
 ```bash
-docker update --restart=no <container name ou id>
+docker update --restart=no <container_id_ou_nome>
 ```
 
 Matar container
 
 ```bash
-docker kill <container name ou id>
+docker kill <container_id_ou_nome>
 ```
 
 ## Docker Compose
@@ -34,6 +40,12 @@ docker-compose pull
 ```
 
 Subir os serviços
+
+```bash
+docker up -d
+```
+
+Descer/Desligar os serviços
 
 ```bash
 docker up -d
