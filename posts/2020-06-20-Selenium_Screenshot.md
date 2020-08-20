@@ -9,6 +9,7 @@ tags:
   - Python
   - Selenium
   - Tests
+highlight: true
 ---
 
 Fazer trabalhos repetivos é muito chato e um desperdício de tempo, felizmente robôs existem para facilitar nessas tarefas e para automatizar interfaces Web o Selenium é quase um padrão do mercado

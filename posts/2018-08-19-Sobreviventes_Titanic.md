@@ -6,7 +6,6 @@ category: R
 tags: [Machine Learning, R]
 featuredImage: ./featured/titanic-1.jpg
 coverImage: /figures/titanic-1.jpg
-highlight: true
 ---
 
 Kaggle, um organizador de competições para cientistas de dados, o desafio inicial dele é a previsão dos sobreviventes da viagem inaugural do RMS TItanic. [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
