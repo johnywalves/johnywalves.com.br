@@ -157,6 +157,9 @@ const pluginsConfig = [
                         title
                         number
                       }
+                      fields {
+                        slug
+                      }
                     }
                   }
                 }
