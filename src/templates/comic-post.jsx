@@ -10,12 +10,14 @@ import * as S from "components/Post/styled"
 const ComicPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { number, slug } = pageContext
+  const imageSrc = `/comics/${number.toString().padStart(4, "0")}.png`
 
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description}
+        description={"Tirinha por Johny W. Alves"}
+        image={imageSrc}
       />
       {post.frontmatter.featuredImage && (
         <S.PostFeaturedImage
@@ -24,10 +26,7 @@ const ComicPost = ({ data, pageContext }) => {
       )}
       <S.PostHeader>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostComic
-          src={`/comics/000${number}.png`}
-          alt={post.frontmatter.description}
-        />
+        <S.PostComic src={imageSrc} alt={post.frontmatter.description} />
         <ComicNavigation number={number} />
       </S.PostHeader>
       <S.MainContent>

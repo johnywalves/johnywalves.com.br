@@ -32,8 +32,9 @@ const ComicLast = () => {
 
   return (
     <S.Wrapper>
-      {edges.map(({ node }) => (
+      {edges.map(({ node }, index) => (
         <Anilink
+          key={index}
           to={`/comic-${node.frontmatter.number}`}
           cover
           direction="left"
