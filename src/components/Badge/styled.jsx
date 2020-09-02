@@ -5,7 +5,7 @@ export const Text = styled.p`
   padding: 0.5rem;
   margin: 0.2rem;
   border-radius: 0.25rem;
-  color: var(--white);
+  color: var(--background);
   background-color: ${({ skill }) =>
     skill ? "var(--bagdeSkill)" : "var(--highlight)"};
 `

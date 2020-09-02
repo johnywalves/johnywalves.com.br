@@ -24,7 +24,7 @@ const Profile = () => {
   return (
     <S.ProfileWrapper>
       <S.ProfileLink
-        to={"/blog/"}
+        to={"/"}
         cover
         direction="left"
         bg="var(--background)"

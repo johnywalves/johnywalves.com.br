@@ -94,7 +94,7 @@ const pluginsConfig = [
       feeds: [
         {
           serialize: ({ query: { site, allMarkdownRemark } }) => {
-            return allMarkdownRemark.edges.map(edge => {
+            return allMarkdownRemark.edges.map((edge) => {
               return Object.assign({}, edge.node.frontmatter, {
                 description: edge.node.frontmatter.description,
                 date: edge.node.frontmatter.date,
@@ -108,7 +108,9 @@ const pluginsConfig = [
               {
                 allMarkdownRemark(
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { published: { ne: false } } }
+                  filter: {
+                    frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+                  }
                 ) {
                   edges {
                     node {
@@ -126,11 +128,45 @@ const pluginsConfig = [
                 }
               }
             `,
-          output: "/rss.xml",
-          title: "Johny W. Alves's RSS Feed",
+          output: "/feed-posts.xml",
+          title: "Johny W. Alves's Posts",
         },
-      ]
-    }
+        {
+          serialize: ({ query: { site, allMarkdownRemark } }) => {
+            return allMarkdownRemark.edges.map((edge) => {
+              return Object.assign({}, edge.node.frontmatter, {
+                date: edge.node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                custom_elements: [{ "content:encoded": edge.node.excerpt }],
+              })
+            })
+          },
+          query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {
+                    frontmatter: { published: { ne: false }, category: { eq: "Comic" } }
+                  }
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        date
+                        title
+                        number
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+          output: "/feed-comics.xml",
+          title: "Johny W. Alves's Comics",
+        },
+      ],
+    },
   },
   {
     resolve: `gatsby-plugin-algolia-search`,
@@ -149,16 +185,16 @@ const pluginsConfig = [
   `gatsby-plugin-sitemap`,
 ]
 
-if (process.env.CONTEXT === 'production') {
+if (process.env.CONTEXT === "production") {
   const analytics = {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
       trackingId: process.env.GOOGLE_ANALYTICS_ID,
       head: false,
-    }
+    },
   }
 
-  pluginsConfig.push(analytics);
+  pluginsConfig.push(analytics)
 }
 
 module.exports = {
@@ -169,5 +205,5 @@ module.exports = {
     author: `@johnywalves`,
     siteUrl: `https://www.johnywalves.com.br`,
   },
-  plugins: pluginsConfig
+  plugins: pluginsConfig,
 }

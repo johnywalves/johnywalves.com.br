@@ -61,7 +61,7 @@ export const Curriculium = styled.div`
     padding: 0.5rem 1rem;
     margin: 0 1rem 0 0;
     border-radius: 0.25rem;
-    color: var(--white);
+    color: var(--background);
     font-weight: 700;
     text-transform: lowercase;
     background-color: var(--highlight);

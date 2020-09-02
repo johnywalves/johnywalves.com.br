@@ -21,15 +21,17 @@ yarn init
 npm init
 ```
 
+Instalar os pacotes
+
 ```bash
-yarn add gulp
+yarn add gulp gulp-clean-css gulp-json-minify gulp-rename gulp-uglify browser-sync
 # ou
-npm install gulp
+npm install gulp gulp-clean-css gulp-json-minify gulp-rename gulp-uglify browser-sync
 ```
 
-## Compilação
+## Gulpfile
 
-Código simples para iniciar com
+Código simples para iniciar com `gulpfile.js`
 
 ```javascript
 const gulp = require("gulp")

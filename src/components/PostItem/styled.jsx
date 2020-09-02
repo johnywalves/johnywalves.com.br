@@ -41,7 +41,7 @@ export const PostItemWrapper = styled.section`
 export const PostItemImageFeatured = styled(Img)`
   align-items: center;
   border-radius: 50%;
-  color: var(--white);
+  color: var(--background);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
@@ -65,7 +65,7 @@ export const PostItemImageFeatured = styled(Img)`
 export const PostItemCoverImage = styled.div`
   align-items: center;
   border-radius: 50%;
-  color: var(--white);
+  color: var(--background);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
@@ -95,7 +95,7 @@ export const PostItemTag = styled.div`
   background-color: ${(props) =>
     props.background ? props.background : "var(--highlight)"};
   border-radius: 50%;
-  color: var(--white);
+  color: var(--background);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;

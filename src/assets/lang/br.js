@@ -211,6 +211,12 @@ export default {
           "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira",
       },
       {
+        title: "CSS Animatic",
+        sourceCode: "https://github.com/johnywalves/cssanimatic",
+        view: "https://johnywalves.github.io/cssanimatic",
+        description: "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
+      },
+      {
         title: "Bom dia, equipes dev!",
         sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
         view: "https://bomdiaequipesdev.com.br/",

@@ -44,6 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
               date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
               title
               category
+              number
               description
             }
             timeToRead
@@ -75,7 +76,9 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMarkdownRemark.edges.filter(
+      (post) => post.node.frontmatter.category !== "Comic"
+    )
 
     posts.forEach(({ node, next, previous }) => {
       createPage({
@@ -101,6 +104,21 @@ exports.createPages = ({ graphql, actions }) => {
           skip: index * postsPerPage,
           numPages,
           currentPage: index + 1,
+        },
+      })
+    })
+
+    const comics = result.data.allMarkdownRemark.edges.filter(
+      (post) => post.node.frontmatter.category === "Comic"
+    )
+
+    comics.forEach(({ node }) => {
+      createPage({
+        path: `/comic-${node.frontmatter.number}`,
+        component: path.resolve(`src/templates/comic-post.jsx`),
+        context: {
+          slug: node.fields.slug,
+          number: node.frontmatter.number,
         },
       })
     })

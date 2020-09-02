@@ -4,10 +4,12 @@ import Layout from "components/Layout"
 import SEO from "components/seo"
 import ProjectList from "components/ProjectList"
 import PostsHighlightList from "components/PostsHighlightList"
+import ComicLast from "components/ComicLast"
 
 const Home = () => (
   <Layout>
     <SEO title="Home" />
+    <ComicLast />
     <PostsHighlightList />
     <ProjectList />
   </Layout>

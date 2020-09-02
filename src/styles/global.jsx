@@ -84,7 +84,7 @@ const GlobalStyles = createGlobalStyle`
     --highlight: #ed34a2;
     --mediumBackground: #f0f0f3;
     --background: #fff;
-    --white: #fff;
+    --white: #060606;
     --shadowColors: #0000003f;
     --bagdeSkill: #6f6f6f;
   }  
