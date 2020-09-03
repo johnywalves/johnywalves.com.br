@@ -2,7 +2,7 @@ const postQuery = `{
     posts: allMarkdownRemark(
             sort: { fields: frontmatter___date, order: DESC }
             filter: {frontmatter: {published: {ne: false}}}
-        ){
+        ) {
         edges {
             node {
                 objectID: id
