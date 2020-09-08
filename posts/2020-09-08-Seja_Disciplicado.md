@@ -1,5 +1,5 @@
 ---
-date: 2020-09-03 18:18:49 -0300
+date: 2020-09-08 18:18:49 -0300
 title: Não seja motivado, seja disciplinado
 description: Alguns pensamentos como lidar com o dia a dia
 category: Bem-estar

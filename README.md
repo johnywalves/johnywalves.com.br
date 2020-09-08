@@ -1,31 +1,35 @@
 # Gatsby Site
 
-Realizando testes para a construção de um CMS baseado em repositório Git
+<div style="text-align:center">
+<img src="https://raw.githubusercontent.com/johnywalves/gatsby-site/master/src/assets/images/favicon.png" style="width: 150px;" />
+</div>
 
-## Executar projeto
+Página pessoal por Johny W. Alves
 
-Requisito: NodeJS instalado com controlador de pacotes npm ou yarn
+## What is inside?
 
-Instalar pacote do node
+This project uses:
+
+[Gatsby](https://www.gatsbyjs.com/)  
+[Algolia](https://www.algolia.com/)  
+[PrismJS](https://prismjs.com/)  
+[TypeScript](https://www.typescriptlang.org/)  
+[Netlify CMS](https://www.netlifycms.org/)  
+
+## Getting Started
+
+First, install packages:
 
 ```bash
 npm i
-# ou
+# or
 yarn
 ```
 
-Iniciar em modo de desenvolvimento
+Run the development server:
 
 ```bash
 npm start
-# ou
+# or
 yarn start
-```
-
-Construir aplicação para produção
-
-```bash
-npm run build
-# ou
-yarn run build
 ```

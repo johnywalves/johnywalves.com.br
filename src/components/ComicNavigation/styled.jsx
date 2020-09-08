@@ -9,7 +9,7 @@ export const Navigation = styled.div`
     color: var(--titles);
     text-decoration: none;
     margin: 0 1rem;
-    font-size: 1.5rem;
+    font-size: min(1.5rem, 3vw);
     font-weight: 700;
   }
 

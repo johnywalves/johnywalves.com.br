@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
     --highlight: #e352a8;
     --mediumBackground: #192734;
     --background: #16202c;
-    --white: #fff;
+    --white: #eee;
     --shadowColors: #ffffff88;
     --bagdeSkill: #6f6f6f;
   }
@@ -84,7 +84,7 @@ const GlobalStyles = createGlobalStyle`
     --highlight: #ed34a2;
     --mediumBackground: #f0f0f3;
     --background: #fff;
-    --white: #060606;
+    --white: #fff;
     --shadowColors: #0000003f;
     --bagdeSkill: #6f6f6f;
   }  

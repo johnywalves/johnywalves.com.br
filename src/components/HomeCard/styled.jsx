@@ -11,6 +11,10 @@ export const Wrapper = styled.article`
   box-shadow: 0 1px 4px var(--shadowColors);
   transition: all 0.2s ease-out;
 
+  body.dark & {
+    background-color: var(--mediumBackground);
+  }
+
   img {
     border-radius: 0.25rem 0.25rem 0 0;
   }

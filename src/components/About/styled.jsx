@@ -61,11 +61,15 @@ export const Curriculium = styled.div`
     padding: 0.5rem 1rem;
     margin: 0 1rem 0 0;
     border-radius: 0.25rem;
-    color: var(--background);
+    color: var(--white);
     font-weight: 700;
     text-transform: lowercase;
     background-color: var(--highlight);
     text-decoration: none;
+  }
+
+  & a:hover {
+    opacity: 0.7;
   }
 
   svg {

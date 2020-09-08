@@ -13,6 +13,12 @@ tags:
 
 ## Docker
 
+Construir um Dockerfile que está na pasta
+
+```bash
+docker build .
+```
+
 Executar comando dentro do container, no caso o `ls` ou o `bash` para ter acesso direto
 
 ```bash
@@ -42,11 +48,11 @@ docker-compose pull
 Subir os serviços
 
 ```bash
-docker up -d
+docker-compose up -d
 ```
 
 Descer/Desligar os serviços
 
 ```bash
-docker up -d
+docker-compose down
 ```
