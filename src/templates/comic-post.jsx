@@ -16,7 +16,7 @@ const ComicPost = ({ data, pageContext }) => {
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        description={"Desenvolvendo, aprendendo, desenhando e tentando fazer humor sobre isso, espero que gostem"}
+        description={"Desenvolvendo, aprendendo, desenhando e fazendo humor sobre isso, espero que gostem"}
         image={post.frontmatter.coverImage}
       />
       {post.frontmatter.featuredImage && (
