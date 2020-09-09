@@ -16,8 +16,8 @@ const ComicPost = ({ data, pageContext }) => {
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        description={"Tirinha por Johny W. Alves"}
-        image={imageSrc}
+        description={"Desenvolvendo, aprendendo, desenhando e tentando fazer humor sobre isso, espero que gostem"}
+        image={post.frontmatter.coverImage}
       />
       {post.frontmatter.featuredImage && (
         <S.PostFeaturedImage
@@ -44,13 +44,7 @@ export const query = graphql`
         date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
         title
         description
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 1600, maxHeight: 512) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        coverImage
       }
       html
       timeToRead
