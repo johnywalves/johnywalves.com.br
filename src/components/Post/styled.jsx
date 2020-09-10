@@ -16,7 +16,7 @@ export const PostHeader = styled.header`
 
 export const PostFeaturedImage = styled(Img)``
 
-export const PostComic = styled.img``
+export const PostComic = styled(Img)``
 
 export const PostTitle = styled.h1`
   font-size: 4rem;

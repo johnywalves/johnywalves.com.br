@@ -23,6 +23,16 @@ const ComicLast = () => {
             frontmatter {
               number
               description
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 1579) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+            fields {
+              slug
             }
           }
         }
@@ -35,15 +45,14 @@ const ComicLast = () => {
       {edges.map(({ node }, index) => (
         <Anilink
           key={index}
-          to={`/comic-${node.frontmatter.number}`}
+          to={node.fields.slug}
           cover
           direction="left"
           bg="var(--background)"
           duration={0.6}
         >
           <S.Image
-            src={`/comics/000${node.frontmatter.number}.png`}
-            alt={node.frontmatter.description}
+            fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
           />
         </Anilink>
       ))}

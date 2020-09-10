@@ -10,23 +10,21 @@ import * as S from "components/Post/styled"
 const ComicPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { number, slug } = pageContext
-  const imageSrc = `/comics/${number.toString().padStart(4, "0")}.png`
 
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        description={"Desenvolvendo, aprendendo, desenhando e fazendo humor sobre isso, espero que gostem"}
+        description={
+          "Desenvolvendo, aprendendo, desenhando e fazendo humor sobre isso, espero que gostem"
+        }
         image={post.frontmatter.coverImage}
       />
-      {post.frontmatter.featuredImage && (
-        <S.PostFeaturedImage
-          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-        />
-      )}
       <S.PostHeader>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostComic src={imageSrc} alt={post.frontmatter.description} />
+        <S.PostComic
+          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+        />
         <ComicNavigation number={number} />
       </S.PostHeader>
       <S.MainContent>
@@ -45,6 +43,13 @@ export const query = graphql`
         title
         description
         coverImage
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 1579) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
       html
       timeToRead
