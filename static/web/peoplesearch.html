@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mentores | Space Apps Rio Preto 2020</title>
+  </head>
+
+  <style>
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 62.5%;
+
+      --text: #333;
+      --bg: #eee;
+      --shadow: #00000066;
+      --border: #6a76aa;
+
+      --headerText: #fff;
+      --headerHeight: 8.5rem;
+
+      --cardBg: #fff;
+      --cardSide: #6a76aa;
+
+      color: var(--text);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    @media (max-width: 62rem) {
+      body {
+        --headerHeight: 10rem;
+      }
+    }
+
+    header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: var(--headerHeight);
+
+      background-color: var(--bg);
+      -webkit-box-shadow: 0.8rem 0.8rem 1.6rem -0.8rem var(--shadow);
+      -moz-box-shadow: 0.8rem 0.8rem 1.6rem -0.8rem var(--shadow);
+      box-shadow: 0.8rem 0.8rem 1.6rem -0.8rem var(--shadow);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      z-index: 2;
+    }
+
+    header h1 {
+      color: var(--border);
+      text-align: center;
+      font-size: 2rem;
+      margin: 1rem 1rem;
+    }
+
+    header div.search-field {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      margin: 0.5rem 5%;
+      height: fit-content;
+      border: 0.25rem solid var(--border);
+      border-radius: 0.25rem;
+      color: var(--headerText);
+      background-color: var(--border);
+    }
+
+    header div.search-field input {
+      width: calc(100% - 5rem);
+      height: 2rem;
+      border: none;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    header div.search-field label {
+      width: 8rem;
+      color: white;
+      padding-top: 0.2rem;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+
+    main {
+      margin-top: var(--headerHeight);
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article {
+      width: 25rem;
+      min-height: 15rem;
+      margin: 0.5rem;
+      border-radius: 1rem;
+
+      background-color: var(--cardBg);
+      -webkit-box-shadow: 0 0.8rem 1.6rem -0.8rem var(--shadow);
+      -moz-box-shadow: 0 0.8rem 1.6rem -0.8rem var(--shadow);
+      box-shadow: 0 0.8rem 1.6rem -0.8rem var(--shadow);
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    article .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      border-radius: 1rem 0 0 1rem;
+      background-color: var(--cardSide);
+    }
+
+    article .left figure {
+      height: 5rem;
+      width: 5rem;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    article .left figure img {
+      height: auto;
+      width: 5rem;
+    }
+
+    article .left .schedule {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    article .left .schedule div {
+      color: white;
+      background-color: #417541;
+      border-radius: 0.1rem;
+      padding: 0.2rem;
+      margin: 0 0.1rem 0.1rem 0;
+    }
+
+    article .left .schedule div.disabled {
+      background-color: #cccccc55;
+    }
+
+    article .right {
+      padding: 1rem;
+    }
+
+    article .right h1,
+    article .right h3,
+    article .right p {
+      width: 100%;
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    article .right h3 {
+      font-size: 1rem;
+      opacity: 0.6;
+    }
+
+    article .right p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin: 1rem 0;
+    }
+
+    footer {
+      margin: 1rem 0 3rem;
+    }
+
+    footer h1 {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+
+    footer .logos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer img {
+      height: 7rem;
+      width: auto;
+      margin: 0 1rem;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>Space Apps Challenge Rio Preto 2020</h1>
+      <div class="search-field">
+        <input
+          id="search"
+          type="text"
+          placeholder="Pesquisar mentores por nome, título ou descrição"
+          onInput="search()"
+        />
+        <label for="search">Pesquisa</label>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer>
+      <h1>Realização</h1>
+      <div class="logos">
+        <img
+          src="https://spaceappsriopreto.com/wp-content/uploads/2020/08/nasa-300x246.png"
+        />
+        <img
+          src="https://spaceappsriopreto.com/wp-content/uploads/2020/08/Nasa-Logo-2020-300x300.png"
+        />
+        <img
+          src="https://spaceappsriopreto.com/wp-content/uploads/2020/08/N.S.A.C.logo_-300x275.png"
+        />
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    var mentores = [
+      {
+        picture: "https://randomuser.me/api/portraits/men/80.jpg",
+        name: "Yaseen Avery",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Nullam pellentesque sapien eu volutpat scelerisque. Vestibulum egestas varius convallis. Nullam dapibus pharetra justo quisbibendum. Integer pretium aliquet imperdiet",
+        Man3: true,
+        Tar3: true,
+        Noi3: false,
+        Man4: true,
+        Tar4: false,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/80.jpg",
+        name: "Valentina Mueller",
+        title: "Phasellus malesuada elementum",
+        description:
+          "Sed facilisis est quis urna rutrum consequat vitae a ex. Aliquam id pellentesque metus. Proin ultrices mattis mollis. Cras tincidunt sem non est porta cursus",
+        Man3: false,
+        Tar3: true,
+        Noi3: true,
+        Man4: false,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/men/72.jpg",
+        name: "Raul Todd",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Duis nisl velit, tincidunt ut nisl pellentesque, ultrices accumsan lectus. Quisque ullamcorper ornare lorem nec rhoncus. Maecenas vitae quam at justo varius iaculis nec sed dui. Nulla sit amet fermentum neque. Curabitur sit amet tellus magna",
+        Man3: true,
+        Tar3: true,
+        Noi3: false,
+        Man4: true,
+        Tar4: false,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/72.jpg",
+        name: "Dollie Mohammed",
+        title: "Phasellus malesuada elementum",
+        description:
+          "Donec nec tincidunt justo. Pellentesque dui libero, viverra vel euismod eget, maximus non eros. Vivamus accumsan at felis ac scelerisque",
+        Man3: false,
+        Tar3: true,
+        Noi3: true,
+        Man4: false,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/men/64.jpg",
+        name: "Brodie Robertson",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Fusce euismod malesuada risus, ac tincidunt ante congue ac. In justo ante, mattis id nunc ac, feugiat lacinia nibh. Maecenas venenatis fermentum risus, non fermentum ipsum. Nullam mattis, enim ac accumsan iaculis, ipsum neque congue nisl, a vestibulum tellus magna nec urna. Vivamus libero felis, tincidunt at varius at, posuere ut massa",
+        Man3: true,
+        Tar3: true,
+        Noi3: false,
+        Man4: true,
+        Tar4: false,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/64.jpg",
+        name: "Zaynah Branch",
+        title: "Phasellus malesuada elementum",
+        description:
+          "Integer convallis, libero ut laoreet ornare, lacus arcu sollicitudin turpis, eget mollis orci leo at mauris. Suspendisse in purus venenatis, euismod augue ut, imperdiet ante",
+        Man3: false,
+        Tar3: true,
+        Noi3: true,
+        Man4: true,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/men/56.jpg",
+        name: "Caspar Wise",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Pellentesque dui libero, viverra vel euismod eget, maximus non eros. Vivamus accumsan at felis ac scelerisque. Etiam venenatis turpis non cursus accumsan. Etiam mauris eros, fermentum eu sollicitudin quis, lobortis at tellus",
+        Man3: true,
+        Tar3: true,
+        Noi3: false,
+        Man4: false,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/56.jpg",
+        name: "Theresa Whitfield",
+        title: "Quisque dapibus porta",
+        description:
+          "Phasellus nec nunc vitae massa convallis lacinia in sit amet ligula. Aliquam sed dolor at libero blandit efficitur vel sed ligula. Morbi pharetra mi eu eros tristique, id maximus quam interdum",
+        Man3: true,
+        Tar3: true,
+        Noi3: true,
+        Man4: false,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/men/48.jpg",
+        name: "Jonathan Mcghee",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Fusce euismod malesuada risus, ac tincidunt ante congue ac. In justo ante, mattis id nunc ac, feugiat lacinia nibh. Maecenas venenatis fermentum risus",
+        Man3: false,
+        Tar3: true,
+        Noi3: false,
+        Man4: true,
+        Tar4: false,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/48.jpg",
+        name: "Ayana Rich",
+        title: "Phasellus malesuada elementum",
+        description:
+          "Vivamus libero felis, tincidunt at varius at, posuere ut massa. Integer convallis, libero ut laoreet ornare, lacus arcu sollicitudin turpis, eget mollis orci leo at mauris. Suspendisse in purus venenatis, euismod augue ut, imperdiet ante. Nullam consequat, ante ac sodales mattis, magna turpis elementum mauris, eget congue ipsum mi eu urna",
+        Man3: false,
+        Tar3: true,
+        Noi3: true,
+        Man4: true,
+        Tar4: false,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/men/40.jpg",
+        name: "Tyson Dominguez",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Nullam pellentesque sapien eu volutpat scelerisque. Vestibulum egestas varius convallis. Nullam dapibus pharetra justo quisbibendum. Integer pretium aliquet imperdiet",
+        Man3: true,
+        Tar3: false,
+        Noi3: false,
+        Man4: true,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/40.jpg",
+        name: "Kelsi Farley",
+        title: "Aliquam tempor egestas",
+        description:
+          "Quisque dapibus porta rutrum. Nullam vitae mi id mi bibendum dapibus. Phasellus nec nunc vitae massa convallis lacinia in sit amet ligula",
+        Man3: true,
+        Tar3: false,
+        Noi3: true,
+        Man4: false,
+        Tar4: true,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/men/32.jpg",
+        name: "Johnny Townsend",
+        title: "Lorem ipsum dolor sit amet",
+        description:
+          "Aliquam sed dolor at libero blandit efficitur vel sed ligula. Morbi pharetra mi eu eros tristique, id maximus quam interdum",
+        Man3: true,
+        Tar3: true,
+        Noi3: false,
+        Man4: false,
+        Tar4: false,
+      },
+      {
+        picture: "https://randomuser.me/api/portraits/women/32.jpg",
+        name: "Maira Daly",
+        title: "Integer convallis",
+        description:
+          "Aliquam tempor egestas dui ac vehicula. Aliquam et quam pulvinar, ullamcorper arcu sed, consequat risus. Vestibulum vitae dolor a arcu elementum aliquet a eu magna. Praesent a sem elit",
+        Man3: true,
+        Tar3: true,
+        Noi3: true,
+        Man4: true,
+        Tar4: true,
+      },
+    ];
+
+    function sortName(a, b) {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    }
+
+    String.prototype.norm = function () {
+      return this.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+    };
+
+    function filterText(mentor) {
+      var textSearch = document.querySelector("#search").value.norm();
+      if (textSearch !== "") {
+        return (
+          mentor.name.norm().includes(textSearch) ||
+          mentor.title.norm().includes(textSearch) ||
+          mentor.description.norm().includes(textSearch)
+        );
+      }
+      return true;
+    }
+
+    function markText(text, search) {
+      var posStart = text.norm().indexOf(search.norm());
+      if (posStart !== -1) {
+        return (
+          text.slice(0, posStart) +
+          "<mark>" +
+          text.slice(posStart, posStart + search.length) +
+          "</mark>" +
+          text.slice(posStart + search.length, text.length)
+        );
+      }
+      return text;
+    }
+
+    function search() {
+      var mainElem = document.querySelector("main");
+      var textSearch = document.querySelector("#search").value;
+      mainElem.innerHTML = "";
+      mentores
+        .filter(filterText)
+        .sort(sortName)
+        .forEach(function (mentor) {
+          var articleElem = document.createElement("article");
+          mainElem.appendChild(articleElem);
+
+          /* Left */
+          var leftElem = document.createElement("div");
+          articleElem.appendChild(leftElem);
+          leftElem.classList.add("left");
+
+          /* Avatar */
+          var figureElem = document.createElement("figure");
+          leftElem.appendChild(figureElem);
+          var imgElem = document.createElement("img");
+          imgElem.src = mentor.picture;
+          figureElem.appendChild(imgElem);
+
+          /* Saturday Schedule */
+          var satSchedElem = document.createElement("div");
+          satSchedElem.classList.add("schedule");
+          leftElem.appendChild(satSchedElem);
+
+          var satManElem = document.createElement("div");
+          satManElem.innerText = "03 Man";
+          if (!mentor.Man3) {
+            satManElem.classList.add("disabled");
+          }
+          satSchedElem.appendChild(satManElem);
+
+          var satTarElem = document.createElement("div");
+          satTarElem.innerText = "03 Tar";
+          if (!mentor.Tar3) {
+            satTarElem.classList.add("disabled");
+          }
+          satSchedElem.appendChild(satTarElem);
+
+          var satNoitElem = document.createElement("div");
+          satNoitElem.innerText = "03 Noi";
+          if (!mentor.Noi3) {
+            satNoitElem.classList.add("disabled");
+          }
+          satSchedElem.appendChild(satNoitElem);
+
+          /* Sunday Schedule */
+          var sunSchedElem = document.createElement("div");
+          sunSchedElem.classList.add("schedule");
+          leftElem.appendChild(sunSchedElem);
+
+          var sunManElem = document.createElement("div");
+          sunManElem.innerText = "04 Man";
+          if (!mentor.Man4) {
+            sunManElem.classList.add("disabled");
+          }
+          sunSchedElem.appendChild(sunManElem);
+
+          var sunTarElem = document.createElement("div");
+          sunTarElem.innerText = "04 Tar";
+          if (!mentor.Tar4) {
+            sunTarElem.classList.add("disabled");
+          }
+          sunSchedElem.appendChild(sunTarElem);
+
+          /* Right */
+          var rightElem = document.createElement("div");
+          rightElem.classList.add("right");
+          articleElem.appendChild(rightElem);
+
+          var nameElem = document.createElement("h1");
+          nameElem.innerHTML = markText(mentor.name, textSearch);
+          rightElem.appendChild(nameElem);
+
+          var titleElem = document.createElement("h3");
+          titleElem.innerHTML = markText(mentor.title, textSearch);
+          rightElem.appendChild(titleElem);
+
+          var descriptionElem = document.createElement("p");
+          descriptionElem.innerHTML = markText(mentor.description, textSearch);
+          rightElem.appendChild(descriptionElem);
+        });
+    }
+
+    window.onload = function () {
+      search("");
+    };
+  </script>
+</html>

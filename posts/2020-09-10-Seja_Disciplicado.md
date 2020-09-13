@@ -9,6 +9,7 @@ tags:
   - Bem-estar
   - Desempenho
   - Rotina
+highlight: true
 ---
 
 Na data publicação este artigo estamos passando pelo sexto mês de isolamento social por causa do Covid-19, com acadêmicas, restaurantes e cinemas fechados gerando uma certa ansiedade, nesse cenário quero compartilhar alguns pensamentos que tem mantido minha saúde mental em um nível aceitável
