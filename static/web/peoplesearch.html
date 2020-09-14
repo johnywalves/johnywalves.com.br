@@ -43,6 +43,13 @@
       }
     }
 
+    a,
+    a:hover,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
     header {
       position: fixed;
       left: 0;
@@ -123,6 +130,15 @@
 
       display: flex;
       flex-direction: row;
+      transition: all 0.5s;
+    }
+
+    article:hover {
+      cursor: pointer;
+      transform: translateY(-0.5rem);
+      -webkit-box-shadow: 0.4rem 1.2rem 1.6rem -0.8rem var(--shadow);
+      -moz-box-shadow: 0.4rem 1.2rem 1.6rem -0.8rem var(--shadow);
+      box-shadow: 0.4rem 1.2rem 1.6rem -0.8rem var(--shadow);
     }
 
     article .left {
@@ -260,6 +276,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Nullam pellentesque sapien eu volutpat scelerisque. Vestibulum egestas varius convallis. Nullam dapibus pharetra justo quisbibendum. Integer pretium aliquet imperdiet",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: false,
@@ -272,6 +289,7 @@
         title: "Phasellus malesuada elementum",
         description:
           "Sed facilisis est quis urna rutrum consequat vitae a ex. Aliquam id pellentesque metus. Proin ultrices mattis mollis. Cras tincidunt sem non est porta cursus",
+        link: "#",
         Man3: false,
         Tar3: true,
         Noi3: true,
@@ -284,6 +302,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Duis nisl velit, tincidunt ut nisl pellentesque, ultrices accumsan lectus. Quisque ullamcorper ornare lorem nec rhoncus. Maecenas vitae quam at justo varius iaculis nec sed dui. Nulla sit amet fermentum neque. Curabitur sit amet tellus magna",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: false,
@@ -296,6 +315,7 @@
         title: "Phasellus malesuada elementum",
         description:
           "Donec nec tincidunt justo. Pellentesque dui libero, viverra vel euismod eget, maximus non eros. Vivamus accumsan at felis ac scelerisque",
+        link: "#",
         Man3: false,
         Tar3: true,
         Noi3: true,
@@ -308,6 +328,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Fusce euismod malesuada risus, ac tincidunt ante congue ac. In justo ante, mattis id nunc ac, feugiat lacinia nibh. Maecenas venenatis fermentum risus, non fermentum ipsum. Nullam mattis, enim ac accumsan iaculis, ipsum neque congue nisl, a vestibulum tellus magna nec urna. Vivamus libero felis, tincidunt at varius at, posuere ut massa",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: false,
@@ -320,6 +341,7 @@
         title: "Phasellus malesuada elementum",
         description:
           "Integer convallis, libero ut laoreet ornare, lacus arcu sollicitudin turpis, eget mollis orci leo at mauris. Suspendisse in purus venenatis, euismod augue ut, imperdiet ante",
+        link: "#",
         Man3: false,
         Tar3: true,
         Noi3: true,
@@ -332,6 +354,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Pellentesque dui libero, viverra vel euismod eget, maximus non eros. Vivamus accumsan at felis ac scelerisque. Etiam venenatis turpis non cursus accumsan. Etiam mauris eros, fermentum eu sollicitudin quis, lobortis at tellus",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: false,
@@ -344,6 +367,7 @@
         title: "Quisque dapibus porta",
         description:
           "Phasellus nec nunc vitae massa convallis lacinia in sit amet ligula. Aliquam sed dolor at libero blandit efficitur vel sed ligula. Morbi pharetra mi eu eros tristique, id maximus quam interdum",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: true,
@@ -356,6 +380,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Fusce euismod malesuada risus, ac tincidunt ante congue ac. In justo ante, mattis id nunc ac, feugiat lacinia nibh. Maecenas venenatis fermentum risus",
+        link: "#",
         Man3: false,
         Tar3: true,
         Noi3: false,
@@ -368,6 +393,7 @@
         title: "Phasellus malesuada elementum",
         description:
           "Vivamus libero felis, tincidunt at varius at, posuere ut massa. Integer convallis, libero ut laoreet ornare, lacus arcu sollicitudin turpis, eget mollis orci leo at mauris. Suspendisse in purus venenatis, euismod augue ut, imperdiet ante. Nullam consequat, ante ac sodales mattis, magna turpis elementum mauris, eget congue ipsum mi eu urna",
+        link: "#",
         Man3: false,
         Tar3: true,
         Noi3: true,
@@ -380,6 +406,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Nullam pellentesque sapien eu volutpat scelerisque. Vestibulum egestas varius convallis. Nullam dapibus pharetra justo quisbibendum. Integer pretium aliquet imperdiet",
+        link: "#",
         Man3: true,
         Tar3: false,
         Noi3: false,
@@ -392,6 +419,7 @@
         title: "Aliquam tempor egestas",
         description:
           "Quisque dapibus porta rutrum. Nullam vitae mi id mi bibendum dapibus. Phasellus nec nunc vitae massa convallis lacinia in sit amet ligula",
+        link: "#",
         Man3: true,
         Tar3: false,
         Noi3: true,
@@ -404,6 +432,7 @@
         title: "Lorem ipsum dolor sit amet",
         description:
           "Aliquam sed dolor at libero blandit efficitur vel sed ligula. Morbi pharetra mi eu eros tristique, id maximus quam interdum",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: false,
@@ -416,6 +445,7 @@
         title: "Integer convallis",
         description:
           "Aliquam tempor egestas dui ac vehicula. Aliquam et quam pulvinar, ullamcorper arcu sed, consequat risus. Vestibulum vitae dolor a arcu elementum aliquet a eu magna. Praesent a sem elit",
+        link: "#",
         Man3: true,
         Tar3: true,
         Noi3: true,
@@ -474,8 +504,12 @@
         .filter(filterText)
         .sort(sortName)
         .forEach(function (mentor) {
+          var anchorElem = document.createElement("a");
+          anchorElem.href = mentor.link;
+          mainElem.appendChild(anchorElem);
+
           var articleElem = document.createElement("article");
-          mainElem.appendChild(articleElem);
+          anchorElem.appendChild(articleElem);
 
           /* Left */
           var leftElem = document.createElement("div");
