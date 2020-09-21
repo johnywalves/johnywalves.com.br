@@ -1,6 +1,6 @@
 export default {
   description:
-    "Desenvolvedor full stack web com mais de 15 anos de experiência e estudante de ciência de dados, apaixonado por aprender e entregar soluções que automatizem processos e entreguem métricas",
+    "Engenheiro de desenvolvimento web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI)",
   position: "Desenvolvedor Web",
   files: [
     { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },

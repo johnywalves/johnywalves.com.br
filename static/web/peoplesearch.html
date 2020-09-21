@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mentores | Space Apps Rio Preto 2020</title>
+    <title>Pesquisa de pessoas</title>
   </head>
 
   <style>
@@ -23,13 +23,14 @@
       --text: #333;
       --bg: #eee;
       --shadow: #00000066;
-      --border: #6a76aa;
-
+      --border: #5235aa;
       --headerText: #fff;
       --headerHeight: 8.5rem;
-
       --cardBg: #fff;
-      --cardSide: #6a76aa;
+      --cardSideStart: #06fca5;
+      --cardSideEnd: #1e98fd;
+      --scheduleText: #fff;
+      --scheduleBg: #5235aa;
 
       color: var(--text);
       background: var(--bg);
@@ -149,36 +150,41 @@
       padding: 1rem;
 
       border-radius: 1rem 0 0 1rem;
-      background-color: var(--cardSide);
+      background: var(--cardSideStart);
+      background: linear-gradient(
+        215deg,
+        var(--cardSideStart) 0%,
+        var(--cardSideEnd) 50%
+      );
     }
 
     article .left figure {
-      height: 5rem;
-      width: 5rem;
+      height: 6rem;
+      width: 6rem;
       margin-bottom: 0.5rem;
       overflow: hidden;
+      border: 0.25rem solid var(--cardBg);
       border-radius: 50%;
       background-size: cover;
       background-position: center;
-    }
-
-    article .left figure img {
-      height: auto;
-      width: 5rem;
     }
 
     article .left .schedule {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       margin-top: 0.5rem;
     }
 
     article .left .schedule div {
-      color: white;
-      background-color: #417541;
-      border-radius: 0.1rem;
-      padding: 0.2rem;
+      color: var(--scheduleText);
+      font-size: 0.75rem;
+      font-weight: 400;
+      background-color: var(--scheduleBg);
+      border-radius: 0.25rem;
+      padding: 0.2rem 0.25rem;
       margin: 0 0.1rem 0.1rem 0;
     }
 
@@ -238,12 +244,12 @@
 
   <body>
     <header>
-      <h1>Space Apps Challenge Rio Preto 2020</h1>
+      <h1>Pesquisa de pessoas</h1>
       <div class="search-field">
         <input
           id="search"
           type="text"
-          placeholder="Pesquisar mentores por nome, título ou descrição"
+          placeholder="Pesquisar por nome, título ou descrição"
           onInput="search()"
         />
         <label for="search">Pesquisa</label>
@@ -251,21 +257,7 @@
     </header>
 
     <main></main>
-
-    <footer>
-      <h1>Realização</h1>
-      <div class="logos">
-        <img
-          src="https://spaceappsriopreto.com/wp-content/uploads/2020/08/nasa-300x246.png"
-        />
-        <img
-          src="https://spaceappsriopreto.com/wp-content/uploads/2020/08/Nasa-Logo-2020-300x300.png"
-        />
-        <img
-          src="https://spaceappsriopreto.com/wp-content/uploads/2020/08/N.S.A.C.logo_-300x275.png"
-        />
-      </div>
-    </footer>
+    <footer></footer>
   </body>
 
   <script>
@@ -452,38 +444,38 @@
         Man4: true,
         Tar4: true,
       },
-    ];
+    ]
 
     function sortName(a, b) {
       if (a.name < b.name) {
-        return -1;
+        return -1
       }
       if (a.name > b.name) {
-        return 1;
+        return 1
       }
-      return 0;
+      return 0
     }
 
     String.prototype.norm = function () {
       return this.toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-    };
+        .replace(/[\u0300-\u036f]/g, "")
+    }
 
     function filterText(mentor) {
-      var textSearch = document.querySelector("#search").value.norm();
+      var textSearch = document.querySelector("#search").value.norm()
       if (textSearch !== "") {
         return (
           mentor.name.norm().includes(textSearch) ||
           mentor.title.norm().includes(textSearch) ||
           mentor.description.norm().includes(textSearch)
-        );
+        )
       }
-      return true;
+      return true
     }
 
     function markText(text, search) {
-      var posStart = text.norm().indexOf(search.norm());
+      var posStart = text.norm().indexOf(search.norm())
       if (posStart !== -1) {
         return (
           text.slice(0, posStart) +
@@ -491,104 +483,102 @@
           text.slice(posStart, posStart + search.length) +
           "</mark>" +
           text.slice(posStart + search.length, text.length)
-        );
+        )
       }
-      return text;
+      return text
     }
 
     function search() {
-      var mainElem = document.querySelector("main");
-      var textSearch = document.querySelector("#search").value;
-      mainElem.innerHTML = "";
+      var mainElem = document.querySelector("main")
+      var textSearch = document.querySelector("#search").value
+      mainElem.innerHTML = ""
       mentores
         .filter(filterText)
         .sort(sortName)
         .forEach(function (mentor) {
-          var anchorElem = document.createElement("a");
-          anchorElem.href = mentor.link;
-          mainElem.appendChild(anchorElem);
+          var anchorElem = document.createElement("a")
+          anchorElem.href = mentor.link
+          mainElem.appendChild(anchorElem)
 
-          var articleElem = document.createElement("article");
-          anchorElem.appendChild(articleElem);
+          var articleElem = document.createElement("article")
+          anchorElem.appendChild(articleElem)
 
           /* Left */
-          var leftElem = document.createElement("div");
-          articleElem.appendChild(leftElem);
-          leftElem.classList.add("left");
+          var leftElem = document.createElement("div")
+          articleElem.appendChild(leftElem)
+          leftElem.classList.add("left")
 
           /* Avatar */
-          var figureElem = document.createElement("figure");
-          leftElem.appendChild(figureElem);
-          var imgElem = document.createElement("img");
-          imgElem.src = mentor.picture;
-          figureElem.appendChild(imgElem);
+          var figureElem = document.createElement("figure")
+          figureElem.style.backgroundImage = "url('" + mentor.picture + "')"
+          leftElem.appendChild(figureElem)
 
           /* Saturday Schedule */
-          var satSchedElem = document.createElement("div");
-          satSchedElem.classList.add("schedule");
-          leftElem.appendChild(satSchedElem);
+          var satSchedElem = document.createElement("div")
+          satSchedElem.classList.add("schedule")
+          leftElem.appendChild(satSchedElem)
 
-          var satManElem = document.createElement("div");
-          satManElem.innerText = "03 Man";
+          var satManElem = document.createElement("div")
+          satManElem.innerText = "03 Man"
           if (!mentor.Man3) {
-            satManElem.classList.add("disabled");
+            satManElem.classList.add("disabled")
           }
-          satSchedElem.appendChild(satManElem);
+          satSchedElem.appendChild(satManElem)
 
-          var satTarElem = document.createElement("div");
-          satTarElem.innerText = "03 Tar";
+          var satTarElem = document.createElement("div")
+          satTarElem.innerText = "03 Tar"
           if (!mentor.Tar3) {
-            satTarElem.classList.add("disabled");
+            satTarElem.classList.add("disabled")
           }
-          satSchedElem.appendChild(satTarElem);
+          satSchedElem.appendChild(satTarElem)
 
-          var satNoitElem = document.createElement("div");
-          satNoitElem.innerText = "03 Noi";
+          var satNoitElem = document.createElement("div")
+          satNoitElem.innerText = "03 Noi"
           if (!mentor.Noi3) {
-            satNoitElem.classList.add("disabled");
+            satNoitElem.classList.add("disabled")
           }
-          satSchedElem.appendChild(satNoitElem);
+          satSchedElem.appendChild(satNoitElem)
 
           /* Sunday Schedule */
-          var sunSchedElem = document.createElement("div");
-          sunSchedElem.classList.add("schedule");
-          leftElem.appendChild(sunSchedElem);
+          var sunSchedElem = document.createElement("div")
+          sunSchedElem.classList.add("schedule")
+          leftElem.appendChild(sunSchedElem)
 
-          var sunManElem = document.createElement("div");
-          sunManElem.innerText = "04 Man";
+          var sunManElem = document.createElement("div")
+          sunManElem.innerText = "04 Man"
           if (!mentor.Man4) {
-            sunManElem.classList.add("disabled");
+            sunManElem.classList.add("disabled")
           }
-          sunSchedElem.appendChild(sunManElem);
+          sunSchedElem.appendChild(sunManElem)
 
-          var sunTarElem = document.createElement("div");
-          sunTarElem.innerText = "04 Tar";
+          var sunTarElem = document.createElement("div")
+          sunTarElem.innerText = "04 Tar"
           if (!mentor.Tar4) {
-            sunTarElem.classList.add("disabled");
+            sunTarElem.classList.add("disabled")
           }
-          sunSchedElem.appendChild(sunTarElem);
+          sunSchedElem.appendChild(sunTarElem)
 
           /* Right */
-          var rightElem = document.createElement("div");
-          rightElem.classList.add("right");
-          articleElem.appendChild(rightElem);
+          var rightElem = document.createElement("div")
+          rightElem.classList.add("right")
+          articleElem.appendChild(rightElem)
 
-          var nameElem = document.createElement("h1");
-          nameElem.innerHTML = markText(mentor.name, textSearch);
-          rightElem.appendChild(nameElem);
+          var nameElem = document.createElement("h1")
+          nameElem.innerHTML = markText(mentor.name, textSearch)
+          rightElem.appendChild(nameElem)
 
-          var titleElem = document.createElement("h3");
-          titleElem.innerHTML = markText(mentor.title, textSearch);
-          rightElem.appendChild(titleElem);
+          var titleElem = document.createElement("h3")
+          titleElem.innerHTML = markText(mentor.title, textSearch)
+          rightElem.appendChild(titleElem)
 
-          var descriptionElem = document.createElement("p");
-          descriptionElem.innerHTML = markText(mentor.description, textSearch);
-          rightElem.appendChild(descriptionElem);
-        });
+          var descriptionElem = document.createElement("p")
+          descriptionElem.innerHTML = markText(mentor.description, textSearch)
+          rightElem.appendChild(descriptionElem)
+        })
     }
 
     window.onload = function () {
-      search("");
-    };
+      search("")
+    }
   </script>
 </html>
