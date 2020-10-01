@@ -8,4 +8,9 @@ export const Text = styled.p`
   color: var(--white);
   background-color: ${({ skill }) =>
     skill ? "var(--bagdeSkill)" : "var(--highlight)"};
+
+  span {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
 `

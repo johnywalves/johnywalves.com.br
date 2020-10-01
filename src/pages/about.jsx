@@ -66,7 +66,7 @@ const About = () => {
         <S.Band>
           {Strings.languages.list.map((language, index) => (
             <Badge key={index} skill>
-              {language.name}
+              {language.name} <span>({language.proficiency})</span>
             </Badge>
           ))}
         </S.Band>
