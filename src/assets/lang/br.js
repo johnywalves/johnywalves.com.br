@@ -191,6 +191,13 @@ export default {
         icon: "tools",
       },
       {
+        date: "2020-04-30 00:00:00-0300",
+        name: "Pós-Graduação em Big Data",
+        institute: "Senac São José do Rio Preto",
+        img: "/cert/senac_bigdata.jpg",
+        icon: "university",
+      },
+      {
         date: "2020-04-19 00:00:00-0300",
         name: "Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS",
         institute: "Udemy",
