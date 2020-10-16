@@ -240,6 +240,29 @@
       width: auto;
       margin: 0 1rem;
     }
+
+    .spinner {
+      border: 1.25rem solid var(--cardBg);
+      border-left-color: var(--cardSideEnd);
+      height: 10rem;
+      width: 10rem;
+      margin: 5rem 0;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .noregister {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2rem;
+      opacity: 0.6;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 
   <body>
@@ -256,12 +279,15 @@
       </div>
     </header>
 
-    <main></main>
+    <main>
+      <div class="spinner"></div>
+    </main>
+
     <footer></footer>
   </body>
 
   <script>
-    var mentores = [
+    var people = [
       {
         picture: "https://randomuser.me/api/portraits/men/80.jpg",
         name: "Yaseen Avery",
@@ -462,13 +488,13 @@
         .replace(/[\u0300-\u036f]/g, "")
     }
 
-    function filterText(mentor) {
+    function filterText(person) {
       var textSearch = document.querySelector("#search").value.norm()
       if (textSearch !== "") {
         return (
-          mentor.name.norm().includes(textSearch) ||
-          mentor.title.norm().includes(textSearch) ||
-          mentor.description.norm().includes(textSearch)
+          person.name.norm().includes(textSearch) ||
+          person.title.norm().includes(textSearch) ||
+          person.description.norm().includes(textSearch)
         )
       }
       return true
@@ -491,90 +517,94 @@
     function search() {
       var mainElem = document.querySelector("main")
       var textSearch = document.querySelector("#search").value
+      var list = people.filter(filterText).sort(sortName)
+
       mainElem.innerHTML = ""
-      mentores
-        .filter(filterText)
-        .sort(sortName)
-        .forEach(function (mentor) {
-          var anchorElem = document.createElement("a")
-          anchorElem.href = mentor.link
-          mainElem.appendChild(anchorElem)
+      list.forEach(function (person) {
+        var anchorElem = document.createElement("a")
+        anchorElem.href = person.link
+        mainElem.appendChild(anchorElem)
 
-          var articleElem = document.createElement("article")
-          anchorElem.appendChild(articleElem)
+        var articleElem = document.createElement("article")
+        anchorElem.appendChild(articleElem)
 
-          /* Left */
-          var leftElem = document.createElement("div")
-          articleElem.appendChild(leftElem)
-          leftElem.classList.add("left")
+        /* Left */
+        var leftElem = document.createElement("div")
+        articleElem.appendChild(leftElem)
+        leftElem.classList.add("left")
 
-          /* Avatar */
-          var figureElem = document.createElement("figure")
-          figureElem.style.backgroundImage = "url('" + mentor.picture + "')"
-          leftElem.appendChild(figureElem)
+        /* Avatar */
+        var figureElem = document.createElement("figure")
+        figureElem.style.backgroundImage = "url('" + person.picture + "')"
+        leftElem.appendChild(figureElem)
 
-          /* Saturday Schedule */
-          var satSchedElem = document.createElement("div")
-          satSchedElem.classList.add("schedule")
-          leftElem.appendChild(satSchedElem)
+        /* Saturday Schedule */
+        var satSchedElem = document.createElement("div")
+        satSchedElem.classList.add("schedule")
+        leftElem.appendChild(satSchedElem)
 
-          var satManElem = document.createElement("div")
-          satManElem.innerText = "03 Man"
-          if (!mentor.Man3) {
-            satManElem.classList.add("disabled")
-          }
-          satSchedElem.appendChild(satManElem)
+        var satManElem = document.createElement("div")
+        satManElem.innerText = "03 Man"
+        if (!person.Man3) {
+          satManElem.classList.add("disabled")
+        }
+        satSchedElem.appendChild(satManElem)
 
-          var satTarElem = document.createElement("div")
-          satTarElem.innerText = "03 Tar"
-          if (!mentor.Tar3) {
-            satTarElem.classList.add("disabled")
-          }
-          satSchedElem.appendChild(satTarElem)
+        var satTarElem = document.createElement("div")
+        satTarElem.innerText = "03 Tar"
+        if (!person.Tar3) {
+          satTarElem.classList.add("disabled")
+        }
+        satSchedElem.appendChild(satTarElem)
 
-          var satNoitElem = document.createElement("div")
-          satNoitElem.innerText = "03 Noi"
-          if (!mentor.Noi3) {
-            satNoitElem.classList.add("disabled")
-          }
-          satSchedElem.appendChild(satNoitElem)
+        var satNoitElem = document.createElement("div")
+        satNoitElem.innerText = "03 Noi"
+        if (!person.Noi3) {
+          satNoitElem.classList.add("disabled")
+        }
+        satSchedElem.appendChild(satNoitElem)
 
-          /* Sunday Schedule */
-          var sunSchedElem = document.createElement("div")
-          sunSchedElem.classList.add("schedule")
-          leftElem.appendChild(sunSchedElem)
+        /* Sunday Schedule */
+        var sunSchedElem = document.createElement("div")
+        sunSchedElem.classList.add("schedule")
+        leftElem.appendChild(sunSchedElem)
 
-          var sunManElem = document.createElement("div")
-          sunManElem.innerText = "04 Man"
-          if (!mentor.Man4) {
-            sunManElem.classList.add("disabled")
-          }
-          sunSchedElem.appendChild(sunManElem)
+        var sunManElem = document.createElement("div")
+        sunManElem.innerText = "04 Man"
+        if (!person.Man4) {
+          sunManElem.classList.add("disabled")
+        }
+        sunSchedElem.appendChild(sunManElem)
 
-          var sunTarElem = document.createElement("div")
-          sunTarElem.innerText = "04 Tar"
-          if (!mentor.Tar4) {
-            sunTarElem.classList.add("disabled")
-          }
-          sunSchedElem.appendChild(sunTarElem)
+        var sunTarElem = document.createElement("div")
+        sunTarElem.innerText = "04 Tar"
+        if (!person.Tar4) {
+          sunTarElem.classList.add("disabled")
+        }
+        sunSchedElem.appendChild(sunTarElem)
 
-          /* Right */
-          var rightElem = document.createElement("div")
-          rightElem.classList.add("right")
-          articleElem.appendChild(rightElem)
+        /* Right */
+        var rightElem = document.createElement("div")
+        rightElem.classList.add("right")
+        articleElem.appendChild(rightElem)
 
-          var nameElem = document.createElement("h1")
-          nameElem.innerHTML = markText(mentor.name, textSearch)
-          rightElem.appendChild(nameElem)
+        var nameElem = document.createElement("h1")
+        nameElem.innerHTML = markText(person.name, textSearch)
+        rightElem.appendChild(nameElem)
 
-          var titleElem = document.createElement("h3")
-          titleElem.innerHTML = markText(mentor.title, textSearch)
-          rightElem.appendChild(titleElem)
+        var titleElem = document.createElement("h3")
+        titleElem.innerHTML = markText(person.title, textSearch)
+        rightElem.appendChild(titleElem)
 
-          var descriptionElem = document.createElement("p")
-          descriptionElem.innerHTML = markText(mentor.description, textSearch)
-          rightElem.appendChild(descriptionElem)
-        })
+        var descriptionElem = document.createElement("p")
+        descriptionElem.innerHTML = markText(person.description, textSearch)
+        rightElem.appendChild(descriptionElem)
+      })
+
+      if (list.length === 0) {
+        mainElem.innerHTML =
+          '<p class="noregister">Nenhuma pessoa encontrada<p>'
+      }
     }
 
     window.onload = function () {
