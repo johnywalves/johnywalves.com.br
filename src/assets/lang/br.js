@@ -100,7 +100,8 @@ export default {
   },
   courses: {
     title: "Cursos Complementares",
-    description: "Alguns cursos para adicionar algumas habilidades e conhecimentos",
+    description:
+      "Alguns cursos para adicionar algumas habilidades e conhecimentos",
   },
   certification: {
     title: "Certificados",
@@ -193,7 +194,7 @@ export default {
       {
         date: "2020-04-30 00:00:00-0300",
         name: "Pós-Graduação em Big Data",
-        institute: "Senac São José do Rio Preto",
+        institute: "Centro Universitário Senac",
         img: "/cert/senac_bigdata.jpg",
         icon: "university",
       },
@@ -221,7 +222,8 @@ export default {
         title: "CSS Animatic",
         sourceCode: "https://github.com/johnywalves/cssanimatic",
         view: "https://johnywalves.github.io/cssanimatic",
-        description: "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
+        description:
+          "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -257,11 +259,19 @@ export default {
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
       {
+        date: "Out 2020 - Cursando",
+        title: "Pós-Graduação em Gestão de Projetos em TI",
+        institution: "Fatec Rio Preto",
+        description: [
+          "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software.",
+        ],
+      },
+      {
         date: "Mar 2018 - Mar 2020",
         title: "Pós-Graduação em Big Data",
-        institution: "Senac Sao Paulo",
+        institution: "Centro Universitário Senac",
         description: [
-          "Processamento e armazenamento distribuído, projetos de visualização e carga de dados, introdução a estátistica e business intelligence",
+          "Especialização no campo de Big Data, visando ao correto entendimento, à definição de uso, implementação, além de fornecer ferramentas e subsídios para a gestão das tecnologias e processos envolvidos.",
         ],
         production: {
           title:
@@ -274,7 +284,7 @@ export default {
         title: "Graduação em Informática para Negócios",
         institution: "Fatec Rio Preto",
         description: [
-          "Informática para Negócios, Desenvolvimento de Sistemas e Administração Empresarial",
+          "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas."
         ],
         awards: [
           "Premiação de Maior Média",
