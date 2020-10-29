@@ -312,7 +312,15 @@ export default {
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
       {
-        date: "Nov 2019 - Atual",
+        date: "Out 2020 - Atual",
+        title: "Desenvolvedor Frontend",
+        institution: "Meta",
+        description: [
+          "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, Angular, HTML e CSS) "
+        ],
+      },
+      {
+        date: "Nov 2019 - Out 2020",
         title: "Analista Desenvolvedor",
         institution: "Invillia",
         description: [
