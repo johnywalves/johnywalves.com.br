@@ -203,8 +203,8 @@ if (process.env.CONTEXT === "production") {
 module.exports = {
   siteMetadata: {
     title: `Johny W. Alves`,
-    position: `FullStack Developer`,
-    description: `Página pessoal por Johny W. Alves. Sempre aprendendo a codificar, projetar e tentando entendo o motivo`,
+    position: `Web Developer`,
+    description: `Página pessoal por Johny W. Alves. Sempre desenvolvendo, aprendendo, correndo, desenhando e fazendo humor sobre isso, espero que gostem`,
     author: `@johnywalves`,
     siteUrl: `https://www.johnywalves.com.br`,
   },

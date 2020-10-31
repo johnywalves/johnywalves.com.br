@@ -17,4 +17,4 @@ Minha biblioteca de jogos está em grande parte na Steam buscando uma maneira in
 
 ## Ambiente
 
-Usando o Gulp para poder visualizar a página no momento do desenvolvimento através do Hot Reload descrito no artigo [Iniciando com Gulp](/iniciando-gulp) é uma página com Stack básica HTML + CSS + JavaScript
+Usando o Gulp para poder visualizar a página no momento do desenvolvimento através do Hot Reload descrito no artigo [Iniciando com Gulp](/iniciando-gulp) é uma página com stack básica HTML + CSS + JavaScript
