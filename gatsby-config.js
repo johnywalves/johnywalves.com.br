@@ -138,7 +138,7 @@ const pluginsConfig = [
                 date: edge.node.frontmatter.date,
                 url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                custom_elements: [{ "content:encoded": edge.node.excerpt }],
+                custom_elements: [{ "content:encoded": "" }],
               })
             })
           },
@@ -204,7 +204,7 @@ module.exports = {
   siteMetadata: {
     title: `Johny W. Alves`,
     position: `Web Developer`,
-    description: `Página pessoal por Johny W. Alves. Sempre desenvolvendo, aprendendo, correndo, desenhando e fazendo humor sobre isso, espero que gostem`,
+    description: `Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem`,
     author: `@johnywalves`,
     siteUrl: `https://www.johnywalves.com.br`,
   },
