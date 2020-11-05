@@ -35,8 +35,15 @@ Um modelo simples para copiar e começar uma página HTML, cansei de ter de lemb
     }
 
     body {
-        background: #282c35;
+        font-size: 62.5%;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    a,
+    a:hover,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
     }
 
     /* Content CSS */
