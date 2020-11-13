@@ -34,9 +34,9 @@ Um modelo simples para copiar e começar uma página HTML, cansei de ter de lemb
         box-sizing: border-box;
     }
 
-    body {
+    html {
         font-size: 62.5%;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     a,
@@ -45,7 +45,6 @@ Um modelo simples para copiar e começar uma página HTML, cansei de ter de lemb
       text-decoration: none;
       color: inherit;
     }
-
     /* Content CSS */
 </style>
 
