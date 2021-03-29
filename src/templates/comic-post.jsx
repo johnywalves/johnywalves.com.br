@@ -24,6 +24,7 @@ const ComicPost = ({ data, pageContext }) => {
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostComic
           fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+          alt={post.frontmatter.transcription}
         />
         <ComicNavigation number={number} />
       </S.PostHeader>
@@ -42,6 +43,7 @@ export const query = graphql`
         date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
         title
         description
+        transcription
         coverImage
         featuredImage {
           childImageSharp {

@@ -23,6 +23,7 @@ const ComicLast = () => {
             frontmatter {
               number
               description
+              transcription
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 1579) {
@@ -53,6 +54,7 @@ const ComicLast = () => {
         >
           <S.Image
             fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+            title={node.frontmatter.transcription}
           />
         </Anilink>
       ))}
