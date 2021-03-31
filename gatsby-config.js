@@ -138,7 +138,11 @@ const pluginsConfig = [
                 date: edge.node.frontmatter.date,
                 url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                custom_elements: [{ "content:encoded": "" }],
+                custom_elements: [
+                  {
+                    "content:encoded": `<a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}"><img src="${site.siteMetadata.siteUrl}${edge.node.frontmatter.coverImage}"  alt="${edge.node.frontmatter.transcription}"></a>`,
+                  },
+                ],
               })
             })
           },
@@ -156,6 +160,8 @@ const pluginsConfig = [
                         date
                         title
                         number
+                        coverImage
+                        transcription
                       }
                       fields {
                         slug
