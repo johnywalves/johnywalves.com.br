@@ -316,7 +316,8 @@ export default {
         title: "Desenvolvedor Frontend",
         institution: "Meta",
         description: [
-          "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, Angular, HTML e CSS) "
+          "Melhoria em ferramenta para aluguel de veículos com foco na aquisição e retenção de clientes, experiência do usuário, desempenho e otimização do SEO",
+          "Desenvolvimento Web Frontend (JavaScript, React, HTML e CSS)"
         ],
       },
       {
