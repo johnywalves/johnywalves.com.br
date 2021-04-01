@@ -140,7 +140,7 @@ const pluginsConfig = [
                 guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 custom_elements: [
                   {
-                    "content:encoded": `<a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}"><img src="${site.siteMetadata.siteUrl}${edge.node.frontmatter.coverImage}"  alt="${edge.node.frontmatter.transcription}"></a>`,
+                    "content:encoded": `<p style='text-align:center'><a href='${site.siteMetadata.siteUrl + edge.node.fields.slug}'><img src='${site.siteMetadata.siteUrl}${edge.node.frontmatter.coverImage}' alt='${edge.node.frontmatter.transcription}' height='250px' width='auto'></a></p>`,
                   },
                 ],
               })
