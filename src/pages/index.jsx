@@ -8,7 +8,7 @@ import ComicLast from "components/ComicLast"
 
 const Home = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <ComicLast />
     <PostsHighlightList />
     <ProjectList />

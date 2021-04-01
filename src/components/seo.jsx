@@ -28,8 +28,8 @@ function SEO({ description, lang, meta, title, image }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title ? `${title} | ` : ' '}
+      titleTemplate={`%s${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
