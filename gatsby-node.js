@@ -112,13 +112,15 @@ exports.createPages = ({ graphql, actions }) => {
       (post) => post.node.frontmatter.category === "Comic"
     )
 
-    comics.forEach(({ node }) => {
+    comics.forEach(({ node, next, previous }) => {
       createPage({
         path: `/comic-${node.frontmatter.number}`,
         component: path.resolve(`src/templates/comic-post.jsx`),
         context: {
           slug: node.fields.slug,
           number: node.frontmatter.number,
+          previousPost: next,
+          nextPost: previous
         },
       })
     })
