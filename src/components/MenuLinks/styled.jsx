@@ -17,7 +17,7 @@ export const MenuLinksItem = styled.li`
   padding: 0.5rem 0;
 
   .active {
-    color: var(--highlight);
+    color: var(--highlightDark);
   }
 `
 

@@ -51,6 +51,7 @@ const ComicLast = () => {
           direction="left"
           bg="var(--background)"
           duration={0.6}
+          aria-label='Last comics post'
         >
           <S.Image
             fluid={node.frontmatter.featuredImage.childImageSharp.fluid}

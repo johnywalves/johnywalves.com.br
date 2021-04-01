@@ -25,11 +25,11 @@ export const Title = styled.h1`
   font-weight: 700;
 `
 
-export const Description = styled.h4`
+export const Description = styled.small`
   margin: 0;
   text-align: center;
   font-size: 1.1rem;
-  opacity: 0.75;
+  opacity: 1;
 `
 
 export const List = styled.div`

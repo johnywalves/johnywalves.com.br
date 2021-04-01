@@ -14,7 +14,7 @@ export const Navigation = styled.div`
   }
 
   p {
-    color: var(--borders);
+    opacity: 0.5;
     display: inline;
   }
 

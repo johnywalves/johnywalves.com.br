@@ -19,8 +19,8 @@ const HomeCard = ({
     <S.Wrapper cover={cover}>
       {cover}
       <S.Content>
-        {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
         <S.Title>{title}</S.Title>
+        {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
         <S.Description>{description}</S.Description>
         {(sourceCode || view) && (
           <S.Navicon>
@@ -30,6 +30,7 @@ const HomeCard = ({
                   href={sourceCode}
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label='Github'
                 >
                   <Github />
                 </S.Icon>
