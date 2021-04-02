@@ -1,4 +1,4 @@
-export default {
+const dictionary = {
   description:
     "Engenheiro de desenvolvimento web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI)",
   position: "Desenvolvedor Web",
@@ -284,7 +284,7 @@ export default {
         title: "Graduação em Informática para Negócios",
         institution: "Fatec Rio Preto",
         description: [
-          "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas."
+          "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas.",
         ],
         awards: [
           "Premiação de Maior Média",
@@ -317,7 +317,7 @@ export default {
         institution: "Meta",
         description: [
           "Melhoria em ferramenta para aluguel de veículos com foco na aquisição e retenção de clientes, experiência do usuário, desempenho e SEO",
-          "Desenvolvimento Web Frontend (JavaScript, React, HTML e CSS)"
+          "Desenvolvimento Web Frontend (JavaScript, React, HTML e CSS)",
         ],
       },
       {
@@ -411,3 +411,5 @@ export default {
     ],
   },
 }
+
+export default dictionary

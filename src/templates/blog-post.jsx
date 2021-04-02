@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "components/Layout"
-import SEO from "components/seo"
+import Seo from "components/seo"
 import RecommendedPost from "components/RecommendedPost"
 import Comments from "components/Comments"
 
@@ -13,7 +13,7 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         image={

@@ -3,12 +3,12 @@ import React from "react"
 import CertCard from "components/CertCard"
 import CertList from "components/CertList"
 import Layout from "components/Layout"
-import SEO from "components/seo"
+import Seo from "components/seo"
 import Strings from "components/strings"
 
 const Certs = () => (
   <Layout>
-    <SEO title={Strings.certification.title} />
+    <Seo title={Strings.certification.title} />
     <CertList>
       {Strings.certification.list
         .sort((a, b) => new Date(b.date) - new Date(a.date))

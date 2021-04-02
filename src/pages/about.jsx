@@ -5,7 +5,7 @@ import { FileDownload } from "@styled-icons/fa-solid/FileDownload"
 import Badge from "components/Badge"
 import Strings from "components/strings"
 import Layout from "components/Layout"
-import SEO from "components/seo"
+import Seo from "components/seo"
 import Experience from "components/Experience"
 import SocialLinks from "components/SocialLinks"
 
@@ -35,7 +35,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="Sobre" />
+      <Seo title="Sobre" />
       <S.Forehead>
         <S.Avatar fixed={avatarImage.childImageSharp.fixed} />
       </S.Forehead>

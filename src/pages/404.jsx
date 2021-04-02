@@ -1,13 +1,13 @@
 import React from "react"
 
 import Layout from "components/Layout"
-import SEO from "components/seo"
+import Seo from "components/seo"
 
 import * as S from "components/Post/styled"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
     <S.PostHeader>
       <S.PostTitle>404: Not Found</S.PostTitle>
       <S.PostDescription>

@@ -1,12 +1,12 @@
 import React from "react"
 
 import Layout from "components/Layout"
-import SEO from "components/seo"
+import Seo from "components/seo"
 import Search from "components/Search"
 
 const SearchPage = () => (
   <Layout>
-    <SEO title="Pesquisa" />
+    <Seo title="Pesquisa" />
     <Search />
   </Layout>
 )

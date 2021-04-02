@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "components/Layout"
-import SEO from "components/seo"
+import Seo from "components/seo"
 import Comments from "components/Comments"
 import RecommendedPost from "components/RecommendedPost"
 import ComicNavigation from "components/ComicNavigation"
@@ -14,7 +14,7 @@ const ComicPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={
           "Desenvolvendo, aprendendo, desenhando e fazendo humor sobre isso, espero que gostem"
