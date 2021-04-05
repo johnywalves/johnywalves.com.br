@@ -8,7 +8,7 @@ import * as S from "./styled"
 const SocialLinks = ({ about }) => {
   return (
     <S.SocialLinksWrapper>
-      <S.SocialLinksList className={   about ? 'about' : '' }>
+      <S.SocialLinksList className={about ? "about" : ""}>
         {links.map((link, i) => {
           const Icon = Icons[link.icon]
           return (

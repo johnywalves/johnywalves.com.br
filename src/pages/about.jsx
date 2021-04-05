@@ -23,9 +23,12 @@ const About = () => {
     query {
       avatarImage: file(relativePath: { eq: "johnywalves.jpg" }) {
         childImageSharp {
-          fixed(width: 160, height: 160) {
-            ...GatsbyImageSharpFixed_tracedSVG
-          }
+          gatsbyImageData(
+            width: 160
+            height: 160
+            layout: FIXED
+            placeholder: TRACED_SVG
+          )
         }
       }
     }
@@ -37,7 +40,7 @@ const About = () => {
     <Layout>
       <Seo title="Sobre" />
       <S.Forehead>
-        <S.Avatar fixed={avatarImage.childImageSharp.fixed} />
+        <S.Avatar image={avatarImage.childImageSharp.gatsbyImageData} alt="" />
       </S.Forehead>
       <S.Content>
         <S.HeadSector>

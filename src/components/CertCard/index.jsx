@@ -18,7 +18,7 @@ const FormatDate = (text) => {
 
 const CertCard = ({ name, date, institute, img, icon }) => {
   return (
-    <a href={img} target="_blank" rel="noreferrer"> 
+    <a href={img} target="_blank" rel="noreferrer">
       <HomeCard
         title={name}
         subtitle={FormatDate(date)}

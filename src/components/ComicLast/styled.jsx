@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.div`
   padding: 2rem;
 `
 
-export const Image = styled(Img)`
+export const Image = styled(GatsbyImage)`
   box-shadow: 0 1px 4px var(--shadowColors);
   transition: all 0.2s ease-out;
 

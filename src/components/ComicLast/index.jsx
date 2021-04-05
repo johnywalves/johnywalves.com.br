@@ -26,9 +26,11 @@ const ComicLast = () => {
               transcription
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 1579) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                  }
+                  gatsbyImageData(
+                    width: 1579
+                    layout: CONSTRAINED
+                    placeholder: TRACED_SVG
+                  )
                 }
               }
             }
@@ -51,11 +53,14 @@ const ComicLast = () => {
           direction="left"
           bg="var(--background)"
           duration={0.6}
-          aria-label='Last comics post'
+          aria-label="Last Comics"
         >
           <S.Image
-            fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+            image={
+              node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+            }
             title={node.frontmatter.transcription}
+            alt=""
           />
         </Anilink>
       ))}

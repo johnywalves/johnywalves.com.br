@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const PostHeader = styled.header`
   color: var(--texts);
@@ -14,9 +14,9 @@ export const PostHeader = styled.header`
   `}
 `
 
-export const PostFeaturedImage = styled(Img)``
+export const PostFeaturedImage = styled(GatsbyImage)``
 
-export const PostComic = styled(Img)``
+export const PostComic = styled(GatsbyImage)``
 
 export const PostTitle = styled.h1`
   font-size: 4rem;

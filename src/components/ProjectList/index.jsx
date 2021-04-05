@@ -10,9 +10,7 @@ const ProjectList = () => (
     description={Strings.projects.description}
   >
     {Strings.projects.list.map((project, index) => (
-      <a key={index} href={project.view} target="_blank" rel="noreferrer">
-        <HomeCard {...project} />
-      </a>
+      <HomeCard key={index} {...project} />
     ))}
   </HomeList>
 )

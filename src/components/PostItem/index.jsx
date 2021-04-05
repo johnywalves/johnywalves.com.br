@@ -25,7 +25,10 @@ const PostItem = ({
   >
     <S.PostItemWrapper>
       {featuredImage && (
-        <S.PostItemImageFeatured fixed={featuredImage.childImageSharp.fixed} />
+        <S.PostItemImageFeatured
+          image={featuredImage.childImageSharp.gatsbyImageData}
+          alt=""
+        />
       )}
       {!featuredImage && coverImage && (
         <S.PostItemCoverImage

@@ -41,26 +41,38 @@ export const Content = styled.div`
   padding: 1rem 1.5rem 0.5rem;
 `
 
+export const Title = styled.h2`
+  color: var(--Texts);
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  margin: 0 0 1rem;
+
+  a:hover & {
+    color: var(--highlight);
+  }
+`
+
 export const Subtitle = styled.h3`
   color: var(--Texts);
   margin: 0.2rem 0;
   font-size: 0.9rem;
   font-weight: 400;
   opacity: 0.85;
-`
 
-export const Title = styled.h2`
-  color: var(--Texts);
-  font-size: 1.25rem;
-  font-weight: 700;
-  display: flex;
-  margin: 1rem 0;
+  a:hover & {
+    color: var(--highlight);
+  }
 `
 
 export const Description = styled.p`
   color: var(--Texts);
   margin: 1rem 0;
   font-size: 1rem;
+
+  a:hover & {
+    color: var(--highlight);
+  }
 `
 
 export const Navicon = styled.div`

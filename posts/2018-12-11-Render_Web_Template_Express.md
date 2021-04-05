@@ -64,9 +64,7 @@ Com o uso um modelo padrão, salvando na pasta de **view** com o nome de **base.
 <!DOCTYPE html>
 <h1>{% block titulo %}{% endblock %}</h1>
 
-<div class="wrapper">
-  {% block corpo %}{% endblock %}
-</div>
+<div class="wrapper">{% block corpo %}{% endblock %}</div>
 ```
 
 As definições de bloco **{% block titulo %}** e **{% block corpo %}** podem ser preenchidas por qualquer página ao estender o documento de base, vamos fazer isso no **lista.twig**

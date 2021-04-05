@@ -9,7 +9,7 @@ tags:
   - Linguagem Natural
   - Machine Learning
   - Python
-published: false 
+published: false
 ---
 
 Lorem lipsum, Lorem lipsum, Lorem lipsum

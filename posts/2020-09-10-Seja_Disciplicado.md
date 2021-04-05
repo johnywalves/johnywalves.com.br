@@ -24,7 +24,7 @@ Na rotina ter a dedicação de fazer um pouco todo dia é melhor que fazer muito
 
 ## Hábitos saudáveis
 
-Não é possível destruir um hábito, maus ou bons nosso cérebro gosta deles, funcionam e economiza  a energia gasta para pensar, é possível fazermos a mesma coisa por anos sem lembrar da motivação inicial, para destruir esse ciclo devemos reconhecer e pensar em como criar hábitos melhores
+Não é possível destruir um hábito, maus ou bons nosso cérebro gosta deles, funcionam e economiza a energia gasta para pensar, é possível fazermos a mesma coisa por anos sem lembrar da motivação inicial, para destruir esse ciclo devemos reconhecer e pensar em como criar hábitos melhores
 
 Charles Duhigg no livro O Poder do Hábito diz “para mudar um hábito antigo, você precisa abordar um anseio antigo. Precisa manter as deixas e recompensas de antes, e alimentar o anseio inserindo uma nova rotina”, ou seja, para eliminar uma rotina devemos observar o que está a motivando e entender a necessidade que o gerou, que pode ser fome em determinada parte do dia, necessidade de contato social, tédio, ansiedade entre outros, quando esse sentimento aparecer devemos substituir nossa ação por algo mais saudável que também vai chegar à recompensa
 
@@ -42,7 +42,7 @@ O seres humanos foram forjados para correr e caçar, nossos instintos de encarar
 
 Saúde é um conjunto de vários aspectos entre eles o mental e o social, tempo para se divertir é essencial, sendo escasso e de qualidade melhor ainda
 
-O momento de ser produtivo, deve ser reservado para isso, evite distrações, quando for trabalhar se isole do que for possível, coloque o celular longe, por exemplo alguns escritores quando vão escrever usam uma máquina própria para isso, sem internet ou outras que podem desviar a atenção 
+O momento de ser produtivo, deve ser reservado para isso, evite distrações, quando for trabalhar se isole do que for possível, coloque o celular longe, por exemplo alguns escritores quando vão escrever usam uma máquina própria para isso, sem internet ou outras que podem desviar a atenção
 
 Da mesma maneira as atividades de lazer e contato pessoal devem ser escassas e reservadas para certos momentos do dia e da semana, como em algumas horas no final do dia, aos domingos, isso nos faz valorizar esses momentos buscando qualidade para eles, nesse caso o isolamento é importante também, o trabalho e outras atividades estressantes devem ficar o mais longe possível
 

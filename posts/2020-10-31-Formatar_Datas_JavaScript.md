@@ -17,11 +17,11 @@ Com a data atual
 ```javascript
 const getCurrentFormatDate = () => {
   const date = new Date(),
-    day = date.getDate().toString().padStart(2, '0'),
-    month = (date.getMonth() + 1).toString().padStart(2, '0'),
-    year = date.getFullYear();
-  return day + '/' + month + '/' + year;
-};
+    day = date.getDate().toString().padStart(2, "0"),
+    month = (date.getMonth() + 1).toString().padStart(2, "0"),
+    year = date.getFullYear()
+  return day + "/" + month + "/" + year
+}
 ```
 
 a versão de alta compatibilidade
@@ -29,10 +29,10 @@ a versão de alta compatibilidade
 ```javascript
 function getCurrentFormatDate() {
   var date = new Date(),
-    day = date.getDate().toString().padStart(2, '0'),
-    month = (date.getMonth() + 1).toString().padStart(2, '0'),
-    year = date.getFullYear();
-  return day + '/' + month + '/' + year;
+    day = date.getDate().toString().padStart(2, "0"),
+    month = (date.getMonth() + 1).toString().padStart(2, "0"),
+    year = date.getFullYear()
+  return day + "/" + month + "/" + year
 }
 ```
 
@@ -40,10 +40,10 @@ ou a versão para datas sem horário
 
 ```javascript
 const getFormatDate = (text) => {
-  const date = new Date(text + ' 00:00:00'),
-    day = date.getDate().toString().padStart(2, '0'),
-    month = (date.getMonth() + 1).toString().padStart(2, '0'),
-    year = date.getFullYear();
-  return day + '/' + month + '/' + year;
-};
+  const date = new Date(text + " 00:00:00"),
+    day = date.getDate().toString().padStart(2, "0"),
+    month = (date.getMonth() + 1).toString().padStart(2, "0"),
+    year = date.getFullYear()
+  return day + "/" + month + "/" + year
+}
 ```

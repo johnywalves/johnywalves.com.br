@@ -1,5 +1,5 @@
 ---
-title: Loading com CSS 
+title: Loading com CSS
 description: Animação de loading com HTML e CSS
 date: "2020-08-04 18:50:32"
 featuredImage: ./featured/hourglass-1.jpg

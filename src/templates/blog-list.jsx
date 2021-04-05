@@ -88,9 +88,12 @@ export const query = graphql`
             coverImage
             featuredImage {
               childImageSharp {
-                fixed(width: 120, height: 120) {
-                  ...GatsbyImageSharpFixed_tracedSVG
-                }
+                gatsbyImageData(
+                  width: 120
+                  height: 120
+                  layout: CONSTRAINED
+                  placeholder: TRACED_SVG
+                )
               }
             }
           }

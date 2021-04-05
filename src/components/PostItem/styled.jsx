@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const PostItemLink = styled(Anilink)`
   color: var(--texts);
@@ -38,7 +38,7 @@ export const PostItemWrapper = styled.section`
     `}
 `
 
-export const PostItemImageFeatured = styled(Img)`
+export const PostItemImageFeatured = styled(GatsbyImage)`
   align-items: center;
   border-radius: 50%;
   color: var(--background);

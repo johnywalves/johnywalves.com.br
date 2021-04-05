@@ -31,6 +31,13 @@ const pluginsConfig = [
   {
     resolve: `gatsby-source-filesystem`,
     options: {
+      name: `uploads`,
+      path: `${__dirname}/static/figures`,
+    },
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
       name: `images`,
       path: `${__dirname}/src/assets/images`,
     },
@@ -44,6 +51,7 @@ const pluginsConfig = [
   },
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
+  `gatsby-plugin-image`,
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
@@ -62,7 +70,10 @@ const pluginsConfig = [
     options: {
       plugins: [
         {
-          resolve: "gatsby-remark-relative-images",
+          resolve: "gatsby-remark-relative-images-v2",
+          options: {
+            name: "uploads",
+          },
         },
         {
           resolve: "gatsby-remark-images",
@@ -71,6 +82,7 @@ const pluginsConfig = [
             linkImagesToOriginal: false,
           },
         },
+        'gatsby-remark-static-images',
         `gatsby-remark-lazy-load`,
         `gatsby-remark-prismjs`,
       ],
@@ -140,7 +152,13 @@ const pluginsConfig = [
                 guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 custom_elements: [
                   {
-                    "content:encoded": `<p style='text-align:center'><a href='${site.siteMetadata.siteUrl + edge.node.fields.slug}'><img src='${site.siteMetadata.siteUrl}${edge.node.frontmatter.coverImage}' alt='${edge.node.frontmatter.transcription}' height='250px' width='auto'></a></p>`,
+                    "content:encoded": `<p style='text-align:center'><a href='${
+                      site.siteMetadata.siteUrl + edge.node.fields.slug
+                    }'><img src='${site.siteMetadata.siteUrl}${
+                      edge.node.frontmatter.coverImage
+                    }' alt='${
+                      edge.node.frontmatter.transcription
+                    }' height='250px' width='auto'></a></p>`,
                   },
                 ],
               })
@@ -215,4 +233,7 @@ module.exports = {
     siteUrl: `https://www.johnywalves.com.br`,
   },
   plugins: pluginsConfig,
+  flags: {
+    DEV_SSR: false,
+  },
 }

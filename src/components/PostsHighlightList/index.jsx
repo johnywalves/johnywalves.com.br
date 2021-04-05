@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import HomeCard from "components/HomeCard"
 import HomeList from "components/HomeList"
@@ -25,9 +25,12 @@ const PostsList = () => {
               description
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 500) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                  }
+                  gatsbyImageData(
+                    height: 250
+                    width: 500
+                    layout: CONSTRAINED
+                    placeholder: TRACED_SVG
+                  )
                 }
               }
             }
@@ -62,12 +65,12 @@ const PostsList = () => {
             tags={node.frontmatter.tags}
             cover={
               node.frontmatter.featuredImage && (
-                <Img
+                <GatsbyImage
                   alt={node.frontmatter.title}
-                  fluid={{
-                    ...node.frontmatter.featuredImage.childImageSharp.fluid,
-                    aspectRatio: 1.5,
-                  }}
+                  image={
+                    node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData
+                  }
                 />
               )
             }

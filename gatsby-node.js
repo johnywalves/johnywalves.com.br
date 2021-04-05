@@ -120,7 +120,7 @@ exports.createPages = ({ graphql, actions }) => {
           slug: node.fields.slug,
           number: node.frontmatter.number,
           previousPost: next,
-          nextPost: previous
+          nextPost: previous,
         },
       })
     })

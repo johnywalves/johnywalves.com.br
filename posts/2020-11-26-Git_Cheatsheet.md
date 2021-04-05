@@ -10,7 +10,7 @@ tags:
   - Cheatsheet
 ---
 
-Conferir se está instalado e a versão com `git --version` e usar `q` para sair das rotinas como a listagem de alteração 
+Conferir se está instalado e a versão com `git --version` e usar `q` para sair das rotinas como a listagem de alteração
 
 ## Básicos
 
@@ -86,7 +86,7 @@ Remover remoto
 git remote rm <apelido do repositório>
 ```
 
-Listar as alterações 
+Listar as alterações
 
 ```bash
 git log

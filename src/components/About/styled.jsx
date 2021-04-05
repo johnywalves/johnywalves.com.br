@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Content = styled.article`
@@ -93,7 +93,7 @@ export const Forehead = styled.div`
   background: linear-gradient(to bottom, var(--highlight) 20%, #ffffff00 20%);
 `
 
-export const Avatar = styled(Img)`
+export const Avatar = styled(GatsbyImage)`
   left: 50%;
   top: 50%;
   border-radius: 50%;

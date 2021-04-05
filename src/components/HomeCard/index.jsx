@@ -6,6 +6,14 @@ import Badge from "components/Badge"
 
 import * as S from "./styled"
 
+const Infomation = ({ title, subtitle, description }) => (
+  <>
+    <S.Title>{title}</S.Title>
+    {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
+    <S.Description>{description}</S.Description>
+  </>
+)
+
 const HomeCard = ({
   title,
   subtitle,
@@ -19,10 +27,24 @@ const HomeCard = ({
     <S.Wrapper cover={cover}>
       {cover}
       <S.Content>
-        <S.Title>{title}</S.Title>
-        {subtitle && <S.Subtitle>{subtitle}</S.Subtitle>}
-        <S.Description>{description}</S.Description>
-        {(sourceCode || view) && (
+        {view ? (
+          <a href={view} target="_blank" rel="noreferrer">
+            <Infomation
+              title={title}
+              subtitle={subtitle}
+              description={description}
+            />
+          </a>
+        ) : (
+          <>
+            <Infomation
+              title={title}
+              subtitle={subtitle}
+              description={description}
+            />
+          </>
+        )}
+        {sourceCode && (
           <S.Navicon>
             {sourceCode && (
               <>
@@ -30,7 +52,7 @@ const HomeCard = ({
                   href={sourceCode}
                   target="_blank"
                   rel="noreferrer noopener"
-                  aria-label='Github'
+                  aria-label="Github"
                 >
                   <Github />
                 </S.Icon>

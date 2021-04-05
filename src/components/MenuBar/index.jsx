@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback, useMemo } from "react"
 
 import { Home } from "@styled-icons/boxicons-solid/Home"
 import { SearchAlt2 as Search } from "@styled-icons/boxicons-regular/SearchAlt2"
@@ -15,8 +15,8 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const isDarkMode = theme === "dark"
-  const isListMode = display === "list"
+  const isDarkMode = useMemo(() => theme === "dark", [theme]);
+  const isListMode = useMemo(() => display === "list", [display]);
 
   useEffect(() => {
     setTheme(window.__theme)
@@ -26,9 +26,17 @@ const MenuBar = () => {
     window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
-  const goToTop = () => {
+  const goToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+  }, [])
+
+  const toggleTheme = useCallback(() => {
+    window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+  }, [isDarkMode])
+
+  const toggleDisplay = useCallback(() => {
+    window.__setPreferredDisplay(isListMode ? "grid" : "list")
+  }, [isListMode])
 
   return (
     <S.MenuBarWrapper>
@@ -89,9 +97,7 @@ const MenuBar = () => {
       <S.MenuBarGroup>
         <S.MenuBarItem
           title="Mudar o tema"
-          onClick={() => {
-            window.__setPreferredTheme(isDarkMode ? "light" : "dark")
-          }}
+          onClick={toggleTheme}
           className={theme}
         >
           <Bulb />
@@ -99,9 +105,7 @@ const MenuBar = () => {
         <S.MenuBarItem
           title="Mudar visualização"
           className="display"
-          onClick={() => {
-            window.__setPreferredDisplay(isListMode ? "grid" : "list")
-          }}
+          onClick={toggleDisplay}
         >
           {isListMode ? <Grid /> : <ListUl />}
         </S.MenuBarItem>

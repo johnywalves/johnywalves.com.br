@@ -17,13 +17,14 @@ const BlogPost = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         image={
-          post.frontmatter.featuredImage &&
-          post.frontmatter.featuredImage.childImageSharp.fluid.src
+          post.frontmatter.featuredImage?.childImageSharp?.gatsbyImageData
+            ?.images?.fallback.src
         }
       />
       {post.frontmatter.featuredImage && (
         <S.PostFeaturedImage
-          fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+          image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+          alt=""
         />
       )}
       <S.PostHeader>
@@ -51,9 +52,12 @@ export const query = graphql`
         description
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1600, maxHeight: 512) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 1600
+              height: 512
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
           }
         }
       }
