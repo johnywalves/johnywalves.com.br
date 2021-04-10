@@ -7,7 +7,7 @@ coverImage: figures/alchemy-1.jpg
 category: JS
 tags:
   - javascript
-published: false
+published: true
 highlight: false
 ---
 Amo jogar e foi o motivo para me fazer entrar para área de desenvolvimento, mas nunca me propus a fazer nada maior que um pequeno protótipo, mas isso agora mais mudar nessa série vamos fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
