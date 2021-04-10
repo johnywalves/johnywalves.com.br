@@ -10,8 +10,6 @@ tags:
 published: true
 highlight: true
 ---
-![]()
-
 Amo jogar e foi o motivo para me fazer entrar para área de desenvolvimento, mas nunca me propus a fazer nada maior que um pequeno protótipo, mas isso agora mais mudar nessa série vamos fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
 
 A escolha do React vem da necessidade aprimorar na biblioteca e querer fazer algo divertido no processo existem plataformas bem melhores e gratuitas para quem está começando incluindo algumas para HTML5 e JavaScript
@@ -35,7 +33,7 @@ Como vamos utilizar de cada conceito
 
 **Turnos**: Cada jogador terá sua fase para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
-**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;
+**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;  
 **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;\
 **Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
 
@@ -57,9 +55,9 @@ Em resumo:\
 
 ## Cartas de criaturas e resolvendo combate
 
-Cada criatura tem um valor de **ataque** e um de **defesa** podem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação.
+Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, algumaspodem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação.
 
-Na fase de combate cada criatura pode realizar um ataque 
+Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa
 
 ## Condições de vitória
 
@@ -74,4 +72,7 @@ Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pont
 
 ## Referências
 
-[Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics)
+Paras as mecânicas são um conjunto de experiências com meus card games favoritos Hearthstone, Gwent e Yu-Gi-Oh!, sobre como organizar e classificar as mecânicas das descrições em  [Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics) foram de grande ajuda
+
+\
+Continua na parte 2...
