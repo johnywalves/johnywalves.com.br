@@ -33,9 +33,20 @@ Como vamos utilizar de cada conceito
 
 **Turnos**: Cada jogador terá sua fase para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;  
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;  
-**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar, movimentar e atacar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;
+**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;
 **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;  
 **Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
+
+As cartas podemos possuir descrições que alteração alguma mecânica, nesse caso a descrição da carta sempre deve prevalecer
+
+## Ciclo de jogo
+
+No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, ao jogar de cara ou coroa escolher o primeiro jogador que iniciará seu turno, que não será permitido realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
+
+
+
+
+## Condições de vitória
 
 Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pontos de vida do adversário e preservar os próprios gerando as condições de vitória:
 
@@ -44,8 +55,6 @@ Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pont
 * Após finalizar 10 turnos quem tiver mais pontos de vida, se forem iguais segue os critérios de desempate em ordem:  
 ** Quantidade de cartas no campo de batalha;  
 ** Uma criatura com o maior ataque.
-
-## Ciclo de jogo
 
 
 
