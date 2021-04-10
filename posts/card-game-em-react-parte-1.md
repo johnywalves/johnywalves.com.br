@@ -2,12 +2,12 @@
 title: Card Game em React (Parte 1)
 description: Desenvolvendo um jogo tipo Hearthstone, Gwent e Yu-Gi-Oh! do
   conceito a entrega com React (Parte 1 de ?)
-date: 2021-04-10 09:48:05
-coverImage: figures/alchemy-1.jpg
+date: 2021-04-10 12:51:46
+coverImage: figures/pokemon_cardgame_1.jpg
 category: JS
 tags:
   - javascript
-published: true
+published: false
 highlight: true
 ---
 Amo jogar e foi o motivo para me fazer entrar para área de desenvolvimento, mas nunca me propus a fazer nada maior que um pequeno protótipo, mas isso agora mais mudar nessa série vamos fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
@@ -53,11 +53,11 @@ Em resumo:\
 
 **Fase de feitiços**: Reservada para invocação de feitiços, com o custo dos pontos de ação.
 
-## Cartas de criaturas e resolvendo combate
+## Cartas de criaturas, invocadores e resolvendo combate
 
-Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, algumaspodem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação.
+Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, algumaspodem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação, invocadores possuir **pontos de vida**, **pontos de defesa** e eventualmente alguma descrição de **efeitos** de do acionamento
 
-Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa
+Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
 
 ## Condições de vitória
 
