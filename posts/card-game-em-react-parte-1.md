@@ -19,7 +19,11 @@ A escolha do React vem da necessidade aprimorar na biblioteca e querer fazer alg
 Alguns termos que serão usados adiante que podemos 
 
 **Campo de batalha**: Formada de 4 linhas e 5 colunas onde cada carta deve ser posicionada nos campos disponíveis, em cada lado a linha voltada para o adversários é a linha de corpo-a-corpo e linhas do jogador a linha a distância;  
-**Invocador**: O invocador é o avatar no jogador, cada invocador tem suas próprias características que influenciam no jogo;
+**Invocador**: O invocador é o avatar no jogador, cada invocador tem suas próprias características que influenciam no jogo;  
+**Artefatos**: Cartas de efeitos, que se efetivam no momento que invocadas;  
+**Feitiços**: Cartas que efeitos, que se efetivam no turno seguinte a sua invocação;  
+**Criaturas**: Cartas com valores de ataque e defesa, responsáveis pela defesa do invocador;  
+**Nível**: Cada carta possui um valor que determina quantos pontos de ação necessário para colocar no campo de batalha.
 
 ## Mecânicas de jogo
 
@@ -30,13 +34,19 @@ Como vamos utilizar de cada conceito
 **Turnos**: Cada jogador terá sua fase para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;  
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;  
 **Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar, movimentar e atacar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;
-**Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as
+**Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;  
+**Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
 
-Cada invocar tem uma quantidade de pontos de vida  condições de vitória 
+Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pontos de vida do adversário e preservar os próprios gerando as condições de vitória:
 
 * Desistência do adversário;
 * Quando os pontos de vida do adversário chegar a zero;
-* Após finalizar 10 turnos 
+* Após finalizar 10 turnos quem tiver mais pontos de vida, se forem iguais segue os critérios de desempate em ordem:  
+** Quantidade de cartas no campo de batalha;  
+** Uma criatura com o maior ataque.
+
+## Ciclo de jogo
+
 
 
 ## Referências 
