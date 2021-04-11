@@ -73,12 +73,12 @@ Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pont
 * Quando os pontos de vida do adversário chegar a zero;
 * Após finalizar 10 turnos quem tiver mais pontos de vida, se forem iguais segue os critérios de desempate em ordem:  
 
-  * Quantidade de cartas no campo de batalha;  
-  * Uma criatura com o maior ataque.
+  * Maior número de cartas no campo de batalha; 
+  * Maior valor de ataque das criaturas;
+  * Maior valor de defesa das criaturas.
 
 ## Referências
 
 Paras as mecânicas são um conjunto de experiências com meus card games favoritos Hearthstone, Gwent e Yu-Gi-Oh!, sobre como organizar e classificar as mecânicas das descrições em  [Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics) foram de grande ajuda
 
-\
 Continua na parte 2...
