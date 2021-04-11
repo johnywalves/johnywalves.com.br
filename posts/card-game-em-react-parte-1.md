@@ -57,6 +57,8 @@ Em resumo:\
 
 Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, alguns podem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação
 
+![](figures/explicacao_card_criaturas.png)
+
 Cada invocador possuir **pontos de vida**, **pontos de defesa** e eventualmente alguma descrição de **efeitos** de do acionamento
 
 Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
