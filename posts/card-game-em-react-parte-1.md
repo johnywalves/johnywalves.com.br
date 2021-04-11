@@ -61,6 +61,8 @@ Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **n�
 
 Cada invocador possuir **pontos de vida**, **pontos de defesa** e eventualmente alguma descrição de **efeitos** de do acionamento
 
+![](figures/explicacao_card_invocador.png)
+
 Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
 
 ## Condições de vitória
