@@ -79,6 +79,6 @@ Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pont
 
 ## Referências
 
-Paras as mecânicas são um conjunto de experiências com meus card games favoritos Hearthstone, Gwent e Yu-Gi-Oh!, sobre como organizar e classificar as mecânicas das descrições em  [Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics) foram de grande ajuda
+Paras as mecânicas são um conjunto de experiências com meus card games favoritos Hearthstone, Gwent e Yu-Gi-Oh!, sobre como organizar e classificar as mecânicas das descrições em [Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics) foram de grande ajuda
 
 Continua na parte 2...
