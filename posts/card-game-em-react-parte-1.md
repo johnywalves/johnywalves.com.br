@@ -12,7 +12,7 @@ highlight: true
 ---
 Amo jogar e foi o motivo para me fazer entrar para área de desenvolvimento, mas nunca me propus a fazer nada maior que um pequeno protótipo, mas isso agora mais mudar nessa série vamos fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
 
-A escolha do React vem da necessidade aprimorar na biblioteca e querer fazer algo divertido no processo existem plataformas bem melhores e gratuitas para quem está começando incluindo algumas para HTML5 e JavaScript
+A escolha do React vem da necessidade aprimorar na biblioteca e querer fazer algo divertido no processo, existem plataformas bem melhores e gratuitas para quem está começando incluindo algumas para HTML5 e JavaScript
 
 ## Termos no jogo
 
