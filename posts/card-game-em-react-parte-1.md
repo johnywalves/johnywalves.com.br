@@ -27,13 +27,13 @@ Alguns termos que serão usados adiante que podemos
 
 ## Mecânicas de jogo
 
-Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando conceito de turnos, pontos de ação, posicionamento e movimentação completando o conceito
+Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando conceito de turnos, pontos de ação, posicionamento e movimentação completando as mecânicas que vamos utilizar
 
 Como vamos utilizar de cada conceito
 
 **Turnos**: Cada jogador terá sua fase para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
-**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;  
+**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
 **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;\
 **Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
 
@@ -41,13 +41,13 @@ As cartas podemos possuir descrições que alteração alguma mecânica, nesse c
 
 ## Ciclo de jogo
 
-No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, ao jogar de cara ou coroa escolher o primeiro jogador que iniciará seu turno, que não será permitido realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
+No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, jogar de cara ou coroa para escolher o jogador que iniciará o turno, onde não poderá realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
 
 ![Um desenho de processo com descrições de cada etapa](figures/game_loop_1.png "Game Loop")
 
 Em resumo:\
 \
-**Fase de preparo**: Invocações de artefatos e criaturas, movimentações de criaturas e ativação de feitiços, com o gasto de pontos de ação;
+**Fase de preparo**: Invocações de artefatos e criaturas, movimentações de criaturas, com o gasto de pontos de ação, e ativação de feitiços;
 
 **Fase de combate**: As criaturas atacam e se defender, cada criatura tem a possibilidade de um ataque;
 
@@ -55,7 +55,9 @@ Em resumo:\
 
 ## Cartas de criaturas, invocadores e resolvendo combate
 
-Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, algumaspodem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação, invocadores possuir **pontos de vida**, **pontos de defesa** e eventualmente alguma descrição de **efeitos** de do acionamento
+Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, alguns podem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação
+
+Cada invocador possuir **pontos de vida**, **pontos de defesa** e eventualmente alguma descrição de **efeitos** de do acionamento
 
 Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
 
