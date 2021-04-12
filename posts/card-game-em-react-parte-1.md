@@ -16,10 +16,10 @@ A escolha do React vem da necessidade me aprimorar na biblioteca e fazer algo di
 
 ## Termos no jogo
 
-Para melhorar o entendimento vamos detalhar alguns termos que serão usados adiante destes artigos:
+Para o melhor entendimento vamos detalhar alguns termos que serão usados adiante destes artigos:
 
-**Campo de batalha**: Formada de 4 linhas e 5 colunas onde cada carta deve ser posicionada nos campos disponíveis, em cada lado a linha voltada para o adversários é a linha de corpo-a-corpo e linhas do jogador a linha a distância;\
-**Invocador**: O invocador é o avatar no jogador, cada invocador tem suas próprias características que influenciam no jogo;\
+**Campo de batalha**: Formada de 4 linhas e 5 colunas onde cada carta deve ser posicionada nos espaços disponíveis entre elas, em cada lado a linha voltada para o adversários é a linha de corpo-a-corpo e linhas do jogador a linha a distância;\
+**Invocador**: O invocador é o avatar no jogador, é uma carta especial com pontos de vida que deve ser protegida;\
 **Criaturas**: Cartas com valores de ataque e defesa, responsáveis pela defesa do invocador;\
 **Artefatos**: Cartas de efeitos, que se efetivam no momento que invocadas;\
 **Feitiços**: Cartas que efeitos, que se efetivam no turno seguinte a sua invocação;\
@@ -59,7 +59,7 @@ Cada invocador possuir **pontos de vida**, **pontos de defesa** e eventualmente 
 
 ![Uma carta formato de hexágono com pontos de vida e valores de defesa](figures/explicacao_card_invocador.png "Exemplo de carta de invocador")
 
-Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
+Na fase de combate cada criatura pode realizar um ataque contra outra criatura dentro do alcance ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
 
 ## Cartas de Efeitos, artefatos e feitiços
 
