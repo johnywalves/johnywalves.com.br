@@ -14,7 +14,7 @@ const PostsList = () => {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { frontmatter: { highlight: { eq: true } } }
+        filter: { frontmatter: { published: { ne: false }, highlight: { eq: true } } }
       ) {
         edges {
           node {
