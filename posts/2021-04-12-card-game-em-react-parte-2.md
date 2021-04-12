@@ -223,7 +223,7 @@ Criar o arquivo `.jest`
 Criar o arquivo `.storybook`
 Criar o arquivo `.vscode`
 
-## Configurar o Estilo local
+## Configurar o Estilo global
  
 Criar o arquivo `global.ts` na pasta 'styles'
 
