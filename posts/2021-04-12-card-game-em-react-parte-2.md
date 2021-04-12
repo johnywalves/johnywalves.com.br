@@ -14,10 +14,10 @@ Configuração do ambiente React com Next
 
 ## Preparar os pacotes 
 
-Iniciar o projeto 
+Iniciar o projeto [Create Next App](https://nextjs.org/docs/api-reference/create-next-app)
 
 ```shell
-yarn init
+yarn create next-app
 ```
 
 Instalar dependências do sistema
@@ -167,38 +167,7 @@ Criar o arquivo .eslintrc.json
 }
 ```
 
-Criar o arquivo .babelrc
 
-```json
-{
-    "presets": [
-        "next/babel",
-        "@babel/preset-typescript"
-    ],
-    "plugins": [
-        [
-            "babel-plugin-styled-components",
-            {
-                "ssr": true,
-                "displayName": true
-            }
-        ]
-    ],
-    "env": {
-        "test": {
-            "plugins": [
-                [
-                    "babel-plugin-styled-components",
-                    {
-                        "ssr": false,
-                        "displayName": false
-                    }
-                ]
-            ]
-        }
-    }
-}
-```
 
 Criar o arquivo .prettierrc
 
@@ -209,3 +178,16 @@ Criar o arquivo .prettierrc
   "singleQuote": true
 }
 ```
+
+Criar o arquivo jest.config.js
+
+```json
+module.exports = {
+  testEnvironment: 'jsdom',
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  collectCoverage: true,
+  collectCoverageFrom: ['src/**/*.ts(x)?', '!src/**/*stories.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']
+}
+```
+
