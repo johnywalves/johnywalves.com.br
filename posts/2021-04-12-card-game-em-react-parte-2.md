@@ -10,6 +10,7 @@ tags:
 published: false
 highlight: false
 ---
+Configuração do ambiente React com Next
 
 ## Preparar os pacotes 
 
