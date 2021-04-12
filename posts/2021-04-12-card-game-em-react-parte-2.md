@@ -23,7 +23,7 @@ yarn create next-app
 Instalar dependências do sistema
 
 ```shell
-yarn add next react react-dom styled-components styled-icons
+yarn add styled-components styled-icons
 ```
 
 Instalar dependências de desenvolvimento
@@ -56,49 +56,42 @@ Atualizar os arquivos com o comando
 yarn 
 ```
 
-Criar o arquivo .gitignore
-
-```gitconfig
-/node_modules
-/.next
-```
-
-Criar o arquivo tsconfig.json com as estruturas para o TypeScript
+Criar o arquivo `.babelrc`
 
 ```json
 {
-  "compilerOptions": {
-    "baseUrl": "src",
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    "presets": [
+        "next/babel",
+        "@babel/preset-typescript"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+    "plugins": [
+        [
+            "babel-plugin-styled-components",
+            {
+                "ssr": true,
+                "displayName": true
+            }
+        ]
+    ],
+    "env": {
+        "test": {
+            "plugins": [
+                [
+                    "babel-plugin-styled-components",
+                    {
+                        "ssr": false,
+                        "displayName": false
+                    }
+                ]
+            ]
+        }
+    }
 }
 ```
 
-Criar o arquivo .eslintrc.json
+Criar o arquivo `.editorconfig`
+
+Criar o arquivo `.eslintrc.json`
 
 ```json
 
@@ -167,8 +160,6 @@ Criar o arquivo .eslintrc.json
 }
 ```
 
-
-
 Criar o arquivo .prettierrc
 
 ```json
@@ -179,7 +170,7 @@ Criar o arquivo .prettierrc
 }
 ```
 
-Criar o arquivo jest.config.js
+Criar o arquivo `jest.config.js`
 
 ```json
 module.exports = {
@@ -190,4 +181,46 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts']
 }
 ```
+
+Criar o arquivo `next-env.d.ts`
+
+Criar o arquivo `tsconfig.json` com as estruturas para o TypeScript
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
+```
+
+Criar o arquivo `.jest`
+Criar o arquivo `.storybook`
+Criar o arquivo `.vscode`
+
 
