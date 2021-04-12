@@ -8,15 +8,15 @@ category: JS
 tags:
   - javascript
 published: false
-highlight: true
+highlight: false
 ---
-Amo jogar e foi o motivo para me fazer entrar para área de desenvolvimento, mas nunca me propus a fazer nada maior que um pequeno protótipo, mas isso agora vai mudar, nessa série vamos fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
+Amo vídeo game, foi o motivo que me fez entrar para área de desenvolvimento, fazendo uso deste amor vamos  nessa série fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
 
 A escolha do React vem da necessidade me aprimorar na biblioteca e fazer algo divertido no processo, existem plataformas bem melhores e gratuitas para quem está começando no desenvolvimento de jogos incluindo algumas para HTML5 e JavaScript, mas como o foco é o aprendizado e a prática, vamos de React
 
 ## Termos no jogo
 
-Alguns termos que serão usados adiante destes artigos, para melhorar o entendimento vamos definir e detalhar seus significados:
+Para melhorar o entendimento vamos detalhar alguns termos que serão usados adiante destes artigos:
 
 **Campo de batalha**: Formada de 4 linhas e 5 colunas onde cada carta deve ser posicionada nos campos disponíveis, em cada lado a linha voltada para o adversários é a linha de corpo-a-corpo e linhas do jogador a linha a distância;\
 **Invocador**: O invocador é o avatar no jogador, cada invocador tem suas próprias características que influenciam no jogo;\
@@ -27,11 +27,9 @@ Alguns termos que serão usados adiante destes artigos, para melhorar o entendim
 
 ## Mecânicas de jogo
 
-Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando conceito de turnos, pontos de ação, posicionamento e movimentação completando as mecânicas que vamos utilizar
+Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando os conceitos de turnos, pontos de ação, posicionamento e movimentação completando as mecânicas que vamos utilizar, segue como vamos utilizar cada conceito:
 
-Como vamos utilizar de cada conceito:
-
-**Turnos**: Cada jogador terá sua fase para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
+**Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
 **Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
 **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;\
@@ -41,7 +39,7 @@ As cartas podemos possuir descrições que alteração alguma mecânica, nesse c
 
 ## Ciclo de jogo
 
-No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, jogar de cara ou coroa para escolher o jogador que iniciará o turno, onde não poderá realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
+No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, jogar cara ou coroa para escolher o jogador que iniciará o turno, onde não poderá realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
 
 ![Um desenho de processo com descrições de cada etapa](figures/game_loop_1.png "Game Loop")
 
