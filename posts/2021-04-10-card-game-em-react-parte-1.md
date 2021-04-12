@@ -11,30 +11,28 @@ tags:
   - game
   - react
 published: false
-highlight: true
+highlight: false
 ---
-Amo jogar e foi o motivo para me fazer entrar para área de desenvolvimento, mas nunca me propus a fazer nada maior que um pequeno protótipo, mas isso agora mais mudar nessa série vamos fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
+Amo vídeo game, foi o motivo que me fez entrar para área de desenvolvimento, fazendo uso deste amor vamos  nessa série fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
 
-A escolha do React vem da necessidade aprimorar na biblioteca e querer fazer algo divertido no processo, existem plataformas bem melhores e gratuitas para quem está começando incluindo algumas para HTML5 e JavaScript
+A escolha do React vem da necessidade me aprimorar na biblioteca e fazer algo divertido no processo, existem plataformas bem melhores e gratuitas para quem está começando no desenvolvimento de jogos incluindo algumas para HTML5 e JavaScript, mas como o foco é o aprendizado e a prática, vamos de React
 
 ## Termos no jogo
 
-Alguns termos que serão usados adiante que podemos 
+Para o melhor entendimento vamos detalhar alguns termos que serão usados adiante destes artigos:
 
-**Campo de batalha**: Formada de 4 linhas e 5 colunas onde cada carta deve ser posicionada nos campos disponíveis, em cada lado a linha voltada para o adversários é a linha de corpo-a-corpo e linhas do jogador a linha a distância;\
-**Invocador**: O invocador é o avatar no jogador, cada invocador tem suas próprias características que influenciam no jogo;\
+**Campo de batalha**: Formada de 4 linhas e 5 colunas onde cada carta deve ser posicionada nos espaços disponíveis entre elas, em cada lado a linha voltada para o adversários é a linha de corpo-a-corpo e linhas do jogador a linha a distância;\
+**Invocador**: O invocador é o avatar no jogador, é uma carta especial com pontos de vida que deve ser protegida;\
+**Criaturas**: Cartas com valores de ataque e defesa, responsáveis pela defesa do invocador;\
 **Artefatos**: Cartas de efeitos, que se efetivam no momento que invocadas;\
 **Feitiços**: Cartas que efeitos, que se efetivam no turno seguinte a sua invocação;\
-**Criaturas**: Cartas com valores de ataque e defesa, responsáveis pela defesa do invocador;\
 **Nível**: Cada carta possui um valor que determina quantos pontos de ação necessário para colocar no campo de batalha.
 
 ## Mecânicas de jogo
 
-Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando conceito de turnos, pontos de ação, posicionamento e movimentação completando as mecânicas que vamos utilizar
+Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando os conceitos de turnos, pontos de ação, posicionamento e movimentação completando as mecânicas que vamos utilizar, segue como vamos utilizar cada conceito:
 
-Como vamos utilizar de cada conceito
-
-**Turnos**: Cada jogador terá sua fase para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
+**Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
 **Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
 **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;\
@@ -44,16 +42,14 @@ As cartas podemos possuir descrições que alteração alguma mecânica, nesse c
 
 ## Ciclo de jogo
 
-No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, jogar de cara ou coroa para escolher o jogador que iniciará o turno, onde não poderá realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
+No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, jogar cara ou coroa para escolher o jogador que iniciará o turno, onde não poderá realizar nenhum ataque, nos turnos o fluxo abaixo deve ser seguido:
 
 ![Um desenho de processo com descrições de cada etapa](/figures/game_loop_1.png "Game Loop")
 
 Em resumo:\
 \
-**Fase de preparo**: Invocações de artefatos e criaturas, movimentações de criaturas, com o gasto de pontos de ação, e ativação de feitiços;
-
-**Fase de combate**: As criaturas atacam e se defender, cada criatura tem a possibilidade de um ataque;
-
+**Fase de preparo**: Invocações de artefatos e criaturas, movimentações de criaturas, com o gasto de pontos de ação, e ativação de feitiços;\
+**Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de um ataque;\
 **Fase de feitiços**: Reservada para invocação de feitiços, com o custo dos pontos de ação.
 
 ## Cartas de criaturas, invocadores e resolvendo combate
@@ -66,7 +62,23 @@ Cada invocador possuir **pontos de vida**, **pontos de defesa** e eventualmente 
 
 ![Uma carta formato de hexágono com pontos de vida e valores de defesa](/figures/explicacao_card_invocador.png "Exemplo de carta de invocador")
 
-Na fase de combate cada criatura pode realizar um ataque contra outra criatura ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
+Na fase de combate cada criatura pode realizar um ataque contra outra criatura dentro do alcance ou contra um invocador caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o invocador ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
+
+## Cartas de Efeitos, artefatos e feitiços
+
+As cartas de efeitos possuem um **nível**, uma **descrição de alvo** e **duração** e uma descrição de explicando suas capacidades, os **artefatos** devem ser invocados e ativados na fase de preparo e **feitiços** invocados na fase de feitiços e ativados na fase de preparado, ambos gastando seu nível em pontos de ação para invocação
+
+As possibilidades de alvo para os efeitos são: \
+\
+**Campo de batalha**: Todas as posições são afetadas;\
+**Posição no campo de batalha**: Podendo ser colocados em qualquer local no campo batalha;\
+**Tipo de cartas**: O alvo deve ser uma criatura, artefato ou feitiços dependendo na descrição;\
+**Invocador**: Afetando o invocador em si alterando seus pontos de vida ou defesa.
+
+A duração é definida como:\
+\
+**Instantânea**: As cartas com essa duração são descartadas no momento que seus efeitos são efetivados;\
+**Duradora**: Após a ativação ela mantem seu efeito até destruída, ou quando seu alvo for destruído.
 
 ## Condições de vitória
 
@@ -82,6 +94,6 @@ Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pont
 
 ## Referências
 
-Paras as mecânicas são um conjunto de experiências com meus card games favoritos Hearthstone, Gwent e Yu-Gi-Oh!, sobre como organizar e classificar as mecânicas das descrições em  [Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics) foram de grande ajuda
+Paras as mecânicas são um conjunto de experiências com meus card games favoritos Hearthstone, Gwent e Yu-Gi-Oh!, sobre como organizar e classificar as mecânicas das descrições em [Wikipedia - Game_mechanics](https://en.wikipedia.org/wiki/Game_mechanics) foram de grande ajuda
 
 Continua na parte 2...
