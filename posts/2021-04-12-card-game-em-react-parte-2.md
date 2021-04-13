@@ -3,6 +3,7 @@ title: Card Game em React (Parte 2)
 description: Desenvolvendo um jogo tipo Hearthstone, Gwent e Yu-Gi-Oh! do
   conceito a entrega com React (Parte 2 de ?)
 date: 2021-04-12 07:35:58 -0300
+featuredImage: ./featured/pokemon_cardgame-1.jpg
 coverImage: /figures/pokemon_cardgame-1.jpg
 category: JS
 tags:
@@ -223,6 +224,11 @@ Criar o arquivo `.jest`
 Criar o arquivo `.storybook`
 Criar o arquivo `.vscode`
 
+
+https://github.com/johnywalves/card-game-react/commit/ebb8575b0b41d2dc6257f6d2e1336bd1d01abf3f
+
+
+
 ## Configurar o Estilo global
  
 Criar o arquivo `global.ts` na pasta 'styles'
@@ -260,3 +266,9 @@ const GlobalStyles = createGlobalStyle`
 
 export default GlobalStyles
 ```
+
+
+
+https://github.com/johnywalves/card-game-react/commit/dcd9461780119761484af48dcf2665b6623c24a0
+
+
