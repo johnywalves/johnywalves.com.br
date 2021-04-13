@@ -23,18 +23,26 @@ collections:
           widget: "datetime",
           format: "YYYY-MM-DD hh:mm:ss -0300",
         }
-      - { label: "Featured Image", name: "coverImage", widget: "image" }
-      - { 
+      - { label: "Featured Image", name: "featuredImage", widget: "string" }
+      - { label: "Cover Image", name: "coverImage", widget: "image" }
+      - {
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["Python", "Java", "JS", "R", "Web", "Dev", "Jekyll", "Windows", "Linux"]
+          options:
+            [
+              "Python",
+              "Java",
+              "JS",
+              "R",
+              "Web",
+              "Dev",
+              "Jekyll",
+              "Windows",
+              "Linux",
+            ],
         }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Published", name: "published", widget: "boolean" }
-      - { label: "Highlight", name: "highlight", widget: "boolean" }      
+      - { label: "Highlight", name: "highlight", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-
-      
-      

@@ -78,11 +78,13 @@ const pluginsConfig = [
         {
           resolve: "gatsby-remark-images",
           options: {
+            quality: 90,
             maxWidth: 960,
+            withWebp: true,
             linkImagesToOriginal: false,
           },
         },
-        'gatsby-remark-static-images',
+        "gatsby-remark-static-images",
         `gatsby-remark-lazy-load`,
         `gatsby-remark-prismjs`,
       ],
