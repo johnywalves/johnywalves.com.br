@@ -14,7 +14,7 @@ Configuração do ambiente React com Next
 
 ## Preparar os pacotes 
 
-Iniciar o projeto [Create Next App](https://nextjs.org/docs/api-reference/create-next-app)
+Iniciar o projeto [Create Next App](https://nextjs.org/docs/api-reference/create-next-app) p
 
 ```shell
 yarn create next-app
@@ -23,7 +23,7 @@ yarn create next-app
 Instalar dependências do sistema
 
 ```shell
-yarn add styled-components styled-icons
+yarn add styled-components
 ```
 
 Instalar dependências de desenvolvimento
