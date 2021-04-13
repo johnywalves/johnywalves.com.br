@@ -57,7 +57,7 @@ Atualizar os arquivos com o comando
 yarn 
 ```
 
-Criar o arquivo `.babelrc`
+Criar o arquivo `.babelrc` para configurar o TypeScript como intepretador e adicionar suporte ao styled components
 
 ```json
 {
@@ -184,6 +184,11 @@ module.exports = {
 ```
 
 Criar o arquivo `next-env.d.ts`
+
+```typescript
+/// <reference types="next" />
+/// <reference types="next/types/global" />
+```
 
 Criar o arquivo `tsconfig.json` com as estruturas para o TypeScript
 
