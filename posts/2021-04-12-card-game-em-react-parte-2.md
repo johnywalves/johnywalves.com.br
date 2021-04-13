@@ -8,6 +8,8 @@ coverImage: /figures/pokemon_cardgame-1.jpg
 category: JS
 tags:
   - javascript
+  - game
+  - react
 published: false
 highlight: false
 ---
