@@ -50,7 +50,7 @@ Em resumo:\
 \
 **Fase de preparo**: Invocações de artefatos e criaturas e movimentações de criaturas com o gasto de pontos de ação definidos pelo nível da carta, e ativação de feitiços;\
 **Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de realizar um ataque;\
-**Fase de feitiços**: Reservada para invocação de feitiços, com o custo dos pontos de ação pelo seu nível.
+**Fase de feitiços**: Reservada para invocação de feitiços, com o custo em pontos de ação igual seu nível.
 
 ## Cartas de criaturas, invocadores e resolvendo combate
 
