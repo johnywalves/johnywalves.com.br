@@ -15,7 +15,7 @@ highlight: false
 ---
 Configuração do ambiente React com Next
 
-## Preparar os pacotes 
+## Preparar os pacotes
 
 Iniciar o projeto [Create Next App](https://nextjs.org/docs/api-reference/create-next-app) p
 
@@ -38,25 +38,69 @@ yarn add @babel/preset-typescript @storybook/addon-essentials @storybook/react @
 Adicionar no `package.json` os scripts 
 
 ```json
-  "scripts": {
-    "dev": "next dev",
-    "prepare": "husky install",
-    "build": "next build",
-    "export": "next export",
-    "deploy": "next build && next export",
-    "start": "next start",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public",
-    "lint": "eslint src --max-warnings=0",
-    "test": "jest",
-    "test:watch": "yarn test --watch"
-  }
+"scripts": {
+  "dev": "next dev",
+  "prepare": "husky install",
+  "build": "next build",
+  "export": "next export",
+  "deploy": "next build && next export",
+  "start": "next start",
+  "storybook": "start-storybook -s ./public -p 6006",
+  "build-storybook": "build-storybook -s ./public",
+  "lint": "eslint src --max-warnings=0",
+  "test": "jest",
+  "test:watch": "yarn test --watch"
+}
 ```
 
 Atualizar os arquivos com o comando
 
 ```shell
 yarn 
+```
+
+## Configurar o TypeScript
+
+Criar o arquivo `next-env.d.ts`
+
+```typescript
+/// <reference types="next" />
+/// <reference types="next/types/global" />
+```
+
+Criar o arquivo `tsconfig.json` com as estruturas para o TypeScript
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
 ```
 
 Criar o arquivo `.babelrc` para configurar o TypeScript como intepretador e adicionar suporte ao styled components
@@ -92,12 +136,11 @@ Criar o arquivo `.babelrc` para configurar o TypeScript como intepretador e adic
 }
 ```
 
-Criar o arquivo `.editorconfig`
+## Configurar o ESLint e o Prettier
 
 Criar o arquivo `.eslintrc.json`
 
 ```json
-
 {
     "env": {
         "browser": true,
@@ -173,9 +216,37 @@ Criar o arquivo .prettierrc
 }
 ```
 
+## Configurar o Storybook
+
+Criar a pasta `.storybook` e na pasta o arquivo `main.js `
+
+```javascript
+module.exports = {
+    stories: ['../src/components/**/*stories.tsx'],
+    addons: ['@storybook/addon-essentials']
+};
+```
+
+Dentro da pasta `.storybook` também criar o arquivo `jest.config.js`
+
+```javascript
+import GlobalStyles from '../src/styles/global'
+
+export const decorators = [
+    (Story) => (
+        <>
+            <GlobalStyles />
+            <Story />
+        </>
+    )
+]
+```
+
+## Configurar as Bibliotecas de Testes
+
 Criar o arquivo `jest.config.js`
 
-```json
+```javascript
 module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
@@ -185,65 +256,19 @@ module.exports = {
 }
 ```
 
-Criar o arquivo `next-env.d.ts`
+Criar a pasta `.jest` e na pasta o arquivo `setup.ts`
 
-```typescript
-/// <reference types="next" />
-/// <reference types="next/types/global" />
+```javascript
+import '@testing-library/jest-dom'
+import 'jest-styled-components'
 ```
 
-Criar o arquivo `tsconfig.json` com as estruturas para o TypeScript
+## Configurar as Bibliotecas de Estilo
 
-```json
-{
-  "compilerOptions": {
-    "baseUrl": "src",
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ]
-}
-```
-
-Criar o arquivo `.jest`
-Criar o arquivo `.storybook`
-Criar o arquivo `.vscode`
-
-
-https://github.com/johnywalves/card-game-react/commit/ebb8575b0b41d2dc6257f6d2e1336bd1d01abf3f
-
-
-
-## Configurar o Estilo global
- 
 Criar o arquivo `global.ts` na pasta 'styles'
 
 ```typescript
 import { createGlobalStyle } from 'styled-components'
-
-
 
 const GlobalStyles = createGlobalStyle`
     *,
@@ -269,13 +294,32 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 
-
-
 export default GlobalStyles
 ```
 
+## Configuração do VSCode
 
+Criar o arquivo `.editorconfig`
 
-https://github.com/johnywalves/card-game-react/commit/dcd9461780119761484af48dcf2665b6623c24a0
+```
+root = true
 
+[*]
+indent_style = spaces
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
 
+Criar a pasta `.vscode` e na pasta o arquivo `settings.json`
+
+```json
+{
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
+```
