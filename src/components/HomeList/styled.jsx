@@ -20,14 +20,14 @@ export const Header = styled.header`
 
 export const Title = styled.h1`
   margin: 0 0.5rem 0 0;
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   font-weight: 700;
 `
 
 export const Description = styled.small`
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 1.1rem;
   opacity: 1;
 `

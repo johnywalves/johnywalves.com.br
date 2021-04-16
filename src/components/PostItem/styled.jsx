@@ -32,10 +32,10 @@ export const PostItemWrapper = styled.section`
   }
 
   ${media.lessThan("large")`
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 2rem 1rem;
-    `}
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  `}
 `
 
 export const PostItemImageFeatured = styled(GatsbyImage)`
@@ -76,14 +76,14 @@ export const PostItemCoverImage = styled.div`
   background-size: cover;
 
   ${media.lessThan("large")`
-        display: none;
-        border-radius: 0;
-        font-size: 1rem;
-        min-height: auto;
-        min-width: auto;
-        padding: .2rem .5rem;
-        margin-bottom: .7rem;
-    `}
+    display: none;
+    border-radius: 0;
+    font-size: 1rem;
+    min-height: auto;
+    min-width: auto;
+    padding: .2rem .5rem;
+    margin-bottom: .7rem;
+  `}
 
   body#grid & {
     margin-bottom: 1.5rem;
@@ -142,6 +142,7 @@ export const PostItemDescription = styled.p`
 export const PostItemTags = styled.div`
   margin: 0.5rem 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
 `

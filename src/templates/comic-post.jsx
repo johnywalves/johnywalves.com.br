@@ -17,11 +17,11 @@ const ComicPost = ({ data, pageContext }) => {
       <Seo
         title={post.frontmatter.title}
         description={
-          "Desenvolvendo, aprendendo, desenhando e fazendo humor sobre isso, espero que gostem"
+          "Desenvolvedor Web: Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem"
         }
         image={post.frontmatter.coverImage}
       />
-      <S.PostHeader>
+      <S.PostHeader comics>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostComic
           image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
@@ -33,6 +34,15 @@ export const Content = styled.article`
     font-weight: 400;
     text-align: left;
   }
+
+  ${media.lessThan("medium")`
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  `}
 `
 
 export const HeadSector = styled.div`

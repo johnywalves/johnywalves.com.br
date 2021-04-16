@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
@@ -9,7 +9,14 @@ export const PostHeader = styled.header`
   padding: 2rem 5rem 0;
 
   ${media.lessThan("large")`
-    padding: 3rem 0 0;
+    ${(props) =>
+      props.comics
+        ? css`
+            padding: 0.5rem 0.5rem 0;
+          `
+        : css`
+            padding: 3rem 0 0;
+          `}
     max-width: 100%;
   `}
 `
