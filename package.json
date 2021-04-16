@@ -11,7 +11,7 @@
     "gatsby-background-image": "^1.5.0",
     "gatsby-plugin-algolia-search": "^0.5.6",
     "gatsby-plugin-feed": "^3.2.0",
-    "gatsby-plugin-google-analytics": "^3.2.0",
+    "gatsby-plugin-google-tagmanager": "^3.3.0",
     "gatsby-plugin-image": "^1.2.0",
     "gatsby-plugin-manifest": "^3.2.0",
     "gatsby-plugin-netlify-cms": "^5.2.0",

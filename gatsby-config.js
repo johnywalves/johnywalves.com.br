@@ -215,22 +215,19 @@ const pluginsConfig = [
 ]
 
 if (process.env.CONTEXT === "production") {
-  const analytics = {
-    resolve: `gatsby-plugin-google-analytics`,
+  pluginsConfig.push({
+    resolve: `gatsby-plugin-google-tagmanager`,
     options: {
-      trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      head: false,
+      id: process.env.GOOGLE_TAGMANAGER_ID,
     },
-  }
-
-  pluginsConfig.push(analytics)
+  })
 }
 
 module.exports = {
   siteMetadata: {
     title: `Johny W. Alves`,
     position: `Web Developer`,
-    description: `Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem`,
+    description: `Desenvolvedor Web: Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem`,
     author: `@johnywalves`,
     siteUrl: `https://www.johnywalves.com.br`,
   },
