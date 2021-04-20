@@ -13,7 +13,7 @@ tags:
 published: false
 highlight: false
 ---
-Amo vídeo game, foi o motivo que me fez entrar para área de desenvolvimento, fazendo uso deste amor vamos  nessa série fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
+Amo vídeo game, foi o motivo que me fez entrar para área de desenvolvimento, fazendo uso deste amor vamos nessa série fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
 
 A escolha do React vem da necessidade me aprimorar na biblioteca e fazer algo divertido no processo, existem plataformas bem melhores e gratuitas para quem está começando no desenvolvimento de jogos incluindo algumas para HTML5 e JavaScript, mas como o foco é o aprendizado e a prática, vamos de React
 
@@ -25,17 +25,17 @@ Para o melhor entendimento vamos detalhar alguns termos que serão usados adiant
 **Invocador**: O invocador é o avatar no jogador, é uma carta especial com pontos de vida que deve ser protegida;\
 **Criaturas**: Cartas com valores de ataque e defesa, responsáveis pela defesa do invocador;\
 **Artefatos**: Cartas de efeitos, que se efetivam no momento que invocadas;\
-**Feitiços**: Cartas que efeitos, que se efetivam no turno seguinte a sua invocação;\
-**Nível**: Cada carta possui um valor que determina quantos pontos de ação necessário para colocar no campo de batalha.
+**Feitiços**: Cartas que efeitos, que podem ser ativadas nos turnos seguintes a sua invocação;\
+**Nível**: Cada carta possui um valor que determina quantos pontos de ação é necessário para coloca-la no campo de batalha.
 
 ## Mecânicas de jogo
 
-Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", o jogo de cartas já traz um elemento aleatório adicionando os conceitos de turnos, pontos de ação, posicionamento e movimentação completando as mecânicas que vamos utilizar, segue como vamos utilizar cada conceito:
+Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", escolhi alguns elementos para realizar a interação, o jogo de cartas já traz um elemento aleatório adicionando os conceitos de turnos, pontos de ação, posicionamento e movimentação completam as mecânicas que vamos utilizar, segue como cada conceito vai funcionar:
 
-**Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações intercalando em cada um, o primeiro a agir é baseado em critério de sorte com a uma compreensão para o jogador seguinte;\
-**Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e 1 (uma) carta em cada turno no topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
-**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar suas ações como invocar e movimentar, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
-**Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo somente inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, o jogador deve colocar as cartas no seu lado no campo de batalha;\
+**Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações, intercalando para cada um, o primeiro a agir é sorteado com um cara ou coroa;\
+**Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e em cada turno 1 (uma) carta  do topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
+**Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar as invocações e movimentação, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
+**Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo podem atingir inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, independente do alcance todas podem atacar o invocador, o jogador deve somente colocar as cartas no seu lado no campo de batalha;\
 **Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
 
 As cartas podemos possuir descrições que alteração alguma mecânica, nesse caso a descrição da carta sempre deve prevalecer
@@ -48,9 +48,9 @@ No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, joga
 
 Em resumo:\
 \
-**Fase de preparo**: Invocações de artefatos e criaturas, movimentações de criaturas, com o gasto de pontos de ação, e ativação de feitiços;\
-**Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de um ataque;\
-**Fase de feitiços**: Reservada para invocação de feitiços, com o custo dos pontos de ação.
+**Fase de preparo**: Invocações de artefatos e criaturas e movimentações de criaturas com o gasto de pontos de ação definidos pelo nível da carta, e ativação de feitiços;\
+**Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de realizar um ataque;\
+**Fase de feitiços**: Reservada para invocação de feitiços, com o custo em pontos de ação igual seu nível.
 
 ## Cartas de criaturas, invocadores e resolvendo combate
 
