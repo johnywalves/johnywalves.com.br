@@ -35,7 +35,7 @@ Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação en
 **Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações, intercalando para cada um, o primeiro a agir é sorteado com um cara ou coroa;\
 **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e em cada turno 1 (uma) carta  do topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
 **Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar as invocações e movimentação, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
-**Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo podem atingir inimigos na linha adjacente e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, independente do alcance todas podem atacar o invocador, o jogador deve somente colocar as cartas no seu lado no campo de batalha;\
+**Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo podem atingir inimigos na linha de corpo-a-corpo e na linha de ataques a distância caso não exista na linha corpo-a-corpo e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, independente do alcance todas podem atacar o invocador, o jogador deve somente colocar as cartas no seu lado no campo de batalha;\
 **Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
 
 As cartas podemos possuir descrições que alteração alguma mecânica, nesse caso a descrição da carta sempre deve prevalecer
@@ -48,9 +48,11 @@ No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, joga
 
 Em resumo:\
 \
+**Pré-prepado**: O jogador deve pegar 1 (uma) carta da pilha de cartas e receber seus pontos de ação;\
 **Fase de preparo**: Invocações de artefatos e criaturas e movimentações de criaturas com o gasto de pontos de ação definidos pelo nível da carta, e ativação de feitiços;\
 **Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de realizar um ataque;\
-**Fase de feitiços**: Reservada para invocação de feitiços, com o custo em pontos de ação igual seu nível.
+**Fase de feitiços**: Reservada para invocação de feitiços, com o custo em pontos de ação igual seu nível;\
+**Pós-feitiço**: Se o jogador tiver mais de 8 (oito) cartas deve descartar as restantes.
 
 ## Cartas de criaturas, invocadores e resolvendo combate
 
