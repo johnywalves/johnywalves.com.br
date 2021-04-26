@@ -11,11 +11,19 @@ const dictionary = {
   lattes: "http://lattes.cnpq.br/0468996619713052",
   contact: {
     title: "Contato",
-    description: "Você pode falar comigo em uma das redes sociais",
+    description: "Você pode me encontrar nas redes sociais",
   },
   posts: {
     title: "Posts em destaque",
     description: "Alguns posts selecionados pela qualidade ou por amor mesmo",
+  },
+  comics: {
+    title: "Última tirinha publicada",
+    description: "Fazendo humor sobre a vivência no mundo de desenvolvimento",
+    first: "Primeiro",
+    prev: "Anterior",
+    next: "Próximo",
+    last: "Último",
   },
   languages: {
     title: "Idiomas",
