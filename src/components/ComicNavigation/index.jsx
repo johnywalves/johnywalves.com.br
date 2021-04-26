@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
+import Strings from "components/strings"
+
 import * as S from "./styled"
 
 const ComicLast = ({ number }) => {
@@ -35,7 +37,7 @@ const ComicLast = ({ number }) => {
   return (
     <S.Navigation>
       {firstOne ? (
-        <p>Primeiro</p>
+        <p>{Strings.comics.first}</p>
       ) : (
         <Anilink
           to="/comic-1"
@@ -44,12 +46,12 @@ const ComicLast = ({ number }) => {
           bg="var(--background)"
           duration={0.6}
         >
-          Primeiro
+          {Strings.comics.first}
         </Anilink>
       )}
 
       {firstOne ? (
-        <p>Anterior</p>
+        <p>{Strings.comics.prev}</p>
       ) : (
         <Anilink
           to={`/comic-${number - 1}`}
@@ -58,12 +60,12 @@ const ComicLast = ({ number }) => {
           bg="var(--background)"
           duration={0.6}
         >
-          Anterior
+          {Strings.comics.prev}
         </Anilink>
       )}
 
       {lastOne ? (
-        <p>Próximo</p>
+        <p>{Strings.comics.next}</p>
       ) : (
         <Anilink
           to={`/comic-${number + 1}`}
@@ -72,12 +74,12 @@ const ComicLast = ({ number }) => {
           bg="var(--background)"
           duration={0.6}
         >
-          Próximo
+          {Strings.comics.next}
         </Anilink>
       )}
 
       {lastOne ? (
-        <p>Último</p>
+        <p>{Strings.comics.last}</p>
       ) : (
         <Anilink
           to={`/comic-${lastNumber}`}
@@ -86,7 +88,7 @@ const ComicLast = ({ number }) => {
           bg="var(--background)"
           duration={0.6}
         >
-          Último
+          {Strings.comics.last}
         </Anilink>
       )}
     </S.Navigation>

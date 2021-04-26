@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.header`
   margin: 0 0 2.5rem 0;
+  color: var(--texts);
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;

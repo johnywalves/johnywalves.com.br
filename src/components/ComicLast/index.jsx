@@ -3,8 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 import ComicNavigation from "components/ComicNavigation"
+import Strings from "components/strings"
 
 import * as S from "./styled"
+import * as HomeListStyle from "../HomeList/styled"
 
 const ComicLast = () => {
   const {
@@ -27,7 +29,7 @@ const ComicLast = () => {
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 1579
+                    width: 800
                     layout: CONSTRAINED
                     placeholder: TRACED_SVG
                   )
@@ -45,6 +47,13 @@ const ComicLast = () => {
 
   return (
     <S.Wrapper>
+      <HomeListStyle.Header>
+        <HomeListStyle.Title>{Strings.comics.title}</HomeListStyle.Title>
+        <HomeListStyle.Description>
+          {Strings.comics.description}
+        </HomeListStyle.Description>
+      </HomeListStyle.Header>
+      <S.WrapperImage>
       {edges.map(({ node }, index) => (
         <Anilink
           key={index}
@@ -64,6 +73,7 @@ const ComicLast = () => {
           />
         </Anilink>
       ))}
+      </S.WrapperImage>
       <ComicNavigation number={edges[0].node.frontmatter.number} />
     </S.Wrapper>
   )
