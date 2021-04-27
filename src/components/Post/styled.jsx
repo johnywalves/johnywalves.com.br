@@ -23,6 +23,12 @@ export const PostHeader = styled.header`
 
 export const PostFeaturedImage = styled(GatsbyImage)``
 
+export const ComicWrapper = styled.div`
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+`
+
 export const PostComic = styled(GatsbyImage)``
 
 export const PostTitle = styled.h1`

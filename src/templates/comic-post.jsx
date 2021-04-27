@@ -23,10 +23,14 @@ const ComicPost = ({ data, pageContext }) => {
       />
       <S.PostHeader comics>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostComic
-          image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-          alt={post.frontmatter.transcription}
-        />
+        <S.ComicWrapper>
+          <S.PostComic
+            image={
+              post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+            }
+            alt={post.frontmatter.transcription}
+          />
+        </S.ComicWrapper>
         <ComicNavigation number={number} />
       </S.PostHeader>
       <S.MainContent>
@@ -50,7 +54,7 @@ export const query = graphql`
         featuredImage {
           childImageSharp {
             gatsbyImageData(
-              width: 1579
+              width: 800
               layout: CONSTRAINED
               placeholder: TRACED_SVG
             )
