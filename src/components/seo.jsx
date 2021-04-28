@@ -10,6 +10,7 @@ function SEO({ description, lang, meta, title, image }) {
         site {
           siteMetadata {
             title
+            position
             description
             author
             siteUrl
