@@ -74,7 +74,7 @@ const dictionary = {
           { title: "React" },
           { title: "React Native" },
           { title: "Redux" },
-          { title: "Sprint Boot" },
+          { title: "Spring Boot" },
           { title: "SQLAlchemy" },
         ],
       },
