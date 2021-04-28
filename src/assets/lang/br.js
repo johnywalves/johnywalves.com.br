@@ -263,7 +263,7 @@ const dictionary = {
   },
   samples: {
     title: "Pequenos exemplos",
-    description: "Projetos de uma página para testar conceitos",
+    description: "Projetos de uma página para testar alguns conceitos",
     list: [
       {
         description:
