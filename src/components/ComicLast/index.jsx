@@ -6,7 +6,7 @@ import ComicNavigation from "components/ComicNavigation"
 import Strings from "components/strings"
 
 import * as S from "./styled"
-import * as HomeListStyle from "../HomeList/styled"
+import { Header, Title, Description } from "../HomeList/styled"
 
 const ComicLast = () => {
   const {
@@ -47,32 +47,30 @@ const ComicLast = () => {
 
   return (
     <S.Wrapper>
-      <HomeListStyle.Header>
-        <HomeListStyle.Title>{Strings.comics.title}</HomeListStyle.Title>
-        <HomeListStyle.Description>
-          {Strings.comics.description}
-        </HomeListStyle.Description>
-      </HomeListStyle.Header>
+      <Header>
+        <Title>{Strings.comics.title}</Title>
+        <Description>{Strings.comics.description}</Description>
+      </Header>
       <S.WrapperImage>
-      {edges.map(({ node }, index) => (
-        <Anilink
-          key={index}
-          to={node.fields.slug}
-          cover
-          direction="left"
-          bg="var(--background)"
-          duration={0.6}
-          aria-label="Last Comics"
-        >
-          <S.Image
-            image={
-              node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
-            }
-            title={node.frontmatter.transcription}
-            alt=""
-          />
-        </Anilink>
-      ))}
+        {edges.map(({ node }, index) => (
+          <Anilink
+            key={index}
+            to={node.fields.slug}
+            cover
+            direction="left"
+            bg="var(--background)"
+            duration={0.6}
+            aria-label="Last Comics"
+          >
+            <S.Image
+              image={
+                node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+              }
+              title={node.frontmatter.transcription}
+              alt=""
+            />
+          </Anilink>
+        ))}
       </S.WrapperImage>
       <ComicNavigation number={edges[0].node.frontmatter.number} />
     </S.Wrapper>

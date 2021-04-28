@@ -255,6 +255,37 @@ const dictionary = {
       },
     ],
   },
+  samples: {
+    title: "Little samples",
+    description: "One page designs to test concepts",
+    list: [
+      {
+        description:
+          "<strong>Menu Hamburger</strong>: Full screen menu with three tracks",
+        link: "/web/hamburgermenu.html",
+      },
+      {
+        description:
+          "<strong>Input Animation</strong>: Field for entering values with animation effects",
+        link: "/web/inputanimation.html",
+      },
+      {
+        description:
+          "<strong>Loading Spinner</strong>: Cyclic effect to indicate resource loading",
+        link: "/web/loadingspinner.html",
+      },
+      {
+        description:
+          "<strong>People Search</strong>: Cards of introduction from people with text search option",
+        link: "/web/peoplesearch.html",
+      },
+      {
+        description:
+          "<strong>Sun and Moon</strong>: Dark and light transition animation with moon and sun",
+        link: "/web/sunmoon.html",
+      },
+    ],
+  },
   education: {
     title: "Formação Acadêmica",
     description:

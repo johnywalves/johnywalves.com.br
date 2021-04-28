@@ -261,6 +261,37 @@ const dictionary = {
       },
     ],
   },
+  samples: {
+    title: "Pequenos exemplos",
+    description: "Projetos de uma página para testar conceitos",
+    list: [
+      {
+        description:
+          "<strong>Menu Hamburger</strong>: Menu para a tela inteira com três faixas",
+        link: "/web/hamburgermenu.html",
+      },
+      {
+        description:
+          "<strong>Campo Animado</strong>: Campo para inserção de valores com efeitos de animação",
+        link: "/web/inputanimation.html",
+      },
+      {
+        description:
+          "<strong>Carregando e Girando</strong>: Efeito cíclico para indicação de carregamento de recursos",
+        link: "/web/loadingspinner.html",
+      },
+      {
+        description:
+          "<strong>Pesquisa de Pessoas</strong>: Cartas de apresentação de pessoas com opção de pesquisa por texto",
+        link: "/web/peoplesearch.html",
+      },
+      {
+        description:
+          "<strong>Sol e Lua</strong>: Animação de transição de escuro e claro com a lua e o sol",
+        link: "/web/sunmoon.html",
+      },
+    ],
+  },
   education: {
     title: "Formação Acadêmica",
     description:

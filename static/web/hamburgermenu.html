@@ -1,136 +1,135 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Menu Hamburger Fullscreen</title>
-</head>
+  </head>
 
-<style>
+  <style>
     /* Reset CSS */
     *,
     *:before,
     *:after {
-        margin: 0;
-        padding: 0;
-        outline: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
     }
 
     body {
-        background: #282c35;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+      background: #282c35;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }
 
     /* Content CSS */
     .menu {
-        background: #fff;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        cursor: pointer;
-        transition: box-shadow 1.1s cubic-bezier(.19, 1, .22, 1);
-        box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+      background: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      cursor: pointer;
+      transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+      box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
     }
 
     .menu:hover {
-        box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
+      box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
     }
 
     .hamburger {
-        position: relative;
-        display: block;
-        background: #000;
-        width: 30px;
-        height: 2px;
-        top: 29px;
-        left: 15px;
-        transition: .5s ease-in-out;
+      position: relative;
+      display: block;
+      background: #000;
+      width: 30px;
+      height: 2px;
+      top: 29px;
+      left: 15px;
+      transition: 0.5s ease-in-out;
     }
 
     .hamburger::before,
     .hamburger::after {
-        content: '';
-        display: block;
-        background: #000;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        transition: .5s ease-in-out;
+      content: "";
+      display: block;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: 0.5s ease-in-out;
     }
 
     .hamburger::before {
-        top: -10px;
+      top: -10px;
     }
 
     .hamburger::after {
-        bottom: -10px;
+      bottom: -10px;
     }
 
     input {
-        display: none;
+      display: none;
     }
 
-    input:checked~ul {
-        opacity: 1;
+    input:checked ~ ul {
+      opacity: 1;
     }
 
-    input:checked~label .menu {
-        box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
+    input:checked ~ label .menu {
+      box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
     }
 
-    input:checked~label .hamburger {
-        transform: rotate(45deg)
+    input:checked ~ label .hamburger {
+      transform: rotate(45deg);
     }
 
-    input:checked~label .hamburger::before {
-        transform: rotate(-90deg);
-        top: 0;
+    input:checked ~ label .hamburger::before {
+      transform: rotate(-90deg);
+      top: 0;
     }
 
-    input:checked~label .hamburger::after {
-        transform: rotate(-90deg);
-        bottom: 0;
+    input:checked ~ label .hamburger::after {
+      transform: rotate(-90deg);
+      bottom: 0;
     }
 
     ul {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        list-style: none;
-        opacity: 0;
-        transition: .25s .1s cubic-bezier(0, 1.07, 1.02);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      opacity: 0;
+      transition: 0.25s 0.1s cubic-bezier(0, 1.07, 1.02);
     }
 
     a {
-        display: block;
-        margin-bottom: 40px;
-        color: #ed34a2;
-        font-size: 47px;
-        text-decoration: none;
+      display: block;
+      margin-bottom: 40px;
+      color: #ed34a2;
+      font-size: 47px;
+      text-decoration: none;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <input id="menu-hamburger" type="checkbox" />
 
     <label for="menu-hamburger">
-        <div class="menu">
-            <span class="hamburger"></span>
-        </div>
+      <div class="menu">
+        <span class="hamburger"></span>
+      </div>
     </label>
 
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-</body>
-
+  </body>
 </html>
