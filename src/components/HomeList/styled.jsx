@@ -19,7 +19,7 @@ export const Header = styled.header`
   flex-wrap: wrap;
 `
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   margin: 0 0.5rem 0 0;
   text-align: left;
   font-size: 1.5rem;
