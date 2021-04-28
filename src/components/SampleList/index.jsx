@@ -12,14 +12,10 @@ const ProjectList = () => (
       <Description>{Strings.samples.description}</Description>
     </Header>
     <S.LinksWrapper>
-      {Strings.samples.list.map(({ description, link }, index) => (
-        <a
-          key={index}
-          href={link}
-          target="_target"
-          rel="noreferrer noopener"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+      {Strings.samples.list.map(({ title, description, link }, index) => (
+        <a key={index} href={link} target="_target" rel="noreferrer noopener">
+          <strong>{title}</strong>: {description}
+        </a>
       ))}
     </S.LinksWrapper>
   </S.Wrapper>

@@ -260,28 +260,29 @@ const dictionary = {
     description: "One page designs to test some concepts",
     list: [
       {
-        description:
-          "<strong>Menu Hamburger</strong>: Full screen menu with three tracks",
+        title: "Menu Hamburger",
+        description: "Full screen menu with three tracks",
         link: "/web/hamburgermenu.html",
       },
       {
-        description:
-          "<strong>Input Animation</strong>: Field for entering values with animation effects",
+        title: "Input Animation",
+        description: "Field for entering values with animation effects",
         link: "/web/inputanimation.html",
       },
       {
-        description:
-          "<strong>Loading Spinner</strong>: Cyclic effect to indicate resource loading",
+        title: "People Search",
+        description: "Cyclic effect to indicate resource loading",
         link: "/web/loadingspinner.html",
       },
       {
+        title: "People Search",
         description:
-          "<strong>People Search</strong>: Cards of introduction from people with text search option",
+          "Cards of introduction from people with text search option",
         link: "/web/peoplesearch.html",
       },
       {
-        description:
-          "<strong>Sun and Moon</strong>: Dark and light transition animation with moon and sun",
+        title: "Sun and Moon",
+        description: "Dark and light transition animation with moon and sun",
         link: "/web/sunmoon.html",
       },
     ],
