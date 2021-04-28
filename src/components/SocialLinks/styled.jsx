@@ -5,9 +5,11 @@ export const SocialLinksWrapper = styled.nav`
   margin: 2rem auto;
   width: 100%;
 
-  ${media.lessThan("large")`
-    display: none;
-  `}
+  ${({ about }) =>
+    !about &&
+    media.lessThan("large")`
+        display: none;
+      `}
 `
 
 export const SocialLinksList = styled.ul`

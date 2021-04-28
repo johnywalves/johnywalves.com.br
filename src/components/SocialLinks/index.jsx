@@ -5,9 +5,9 @@ import links from "./content"
 // Style
 import * as S from "./styled"
 
-const SocialLinks = ({ about }) => {
+const SocialLinks = ({ about = false }) => {
   return (
-    <S.SocialLinksWrapper>
+    <S.SocialLinksWrapper about={about}>
       <S.SocialLinksList className={about ? "about" : ""}>
         {links.map((link, i) => {
           const Icon = Icons[link.icon]
