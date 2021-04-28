@@ -33,21 +33,28 @@ export const RSSLinksWrapper = styled.nav`
 `
 
 export const RSSLinksList = styled.ul`
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 300;
 `
 
 export const RSSLinksItem = styled.li`
-  padding: 0.5rem 0;
+  padding: 0.35rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   .active {
     color: var(--highlightDark);
+  }
+
+  svg {
+    vertical-align: baseline;
   }
 `
 
 export const IconWrapper = styled.div`
   fill: #bbb;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   margin-right: 0.35rem;
 `
