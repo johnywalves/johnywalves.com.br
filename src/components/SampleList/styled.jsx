@@ -16,7 +16,7 @@ export const LinksWrapper = styled.div`
   a:hover,
   a:visited {
     text-decoration: none;
-    color: inherit;
+    color: var(--texts);
 
     line-height: 1.8rem;
     cursor: pointer;
