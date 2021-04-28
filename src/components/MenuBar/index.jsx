@@ -15,6 +15,7 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
+  const url =  useMemo(() =>  typeof window !== 'undefined' ? window.location.pathname : '', []);
   const isDarkMode = useMemo(() => theme === "dark", [theme])
   const isListMode = useMemo(() => display === "list", [display])
 
@@ -112,13 +113,14 @@ const MenuBar = () => {
         >
           <Bulb />
         </S.MenuBarItem>
+        {(url === '/blog/' || url === '/search/') &&
         <S.MenuBarItem
           title="Mudar visualização"
           className="display"
           onClick={toggleDisplay}
         >
           {isListMode ? <Grid /> : <ListUl />}
-        </S.MenuBarItem>
+        </S.MenuBarItem>}
         <S.MenuBarItem title="Ir para o topo">
           <Arrow onClick={goToTop} />
         </S.MenuBarItem>
