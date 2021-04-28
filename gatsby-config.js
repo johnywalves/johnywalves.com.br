@@ -160,7 +160,7 @@ const pluginsConfig = [
                       edge.node.frontmatter.coverImage
                     }' alt='${
                       edge.node.frontmatter.transcription
-                    }' height='250px' width='auto'></a></p>`,
+                    }' height='285px' width='auto'></a></p>`,
                   },
                 ],
               })
