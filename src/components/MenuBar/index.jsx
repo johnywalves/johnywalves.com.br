@@ -15,8 +15,8 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const isDarkMode = useMemo(() => theme === "dark", [theme]);
-  const isListMode = useMemo(() => display === "list", [display]);
+  const isDarkMode = useMemo(() => theme === "dark", [theme])
+  const isListMode = useMemo(() => display === "list", [display])
 
   useEffect(() => {
     setTheme(window.__theme)
@@ -31,11 +31,21 @@ const MenuBar = () => {
   }, [])
 
   const toggleTheme = useCallback(() => {
-    window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+    const newTheme = isDarkMode ? "light" : "dark"
+    window.__setPreferredTheme(newTheme)
+
+    if (typeof window.ga !== undefined) {
+      window.ga("send", "event", "layout", "theme", newTheme)
+    }
   }, [isDarkMode])
 
   const toggleDisplay = useCallback(() => {
-    window.__setPreferredDisplay(isListMode ? "grid" : "list")
+    const newDisplay = isListMode ? "grid" : "list"
+    window.__setPreferredDisplay(newDisplay)
+
+    if (typeof window.ga !== undefined) {
+      window.ga("send", "event", "layout", "display", newDisplay)
+    }
   }, [isListMode])
 
   return (
