@@ -15,7 +15,10 @@ const MenuBar = () => {
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const url =  useMemo(() =>  typeof window !== 'undefined' ? window.location.pathname : '', []);
+  const url = useMemo(
+    () => (typeof window !== "undefined" ? window.location.pathname : ""),
+    []
+  )
   const isDarkMode = useMemo(() => theme === "dark", [theme])
   const isListMode = useMemo(() => display === "list", [display])
 
@@ -35,18 +38,22 @@ const MenuBar = () => {
     const newTheme = isDarkMode ? "light" : "dark"
     window.__setPreferredTheme(newTheme)
 
-    if (typeof window.ga !== undefined) {
-      window.ga("send", "event", "layout", "theme", newTheme)
-    }
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "changeTheme",
+      preferred_theme: newTheme,
+    })
   }, [isDarkMode])
 
   const toggleDisplay = useCallback(() => {
     const newDisplay = isListMode ? "grid" : "list"
     window.__setPreferredDisplay(newDisplay)
 
-    if (typeof window.ga !== undefined) {
-      window.ga("send", "event", "layout", "display", newDisplay)
-    }
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "changeDisplay",
+      preferred_display: newDisplay,
+    })
   }, [isListMode])
 
   return (
@@ -113,14 +120,15 @@ const MenuBar = () => {
         >
           <Bulb />
         </S.MenuBarItem>
-        {(url === '/blog/' || url === '/search/') &&
-        <S.MenuBarItem
-          title="Mudar visualização"
-          className="display"
-          onClick={toggleDisplay}
-        >
-          {isListMode ? <Grid /> : <ListUl />}
-        </S.MenuBarItem>}
+        {(url === "/blog/" || url === "/search/") && (
+          <S.MenuBarItem
+            title="Mudar visualização"
+            className="display"
+            onClick={toggleDisplay}
+          >
+            {isListMode ? <Grid /> : <ListUl />}
+          </S.MenuBarItem>
+        )}
         <S.MenuBarItem title="Ir para o topo">
           <Arrow onClick={goToTop} />
         </S.MenuBarItem>
