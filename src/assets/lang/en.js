@@ -232,7 +232,7 @@ const dictionary = {
       {
         title: "Bom dia, equipes dev!",
         sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
-        cover: "http://bomdiaequipesdev.com.br/img/thumbnail.png",
+        cover: "https://bomdiaequipesdev.com.br/img/thumbnail.png",
         coverPosition: "center",
         view: "https://bomdiaequipesdev.com.br/",
         description:
