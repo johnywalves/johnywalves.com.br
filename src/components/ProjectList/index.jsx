@@ -15,13 +15,13 @@ const ImageCover = styled.img`
 const ProjectList = () => (
   <HomeList
     title={Strings.projects.title}
-    description={Strings.projects.description}
-  >
+    description={Strings.projects.description}>
     {Strings.projects.list.map((project, index) => (
       <HomeCard
         key={index}
         {...project}
         cover={
+          project.cover && 
           <a href={project.view} target="_blank" rel="noreferrer">
             <ImageCover
               src={project.cover}
