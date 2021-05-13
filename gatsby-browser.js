@@ -18,6 +18,6 @@ if (typeof window !== "undefined") {
     document.body.appendChild(root)
     ReactDOM.render(<SWUpdater></SWUpdater>, root)
   }
-}*/
+}
 
-export { onServiceWorkerUpdateReady }
+export { onServiceWorkerUpdateReady }*/
