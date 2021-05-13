@@ -281,6 +281,12 @@ const dictionary = {
         link: "/web/peoplesearch.html",
       },
       {
+        title: "Relógio com simulação do céu",
+        description:
+          "Manipulação de componentes e animações ao passar do tempo",
+        link: "/web/clocksunandmon.html",
+      },
+      {
         title: "Sun and Moon",
         description: "Dark and light transition animation with moon and sun",
         link: "/web/sunmoon.html",
