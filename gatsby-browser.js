@@ -1,6 +1,6 @@
-import React from "react"
+/*import React from "react"
 import ReactDOM from "react-dom"
-import SWUpdater from "./src/components/SWUpdater"
+import SWUpdater from "./src/components/SWUpdater"*/
 
 import "lazysizes"
 import "prismjs/themes/prism-tomorrow.css"
@@ -12,12 +12,12 @@ if (typeof window !== "undefined") {
   })
 }
 
-function onServiceWorkerUpdateReady() {
+/*function onServiceWorkerUpdateReady() {
   if (typeof document !== "undefined") {
     const root = document.createElement("div")
     document.body.appendChild(root)
     ReactDOM.render(<SWUpdater></SWUpdater>, root)
   }
-}
+}*/
 
 export { onServiceWorkerUpdateReady }
