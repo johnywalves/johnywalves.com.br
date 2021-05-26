@@ -2,7 +2,7 @@
 title: Card Game em React (Parte 1)
 description: Desenvolvendo um jogo tipo Hearthstone, Gwent e Yu-Gi-Oh! do
   conceito a entrega com React (Parte 1 de ?)
-date: 2021-04-13 08:26:08 -0300
+date: 2021-06-01 08:26:08 -0300
 featuredImage: ./featured/pokemon_cardgame-1.jpg
 coverImage: figures/pokemon_cardgame-1.jpg
 category: JS
