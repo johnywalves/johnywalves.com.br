@@ -220,6 +220,14 @@ const dictionary = {
     description: "Alguns projetos e experimentações desenvolvidas por mim",
     list: [
       {
+        title: "Register Switch",
+        sourceCode: "https://github.com/johnywalves/register-switch",
+        cover: "https://register-switch.vercel.app/thumbnail.png",
+        view: "https://register-switch.vercel.app",
+        description:
+          "Time spent executing tasks in a simple way to enable and disable",
+      },
+      {
         title: "Devflix",
         sourceCode: "https://github.com/johnywalves/devflix",
         cover: "https://devflix.johnywalves.com.br/img/thumbnail.png",
@@ -247,22 +255,25 @@ const dictionary = {
       {
         title: "Daisy Bell",
         sourceCode: "https://github.com/johnywalves/daisy-bell",
+        cover: "https://daisy.johnywalves.com.br/thumbnail.png",
         view: "https://daisy.johnywalves.com.br",
         description: "Compartilhamento de imagens com contexto",
       },
       {
         title: "Navegação de mapa",
         sourceCode: "https://github.com/johnywalves/wolt",
+        cover: "https://johnywalves.github.io/wolt/assets/img/thumbnail.png",
         view: "https://johnywalves.github.io/wolt/",
         description: "Projeto para construção de visualização de mapas",
       },
-      {
+      /*{
         title: "Biblioteca Steam",
         tech: "Frontend (HTML5/CSS3/JS)",
         sourceCode: "https://github.com/johnywalves/steamlibrary",
+        cover: "https://johnywalves.github.io/steamlibrary/img/thumbnail.png",
         view: "https://johnywalves.github.io/steamlibrary/",
         description: "Visualização de biblioteca de jogos Steam",
-      },
+      },*/
     ],
   },
   samples: {
