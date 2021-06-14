@@ -266,14 +266,20 @@ const dictionary = {
         view: "https://johnywalves.github.io/wolt/",
         description: "Projeto para construção de visualização de mapas",
       },
-      /*{
+      {
         title: "Biblioteca Steam",
-        tech: "Frontend (HTML5/CSS3/JS)",
         sourceCode: "https://github.com/johnywalves/steamlibrary",
         cover: "https://johnywalves.github.io/steamlibrary/img/thumbnail.png",
         view: "https://johnywalves.github.io/steamlibrary/",
         description: "Visualização de biblioteca de jogos Steam",
-      },*/
+      },
+      {
+        title: "Fire Make Better",
+        sourceCode: "https://github.com/johnywalves/fire-make-better",
+        cover: "https://johnywalves.github.io/fire-make-better/assets/thumbnail.png",
+        view: "https://johnywalves.github.io/fire-make-better/",
+        description: "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
+      },
     ],
   },
   samples: {

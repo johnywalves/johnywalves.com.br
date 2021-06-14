@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
 import Strings from "components/strings"
@@ -12,26 +12,50 @@ const ImageCover = styled.img`
   object-position: top;
 `
 
-const ProjectList = () => (
-  <HomeList
-    title={Strings.projects.title}
-    description={Strings.projects.description}>
-    {Strings.projects.list.map((project, index) => (
-      <HomeCard
-        key={index}
-        {...project}
-        cover={
-          project.cover && 
-          <a href={project.view} target="_blank" rel="noreferrer">
-            <ImageCover
-              src={project.cover}
-              style={{ objectPosition: project.coverPosition || "top" }}
+const ShowAll = styled.p`
+  width: 100%;
+  color: var(--highlight);
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+const ProjectList = () => {
+  const [showAll, setShowAll] = useState(false)
+
+  return (
+    <>
+      <HomeList
+        title={Strings.projects.title}
+        description={Strings.projects.description}
+      >
+        {Strings.projects.list
+          .slice(0, showAll ? 12 : 3)
+          .map((project, index) => (
+            <HomeCard
+              key={index}
+              {...project}
+              cover={
+                project.cover && (
+                  <a href={project.view} target="_blank" rel="noreferrer">
+                    <ImageCover
+                      src={project.cover}
+                      style={{ objectPosition: project.coverPosition || "top" }}
+                    />
+                  </a>
+                )
+              }
             />
-          </a>
-        }
-      />
-    ))}
-  </HomeList>
-)
+          ))}
+      </HomeList>
+      <ShowAll onClick={() => setShowAll(!showAll)}>
+        Visualizar {showAll ? "somente destaques" : "todos"}
+      </ShowAll>
+    </>
+  )
+}
 
 export default ProjectList
