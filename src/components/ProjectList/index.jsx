@@ -17,10 +17,6 @@ const ShowAll = styled.p`
   color: var(--highlight);
   text-align: center;
   cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `
 
 const ProjectList = () => {
