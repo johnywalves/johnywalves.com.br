@@ -222,7 +222,7 @@ const dictionary = {
       {
         title: "Register Switch",
         sourceCode: "https://github.com/johnywalves/register-switch",
-        cover: "https://register-switch.vercel.app/thumbnail.png",
+        cover: "registerSwitch",
         view: "https://register-switch.vercel.app",
         description:
           "Time spent executing tasks in a simple way to enable and disable",
@@ -230,7 +230,7 @@ const dictionary = {
       {
         title: "Devflix",
         sourceCode: "https://github.com/johnywalves/devflix",
-        cover: "https://devflix.johnywalves.com.br/img/thumbnail.png",
+        cover: "devflix",
         view: "https://devflix.johnywalves.com.br",
         description:
           "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira",
@@ -238,7 +238,7 @@ const dictionary = {
       {
         title: "CSS Animatic",
         sourceCode: "https://github.com/johnywalves/cssanimatic",
-        cover: "https://johnywalves.github.io/cssanimatic/thumbnail.png",
+        cover: "cssanimatic",
         view: "https://johnywalves.github.io/cssanimatic",
         description:
           "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
@@ -246,7 +246,7 @@ const dictionary = {
       {
         title: "Bom dia, equipes dev!",
         sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
-        cover: "https://bomdiaequipesdev.com.br/img/thumbnail.png",
+        cover: "bomdia",
         coverPosition: "center",
         view: "https://bomdiaequipesdev.com.br/",
         description:
@@ -255,28 +255,28 @@ const dictionary = {
       {
         title: "Daisy Bell",
         sourceCode: "https://github.com/johnywalves/daisy-bell",
-        cover: "https://daisy.johnywalves.com.br/thumbnail.png",
+        cover: "daisybell",
         view: "https://daisy.johnywalves.com.br",
         description: "Compartilhamento de imagens com contexto",
       },
       {
         title: "Navegação de mapa",
         sourceCode: "https://github.com/johnywalves/wolt",
-        cover: "https://johnywalves.github.io/wolt/assets/img/thumbnail.png",
+        cover: "wolt",
         view: "https://johnywalves.github.io/wolt/",
         description: "Projeto para construção de visualização de mapas",
       },
       {
         title: "Biblioteca Steam",
         sourceCode: "https://github.com/johnywalves/steamlibrary",
-        cover: "https://johnywalves.github.io/steamlibrary/img/thumbnail.png",
+        cover: "steamLibrary",
         view: "https://johnywalves.github.io/steamlibrary/",
         description: "Visualização de biblioteca de jogos Steam",
       },
       {
         title: "Fire Make Better",
         sourceCode: "https://github.com/johnywalves/fire-make-better",
-        cover: "https://johnywalves.github.io/fire-make-better/assets/thumbnail.png",
+        cover: "firemakebetter",
         view: "https://johnywalves.github.io/fire-make-better/",
         description: "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
       },
