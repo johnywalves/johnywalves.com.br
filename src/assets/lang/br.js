@@ -63,6 +63,7 @@ const dictionary = {
       {
         type: "Frameworks e Bibliotecas",
         list: [
+          { title: "Angular" },
           { title: "Bootstrap" },
           { title: "D3" },
           { title: "Express" },
@@ -385,8 +386,8 @@ const dictionary = {
         title: "Desenvolvedor Frontend",
         institution: "Meta",
         description: [
-          "Melhoria em ferramenta para aluguel de veículos com foco na aquisição e retenção de clientes, experiência do usuário, desempenho e SEO",
-          "Desenvolvimento Web Frontend (JavaScript, React, HTML e CSS)",
+          "Evolução e manutenção para retenção de clientes e autogestão em aluguel de veículos e outros serviços, focando na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO)",
+          "Desenvolvimento Web Frontend (JavaScript, React, NextJS, HTML e CSS)",
         ],
       },
       {
