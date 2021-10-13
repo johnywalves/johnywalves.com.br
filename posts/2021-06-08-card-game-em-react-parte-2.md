@@ -10,7 +10,7 @@ tags:
   - javascript
   - game
   - react
-published: false
+published: true
 highlight: false
 ---
 Configuração do ambiente React com Next

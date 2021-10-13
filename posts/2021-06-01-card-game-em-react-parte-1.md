@@ -10,7 +10,7 @@ tags:
   - javascript
   - game
   - react
-published: false
+published: true
 highlight: false
 ---
 Amo vídeo game, foi o motivo que me fez entrar para área de desenvolvimento, fazendo uso deste amor vamos nessa série fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
