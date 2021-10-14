@@ -100,7 +100,6 @@ const dictionary = {
           { title: "Firebase" },
           { title: "Git" },
           { title: "Scrum" },
-          { title: "SVN" },
           { title: "Jenkins" },
           { title: "VS Code" },
         ],
@@ -382,12 +381,20 @@ const dictionary = {
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
       {
-        date: "Out 2020 - Atual",
+        date: "Set 2021 - Atual",
+        title: "Desenvolvedor Frontend Senior",
+        institution: "Dextra",
+        description: [
+          "Suporte para ANBIMA no desenvolvimento de ferramenta para coleta de dados de instituições financeiras"
+        ],
+      },
+      {
+        date: "Out 2020 - Set 2021",
         title: "Desenvolvedor Frontend",
         institution: "Meta",
         description: [
-          "Evolução e manutenção para retenção de clientes e autogestão em aluguel de veículos e outros serviços, focando na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO)",
-          "Desenvolvimento Web Frontend (JavaScript, React, NextJS, HTML e CSS)",
+          "Prestação de serviço para Localiza na manutenção e evolução da ferramenta Zarp, para aluguel de veículos e outros serviços, voltado para captação e retenção de clientes com as tecnologias JavaScript, React, NextJS, HTML e CSS",
+          "Reestruturação do Zarp focado na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO) com NextJS",
         ],
       },
       {

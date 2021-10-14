@@ -109,13 +109,13 @@ const About = () => {
         </S.HeadSector>
         <div>
           {Strings.experience.list.slice(0, 3).map((exp, index) => (
-            <Experience key={index} {...exp} />
+            <Experience key={index} job={true}  {...exp} />
           ))}
           {Strings.experience.list.length > 3 && (
             <>
               <S.FullHistory open={openExperience}>
                 {Strings.experience.list.slice(3).map((exp, index) => (
-                  <Experience key={index} {...exp} />
+                  <Experience key={index} job={true} {...exp} />
                 ))}
               </S.FullHistory>
               <S.SeeMore onClick={() => setOpenExperience(!openExperience)}>

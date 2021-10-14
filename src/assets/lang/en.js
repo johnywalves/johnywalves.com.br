@@ -95,7 +95,6 @@ const dictionary = {
           { title: "Firebase" },
           { title: "Git" },
           { title: "Scrum" },
-          { title: "SVN" },
           { title: "Jenkins" },
           { title: "VS Code" },
         ],
@@ -321,7 +320,7 @@ const dictionary = {
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
       {
-        date: "Out 2020 - Cursando",
+        date: "Out 2020 - Current",
         title: "Pós-Graduação em Gestão de Projetos em TI",
         institution: "Fatec Rio Preto",
         description: [
@@ -371,7 +370,15 @@ const dictionary = {
     list: [
       {
         date: "Out 2020 - Current",
-        title: "Desenvolvedor Frontend",
+        title: "Senior Developer Frontend",
+        institution: "Dextra",
+        description: [
+          "Evolução e manutenção para retenção de clientes e autogestão em aluguel de veículos e outros serviços, focando na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO)"
+        ],
+      },
+      {
+        date: "Out 2020 - Set 2021",
+        title: "Frontend Developer",
         institution: "Meta",
         description: [
           "Evolução e manutenção para retenção de clientes e autogestão em aluguel de veículos e outros serviços, focando na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO)",

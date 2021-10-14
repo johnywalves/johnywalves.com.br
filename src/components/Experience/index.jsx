@@ -10,6 +10,7 @@ const Experience = ({
   description,
   awards,
   production,
+  job
 }) => (
   <S.Content>
     <S.Title>
@@ -18,9 +19,9 @@ const Experience = ({
     </S.Title>
     <S.Date>{date}</S.Date>
     {description && (
-      <S.Description>
+      <S.Description job={job}>
         {description.map((text, index) => (
-          <p key={index}>{text}</p>
+          <li key={index}>{text}</li>
         ))}
       </S.Description>
     )}

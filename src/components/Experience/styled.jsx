@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Content = styled.div`
   position: relative;
@@ -49,12 +49,18 @@ export const Date = styled.p`
   margin: 0.5rem 0;
 `
 
-export const Description = styled.div`
+const styleJob = css`
+  margin-left: 16px;
+  list-style-type: disc;
+`
+
+export const Description = styled.ul`
   margin: 1rem 0;
 
-  & p {
+  & li {
     margin: 0;
     line-height: 1.35rem;
+    ${({ job }) => job && styleJob}
   }
 `
 
