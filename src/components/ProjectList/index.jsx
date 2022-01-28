@@ -11,6 +11,7 @@ const ProjectList = () => {
   const [showAll, setShowAll] = useState(false)
 
   const {
+    machadoalves,
     registerSwitch,
     devflix,
     cssanimatic,
@@ -21,6 +22,15 @@ const ProjectList = () => {
     firemakebetter,
   } = useStaticQuery(graphql`
     query {
+      machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            height: 256
+            placeholder: DOMINANT_COLOR
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
         childImageSharp {
           gatsbyImageData(
@@ -98,6 +108,8 @@ const ProjectList = () => {
 
   const getImage = (name) => {
     switch (name) {
+      case "machadoalves":
+        return machadoalves
       case "registerSwitch":
         return registerSwitch
       case "devflix":

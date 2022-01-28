@@ -220,12 +220,18 @@ const dictionary = {
     description: "Alguns projetos e experimentações desenvolvidas por mim",
     list: [
       {
+        title: "Machado Alves - Contos Literários",
+        sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
+        cover: "machadoalves",
+        view: "https://www.machadoalves.com.br/",
+        description: "Históricas curtas escritas por mim, amigos e domínio público",
+      },
+      {
         title: "Register Switch",
         sourceCode: "https://github.com/johnywalves/register-switch",
         cover: "registerSwitch",
         view: "https://register-switch.vercel.app",
-        description:
-          "Time spent executing tasks in a simple way to enable and disable",
+        description: "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Devflix",
