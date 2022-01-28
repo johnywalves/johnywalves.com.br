@@ -6,7 +6,7 @@ const dictionary = {
     { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },
     { name: "VERSÃO IMPRESSÃO", file: "/docs/cv_johnywalves_pt_g.pdf" },
   ],
-  status: "Brasileiro, Solteiro, 32 anos",
+  status: "Brasileiro, Solteiro, 35 anos",
   live: "Sao José do Rio Preto, São Paulo, Brasil",
   lattes: "http://lattes.cnpq.br/0468996619713052",
   contact: {
@@ -387,7 +387,16 @@ const dictionary = {
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
       {
-        date: "Set 2021 - Atual",
+        date: "Dez 2021 - Atual",
+        title: "Desenvolvedor Frontend Senior",
+        institution: "CI&T",
+        description: [
+          "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações refentes a carteias administradas pelas instituições financeiras",
+          "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros"
+        ],
+      },
+      {
+        date: "Set 2021 - Nov 2021",
         title: "Desenvolvedor Frontend Senior",
         institution: "Dextra",
         description: [
