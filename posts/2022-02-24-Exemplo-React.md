@@ -6,15 +6,23 @@ featuredImage: ./featured/atom-1.jpg
 coverImage: /figures/atom-1.jpg
 category: React
 tags:
-  - JavaScriot
+  - JavaScript
   - React
 published: false
 highlight: false  
 ---
 
-Pré-requisitos 
+Biblioteca [React](https://reactjs.org/) criada para facilitar a criação de aplicativos para execução no navegador
 
-Node `node -v`, NPM `npm -v` e IDE recomendo VSCode
+## Pré-requisitos 
+
+Para começar precisamos dos softwares
+
+* Node, podemos verificar a instalação pelo comando `node -v`;
+* NPM, podemos verificar a instalação pelo comando `npm -v`;
+* Qualquer IDE com suporte a JavaScript recomendo [VSCode](https://code.visualstudio.com/).
+
+Instalar a ferramenta de auxílio para configuração das ferramenta de construção
 
 ```bash
 yarn global add create-react-app
@@ -22,15 +30,22 @@ yarn global add create-react-app
 npm -g i create-react-app
 ```
 
+Iniciar projeto pela ferramenta de auxílio
+
 ```bash
 npx create-react-app medals-olympic
 cd medals-olympic
 yarn start
 ```
 
-localhost:3000
+Projeto vai estar disponível em [localhost:3000](http://localhost:3000)
 
 ## Rotas
+
+* Simulação de rotas;
+* Redesenho do DOM.
+
+Instalação da biblioteca `react-router-dom` para controle de rotas 
 
 ```bash
 yarn add react-router-dom
@@ -38,7 +53,7 @@ yarn add react-router-dom
 npm i react-router-dom
 ```
 
-`routes/Medals.jsx`
+Criar o arquivo `src/routes/Medals.jsx` dentro da pasta indicada, para com o caminho da rota de medalhas
 
 ```javascript
 import React from 'react'
@@ -50,7 +65,7 @@ const Medals = () => {
 export default Medals
 ```
 
-`routes/Teams.jsx`
+Criar o arquivo `src/routes/Teams.jsx` para com o caminho da rota de times
 
 ```javascript
 import React from 'react'
@@ -62,7 +77,7 @@ const Teams = () => {
 export default Teams
 ```
 
-`Apps.js`
+Alterar o arquivo `src/Apps.js` para aceitar as rotas criadas
 
 ```javascript
 import {
@@ -90,9 +105,15 @@ function App() {
 export default App;
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000) apresentando a rota **medals** e [localhost:3000/sweden](http://localhost:3000/sweden) para apresentar a rota de **teams**, podemos substituir o *sweden* por qualquer conteúdo
+
 ## Componentes
 
-`components/Header/index.jsx`
+* Separação de responsabilidades;
+* Propriedades de componentes;
+* Desenho no DOM.
+
+Criar o arquivo `src/components/Header/index.jsx` com o conteúdo do que irá se apresentar no topo de todas as telas
 
 ```javascript
 import React from 'react'
@@ -104,19 +125,19 @@ const Header = () => {
 export default Header
 ```
 
-`components/Footer/index.jsx`
+Criar o arquivo `src/components/Footer/index.jsx` com o conteúdo do que irá se apresentar no rodapé de todas as telas
 
 ```javascript
 import React from 'react'
 
-const Header = () => {
-    return <header><h1>Header</h1></header>
+const Footer = () => {
+    return <footer><h1>Footer</h1></footer>
 }
 
-export default Header
+export default Footer
 ```
 
-`components/Main/index.jsx`
+Criar o arquivo `src/components/Main/index.jsx`, que irá encapsular as informações das rotas, destaque para o `children` que é todo conteúdo dentro das tags do componente
 
 ```javascript
 import React from 'react'
@@ -128,7 +149,7 @@ const Main = ({ children }) => {
 export default Main
 ```
 
-`Apps.js`
+Alterar o arquivo `src/Apps.js` com destaque para a importação e adição do `Header` e `Footer` dentro da tag `Router`  
 
 ```javascript
 import {
@@ -162,7 +183,14 @@ function App() {
 export default App;
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000) com o conteúdo do header e footer em todos os caminhos
+
 ## Estilos
+
+* Construção das classes;
+* Alteração do `head`.
+
+Instalação da biblioteca `styled-components` que facilitará o uso de CSS para os componentes
 
 ```bash
 yarn add styled-components
@@ -170,7 +198,7 @@ yarn add styled-components
 npm i styled-components
 ```
 
-`globalStyles.js`
+Criar o arquivo `src/globalStyles.js` com o CSS Reset, setando as configurações padrão para estilos para o projeto
 
 ```javascript
 import { createGlobalStyle } from 'styled-components';
@@ -202,7 +230,7 @@ const GlobalStyle = createGlobalStyle`
 export default GlobalStyle;
 ```
 
-`Apps.js`
+Alterar o arquivo `src/Apps.js`
 
 ```javascript
 import {
@@ -239,7 +267,7 @@ function App() {
 export default App;
 ```
 
-`components/Header/styles.js`
+Criar o arquivo `src/components/Header/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -275,7 +303,7 @@ export const Back = styled.img`
 `
 ```
 
-`components/Header/index.jsx`
+Alterar o arquivo `src/components/Header/index.jsx`
 
 ```javascript
 import React from 'react'
@@ -297,7 +325,7 @@ const Header = () => {
 export default Header
 ```
 
-`components/Footer/styles.js`
+Criar o arquivo `src/components/Footer/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -326,7 +354,7 @@ export const Credits = styled.h1`
 
 ```
 
-`components/Footer/index.jsx`
+Alterar o arquivo `src/components/Footer/index.jsx`
 
 ```javascript
 import React from 'react'
@@ -344,7 +372,7 @@ const Footer = () => {
 export default Footer
 ```
 
-`components/Main/styles.js`
+Criar o arquivo `src/components/Main/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -358,7 +386,7 @@ export const Wrapper = styled.main`
 `
 ```
 
-`components/Main/index.jsx`
+Alterar o arquivo `src/components/Main/index.jsx`
 
 ```javascript
 import React from 'react'
@@ -372,9 +400,11 @@ const Main = ({ children }) => {
 export default Main
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
+
 ## Listagem de informações (Medalhas)
 
-Renomear o `routes/Medals.jsx` para `routes/Medals/index.jsx`
+Renomear o `src/routes/Medals.jsx` para `src/routes/Medals/index.jsx`
 
 ```javascript
 import React from 'react'
@@ -434,7 +464,7 @@ const Medals = () => {
 export default Medals
 ```
 
-`routes/Medal/styles.js`
+Criar o arquivo `src/routes/Medal/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -449,9 +479,11 @@ export const Wrapper = styled.div`
 `
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
+
 ### Cabeçalho do quadro de medalhas
 
-`routes/Medal/Header/index.jsx`
+Criar o arquivo `src/routes/Medal/Header/index.jsx`
 
 ```javascript
 import React from 'react'
@@ -475,7 +507,7 @@ const MedalsHeader = () => {
 export default MedalsHeader
 ```
 
-`routes/Medal/Header/styles.js`
+Criar o arquivo `src/routes/Medal/Header/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -537,12 +569,13 @@ export const Total = styled.div`
     width: 3rem;
     margin: 1rem;
 `
-
 ```
+
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
 
 ### Itens do quadro de medalhas
 
-`routes/Medal/Row/index.jsx`
+Criar o arquivo `src/routes/Medal/Row/index.jsx`
 
 ```javascript
 import React from 'react'
@@ -566,7 +599,7 @@ const MedalsRow = ({ team, description, gold, silver, bronze }) => {
 export default MedalsRow
 ```
 
-`routes/Medal/Row/styles.js`
+Criar o arquivo `src/routes/Medal/Row/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -609,9 +642,11 @@ export const Medal = styled.p`
 `
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
+
 ### Links no Cabeçalho da página
 
-`components/Header/index.js`
+Criar o arquivo `src/components/Header/index.js`
 
 ```javascript
 import React from 'react'
@@ -636,9 +671,13 @@ const Header = () => {
 export default Header
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
+
 ## Listagem de informações (Times)
 
-Renomear o `routes/Teams.jsx` para `routes/Teams/index.jsx`
+Vamos listar o detalhe dos países de acordo com o caminho informado
+
+Renomear o `src/routes/Teams.jsx` para `src/routes/Teams/index.jsx` e mudar o conteúdo para adicionar a lista de países, ler a rota e apresentar as informações pela instrução 
 
 ```javascript
 import React, { useMemo } from 'react'
@@ -699,7 +738,7 @@ const Teams = () => {
 export default Teams
 ```
 
-`routes/Teams/styles.js`
+Criar o arquivo com estilo `src/routes/Teams/styles.js`
 
 ```javascript
 import styled from 'styled-components'
@@ -733,7 +772,12 @@ export const Description = styled.p`
 `
 ```
 
+Com o comando `yarn start` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
+
 ## API
+
+* Explicação da biblioteca `json-server`;
+* Explicação da biblioteca `concurrently`;
 
 ```bash
 yarn add json-server concurrently
@@ -741,20 +785,19 @@ yarn add json-server concurrently
 npm i json-server concurrently
 ```
 
-Adicionar no `package.json`
+Adicionar no `package.json` em `scripts`
 
 ```javascript
-...
+// ...
   "scripts": {
-    ...
+    // ...
     "server": "npx json-server --watch db.json --port 8000",
     "dev": "concurrently \"yarn start\" \"yarn server\""
   }
-...
+// ...
 ```
 
-`db.json`
-
+Criar o arquivo `db.json` na raiz, que irá servir como nosso banco de dados inicial
 
 ```javascript
 {
@@ -825,7 +868,7 @@ Adicionar no `package.json`
 }
 ```
 
-`routes/Medals/index.jsx`
+Alterar o `src/routes/Medals/index.jsx`, para fazer a chamada na API e gerenciar os estados com a resposta
 
 ```javascript
 import React, { useState, useEffect } from 'react'
@@ -855,7 +898,7 @@ const Medals = () => {
 export default Medals
 ```
 
-`routes/Teams/index.jsx`
+Alterar o `routes/Teams/index.jsx`, para fazer a chamada na API e gerenciar os estados com a resposta
 
 ```javascript
 import React, { useState, useEffect } from 'react'
@@ -894,5 +937,4 @@ const Teams = () => {
 export default Teams
 ```
 
-
-
+Com o comando `yarn dev` podemos visualizar a resposta pelo [localhost:3000](http://localhost:3000)
