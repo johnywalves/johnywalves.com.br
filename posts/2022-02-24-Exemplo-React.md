@@ -8,7 +8,7 @@ category: React
 tags:
   - JavaScript
   - React
-published: false
+published: true
 highlight: false  
 ---
 
@@ -230,7 +230,7 @@ const GlobalStyle = createGlobalStyle`
 export default GlobalStyle;
 ```
 
-Alterar o arquivo `src/Apps.js`
+Alterar o arquivo `src/Apps.js` para adicionar a importação e o componente de `GlobalStyle`
 
 ```javascript
 import {
@@ -267,7 +267,7 @@ function App() {
 export default App;
 ```
 
-Criar o arquivo `src/components/Header/styles.js`
+Criar o arquivo `src/components/Header/styles.js` 
 
 ```javascript
 import styled from 'styled-components'
@@ -303,7 +303,7 @@ export const Back = styled.img`
 `
 ```
 
-Alterar o arquivo `src/components/Header/index.jsx`
+Alterar o arquivo `src/components/Header/index.jsx` 
 
 ```javascript
 import React from 'react'
@@ -354,7 +354,7 @@ export const Credits = styled.h1`
 
 ```
 
-Alterar o arquivo `src/components/Footer/index.jsx`
+Alterar o arquivo `src/components/Footer/index.jsx` 
 
 ```javascript
 import React from 'react'
