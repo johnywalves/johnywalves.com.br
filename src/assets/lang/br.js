@@ -391,7 +391,7 @@ const dictionary = {
         title: "Desenvolvedor Frontend Senior",
         institution: "CI&T",
         description: [
-          "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações refentes a carteias administradas pelas instituições financeiras",
+          "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações referentes a carteiras administradas pelas instituições financeiras",
           "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros"
         ],
       },
