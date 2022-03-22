@@ -53,19 +53,13 @@
         background-color: var(--color-background);
     }
 
-    @media only screen and (max-width: 980px) {
-        body {
-            padding: 3rem calc(2rem);
-        }
-    }
-
     h1 {
         text-align: center;
         margin: 2rem 0;
     }
 
     ol.questions>li {
-        margin: 4rem;
+        margin: 4rem 0 0 4rem;
     }
 
     ol.questions>li>p {
@@ -130,6 +124,22 @@
         margin: 0;
         color: var(--color-background);
     }
+
+    @media only screen and (max-width: 980px) {
+        body {
+            padding: 2rem 1rem;
+            font-size: 1.6rem;
+        }
+
+        ol.questions>li {
+            margin: 2rem 0 0 2rem;
+        }
+
+        ol.questions>li>button {
+            padding: 1rem 1.5rem;
+            font-size: 1.4rem;
+        }
+    }    
 </style>
 
 <body>
