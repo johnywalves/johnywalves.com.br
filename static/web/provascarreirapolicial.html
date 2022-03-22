@@ -35,10 +35,12 @@
     /* Content CSS */
     :root {
         --color-background: #f3f3f3;
+        --color-background-highlight: #e3e3e3;
         --color-text: #333;
+        --color-text-light: #444;
         --color-right: green;
         --color-wrong: #ff6161;
-        --color-button: #de128c;
+        --color-highlight: #de128c;
         --color-button-highlight: #f27cc3;
     }
 
@@ -55,11 +57,31 @@
 
     h1 {
         text-align: center;
-        margin: 2rem 0;
+        margin: 0 0 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background-color: var(--color-background-highlight);
+    }
+
+    h3 {
+        border-bottom: 1px var(--color-right) solid;
+    }
+
+    h4 {
+        padding: 0;
+        margin: 1.5rem 0 0;
+    }
+
+    p {
+        text-align: justify;
     }
 
     ol.questions>li {
-        margin: 4rem 0 0 4rem;
+        margin: 3rem 0 0 4rem;
     }
 
     ol.questions>li>p {
@@ -81,15 +103,24 @@
         margin-left: 2rem;
     }
 
-    ol.questions>li.resolved>ol>p {
-        margin: 1rem;
+    ol.questions>li>ol>p {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        background-color: var(--color-background-highlight);
         transition: all 0.3s;
     }
 
-    ol.questions>li:not(.resolved)>ol>p {
+    ol.questions>li>ol>p>span::before, 
+    ol.questions>li>ol>p>span::after {
+        content: '"';
+        font-size: 110%;
+        font-weight: 700;
+    }
+
+    ol.questions>li:not(.answered)>ol>p {
         max-height: 0;
-        margin: 0;
-        color: var(--color-background);
+        padding: 0;
     }
 
     ol.questions>li.resolved>ol>li {
@@ -103,7 +134,7 @@
 
     ol.questions>li>button {
         color: var(--color-background);
-        background-color: var(--color-button);
+        background-color: var(--color-highlight);
         margin-top: 1rem;
         padding: 1rem 2rem;
         font-size: 1.8rem;
@@ -115,8 +146,12 @@
     }
 
     ol.questions>li>button:hover {
-        color: var(--color-text);
+        color: var(--color-text-light);
         background-color: var(--color-button-highlight);
+    }
+
+    ol.questions>li>button.active {
+        opacity: 0.75;
     }
 
     ol.questions>li.hidden {
@@ -139,7 +174,7 @@
             padding: 1rem 1.5rem;
             font-size: 1.4rem;
         }
-    }    
+    }
 </style>
 
 <body>
@@ -168,7 +203,7 @@
         <li class="hidden"></li>
         <li class="hidden"></li>
         <h4>Constituição Fedeal e Direitos Humanos</h4>
-        <li>
+        <li id="PCSP2013-21">
             <p>A República Federativa do Brasil rege-se nas suas relações internacionais, entre outros, pelo seguinte
                 princípio:</p>
             <ol>
@@ -195,22 +230,57 @@
                 </p>
                 <li>uso autorizado da força para resposta aos ataques terroristas internacionais.</li>
             </ol>
-            <button>Resolver</button>
+            <button>Solução</button>
+            <button>Resolução</button>
         </li>
-        <li>
+        <li id="PCSP2013-22">
             <p>Assinale a alternativa cujo conteúdo corresponde a um direito ou garantia fundamental previsto
                 expressamente no texto constitucional.</p>
             <ol>
                 <li class="right">Não será concedida extradição de estrangeiro por crime político ou de opinião.</li>
+                <p>
+                    <strong>Constituição Federal - Artigo 5º</strong><br />
+                    <strong>LII – não será concedida extradição de estrangeiro por crime político ou de
+                        opinião;</strong>
+                </p>
                 <li>Não haverá juízo ou tribunal de exceção, exceto quando se tratar de crime hediondo, inafiançável ou
                     imprescritível, na forma da lei.</li>
+                <p>
+                    <strong>Constituição Federal - Artigo 5º</strong><br />
+                    XXXVII – <strong>não</strong> haverá juízo ou tribunal de exceção;
+                </p>
                 <li>Ninguém será processado nem sentenciado senão pela autoridade policial competente.</li>
+                <p>
+                    <strong>Constituição Federal - Artigo 5º</strong><br />
+                    LIII – ninguém será processado nem sentenciado senão pela autoridade competente;<br />
+                    <span>Não tem citação autoridade policial</span>
+                </p>
                 <li>A lei penal não retroagirá, salvo quando for para punir o réu.</li>
-                <li>Não poderá haver penas de morte, cruéis ou de interdição de direitos individuais.</li>
+                <p>
+                    <strong>Constituição Federal - Artigo 5º</strong><br />
+                    XL – a lei penal não retroagirá, salvo para <strong>beneficiar</strong> o réu;
+                </p>
+                <li>Não poderá haver penas de morte, cruéis ou de interdição de direitos individuais.</li>          
+                <p>
+                    <strong>Constituição Federal - Artigo 5º</strong><br />
+                    XLVI – a lei regulará a individualização da pena e adotará, entre outras, as seguintes:<br/>
+                    <strong>a) privação ou restrição da liberdade</strong>;<br/>
+                    b) perda de bens;<br/>
+                    c) multa;<br/>
+                    d) prestação social alternativa;<br/>
+                    e) suspensão ou interdição de direitos;<br/><br/>
+                    <strong>XLVII – não haverá penas</strong>:<br/>
+                    <strong>a) de morte</strong>, salvo em caso de guerra declarada, nos termos do art. 84, XIX;<br/>
+                    b) de caráter perpétuo;<br/>
+                    c) de trabalhos forçados;<br/>
+                    d) de banimento;<br/>
+                    <strong>e) cruéis</strong>;<br/>
+                </p>
             </ol>
-            <button>Resolver</button>
+            <button>Solução</button>
+            <button>Resolução</button>
         </li>
-        <li>
+        <li id="PCSP2013-23">
             <p>Sansão Herculano, brasileiro, médico veterinário, maior de idade, foi preso em flagrante delito e levado
                 à Delegacia de Polícia. Segundo o que estabelece a Constituição Federal, Sansão tem os seguintes
                 direitos:</p>
@@ -227,7 +297,92 @@
                     família sejam
                     imediatamente comunicados sobre sua prisão.</li>
             </ol>
-            <button>Resolver</button>
+            <button>Solução</button>
+            <button>Resolução</button>
+        </li>
+        <li id="PCSP2013-24">
+            <p>Conforme estabelece a Constituição Federal, as funções de polícia judiciária e de preservação da ordem
+                pública cabem, respectivamente,</p>
+            <ol>
+                <li>à Polícia Militar e ao Corpo de Bombeiros.</li>
+                <li>à Polícia Militar e às Polícias Civis.</li>
+                <li class="right">às Polícias Civis e à Polícia Militar.</li>
+                <li>às Polícias Civis e às Guardas Municipais.</li>
+                <li>à Polícia Federal e às Guardas Municipais.</li>
+            </ol>
+            <button>Solução</button>
+            <button>Resolução</button>
+        </li>
+        <li id="PCSP2013-25">
+            <p>
+                Na evolução dos direitos humanos, costumam-se classificar, geralmente, as gerações dos direitos em três
+                fases (Eras dos Direitos), conforme seu processo evolutivo histórico.
+                <br />
+                Assinale a alternativa que representa, correta e cronologicamente, essa classificação.
+            </p>
+            <ol>
+                <li>Direitos civis; direitos políticos; direitos fundamentais.</li>
+                <li>Igualdade; liberdade; fraternidade.</li>
+                <li>Direitos individuais; direitos coletivos; direitos políticos e civis.</li>
+                <li class="right">Direitos civis e políticos; direitos econômicos e sociais; direitos difusos.</li>
+                <li>Liberdades positivas; liberdades negativas; direitos dos povos.</li>
+            </ol>
+            <button>Solução</button>
+            <button>Resolução</button>
+        </li>
+        <li id="PCSP2013-26">
+            <p>
+                Dentre os documentos reconhecidos internacionalmente e que limitaram o poder do governante em relação
+                aos direitos do homem, encontra-se o mais remoto e pioneiro antecedente que submetia o Rei a um corpo
+                escrito de normas, procurava afastar a arbitrariedade na cobrança de impostos e implementava um
+                julgamento justo aos homens.
+                <br />
+                Esse importante documento histórico dos direitos humanos denomina-se
+            </p>
+            <ol>
+                <li>Talmude.</li>
+                <li class="right"><em>Magna Carta</em> da Inglaterra.</li>
+                <li>Alcorão.</li>
+                <li>Declaração dos Direitos do Homem e do Cidadão da França.</li>
+                <li><em>Bill of Rights</em>.</li>
+            </ol>
+            <button>Solução</button>
+            <button>Resolução</button>
+        </li>
+        <li id="PCSP2013-27">
+            <p>
+                Com relação aos direitos políticos previstos na Constituição Federal brasileira, é correto afirmar que
+            </p>
+            <ol>
+                <li class="right">não podem alistar-se como eleitores os estrangeiros e, durante o período do serviço
+                    militar
+                    obrigatório, os conscritos.</li>
+                <li>o alistamento eleitoral e o voto são obrigatórios para os maiores de dezoito anos e facultativos
+                    para os analfabetos e os maiores de sessenta anos.</li>
+                <li>a idade mínima para elegibilidade ao cargo de Vereador é de vinte e um anos.</li>
+                <li>os direitos políticos poderão ser cassados em decorrência da sentença criminal condenatória
+                    transitada em julgado.</li>
+                <li>o militar é inalistável e inelegível.</li>
+            </ol>
+            <button>Solução</button>
+            <button>Resolução</button>
+        </li>
+        <li id="PCSP2013-28">
+            <p>
+                Tendo em vista os direitos humanos fundamentais na vigente Constituição da República brasileira, o
+                direito de locomoção e a obtenção ou correção de dados e informações constantes de arquivos de entidades
+                governamentais ou caráter público podem ser garantidos, respectivamente, pelos seguintes remédios
+                constitucionais:
+            </p>
+            <ol>
+                <li>alvará de soltura e ação civil pública.</li>
+                <li><em>habeas data</em> e mandado de segurança.</li>
+                <li>mandado de injunção e <em>habeas data</em>.</li>
+                <li><em>habeas corpus</em> e mandado de injunção.</li>
+                <li class="right"><em>habeas corpus</em> e <em>habeas data</em>.</li>
+            </ol>
+            <button>Solução</button>
+            <button>Resolução</button>
         </li>
     </ol>
 </body>
@@ -235,12 +390,16 @@
 <script>
     var questions = document.querySelectorAll("ol.questions>li")
     questions.forEach(function (question) {
-        var button = question.querySelector('button')
-        if (button) {
-            function resolveQuestion() {
-                question.classList.toggle('resolved')
-            }
-            button.addEventListener("click", resolveQuestion);
+        var first_button = question.querySelector('button:first-of-type')
+        if (first_button) {
+            function resolveQuestion() { question.classList.toggle('resolved'); first_button.classList.toggle('active'); }
+            first_button.addEventListener("click", resolveQuestion);
+        }
+
+        var last_button = question.querySelector('button:last-of-type')
+        if (last_button) {
+            function resolveQuestion() { question.classList.toggle('answered'); last_button.classList.toggle('active'); }
+            last_button.addEventListener("click", resolveQuestion);
         }
     })
 </script>
