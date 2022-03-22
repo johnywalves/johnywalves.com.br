@@ -393,20 +393,12 @@ const dictionary = {
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
       {
-        date: "Dez 2021 - Atual",
+        date: "Set 2021 - Atual",
         title: "Desenvolvedor Frontend Senior",
         institution: "CI&T",
         description: [
           "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações referentes a carteiras administradas pelas instituições financeiras",
           "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros"
-        ],
-      },
-      {
-        date: "Set 2021 - Nov 2021",
-        title: "Desenvolvedor Frontend Senior",
-        institution: "Dextra",
-        description: [
-          "Suporte para ANBIMA no desenvolvimento de ferramenta para coleta de dados de instituições financeiras"
         ],
       },
       {
