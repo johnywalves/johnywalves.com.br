@@ -326,6 +326,12 @@ const dictionary = {
           "Animação de transição de escuro e claro com a lua e o sol",
         link: "/web/sunmoon.html",
       },
+      {
+        title: "Questões Carreira Policial",
+        description:
+          "Listagem de questões resolvidas para estudo em carreira policial",
+        link: "/web/provascarreirapolicial.html",
+      },
     ],
   },
   education: {

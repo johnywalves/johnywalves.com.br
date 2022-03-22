@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Carreira Policial (Provas)</title>
+</head>
+
+<style>
+    /* Reset CSS */
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    a,
+    a:hover,
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Content CSS */
+    :root {
+        --color-background: #f3f3f3;
+        --color-text: #333;
+        --color-right: green;
+        --color-wrong: #ff6161;
+        --color-button: #de128c;
+        --color-button-highlight: #f27cc3;
+    }
+
+    ::marker {
+        font-weight: 900;
+    }
+
+    body {
+        padding: 3rem calc((100% - 980px) / 2);
+        font-size: 2.4rem;
+        color: var(--color-text);
+        background-color: var(--color-background);
+    }
+
+    @media only screen and (max-width: 980px) {
+        body {
+            padding: 3rem calc(2rem);
+        }
+    }
+
+    h1 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    ol.questions>li {
+        margin: 4rem;
+    }
+
+    ol.questions>li>p {
+        margin: 1.5rem 0;
+    }
+
+    ol.questions>li>ol {
+        list-style-type: upper-alpha;
+        margin-left: 1rem;
+    }
+
+    ol.questions>li>ol>li {
+        margin: 0.4rem 0;
+        transition: all 0.2s;
+    }
+
+    ol.questions>li>ol>li::marker {
+        font-weight: 900;
+        margin-left: 2rem;
+    }
+
+    ol.questions>li.resolved>ol>p {
+        margin: 1rem;
+        transition: all 0.3s;
+    }
+
+    ol.questions>li:not(.resolved)>ol>p {
+        max-height: 0;
+        margin: 0;
+        color: var(--color-background);
+    }
+
+    ol.questions>li.resolved>ol>li {
+        color: var(--color-wrong);
+    }
+
+    ol.questions>li.resolved>ol>li.right {
+        color: var(--color-right);
+        font-weight: 700;
+    }
+
+    ol.questions>li>button {
+        color: var(--color-background);
+        background-color: var(--color-button);
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    ol.questions>li>button:hover {
+        color: var(--color-text);
+        background-color: var(--color-button-highlight);
+    }
+
+    ol.questions>li.hidden {
+        height: 0;
+        margin: 0;
+        color: var(--color-background);
+    }
+</style>
+
+<body>
+    <h1>Resolução de Provas para Carreira Policial</h1>
+    <h2>Investigador da Polícia Cívil do Estado de São Paulo (PC/SP)</h2>
+    <h3>VUNESP 2013</h3>
+    <ol class="questions">
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <li class="hidden"></li>
+        <h4>Constituição Fedeal e Direitos Humanos</h4>
+        <li>
+            <p>A República Federativa do Brasil rege-se nas suas relações internacionais, entre outros, pelo seguinte
+                princípio:</p>
+            <ol>
+                <li>colaboração entre os povos para a evolução religiosa da humanidade.</li>
+                <li>construção de uma sociedade internacional livre, justa e solidária.</li>
+                <li>fruição total e absoluta dos direitos humanos.</li>
+                <li class="right">autodeterminação dos povos.</li>
+                <p>
+                    <strong>Constituição Federal - Artigo 4º</strong> A República Federativa do Brasil rege-se nas suas
+                    relações internacionais pelos seguintes princípios:<br />
+                    I – independência nacional;<br />
+                    II – prevalência dos direitos humanos;<br />
+                    <strong>III – autodeterminação dos povos;</strong><br />
+                    IV – não-intervenção;<br />
+                    V – igualdade entre os Estados;<br />
+                    VI – defesa da paz;<br />
+                    VII – solução pacífica dos conflitos;<br />
+                    VIII – repúdio ao terrorismo e ao racismo;<br />
+                    IX – cooperação entre os povos para o progresso da humanidade;<br />
+                    X – concessão de asilo político.<br />
+                    <em>Parágrafo único</em>. A República Federativa do Brasil buscará a integração econômica, política,
+                    social e cultural dos povos da América Latina, visando à formação de uma comunidade latino-americana
+                    de nações.
+                </p>
+                <li>uso autorizado da força para resposta aos ataques terroristas internacionais.</li>
+            </ol>
+            <button>Resolver</button>
+        </li>
+        <li>
+            <p>Assinale a alternativa cujo conteúdo corresponde a um direito ou garantia fundamental previsto
+                expressamente no texto constitucional.</p>
+            <ol>
+                <li class="right">Não será concedida extradição de estrangeiro por crime político ou de opinião.</li>
+                <li>Não haverá juízo ou tribunal de exceção, exceto quando se tratar de crime hediondo, inafiançável ou
+                    imprescritível, na forma da lei.</li>
+                <li>Ninguém será processado nem sentenciado senão pela autoridade policial competente.</li>
+                <li>A lei penal não retroagirá, salvo quando for para punir o réu.</li>
+                <li>Não poderá haver penas de morte, cruéis ou de interdição de direitos individuais.</li>
+            </ol>
+            <button>Resolver</button>
+        </li>
+        <li>
+            <p>Sansão Herculano, brasileiro, médico veterinário, maior de idade, foi preso em flagrante delito e levado
+                à Delegacia de Polícia. Segundo o que estabelece a Constituição Federal, Sansão tem os seguintes
+                direitos:</p>
+            <ol>
+                <li>a assistência da família e de um advogado, cela especial por ter curso superior e uma ligação
+                    telefônica para pessoa por ele indicada.</li>
+                <li>ser criminalmente identificado, mesmo se possuir identificação civil, cela especial em razão de ter
+                    curso superior e assistência de um advogado.</li>
+                <li>avistar-se pessoalmente com o promotor de justiça, entrar em contato com uma pessoa da família ou
+                    quem ele indicar e assistência de um advogado ou defensor público.</li>
+                <li>relaxamento imediato de sua prisão se ela foi ilegal, permanecer calado e cela especial privativa.
+                </li>
+                <li class="right">permanecer calado, identificação dos responsáveis por sua prisão e que o juiz e sua
+                    família sejam
+                    imediatamente comunicados sobre sua prisão.</li>
+            </ol>
+            <button>Resolver</button>
+        </li>
+    </ol>
+</body>
+
+<script>
+    var questions = document.querySelectorAll("ol.questions>li")
+    questions.forEach(function (question) {
+        var button = question.querySelector('button')
+        if (button) {
+            function resolveQuestion() {
+                question.classList.toggle('resolved')
+            }
+            button.addEventListener("click", resolveQuestion);
+        }
+    })
+</script>
+
+</html>
