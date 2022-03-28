@@ -330,7 +330,7 @@ const dictionary = {
         title: "Questões Carreira Policial",
         description:
           "Listagem de questões resolvidas para estudo em carreira policial",
-        link: "/web/provascarreirapolicial.html",
+        link: "/web/provascarreirapolicial/index.html",
       },
     ],
   },
