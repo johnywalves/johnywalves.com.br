@@ -59,6 +59,16 @@
         --color-button-highlight: #f27cc3;
     }
 
+    a,
+    a:hover,
+    a:visited {
+        color: var(--color-highlight);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
     ::marker {
         font-weight: 900;
     }
@@ -122,12 +132,18 @@
         margin: 1.5rem 0;
     }
 
-    ol.questions>li>ol {
+    ol.questions>li>ol,
+    ol.questions>li>ul {
         list-style-type: upper-alpha;
         margin-left: 1rem;
     }
 
-    ol.questions>li>ol>li {
+    ol.questions>li>ul {
+        list-style-type: none;
+    }
+
+    ol.questions>li>ol>li,
+    ol.questions>li>ul>li {
         margin: 0.4rem 0;
         transition: all 0.2s;
     }
@@ -151,7 +167,8 @@
         text-decoration: underline;
     }
 
-    ol.questions>li>ol>p {
+    ol.questions>li>ol>p,
+    ol.questions>li>ul>p {
         padding: 1.5rem;
         border-radius: 1rem;
         overflow: hidden;
@@ -160,23 +177,29 @@
     }
 
     ol.questions>li>ol>p>span::before,
-    ol.questions>li>ol>p>span::after {
+    ol.questions>li>ol>p>span::after,
+    ol.questions>li>ul>p>span::before,
+    ol.questions>li>ul>p>span::after {
         content: '"';
         font-size: 110%;
         font-weight: 700;
     }
 
-    ol.questions>li:not(.answered)>ol>p {
+    ol.questions>li:not(.answered)>ol>p,
+    ol.questions>li:not(.answered)>ul>p {
         max-height: 0;
         padding: 0;
     }
 
-    ol.questions>li.resolved>ol>li {
+    ol.questions>li.resolved>ol>li,
+    ol.questions>li.resolved>ul>li {
         color: var(--color-wrong);
     }
 
-    ol.questions>li.resolved>ol>li.right {
+    ol.questions>li.resolved>ol>li.right,
+    ol.questions>li.resolved>ul>li.right {
         color: var(--color-right);
+        font-weight: 700;
     }
 
     ol.questions>li>button {
@@ -253,8 +276,7 @@
             <h4>Constituição Federal e Direitos Humanos</h4>
             <li id="PCSP2013-21">
                 <p>A República Federativa do Brasil rege-se nas suas relações internacionais, entre outros, pelo
-                    seguinte
-                    princípio:
+                    seguinte princípio:
                     <a href="#PCSP2013-21">#</a>
                 </p>
                 <ol>
@@ -1247,6 +1269,188 @@
         </ol>
         <h3>VUNESP 2014</h3>
         <ol class="questions">
+            <h4>Nocções de Criminologia</h4>
+            <li id="PCSP2014-1">
+                <p> A ciência que estuda a criminogênese é chamada de
+                    <a href="#PCSP2014-1">#</a>
+                </p>
+                <ol>
+                    <li>ciência política.</li>
+                    <li>ciência pública.</li>
+                    <li>sociologia individual.</li>
+                    <li class="right">etiologia criminal.</li>
+                    <li>ciência jurídica.</li>
+                </ol>
+                <button>Solução</button>
+            </li>
+            <li id="PCSP2014-2">
+                <p> Segundo a doutrina dominante, a criminologia é uma ciência aplicada que se subdivide em dois ramos:
+                    a criminologia ______________ que consiste na sistematização, comparação e classificação dos
+                    resultados obtidos no âmbito das ciências criminais acerca do seu objeto; e a criminologia
+                    ______________ que consiste na aplicação dos conhecimentos teóricos daquela para o tratamento dos
+                    criminosos.
+                    <a href="#PCSP2014-2">#</a>
+                </p>
+                <ol>
+                    <li>prática ... social</li>
+                    <li>comparativa ... observativa</li>
+                    <li class="right">geral ... clínica</li>
+                    <li>individual ... científica</li>
+                    <li>metódica ... particular</li>
+                </ol>
+                <button>Solução</button>
+            </li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <li class="hidden"></li>
+            <h4>Constituição Federal</h4>
+            <li id="PCSP2014-31">
+                <p>
+                    Considerando o disposto na Constituição Federal sobre os direitos e garantias fundamentais, assinale
+                    a alternativa correta.
+                    <a href="#PCSP2014-31">#</a>
+                </p>
+                <ol>
+                    <li>Todos podem reunir-se pacificamente, sem armas, em locais abertos ao público, desde que obtida
+                        prévia autorização do delegado de polícia e não frustrem outra reunião anteriormente convocada
+                        para o mesmo local.</li>
+                    <li>É reconhecida a instituição do júri, com a organização que lhe der a lei, assegurada a
+                        competência para o julgamento dos crimes dolosos e culposos contra a vida.</li>
+                    <li class="right">A lei considerará crimes inafiançáveis e insuscetíveis de graça ou anistia, entre
+                        outros, a
+                        prática da tortura e o tráfico ilícito de entorpecentes e drogas afins.</li>
+                    <li>É inviolável o sigilo da correspondência e das comunicações telegráficas, de dados e das
+                        comunicações telefônicas, salvo, no último caso, por ordem do juiz ou do promotor de justiça, na
+                        forma da lei.</li>
+                    <li>A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do
+                        morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante à
+                        noite, por determinação judicial.</li>
+                </ol>
+                <button>Solução</button>
+            </li>
+            <li id="PCSP2014-32">
+                <p>
+                    Exercer as funções de polícia marítima e aeroportuária, conforme dispõe o texto constitucional, é
+                    uma função da
+                    <a href="#PCSP2014-32">#</a>
+                </p>
+                <ol>
+                    <li class="right">Polícia Federal.</li>
+                    <p>
+                        <strong>Constituição Federal - Artigo 144º</strong> A segurança pública, dever do Estado,
+                        direito e responsabilidade de
+                        todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do
+                        patrimônio, através dos seguintes órgãos:<br />
+                        I - polícia federal;<br />
+                        II - polícia rodoviária federal;<br />
+                        III - polícia ferroviária federal;<br />
+                        IV - polícias civis;<br />
+                        V - polícias militares e corpos de bombeiros militares<br />
+                        § 1º <strong>A polícia federal</strong>, instituída por lei como órgão permanente, organizado e
+                        mantido pela União e estruturado em carreira, destina-se a:<br />
+                        I - apurar infrações penais contra a ordem política e social ou em detrimento de
+                        bens, serviços e interesses da União ou de suas entidades autárquicas e empresas públicas,
+                        assim como outras infrações cuja prática tenha repercussão interestadual ou internacional e
+                        exija repressão uniforme, segundo se dispuser em lei;<br />
+                        II - prevenir e reprimir o tráfico ilícito de entorpecentes e drogas afins, o
+                        contrabando e o descaminho, sem prejuízo da ação fazendária e de outros órgãos públicos
+                        nas respectivas áreas de competência;<br />
+                        III - exercer as funções de <strong>polícia marítima, aeroportuária e de fronteiras</strong>;
+                    </p>
+                    <li>Polícia Civil.</li>
+                    <li>Guarda Nacional.</li>
+                    <li>Polícia Militar.</li>
+                    <li>Guarda Municipal.</li>
+                </ol>
+                <button>Solução</button>
+                <button>Resolução</button>
+            </li>
+            <li id="PCSP2014-33">
+                <p>
+                    Na evolução histórica dos direitos humanos, surgem o que se convencionou denominar de “gerações dos
+                    direitos”, que representam a valorização de determinados direitos em momentos históricos distintos.
+                    Assim sendo, assinale a alternativa que contempla direitos pertencentes à primeira geração dos
+                    direitos humanos.
+                    <a href="#PCSP2014-33">#</a>
+                </p>
+                <ol>
+                    <li>Direitos econômicos e de igualdade.</li>
+                    <li class="right">Vida e liberdade.</li>
+                    <li>Direitos trabalhistas e previdenciários.</li>
+                    <li>Direitos civis e direito à paz.</li>
+                    <li>Fraternidade e direitos sociais.</li>
+                </ol>
+                <button>Solução</button>
+            </li>
+            <li id="PCSP2014-34">
+                <p>
+                    O ano de 1948 representou um marco histórico mundial no tocante aos direitos humanos, pois foi nesse
+                    ano que
+                    <a href="#PCSP2014-34">#</a>
+                </p>
+                <ol>
+                    <li>foi criada a Corte Internacional dos Direitos Humanos.</li>
+                    <p>
+                        <span>Isso nem existe, existe as Corte Internacioal de Justiça (1945), Tribunal Penal
+                            Internacional (1998), Corte Interamericana de Direitos Humanos (1979)...</span>
+                    </p>
+                    <li>aconteceu a Independência dos Estados Unidos da América.</li>
+                    <p>
+                        <span>A Declaração de Independência dos Estados Unidos da América foi o documento ratificado em
+                            em 4 de
+                            julho de <strong>1776</strong></span><br />
+                        <a
+                            href="https://pt.wikipedia.org/wiki/Declara%C3%A7%C3%A3o_da_Independ%C3%AAncia_dos_Estados_Unidos">Wikipedia</a>
+                    </p>
+                    <li>eclodiu a Revolução Francesa, trazendo os ideais de liberdade, igualdade e fraternidade.</li>
+                    <p>
+                        <span>Revolução Francesa foi um período, entre <strong>1789</strong> e
+                            <strong>1799</strong></span><br />
+                        <a href="https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_Francesa">Wikipedia</a>
+                    </p>
+                    <li>foi outorgada a <em>Carta Magna</em> na Inglaterra.</li>
+                    <p>
+                        <span><em>Magna Carta</em> um documento de 1215 que limitou o poder dos monarcas da
+                            Inglaterra</span><br />
+                        <a href="https://pt.wikipedia.org/wiki/Magna_Carta">Wikipedia</a>
+                    </p>
+                    <li class="right">foi proclamada a Declaração Universal dos Direitos do Homem.</li>
+                    <p>
+                        <span>A Declaração Universal dos Direitos Humanos (DUDH), que delineia os direitos humanos
+                            básicos, foi adotada pela Organização das Nações Unidas em 10 de dezembro de
+                            <strong>1948</strong></span><br />
+                        <a
+                            href="https://pt.wikipedia.org/wiki/Declara%C3%A7%C3%A3o_Universal_dos_Direitos_Humanos">Wikipedia</a>
+                    </p>
+                </ol>
+                <button>Solução</button>
+                <button>Resolução</button>
+            </li>
         </ol>
         <h3>VUNESP 2018</h3>
         <ol class="questions">
@@ -1343,10 +1547,10 @@
                     saudade de um estado — o da primeira paixão.
                     <a href="#PF2021-1">#</a>
                 </p>
-                <ol>
-                    <li>Certo.</li>
+                <ul>
+                    <li>Certo</li>
                     <li class="right">Errado</li>
-                </ol>
+                </ul>
                 <button>Solução</button>
             </li>
             <li id="PF2021-2">
@@ -1356,10 +1560,10 @@
                     para o início do trecho “com alegria até”.
                     <a href="#PF2021-2">#</a>
                 </p>
-                <ol>
-                    <li class="right">Certo.</li>
+                <ul>
+                    <li class="right">Certo</li>
                     <li>Errado</li>
-                </ol>
+                </ul>
                 <button>Solução</button>
             </li>
         </ol>
