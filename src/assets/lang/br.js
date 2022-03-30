@@ -227,13 +227,6 @@ const dictionary = {
         description: "Históricas curtas escritas por mim, amigos e domínio público",
       },
       {
-        title: "Register Switch",
-        sourceCode: "https://github.com/johnywalves/register-switch",
-        cover: "registerSwitch",
-        view: "https://register-switch.vercel.app",
-        description: "Time spent executing tasks in a simple way to enable and disable",
-      },
-      {
         title: "Devflix",
         sourceCode: "https://github.com/johnywalves/devflix",
         cover: "devflix",
@@ -248,6 +241,13 @@ const dictionary = {
         view: "https://johnywalves.github.io/cssanimatic",
         description:
           "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
+      },      
+      {
+        title: "Register Switch",
+        sourceCode: "https://github.com/johnywalves/register-switch",
+        cover: "registerSwitch",
+        view: "https://register-switch.vercel.app",
+        description: "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -271,6 +271,19 @@ const dictionary = {
         cover: "wolt",
         view: "https://johnywalves.github.io/wolt/",
         description: "Projeto para construção de visualização de mapas",
+      },
+      {
+        title: "Comics Creator",
+        view: "https://comics.johnywalves.com.br",
+        cover: "comicscreator",
+        description: "Ferramenta para geração de tirinhas em SVG",
+      },
+      {
+        title: "Carreira Policial",
+        sourceCode: "https://github.com/johnywalves/carreirapolicial",
+        view: "https://johnywalves.github.io/carreirapolicial/",
+        cover: "carreirapolicial",
+        description: "Coleção de questões para estudo de concursos para carreira policial",
       },
       {
         title: "Biblioteca Steam",

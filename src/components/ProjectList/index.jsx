@@ -18,6 +18,8 @@ const ProjectList = () => {
     bomdia,
     daisybell,
     wolt,
+    comicscreator,
+    carreirapolicial,
     steamLibrary,
     firemakebetter,
   } = useStaticQuery(graphql`
@@ -85,6 +87,24 @@ const ProjectList = () => {
           )
         }
       }
+      comicscreator: file(relativePath: { eq: "comicscreator.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            height: 256
+            placeholder: DOMINANT_COLOR
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
+      carreirapolicial: file(relativePath: { eq: "carreirapolicial.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            height: 256
+            placeholder: DOMINANT_COLOR
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
       steamLibrary: file(relativePath: { eq: "steamLibrary.png" }) {
         childImageSharp {
           gatsbyImageData(
@@ -122,6 +142,10 @@ const ProjectList = () => {
         return daisybell
       case "wolt":
         return wolt
+      case "comicscreator":
+        return comicscreator
+      case "carreirapolicial":
+        return carreirapolicial
       case "steamLibrary":
         return steamLibrary
       default:
