@@ -37,6 +37,12 @@ Matar container
 docker kill <container_id_ou_nome>
 ```
 
+Conhecer IP local para os containers
+
+```bash
+ip addr show docker0
+```
+
 ## Docker Compose
 
 Puxar as imagens da internet
