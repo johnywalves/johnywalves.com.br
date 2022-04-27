@@ -1,6 +1,6 @@
 ---
 date: 2018-09-24 22:17:00 -0300
-title: Linux - My Cheatsheet
+title: Linux - Cheatsheet
 description: Comandos Básicos Linux para Consulta
 category: Linux
 topics:

@@ -1,5 +1,5 @@
 ---
-date: 2022-08-15 14:18:35 -0300
+date: 2022-04-09 12:18:34 -0300
 title: Strapi - Static com JavaScript Inline
 description: Disponibilizar arquivos pela raiz do Strapi com JavaScript embutido
 category: Strapi

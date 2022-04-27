@@ -1,6 +1,6 @@
 ---
 date: 2020-11-26 14:18:35 -0300
-title: Git - My Cheatsheet
+title: Git - Cheatsheet
 description: Comandos Git para Consulta
 category: Git
 featuredImage: ./featured/git-1.jpg
