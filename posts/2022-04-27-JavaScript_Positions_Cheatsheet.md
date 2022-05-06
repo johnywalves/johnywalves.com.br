@@ -1,5 +1,5 @@
 ---
-date: 2022-04-15 14:48:20 -0300
+date: 2022-04-27 12:45:17 -0300
 title: JavaScript Positions - Cheatsheet
 description: Cheatsheet para lidar posições em navegadores com JavaScript
 category: JavaScript
