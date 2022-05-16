@@ -3,8 +3,8 @@ date: 2022-04-27 12:45:17 -0300
 title: JavaScript Positions - Cheatsheet
 description: Cheatsheet para lidar posições em navegadores com JavaScript
 category: JavaScript
-featuredImage: ./featured/js-1.png
-coverImage: /figures/js-1.png
+featuredImage: ./featured/planet-1.jpg
+coverImage: /figures/planet-1.jpg
 tags:
   - Position
   - Cheatsheet

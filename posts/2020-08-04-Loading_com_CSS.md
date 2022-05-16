@@ -16,7 +16,7 @@ Pode não parecer, mas essa é uma div simples girando com CSS
   <source src="/videos/spinnerloader.mp4" type="video/mp4">
 </video>
 
-Pode ser vista em funcionamento em [Loading Spinner](/web/loadingspinner)
+Pode ser vista em funcionamento em [Loading Spinner](/web/loadingspinner.html)
 
 ## Como fazer
 

@@ -98,7 +98,8 @@ export const MainContent = styled.section`
       word-break: break-word;
     `}
   }
-  p {
+  video, p {
+    display: block;
     margin: 0 auto 1.6rem;
   }
   h1,

@@ -16,7 +16,7 @@ Placeholder é coisa do passado, a moda agora é título integrado
   <source src="/videos/inputanimation.mp4" type="video/mp4">
 </video>
 
-Pode ser vista em funcionamento em [Input Animation](/web/inputanimation)
+Pode ser vista em funcionamento em [Input Animation](/web/inputanimation.html)
 
 ## Como fazer
 
