@@ -1,4 +1,4 @@
-# Gatsby Site
+# johnywalves.com.br
 
 <div style="text-align:center">
 <img src="https://raw.githubusercontent.com/johnywalves/gatsby-site/master/src/assets/images/favicon.png" style="width: 150px;" />
@@ -33,3 +33,7 @@ npm start
 # or
 yarn start
 ```
+
+## Lighthouse
+
+https://pagespeed-insights.herokuapp.com?url=https://johnywalves.com.br/
