@@ -34,6 +34,4 @@ npm start
 yarn start
 ```
 
-## Lighthouse
 
-https://pagespeed-insights.herokuapp.com?url=https://johnywalves.com.br/
