@@ -15,11 +15,6 @@ const links = [
     url: "https://twitter.com/johnywalves",
   },
   {
-    label: "Instagram",
-    icon: "Instagram",
-    url: "https://instagram.com/johnywalves",
-  },
-  {
     label: "CNPq",
     icon: "University",
     url: "http://lattes.cnpq.br/0468996619713052",

@@ -73,10 +73,10 @@ const dictionary = {
           { title: "NextJS" },
           { title: "Node" },
           { title: "React" },
-          { title: "React Native" },
           { title: "Redux" },
           { title: "Spring Boot" },
           { title: "SQLAlchemy" },
+          { title: "Styled Components" },
         ],
       },
       {
@@ -241,7 +241,7 @@ const dictionary = {
         view: "https://johnywalves.github.io/cssanimatic",
         description:
           "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
-      },      
+      },
       {
         title: "Register Switch",
         sourceCode: "https://github.com/johnywalves/register-switch",
@@ -344,6 +344,11 @@ const dictionary = {
         description:
           "Listagem de questões resolvidas para estudo em carreira policial",
         link: "/web/provascarreirapolicial/index.html",
+      },
+      {
+        title: "Letras pulando",
+        description: "Animação de letras pulando para placeholder para espera",
+        link: "/web/jumpingletters.html",
       },
     ],
   },
