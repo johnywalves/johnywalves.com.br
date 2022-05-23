@@ -18,7 +18,7 @@ Substituir as informações nas tags:
 **Page Title**: Título com o tamanho maáximo de 30 caracteres;  
 **Page Name**: Nome com o tamanho maáximo de 65 caracteres;  
 **Page Description**: Descrição com o tamanho maáximo de 155 caracteres;  
-**https://url.page**: Endereço permanente para o conteúdo;  
+**url.page**: Endereço permanente para o conteúdo;  
 **/path/to/thumbnail**: caminho da imagem do thumbnail com tamanho máximo de 300KB e um link com HTTPS.
 
 Na variável `og:type` informar o tipo de conteúdo como `website`, `article`, `book`, `profile` ou os tipos de arquivos no [OGP Type](https://ogp.me/#types)
@@ -88,7 +88,7 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     /* Content CSS */
     :root {
         --color-background: #282c35;
-        --color-text: #ed34a2;Autor do conteúdo
+        --color-text: #ed34a2;
     }
 
     body {
@@ -112,6 +112,7 @@ Algumas meta tags que podem ser incluidas
 
 ```html
 <meta name="author" content="Author Name" />
+<meta name="twitter:creator" content="Author Name" />
 ```
 
 ### As palavras chaves do conteúdo
@@ -120,6 +121,7 @@ Informando a lista de palavras chaves separado com vírgula, como `css, html, ja
 
 ```html
 <meta name="keywords" content="List of the keywords" />
+<meta name="news_keywords" content="List of the keywords" />
 ```
 
 ### Imagem de Icone
