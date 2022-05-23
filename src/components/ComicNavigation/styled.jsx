@@ -6,20 +6,20 @@ export const Navigation = styled.div`
 
   a,
   p {
-    color: var(--titles);
+    color: var(--texts);
     text-decoration: none;
     margin: 0 1rem;
     font-size: min(1.5rem, 3vw);
-    font-weight: 700;
   }
 
   p {
-    opacity: 0.5;
     display: inline;
+    font-weight: 300;
   }
 
   a {
     text-decoration: none;
+    font-weight: 700;
   }
 
   a:hover {

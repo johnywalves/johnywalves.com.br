@@ -167,7 +167,7 @@ const ProjectList = () => {
               {...project}
               cover={
                 project.cover && (
-                  <a href={project.view} target="_blank" rel="noreferrer">
+                  <a href={project.view} ariaLabel={project.cover} target="_blank" rel="noreferrer">
                     <ImageCover
                       image={
                         getImage(project.cover).childImageSharp.gatsbyImageData
