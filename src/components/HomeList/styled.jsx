@@ -45,7 +45,8 @@ export const List = styled.div`
   `}
 
   ${media.lessThan("medium")`
-    grid-template-columns: 100%;
+    margin: 0 calc((100% - 500px) / 2);
+    grid-template-columns: 500px;
     grid-column-gap: 0;
   `}
 `

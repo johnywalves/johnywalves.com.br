@@ -26,7 +26,7 @@ const PostsList = () => {
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    height: 250
+                    height: 150
                     width: 500
                     layout: CONSTRAINED
                     placeholder: TRACED_SVG
