@@ -9,6 +9,7 @@ tags:
   - Docker
   - Container
   - Cheatsheet
+cheatsheet: true  
 ---
 
 ## Docker

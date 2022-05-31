@@ -9,6 +9,7 @@ tags:
   - Position
   - Cheatsheet
   - JavaScript
+cheatsheet: true  
 ---
 
 Posicionamento de objeto com relação ao scroll da página

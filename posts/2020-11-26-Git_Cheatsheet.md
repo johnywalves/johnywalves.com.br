@@ -8,6 +8,7 @@ coverImage: /figures/git-1.jpg
 tags:
   - Git
   - Cheatsheet
+cheatsheet: true  
 ---
 
 Conferir se está instalado e a versão com `git --version` e usar `q` para sair das rotinas como a listagem de alteração

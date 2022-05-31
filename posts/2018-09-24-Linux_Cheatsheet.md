@@ -12,6 +12,7 @@ tags:
   - Bash
   - Shell
   - Cheatsheet
+cheatsheet: true  
 ---
 
 ## Arquivos e Diretórios
