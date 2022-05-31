@@ -181,7 +181,7 @@ const ProjectList = () => {
           ))}
       </HomeList>
       <ShowAll onClick={() => setShowAll(!showAll)}>
-        Visualizar {showAll ? "somente destaques" : "todos"}
+        {showAll ? Strings.projects.viewHighlight : Strings.projects.viewAll}
       </ShowAll>
     </>
   )
