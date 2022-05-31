@@ -16,6 +16,7 @@ const dictionary = {
   posts: {
     title: "Posts em destaque",
     description: "Alguns posts selecionados pela qualidade ou por amor mesmo",
+    viewAll: "Visualizar últimos artigos",
   },
   comics: {
     title: "Última tirinha publicada",
@@ -218,6 +219,8 @@ const dictionary = {
   projects: {
     title: "Projetos e desenvolvimentos",
     description: "Alguns projetos e experimentações desenvolvidas por mim",
+    viewAll: "Visualizar todos",
+    viewHighlight: "Visualizar somente destaques",
     list: [
       {
         title: "Machado Alves - Contos Literários",
