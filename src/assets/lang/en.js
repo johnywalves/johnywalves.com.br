@@ -37,8 +37,14 @@ const dictionary = {
   },
   softSkills: {
     title: "Soft Skills",
-    description: "Some of the my interpersonal skills",
-    list: ["Friendly", "Regardful", "Teamwork", "Provision for Learning"],
+    description:
+      "Some of the my interpersonal skills",
+    list: [
+      "Friendly",
+      "Regardful",
+      "Teamwork",
+      "Provision for Learning"
+    ],
   },
   hardSkills: {
     title: "Hard Skills",
@@ -68,10 +74,10 @@ const dictionary = {
           { title: "NextJS" },
           { title: "Node" },
           { title: "React" },
-          { title: "React Native" },
           { title: "Redux" },
           { title: "Spring Boot" },
           { title: "SQLAlchemy" },
+          { title: "Styled Components" },
         ],
       },
       {
@@ -103,7 +109,8 @@ const dictionary = {
   },
   courses: {
     title: "Complementary courses",
-    description: "Some courses to add some skills and knowledge",
+    description:
+      "Some courses to add some skills and knowledge",
   },
   certification: {
     title: "Certificados",
@@ -212,14 +219,15 @@ const dictionary = {
   projects: {
     title: "Projects & developments",
     description: "Some projects and experiments developed by me",
+    viewAll: "View all",
+    viewHighlight: "View only highlights",
     list: [
       {
-        title: "Register Switch",
-        sourceCode: "https://github.com/johnywalves/register-switch",
-        cover: "registerSwitch",
-        view: "https://register-switch.vercel.app",
-        description:
-          "Time spent executing tasks in a simple way to enable and disable",
+        title: "Machado Alves - Contos Literários",
+        sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
+        cover: "machadoalves",
+        view: "https://www.machadoalves.com.br/",
+        description: "Históricas curtas escritas por mim, amigos e domínio público",
       },
       {
         title: "Devflix",
@@ -236,6 +244,13 @@ const dictionary = {
         view: "https://johnywalves.github.io/cssanimatic",
         description:
           "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
+      },
+      {
+        title: "Register Switch",
+        sourceCode: "https://github.com/johnywalves/register-switch",
+        cover: "registerSwitch",
+        view: "https://register-switch.vercel.app",
+        description: "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -259,6 +274,19 @@ const dictionary = {
         cover: "wolt",
         view: "https://johnywalves.github.io/wolt/",
         description: "Projeto para construção de visualização de mapas",
+      },
+      {
+        title: "Comics Creator",
+        view: "https://comics.johnywalves.com.br",
+        cover: "comicscreator",
+        description: "Ferramenta para geração de tirinhas em SVG",
+      },
+      {
+        title: "Carreira Policial",
+        sourceCode: "https://github.com/johnywalves/carreirapolicial",
+        view: "https://johnywalves.github.io/carreirapolicial/",
+        cover: "carreirapolicial",
+        description: "Coleção de questões para estudo de concursos para carreira policial",
       },
       {
         title: "Biblioteca Steam",
@@ -291,8 +319,9 @@ const dictionary = {
         link: "/web/inputanimation.html",
       },
       {
-        title: "People Search",
-        description: "Cyclic effect to indicate resource loading",
+        title: "Carregando e Girando",
+        description:
+          "Efeito cíclico para indicação de carregamento de recursos",
         link: "/web/loadingspinner.html",
       },
       {
@@ -309,8 +338,20 @@ const dictionary = {
       },
       {
         title: "Sun and Moon",
-        description: "Dark and light transition animation with moon and sun",
+        description:
+          "Dark and light transition animation with moon and sun",
         link: "/web/sunmoon.html",
+      },
+      {
+        title: "Questões Carreira Policial",
+        description:
+          "Listagem de questões resolvidas para estudo em carreira policial",
+        link: "/web/provascarreirapolicial/index.html",
+      },
+      {
+        title: "Letras pulando",
+        description: "Animação de letras pulando para placeholder para espera",
+        link: "/web/jumpingletters.html",
       },
     ],
   },
@@ -347,7 +388,10 @@ const dictionary = {
         description: [
           "Informatics for Business, Software Development and Manager Business",
         ],
-        awards: ["Highest Score Award", "Best Undergraduate Project Award"],
+        awards: [
+          "Highest Score Award",
+          "Best Undergraduate Project Award"
+        ],
         production: {
           title:
             "Essay: ForeSeries - Uma abordagem para predição de valores em séries temporais (Portuguese)",
@@ -366,14 +410,16 @@ const dictionary = {
   },
   experience: {
     title: "Timeline",
-    description: "My history in education and work experience",
+    description:
+      "My history in education and work experience",
     list: [
       {
         date: "Out 2020 - Current",
         title: "Senior Developer Frontend",
-        institution: "Dextra",
+        institution: "CI&T",
         description: [
-          "Evolução e manutenção para retenção de clientes e autogestão em aluguel de veículos e outros serviços, focando na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO)"
+          "Development of a tool for ANBIMA (financial services) to receive information regarding portfolios managed by financial institutions",
+          "Improved SEO and performance of the financial products data publishing platform."
         ],
       },
       {
@@ -381,8 +427,8 @@ const dictionary = {
         title: "Frontend Developer",
         institution: "Meta",
         description: [
-          "Evolução e manutenção para retenção de clientes e autogestão em aluguel de veículos e outros serviços, focando na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO)",
-          "Web developer Frontend (JavaScript, React, NextJS, HTML e CSS)",
+          "Service provision for Localiza in the maintenance and evolution of the Zarp tool, for vehicle rental and other services, aimed at capturing and retaining customers.",
+          "Restructuring of Zarp focused on user experience, value delivery and search engine optimization (SEO)."
         ],
       },
       {
