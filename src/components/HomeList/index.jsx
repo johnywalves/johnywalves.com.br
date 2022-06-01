@@ -1,16 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import * as S from "./styled"
+import { Wrapper, Header, Title, Description, List } from "./styled"
 
 const HomeList = ({ children, title, description }) => (
-  <S.Wrapper>
-    <S.Header>
-      <S.Title>{title}</S.Title>
-      <S.Description>{description}</S.Description>
-    </S.Header>
-    <S.List>{children}</S.List>
-  </S.Wrapper>
+  <Wrapper>
+    <Header>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+    </Header>
+    <List>{children}</List>
+  </Wrapper>
 )
 
 HomeList.propTypes = {
