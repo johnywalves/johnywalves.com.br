@@ -8,7 +8,8 @@ const dictionary = {
   ],
   status: "Brasileiro, Solteiro, 35 anos",
   live: "Sao José do Rio Preto, São Paulo, Brasil",
-  lattes: "http://lattes.cnpq.br/0468996619713052",
+  lattes:
+    "http://lattes.cnpq.br/0468996619713052",
   contact: {
     title: "Contato",
     description: "Você pode me encontrar nas redes sociais",

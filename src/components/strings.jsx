@@ -4,6 +4,6 @@ import brazilian from "assets/lang/br"
 import english from "assets/lang/en"
 
 export default new LocalizedStrings({
-  br: brazilian,
+  pt: brazilian,
   en: english,
 })

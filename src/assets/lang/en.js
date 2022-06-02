@@ -17,6 +17,7 @@ const dictionary = {
   posts: {
     title: "Highlight posts (portuguese)",
     description: "Some posts selected for quality or love",
+    viewAll: "View lasts posts",
   },
   comics: {
     title: "Last published comic strip",
