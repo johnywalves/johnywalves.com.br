@@ -1,4 +1,4 @@
-const dictionary = {
+export default {
   description:
     "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
   position: "Web Developer",
@@ -420,7 +420,8 @@ const dictionary = {
         institution: "CI&T",
         description: [
           "Development of a tool for ANBIMA (financial services) to receive information regarding portfolios managed by financial institutions",
-          "Improved SEO and performance of the financial products data publishing platform."
+          "Improved SEO and performance of the financial products data publishing platform.",
+          "Technologies: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery"
         ],
       },
       {
@@ -523,5 +524,3 @@ const dictionary = {
     ],
   },
 }
-
-export default dictionary

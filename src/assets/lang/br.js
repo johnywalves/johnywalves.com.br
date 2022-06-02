@@ -1,4 +1,4 @@
-const dictionary = {
+export default {
   description:
     "Meu nome é Johny William de Oliveira Alves (esse trecho é para o SEO, mas fique a vontade) engenheiro e desenvolvedor web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI), apaixonado por interfaces (UI, UX e frontend)",
   position: "Desenvolvedor Web",
@@ -420,7 +420,8 @@ const dictionary = {
         institution: "CI&T",
         description: [
           "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações referentes a carteiras administradas pelas instituições financeiras",
-          "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros"
+          "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros",
+          "Tecnologias: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery"
         ],
       },
       {
@@ -523,5 +524,3 @@ const dictionary = {
     ],
   },
 }
-
-export default dictionary
