@@ -1,0 +1,12 @@
+.card-box-shadow {
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 1px var(--shadowColors), 8px 8px 16px 2px var(--shadowColors);
+    transition: box-shadow 0.3s;
+}
+
+.card-box-shadow:hover {
+    box-shadow: 0 0 16px 2px var(--shadowColors), 16px 16px 32px 4px var(--shadowColors);
+}

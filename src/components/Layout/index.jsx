@@ -8,6 +8,8 @@ import Sidebar from "../Sidebar"
 import MenuBar from "../MenuBar"
 import GlobalStyles from "../../styles/global"
 
+import "../../styles/styles.css"
+
 const Layout = ({ children }) => (
   <S.LayoutWrapper>
     <GlobalStyles />
