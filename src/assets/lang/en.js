@@ -523,6 +523,28 @@ const en = {
       },
     ],
   },
+  links: [
+    {
+      label: "Home",
+      url: "/",
+    },
+    {
+      label: "Articles (PT)",
+      url: "/blog/",
+    },
+    {
+      label: "Comics",
+      url: "/comics/",
+    },
+    {
+      label: "Search",
+      url: "/search/",
+    },
+    {
+      label: "About",
+      url: "/about/",
+    }
+  ]
 }
 
 export default en

@@ -8,6 +8,7 @@ import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import { ListUl } from "@styled-icons/boxicons-regular/ListUl"
 import { Newspaper } from "@styled-icons/fa-regular/Newspaper"
 import { Person } from "@styled-icons/evaicons-solid/Person"
+import { HistoryEdu } from "@styled-icons/material-outlined/HistoryEdu"
 
 import * as S from "./styled"
 
@@ -83,6 +84,19 @@ const MenuBar = () => {
         >
           <S.MenuBarItem>
             <Newspaper />
+          </S.MenuBarItem>
+        </S.MenuBarLink>
+        <S.MenuBarLink
+          to="/comics/"
+          title="Tirinha"
+          cover
+          direction="left"
+          bg="var(--background)"
+          duration={0.6}
+          activeClassName="active"
+        >
+          <S.MenuBarItem>
+            <HistoryEdu />
           </S.MenuBarItem>
         </S.MenuBarLink>
         <S.MenuBarLink

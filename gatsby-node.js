@@ -33,51 +33,91 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(`
-    query {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-        edges {
-          node {
-            frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
-              title
-              category
-              number
-              description
-            }
-            timeToRead
-            fields {
-              slug
-            }
+  query {
+    AllPosts: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC },
+      filter: {
+        frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+            title
+            category
+            number
+            description
           }
-          next {
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-            }
+          timeToRead
+          fields {
+            slug
           }
-          previous {
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-            }
+        }
+        next {
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+        previous {
+          frontmatter {
+            title
+          }
+          fields {
+            slug
           }
         }
       }
-    }
+    },
+    AllComics: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC },
+      filter: {
+        frontmatter: { published: { ne: false }, category: { eq: "Comic" } }
+      }        
+    ) {
+      edges {
+        node {
+          frontmatter {
+            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+            title
+            category
+            number
+            description
+          }
+          timeToRead
+          fields {
+            slug
+          }
+        }
+        next {
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+        previous {
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }      
+  }
   `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
 
-    const posts = result.data.allMarkdownRemark.edges.filter(
-      (post) => post.node.frontmatter.category !== "Comic"
-    )
-
-    posts.forEach(({ node, next, previous }) => {
+    // Páginas de artigos
+    result.data.AllPosts.edges.forEach(({ node, next, previous }) => {
       createPage({
         path: `${node.fields.slug}`,
         component: path.resolve(`src/templates/blog-post.jsx`),
@@ -89,8 +129,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Listagem de artigos
     const postsPerPage = 6
-    const numPages = Math.ceil(posts.length / postsPerPage)
+    const numPages = Math.ceil(result.data.AllPosts.edges.length / postsPerPage)
 
     Array.from({ length: numPages }).forEach((_, index) => {
       createPage({
@@ -105,11 +146,8 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    const comics = result.data.allMarkdownRemark.edges.filter(
-      (post) => post.node.frontmatter.category === "Comic"
-    )
-
-    comics.forEach(({ node, next, previous }) => {
+    // Página de tirinhas
+    result.data.AllComics.edges.forEach(({ node, next, previous }) => {
       createPage({
         path: `/comic-${node.frontmatter.number}`,
         component: path.resolve(`src/templates/comic-post.jsx`),
@@ -118,6 +156,23 @@ exports.createPages = ({ graphql, actions }) => {
           number: node.frontmatter.number,
           previousPost: next,
           nextPost: previous,
+        },
+      })
+    })
+
+    // Listagem de tirinhas 
+    const comicsPerPage = 6
+    const numPagesComics = Math.ceil(result.data.AllComics.edges.length / comicsPerPage)
+
+    Array.from({ length: numPagesComics }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/comics/` : `/comics/${index + 1}`,
+        component: path.resolve(`src/templates/comics-list.jsx`),
+        context: {
+          limit: comicsPerPage,
+          skip: index * comicsPerPage,
+          numPages,
+          currentPage: index + 1,
         },
       })
     })

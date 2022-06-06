@@ -3,14 +3,13 @@ import { graphql } from "gatsby"
 import Layout from "components/Layout"
 import Seo from "components/seo"
 import Comments from "components/Comments"
-import RecommendedPost from "components/RecommendedPost"
 import ComicNavigation from "components/ComicNavigation"
 
 import * as S from "components/Post/styled"
 
 const ComicPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const { nextPost, previousPost, number, slug } = pageContext
+  const { number, slug } = pageContext
 
   return (
     <Layout>
@@ -36,7 +35,6 @@ const ComicPost = ({ data, pageContext }) => {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
-      <RecommendedPost next={nextPost} previous={previousPost} />
       <Comments title={post.frontmatter.title} url={slug} />
     </Layout>
   )

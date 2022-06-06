@@ -523,6 +523,28 @@ const br = {
       },
     ],
   },
+  links: [
+    {
+      label: "Início",
+      url: "/",
+    },
+    {
+      label: "Artigos",
+      url: "/blog/",
+    },
+    {
+      label: "Tirinhas",
+      url: "/comics/",
+    },
+    {
+      label: "Pesquisa",
+      url: "/search/",
+    },
+    {
+      label: "Sobre",
+      url: "/about/",
+    }
+  ]
 }
 
 export default br
