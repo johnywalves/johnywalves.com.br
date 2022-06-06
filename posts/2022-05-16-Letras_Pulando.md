@@ -15,7 +15,7 @@ highlight: true
 Busca de informações, cálculos, carregamento de recursos demandam tempo e comunicar para o usuário é essencial uma maneira vi recentimente e amei, as letras pulando em sequência
 
 <video width="480" height="155" muted autoplay loop>
-  <source src="/videos/jumpingletters.mp4" type="video/mp4">
+  <source src="/videos/jumpingletters.mp4" type="video/mp4" />
 </video>
 
 Pode ser vista em funcionamento em [Jumping Letters](/web/jumpingletters.html)

@@ -1,4 +1,4 @@
-export default {
+const br = {
   description:
     "Meu nome é Johny William de Oliveira Alves (esse trecho é para o SEO, mas fique a vontade) engenheiro e desenvolvedor web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI), apaixonado por interfaces (UI, UX e frontend)",
   position: "Desenvolvedor Web",
@@ -524,3 +524,5 @@ export default {
     ],
   },
 }
+
+export default br
