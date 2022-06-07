@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import media from "styled-media-query"
 
 export const Wrapper = styled.div`
   color: var(--texts);
@@ -39,14 +38,20 @@ export const List = styled.div`
   grid-row-gap: 1rem;
   grid-column-gap: 2%;
 
-  ${media.lessThan("large")`
+  @media (max-width: 1170px) {
     grid-template-columns: 48% 48%;
     grid-column-gap: 4%;
-  `}
+  }
 
-  ${media.lessThan("medium")`
+  @media (max-width: 768px) {
     margin: 0 calc((100% - 500px) / 2);
     grid-template-columns: 500px;
     grid-column-gap: 0;
-  `}
+  }
+
+  @media (max-width: 560px) {
+    margin: 0;
+    grid-template-columns: 100%;
+    grid-column-gap: 0;
+  }
 `

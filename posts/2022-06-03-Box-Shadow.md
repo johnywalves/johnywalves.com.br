@@ -38,17 +38,17 @@ Detalhamento dos atributos
 
 Podemos usar para projetar uma sombra e indicar luz
 
-<div style="padding:20px;display:flex;justify-content:space-evenly;" >
+<div style="padding:20px 0;display:flex;justify-content:space-evenly;" >
   <div>
-    <div style="width:160px;height:160px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors)"></div>
+    <div style="width:120px;height:120px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Ambiente</p>
   </div>
   <div>
-    <div style="width:160px;height:160px;border-radius:8px;box-shadow: 4px 4px 8px 1px var(--shadowColors)"></div>
+    <div style="width:120px;height:120px;border-radius:8px;box-shadow: 4px 4px 8px 1px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Chave</p>
   </div>
   <div>
-    <div style="width:160px;height:160px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors), 4px 4px 8px 1px var(--shadowColors);"></div>
+    <div style="width:120px;height:120px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors), 4px 4px 8px 1px var(--shadowColors);"></div>
     <p style="text-align:center;margin-top:20px;">Combinação</p>
   </div>
 </div>
@@ -193,7 +193,7 @@ Estilo com `transition` de 300ms `hover` para um efeito suave passando a impress
 Uma pequena chama com sombras, ou luzes :)
 
 <div style="padding:120px 0 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-  <div style="width:50px;height:50px;border-radius:15% 75% 50% 75%;background:#ffb726;transform:rotate(45deg);box-shadow:-10px -10px 0 15px #ff7d17, -20px -20px 0 30px #ff6236, -30px -30px 5px 45px #ff62343f;"></div>
+  <div style="width:50px;height:50px;border-radius:15% 75% 50% 75%;background:#ffb726;transform:rotate(45deg);box-shadow:-10px -10px 0 15px #ff7d17, -20px -20px 0 30px #ff6236, -30px -30px 10px 45px #ff62343f;"></div>
 </div>
 
 Segue o CSS
@@ -205,9 +205,9 @@ Segue o CSS
   background: #ffb726;
   border-radius: 15% 75% 50% 75%;
   transform: rotate(45deg);
-  box-shadow: -10px -10px 0 15px #ff7d17, 
-    -20px -20px 0 30px #ff6236, 
-    -30px -30px 5px 45px #ff62343f;
+  box-shadow: -10px -10px 0 15px #ff7d17,
+    -20px -20px 0 30px #ff6236,
+    -30px -30px 10px 45px #ff62343f;
 }
 ```
 
