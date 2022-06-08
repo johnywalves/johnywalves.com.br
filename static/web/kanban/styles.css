@@ -1,0 +1,46 @@
+:root {
+    --stage-width: max(20vw, 320px);
+    --task-width: 280px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.stage-panel {
+    display: block;
+    min-width: var(--stage-width);
+    min-height: 100%;
+}
+
+.stage-panel .header-panel {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.stage-panel .stage-content {
+    padding: 10px;
+    position: relative;
+    min-height: calc(100% - 56px);
+    background-color: #00000033;
+}
+
+.task .tags {
+    display: flex;
+    float: left;
+    font-size: 20px
+}

@@ -354,6 +354,11 @@ const br = {
         description: "Animação de letras pulando para placeholder para espera",
         link: "/web/jumpingletters.html",
       },
+      {
+        title: "Pequeno Kanban",
+        description: "Um pequeno Kanban com Drag and Drop",
+        link: "/web/kanban/index.html",
+      },
     ],
   },
   education: {
