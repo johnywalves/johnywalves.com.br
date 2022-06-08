@@ -9,6 +9,7 @@ tags:
   - Designer
   - CSS
   - HTML
+highlight: true    
 ---
 
 Interação com a luz é a maneira como vemos as coisas, nessa interação com a luz é comum a geração de sombras sobre os objetos, o uso de sombras em interfaces Web trás uma sensação de volume e elevação
@@ -40,15 +41,15 @@ Podemos usar para projetar uma sombra e indicar luz
 
 <div style="padding:20px 0;display:flex;justify-content:space-evenly;" >
   <div>
-    <div style="width:120px;height:120px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors)"></div>
+    <div style="width:100px;height:100px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Ambiente</p>
   </div>
   <div>
-    <div style="width:120px;height:120px;border-radius:8px;box-shadow: 4px 4px 8px 1px var(--shadowColors)"></div>
+    <div style="width:100px;height:100px;border-radius:8px;box-shadow: 4px 4px 8px 1px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Chave</p>
   </div>
   <div>
-    <div style="width:120px;height:120px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors), 4px 4px 8px 1px var(--shadowColors);"></div>
+    <div style="width:100px;height:100px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors), 4px 4px 8px 1px var(--shadowColors);"></div>
     <p style="text-align:center;margin-top:20px;">Combinação</p>
   </div>
 </div>
@@ -73,19 +74,19 @@ Exemplos da direção das luzes
 
 <div style="padding:20px 0;display:flex;justify-content:space-evenly;" >
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow: -4px 4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:-4px 4px 8px 2px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Topo-Direita</p>
   </div>
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow: 4px 4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:4px 4px 8px 2px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Topo-Esquerda</p>
   </div>
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow: 4px -4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:4px -4px 8px 2px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Baixo-Direita</p>
   </div>
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow: -4px -4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:-4px -4px 8px 2px var(--shadowColors)"></div>
     <p style="text-align:center;margin-top:20px;">Baixo-Esquerda</p>
   </div>
 </div>
@@ -141,18 +142,18 @@ box-shadow: inset 0 0 8px 4px #de128c;
 As sombras podem ser usadas para desenhar novos objetos com o mesmo formato
 
 <div style="padding:20px;display:flex;justify-content:center;" >
-    <div style="width:80px;height:80px;border:2px var(--shadowColors) solid;border-radius:8px;box-shadow: -130px 0 0 10px var(--highlight), 110px 0 0 -10px var(--highlight)"></div>
+    <div style="width:80px;height:80px;border:2px var(--shadowColors) solid;border-radius:8px;box-shadow: -120px 0 0 10px var(--highlight), 100px 0 0 -10px var(--highlight)"></div>
 </div>
 
 <div style="padding:20px;display:flex;justify-content:center;" >
-    <div style="width:80px;height:80px;border:2px var(--shadowColors) solid;border-radius:50%;box-shadow: -130px 0 0 10px var(--highlight), 110px 0 0 -10px var(--highlight)"></div>
+    <div style="width:80px;height:80px;border:2px var(--shadowColors) solid;border-radius:50%;box-shadow: -120px 0 0 10px var(--highlight), 100px 0 0 -10px var(--highlight)"></div>
 </div>
 
-Podemos fazer o espalhamento como negativo para reduzir o tamanho da sombra
+Podemos fazer o espalhamento um como positivo para aumentar e outro como negativo para reduzir o tamanho da sombra
 
 ```css
-box-shadow: -130px 0 0 10px #de128c, 
-  110px 0 0 -10px #de128c;
+box-shadow: -120px 0 0 10px #de128c, 
+  100px 0 0 -10px #de128c;
 ```
 
 ## Efeito de elevação com mouse

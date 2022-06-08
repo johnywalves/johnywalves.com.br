@@ -67,10 +67,13 @@ Visualizar IP próprio, normalmente **127.0.0.1**
 hostname -i
 ```
 
-Visualizar IP externo para a rede
+Informações sobre conexão de redes (Wifi, nome, senha...)
 
 ```bash
-hostname -i
+# Listagem dos arquivos de conexão
+cd /etc/NetworkManager/system-connections
+# Listagem dos arquivos de conexão
+cat  /etc/NetworkManager/system-connections/<nome da rede>.nmconnection
 ```
 
 ## Compreeender Ambiente
