@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
 import Seo from "components/seo"
-import PostItem from "components/PostItem"
+import PostComic from "components/PostComic"
 import Pagination from "components/Pagination"
 
 import * as S from "components/ListWrapper/styled"
@@ -29,7 +29,7 @@ const ComicsList = (props) => {
                   date,
                   title,
                   category,
-                  description,
+                  transcription,
                   tags,
                   coverImage,
                   featuredImage,
@@ -40,14 +40,14 @@ const ComicsList = (props) => {
             },
             index
           ) => (
-            <PostItem
+            <PostComic
               key={index}
               slug={slug}
               category={category}
               date={date}
               timeToRead={timeToRead}
               title={title}
-              description={description}
+              transcription={transcription}
               tags={tags}
               coverImage={coverImage}
               featuredImage={featuredImage}
@@ -83,14 +83,13 @@ export const query = graphql`
             date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
             title
             category
-            description
+            transcription
             tags
             coverImage
             featuredImage {
               childImageSharp {
                 gatsbyImageData(
-                  width: 120
-                  height: 120
+                  width: 800
                   layout: CONSTRAINED
                   placeholder: TRACED_SVG
                 )

@@ -15,13 +15,14 @@ const ComicPost = ({ data, pageContext }) => {
     <Layout>
       <Seo
         title={post.frontmatter.title}
-        description={
-          "Desenvolvedor Web: Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem"
-        }
+        description={post.frontmatter.transcription}
         image={post.frontmatter.coverImage}
       />
       <S.PostHeader comics>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+        <S.PostDate>
+          {post.frontmatter.date}
+        </S.PostDate>
         <S.ComicWrapper>
           <S.PostComic
             image={
