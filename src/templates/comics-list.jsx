@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "components/Layout"
 import Seo from "components/seo"
-import PostComic from "components/PostComic"
+import PostItemComic from "components/PostItemComic"
 import Pagination from "components/Pagination"
 
 import * as S from "components/ListWrapper/styled"
@@ -28,28 +28,20 @@ const ComicsList = (props) => {
                 frontmatter: {
                   date,
                   title,
-                  category,
                   transcription,
-                  tags,
-                  coverImage,
                   featuredImage,
                 },
-                timeToRead,
                 fields: { slug },
               },
             },
             index
           ) => (
-            <PostComic
+            <PostItemComic
               key={index}
               slug={slug}
-              category={category}
               date={date}
-              timeToRead={timeToRead}
               title={title}
               transcription={transcription}
-              tags={tags}
-              coverImage={coverImage}
               featuredImage={featuredImage}
             />
           )
