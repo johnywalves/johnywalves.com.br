@@ -40,16 +40,16 @@ Detalhamento dos atributos
 Podemos usar para projetar uma sombra e indicar luz
 
 <div style="padding:20px 0;display:flex;justify-content:space-evenly;" >
-  <div>
-    <div style="width:100px;height:100px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors)"></div>
+  <div style="display:flex;flex-direction:column;align-items:center;">
+    <div class="card-box-shadow card-box-shadow-env"></div>
     <p style="text-align:center;margin-top:20px;">Ambiente</p>
   </div>
-  <div>
-    <div style="width:100px;height:100px;border-radius:8px;box-shadow: 4px 4px 8px 1px var(--shadowColors)"></div>
+  <div style="display:flex;flex-direction:column;align-items:center;">
+    <div class="card-box-shadow card-box-shadow-key"></div>
     <p style="text-align:center;margin-top:20px;">Chave</p>
   </div>
-  <div>
-    <div style="width:100px;height:100px;border-radius:8px;box-shadow: 0 0 8px 1px var(--shadowColors), 4px 4px 8px 1px var(--shadowColors);"></div>
+  <div style="display:flex;flex-direction:column;align-items:center;">
+    <div class="card-box-shadow card-box-shadow-combined"></div>
     <p style="text-align:center;margin-top:20px;">Combinação</p>
   </div>
 </div>
@@ -161,7 +161,7 @@ box-shadow: -120px 0 0 10px #de128c,
 Para mudança de elevação podemos aumentar o desfoque da luz ambiente e deslocamento e desfoque para a luz chave, como no exemplo ao passar o mouse
 
 <div style="padding:20px;display:flex;flex-direction:column;justify-content:center;">
-  <div class="card-box-shadow"></div>
+  <div class="card-box-shadow card-box-shadow-interactive"></div>
   <p style="text-align:center;margin-top:40px;">Passe o mouse</p>
 </div>
 
