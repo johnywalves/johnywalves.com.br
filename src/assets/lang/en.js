@@ -283,13 +283,6 @@ const en = {
         description: "Ferramenta para geração de tirinhas em SVG",
       },
       {
-        title: "Carreira Policial",
-        sourceCode: "https://github.com/johnywalves/carreirapolicial",
-        view: "https://johnywalves.github.io/carreirapolicial/",
-        cover: "carreirapolicial",
-        description: "Coleção de questões para estudo de concursos para carreira policial",
-      },
-      {
         title: "Biblioteca Steam",
         sourceCode: "https://github.com/johnywalves/steamlibrary",
         cover: "steamLibrary",
