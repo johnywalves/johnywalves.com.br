@@ -352,6 +352,11 @@ const br = {
         description: "Um pequeno Kanban com Drag and Drop",
         link: "/web/kanban/index.html",
       },
+      {
+        title: "Letras Neon",
+        description: "Letreiro neon animação",
+        link: "/web/neonletters.html",
+      },
     ],
   },
   education: {

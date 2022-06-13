@@ -351,7 +351,12 @@ const en = {
         title: "Pequeno Kanban",
         description: "Um pequeno Kanban com Drag and Drop",
         link: "/web/kanban/index.html",
-      },      
+      },
+      {
+        title: "Neon Letters",
+        description: "Neon sign aninmate",
+        link: "/web/neonletters.html",
+      },
     ],
   },
   education: {
