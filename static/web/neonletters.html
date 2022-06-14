@@ -58,11 +58,11 @@
         --small-letter-mobile: 4rem;
         --color-background: #282c35;
         --color-text: #fff;
-        --color-text-lighting: #5e103f;
+        --color-text-lighting: #761a51;
         --color-text-light: #ed34a2;
         --color-border: #fff;
-        --color-border-lighting: #200a59;
-        --color-border-light: #440bd4;
+        --color-border-lighting: #1a5176;
+        --color-border-light: #34a2ed;
     }
 
     body {
@@ -100,6 +100,7 @@
         text-align: center;
         line-height: 90%;
         transform: rotate(-2deg);
+        font-style: italic;
     }
 
     .box {
@@ -223,20 +224,39 @@
         57%,
         100% {
             text-shadow:
-                0 0 4px  var(--color-text),
-                0 0 11px  var(--color-text),
-                0 0 19px  var(--color-text),
+                0 0 4px var(--color-text),
+                0 0 11px var(--color-text),
+                0 0 19px var(--color-text),
                 0 0 40px var(--color-text-light),
                 0 0 80px var(--color-text-light),
                 0 0 90px var(--color-text-light),
                 0 0 100px var(--color-text-light),
                 0 0 150px var(--color-text-light);
+            box-shadow:
+                0 0 1px var(--color-border),
+                inset 0 0 1px var(--color-border),
+                0 0 2px var(--color-border),
+                inset 0 0 2px var(--color-border),
+                0 0 5px var(--color-border),
+                inset 0 0 5px var(--color-border),
+                0 0 10px var(--color-border-light),
+                inset 0 0 10px var(--color-border-light),
+                0 0 20px var(--color-border-light),
+                inset 0 0 20px var(--color-border-light),
+                0 0 22px var(--color-border-light),
+                inset 0 0 22px var(--color-border-light),
+                0 0 25px var(--color-border-light),
+                inset 0 0 25px var(--color-border-light),
+                0 0 37px var(--color-border-light),
+                inset 0 0 37px var(--color-border-light);
+
         }
 
         20%,
         24%,
         55% {
             text-shadow: none;
+            box-shadow: none;
         }
     }
 </style>
