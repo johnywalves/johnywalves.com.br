@@ -11,8 +11,8 @@ tags:
   - Game
   - React
 published: true
-highlight: false
 ---
+
 Amo vídeo game, foi o motivo que me fez entrar para área de desenvolvimento, fazendo uso deste amor vamos nessa série fazer um card game do conceito até o a primeira entrega com um modo single player (versus PC) com artes e animações simples
 
 A escolha do React vem da necessidade me aprimorar na biblioteca e fazer algo divertido no processo, existem plataformas bem melhores e gratuitas para quem está começando no desenvolvimento de jogos incluindo algumas para HTML5 e JavaScript, mas como o foco é o aprendizado e a prática, vamos de React

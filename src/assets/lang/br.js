@@ -15,9 +15,9 @@ const br = {
     description: "Você pode me encontrar nas redes sociais",
   },
   posts: {
-    title: "Posts em destaque",
-    description: "Alguns posts selecionados pela qualidade ou por amor mesmo",
-    viewAll: "Visualizar últimos artigos",
+    title: "Artigos publicados",
+    description: "Últimos artigos publicados sobre vida e desenvolvimento",
+    viewAll: "Visualizar todos artigos",
   },
   comics: {
     title: "Última tirinha publicada",

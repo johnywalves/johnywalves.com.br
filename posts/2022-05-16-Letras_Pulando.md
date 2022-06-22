@@ -9,7 +9,6 @@ tags:
   - Web
   - CSS
   - Animation
-highlight: true  
 ---
 
 Busca de informações, cálculos, carregamento de recursos demandam tempo e comunicar para o usuário é essencial uma maneira vi recentimente e amei, as letras pulando em sequência

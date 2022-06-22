@@ -9,7 +9,6 @@ tags:
   - JavaScript
   - React
 published: true
-highlight: false  
 ---
 
 Biblioteca [React](https://reactjs.org/) criada para facilitar a criação de aplicativos para execução no navegador

@@ -15,9 +15,9 @@ const en = {
     description: "You can find me on social networks",
   },
   posts: {
-    title: "Highlight posts (portuguese)",
-    description: "Some posts selected for quality or love",
-    viewAll: "View lasts posts",
+    title: "Published posts (portuguese)",
+    description: "Latest published articles on life and development",
+    viewAll: "View all posts",
   },
   comics: {
     title: "Last published comic strip",
