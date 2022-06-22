@@ -1,15 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
 import HomeCard from "components/HomeCard"
 import HomeList from "components/HomeList"
 
-import { ImageCover, ShowAll } from "./styled"
+import { ImageCover, ShowAllWrapper, ShowAll } from "./styled"
 
-const ProjectList = () => {
-  const [showAll, setShowAll] = useState(false)
-
+const ProjectList = ({ simple }) => {
   const {
     machadoalves,
     registerSwitch,
@@ -160,7 +158,7 @@ const ProjectList = () => {
         description={Strings.projects.description}
       >
         {Strings.projects.list
-          .slice(0, showAll ? 12 : 3)
+          .slice(0, !simple ? 12 : 3)
           .map((project, index) => (
             <HomeCard
               key={index}
@@ -180,9 +178,18 @@ const ProjectList = () => {
             />
           ))}
       </HomeList>
-      <ShowAll onClick={() => setShowAll(!showAll)}>
-        {showAll ? Strings.projects.viewHighlight : Strings.projects.viewAll}
-      </ShowAll>
+      {simple &&
+        <ShowAllWrapper>
+          <ShowAll
+            to="/projects"
+            cover
+            direction="right"
+            bg="var(--background)"
+            duration={0.6}
+          >
+            {Strings.projects.viewAll}
+          </ShowAll>
+        </ShowAllWrapper>}
     </>
   )
 }

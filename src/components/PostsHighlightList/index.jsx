@@ -7,6 +7,8 @@ import HomeCard from "components/HomeCard"
 import HomeList from "components/HomeList"
 import Strings from "components/strings"
 
+import { ShowAllWrapper, ShowAll } from "./styled"
+
 const PostsList = () => {
   const {
     allMarkdownRemark: { edges },
@@ -46,39 +48,52 @@ const PostsList = () => {
   `)
 
   return (
-    <HomeList
-      title={Strings.posts.title}
-      description={Strings.posts.description}
-    >
-      {edges.map(({ node }, index) => (
-        <Anilink
-          key={index}
-          to={node.fields.slug}
+    <>
+      <HomeList
+        title={Strings.posts.title}
+        description={Strings.posts.description}
+      >
+        {edges.map(({ node }, index) => (
+          <Anilink
+            key={index}
+            to={node.fields.slug}
+            cover
+            direction="left"
+            bg="var(--background)"
+            duration={0.6}
+          >
+            <HomeCard
+              title={node.frontmatter.title}
+              subtitle={`${node.frontmatter.date} ● ${node.timeToRead} min de leitura`}
+              description={node.frontmatter.description}
+              tags={node.frontmatter.tags}
+              cover={
+                node.frontmatter.featuredImage && (
+                  <GatsbyImage
+                    alt={node.frontmatter.title}
+                    image={
+                      node.frontmatter.featuredImage.childImageSharp
+                        .gatsbyImageData
+                    }
+                  />
+                )
+              }
+            />
+          </Anilink>
+        ))}
+      </HomeList>
+      <ShowAllWrapper>
+        <ShowAll
+          to="/blog"
           cover
-          direction="left"
+          direction="right"
           bg="var(--background)"
           duration={0.6}
         >
-          <HomeCard
-            title={node.frontmatter.title}
-            subtitle={`${node.frontmatter.date} ● ${node.timeToRead} min de leitura`}
-            description={node.frontmatter.description}
-            tags={node.frontmatter.tags}
-            cover={
-              node.frontmatter.featuredImage && (
-                <GatsbyImage
-                  alt={node.frontmatter.title}
-                  image={
-                    node.frontmatter.featuredImage.childImageSharp
-                      .gatsbyImageData
-                  }
-                />
-              )
-            }
-          />
-        </Anilink>
-      ))}
-    </HomeList>
+          {Strings.posts.viewAll}
+        </ShowAll>
+      </ShowAllWrapper>
+    </>
   )
 }
 
