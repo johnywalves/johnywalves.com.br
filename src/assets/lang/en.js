@@ -2,11 +2,12 @@ const en = {
   description:
     "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
   position: "Web Developer",
+  resume: "Resume",
   files: [
     { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
     { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" },
   ],
-  status: "Brazilian, Single, 32 years old",
+  status: "Brazilian, Single, 35 years old",
   live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
   lattes:
     "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2547980J8&idiomaExibicao=2",
@@ -15,12 +16,12 @@ const en = {
     description: "You can find me on social networks",
   },
   posts: {
-    title: "Published posts (portuguese)",
+    title: "Posts (portuguese)",
     description: "Latest published articles on life and development",
     viewAll: "View all posts",
   },
   comics: {
-    title: "Last published comic strip",
+    title: "Last comic strip",
     description: "Doing humor about living in the development world",
     first: "First",
     prev: "Previous",

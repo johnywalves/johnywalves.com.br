@@ -5,7 +5,7 @@ import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Content = styled.article`
   color: var(--texts);
-  padding: 1rem 4rem 3rem;
+  padding: 1rem 2rem;
 
   h1 {
     color: var(--titles);
@@ -59,32 +59,41 @@ export const HeadSector = styled.div`
 
 export const Curriculium = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 1rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 1rem 0 0;
 
-  a {
+  div {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    height: 2.5rem;
-    padding: 0.5rem 1rem;
-    margin: 0 1rem 0 0;
-    border-radius: 0.25rem;
-    color: var(--white);
-    font-weight: 700;
-    text-transform: lowercase;
-    background-color: var(--highlight);
-    text-decoration: none;
-  }
+    margin: 1rem 0 0;
 
-  & a:hover {
-    opacity: 0.7;
-  }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2.5rem;
+      padding: 0.5rem 1rem;
+      margin: 0 1rem 0 0;
+      border-radius: 0.25rem;
+      color: var(--white);
+      font-weight: 700;
+      text-transform: lowercase;
+      background-color: var(--highlight);
+      text-decoration: none;
+    }
 
-  svg {
-    height: 100%;
-    margin: 0 1rem 0 0;
+    & a:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      height: 100%;
+      margin: 0 1rem 0 0;
+    }
   }
 `
 

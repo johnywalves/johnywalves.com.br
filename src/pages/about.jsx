@@ -49,17 +49,20 @@ const About = () => {
         </S.HeadSector>
 
         <S.Curriculium>
-          {Strings.files.map((file, index) => (
-            <a
-              key={index}
-              href={file.file}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FileDownload />
-              <p>{file.name}</p>
-            </a>
-          ))}
+          <h2>{Strings.resume}</h2>
+          <div>
+            {Strings.files.map((file, index) => (
+              <a
+                key={index}
+                href={file.file}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <FileDownload />
+                <p>{file.name}</p>
+              </a>
+            ))}
+          </div>
         </S.Curriculium>
 
         <S.HeadSector>
