@@ -9,14 +9,14 @@ export const Wrapper = styled.section`
 `
 
 export const ImageBox = styled.div`
-    transition: opacity .2s;
-`
-
-export const ImageCover = styled(GatsbyImage)`
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    transition: opacity .2s;
+`
+
+export const ImageCover = styled(GatsbyImage)`
     object-fit: cover;
     object-position: bottom;
 `

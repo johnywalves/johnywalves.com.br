@@ -67,7 +67,7 @@ const Hero = () => {
     }
   }, [opacities])
 
-  useListener('scroll', scrollMove, 100)
+  useListener('scroll', scrollMove, 0)
 
   return (
     <Wrapper>
