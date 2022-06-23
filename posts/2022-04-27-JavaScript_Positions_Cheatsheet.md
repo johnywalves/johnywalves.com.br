@@ -15,9 +15,7 @@ cheatsheet: true
 Posicionamento de objeto com relação ao scroll da página
 
 ```javascript
-function getCoords(elem) {
-  const box = elem.getBoundingClientRect()
-
+function getCoords() {
   const body = document.body
   const docEl = document.documentElement
 
@@ -27,8 +25,8 @@ function getCoords(elem) {
   const clientTop = docEl.clientTop || body.clientTop || 0
   const clientLeft = docEl.clientLeft || body.clientLeft || 0
 
-  const top = box.top + scrollTop - clientTop
-  const left = box.left + scrollLeft - clientLeft
+  const top = scrollTop - clientTop
+  const left = scrollLeft - clientLeft
 
   return { top: Math.round(top), left: Math.round(left) }
 }
