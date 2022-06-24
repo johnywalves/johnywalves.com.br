@@ -11,6 +11,7 @@ const New = () => {
       <Seo title="" />
       <Hero />
       <Panel />
+      <Panel />
     </Blueprint>
   )
 }

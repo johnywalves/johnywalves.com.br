@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from "react"
+import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import useListener from 'utils/useListener'
 
-import { Wrapper, ImageBox, ImageCover } from "./styled"
+import { Box, BoxTop, BoxBack, BoxText, Wrapper, ImageBox, ImageCover } from "./styled"
 
 function getPercentHero() {
   const body = document.body
@@ -67,18 +68,41 @@ const Hero = () => {
     }
   }, [opacities])
 
-  useListener('scroll', scrollMove, 0)
+  useListener('scroll', scrollMove, 10)
 
   return (
     <Wrapper>
+      <BoxTop>
+        <Parallax speed={50} translateY={[-2000, 200]}>
+          <Box />
+        </Parallax>
+      </BoxTop>
+
+      <BoxBack>
+        <Parallax speed={-50}>
+          <Box />
+        </Parallax>
+      </BoxBack>
+
+      <BoxText>
+        <h1>JOHNY</h1>
+        <p>Web Developer</p>
+      </BoxText>
+
       <ImageBox style={{ opacity: opacities === 0 ? 1 : 0 }}  >
-        <ImageCover image={show.childImageSharp.gatsbyImageData} />
+        <Parallax speed={-10}>
+          <ImageCover image={show.childImageSharp.gatsbyImageData} />
+        </Parallax>
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 1 ? 1 : 0 }} >
-        <ImageCover image={react.childImageSharp.gatsbyImageData} />
+        <Parallax speed={-10}>
+          <ImageCover image={react.childImageSharp.gatsbyImageData} />
+        </Parallax>
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 2 ? 1 : 0 }} >
-        <ImageCover image={down.childImageSharp.gatsbyImageData} />
+        <Parallax speed={-10}>
+          <ImageCover image={down.childImageSharp.gatsbyImageData} />
+        </Parallax>
       </ImageBox>
     </Wrapper>
   )
