@@ -8,14 +8,12 @@ import Pagination from "components/Pagination"
 
 import * as S from "components/ListWrapper/styled"
 
-const ComicsList = (props) => {
+const ComicList = (props) => {
   const comicsList = props.data.allMarkdownRemark.edges
 
-  const { currentPage, numPages } = props.pageContext
+  const { currentPage, prevPage, nextPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? `/comics/` : `/comics/${currentPage - 1}`
-  const nextPage = `/comics/${currentPage + 1}`
 
   return (
     <Layout>
@@ -98,4 +96,4 @@ export const query = graphql`
   }
 `
 
-export default ComicsList
+export default ComicList

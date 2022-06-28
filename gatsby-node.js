@@ -142,6 +142,8 @@ exports.createPages = ({ graphql, actions }) => {
           skip: index * postsPerPage,
           numPages,
           currentPage: index + 1,
+          prevPage: index === 0 ? `/blog/` : `/page/${index}`,
+          nextPage: `/page/${index + 2}`
         },
       })
     })
@@ -167,12 +169,14 @@ exports.createPages = ({ graphql, actions }) => {
     Array.from({ length: numPagesComics }).forEach((_, index) => {
       createPage({
         path: index === 0 ? `/comics/` : `/comics/${index + 1}`,
-        component: path.resolve(`src/templates/comics-list.jsx`),
+        component: path.resolve(`src/templates/comic-list.jsx`),
         context: {
           limit: comicsPerPage,
           skip: index * comicsPerPage,
           numPages,
           currentPage: index + 1,
+          prevPage: index === 0 ? `/comics/` : `/comics/${index}`,
+          nextPage: `/comics/${index + 2}`
         },
       })
     })
