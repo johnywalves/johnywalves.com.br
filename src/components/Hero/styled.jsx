@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
     position: relative;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, var(--white) 50%, var(--highlight) 50%);
+    background: linear-gradient(90deg, var(--background) 50%, var(--highlight) 50%);
 `
 
 export const Box = styled.div`
@@ -41,7 +41,7 @@ export const BoxText = styled(Container)`
     width: 100%;
     padding: 0 10vw;
     transform: translateY(-50%);
-    background: linear-gradient(90deg, var(--highlight) 50%, var(--white) 50%);
+    background: linear-gradient(90deg, var(--highlight) 50%, var(--background) 50%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; 

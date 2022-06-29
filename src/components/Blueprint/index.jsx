@@ -2,6 +2,8 @@ import React from "react"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import PropTypes from "prop-types"
 
+import Menu from "components/Menu"
+
 import { Wrapper } from "./styled"
 
 import GeneralStyles from "../../styles/general"
@@ -14,6 +16,7 @@ const Blueprint = ({ children }) => {
             <GeneralStyles />
             <Wrapper>
                 {children}
+                <Menu />
             </Wrapper>
         </ParallaxProvider>
     )

@@ -38,7 +38,7 @@ const GeneralStyles = createGlobalStyle`
     --titles: #fff;
     --postColor: #fff;
     --highlightDark: #e352a8;
-    --highlight: #e352a8;
+    --highlight: #de128c;
     --mediumBackground: #192734;
     --background: #16202c;
     --white: #eee;
