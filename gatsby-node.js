@@ -131,16 +131,16 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Listagem de artigos
     const postsPerPage = 6
-    const numPages = Math.ceil(result.data.AllPosts.edges.length / postsPerPage)
+    const numPagesPosts = Math.ceil(result.data.AllPosts.edges.length / postsPerPage)
 
-    Array.from({ length: numPages }).forEach((_, index) => {
+    Array.from({ length: numPagesPosts }).forEach((_, index) => {
       createPage({
         path: index === 0 ? `/blog/` : `/page/${index + 1}`,
         component: path.resolve(`src/templates/blog-list.jsx`),
         context: {
           limit: postsPerPage,
           skip: index * postsPerPage,
-          numPages,
+          numPages: numPagesPosts,
           currentPage: index + 1,
           prevPage: index === 0 ? `/blog/` : `/page/${index}`,
           nextPage: `/page/${index + 2}`
@@ -173,7 +173,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           limit: comicsPerPage,
           skip: index * comicsPerPage,
-          numPages,
+          numPages: numPagesComics,
           currentPage: index + 1,
           prevPage: index === 0 ? `/comics/` : `/comics/${index}`,
           nextPage: `/comics/${index + 2}`
