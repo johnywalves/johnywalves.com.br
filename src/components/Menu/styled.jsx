@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
 `
 
 export const ThemeColorWrapper = styled.div`
+    position: relative;
     height: 30px;
     width: 30px;
     margin: 10px;
@@ -17,6 +18,67 @@ export const ThemeColorWrapper = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 2;
+    cursor: pointer;
+
+    & > span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 2px;
+        transition: 0.5s ease-in-out;
+        transform-origin: left center;
+        background-color: var(--white);
+    }
+
+    & > span:nth-child(1) {
+        top: 14px;
+        left: -3px;
+    }
+
+    & > span:nth-child(2) {
+        top: 25px;
+        left: -2px;
+        transform: rotate(-45deg);
+    }
+
+    & > span:nth-child(3) {
+        bottom: -3px;
+        left: 14px;
+        transform: rotate(-90deg);
+    }
+
+    & > span:nth-child(4) {
+        bottom: 4px;
+        right: 2px;
+        transform: rotate(45deg);
+    }
+
+    & > span:nth-child(5) {
+        top: 14px;
+        right: -3px;
+    }
+
+    & > span:nth-child(6) {
+        top: 2px;
+        right: 2px;
+        transform: rotate(-45deg);
+    }
+
+    & > span:nth-child(7) {
+        top: 3px;
+        left: 14px;
+        transform: rotate(-90deg);
+    }
+
+    & > span:nth-child(8) {
+        top: 2px;
+        left: 2px;
+        transform: rotate(45deg);
+    }
+
+    .dark & > span {
+        width: 6px;
+    }
 `
 
 export const ThemeColor = styled.div`
@@ -24,13 +86,13 @@ export const ThemeColor = styled.div`
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    cursor: pointer;
     transition: 0.5s ease-in-out;
     box-shadow: inset 2px -2px var(--white), inset 8px -8px var(--white);
 
     .dark & {
         height: 60%;
         width: 60%;
+        border-radius: 50%;
         box-shadow: inset 18px -18px var(--white);
     }
 `

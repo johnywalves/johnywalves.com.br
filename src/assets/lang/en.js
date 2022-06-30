@@ -37,17 +37,6 @@ const en = {
       { name: "Portuguese", proficiency: "Native", image: "brazilian.png" },
     ],
   },
-  softSkills: {
-    title: "Soft Skills",
-    description:
-      "Some of the my interpersonal skills",
-    list: [
-      "Friendly",
-      "Regardful",
-      "Teamwork",
-      "Provision for Learning"
-    ],
-  },
   hardSkills: {
     title: "Hard Skills",
     description:

@@ -95,18 +95,6 @@ const About = () => {
         ))}
 
         <S.HeadSector>
-          <h2>{Strings.softSkills.title}</h2>
-          <h5>{Strings.softSkills.description}</h5>
-        </S.HeadSector>
-        <S.Band>
-          {Strings.softSkills.list.map((skill, index) => (
-            <Badge key={index} skill>
-              {skill}
-            </Badge>
-          ))}
-        </S.Band>
-
-        <S.HeadSector>
           <h2>{Strings.experience.title}</h2>
           <h5>{Strings.experience.description}</h5>
         </S.HeadSector>

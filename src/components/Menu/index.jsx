@@ -35,6 +35,14 @@ const Menu = () => {
     <>
       <Wrapper>
         <ThemeColorWrapper onClick={toggleTheme}>
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
           <ThemeColor />
         </ThemeColorWrapper>
         <MenuCheck id="menu-hamburger" type="checkbox" />

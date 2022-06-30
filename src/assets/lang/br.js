@@ -37,17 +37,6 @@ const br = {
       { name: "Inglês", proficiency: "Intermediário", image: "english.png" },
     ],
   },
-  softSkills: {
-    title: "Habilidades Sociais",
-    description:
-      "Algumas coisas que acredito serem meu forte ao lidar com outras pessoas",
-    list: [
-      "Amigável",
-      "Atencioso",
-      "Senso de equipe",
-      "Disposição para aprendizado",
-    ],
-  },
   hardSkills: {
     title: "Conhecimentos",
     description:
