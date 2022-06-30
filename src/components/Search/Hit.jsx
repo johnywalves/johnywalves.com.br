@@ -9,7 +9,7 @@ const Hit = ({ hit }) => (
     date={hit.date}
     timeToRead={hit.timeToRead}
     title={hit.title}
-    description={hit.description || hit.transcription || "Lorem lipsunm"}
+    description={hit.description || "No description"}
     tags={hit.tags}
     coverImage={hit.coverImage}
   />

@@ -1,7 +1,7 @@
 ---
 date: 2018-08-30 13:32:48 -0300
 title: IDEs Python (Jupyter e Spyder)
-description: Lorem lipsunm
+description: Instalação do Jupyter e Spyder para desenvolvimento com Python
 category: Py
 tags: [Ambiente, Python, Jupyter, Spyder]
 featuredImage: ./featured/jupiter-1.jpg

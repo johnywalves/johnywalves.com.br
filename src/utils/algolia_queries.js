@@ -29,6 +29,7 @@ const postQuery = `{
 const flatten = (arr) =>
   arr.map(({ node: { frontmatter, fields, ...rest } }) => ({
     ...frontmatter,
+    description: frontmatter.description ? frontmatter.description : frontmatter.transcription + '...',
     ...fields,
     date_timestamp: parseInt(
       (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0)
