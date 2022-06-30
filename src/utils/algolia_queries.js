@@ -15,7 +15,7 @@ const postQuery = `{
                     date_timestamp: date
                     date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                     description
-                    transcription(pruneLength: 1000)
+                    transcription
                     tags
                     coverImage
                 }
@@ -27,12 +27,12 @@ const postQuery = `{
 }`
 
 const flatten = (arr) =>
-  arr.map(({ node: { frontmatter, fields, ...rest } }) => ({
-    ...frontmatter,
-    description: frontmatter.description ? frontmatter.description : frontmatter.transcription + '...',
+  arr.map(({ node: { frontmatter: { description, transcription, date_timestamp, ...others }, fields, ...rest } }) => ({
+    ...others,
+    description: description ? description : transcription.slice(0, 100) + '...',
     ...fields,
     date_timestamp: parseInt(
-      (new Date(frontmatter.date_timestamp).getTime() / 1000).toFixed(0)
+      (new Date(date_timestamp).getTime() / 1000).toFixed(0)
     ),
     ...rest,
   }))
