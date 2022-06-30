@@ -56,10 +56,10 @@ const pluginsConfig = [
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Johny W. Alves`,
-      short_name: `Johny Site`,
+      short_name: `Johny W. Alves`,
       start_url: `/`,
-      background_color: `#eb008b`,
-      theme_color: `#eb008b`,
+      background_color: `#ffffff`,
+      theme_color: `#de128c`,
       display: `minimal-ui`,
       icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
     },

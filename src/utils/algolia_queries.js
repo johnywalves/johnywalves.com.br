@@ -15,6 +15,7 @@ const postQuery = `{
                     date_timestamp: date
                     date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                     description
+                    transcription(pruneLength: 200)
                     tags
                     coverImage
                 }

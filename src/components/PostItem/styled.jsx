@@ -73,7 +73,6 @@ export const PostItemCoverImage = styled.div`
   height: 120px;
   width: 120px;
   background-position: center;
-  background-size: cover;
 
   ${media.lessThan("large")`
     display: none;
