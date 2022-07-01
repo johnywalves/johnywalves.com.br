@@ -25,6 +25,7 @@ export const ThemeColorWrapper = styled.div`
         display: block;
         width: 0;
         height: 2px;
+        border-radius: 2px;
         transition: 0.5s ease-in-out;
         transform-origin: left center;
         background-color: var(--white);
@@ -35,22 +36,10 @@ export const ThemeColorWrapper = styled.div`
         left: -3px;
     }
 
-    & > span:nth-child(2) {
-        top: 25px;
-        left: -2px;
-        transform: rotate(-45deg);
-    }
-
     & > span:nth-child(3) {
-        bottom: -3px;
-        left: 14px;
+        bottom: -4px;
+        left: 15px;
         transform: rotate(-90deg);
-    }
-
-    & > span:nth-child(4) {
-        bottom: 4px;
-        right: 2px;
-        transform: rotate(45deg);
     }
 
     & > span:nth-child(5) {
@@ -58,21 +47,35 @@ export const ThemeColorWrapper = styled.div`
         right: -3px;
     }
 
-    & > span:nth-child(6) {
-        top: 2px;
-        right: 2px;
+    & > span:nth-child(7) {
+        top: -4px;
+        left: 15px;
+        transform: rotate(90deg);
+    }
+
+    & > span:nth-child(2) {
+        bottom: 2px;
+        left: 1px;
         transform: rotate(-45deg);
     }
 
-    & > span:nth-child(7) {
-        top: 3px;
-        left: 14px;
-        transform: rotate(-90deg);
+    & > span:nth-child(4) {
+        bottom: 2px;
+        right: 1px;
+        transform-origin: right center;
+        transform: rotate(45deg);
+    }
+
+    & > span:nth-child(6) {
+        top: 2px;
+        right: 1px;
+        transform-origin: right center;
+        transform: rotate(-45deg);
     }
 
     & > span:nth-child(8) {
         top: 2px;
-        left: 2px;
+        left: 1px;
         transform: rotate(45deg);
     }
 
