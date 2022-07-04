@@ -537,6 +537,28 @@ const br = {
       label: "Sobre",
       url: "/about/",
     }
+  ],
+  menuLinks: [
+    {
+      label: "johny.",
+      url: "/",
+    },
+    {
+      label: "artigos.",
+      url: "/blog/",
+    },
+    {
+      label: "tirinhas.",
+      url: "/comics/",
+    },
+    {
+      label: "projetos.",
+      url: "/project/",
+    },
+    {
+      label: "pesquisa.",
+      url: "/search/",
+    },
   ]
 }
 

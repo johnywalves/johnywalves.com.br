@@ -1,4 +1,6 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Wrapper = styled.div`
     position: fixed;
@@ -104,19 +106,55 @@ export const MenuBox = styled.div`
     position: fixed;
     height: 0%;
     width: 0%;
-    top: 0;
-    right: 0;
+    top: -30%;
+    right: -30%;
     background-color: var(--highlight);
     z-index: 1;
     transition: 0.5s ease-in-out;
+    border-radius: 50% 25% / 50% 25%;
+`
+
+export const MenuLinksShow = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`
+
+export const MenuLinks = styled.ul`
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+    list-style: none;
+    font-size: var(--64px);
+`
+
+export const MenuLinksLink = styled(Anilink)`
+  color: var(--texts);
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: var(--highlight);
+  }
 `
 
 export const MenuCheck = styled.input`
     display: none;
 
     &:checked ~ div {
-        height: 100%;
-        width: 100%;
+        height: 150%;
+        width: 150%;
+    }
+
+    &:checked ~ div > ul {
+        animation: ${MenuLinksShow} 1.5s 0.5s ease forwards;
+    }
+
+    &:checked ~ div > {
+        height: 150%;
+        width: 150%;
     }
 
     &:checked ~ label span {

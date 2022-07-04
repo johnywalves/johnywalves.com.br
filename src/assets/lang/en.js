@@ -537,6 +537,28 @@ const en = {
       label: "About",
       url: "/about/",
     }
+  ],
+  menuLinks: [
+    {
+      label: "johny.",
+      url: "/",
+    },
+    {
+      label: "articles.",
+      url: "/blog/",
+    },
+    {
+      label: "comics.",
+      url: "/comics/",
+    },
+    {
+      label: "projects.",
+      url: "/project/",
+    },
+    {
+      label: "search.",
+      url: "/search/",
+    },
   ]
 }
 

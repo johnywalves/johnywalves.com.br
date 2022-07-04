@@ -1,10 +1,14 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react"
 
+import strings from "components/strings"
+
 import {
   Wrapper,
   ThemeColorWrapper,
   ThemeColor,
   MenuBox,
+  MenuLinks,
+  MenuLinksLink,
   MenuWrapper,
   MenuCheck,
   Hamburger
@@ -50,6 +54,22 @@ const Menu = () => {
           <Hamburger />
         </MenuWrapper>
         <MenuBox>
+          <MenuLinks>
+            {strings.menuLinks.map(({ label, url }) => (
+              <li key={label} >
+                <MenuLinksLink
+                  cover
+                  direction="left"
+                  bg="var(--background)"
+                  duration={0.6}
+                  to={url}
+                  activeClassName="active"
+                >
+                  {label}
+                </MenuLinksLink>
+              </li>
+            ))}
+          </MenuLinks>
         </MenuBox>
       </Wrapper>
     </>
