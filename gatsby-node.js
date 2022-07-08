@@ -92,22 +92,6 @@ exports.createPages = ({ graphql, actions }) => {
             slug
           }
         }
-        next {
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-        }
-        previous {
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
-        }
       }
     }      
   }
@@ -142,22 +126,20 @@ exports.createPages = ({ graphql, actions }) => {
           skip: index * postsPerPage,
           numPages: numPagesPosts,
           currentPage: index + 1,
-          prevPage: index === 0 ? `/blog/` : `/page/${index}`,
+          prevPage: index === 1 ? `/blog/` : `/page/${index}`,
           nextPage: `/page/${index + 2}`
         },
       })
     })
 
     // Página de tirinhas
-    result.data.AllComics.edges.forEach(({ node, next, previous }) => {
+    result.data.AllComics.edges.forEach(({ node }) => {
       createPage({
         path: `/comic-${node.frontmatter.number}`,
         component: path.resolve(`src/templates/comic-post.jsx`),
         context: {
           slug: node.fields.slug,
           number: node.frontmatter.number,
-          previousPost: next,
-          nextPost: previous,
         },
       })
     })
@@ -175,7 +157,7 @@ exports.createPages = ({ graphql, actions }) => {
           skip: index * comicsPerPage,
           numPages: numPagesComics,
           currentPage: index + 1,
-          prevPage: index === 0 ? `/comics/` : `/comics/${index}`,
+          prevPage: index === 1 ? `/comics/` : `/comics/${index}`,
           nextPage: `/comics/${index + 2}`
         },
       })
