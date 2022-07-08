@@ -205,6 +205,13 @@ const br = {
         img: "/cert/udemy_gatsby.jpg",
         icon: "tools",
       },
+      {
+        date: "2022-07-08 00:00:00-0300",
+        name: "Voxy Proficiency Achievement Certificate - High Intermediate",
+        institute: "Voxy",
+        img: "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
+        icon: "university",
+      },      
     ],
   },
   projects: {
@@ -553,7 +560,7 @@ const br = {
     },
     {
       label: "projetos.",
-      url: "/project/",
+      url: "/projects/",
     },
     {
       label: "pesquisa.",
