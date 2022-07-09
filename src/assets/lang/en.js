@@ -547,23 +547,23 @@ const en = {
   ],
   menuLinks: [
     {
-      label: "johny.",
-      url: "/",
+      label: "johny",
+      url: "/new",
     },
     {
-      label: "articles.",
+      label: "articles",
       url: "/blog/",
     },
     {
-      label: "comics.",
+      label: "comics",
       url: "/comics/",
     },
     {
-      label: "projects.",
+      label: "projects",
       url: "/projects/",
     },
     {
-      label: "search.",
+      label: "search",
       url: "/search/",
     },
   ]

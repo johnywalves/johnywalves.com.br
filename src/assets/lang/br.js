@@ -547,23 +547,23 @@ const br = {
   ],
   menuLinks: [
     {
-      label: "johny.",
-      url: "/",
+      label: "johny",
+      url: "/new",
     },
     {
-      label: "artigos.",
+      label: "artigos",
       url: "/blog/",
     },
     {
-      label: "tirinhas.",
+      label: "tirinhas",
       url: "/comics/",
     },
     {
-      label: "projetos.",
+      label: "projetos",
       url: "/projects/",
     },
     {
-      label: "pesquisa.",
+      label: "pesquisa",
       url: "/search/",
     },
   ]

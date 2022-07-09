@@ -2,22 +2,10 @@ import React, { useCallback, useState } from "react"
 import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
+import getPercentHero from 'utils/getPercentHero'
 import useListener from 'utils/useListener'
 
 import { Box, BoxTop, BoxBack, BoxText, Wrapper, ImageBox, ImageCover } from "./styled"
-
-function getPercentHero() {
-  const body = document.body
-  const docEl = document.documentElement
-
-  const scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop
-  const clientTop = docEl.clientTop || body.clientTop || 0
-  const top = scrollTop - clientTop
-
-  const clientHeight = docEl.clientHeight || body.clientHeight || 0
-
-  return Math.round(top) / clientHeight
-}
 
 const Hero = () => {
   const { show, react, down } = useStaticQuery(graphql`

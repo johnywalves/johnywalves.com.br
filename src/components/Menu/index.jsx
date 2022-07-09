@@ -1,12 +1,19 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
+import getPercentHero from 'utils/getPercentHero'
+import useListener from 'utils/useListener'
 
 import strings from "components/strings"
 
 import {
   Wrapper,
+  MenuBar,
+  Logo,
   ThemeColorWrapper,
   ThemeColor,
   MenuBox,
+  MenuBackground,
   MenuLinks,
   MenuLinksLink,
   MenuWrapper,
@@ -15,6 +22,21 @@ import {
 } from "./styled"
 
 const Menu = () => {
+  const { jellyfish } = useStaticQuery(graphql`
+    query {
+      jellyfish: file(relativePath: { eq: "jellyfish.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 800
+            height: 600
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+          )
+        }
+      }
+    }
+  `)
+
   const [theme, setTheme] = useState(null)
 
   const isDarkMode = useMemo(() => theme === "dark", [theme])
@@ -35,44 +57,58 @@ const Menu = () => {
     })
   }, [isDarkMode])
 
+  const [classMenuBar, setClassMenuBar] = useState(false)
+
+  const scrollMove = useCallback(() => {
+    const percent = getPercentHero()
+    setClassMenuBar(percent < 1 ? '' : 'nohero')
+  }, [])
+
+  useListener('scroll', scrollMove, 10)
+
   return (
-    <>
-      <Wrapper>
-        <ThemeColorWrapper onClick={toggleTheme}>
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <ThemeColor />
-        </ThemeColorWrapper>
-        <MenuCheck id="menu-hamburger" type="checkbox" />
-        <MenuWrapper htmlFor="menu-hamburger"  >
-          <Hamburger />
-        </MenuWrapper>
-        <MenuBox>
-          <MenuLinks>
-            {strings.menuLinks.map(({ label, url }) => (
-              <li key={label} >
-                <MenuLinksLink
-                  cover
-                  direction="left"
-                  bg="var(--background)"
-                  duration={0.6}
-                  to={url}
-                  activeClassName="active"
-                >
-                  {label}
-                </MenuLinksLink>
-              </li>
-            ))}
-          </MenuLinks>
-        </MenuBox>
-      </Wrapper>
-    </>
+    <Wrapper>
+      <MenuCheck id="menu-hamburger" type="checkbox" />
+      {console.log(classMenuBar)}
+      <MenuBar className={classMenuBar}>
+        <Logo>{"{JWA}"}</Logo>
+        <div>
+          <ThemeColorWrapper onClick={toggleTheme}>
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <ThemeColor />
+          </ThemeColorWrapper>
+          <MenuWrapper htmlFor="menu-hamburger"  >
+            <Hamburger />
+          </MenuWrapper>
+        </div>
+      </MenuBar>
+      <MenuBox>
+        <MenuBackground image={jellyfish.childImageSharp.gatsbyImageData} />
+        <MenuLinks>
+          {strings.menuLinks.map(({ label, url }) => (
+            <li key={label}>
+              <MenuLinksLink
+                cover
+                direction="left"
+                bg="var(--background)"
+                duration={0.6}
+                to={url}
+                activeClassName="active"
+              >
+                {label}<span>.</span>
+              </MenuLinksLink>
+            </li>
+          ))}
+        </MenuLinks>
+      </MenuBox>
+    </Wrapper>
   )
 }
 

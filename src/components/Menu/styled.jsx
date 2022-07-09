@@ -1,14 +1,45 @@
 import styled, { keyframes } from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Wrapper = styled.div`
+    z-index: 10;
+`
+
+export const MenuBar = styled.nav`
     position: fixed;
-    top: 20px;
-    right: 30px;
+    top: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    padding: 0 35px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: row;
     z-index: 10;
+    transition: 0.5s ease-in-out;
+
+    & div { 
+        display: flex;
+        flex-direction: row;
+    }
+
+    &.nohero {
+        background: var(--highlight);
+
+        & p {
+            color: var(--white);
+        }
+    }
+`
+
+export const Logo = styled.p`
+    color: var(--highlight);
+    font-size: var(--48px);
+    font-weight: 900;
+    transition: 0.5s ease-in-out;
 `
 
 export const ThemeColorWrapper = styled.div`
@@ -109,35 +140,60 @@ export const MenuBox = styled.div`
     top: -30%;
     right: -30%;
     background-color: var(--highlight);
-    z-index: 1;
+    z-index: 3;
     transition: 0.5s ease-in-out;
     border-radius: 50% 25% / 50% 25%;
 `
 
 export const MenuLinksShow = keyframes`
   from { opacity: 0; }
-  to { opacity: 1; }
+  to { opacity: 0.5; }
+`
+
+export const MenuBackground = styled(GatsbyImage)`
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+    border-radius: 30% 80% 80% 30% / 55%; 
 `
 
 export const MenuLinks = styled.ul`
     opacity: 0;
+    display: none;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 66%;
     transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
     list-style: none;
-    font-size: var(--64px);
+    color: var(--white);
+    font-size: var(--80px);
+    font-weight: 700;
+
+    &.active {
+        opacity: 1;
+    }
 `
 
 export const MenuLinksLink = styled(Anilink)`
-  color: var(--texts);
-  text-decoration: none;
-  transition: color 0.5s;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
 
-  &:hover {
-    color: var(--highlight);
-  }
+    &:hover {
+        opacity: 1;
+
+        & span { 
+            color: var(--white);
+        }
+    }
+
+    & span { 
+        color: var(--texts);
+    }
 `
 
 export const MenuCheck = styled.input`
@@ -148,25 +204,30 @@ export const MenuCheck = styled.input`
         width: 150%;
     }
 
-    &:checked ~ div > ul {
+    &:checked ~ p {
+        color: var(--white);
+    }
+
+    &:checked ~ div > ul,
+    &:checked ~ div > .gatsby-image-wrapper {
+        display: block;
         animation: ${MenuLinksShow} 1.5s 0.5s ease forwards;
     }
 
-    &:checked ~ div > {
-        height: 150%;
-        width: 150%;
+    &:checked ~ nav > p  {
+        color: var(--white);
     }
 
-    &:checked ~ label span {
+    &:checked ~ nav > div > label span {
       transform: rotate(45deg);
     }
 
-    &:checked ~ label span::before {
+    &:checked ~ nav > div > label span::before {
         transform: rotate(-90deg);
         top: 0;
     }
 
-    &:checked ~ label span::after {
+    &:checked ~ nav > div > label span::after {
         transform: rotate(-90deg);
         bottom: 0;
     }
