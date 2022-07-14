@@ -21,7 +21,7 @@ const FormatDate = (text) => {
 const About = () => {
   const { avatarImage } = useStaticQuery(graphql`
     query {
-      avatarImage: file(relativePath: { eq: "johnywalves.jpg" }) {
+      avatarImage: file(relativePath: { eq: "johnywalves.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 160

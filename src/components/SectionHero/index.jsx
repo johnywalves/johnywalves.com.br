@@ -7,7 +7,7 @@ import useListener from 'utils/useListener'
 
 import { Box, BoxTop, BoxBack, BoxText, Wrapper, ImageBox, ImageCover } from "./styled"
 
-const Hero = () => {
+const SectionHero = () => {
   const { show, react, down } = useStaticQuery(graphql`
     query {
       show: file(relativePath: { eq: "profile_show.png" }) {
@@ -96,4 +96,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default SectionHero

@@ -2,18 +2,18 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import HomeCard from "components/HomeCard"
-import HomeList from "components/HomeList"
+import Card from "components/Card"
+import CardContainer from "components/CardContainer"
 
-import { ImageCover, ShowAllWrapper, ShowAll } from "./styled"
+import { Wrapper, ImageCover } from "./styled"
 
-const ProjectList = ({ simple }) => {
+const SectionProjects = () => {
   const images = useStaticQuery(graphql`
     query {
       machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -22,7 +22,7 @@ const ProjectList = ({ simple }) => {
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -31,7 +31,7 @@ const ProjectList = ({ simple }) => {
       devflix: file(relativePath: { eq: "devflix.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -40,7 +40,7 @@ const ProjectList = ({ simple }) => {
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -49,7 +49,7 @@ const ProjectList = ({ simple }) => {
       bomdia: file(relativePath: { eq: "bomdia.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -58,7 +58,7 @@ const ProjectList = ({ simple }) => {
       daisybell: file(relativePath: { eq: "daisybell.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -67,7 +67,7 @@ const ProjectList = ({ simple }) => {
       wolt: file(relativePath: { eq: "wolt.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -76,7 +76,7 @@ const ProjectList = ({ simple }) => {
       comicscreator: file(relativePath: { eq: "comicscreator.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -85,7 +85,7 @@ const ProjectList = ({ simple }) => {
       steamLibrary: file(relativePath: { eq: "steamLibrary.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -94,7 +94,7 @@ const ProjectList = ({ simple }) => {
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 256
+            height: 308
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -104,17 +104,14 @@ const ProjectList = ({ simple }) => {
   `)
 
   const getImage = (name) => images[name] || images.firemakebetter
-  
+
   return (
-    <>
-      <HomeList
-        title={Strings.projects.title}
-        description={Strings.projects.description}
-      >
+    <Wrapper>
+      <CardContainer>
         {Strings.projects.list
-          .slice(0, !simple ? 12 : 3)
+          .slice(0, 3)
           .map((project, index) => (
-            <HomeCard
+            <Card
               key={index}
               {...project}
               cover={
@@ -131,21 +128,9 @@ const ProjectList = ({ simple }) => {
               }
             />
           ))}
-      </HomeList>
-      {simple &&
-        <ShowAllWrapper>
-          <ShowAll
-            to="/projects"
-            cover
-            direction="right"
-            bg="var(--background)"
-            duration={0.6}
-          >
-            {Strings.projects.viewAll}
-          </ShowAll>
-        </ShowAllWrapper>}
-    </>
+      </CardContainer>
+    </Wrapper>
   )
 }
 
-export default ProjectList
+export default SectionProjects
