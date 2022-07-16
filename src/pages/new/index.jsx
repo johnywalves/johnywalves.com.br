@@ -1,13 +1,15 @@
 import React from "react"
 
 import Blueprint from "components/Blueprint"
+import Seo from "components/seo"
+
+import SectionHero from "components/SectionHero"
 import SectionAbout from "components/SectionAbout"
 import SectionExperience from "components/SectionExperience"
 import SectionArticles from "components/SectionArticles"
 import SectionComics from "components/SectionComics"
-import SectionHero from "components/SectionHero"
 import SectionProjects from "components/SectionProjects"
-import Seo from "components/seo"
+import SectionContact from "components/SectionContact"
 
 const New = () => {
   return (
@@ -19,6 +21,7 @@ const New = () => {
       <SectionArticles />
       <SectionComics />
       <SectionProjects />
+      <SectionContact />
     </Blueprint>
   )
 }

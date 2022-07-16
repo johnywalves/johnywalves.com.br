@@ -2,10 +2,21 @@ import React, { useCallback, useState } from "react"
 import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
+import SocialLinks from "components/SocialLinks"
+
 import getPercentHero from 'utils/getPercentHero'
 import useListener from 'utils/useListener'
 
-import { Box, BoxTop, BoxBack, BoxText, Wrapper, ImageBox, ImageCover } from "./styled"
+import {
+  Box,
+  BoxTop,
+  BoxBack,
+  BoxText,
+  Wrapper,
+  ImageBox,
+  ImageCover,
+  WrapperSocial
+} from "./styled"
 
 const SectionHero = () => {
   const { show, react, down } = useStaticQuery(graphql`
@@ -92,6 +103,10 @@ const SectionHero = () => {
           <ImageCover image={down.childImageSharp.gatsbyImageData} />
         </Parallax>
       </ImageBox>
+
+      <WrapperSocial>
+        <SocialLinks vertical />
+      </WrapperSocial>
     </Wrapper>
   )
 }

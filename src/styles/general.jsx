@@ -41,6 +41,7 @@ const GeneralStyles = createGlobalStyle`
     --titles: #fff;
     --postColor: #fff;
     --highlightDark: #e352a8;
+    --highlightSemi: #de128cc0;
     --highlight: #de128c;
     --mediumBackground: #192734;
     --background: #16202c;
@@ -55,6 +56,7 @@ const GeneralStyles = createGlobalStyle`
     --texts: #555555;
     --titles: #222;
     --highlightDark: #cb1080;
+    --highlightSemi: #de128cc0;
     --highlight: #de128c;
     --mediumBackground: #f0f0f3;
     --background: #fff;

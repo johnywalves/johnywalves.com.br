@@ -13,7 +13,7 @@ const SectionProjects = () => {
       machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -22,7 +22,7 @@ const SectionProjects = () => {
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -31,7 +31,7 @@ const SectionProjects = () => {
       devflix: file(relativePath: { eq: "devflix.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -40,7 +40,7 @@ const SectionProjects = () => {
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -49,7 +49,7 @@ const SectionProjects = () => {
       bomdia: file(relativePath: { eq: "bomdia.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -58,7 +58,7 @@ const SectionProjects = () => {
       daisybell: file(relativePath: { eq: "daisybell.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -67,7 +67,7 @@ const SectionProjects = () => {
       wolt: file(relativePath: { eq: "wolt.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -76,7 +76,7 @@ const SectionProjects = () => {
       comicscreator: file(relativePath: { eq: "comicscreator.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -85,7 +85,7 @@ const SectionProjects = () => {
       steamLibrary: file(relativePath: { eq: "steamLibrary.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -94,7 +94,7 @@ const SectionProjects = () => {
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 308
+            width: 640
             placeholder: DOMINANT_COLOR
             formats: [AUTO, WEBP]
           )
@@ -107,6 +107,7 @@ const SectionProjects = () => {
 
   return (
     <Wrapper>
+      <h2>{Strings.projects.title}</h2>
       <CardContainer>
         {Strings.projects.list
           .slice(0, 3)

@@ -1,6 +1,6 @@
 const br = {
   description:
-    "Meu nome é Johny William de Oliveira Alves (esse trecho é para o SEO, mas fique a vontade) engenheiro e desenvolvedor web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI), apaixonado por interfaces (UI, UX e frontend)",
+    "Meu nome é Johny William de Oliveira Alves engenheiro e desenvolvedor web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI), apaixonado por interfaces (UI, UX e frontend)",
   position: "Desenvolvedor Web",
   resume: "Currículo",
   files: [
@@ -37,7 +37,7 @@ const br = {
       { name: "Inglês", proficiency: "Intermediário", image: "english.png" },
     ],
   },
-  hardSkills: {
+  skills: {
     title: "Conhecimentos",
     description:
       "Coisas que acredito possuir capacidade de ser produtivo e gosto de trabalhar",
@@ -211,17 +211,17 @@ const br = {
         institute: "Voxy",
         img: "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
         icon: "university",
-      },      
+      },
     ],
   },
   projects: {
-    title: "Projetos e desenvolvimentos",
+    title: "Projetos",
     description: "Alguns projetos e experimentações desenvolvidas por mim",
     viewAll: "Visualizar todos",
     viewHighlight: "Visualizar somente destaques",
     list: [
       {
-        title: "Machado Alves - Contos Literários",
+        title: "Machado Alves",
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
@@ -565,6 +565,33 @@ const br = {
     {
       label: "pesquisa",
       url: "/search/",
+    },
+  ],
+  socialLinks: [
+    {
+      label: "GitHub",
+      icon: "Github",
+      url: "https://github.com/johnywalves",
+    },
+    {
+      label: "LinkedIn",
+      icon: "Linkedin",
+      url: "https://www.linkedin.com/in/johnywalves",
+    },
+    {
+      label: "Twitter",
+      icon: "Twitter",
+      url: "https://twitter.com/johnywalves",
+    },
+    {
+      label: "CNPq",
+      icon: "University",
+      url: "http://lattes.cnpq.br/0468996619713052",
+    },
+    {
+      label: "E-mail",
+      icon: "Email",
+      url: "mailto:contato@johnywalves.com.br",
     },
   ]
 }

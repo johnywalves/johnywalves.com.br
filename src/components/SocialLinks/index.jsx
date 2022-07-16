@@ -1,34 +1,53 @@
 import React from "react"
-// Content
-import Icons from "./icons"
-import links from "./content"
-// Style
-import * as S from "./styled"
+import PropTypes from "prop-types"
 
-const SocialLinks = ({ about = false }) => {
+import Strings from "components/strings"
+
+import Icons from "./icons"
+import {
+  Wrapper,
+  List,
+  Item,
+  Link,
+  IconWrapper
+} from "./styled"
+
+const SocialLinks = ({ about, vertical }) => {
+  const classWrapper = (about ? "about" : "") + (vertical ? "vertical" : "")
+
   return (
-    <S.SocialLinksWrapper about={about}>
-      <S.SocialLinksList className={about ? "about" : ""}>
-        {links.map((link, i) => {
-          const Icon = Icons[link.icon]
+    <Wrapper className={classWrapper} >
+      <List>
+        {Strings.socialLinks.map(({ icon, url, label }) => {
+          const Icon = Icons[icon]
           return (
-            <S.SocialLinksItem key={i}>
-              <S.SocialLinksLink
-                href={link.url}
-                title={link.label}
+            <Item key={icon}>
+              <Link
+                href={url}
+                title={label}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <S.IconWrapper>
+                <IconWrapper>
                   <Icon />
-                </S.IconWrapper>
-              </S.SocialLinksLink>
-            </S.SocialLinksItem>
+                </IconWrapper>
+              </Link>
+            </Item>
           )
         })}
-      </S.SocialLinksList>
-    </S.SocialLinksWrapper>
+      </List>
+    </Wrapper>
   )
+}
+
+SocialLinks.propTypes = {
+  about: PropTypes.bool.isRequired,
+  vertical: PropTypes.bool.isRequired,
+}
+
+SocialLinks.defaultProps = {
+  about: false,
+  vertical: false
 }
 
 export default SocialLinks

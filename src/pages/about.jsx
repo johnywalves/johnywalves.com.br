@@ -78,10 +78,10 @@ const About = () => {
         </S.Band>
 
         <S.HeadSector>
-          <h2>{Strings.hardSkills.title}</h2>
-          <h5>{Strings.hardSkills.description}</h5>
+          <h2>{Strings.skills.title}</h2>
+          <h5>{Strings.skills.description}</h5>
         </S.HeadSector>
-        {Strings.hardSkills.list.map((group, index) => (
+        {Strings.skills.list.map((group, index) => (
           <div key={index}>
             <h3>{group.type}</h3>
             <S.Band>

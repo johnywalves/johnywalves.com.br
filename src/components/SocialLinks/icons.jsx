@@ -7,6 +7,7 @@ import { Facebook } from "@styled-icons/fa-brands/Facebook"
 import { University } from "@styled-icons/fa-solid/University"
 import { Dev } from "@styled-icons/fa-brands/Dev"
 import { Hackerrank } from "@styled-icons/fa-brands/Hackerrank"
+import { Email } from "@styled-icons/material/Email"
 
 const Icons = {
   MailSend,
@@ -18,6 +19,7 @@ const Icons = {
   University,
   Dev,
   Hackerrank,
+  Email
 }
 
 export default Icons

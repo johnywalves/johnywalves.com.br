@@ -37,7 +37,7 @@ const en = {
       { name: "Portuguese", proficiency: "Native", image: "brazilian.png" },
     ],
   },
-  hardSkills: {
+  skills: {
     title: "Hard Skills",
     description:
       "Things that I believe possess the capacity to be productive and I like to work",
@@ -221,7 +221,7 @@ const en = {
     viewHighlight: "View only highlights",
     list: [
       {
-        title: "Machado Alves - Contos Literários",
+        title: "Machado Alves",
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
@@ -565,6 +565,33 @@ const en = {
     {
       label: "search",
       url: "/search/",
+    },
+  ],
+  socialLinks: [
+    {
+      label: "GitHub",
+      icon: "Github",
+      url: "https://github.com/johnywalves",
+    },
+    {
+      label: "LinkedIn",
+      icon: "Linkedin",
+      url: "https://www.linkedin.com/in/johnywalves",
+    },
+    {
+      label: "Twitter",
+      icon: "Twitter",
+      url: "https://twitter.com/johnywalves",
+    },
+    {
+      label: "CNPq",
+      icon: "University",
+      url: "http://lattes.cnpq.br/0468996619713052",
+    },
+    {
+      label: "E-mail",
+      icon: "Email",
+      url: "mailto:contato@johnywalves.com.br",
     },
   ]
 }

@@ -3,12 +3,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
+import Strings from "components/strings"
 import Card from "components/Card"
 import CardContainer from "components/CardContainer"
 
 import { Wrapper } from "./styled"
 
-const SectionProjects = () => {
+const SectionArticles = () => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -28,8 +29,8 @@ const SectionProjects = () => {
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    height: 150
-                    width: 500
+                    height: 200
+                    width: 640
                     layout: CONSTRAINED
                     placeholder: TRACED_SVG
                   )
@@ -48,6 +49,7 @@ const SectionProjects = () => {
 
   return (
     <Wrapper>
+      <h2>{Strings.posts.title}</h2>
       <CardContainer>
         {edges.map(({ node }, index) => (
           <Anilink
@@ -82,4 +84,4 @@ const SectionProjects = () => {
   )
 }
 
-export default SectionProjects
+export default SectionArticles

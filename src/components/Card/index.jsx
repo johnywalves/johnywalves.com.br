@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Wrapper, Cover } from "./styled"
+import { Wrapper, Cover, Title } from "./styled"
 
 const Card = ({
   title,
@@ -17,9 +17,7 @@ const Card = ({
       <Cover>
         {cover}
       </Cover>
-      {title && <h3>{title}</h3>}
-      {subtitle && <small>{subtitle}</small>}
-      {description && <p>{description}</p>}
+      {title && <Title>{title}</Title>}
     </Wrapper>
   )
 }
