@@ -7,10 +7,9 @@ import { Wrapper } from "./styled"
 const SectionAbout = () => {
   return (
     <Wrapper>
-      <h1>Johny W. Alves</h1>
       <h5>{Strings.description}</h5>
       {Strings.languages.list.map((language, index) => (
-        <p key={index} skill>
+        <p key={index}>
           {language.name} <span>({language.proficiency})</span>
         </p>
       ))}

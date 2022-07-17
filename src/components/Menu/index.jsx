@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import getPercentHero from 'utils/getPercentHero'
-import useListener from 'utils/useListener'
+import getPercentHero from "utils/getPercentHero"
+import useListener from "utils/useListener"
 
 import strings from "components/strings"
 
@@ -18,7 +18,7 @@ import {
   MenuLinksLink,
   MenuWrapper,
   MenuCheck,
-  Hamburger
+  Hamburger,
 } from "./styled"
 
 const Menu = () => {
@@ -61,15 +61,14 @@ const Menu = () => {
 
   const scrollMove = useCallback(() => {
     const percent = getPercentHero()
-    setClassMenuBar(percent < 1 ? '' : 'nohero')
+    setClassMenuBar(percent < 1 ? "" : "nohero")
   }, [])
 
-  useListener('scroll', scrollMove, 10)
+  useListener("scroll", scrollMove, 10)
 
   return (
     <Wrapper>
       <MenuCheck id="menu-hamburger" type="checkbox" />
-      {console.log(classMenuBar)}
       <MenuBar className={classMenuBar}>
         <Logo>{"{JWA}"}</Logo>
         <div>
@@ -84,7 +83,7 @@ const Menu = () => {
             <span />
             <ThemeColor />
           </ThemeColorWrapper>
-          <MenuWrapper htmlFor="menu-hamburger"  >
+          <MenuWrapper htmlFor="menu-hamburger">
             <Hamburger />
           </MenuWrapper>
         </div>
@@ -102,7 +101,8 @@ const Menu = () => {
                 to={url}
                 activeClassName="active"
               >
-                {label}<span>.</span>
+                {label}
+                <span>.</span>
               </MenuLinksLink>
             </li>
           ))}

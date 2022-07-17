@@ -27,15 +27,25 @@ const postQuery = `{
 }`
 
 const flatten = (arr) =>
-  arr.map(({ node: { frontmatter: { description, transcription, date_timestamp, ...others }, fields, ...rest } }) => ({
-    ...others,
-    description: description ? description : transcription.slice(0, 100) + '...',
-    ...fields,
-    date_timestamp: parseInt(
-      (new Date(date_timestamp).getTime() / 1000).toFixed(0)
-    ),
-    ...rest,
-  }))
+  arr.map(
+    ({
+      node: {
+        frontmatter: { description, transcription, date_timestamp, ...others },
+        fields,
+        ...rest
+      },
+    }) => ({
+      ...others,
+      description: description
+        ? description
+        : transcription.slice(0, 100) + "...",
+      ...fields,
+      date_timestamp: parseInt(
+        (new Date(date_timestamp).getTime() / 1000).toFixed(0)
+      ),
+      ...rest,
+    })
+  )
 
 const queries = [
   {

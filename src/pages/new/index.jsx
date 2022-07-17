@@ -3,27 +3,29 @@ import React from "react"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 
-import SectionHero from "components/SectionHero"
-import SectionAbout from "components/SectionAbout"
-import SectionExperience from "components/SectionExperience"
-import SectionArticles from "components/SectionArticles"
-import SectionComics from "components/SectionComics"
-import SectionProjects from "components/SectionProjects"
-import SectionContact from "components/SectionContact"
+import {
+  Hero,
+  About,
+  Experience,
+  Articles,
+  Comics,
+  Projects,
+  Contact,
+} from "components/Sections"
 
-const New = () => {
+const Home = () => {
   return (
     <Blueprint>
       <Seo title="" />
-      <SectionHero />
-      <SectionAbout />
-      <SectionExperience />
-      <SectionArticles />
-      <SectionComics />
-      <SectionProjects />
-      <SectionContact />
+      <Hero />
+      <About />
+      <Experience />
+      <Articles />
+      <Comics />
+      <Projects />
+      <Contact />
     </Blueprint>
   )
 }
 
-export default New
+export default Home

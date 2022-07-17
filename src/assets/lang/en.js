@@ -9,8 +9,6 @@ const en = {
   ],
   status: "Brazilian, Single, 35 years old",
   live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
-  lattes:
-    "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2547980J8&idiomaExibicao=2",
   contact: {
     title: "Contact",
     description: "You can find me on social networks",
@@ -21,7 +19,7 @@ const en = {
     viewAll: "View all posts",
   },
   comics: {
-    title: "Last comic strip",
+    title: "Comic",
     description: "Doing humor about living in the development world",
     first: "First",
     prev: "Previous",
@@ -100,8 +98,7 @@ const en = {
   },
   courses: {
     title: "Complementary courses",
-    description:
-      "Some courses to add some skills and knowledge",
+    description: "Some courses to add some skills and knowledge",
   },
   certification: {
     title: "Certificados",
@@ -225,7 +222,8 @@ const en = {
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
-        description: "Históricas curtas escritas por mim, amigos e domínio público",
+        description:
+          "Históricas curtas escritas por mim, amigos e domínio público",
       },
       {
         title: "Devflix",
@@ -248,7 +246,8 @@ const en = {
         sourceCode: "https://github.com/johnywalves/register-switch",
         cover: "registerSwitch",
         view: "https://register-switch.vercel.app",
-        description: "Time spent executing tasks in a simple way to enable and disable",
+        description:
+          "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -291,7 +290,8 @@ const en = {
         sourceCode: "https://github.com/johnywalves/fire-make-better",
         cover: "firemakebetter",
         view: "https://johnywalves.github.io/fire-make-better/",
-        description: "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
+        description:
+          "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
       },
     ],
   },
@@ -329,8 +329,7 @@ const en = {
       },
       {
         title: "Sun and Moon",
-        description:
-          "Dark and light transition animation with moon and sun",
+        description: "Dark and light transition animation with moon and sun",
         link: "/web/sunmoon.html",
       },
       {
@@ -389,10 +388,7 @@ const en = {
         description: [
           "Informatics for Business, Software Development and Manager Business",
         ],
-        awards: [
-          "Highest Score Award",
-          "Best Undergraduate Project Award"
-        ],
+        awards: ["Highest Score Award", "Best Undergraduate Project Award"],
         production: {
           title:
             "Essay: ForeSeries - Uma abordagem para predição de valores em séries temporais (Portuguese)",
@@ -411,8 +407,7 @@ const en = {
   },
   experience: {
     title: "Timeline",
-    description:
-      "My history in education and work experience",
+    description: "My history in education and work experience",
     list: [
       {
         date: "Out 2020 - Current",
@@ -421,7 +416,7 @@ const en = {
         description: [
           "Development of a tool for ANBIMA (financial services) to receive information regarding portfolios managed by financial institutions",
           "Improved SEO and performance of the financial products data publishing platform.",
-          "Technologies: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery"
+          "Technologies: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery",
         ],
       },
       {
@@ -430,7 +425,7 @@ const en = {
         institution: "Meta",
         description: [
           "Service provision for Localiza in the maintenance and evolution of the Zarp tool, for vehicle rental and other services, aimed at capturing and retaining customers.",
-          "Restructuring of Zarp focused on user experience, value delivery and search engine optimization (SEO)."
+          "Restructuring of Zarp focused on user experience, value delivery and search engine optimization (SEO).",
         ],
       },
       {
@@ -543,7 +538,7 @@ const en = {
     {
       label: "About",
       url: "/about/",
-    }
+    },
   ],
   menuLinks: [
     {
@@ -586,14 +581,14 @@ const en = {
     {
       label: "CNPq",
       icon: "University",
-      url: "http://lattes.cnpq.br/0468996619713052",
+      url: "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2547980J8&idiomaExibicao=2",
     },
     {
       label: "E-mail",
       icon: "Email",
       url: "mailto:contato@johnywalves.com.br",
     },
-  ]
+  ],
 }
 
 export default en

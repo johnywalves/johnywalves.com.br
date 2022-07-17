@@ -16,7 +16,9 @@ const PostsList = () => {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { frontmatter: { published: { ne: false }, category: { ne: "Comic" } } }
+        filter: {
+          frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+        }
         limit: 3
       ) {
         edges {

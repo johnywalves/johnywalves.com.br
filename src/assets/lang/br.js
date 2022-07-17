@@ -2,6 +2,7 @@ const br = {
   description:
     "Meu nome é Johny William de Oliveira Alves engenheiro e desenvolvedor web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI), apaixonado por interfaces (UI, UX e frontend)",
   position: "Desenvolvedor Web",
+  aboutMe: "Sobre mim",
   resume: "Currículo",
   files: [
     { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },
@@ -9,8 +10,6 @@ const br = {
   ],
   status: "Brasileiro, Solteiro, 35 anos",
   live: "Sao José do Rio Preto, São Paulo, Brasil",
-  lattes:
-    "http://lattes.cnpq.br/0468996619713052",
   contact: {
     title: "Contato",
     description: "Você pode me encontrar nas redes sociais",
@@ -21,7 +20,7 @@ const br = {
     viewAll: "Visualizar todos artigos",
   },
   comics: {
-    title: "Última tirinha",
+    title: "Tirinha",
     description: "Fazendo humor sobre a vivência no mundo de desenvolvimento",
     first: "Primeiro",
     prev: "Anterior",
@@ -225,7 +224,8 @@ const br = {
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
-        description: "Históricas curtas escritas por mim, amigos e domínio público",
+        description:
+          "Históricas curtas escritas por mim, amigos e domínio público",
       },
       {
         title: "Devflix",
@@ -248,7 +248,8 @@ const br = {
         sourceCode: "https://github.com/johnywalves/register-switch",
         cover: "registerSwitch",
         view: "https://register-switch.vercel.app",
-        description: "Time spent executing tasks in a simple way to enable and disable",
+        description:
+          "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -291,7 +292,8 @@ const br = {
         sourceCode: "https://github.com/johnywalves/fire-make-better",
         cover: "firemakebetter",
         view: "https://johnywalves.github.io/fire-make-better/",
-        description: "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
+        description:
+          "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
       },
     ],
   },
@@ -421,7 +423,7 @@ const br = {
         description: [
           "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações referentes a carteiras administradas pelas instituições financeiras",
           "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros",
-          "Tecnologias: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery"
+          "Tecnologias: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery",
         ],
       },
       {
@@ -543,7 +545,7 @@ const br = {
     {
       label: "Sobre",
       url: "/about/",
-    }
+    },
   ],
   menuLinks: [
     {
@@ -593,7 +595,7 @@ const br = {
       icon: "Email",
       url: "mailto:contato@johnywalves.com.br",
     },
-  ]
+  ],
 }
 
 export default br

@@ -20,9 +20,7 @@ const ComicPost = ({ data, pageContext }) => {
       />
       <S.PostHeader comics>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDate>
-          {post.frontmatter.date}
-        </S.PostDate>
+        <S.PostDate>{post.frontmatter.date}</S.PostDate>
         <S.ComicWrapper>
           <S.PostComic
             image={

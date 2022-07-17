@@ -3,13 +3,7 @@ import PropTypes from "prop-types"
 
 import * as S from "./styled"
 
-const PostItemComic = ({
-  slug,
-  date,
-  title,
-  transcription,
-  featuredImage
-}) => (
+const PostItemComic = ({ slug, date, title, transcription, featuredImage }) => (
   <S.PostItemLink
     to={slug}
     cover
@@ -18,9 +12,7 @@ const PostItemComic = ({
     duration={0.6}
   >
     <S.PostItemWrapper>
-      <S.PostItemDate>
-        {date}
-      </S.PostItemDate>
+      <S.PostItemDate>{date}</S.PostItemDate>
       <S.PostItemTitle>{title}</S.PostItemTitle>
       {featuredImage && (
         <S.PostItemImageFeatured

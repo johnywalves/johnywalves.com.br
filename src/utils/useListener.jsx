@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react"
 
 const useListener = (type, callback, delay) => {
   const savedTimer = useRef(null)
-  const savedCallback = useRef(callback);
+  const savedCallback = useRef(callback)
 
   useEffect(() => {
-    savedCallback.current = callback;
-  });
+    savedCallback.current = callback
+  })
 
   useEffect(() => {
     const resizeListener = () => {

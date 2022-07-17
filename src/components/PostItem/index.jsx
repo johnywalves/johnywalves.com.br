@@ -32,7 +32,10 @@ const PostItem = ({
       )}
       {!featuredImage && coverImage && (
         <S.PostItemCoverImage
-          style={{ backgroundImage: `url(${coverImage})`, backgroundSize: category === 'Comic' ? 'auto 150px' : 'cover' }}
+          style={{
+            backgroundImage: `url(${coverImage})`,
+            backgroundSize: category === "Comic" ? "auto 150px" : "cover",
+          }}
         />
       )}
       {!featuredImage && !coverImage && (

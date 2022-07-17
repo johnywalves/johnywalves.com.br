@@ -44,5 +44,5 @@ collections:
         }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Published", name: "published", widget: "boolean" }
-      - { label: "Cheatsheet", name: "cheatsheet", widget: "boolean" }      
+      - { label: "Cheatsheet", name: "cheatsheet", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }

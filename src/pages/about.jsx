@@ -100,7 +100,7 @@ const About = () => {
         </S.HeadSector>
         <div>
           {Strings.experience.list.slice(0, 3).map((exp, index) => (
-            <Experience key={index} job={true}  {...exp} />
+            <Experience key={index} job={true} {...exp} />
           ))}
           {Strings.experience.list.length > 3 && (
             <>

@@ -4,19 +4,13 @@ import PropTypes from "prop-types"
 import Strings from "components/strings"
 
 import Icons from "./icons"
-import {
-  Wrapper,
-  List,
-  Item,
-  Link,
-  IconWrapper
-} from "./styled"
+import { Wrapper, List, Item, Link, IconWrapper } from "./styled"
 
 const SocialLinks = ({ about, vertical }) => {
   const classWrapper = (about ? "about" : "") + (vertical ? "vertical" : "")
 
   return (
-    <Wrapper className={classWrapper} >
+    <Wrapper className={classWrapper}>
       <List>
         {Strings.socialLinks.map(({ icon, url, label }) => {
           const Icon = Icons[icon]
@@ -47,7 +41,7 @@ SocialLinks.propTypes = {
 
 SocialLinks.defaultProps = {
   about: false,
-  vertical: false
+  vertical: false,
 }
 
 export default SocialLinks

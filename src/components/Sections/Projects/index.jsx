@@ -2,8 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import Card from "components/Card"
-import CardContainer from "components/CardContainer"
+import { List, Project } from "components/Cards"
 
 import { Wrapper, ImageCover } from "./styled"
 
@@ -108,28 +107,31 @@ const SectionProjects = () => {
   return (
     <Wrapper>
       <h2>{Strings.projects.title}</h2>
-      <CardContainer>
-        {Strings.projects.list
-          .slice(0, 3)
-          .map((project, index) => (
-            <Card
-              key={index}
-              {...project}
-              cover={
-                project.cover && (
-                  <a href={project.view} aria-label={project.cover} target="_blank" rel="noreferrer">
-                    <ImageCover
-                      image={
-                        getImage(project.cover).childImageSharp.gatsbyImageData
-                      }
-                      style={{ objectPosition: project.coverPosition || "top" }}
-                    />
-                  </a>
-                )
-              }
-            />
-          ))}
-      </CardContainer>
+      <List text={Strings.projects.viewAll} url={"/comics"}>
+        {Strings.projects.list.slice(0, 3).map((project, index) => (
+          <Project
+            key={index}
+            {...project}
+            cover={
+              project.cover && (
+                <a
+                  href={project.view}
+                  aria-label={project.cover}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ImageCover
+                    image={
+                      getImage(project.cover).childImageSharp.gatsbyImageData
+                    }
+                    style={{ objectPosition: project.coverPosition || "top" }}
+                  />
+                </a>
+              )
+            }
+          />
+        ))}
+      </List>
     </Wrapper>
   )
 }

@@ -257,14 +257,14 @@
       elementTime,
       elementMoon,
       elementSun,
-      elementSky;
+      elementSky
 
     function getProperties() {
       var date = new Date(),
         hours = date.getHours(),
-        minutes = date.getMinutes();
+        minutes = date.getMinutes()
       var topSky =
-        parseInt((hours / 24) * -2400) + parseInt((minutes / 60) * -100) + "%";
+        parseInt((hours / 24) * -2400) + parseInt((minutes / 60) * -100) + "%"
 
       if (parseInt(hours) >= 5 && parseInt(hours) < 18) {
         // Day
@@ -273,7 +273,7 @@
           topSky,
           moon: 0,
           sun: 1,
-        };
+        }
       } else {
         // Night
         return {
@@ -282,51 +282,51 @@
           top: 1,
           moon: 1,
           sun: 0,
-        };
+        }
       }
     }
 
-    (function () {
-      var colors = getProperties();
-      elementBody.style.color = colors.text;
-      elementBody.style.backgroundColor = colors.text;
-    })();
+    ;(function () {
+      var colors = getProperties()
+      elementBody.style.color = colors.text
+      elementBody.style.backgroundColor = colors.text
+    })()
 
     // Loop settings
     function refresh() {
       var date = new Date(),
         hours = date.getHours().toString().padStart(2, "0"),
         minutes = date.getMinutes().toString().padStart(2, "0"),
-        seconds = date.getSeconds().toString().padStart(2, "0");
+        seconds = date.getSeconds().toString().padStart(2, "0")
 
-      elementTime.innerText = hours + ":" + minutes + ":" + seconds;
+      elementTime.innerText = hours + ":" + minutes + ":" + seconds
     }
 
     function refreshColors() {
-      var colors = getProperties();
-      elementBody.style.color = colors.text;
-      elementSky.style.top = colors.topSky;
-      elementSun.style.opacity = colors.sun;
-      elementMoon.style.opacity = colors.moon;
+      var colors = getProperties()
+      elementBody.style.color = colors.text
+      elementSky.style.top = colors.topSky
+      elementSun.style.opacity = colors.sun
+      elementMoon.style.opacity = colors.moon
     }
 
     function runOnLoad() {
-      elementTime = document.getElementById("time");
-      elementMoon = document.getElementById("moon");
-      elementSun = document.getElementById("sun");
-      elementSky = document.getElementById("sky");
+      elementTime = document.getElementById("time")
+      elementMoon = document.getElementById("moon")
+      elementSun = document.getElementById("sun")
+      elementSky = document.getElementById("sky")
 
-      refresh();
-      refreshColors();
+      refresh()
+      refreshColors()
 
-      setInterval(refresh, 1000);
+      setInterval(refresh, 1000)
       setTimeout(function () {
-        elementSky.style.transition = "top 1.0s ease-in-out";
-        setInterval(refreshColors, 1000);
-      }, 1000);
+        elementSky.style.transition = "top 1.0s ease-in-out"
+        setInterval(refreshColors, 1000)
+      }, 1000)
     }
 
     // Run when elements are available
-    window.onload = runOnLoad;
+    window.onload = runOnLoad
   </script>
 </html>

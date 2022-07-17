@@ -15,29 +15,29 @@ export const Wrapper = styled.nav`
     a,
     a:hover,
     a:visited {
-        color: var(--highlight);
+      color: var(--highlight);
     }
 
     ul {
-        width: 2rem;
+      width: 2rem;
     }
 
     li {
-        margin: 1rem 0;
-        transition: 0.25s ease-in-out;
+      margin: 1rem 0;
+      transition: 0.25s ease-in-out;
 
-        div {
-            transition: 0.25s ease-in-out;
-        }
+      div {
+        transition: 0.25s ease-in-out;
+      }
     }
 
     li:hover {
-        margin: 0.5rem 0;
+      margin: 0.5rem 0;
 
-        div {
-            width: 2.5rem;
-            height: 2.5rem;
-        }
+      div {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
   }
 `

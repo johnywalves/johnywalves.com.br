@@ -104,7 +104,7 @@ const ProjectList = ({ simple }) => {
   `)
 
   const getImage = (name) => images[name] || images.firemakebetter
-  
+
   return (
     <>
       <HomeList
@@ -119,7 +119,12 @@ const ProjectList = ({ simple }) => {
               {...project}
               cover={
                 project.cover && (
-                  <a href={project.view} aria-label={project.cover} target="_blank" rel="noreferrer">
+                  <a
+                    href={project.view}
+                    aria-label={project.cover}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <ImageCover
                       image={
                         getImage(project.cover).childImageSharp.gatsbyImageData
@@ -132,7 +137,7 @@ const ProjectList = ({ simple }) => {
             />
           ))}
       </HomeList>
-      {simple &&
+      {simple && (
         <ShowAllWrapper>
           <ShowAll
             to="/projects"
@@ -143,7 +148,8 @@ const ProjectList = ({ simple }) => {
           >
             {Strings.projects.viewAll}
           </ShowAll>
-        </ShowAllWrapper>}
+        </ShowAllWrapper>
+      )}
     </>
   )
 }

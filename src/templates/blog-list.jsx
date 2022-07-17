@@ -14,7 +14,7 @@ const BlogList = (props) => {
   const { currentPage, prevPage, nextPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  
+
   return (
     <Layout>
       <Seo title="Artigos" />

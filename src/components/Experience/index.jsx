@@ -10,7 +10,7 @@ const Experience = ({
   description,
   awards,
   production,
-  job
+  job,
 }) => (
   <S.Content>
     <S.Title>

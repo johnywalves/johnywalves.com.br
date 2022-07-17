@@ -4,8 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 import Strings from "components/strings"
-import Card from "components/Card"
-import CardContainer from "components/CardContainer"
+import { Article, List } from "components/Cards"
 
 import { Wrapper } from "./styled"
 
@@ -16,7 +15,9 @@ const SectionArticles = () => {
     query {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
-        filter: { frontmatter: { published: { ne: false }, category: { ne: "Comic" } } }
+        filter: {
+          frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+        }
         limit: 3
       ) {
         edges {
@@ -50,7 +51,7 @@ const SectionArticles = () => {
   return (
     <Wrapper>
       <h2>{Strings.posts.title}</h2>
-      <CardContainer>
+      <List text={Strings.posts.viewAll} url="/blog">
         {edges.map(({ node }, index) => (
           <Anilink
             key={index}
@@ -60,9 +61,10 @@ const SectionArticles = () => {
             bg="var(--background)"
             duration={0.6}
           >
-            <Card
+            <Article
               title={node.frontmatter.title}
-              subtitle={`${node.frontmatter.date} ● ${node.timeToRead} min de leitura`}
+              subtitle={node.frontmatter.date}
+              timeToRead={node.timeToRead}
               description={node.frontmatter.description}
               tags={node.frontmatter.tags}
               cover={
@@ -79,7 +81,7 @@ const SectionArticles = () => {
             />
           </Anilink>
         ))}
-      </CardContainer>
+      </List>
     </Wrapper>
   )
 }

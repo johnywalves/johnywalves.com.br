@@ -23,12 +23,7 @@ const ComicList = (props) => {
           (
             {
               node: {
-                frontmatter: {
-                  date,
-                  title,
-                  transcription,
-                  featuredImage,
-                },
+                frontmatter: { date, title, transcription, featuredImage },
                 fields: { slug },
               },
             },

@@ -19,7 +19,7 @@ const Icons = {
   University,
   Dev,
   Hackerrank,
-  Email
+  Email,
 }
 
 export default Icons
