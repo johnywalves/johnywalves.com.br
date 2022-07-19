@@ -45,17 +45,17 @@ const br = {
       {
         type: "Linguagens",
         list: [
-          { title: "HTML e CSS" },
-          { title: "Java" },
-          { title: "JavaScript" },
-          { title: "Python" },
-          { title: "TypeScript" },
+          { title: "HTML", icon: 'Html5' },
+          { title: "CSS", icon: 'Css3' },
+          { title: "Java", icon: 'Java' },
+          { title: "JavaScript", icon: 'Javascript' },
+          { title: "Python", icon: 'Python' },
+          { title: "TypeScript", icon: 'Typescript' },
         ],
       },
       {
         type: "Frameworks e Bibliotecas",
         list: [
-          { title: "Angular" },
           { title: "Bootstrap" },
           { title: "D3" },
           { title: "Express" },

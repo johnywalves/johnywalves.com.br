@@ -12,7 +12,7 @@ export const Wrapper = styled.li`
   overflow: hidden;
 
   & img {
-    filter: grayscale(100%);
+    filter: grayscale(1);
     opacity: 0.85 !important;
   }
 

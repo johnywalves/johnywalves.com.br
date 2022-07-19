@@ -20,7 +20,9 @@ const GeneralStyles = createGlobalStyle`
     --36px: 2.25rem;
     --48px: 3rem;
     --64px: 4rem;
+    --72px: 4.5rem;
     --80px: 5rem;
+    --96px: 6rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
@@ -31,39 +33,33 @@ const GeneralStyles = createGlobalStyle`
     color: inherit;
   }
 
+  ol, ul {
+    list-style: none;
+  }
+
   /* Content CSS */
   html, body, #___gatsby, #gatsby-focus-wrapper, .tl-edges, .tl-wrapper {
     min-height: 100%;
   }
 
   body.dark {
-    --borders: #38444d;
     --texts: #f8f8f8;
-    --titles: #fff;
-    --postColor: #fff;
     --highlightDark: #e352a8;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
-    --mediumBackground: #192734;
     --background: #333;
     --white: #fff;
     --shadowColors: #ffffff88;
-    --bagdeSkill: #6f6f6f;
   }
 
   body.light {
-    --borders: #dedede;
-    --postColor: #111;
     --texts: #333;
-    --titles: #222;
     --highlightDark: #cb1080;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
-    --mediumBackground: #f0f0f3;
     --background: #f8f8f8;
     --white: #fff;
     --shadowColors: #0000003f;
-    --bagdeSkill: #6f6f6f;
   }  
 
   body {

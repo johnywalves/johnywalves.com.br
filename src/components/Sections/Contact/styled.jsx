@@ -51,12 +51,12 @@ export const SocialWrapper = styled.div`
 `
 
 export const Box = styled.div`
-  width: 150px;
+  width: 200px;
   height: 150px;
-  background: linear-gradient(transparent, transparent) padding-box,
-    linear-gradient(45deg, slateblue, coral) border-box;
-  border: 5px solid transparent;
-  border-radius: 50px;
+  background: linear-gradient(var(--background), var(--background)) padding-box,
+    linear-gradient(90deg, slateblue 10%, var(--background) 75%) border-box;
+  border: 15px solid transparent;
+  border-radius: 75px;
 `
 
 export const Image = styled.div`
