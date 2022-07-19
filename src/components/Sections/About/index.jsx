@@ -2,12 +2,15 @@ import React from "react"
 
 import Strings from "components/strings"
 
-import { Wrapper } from "./styled"
+import { Wrapper, AboutMe } from "./styled"
 
 const SectionAbout = () => {
   return (
     <Wrapper>
-      <h5>{Strings.description}</h5>
+      <AboutMe>
+        <h2>{Strings.aboutMe}</h2>
+        <p>{Strings.description}</p>
+      </AboutMe>
       {Strings.languages.list.map((language, index) => (
         <p key={index}>
           {language.name} <span>({language.proficiency})</span>

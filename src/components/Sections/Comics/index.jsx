@@ -1,11 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 import Strings from "components/strings"
-import ComicNavigation from "components/ComicNavigation"
+import { List } from "components/Cards"
 
-import { Wrapper, WrapperImage, Image } from "./styled"
+import { Wrapper, Link, Header, Image } from "./styled"
 
 const SectionComics = () => {
   const {
@@ -22,15 +21,18 @@ const SectionComics = () => {
         edges {
           node {
             frontmatter {
+              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+              title
               number
               description
               transcription
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 800
+                    width: 950
                     layout: CONSTRAINED
-                    placeholder: TRACED_SVG
+                    placeholder: DOMINANT_COLOR
+                    formats: [AUTO, WEBP]
                   )
                 }
               }
@@ -46,11 +48,16 @@ const SectionComics = () => {
 
   return (
     <Wrapper>
-      <h2>{Strings.comics.title}</h2>
-      <WrapperImage>
-        {edges.map(({ node }, index) => (
-          <Anilink
-            key={index}
+      {edges.map(({ node }) => (
+        <List
+          title={Strings.comics.title}
+          number={node.frontmatter.number}
+          action={Strings.comics.viewAll}
+          url="/comics"
+          light
+        >
+          <Link
+            key={node.fields.slug}
             to={node.fields.slug}
             cover
             direction="left"
@@ -58,6 +65,10 @@ const SectionComics = () => {
             duration={0.6}
             aria-label="Last Comics"
           >
+            <Header>
+              <h3>{node.frontmatter.title}</h3>
+              <small>{node.frontmatter.date}</small>
+            </Header>
             <Image
               image={
                 node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
@@ -65,10 +76,9 @@ const SectionComics = () => {
               title={node.frontmatter.transcription}
               alt=""
             />
-          </Anilink>
-        ))}
-      </WrapperImage>
-      <ComicNavigation number={edges[0].node.frontmatter.number} />
+          </Link>
+        </List>
+      ))}
     </Wrapper>
   )
 }

@@ -2,14 +2,38 @@ import React from "react"
 
 import Strings from "components/strings"
 import SocialLinks from "components/SocialLinks"
+import { Header } from "components/Cards"
 
-import { Wrapper } from "./styled"
+import {
+  Wrapper,
+  Content,
+  Line,
+  Info,
+  Description,
+  SocialWrapper,
+  Image,
+  Box,
+} from "./styled"
 
 const SectionContact = () => {
   return (
     <Wrapper>
-      <h2>{Strings.contact.title}</h2>
-      <SocialLinks about />
+      <Content>
+        <Info>
+          <Line />
+          <Header title={Strings.contact.title} light left />
+          <Description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
+            justo at lorem ultrices blandit. Phasellus in diam lacinia,
+            imperdiet ex in, congue metus. Sed vel blandit metus.
+          </Description>
+          <SocialWrapper>
+            <SocialLinks about />
+          </SocialWrapper>
+          <Box />
+        </Info>
+        <Image />
+      </Content>
     </Wrapper>
   )
 }

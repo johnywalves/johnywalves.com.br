@@ -11,21 +11,22 @@ const br = {
   status: "Brasileiro, Solteiro, 35 anos",
   live: "Sao José do Rio Preto, São Paulo, Brasil",
   contact: {
-    title: "Contato",
+    title: "Contatos",
     description: "Você pode me encontrar nas redes sociais",
   },
   posts: {
     title: "Artigos",
     description: "Últimos artigos publicados sobre vida e desenvolvimento",
-    viewAll: "Visualizar todos artigos",
+    viewAll: "Ver todos os artigos",
   },
   comics: {
-    title: "Tirinha",
+    title: "Tirinhas",
     description: "Fazendo humor sobre a vivência no mundo de desenvolvimento",
     first: "Primeiro",
     prev: "Anterior",
     next: "Próximo",
     last: "Último",
+    viewAll: "Ver todas as tirinhas"
   },
   languages: {
     title: "Idiomas",
@@ -216,7 +217,7 @@ const br = {
   projects: {
     title: "Projetos",
     description: "Alguns projetos e experimentações desenvolvidas por mim",
-    viewAll: "Visualizar todos",
+    viewAll: "Ver todos os projetos",
     viewHighlight: "Visualizar somente destaques",
     list: [
       {

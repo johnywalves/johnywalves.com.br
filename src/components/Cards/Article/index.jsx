@@ -3,13 +3,23 @@ import PropTypes from "prop-types"
 
 import Wrapper from "../Wrapper"
 
-import { Content, Title, Subtitle, Description } from "./styled"
+import {
+  Content,
+  Header,
+  Category,
+  Subtitle,
+  Title,
+  Description,
+} from "./styled"
 
-const CardArticle = ({ cover, title, subtitle, timeToRead, description }) => {
+const CardArticle = ({ cover, category, subtitle, title, description }) => {
   return (
-    <Wrapper cover={cover} article={true}>
+    <Wrapper cover={cover} article>
       <Content>
-        <Subtitle>{subtitle}</Subtitle>
+        <Header>
+          <Category>{category}</Category>
+          <Subtitle>{subtitle}</Subtitle>
+        </Header>
         <Title>{title}</Title>
         <Description>{description}</Description>
       </Content>
@@ -19,9 +29,9 @@ const CardArticle = ({ cover, title, subtitle, timeToRead, description }) => {
 
 CardArticle.propTypes = {
   cover: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  timeToRead: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }
 

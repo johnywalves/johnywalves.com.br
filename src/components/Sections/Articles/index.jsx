@@ -23,17 +23,19 @@ const SectionArticles = () => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
               title
               tags
+              category
               description
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    height: 200
+                    height: 256
                     width: 640
-                    layout: CONSTRAINED
-                    placeholder: TRACED_SVG
+                    layout: FIXED
+                    placeholder: DOMINANT_COLOR
+                    formats: [AUTO, WEBP]
                   )
                 }
               }
@@ -50,23 +52,26 @@ const SectionArticles = () => {
 
   return (
     <Wrapper>
-      <h2>{Strings.posts.title}</h2>
-      <List text={Strings.posts.viewAll} url="/blog">
-        {edges.map(({ node }, index) => (
+      <List
+        title={Strings.posts.title}
+        action={Strings.posts.viewAll}
+        url="/blog"
+      >
+        {edges.map(({ node }) => (
           <Anilink
-            key={index}
+            key={node.fields.slug}
             to={node.fields.slug}
             cover
             direction="left"
             bg="var(--background)"
             duration={0.6}
           >
+            {console.log(node)}
             <Article
-              title={node.frontmatter.title}
+              category={node.frontmatter.category}
               subtitle={node.frontmatter.date}
-              timeToRead={node.timeToRead}
+              title={node.frontmatter.title}
               description={node.frontmatter.description}
-              tags={node.frontmatter.tags}
               cover={
                 node.frontmatter.featuredImage && (
                   <GatsbyImage

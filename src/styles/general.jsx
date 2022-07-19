@@ -38,15 +38,15 @@ const GeneralStyles = createGlobalStyle`
 
   body.dark {
     --borders: #38444d;
-    --texts: #8899a6;
+    --texts: #f8f8f8;
     --titles: #fff;
     --postColor: #fff;
     --highlightDark: #e352a8;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
     --mediumBackground: #192734;
-    --background: #16202c;
-    --white: #eee;
+    --background: #333;
+    --white: #fff;
     --shadowColors: #ffffff88;
     --bagdeSkill: #6f6f6f;
   }
@@ -54,13 +54,13 @@ const GeneralStyles = createGlobalStyle`
   body.light {
     --borders: #dedede;
     --postColor: #111;
-    --texts: #555555;
+    --texts: #333;
     --titles: #222;
     --highlightDark: #cb1080;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
     --mediumBackground: #f0f0f3;
-    --background: #fff;
+    --background: #f8f8f8;
     --white: #fff;
     --shadowColors: #0000003f;
     --bagdeSkill: #6f6f6f;

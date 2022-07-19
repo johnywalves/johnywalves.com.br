@@ -2,6 +2,7 @@ const en = {
   description:
     "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
   position: "Web Developer",
+  aboutMe: "About me",
   resume: "Resume",
   files: [
     { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
@@ -10,7 +11,7 @@ const en = {
   status: "Brazilian, Single, 35 years old",
   live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
   contact: {
-    title: "Contact",
+    title: "Contacts",
     description: "You can find me on social networks",
   },
   posts: {
@@ -19,12 +20,13 @@ const en = {
     viewAll: "View all posts",
   },
   comics: {
-    title: "Comic",
+    title: "Comics",
     description: "Doing humor about living in the development world",
     first: "First",
     prev: "Previous",
     next: "Next",
     last: "Last",
+    viewAll: "See all comics"
   },
   languages: {
     title: "Languages",
@@ -410,7 +412,7 @@ const en = {
     description: "My history in education and work experience",
     list: [
       {
-        date: "Out 2020 - Current",
+        date: "Set 2021 - Current",
         title: "Senior Developer Frontend",
         institution: "CI&T",
         description: [
