@@ -35,6 +35,15 @@ const ComicLast = () => {
                   )
                 }
               }
+              comicImage {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 600
+                    layout: CONSTRAINED
+                    placeholder: TRACED_SVG
+                  )
+                }
+              }
             }
             fields {
               slug
@@ -64,7 +73,8 @@ const ComicLast = () => {
           >
             <S.Image
               image={
-                node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+                (node.frontmatter.featuredImage || node.frontmatter.comicImage)
+                  .childImageSharp.gatsbyImageData
               }
               title={node.frontmatter.transcription}
               alt=""

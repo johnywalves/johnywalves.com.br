@@ -23,7 +23,13 @@ const ComicList = (props) => {
           (
             {
               node: {
-                frontmatter: { date, title, transcription, featuredImage },
+                frontmatter: {
+                  date,
+                  title,
+                  transcription,
+                  featuredImage,
+                  comicImage,
+                },
                 fields: { slug },
               },
             },
@@ -35,7 +41,7 @@ const ComicList = (props) => {
               date={date}
               title={title}
               transcription={transcription}
-              featuredImage={featuredImage}
+              featuredImage={featuredImage || comicImage}
             />
           )
         )}
@@ -75,6 +81,15 @@ export const query = graphql`
               childImageSharp {
                 gatsbyImageData(
                   width: 800
+                  layout: CONSTRAINED
+                  placeholder: TRACED_SVG
+                )
+              }
+            }
+            comicImage {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 600
                   layout: CONSTRAINED
                   placeholder: TRACED_SVG
                 )

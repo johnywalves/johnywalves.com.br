@@ -24,7 +24,8 @@ const ComicPost = ({ data, pageContext }) => {
         <S.ComicWrapper>
           <S.PostComic
             image={
-              post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+              (post.frontmatter.featuredImage || post.frontmatter.comicImage)
+                .childImageSharp.gatsbyImageData
             }
             alt={post.frontmatter.transcription}
           />
@@ -52,6 +53,15 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 800
+              layout: CONSTRAINED
+              placeholder: TRACED_SVG
+            )
+          }
+        }
+        comicImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 600
               layout: CONSTRAINED
               placeholder: TRACED_SVG
             )

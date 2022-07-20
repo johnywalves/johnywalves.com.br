@@ -29,10 +29,19 @@ const SectionComics = () => {
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 950
+                    width: 800
                     layout: CONSTRAINED
                     placeholder: DOMINANT_COLOR
                     formats: [AUTO, WEBP]
+                  )
+                }
+              }
+              comicImage {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 600
+                    layout: CONSTRAINED
+                    placeholder: TRACED_SVG
                   )
                 }
               }
@@ -71,7 +80,8 @@ const SectionComics = () => {
             </Header>
             <Image
               image={
-                node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+                (node.frontmatter.featuredImage || node.frontmatter.comicImage)
+                  .childImageSharp.gatsbyImageData
               }
               title={node.frontmatter.transcription}
               alt=""
