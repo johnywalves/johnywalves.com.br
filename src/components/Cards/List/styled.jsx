@@ -78,30 +78,4 @@ export const Icon = styled(Anilink)`
   }
 `
 
-export const Navigation = styled(Anilink)`
-  padding: 7px 30px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 900;
-  transition: 0.25s ease-in-out;
-  border: 2px solid var(--white);
-  color: var(--white) !important;
-  background-color: transparent;
-
-  .light-wrapper & {
-    border: 2px solid var(--highlight);
-    color: var(--highlight) !important;
-  }
-
-  &:hover {
-    border: 2px solid var(--highlight);
-    color: var(--highlight) !important;
-    background-color: var(--white);
-
-    .light-wrapper & {
-      border: 2px solid var(--white);
-      color: var(--white) !important;
-      background-color: var(--highlight);
-    }
-  }
-`
+export const Navigation = styled(Anilink)``

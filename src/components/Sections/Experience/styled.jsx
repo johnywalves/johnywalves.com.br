@@ -30,12 +30,19 @@ const selectedType = css`
 `
 
 export const Type = styled.li`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--texts);
-  margin: 30px 0;
+  margin: 30px 0 15px;
   cursor: pointer;
   transition: 0.25s ease-in-out;
+
+  & p {
+    text-align: center;
+  }
 
   &:not(:last-of-type):after {
     content: "|";
@@ -56,20 +63,25 @@ export const SkillsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
+  padding: 15px 0 0;
 `
 
 const selectedSkill = css`
   max-height: 100rem;
+  opacity: 1;
 `
 
 export const Skills = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 0;
   overflow: hidden;
   max-height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 
   ${({ selected }) => selected && selectedSkill}
 `
@@ -79,10 +91,10 @@ export const Skill = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: var(--96px);
-  height: var(--96px);
+  min-width: var(--96px);
+  min-height: var(--96px);
   font-size: 1.25rem;
-  margin: 0 10px;
+  margin: 15px 10px;
 
   & p {
     text-shadow: 2px 2px 1px var(--shadowColors);
@@ -106,7 +118,23 @@ export const IconWrapper = styled.div`
   border-radius: 15px;
 `
 
-export const Accordion = styled.div`
-  max-height: 0;
+export const Areas = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 30px 0 15px;
+`
+
+const selectedArea = css`
+  max-height: 100rem;
+  opacity: 1;
+`
+
+export const Area = styled.div`
   overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+
+  ${({ selected }) => selected && selectedArea}
 `

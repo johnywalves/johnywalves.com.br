@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
+import Button from "components/Button"
+
 import Header from "../Header"
 
 import ArrowsLeft from "./icons/ArrowsLeft"
@@ -49,7 +51,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
             bg="var(--background)"
             duration={0.6}
           >
-            {action}
+            <Button>{action}</Button>
           </Navigation>
         )}
         {number && (
@@ -81,7 +83,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
             >
-              {action}
+              <Button>{action}</Button>
             </Navigation>
             <Icon
               to={`/comic-${number + 1}`}
