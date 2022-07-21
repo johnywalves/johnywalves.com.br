@@ -14,8 +14,8 @@ const CardHeader = ({ title, light, left }) => {
 
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
-  light: PropTypes.bool.isRequired,
-  left: PropTypes.bool.isRequired,
+  light: PropTypes.bool,
+  left: PropTypes.bool,
 }
 
 CardHeader.defaultTypes = {

@@ -66,7 +66,6 @@ const SectionArticles = () => {
             bg="var(--background)"
             duration={0.6}
           >
-            {console.log(node)}
             <Article
               category={node.frontmatter.category}
               subtitle={node.frontmatter.date}
@@ -75,11 +74,11 @@ const SectionArticles = () => {
               cover={
                 node.frontmatter.featuredImage && (
                   <GatsbyImage
-                    alt={node.frontmatter.title}
                     image={
                       node.frontmatter.featuredImage.childImageSharp
                         .gatsbyImageData
                     }
+                    alt={node.frontmatter.title}
                   />
                 )
               }

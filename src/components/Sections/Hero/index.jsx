@@ -91,17 +91,17 @@ const SectionHero = () => {
 
       <ImageBox style={{ opacity: opacities === 0 ? 1 : 0 }}>
         <Parallax speed={-10}>
-          <ImageCover image={show.childImageSharp.gatsbyImageData} />
+          <ImageCover image={show.childImageSharp.gatsbyImageData} alt="" />
         </Parallax>
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 1 ? 1 : 0 }}>
         <Parallax speed={-10}>
-          <ImageCover image={react.childImageSharp.gatsbyImageData} />
+          <ImageCover image={react.childImageSharp.gatsbyImageData} alt="" />
         </Parallax>
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 2 ? 1 : 0 }}>
         <Parallax speed={-10}>
-          <ImageCover image={down.childImageSharp.gatsbyImageData} />
+          <ImageCover image={down.childImageSharp.gatsbyImageData} alt="" />
         </Parallax>
       </ImageBox>
 

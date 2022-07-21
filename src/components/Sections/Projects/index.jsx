@@ -148,6 +148,7 @@ const SectionProjects = () => {
                       getImage(project.cover).childImageSharp.gatsbyImageData
                     }
                     style={{ objectPosition: project.coverPosition || "top" }}
+                    alt=""
                   />
                 </a>
               )

@@ -19,7 +19,7 @@ ArrowsLeft.propTypes = {
   rotate: PropTypes.bool.isRequired,
 }
 
-ArrowsLeft.propTypes = {
+ArrowsLeft.defaultTypes = {
   rotate: false,
 }
 

@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 
 import Header from "../Header"
 
-import ArrowsLeft from "./icons/arrows-left"
-import ArrowLeft from "./icons/arrow-left"
+import ArrowsLeft from "./icons/ArrowsLeft"
+import ArrowLeft from "./icons/ArrowLeft"
 import { Wrapper, Content, NavigationWrapper, Icon, Navigation } from "./styled"
 
 const CardList = ({ children, title, action, url, light, number }) => {

@@ -59,6 +59,7 @@ const SectionComics = () => {
     <Wrapper>
       {edges.map(({ node }) => (
         <List
+          key={node.fields.slug}
           title={Strings.comics.title}
           number={node.frontmatter.number}
           action={Strings.comics.viewAll}
@@ -66,7 +67,6 @@ const SectionComics = () => {
           light
         >
           <Link
-            key={node.fields.slug}
             to={node.fields.slug}
             cover
             direction="left"
