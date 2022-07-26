@@ -1,33 +1,48 @@
 import styled, { css } from "styled-components"
 
-const selectedButton = css`
-  border: 2px solid var(--highlight);
-  color: var(--white) !important;
-  background-color: var(--highlight);
+const highlightButton = css`
+  border: 2px solid var(--highlight) !important;
+  color: var(--highlight) !important;
 `
 
-const nonSelectedButton = css`
-  border: 2px solid var(--white);
+const whiteButton = css`
+  border: 2px solid var(--white) !important;
   color: var(--white) !important;
-  background-color: transparent;
+`
 
-  .light-wrapper & {
-    border: 2px solid var(--highlight);
-    color: var(--highlight) !important;
-  }
+const lightButton = css`
+  ${highlightButton}
 
   &:hover {
-    border: 2px solid var(--highlight);
-    color: var(--highlight) !important;
-    background-color: var(--white);
-
-    .light-wrapper & {
-      border: 2px solid var(--white);
-      color: var(--white) !important;
-      background-color: var(--highlight);
-    }
+    ${whiteButton}
+    background-color: var(--highlight) !important;
   }
 `
+
+const nonLightButton = css`
+  ${whiteButton}
+
+  &:hover {
+    ${highlightButton}
+    background-color: var(--white) !important;
+  }
+`
+
+const styleButton = ({ light, selected }) => {
+  if (selected) {
+    return light
+      ? css`
+          ${whiteButton}
+          background-color: var(--highlight) !important;
+        `
+      : css`
+          ${highlightButton}
+          background-color: var(--white) !important;
+        `
+  }
+
+  return light ? lightButton : nonLightButton
+}
 
 export const Wrapper = styled.div`
   padding: 7px 30px;
@@ -36,5 +51,5 @@ export const Wrapper = styled.div`
   font-weight: 900;
   transition: 0.25s ease-in-out;
 
-  ${({ selected }) => (selected ? selectedButton : nonSelectedButton)}
+  ${styleButton}
 `

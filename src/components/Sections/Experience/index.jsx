@@ -15,6 +15,11 @@ import {
   IconWrapper,
   Areas,
   Area,
+  Accomplishment,
+  Title,
+  DateText,
+  Descriptions,
+  Description,
 } from "./styled"
 import Icons from "./icons"
 
@@ -100,40 +105,56 @@ const SectionExperience = () => {
           ))}
         </SkillsWrapper>
 
-        {console.log(selectedExperiences, selectedEducations, selectedCourses)}
-
-        <Areas className="light-wrapper">
-          <Button selected={selectedExperiences} onClick={toggleExperiences}>
+        <Areas>
+          <Button
+            selected={selectedExperiences}
+            onClick={toggleExperiences}
+            light
+          >
             {Strings.experience.title}
           </Button>
-          <Button selected={selectedEducations} onClick={toggleEducations}>
+          <Button
+            selected={selectedEducations}
+            onClick={toggleEducations}
+            light
+          >
             {Strings.education.title}
           </Button>
-          <Button selected={selectedCourses} onClick={toggleCourses}>
+          <Button selected={selectedCourses} onClick={toggleCourses} light>
             {Strings.courses.title}
           </Button>
         </Areas>
         <Area selected={selectedExperiences}>
           {Strings.experience.list.map(
             ({ title, date, institution, description }, index) => (
-              <div key={`exp_${index}`}>
-                <h4>{title}</h4>
-                <p>{date}</p>
-                <p>{institution}</p>
-                <p>{description}</p>
-              </div>
+              <Accomplishment key={`exp_${index}`}>
+                <Title>
+                  {title} - {institution}
+                </Title>
+                <DateText>{date}</DateText>
+                <Descriptions>
+                  {description.map((text) => (
+                    <Description>{text}</Description>
+                  ))}
+                </Descriptions>
+              </Accomplishment>
             )
           )}
         </Area>
         <Area selected={selectedEducations}>
           {Strings.education.list.map(
             ({ title, date, institution, description }, index) => (
-              <div key={`edu_${index}`}>
-                <h4>{title}</h4>
-                <p>{date}</p>
-                <p>{institution}</p>
-                <p>{description}</p>
-              </div>
+              <Accomplishment key={`edu_${index}`}>
+                <Title>
+                  {title} - {institution}
+                </Title>
+                <DateText>{date}</DateText>
+                <Descriptions>
+                  {description.map((text) => (
+                    <Description>{text}</Description>
+                  ))}
+                </Descriptions>
+              </Accomplishment>
             )
           )}
         </Area>
@@ -142,11 +163,12 @@ const SectionExperience = () => {
             .filter((cert) => ["chartpie", "tools"].includes(cert.icon))
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map(({ date, name, institute }, index) => (
-              <div key={`course_${index}`}>
-                <p>{FormatDate(date)}</p>
-                <p>{name}</p>
-                <p>{institute}</p>
-              </div>
+              <Accomplishment key={`course_${index}`}>
+                <Title>
+                  {name} - {institute}
+                </Title>
+                <DateText>{FormatDate(date)}</DateText>
+              </Accomplishment>
             ))}
         </Area>
       </Content>

@@ -16,7 +16,7 @@ const ArrowsLeft = ({ rotate }) => (
 )
 
 ArrowsLeft.propTypes = {
-  rotate: PropTypes.bool.isRequired,
+  rotate: PropTypes.bool,
 }
 
 ArrowsLeft.defaultTypes = {

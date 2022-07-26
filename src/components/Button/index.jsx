@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 
 import { Wrapper } from "./styled"
 
-const Button = ({ children, ...rest }) => {
+const Button = ({ children, selected, light, ...rest }) => {
   return (
-    <Wrapper role="button" {...rest}>
+    <Wrapper {...rest} role="button" selected={selected} light={light}>
       {children}
     </Wrapper>
   )
@@ -13,6 +13,13 @@ const Button = ({ children, ...rest }) => {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
+  selected: PropTypes.bool,
+  light: PropTypes.bool,
+}
+
+Button.defaultTypes = {
+  selected: false,
+  light: false,
 }
 
 export default Button

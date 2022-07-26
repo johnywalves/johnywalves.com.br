@@ -3,11 +3,13 @@ const en = {
     "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
   position: "Web Developer",
   aboutMe: "About me",
-  resume: "Resume",
-  files: [
-    { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
-    { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" },
-  ],
+  resume: {
+    title: "Resume",
+    files: [
+      { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
+      { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" },
+    ]
+  },
   status: "Brazilian, Single, 35 years old",
   live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
   contact: {

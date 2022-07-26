@@ -10,25 +10,6 @@ export const Header = styled.div`
   margin-bottom: 30px;
 `
 
-export const Title = styled.h2`
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: var(--white);
-
-  .light-wrapper & {
-    color: var(--highlight);
-  }
-`
-
-export const Line = styled.div`
-  width: 20px;
-  border: 2px solid var(--white);
-
-  .light-wrapper & {
-    border: 2px solid var(--highlight);
-  }
-`
-
 export const Content = styled.ul`
   display: flex;
   flex-direction: row;
@@ -45,11 +26,6 @@ export const NavigationWrapper = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 35px 0 15px;
-  color: var(--white) !important;
-
-  .light-wrapper & {
-    color: var(--highlight) !important;
-  }
 `
 
 const iconDisabled = css`
@@ -65,11 +41,20 @@ const iconHover = css`
   }
 `
 
+const colorHighlight = css`
+  color: var(--highlight) !important;
+`
+
+const colorWhite = css`
+  color: var(--white) !important;
+`
+
 export const Icon = styled(Anilink)`
   width: 2rem;
   height: 2rem;
   transition: 0.25s ease-in-out;
 
+  ${({ light }) => (light ? colorHighlight : colorWhite)}
   ${({ disabled }) => (disabled ? iconDisabled : iconHover)}
 
   & svg {

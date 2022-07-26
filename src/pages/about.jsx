@@ -49,9 +49,9 @@ const About = () => {
         </S.HeadSector>
 
         <S.Curriculium>
-          <h2>{Strings.resume}</h2>
+          <h2>{Strings.resume.title}</h2>
           <div>
-            {Strings.files.map((file, index) => (
+            {Strings.resume.files.map((file, index) => (
               <a
                 key={index}
                 href={file.file}

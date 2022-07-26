@@ -127,14 +127,40 @@ export const Areas = styled.div`
 
 const selectedArea = css`
   max-height: 100rem;
+  padding: 30px 0 0;
   opacity: 1;
 `
 
 export const Area = styled.div`
+  display: grid;
+  grid-template-columns: minmax(80%, 980px);
+  padding: 0;
+
   overflow: hidden;
   max-height: 0;
   opacity: 0;
   transition: opacity 0.5s ease-out;
 
   ${({ selected }) => selected && selectedArea}
+`
+
+export const Title = styled.h4`
+  font-size: 1.1rem;
+`
+
+export const DateText = styled.p`
+  padding: 0 0 5px;
+  font-weight: 300;
+`
+
+export const Descriptions = styled.ul`
+  padding: 5px 0;
+`
+
+export const Description = styled.li`
+  padding: 0.25rem 1rem;
+`
+
+export const Accomplishment = styled.div`
+  margin: 0 0 15px;
 `

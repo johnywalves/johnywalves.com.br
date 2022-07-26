@@ -1,21 +1,34 @@
 import React from "react"
 
+import { Header } from "components/Cards"
 import Strings from "components/strings"
 
-import { Wrapper, AboutMe } from "./styled"
+import {
+  Wrapper,
+  Content,
+  AboutMe,
+  Line,
+  Description,
+  Languages,
+} from "./styled"
 
 const SectionAbout = () => {
   return (
     <Wrapper>
-      <AboutMe>
-        <h2>{Strings.aboutMe}</h2>
-        <p>{Strings.description}</p>
-      </AboutMe>
-      {Strings.languages.list.map((language, index) => (
-        <p key={index}>
-          {language.name} <span>({language.proficiency})</span>
-        </p>
-      ))}
+      <Content>
+        <AboutMe>
+          <Header title={Strings.aboutMe} light left />
+          <Line />
+          <Description>{Strings.description}</Description>
+        </AboutMe>
+        <Languages>
+          {Strings.languages.list.map((language, index) => (
+            <p key={index}>
+              {language.name} <span>({language.proficiency})</span>
+            </p>
+          ))}
+        </Languages>
+      </Content>
     </Wrapper>
   )
 }

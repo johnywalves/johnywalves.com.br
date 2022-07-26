@@ -39,7 +39,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
   const lastOne = number === lastNumber
 
   return (
-    <Wrapper className={light ? "light-wrapper" : ""}>
+    <Wrapper>
       <Header title={title} light={light} />
       <Content>{children}</Content>
       <NavigationWrapper>
@@ -51,7 +51,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
             bg="var(--background)"
             duration={0.6}
           >
-            <Button>{action}</Button>
+            <Button light={light}>{action}</Button>
           </Navigation>
         )}
         {number && (
@@ -63,6 +63,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
               disabled={firstOne}
+              light={light}
             >
               <ArrowsLeft />
             </Icon>
@@ -73,6 +74,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
               disabled={firstOne}
+              light={light}
             >
               <ArrowLeft />
             </Icon>
@@ -83,7 +85,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
             >
-              <Button>{action}</Button>
+              <Button light={light}>{action}</Button>
             </Navigation>
             <Icon
               to={`/comic-${number + 1}`}
@@ -92,6 +94,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
               disabled={lastOne}
+              light={light}
             >
               <ArrowLeft rotate />
             </Icon>
@@ -102,6 +105,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
               disabled={lastOne}
+              light={light}
             >
               <ArrowsLeft rotate />
             </Icon>
