@@ -42,23 +42,23 @@ const GeneralStyles = createGlobalStyle`
     min-height: 100%;
   }
 
-  body.dark {
-    --texts: #f8f8f8;
+  :root {
     --highlightDark: #e352a8;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
-    --background: #333;
+    --secondary:  slateblue;
     --white: #fff;
+  }
+
+  body.dark {
+    --texts: #f8f8f8;
+    --background: #333;
     --shadowColors: #ffffff88;
   }
 
   body.light {
     --texts: #333;
-    --highlightDark: #cb1080;
-    --highlightSemi: #de128cc0;
-    --highlight: #de128c;
     --background: #f8f8f8;
-    --white: #fff;
     --shadowColors: #0000003f;
   }  
 

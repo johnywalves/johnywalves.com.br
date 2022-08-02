@@ -148,17 +148,27 @@ export const Title = styled.h4`
   font-size: 1.1rem;
 `
 
+export const Institution = styled.span``
+
 export const DateText = styled.p`
   padding: 0 0 5px;
   font-weight: 300;
 `
 
+const listDescriptions = css`
+  list-style: disc inside;
+`
+
 export const Descriptions = styled.ul`
   padding: 5px 0;
+
+  ${({ list }) => list && listDescriptions}
 `
 
 export const Description = styled.li`
-  padding: 0.25rem 1rem;
+  padding: 0.125rem 0;
+  line-height: 140%;
+  vertical-align: middle;
 `
 
 export const Accomplishment = styled.div`

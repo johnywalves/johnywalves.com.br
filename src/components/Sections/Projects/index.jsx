@@ -129,7 +129,7 @@ const SectionProjects = () => {
       <List
         title={Strings.projects.title}
         action={Strings.projects.viewAll}
-        url={"/comics"}
+        url={"/projects"}
       >
         {Strings.projects.list.slice(0, 3).map((project, index) => (
           <Project

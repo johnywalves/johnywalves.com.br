@@ -19,7 +19,7 @@ export const Header = styled.div`
 `
 
 export const Title = styled.h2`
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   color: ${({ light }) => (light ? "var(--highlight)" : "var(--white)")};

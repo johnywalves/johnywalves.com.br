@@ -40,7 +40,7 @@ const en = {
     ],
   },
   skills: {
-    title: "Hard Skills",
+    title: "Skills",
     description:
       "Things that I believe possess the capacity to be productive and I like to work",
     list: [
@@ -360,7 +360,7 @@ const en = {
     ],
   },
   education: {
-    title: "Formação Acadêmica",
+    title: "Academic Education",
     description:
       "Minha história em experiências profissionais e formação acadêmica",
     list: [
@@ -477,7 +477,8 @@ const en = {
         title: "Senior Software Developer",
         institution: "Emais Urbanismo",
         description: [
-          "Maintenance, support and development of internal ERP and CRM for fiscal, accounting, financial and real estate portfolio control (Delphi and Microsoft SQL Server)",
+          "Maintenance, support and development of internal ERP and CRM for fiscal, accounting, financial and real estate portfolio control",
+          "Technologies: Delphi and Microsoft SQL Server",
         ],
       },
       {
@@ -501,7 +502,8 @@ const en = {
         title: "Software Developer",
         institution: "Hexa Informática",
         description: [
-          "Engineering, development and implementation of a management and sales system for an optical network (Delphi and Microsoft SQL Server)",
+          "Engineering, development and implementation of a management and sales system for an optical network",
+          "Technologies: Delphi and Microsoft SQL Server",
         ],
       },
       {

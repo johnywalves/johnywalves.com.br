@@ -45,9 +45,10 @@ const styleButton = ({ light, selected }) => {
 }
 
 export const Wrapper = styled.div`
-  padding: 7px 30px;
-  border-radius: 20px;
+  padding: 10px 30px;
+  border-radius: 30px;
   cursor: pointer;
+  font-size: 1.2rem;
   font-weight: 900;
   transition: 0.25s ease-in-out;
 

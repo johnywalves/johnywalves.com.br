@@ -54,7 +54,8 @@ export const Box = styled.div`
   width: 200px;
   height: 150px;
   background: linear-gradient(var(--background), var(--background)) padding-box,
-    linear-gradient(90deg, slateblue 10%, var(--background) 75%) border-box;
+    linear-gradient(90deg, var(--secondary) 10%, var(--background) 75%)
+      border-box;
   border: 15px solid transparent;
   border-radius: 75px;
 `

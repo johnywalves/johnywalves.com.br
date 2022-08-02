@@ -17,6 +17,7 @@ import {
   Area,
   Accomplishment,
   Title,
+  Institution,
   DateText,
   Descriptions,
   Description,
@@ -129,10 +130,10 @@ const SectionExperience = () => {
             ({ title, date, institution, description }, index) => (
               <Accomplishment key={`exp_${index}`}>
                 <Title>
-                  {title} - {institution}
+                  {title} - <Institution>{institution}</Institution>
                 </Title>
                 <DateText>{date}</DateText>
-                <Descriptions>
+                <Descriptions list>
                   {description.map((text) => (
                     <Description>{text}</Description>
                   ))}
@@ -146,7 +147,7 @@ const SectionExperience = () => {
             ({ title, date, institution, description }, index) => (
               <Accomplishment key={`edu_${index}`}>
                 <Title>
-                  {title} - {institution}
+                  {title} - <Institution>{institution}</Institution>
                 </Title>
                 <DateText>{date}</DateText>
                 <Descriptions>
@@ -165,7 +166,7 @@ const SectionExperience = () => {
             .map(({ date, name, institute }, index) => (
               <Accomplishment key={`course_${index}`}>
                 <Title>
-                  {name} - {institute}
+                  {name} - <Institution>{institute}</Institution>
                 </Title>
                 <DateText>{FormatDate(date)}</DateText>
               </Accomplishment>

@@ -49,6 +49,58 @@ export const Description = styled.p`
   font-size: 1.25rem;
 `
 
+export const Details = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+`
+
+export const Resumes = styled.ul`
+  margin: 50px 0;
+
+  & a:nth-child(2) li {
+    border-color: var(--highlight);
+  }
+
+  & a:nth-child(3) li {
+    border-color: var(--secondary);
+  }
+
+  & a:not(:last-child) li {
+    margin-bottom: 20px;
+  }
+`
+
+export const Resume = styled.li`
+  padding: 10px 20px;
+  border: 3px solid var(--white);
+  border-radius: 20px;
+  width: fit-content;
+`
+
 export const Languages = styled.ul`
   margin: 50px 0;
+`
+
+export const Language = styled.li`
+  &:nth-child(2) {
+    color: var(--highlight);
+  }
+
+  &:nth-child(3) {
+    color: var(--secondary);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+`
+
+export const LanguageName = styled.p`
+  font-weight: 900;
+  font-size: 1.125rem;
+  line-height: 125%;
+`
+
+export const LanguageProficiency = styled.p`
+  font-size: 0.9rem;
 `

@@ -4,7 +4,7 @@ const br = {
   position: "Desenvolvedor Web",
   aboutMe: "Sobre mim",
   resume: {
-    resume: "Currículo",
+    title: "Currículo",
     files: [
       { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },
       { name: "VERSÃO IMPRESSÃO", file: "/docs/cv_johnywalves_pt_g.pdf" },
@@ -483,7 +483,8 @@ const br = {
         title: "Desenvolvedor de Software Sênior",
         institution: "Emais Urbanismo",
         description: [
-          "Manutenção, suporte e desenvolvimento de ERP e CRM para controle fiscal, contábil, financeiro e carteira de imóveis (Delphi e Microsoft SQL Server)",
+          "Manutenção, suporte e desenvolvimento de ERP e CRM para controle fiscal, contábil, financeiro e carteira de imóveis",
+          "Tecnologias: Delphi and Microsoft SQL Server",
         ],
       },
       {
@@ -507,7 +508,8 @@ const br = {
         title: "Desenvolvedor de Software",
         institution: "Hexa Informática",
         description: [
-          "Engenharia, desenvolvimento e implantação em sistema de gestão e realização de vendas para uma rede de óticas (Delphi e Microsoft SQL Server)",
+          "Engenharia, desenvolvimento e implantação em sistema de gestão e realização de vendas para uma rede de óticas",
+          "Tecnologias: Delphi and Microsoft SQL Server",
         ],
       },
       {
