@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
 export const Wrapper = styled.section`
   position: relative;
@@ -66,9 +66,23 @@ export const SkillsWrapper = styled.div`
   padding: 15px 0 0;
 `
 
+const fadeInInfo = keyframes`
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.75;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 const selectedSkill = css`
   max-height: 100rem;
-  opacity: 1;
+  animation: ${fadeInInfo} 1s ease-out forwards;
 `
 
 export const Skills = styled.ul`
@@ -128,7 +142,7 @@ export const Areas = styled.div`
 const selectedArea = css`
   max-height: 100rem;
   padding: 30px 0 0;
-  opacity: 1;
+  animation: ${fadeInInfo} 1s ease-out forwards;
 `
 
 export const Area = styled.div`
@@ -169,6 +183,19 @@ export const Description = styled.li`
   padding: 0.125rem 0;
   line-height: 140%;
   vertical-align: middle;
+`
+
+export const Production = styled.a`
+  color: var(--highlight);
+
+  &:visited {
+    color: var(--highlight);
+  }
+
+  &:hover {
+    color: var(--highlight);
+    text-decoration: underline;
+  }
 `
 
 export const Accomplishment = styled.div`

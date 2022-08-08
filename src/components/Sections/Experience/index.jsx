@@ -21,6 +21,7 @@ import {
   DateText,
   Descriptions,
   Description,
+  Production,
 } from "./styled"
 import Icons from "./icons"
 
@@ -144,7 +145,7 @@ const SectionExperience = () => {
         </Area>
         <Area selected={selectedEducations}>
           {Strings.education.list.map(
-            ({ title, date, institution, description }, index) => (
+            ({ title, date, institution, description, production }, index) => (
               <Accomplishment key={`edu_${index}`}>
                 <Title>
                   {title} - <Institution>{institution}</Institution>
@@ -155,6 +156,15 @@ const SectionExperience = () => {
                     <Description>{text}</Description>
                   ))}
                 </Descriptions>
+                {production && (
+                  <Production
+                    href={production.file}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {production.title}
+                  </Production>
+                )}
               </Accomplishment>
             )
           )}
