@@ -13,6 +13,8 @@ import {
   SocialWrapper,
   Image,
   Box,
+  CurvePrimary,
+  CurveSecondary,
 } from "./styled"
 
 const SectionContact = () => {
@@ -22,15 +24,14 @@ const SectionContact = () => {
         <Info>
           <Line />
           <Header title={Strings.contact.title} light left />
-          <Description>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis
-            justo at lorem ultrices blandit. Phasellus in diam lacinia,
-            imperdiet ex in, congue metus. Sed vel blandit metus.
-          </Description>
+          <Description>{Strings.contact.about}</Description>
           <SocialWrapper>
             <SocialLinks about />
           </SocialWrapper>
-          <Box />
+          <Box>
+            <CurvePrimary />
+            <CurveSecondary />
+          </Box>
         </Info>
         <Image />
       </Content>

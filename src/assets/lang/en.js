@@ -15,6 +15,7 @@ const en = {
   contact: {
     title: "Contacts",
     description: "You can find me on social networks",
+    about: "Can I help you with anything, do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
   },
   posts: {
     title: "Posts (portuguese)",
@@ -28,7 +29,7 @@ const en = {
     prev: "Previous",
     next: "Next",
     last: "Last",
-    viewAll: "See all comics"
+    viewAll: "View all comics"
   },
   languages: {
     title: "Languages",
@@ -218,7 +219,7 @@ const en = {
   projects: {
     title: "Projects & developments",
     description: "Some projects and experiments developed by me",
-    viewAll: "View all",
+    viewAll: "View all projects",
     viewHighlight: "View only highlights",
     list: [
       {

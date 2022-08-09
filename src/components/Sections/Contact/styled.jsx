@@ -38,8 +38,9 @@ export const Info = styled.div`
 
 export const Description = styled.p`
   color: var(--texts);
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   margin: 15px 0;
+  line-height: 150%;
 `
 
 export const SocialWrapper = styled.div`
@@ -50,14 +51,33 @@ export const SocialWrapper = styled.div`
   }
 `
 
-export const Box = styled.div`
-  width: 200px;
+export const Box = styled.div``
+
+export const CurvePrimary = styled.div`
+  width: 230px;
   height: 150px;
-  background: linear-gradient(var(--background), var(--background)) padding-box,
-    linear-gradient(90deg, var(--secondary) 10%, var(--background) 75%)
-      border-box;
-  border: 15px solid transparent;
+  border: 15px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    var(--secondary) 10%,
+    transparent 60%
+  );
   border-radius: 75px;
+`
+
+export const CurveSecondary = styled.div`
+  width: 230px;
+  height: 150px;
+  border: 15px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    90deg,
+    transparent 40%,
+    var(--highlight) 90%
+  );
+  border-radius: 75px;
+  transform: translateY(-75px);
 `
 
 export const Image = styled.div`
