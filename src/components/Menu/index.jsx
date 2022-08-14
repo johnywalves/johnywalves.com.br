@@ -10,6 +10,8 @@ import {
   Wrapper,
   MenuBar,
   Logo,
+  MenuTop,
+  MenuTopLink,
   ThemeColorWrapper,
   ThemeColor,
   MenuBox,
@@ -72,6 +74,23 @@ const Menu = () => {
       <MenuBar className={classMenuBar}>
         <Logo>{"{JWA}"}</Logo>
         <div>
+          <MenuTop>
+            {strings.menuLinks.map(({ label, url }) => (
+              <li key={label}>
+                <MenuTopLink
+                  cover
+                  direction="left"
+                  bg="var(--background)"
+                  duration={0.6}
+                  to={url}
+                  activeClassName="active"
+                >
+                  {label}
+                  <span>.</span>
+                </MenuTopLink>
+              </li>
+            ))}
+          </MenuTop>
           <ThemeColorWrapper onClick={toggleTheme}>
             <span />
             <span />

@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import media from "styled-media-query"
 
+import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Wrapper = styled.div`
@@ -41,6 +42,35 @@ export const Logo = styled.p`
   font-weight: 900;
   transition: 0.5s ease-in-out;
   text-shadow: 1px 1px var(--shadowColors);
+`
+
+export const MenuTop = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 15px;
+
+  ${media.lessThan("large")`
+    display: none;
+  `}
+`
+
+export const MenuTopLink = styled(Anilink)`
+  margin: 0 var(--14px);
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+
+  &,
+  &:hover,
+  &:visited {
+    color: var(--white);
+  }
+
+  &:hover {
+    margin: var(--2px);
+    font-weight: 900;
+    font-size: var(--24px);
+  }
 `
 
 export const ThemeColorWrapper = styled.div`
@@ -235,11 +265,16 @@ export const MenuCheck = styled.input`
 `
 
 export const MenuWrapper = styled.label`
+  display: none;
   height: 30px;
   width: 30px;
   margin: 10px;
   cursor: pointer;
   z-index: 2;
+
+  ${media.lessThan("large")`
+    display: block;
+  `}
 `
 
 export const Hamburger = styled.span`
