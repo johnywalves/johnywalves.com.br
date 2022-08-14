@@ -568,11 +568,11 @@ const br = {
     },
     {
       label: "projetos",
-      url: "/projects/",
+      url: "/new/projects/",
     },
     {
       label: "pesquisa",
-      url: "/search/",
+      url: "/new/search/",
     },
   ],
   socialLinks: [

@@ -411,7 +411,7 @@ const en = {
     ],
   },
   experience: {
-    title: "Timeline",
+    title: "Professional Experience",
     description: "My history in education and work experience",
     list: [
       {
@@ -420,7 +420,7 @@ const en = {
         institution: "CI&T",
         description: [
           "Development of a tool for ANBIMA (financial services) to receive information regarding portfolios managed by financial institutions",
-          "Improved SEO and performance of the financial products data publishing platform.",
+          "Improved SEO and performance of the financial products data publishing platform",
           "Technologies: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery",
         ],
       },
@@ -429,8 +429,8 @@ const en = {
         title: "Frontend Developer",
         institution: "Meta",
         description: [
-          "Service provision for Localiza in the maintenance and evolution of the Zarp tool, for vehicle rental and other services, aimed at capturing and retaining customers.",
-          "Restructuring of Zarp focused on user experience, value delivery and search engine optimization (SEO).",
+          "Service provision for Localiza in the maintenance and evolution of the Zarp tool, for vehicle rental and other services, aimed at capturing and retaining customers",
+          "Restructuring of Zarp focused on user experience, value delivery and search engine optimization (SEO)",
         ],
       },
       {
@@ -562,11 +562,11 @@ const en = {
     },
     {
       label: "projects",
-      url: "/projects/",
+      url: "/new/projects/",
     },
     {
       label: "search",
-      url: "/search/",
+      url: "/new/search/",
     },
   ],
   socialLinks: [
