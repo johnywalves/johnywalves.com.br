@@ -63,7 +63,7 @@ const Menu = () => {
 
   const scrollMove = useCallback(() => {
     const percent = getPercentHero()
-    setClassMenuBar(percent < 1 ? "" : "nohero")
+    setClassMenuBar(percent < 0.6 ? "" : "nohero")
   }, [])
 
   useListener("scroll", scrollMove, 10)

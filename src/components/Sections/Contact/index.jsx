@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
 import SocialLinks from "components/SocialLinks"
@@ -18,6 +19,20 @@ import {
 } from "./styled"
 
 const SectionContact = () => {
+  const { avatarImage } = useStaticQuery(graphql`
+    query {
+      avatarImage: file(relativePath: { eq: "johnywalves.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 512
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+          )
+        }
+      }
+    }
+  `)
+
   return (
     <Wrapper>
       <Content>
@@ -33,7 +48,7 @@ const SectionContact = () => {
             <CurveSecondary />
           </Box>
         </Info>
-        <Image />
+        <Image image={avatarImage.childImageSharp.gatsbyImageData} alt="" />
       </Content>
     </Wrapper>
   )

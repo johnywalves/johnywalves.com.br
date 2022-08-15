@@ -49,7 +49,8 @@ const GeneralStyles = createGlobalStyle`
     --highlightDark: #e352a8;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
-    --secondary:  slateblue;
+    --secondary: slateblue;
+    --secondary-neon: #44b5ef;
     --white: #fff;
   }
 

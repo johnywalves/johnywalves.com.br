@@ -1,8 +1,10 @@
 const br = {
   description:
-    "Meu nome é Johny William de Oliveira Alves engenheiro e desenvolvedor web e especialista em processamento de grandes volumes de dados (Big Data) com experiência em ciência de dados, machine learning, automação de processos (RPA), obrigações fiscais, análise de dados e estratégicas para inteligência empresarial (BI), apaixonado por interfaces (UI, UX e frontend)",
+    "Meu nome é Johny William de Oliveira Alves, atualmente atuo como desenvolvedor web, com mais de 15 anos de experiência em ciência de dados, machine learning, automação de processos e entrega de métricas",
   position: "Desenvolvedor Web",
   aboutMe: "Sobre mim",
+  seeMore: "Ver mais",
+  seeLess: "Ver menos",
   resume: {
     title: "Currículo",
     files: [

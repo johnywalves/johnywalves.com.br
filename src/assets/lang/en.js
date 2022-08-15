@@ -1,8 +1,10 @@
 const en = {
   description:
-    "Full stack web developer with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
+    "My name is Johny William de Oliveira Alves, fullstack web developer, with +15 years of experience and data science student, passionate about learning and delivering solutions that automate processes and deliver metrics",
   position: "Web Developer",
   aboutMe: "About me",
+  seeMore: "See more",
+  seeLess: "See less",
   resume: {
     title: "Resume",
     files: [

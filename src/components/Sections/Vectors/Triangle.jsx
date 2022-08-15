@@ -32,8 +32,8 @@ const Triangle = (props) => (
         gradientTransform="translate(1.8788 2.0711)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9431c5" offset="0" />
-        <stop stop-color="#dc3ee2" offset="1" />
+        <stop stop-color="var(--secondary)" offset="0" />
+        <stop stop-color="var(--highlight)" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient33253"
@@ -43,8 +43,8 @@ const Triangle = (props) => (
         y2="26.242"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9431c5" offset="0" />
-        <stop stop-color="#dc3ee2" offset="1" />
+        <stop stop-color="var(--secondary)" offset="0" />
+        <stop stop-color="var(--highlightDark)" offset="1" />
       </linearGradient>
     </defs>
     <g>
@@ -65,7 +65,7 @@ const Triangle = (props) => (
       <path
         d="m10.212 5.2009 40.402 8.1983-25.626 17.192z"
         fill="none"
-        stroke="#44b5ef"
+        stroke="var(--secondary-neon)"
         stroke-linecap="square"
         stroke-width="6.5881"
         style={{ paintOrder: "normal" }}

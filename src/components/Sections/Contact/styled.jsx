@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.section`
   position: relative;
@@ -80,8 +81,12 @@ export const CurveSecondary = styled.div`
   transform: translateY(-75px);
 `
 
-export const Image = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: red;
+export const Image = styled(GatsbyImage)`
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 0 0 4px 1px var(--shadowColors),
+    8px 8px 8px 1px var(--shadowColors);
 `

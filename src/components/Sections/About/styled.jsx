@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
   flex-direction: row;
   justify-content: center;
   margin: 30px 0 15px;
+  padding: 0 25px;
   position: relative;
   width: 100%;
   color: var(--texts);
@@ -14,39 +15,33 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
   display: grid;
   grid-template-columns: minmax(80%, 980px);
-  padding: 0 25px;
+  padding: 50px 0 25px;
 `
 
 export const AboutMe = styled.div`
   display: grid;
-  grid-template-columns: 35% 30px calc(65% - 30px - 60px);
-  gap: 30px;
-  margin: 25px 0 15px;
+  grid-template-columns: 30% 45px calc(70% - 45px - 30px);
+  gap: 15px;
 
-  & > div,
-  p {
+  & > div:first-of-type,
+  & > p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 25px 0;
+    padding: 35px 0;
   }
 `
 
 export const Line = styled.div`
   display: block;
-  width: 30px;
+  width: var(--24px);
   height: 100%;
-  min-height: 200px;
-  background: linear-gradient(
-    0deg,
-    var(--highlight) 0%,
-    var(--highlight) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(0deg, var(--highlight) 0%, transparent 100%);
 `
 
 export const Description = styled.p`
   font-size: 1.25rem;
+  text-align: justify;
 `
 
 export const Details = styled.div`
@@ -55,15 +50,7 @@ export const Details = styled.div`
 `
 
 export const Resumes = styled.ul`
-  margin: 50px 0;
-
-  & a:nth-child(2) li {
-    border-color: var(--highlight);
-  }
-
-  & a:nth-child(3) li {
-    border-color: var(--secondary);
-  }
+  margin: var(--36px) 0 var(--16px);
 
   & a:not(:last-child) li {
     margin-bottom: 20px;
@@ -71,14 +58,14 @@ export const Resumes = styled.ul`
 `
 
 export const Resume = styled.li`
-  padding: 10px 20px;
-  border: 3px solid var(--white);
-  border-radius: 20px;
   width: fit-content;
 `
 
 export const Languages = styled.ul`
-  margin: 50px 0;
+  margin: var(--36px) 0 var(--16px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 `
 
 export const Language = styled.li`
@@ -96,11 +83,16 @@ export const Language = styled.li`
 `
 
 export const LanguageName = styled.p`
+  font-size: 1.2rem;
   font-weight: 900;
-  font-size: 1.125rem;
   line-height: 125%;
+  text-align: right;
+  text-transform: uppercase;
 `
 
 export const LanguageProficiency = styled.p`
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
 `

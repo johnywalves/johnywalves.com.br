@@ -1,8 +1,27 @@
 import styled, { css } from "styled-components"
 
+const colorBackground = ({ secondary }) =>
+  !secondary
+    ? css`
+        background-color: var(--highlight) !important;
+      `
+    : css`
+        background-color: var(--secondary) !important;
+      `
+
+const colorOutline = ({ secondary }) =>
+  !secondary
+    ? css`
+        border: 2px solid var(--highlight) !important;
+        color: var(--highlight) !important;
+      `
+    : css`
+        border: 2px solid var(--secondary) !important;
+        color: var(--secondary) !important;
+      `
+
 const highlightButton = css`
-  border: 2px solid var(--highlight) !important;
-  color: var(--highlight) !important;
+  ${colorOutline}
 `
 
 const whiteButton = css`
@@ -15,7 +34,7 @@ const lightButton = css`
 
   &:hover {
     ${whiteButton}
-    background-color: var(--highlight) !important;
+    ${colorBackground}
   }
 `
 
@@ -33,7 +52,7 @@ const styleButton = ({ light, selected }) => {
     return light
       ? css`
           ${whiteButton}
-          background-color: var(--highlight) !important;
+          ${colorBackground}
         `
       : css`
           ${highlightButton}
@@ -52,7 +71,7 @@ export const Wrapper = styled.div`
   font-weight: 900;
   text-align: center;
   vertical-align: middle;
-  transition: 0.25s ease-in-out;
+  transition: 0.25s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;

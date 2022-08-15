@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Header } from "components/Cards"
+import Button from "components/Button"
 import Strings from "components/strings"
 
 import {
@@ -30,16 +31,20 @@ const SectionAbout = () => {
 
         <Details>
           <Resumes>
-            <Header title={Strings.resume.title} light left />
+            <Header title={Strings.resume.title} light left small />
             {Strings.resume.files.map(({ name, file }, index) => (
               <a key={index} href={file} target="_blank" rel="noreferrer">
-                <Resume>{name}</Resume>
+                <Resume>
+                  <Button light secondary={index !== 0}>
+                    {name}
+                  </Button>
+                </Resume>
               </a>
             ))}
           </Resumes>
 
           <Languages>
-            <Header title={Strings.languages.title} light left />
+            <Header title={Strings.languages.title} light right small />
             {Strings.languages.list.map((language, index) => (
               <Language key={index}>
                 <LanguageName>{language.name}</LanguageName>

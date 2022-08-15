@@ -112,11 +112,11 @@ const SectionExperience = () => {
             <Skills selected={selectedType === index}>
               {list.map(({ title, icon }, idx) => {
                 if (icon) {
-                  const Icon = Icons[icon]
+                  const IconComponent = Icons[icon]
                   return (
                     <Skill key={`${index}_${idx}`}>
                       <IconWrapper>
-                        <Icon />
+                        <IconComponent />
                       </IconWrapper>
                       <p>{title}</p>
                     </Skill>
@@ -184,7 +184,7 @@ const SectionExperience = () => {
           )}
           <AreaButton>
             <Button light onClick={toggleAllExperiences}>
-              Ver todos
+              {allExperiences ? Strings.seeLess : Strings.seeMore}
             </Button>
           </AreaButton>
         </Area>
@@ -275,7 +275,7 @@ const SectionExperience = () => {
             ))}
           <AreaButton>
             <Button light onClick={toggleAllCourses}>
-              Ver todos
+              {allCourses ? Strings.seeLess : Strings.seeMore}
             </Button>
           </AreaButton>
         </Area>

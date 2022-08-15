@@ -4,7 +4,7 @@ import styled, { css, keyframes } from "styled-components"
 export const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  padding: 45px 15px 80px;
+  padding: 45px 25px;
   color: var(--texts);
   background-color: var(--background);
 `
@@ -146,7 +146,7 @@ const selectedArea = css`
   animation: ${fadeInInfo} 1s ease-out forwards;
 `
 
-export const Area = styled.div`
+export const Area = styled.ul`
   display: grid;
   grid-template-columns: minmax(80%, 980px);
   padding: 0;
@@ -160,8 +160,13 @@ export const Area = styled.div`
 `
 
 export const AreaButton = styled.div`
-  margin: var(--16px) auto 0;
-  width: 10rem;
+  padding: var(--16px) 0 0;
+  display: flex;
+  justify-content: center;
+
+  & > div {
+    width: fit-content;
+  }
 `
 
 export const DateText = styled.p`
@@ -255,19 +260,21 @@ const hiddenWrapperAccomplishment = css`
   padding: 0;
 `
 
-const WrapperAccomplishment = styled.div`
+const WrapperAccomplishment = styled.li`
   position: relative;
+  max-height: 50rem;
   padding: 0 var(--36px) var(--36px) var(--48px);
+  animation: ${fadeInInfo} 1s ease-out forwards;
 
   &::before {
     content: "";
-    width: var(--4px);
+    width: 0;
     height: 100%;
     position: absolute;
-    left: var(--16px);
+    left: 16px;
     top: 0;
     display: block;
-    background-color: var(--shadowColors);
+    border-left: 4px solid var(--shadowColors);
   }
 
   &:first-child::before {
@@ -275,7 +282,7 @@ const WrapperAccomplishment = styled.div`
     top: 50%;
   }
 
-  &:last-child::before {
+  &:last-of-type::before {
     height: 50%;
   }
 
