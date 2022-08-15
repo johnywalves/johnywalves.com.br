@@ -23,7 +23,7 @@ const Container = styled.div`
 `
 
 export const BoxTop = styled(Container)`
-  right: 10%;
+  right: 15%;
   top: 0;
   width: 30%;
   height: 30%;

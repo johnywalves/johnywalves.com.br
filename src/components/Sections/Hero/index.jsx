@@ -8,6 +8,8 @@ import SocialLinks from "components/SocialLinks"
 import getPercentHero from "utils/getPercentHero"
 import useListener from "utils/useListener"
 
+import Triangle from "../Vectors/Triangle"
+
 import {
   Box,
   BoxTop,
@@ -73,8 +75,8 @@ const SectionHero = () => {
   return (
     <Wrapper>
       <BoxTop>
-        <Parallax speed={50} translateY={[-2000, 200]}>
-          <Box />
+        <Parallax speed={50} translateY={[-1500, 150]}>
+          <Triangle width="456" height="314" />
         </Parallax>
       </BoxTop>
 
