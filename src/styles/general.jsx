@@ -13,6 +13,8 @@ const GeneralStyles = createGlobalStyle`
 
   html {
     --2px: 0.125rem;
+    --4px: 0.25rem;
+    --8px: 0.5rem;
     --14px: 0.875rem;
     --16px: 1rem;
     --18px: 1.125rem;

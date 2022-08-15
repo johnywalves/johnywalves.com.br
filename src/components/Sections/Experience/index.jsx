@@ -1,8 +1,17 @@
 import React, { useState, useMemo, useCallback } from "react"
+import { Parallax } from "react-scroll-parallax"
+
+import { Award } from "@styled-icons/fa-solid/Award"
+import { Tools } from "@styled-icons/fa-solid/Tools"
+import { University } from "@styled-icons/fa-solid/University"
+import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
+import { Language } from "@styled-icons/ionicons-solid/Language"
 
 import Button from "components/Button"
 import Strings from "components/strings"
 import { Header } from "components/Cards"
+
+import Triangle from "../Vectors/Triangle"
 
 import {
   Wrapper,
@@ -15,6 +24,7 @@ import {
   IconWrapper,
   Areas,
   Area,
+  AreaButton,
   Accomplishment,
   Title,
   Institution,
@@ -22,20 +32,26 @@ import {
   Descriptions,
   Description,
   Production,
+  WrapperAward,
+  BoxShape,
+  Icon,
 } from "./styled"
 import Icons from "./icons"
 
 const FormatDate = (text) => {
   const date = new Date(text),
-    day = date.getDate().toString().padStart(2, "0"),
-    month = (date.getMonth() + 1).toString().padStart(2, "0"),
+    month = date.toLocaleString("default", { month: "long" }),
     year = date.getFullYear()
-  return `${day}/${month}/${year}`
+  return `${month.toUpperCase().slice(0, 1)}${month
+    .toLowerCase()
+    .slice(1, 3)} ${year}`
 }
 
 const SectionExperience = () => {
   const [selectedType, setSelectedType] = useState(0)
   const [selectedArea, setSelectedArea] = useState(null)
+  const [allExperiences, setAllExperiences] = useState(false)
+  const [allCourses, setAllCourses] = useState(false)
 
   const [selectedExperiences, selectedEducations, selectedCourses] = useMemo(
     () => [selectedArea === 1, selectedArea === 2, selectedArea === 3],
@@ -65,6 +81,16 @@ const SectionExperience = () => {
       setSelectedArea(3)
     }
   }, [selectedArea])
+
+  const toggleAllExperiences = useCallback(
+    () => setAllExperiences(!allExperiences),
+    [allExperiences]
+  )
+
+  const toggleAllCourses = useCallback(
+    () => setAllCourses(!allCourses),
+    [allCourses]
+  )
 
   return (
     <Wrapper>
@@ -126,36 +152,85 @@ const SectionExperience = () => {
             {Strings.courses.title}
           </Button>
         </Areas>
+
         <Area selected={selectedExperiences}>
           {Strings.experience.list.map(
             ({ title, date, institution, description }, index) => (
-              <Accomplishment key={`exp_${index}`}>
-                <Title>
-                  {title} - <Institution>{institution}</Institution>
-                </Title>
+              <Accomplishment
+                key={`exp_${index}`}
+                hidden={
+                  index > 2 &&
+                  Strings.experience.list.length > 4 &&
+                  !allExperiences
+                }
+              >
                 <DateText>{date}</DateText>
+                <Title>
+                  {title}
+                  <Institution> | {institution}</Institution>
+                </Title>
                 <Descriptions list>
-                  {description.map((text) => (
-                    <Description>{text}</Description>
+                  {description.map((text, idx) => (
+                    <Description>
+                      <span>
+                        {text}
+                        {description.length - 1 !== idx ? ";" : "."}
+                      </span>
+                    </Description>
                   ))}
                 </Descriptions>
               </Accomplishment>
             )
           )}
+          <AreaButton>
+            <Button light onClick={toggleAllExperiences}>
+              Ver todos
+            </Button>
+          </AreaButton>
         </Area>
+
         <Area selected={selectedEducations}>
           {Strings.education.list.map(
-            ({ title, date, institution, description, production }, index) => (
-              <Accomplishment key={`edu_${index}`}>
-                <Title>
-                  {title} - <Institution>{institution}</Institution>
-                </Title>
+            (
+              {
+                title,
+                date,
+                institution,
+                description,
+                kudos,
+                certification,
+                production,
+              },
+              index
+            ) => (
+              <Accomplishment
+                key={`edu_${index}`}
+                hidden={index > 2 && Strings.education.list.length > 4}
+                icon={
+                  certification && (
+                    <Icon href={certification}>
+                      <University />
+                    </Icon>
+                  )
+                }
+              >
                 <DateText>{date}</DateText>
+                <Title>
+                  {title}
+                  <Institution> | {institution}</Institution>
+                </Title>
                 <Descriptions>
                   {description.map((text) => (
                     <Description>{text}</Description>
                   ))}
                 </Descriptions>
+                {kudos &&
+                  kudos.map(({ name, file }, idx) => (
+                    <WrapperAward key={idx} href={file}>
+                      <Award />
+                      <p>{name}</p>
+                    </WrapperAward>
+                  ))}
                 {production && (
                   <Production
                     href={production.file}
@@ -171,18 +246,45 @@ const SectionExperience = () => {
         </Area>
         <Area selected={selectedCourses}>
           {Strings.certification.list
-            .filter((cert) => ["chartpie", "tools"].includes(cert.icon))
+            .filter((cert) =>
+              ["chartpie", "tools", "language"].includes(cert.icon)
+            )
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .map(({ date, name, institute }, index) => (
-              <Accomplishment key={`course_${index}`}>
-                <Title>
-                  {name} - <Institution>{institute}</Institution>
-                </Title>
+            .map(({ date, name, institute, icon, img }, index) => (
+              <Accomplishment
+                key={`course_${index}`}
+                hidden={
+                  index > 4 &&
+                  Strings.certification.list.length > 4 &&
+                  !allCourses
+                }
+                icon={
+                  <Icon href={img}>
+                    {icon === "tools" && <Tools />}
+                    {icon === "chartpie" && <ChartPie />}
+                    {icon === "language" && <Language />}
+                  </Icon>
+                }
+              >
                 <DateText>{FormatDate(date)}</DateText>
+                <Title>
+                  {name}
+                  <Institution> | {institute}</Institution>
+                </Title>
               </Accomplishment>
             ))}
+          <AreaButton>
+            <Button light onClick={toggleAllCourses}>
+              Ver todos
+            </Button>
+          </AreaButton>
         </Area>
       </Content>
+      <BoxShape>
+        <Parallax speed={50} translateY={[-50, 50]}>
+          <Triangle width="456" height="314" />
+        </Parallax>
+      </BoxShape>
     </Wrapper>
   )
 }

@@ -3,6 +3,7 @@ import { Tools } from "@styled-icons/fa-solid/Tools"
 import { University } from "@styled-icons/fa-solid/University"
 import { Award } from "@styled-icons/fa-solid/Award"
 import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
+import { Language } from "@styled-icons/ionicons-solid/Language"
 
 import HomeCard from "components/HomeCard"
 
@@ -29,6 +30,7 @@ const CertCard = ({ name, date, institute, img, icon }) => {
             {icon === "university" && <University />}
             {icon === "award" && <Award />}
             {icon === "chartpie" && <ChartPie />}
+            {icon === "language" && <Language />}
           </Icon>
         }
       />

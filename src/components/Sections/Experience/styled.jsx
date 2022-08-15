@@ -1,3 +1,4 @@
+import React from "react"
 import styled, { css, keyframes } from "styled-components"
 
 export const Wrapper = styled.section`
@@ -140,7 +141,7 @@ export const Areas = styled.div`
 `
 
 const selectedArea = css`
-  max-height: 100rem;
+  max-height: 200rem;
   padding: 30px 0 0;
   animation: ${fadeInInfo} 1s ease-out forwards;
 `
@@ -158,15 +159,24 @@ export const Area = styled.div`
   ${({ selected }) => selected && selectedArea}
 `
 
-export const Title = styled.h4`
-  font-size: 1.1rem;
+export const AreaButton = styled.div`
+  margin: var(--16px) auto 0;
+  width: 10rem;
 `
 
-export const Institution = styled.span``
-
 export const DateText = styled.p`
-  padding: 0 0 5px;
+  padding: 0 0 var(--8px);
   font-weight: 300;
+  color: var(--highlight);
+`
+
+export const Title = styled.h4`
+  font-size: 1.1rem;
+  color: var(--highlight);
+`
+
+export const Institution = styled.span`
+  font-weight: 400;
 `
 
 const listDescriptions = css`
@@ -183,6 +193,48 @@ export const Description = styled.li`
   padding: 0.125rem 0;
   line-height: 140%;
   vertical-align: middle;
+  font-weight: 400;
+
+  & span {
+    margin-left: -10px;
+  }
+`
+
+const WrapperIcon = styled.a`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2rem;
+  margin: 0 0 0 var(--24px);
+  align-self: center;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+
+  svg {
+    height: 100%;
+    margin: 0 0.75rem 0 0;
+  }
+
+  &:hover {
+    color: var(--highlight);
+  }
+`
+
+const LinkIcon = (props) => (
+  <WrapperIcon
+    target="_blank"
+    rel="noreferrer noopener"
+    aria-label="Certification"
+    {...props}
+  />
+)
+
+export const WrapperAward = styled(LinkIcon)`
+  margin: 1rem 0;
+`
+
+export const Icon = styled(LinkIcon)`
+  margin: 0 0 0 var(--24px);
 `
 
 export const Production = styled.a`
@@ -198,6 +250,89 @@ export const Production = styled.a`
   }
 `
 
-export const Accomplishment = styled.div`
-  margin: 0 0 15px;
+const hiddenWrapperAccomplishment = css`
+  max-height: 0;
+  padding: 0;
+`
+
+const WrapperAccomplishment = styled.div`
+  position: relative;
+  padding: 0 var(--36px) var(--36px) var(--48px);
+
+  &::before {
+    content: "";
+    width: var(--4px);
+    height: 100%;
+    position: absolute;
+    left: var(--16px);
+    top: 0;
+    display: block;
+    background-color: var(--shadowColors);
+  }
+
+  &:first-child::before {
+    height: 50%;
+    top: 50%;
+  }
+
+  &:last-child::before {
+    height: 50%;
+  }
+
+  &::after {
+    content: "";
+    width: var(--36px);
+    height: var(--36px);
+    transition: 0.5s ease-in-out;
+    border: var(--8px) solid var(--background);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: calc(50% - var(--36px));
+    display: block;
+    background: linear-gradient(0, var(--highlight), var(--highlight)),
+      linear-gradient(0, var(--background), var(--background));
+    background-clip: padding-box, border-box;
+  }
+
+  &:hover {
+    &::after {
+      border-color: var(--shadowColors);
+    }
+  }
+
+  ${({ hidden }) => hidden && hiddenWrapperAccomplishment}
+`
+
+const ContentAccomplishment = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--16px);
+  border-radius: var(--14px);
+
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 8px 1px var(--shadowColors),
+    4px 4px 8px 1px var(--shadowColors);
+
+  ${WrapperAccomplishment}:hover & {
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px 2px var(--shadowColors),
+      8px 8px 16px 2px var(--shadowColors);
+  }
+`
+
+export const Accomplishment = ({ children, icon, hidden }) => (
+  <WrapperAccomplishment hidden={hidden}>
+    <ContentAccomplishment>
+      <div>{children}</div>
+      {icon}
+    </ContentAccomplishment>
+  </WrapperAccomplishment>
+)
+
+export const BoxShape = styled.div`
+  position: absolute;
+  right: -250px;
+  z-index: 2;
 `

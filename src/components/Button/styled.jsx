@@ -50,7 +50,12 @@ export const Wrapper = styled.div`
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 900;
+  text-align: center;
+  vertical-align: middle;
   transition: 0.25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ${styleButton}
 `
