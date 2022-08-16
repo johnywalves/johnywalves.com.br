@@ -11,7 +11,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   color: var(--highlight);
-  background-color: var(--background);
+  background-color: var(--background-card);
   box-shadow: 0 -2px 8px var(--shadowColors);
 `
 

@@ -315,6 +315,7 @@ const ContentAccomplishment = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: var(--background-card);
   padding: var(--16px);
   border-radius: var(--14px);
 

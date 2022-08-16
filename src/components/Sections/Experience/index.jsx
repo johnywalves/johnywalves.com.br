@@ -224,13 +224,6 @@ const SectionExperience = () => {
                     <Description>{text}</Description>
                   ))}
                 </Descriptions>
-                {kudos &&
-                  kudos.map(({ name, file }, idx) => (
-                    <WrapperAward key={idx} href={file}>
-                      <Award />
-                      <p>{name}</p>
-                    </WrapperAward>
-                  ))}
                 {production && (
                   <Production
                     href={production.file}
@@ -240,6 +233,13 @@ const SectionExperience = () => {
                     {production.title}
                   </Production>
                 )}
+                {kudos &&
+                  kudos.map(({ name, file }, idx) => (
+                    <WrapperAward key={idx} href={file}>
+                      <Award />
+                      <p>{name}</p>
+                    </WrapperAward>
+                  ))}
               </Accomplishment>
             )
           )}

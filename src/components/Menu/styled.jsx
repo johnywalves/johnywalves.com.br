@@ -57,7 +57,7 @@ export const MenuTop = styled.ul`
 
 export const MenuTopLink = styled(Anilink)`
   margin: 0 var(--14px);
-  font-weight: 500;
+  font-weight: 400;
   transition: 0.5s ease-in-out;
 
   &,

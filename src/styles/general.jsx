@@ -56,13 +56,15 @@ const GeneralStyles = createGlobalStyle`
 
   body.dark {
     --texts: #f8f8f8;
-    --background: #333;
+    --background: #222;
+    --background-card: #303030;
     --shadowColors: #ffffff88;
   }
 
   body.light {
     --texts: #333;
-    --background: #f8f8f8;
+    --background: #f6f6f6;
+    --background-card: #fafafa;
     --shadowColors: #0000003f;
   }  
 
