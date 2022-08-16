@@ -433,9 +433,8 @@ const br = {
         title: "Desenvolvedor Frontend Senior",
         institution: "CI&T",
         description: [
-          "Desenvolvimento para ANBIMA de ferramenta para recebimento de informações referentes a carteiras administradas pelas instituições financeiras",
-          "Melhoria de SEO e performance da plataforma de publicação de dados de produtos financeiros",
-          "Tecnologias: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery",
+          "ANBIMA | Desenvolvimento de ferramenta para instituições financeiras informarem resumos de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
+          "Coca-Cola | Atualização e manutenção nas ferramentas de marketing em coleta de leads e acompanhamento das métricas de usuários (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)",
         ],
       },
       {
@@ -443,8 +442,8 @@ const br = {
         title: "Desenvolvedor Frontend",
         institution: "Meta",
         description: [
-          "Prestação de serviço para Localiza na manutenção e evolução da ferramenta Zarp, para aluguel de veículos e outros serviços, voltado para captação e retenção de clientes com as tecnologias JavaScript, React, NextJS, HTML e CSS",
-          "Reestruturação do Zarp focado na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO) com NextJS",
+          "Prestação de serviço para Localiza na manutenção e evolução da ferramenta Zarp Localiza, para aluguel de veículos e outros serviços, voltado para captação e retenção de clientes com as tecnologias JavaScript, React, NextJS, HTML e CSS",
+          "Reestruturação do Zarp Localiza focado na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO) com NextJS",
         ],
       },
       {
@@ -452,7 +451,7 @@ const br = {
         title: "Analista Desenvolvedor",
         institution: "Invillia",
         description: [
-          "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da Invillia Apps, interfaces ricas para visualização de dados e treinamento dos colaboradores",
+          "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da Invillia Apps, interfaces ricas para visualização de dados com treinamento e destaque dos colaboradores",
           "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)",
         ],
       },
@@ -461,9 +460,9 @@ const br = {
         title: "Desenvolvedor Web Pleno",
         institution: "Unimed Rio Preto",
         description: [
-          "Desenvolvimento Web do portal de serviços para beneficiários (JavaScript, TypeScript, React, NextJS, HTML e CSS)",
-          "Planejamento e desenvolvimento de API para Autenticação e entrega de dados (PL/SQL, Java, Spring Boot e RESTFul)",
-          "Automação de Teste e DevOps (Apache Tomcat, Jenkins, Jest e Python)",
+          "Desenvolvimento Web do portal de serviços para beneficiários para controle financeiro, exames, agendamento de consultas entre outros (JavaScript, TypeScript, React, NextJS, HTML e CSS)",
+          "Planejamento e desenvolvimento de API para autenticação e entrega de dados dos beneficiários (PL/SQL, Java, Spring Boot e RESTFul)",
+          "Automação de Teste e DevOps para desenvolvimento interno e por terceiros (Apache Tomcat, Jenkins, Jest e Python)",
         ],
       },
       {
@@ -471,10 +470,9 @@ const br = {
         title: "Desenvolvedor Pleno",
         institution: "GS Group",
         description: [
-          "Gerencia e desenvolvimento de Web com integração mobile (Asp.NET MVC, JavaScript e React Native)",
-          "Automação de processos (Java e Python)",
-          "Dashboards para gestão a vista (JavaScript com NodeJS)",
-          "Manutenção em qualidade de dados (Pentaho)",
+          "Gerencia e desenvolvimento de Web com integração mobile para acompanhamento de promoters em pontos de revenda (Asp.NET MVC, JavaScript e React Native)",
+          "Dashboards para gestão a vista para acompamento do abastecimento da JBS (JavaScript com NodeJS)",
+          "Manutenção do processo de carga e transformação de açougues parceiros da JBS (Pentaho)",
         ],
       },
       {
@@ -482,9 +480,8 @@ const br = {
         title: "Consultor de Automação de Processos",
         institution: "Grupo WDG",
         description: [
-          "Automação de processos e chatbots (WDG Automation)",
-          "Estruturação de projetos com BPMN (Bizagi BPMN Modeler)",
-          "Desenvolvimento de extensões para o Google Chrome (JavaScript)",
+          "Automação de processos e chatbots (WDG Automation) e estruturação de projetos com BPMN para atendimentos de Recalls para Toyota Rodobens (Bizagi BPMN Modeler)",
+          "Desenvolvimento de extensão para o Google Chrome de ferramenta de telemarketing da Claro (JavaScript)",
         ],
       },
       {
@@ -492,8 +489,8 @@ const br = {
         title: "Desenvolvedor de Software Sênior",
         institution: "Emais Urbanismo",
         description: [
-          "Manutenção, suporte e desenvolvimento de ERP e CRM para controle fiscal, contábil, financeiro e carteira de imóveis",
-          "Tecnologias: Delphi and Microsoft SQL Server",
+          "Manutenção, suporte e desenvolvimento de ERP e CRM para controle fiscal, contábil, financeiro e carteira de imóveis para gestão no ambiente da Urbanizadora",
+          "Tecnologias: Delphi e Microsoft SQL Server",
         ],
       },
       {
@@ -501,7 +498,8 @@ const br = {
         title: "Desenvolvedor e Consultor Contábil",
         institution: "Terceiros",
         description: [
-          "Prestação de serviços para ajustes e automação de entregas de obrigações fiscais (.Net C#)",
+          "Prestação de serviços para ajustes e automação de entregas de obrigações fiscais para vários clientes",
+          "Tecnologias: .Net C# e Microsoft SQL Server",
         ],
       },
       {
@@ -518,7 +516,7 @@ const br = {
         institution: "Hexa Informática",
         description: [
           "Engenharia, desenvolvimento e implantação em sistema de gestão e realização de vendas para uma rede de óticas",
-          "Tecnologias: Delphi and Microsoft SQL Server",
+          "Tecnologias: Delphi e Microsoft SQL Server",
         ],
       },
       {
@@ -526,7 +524,8 @@ const br = {
         title: "Desenvolvedor de Software",
         institution: "Condor Informática",
         description: [
-          "Desenvolvimento de ERP para controle financeiro, estoque e geração de entregas para obrigações fiscais (Delphi e Firebase)",
+          "Desenvolvimento de ERP para controle financeiro, estoque e geração de entregas para obrigações fiscais",
+          "Tecnologias: Delphi e Firebase",
         ],
       },
       {
@@ -534,7 +533,8 @@ const br = {
         title: "Desenvolvedor de Software",
         institution: "SOC Informática",
         description: [
-          "Consultória e prestação de serviços em contabilidade e informática para pessoas físicas e jurídicas (Delphi e Firebase)",
+          "Consultória e prestação de serviços em contabilidade e informática para pessoas físicas e jurídicas",
+          "Tecnologias: Delphi e Firebase",
         ],
       },
     ],
