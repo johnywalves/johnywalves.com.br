@@ -1,4 +1,5 @@
 import React from "react"
+import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
@@ -6,7 +7,10 @@ import Anilink from "gatsby-plugin-transition-link/AniLink"
 import Strings from "components/strings"
 import { Article, List } from "components/Cards"
 
-import { Wrapper } from "./styled"
+import { Wrapper, BoxShape, BoxShapeOutline } from "./styled"
+
+import Arrow from "../Vectors/Arrow"
+import ArrowOutline from "../Vectors/ArrowOutline"
 
 const SectionArticles = () => {
   const {
@@ -86,6 +90,16 @@ const SectionArticles = () => {
           </Anilink>
         ))}
       </List>
+      <BoxShapeOutline>
+        <Parallax translateY={[-35, 150]}>
+          <ArrowOutline />
+        </Parallax>
+      </BoxShapeOutline>
+      <BoxShape>
+        <Parallax translateY={[-25, 50]}>
+          <Arrow height="400" width="400" />
+        </Parallax>
+      </BoxShape>
     </Wrapper>
   )
 }

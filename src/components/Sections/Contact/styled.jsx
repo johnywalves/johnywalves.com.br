@@ -52,41 +52,18 @@ export const SocialWrapper = styled.div`
   }
 `
 
-export const Box = styled.div``
-
-export const CurvePrimary = styled.div`
-  width: 230px;
-  height: 150px;
-  border: 15px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    90deg,
-    var(--secondary) 10%,
-    transparent 60%
-  );
-  border-radius: 75px;
-`
-
-export const CurveSecondary = styled.div`
-  width: 230px;
-  height: 150px;
-  border: 15px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    90deg,
-    transparent 40%,
-    var(--highlight) 90%
-  );
-  border-radius: 75px;
-  transform: translateY(-75px);
+export const Box = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0.85;
 `
 
 export const Image = styled(GatsbyImage)`
-  width: 65%;
-  height: 65%;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   align-self: center;
   justify-self: center;
-  box-shadow: 0 0 4px 1px var(--shadowColors),
-    8px 8px 8px 1px var(--shadowColors);
+  mask-image: linear-gradient(45deg, black 25%, transparent);
+  mask-mode: alpha;
 `

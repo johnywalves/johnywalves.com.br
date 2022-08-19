@@ -1,16 +1,14 @@
 import React from "react"
 
+import ProjectPage from "components/ProjectPage"
 import Blueprint from "components/Blueprint"
-import ProjectList from "components/ProjectList"
-import SampleList from "components/SampleList"
 import Seo from "components/seo"
 
 const Projects = () => {
   return (
-    <Blueprint>
+    <Blueprint content>
       <Seo title="Projetos" />
-      <ProjectList />
-      <SampleList />
+      <ProjectPage />
     </Blueprint>
   )
 }

@@ -17,7 +17,7 @@ const br = {
   contact: {
     title: "Contatos",
     description: "Você pode me encontrar nas redes sociais",
-    about: "Posso te ajudar com alguma coisa, tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou para meios mais tradicionais, mande um e-mail, ficarei feliz em responder."
+    about: "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
   },
   posts: {
     title: "Artigos",

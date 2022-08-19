@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Wrapper = styled.li`
   position: relative;
   width: 512px;
-  min-height: ${(props) => (props.article ? "400px" : "312px")};
+  min-height: ${({ article }) => (article ? "400px" : "312px")};
   transition: 0.5s ease-in-out;
   border-radius: 25px;
   box-shadow: 0 0 8px 1px var(--shadowColors),
@@ -12,7 +12,6 @@ export const Wrapper = styled.li`
   overflow: hidden;
 
   & img {
-    filter: grayscale(1);
     opacity: 0.85 !important;
   }
 

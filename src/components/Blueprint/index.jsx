@@ -10,13 +10,13 @@ import GeneralStyles from "../../styles/general"
 
 import "../../styles/styles.css"
 
-const Blueprint = ({ children }) => {
+const Blueprint = ({ children, content }) => {
   return (
     <ParallaxProvider>
       <GeneralStyles />
-      <Wrapper>
+      <Wrapper content={content}>
         {children}
-        <Menu />
+        <Menu hero={!content} />
       </Wrapper>
     </ParallaxProvider>
   )
@@ -24,6 +24,11 @@ const Blueprint = ({ children }) => {
 
 Blueprint.propTypes = {
   children: PropTypes.node.isRequired,
+  content: PropTypes.bool,
+}
+
+Blueprint.defaultTypes = {
+  content: false,
 }
 
 export default Blueprint

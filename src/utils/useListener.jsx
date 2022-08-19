@@ -9,15 +9,17 @@ const useListener = (type, callback, delay) => {
   })
 
   useEffect(() => {
-    const resizeListener = () => {
-      if (savedTimer.current) {
-        clearTimeout(savedTimer.current)
+    if (delay >= 0) {
+      const resizeListener = () => {
+        if (savedTimer.current) {
+          clearTimeout(savedTimer.current)
+        }
+        savedTimer.current = setTimeout(() => savedCallback.current(), delay)
       }
-      savedTimer.current = setTimeout(() => savedCallback.current(), delay)
-    }
-    window.addEventListener(type, resizeListener)
+      window.addEventListener(type, resizeListener)
 
-    return () => window.removeEventListener(type, resizeListener)
+      return () => window.removeEventListener(type, resizeListener)
+    }
   }, [type, delay])
 }
 

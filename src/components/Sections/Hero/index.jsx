@@ -9,11 +9,13 @@ import getPercentHero from "utils/getPercentHero"
 import useListener from "utils/useListener"
 
 import Triangle from "../Vectors/Triangle"
+import Arrow from "../Vectors/Arrow"
+import ArrowOutline from "../Vectors/ArrowOutline"
 
 import {
-  Box,
   BoxTop,
   BoxBack,
+  BoxShadow,
   BoxText,
   Wrapper,
   ImageBox,
@@ -75,16 +77,22 @@ const SectionHero = () => {
   return (
     <Wrapper>
       <BoxTop>
-        <Parallax speed={50} translateY={[-1500, 150]}>
+        <Parallax translateY={[-1500, 150]}>
           <Triangle width="456" height="314" />
         </Parallax>
       </BoxTop>
 
       <BoxBack>
-        <Parallax speed={-50}>
-          <Box />
+        <Parallax speed={-100}>
+          <Arrow width="750" height="750" />
         </Parallax>
       </BoxBack>
+
+      <BoxShadow>
+        <Parallax translateY={[0, 50]}>
+          <ArrowOutline width="750" height="750" />
+        </Parallax>
+      </BoxShadow>
 
       <BoxText>
         <h1>JOHNY</h1>

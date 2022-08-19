@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 30px 0 15px;
+  margin: var(--56px) 0 0;
   padding: 0 25px;
   position: relative;
   width: 100%;
@@ -44,16 +44,17 @@ export const Description = styled.p`
   text-align: justify;
 `
 
-export const Details = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-`
-
 export const Resumes = styled.ul`
-  margin: var(--36px) 0 var(--16px);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 
-  & a:not(:last-child) li {
-    margin-bottom: 20px;
+  gap: var(--24px);
+  margin: var(--36px) 0 0;
+
+  & > div {
+    margin: 0;
   }
 `
 
@@ -62,10 +63,17 @@ export const Resume = styled.li`
 `
 
 export const Languages = styled.ul`
-  margin: var(--36px) 0 var(--16px);
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: var(--64px);
+  margin: var(--36px) 0 0;
+
+  & > div {
+    margin: 0;
+  }
 `
 
 export const Language = styled.li`
@@ -76,23 +84,12 @@ export const Language = styled.li`
   &:nth-child(3) {
     color: var(--secondary);
   }
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
 `
 
 export const LanguageName = styled.p`
   font-size: 1.2rem;
   font-weight: 900;
   line-height: 125%;
-  text-align: right;
-  text-transform: uppercase;
-`
-
-export const LanguageProficiency = styled.p`
-  font-size: 1rem;
-  font-weight: 400;
   text-align: right;
   text-transform: uppercase;
 `

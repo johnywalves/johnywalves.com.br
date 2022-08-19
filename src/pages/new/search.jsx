@@ -5,7 +5,7 @@ import Seo from "components/seo"
 import Search from "components/Search"
 
 const SearchPage = () => (
-  <Blueprint>
+  <Blueprint content>
     <Seo title="Pesquisa" />
     <Search />
   </Blueprint>

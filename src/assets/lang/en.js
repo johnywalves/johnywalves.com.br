@@ -17,7 +17,7 @@ const en = {
   contact: {
     title: "Contacts",
     description: "You can find me on social networks",
-    about: "Can I help you with anything, do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
+    about: "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
   },
   posts: {
     title: "Posts (portuguese)",

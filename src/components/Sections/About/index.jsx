@@ -10,13 +10,11 @@ import {
   AboutMe,
   Line,
   Description,
-  Details,
   Resumes,
   Resume,
   Languages,
   Language,
   LanguageName,
-  LanguageProficiency,
 } from "./styled"
 
 const SectionAbout = () => {
@@ -29,32 +27,29 @@ const SectionAbout = () => {
           <Description>{Strings.description}</Description>
         </AboutMe>
 
-        <Details>
-          <Resumes>
-            <Header title={Strings.resume.title} light left small />
-            {Strings.resume.files.map(({ name, file }, index) => (
-              <a key={index} href={file} target="_blank" rel="noreferrer">
-                <Resume>
-                  <Button light secondary={index !== 0}>
-                    {name}
-                  </Button>
-                </Resume>
-              </a>
-            ))}
-          </Resumes>
+        <Languages>
+          <Header title={Strings.languages.title} light left small fit />
+          {Strings.languages.list.map((language, index) => (
+            <Language key={index}>
+              <LanguageName>
+                {language.name} {language.proficiency}
+              </LanguageName>
+            </Language>
+          ))}
+        </Languages>
 
-          <Languages>
-            <Header title={Strings.languages.title} light right small />
-            {Strings.languages.list.map((language, index) => (
-              <Language key={index}>
-                <LanguageName>{language.name}</LanguageName>
-                <LanguageProficiency>
-                  {language.proficiency}
-                </LanguageProficiency>
-              </Language>
-            ))}
-          </Languages>
-        </Details>
+        <Resumes>
+          <Header title={Strings.resume.title} light left small fit />
+          {Strings.resume.files.map(({ name, file }, index) => (
+            <a key={index} href={file} target="_blank" rel="noreferrer">
+              <Resume>
+                <Button light secondary={index !== 0}>
+                  {name}
+                </Button>
+              </Resume>
+            </a>
+          ))}
+        </Resumes>
       </Content>
     </Wrapper>
   )

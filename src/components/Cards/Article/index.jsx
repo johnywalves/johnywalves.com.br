@@ -16,10 +16,12 @@ const CardArticle = ({ cover, category, subtitle, title, description }) => {
   return (
     <Wrapper cover={cover} article>
       <Content>
-        <Header>
-          <Category>{category}</Category>
-          <Subtitle>{subtitle}</Subtitle>
-        </Header>
+        {category && (
+          <Header>
+            <Category>{category}</Category>
+            <Subtitle>{subtitle}</Subtitle>
+          </Header>
+        )}
         <Title>{title}</Title>
         <Description>{description}</Description>
       </Content>

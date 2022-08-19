@@ -12,31 +12,39 @@ export const Wrapper = styled.section`
   );
 `
 
-export const Box = styled.div`
-  width: 100%;
-  height: 20vh;
-  background-color: red;
-`
-
 const Container = styled.div`
   position: absolute;
 `
 
 export const BoxTop = styled(Container)`
-  right: 15%;
   top: 0;
+  right: 15%;
   width: 30%;
-  height: 30%;
+  height: 50%;
   z-index: 1;
 `
 
 export const BoxBack = styled(Container)`
-  left: 10%;
-  top: 40%;
-  width: 40%;
-  height: 60%;
+  top: 0;
+  left: 20%;
+  width: 30%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+`
+
+export const BoxShadow = styled(Container)`
+  top: 15%;
+  right: 50%;
+  width: 35%;
+  height: 85%;
   z-index: 1;
   overflow: hidden;
+
+  svg {
+    transform-origin: center;
+    transform: rotate(-15deg);
+  }
 `
 
 export const BoxText = styled(Container)`
@@ -76,6 +84,8 @@ export const ImageBox = styled(Container)`
   transform: translateX(-50%);
   transition: opacity 0.2s;
   z-index: 3;
+  filter: drop-shadow(0 0 2px var(--shadowColors))
+    drop-shadow(4px 4px 4px var(--shadowColors));
 `
 
 export const ImageCover = styled(GatsbyImage)`

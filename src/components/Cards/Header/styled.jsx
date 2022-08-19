@@ -22,12 +22,20 @@ const alignText = ({ left, right }) => {
   return alignCenter
 }
 
-export const Header = styled.div`
+const widthFull = css`
   width: 100%;
+`
+
+const widthFit = css`
+  width: fit-content;
+`
+
+export const Header = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 
+  ${({ fit }) => (fit ? widthFit : widthFull)};
   ${alignText}
 `
 
@@ -45,9 +53,10 @@ const titleSize = ({ small }) =>
       `
 
 export const Title = styled.h2`
-  ${titleSize}
   text-transform: uppercase;
   color: ${({ light }) => (light ? "var(--highlight)" : "var(--white)")};
+
+  ${titleSize}
 `
 
 const lineSize = ({ small }) =>
@@ -65,5 +74,6 @@ export const Line = styled.div`
   width: 5rem;
   border-style: solid;
   border-color: ${({ light }) => (light ? "var(--highlight)" : "var(--white)")};
+
   ${lineSize}
 `

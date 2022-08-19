@@ -22,6 +22,7 @@ const GeneralStyles = createGlobalStyle`
     --24px: 1.5rem;
     --36px: 2.25rem;
     --48px: 3rem;
+    --56px: 3.5rem;
     --64px: 4rem;
     --72px: 4.5rem;
     --80px: 5rem;
@@ -49,7 +50,7 @@ const GeneralStyles = createGlobalStyle`
     --highlightDark: #e352a8;
     --highlightSemi: #de128cc0;
     --highlight: #de128c;
-    --secondary: slateblue;
+    --secondary: #6a5acd;
     --secondary-neon: #44b5ef;
     --white: #fff;
   }

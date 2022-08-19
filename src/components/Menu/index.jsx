@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 import getPercentHero from "utils/getPercentHero"
 import useListener from "utils/useListener"
@@ -23,7 +24,7 @@ import {
   Hamburger,
 } from "./styled"
 
-const Menu = () => {
+const Menu = ({ hero }) => {
   const { jellyfish } = useStaticQuery(graphql`
     query {
       jellyfish: file(relativePath: { eq: "jellyfish.jpg" }) {
@@ -59,14 +60,16 @@ const Menu = () => {
     })
   }, [isDarkMode])
 
-  const [classMenuBar, setClassMenuBar] = useState(false)
+  const [classMenuBar, setClassMenuBar] = useState("")
+
+  useEffect(() => !hero && setClassMenuBar("nohero"), [hero])
 
   const scrollMove = useCallback(() => {
     const percent = getPercentHero()
-    setClassMenuBar(percent < 0.6 ? "" : "nohero")
-  }, [])
+    setClassMenuBar(percent < 0.6 && hero ? "" : "nohero")
+  }, [hero])
 
-  useListener("scroll", scrollMove, 10)
+  useListener("scroll", scrollMove, hero ? 10 : -1)
 
   return (
     <Wrapper>
@@ -129,6 +132,14 @@ const Menu = () => {
       </MenuBox>
     </Wrapper>
   )
+}
+
+Menu.propTypes = {
+  hero: PropTypes.bool,
+}
+
+Menu.defaultTypes = {
+  hero: false,
 }
 
 export default Menu

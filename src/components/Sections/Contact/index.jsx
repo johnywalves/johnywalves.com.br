@@ -5,6 +5,8 @@ import Strings from "components/strings"
 import SocialLinks from "components/SocialLinks"
 import { Header } from "components/Cards"
 
+import Waves from "../Vectors/Waves"
+
 import {
   Wrapper,
   Content,
@@ -14,8 +16,6 @@ import {
   SocialWrapper,
   Image,
   Box,
-  CurvePrimary,
-  CurveSecondary,
 } from "./styled"
 
 const SectionContact = () => {
@@ -44,8 +44,7 @@ const SectionContact = () => {
             <SocialLinks about />
           </SocialWrapper>
           <Box>
-            <CurvePrimary />
-            <CurveSecondary />
+            <Waves />
           </Box>
         </Info>
         <Image image={avatarImage.childImageSharp.gatsbyImageData} alt="" />
