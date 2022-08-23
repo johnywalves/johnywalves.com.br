@@ -1,12 +1,32 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Github } from "@styled-icons/fa-brands/Github"
+import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
 
 import Wrapper from "../Wrapper"
 
-import { Title } from "./styled"
+import { Banner, Title, Links, SourceCode } from "./styled"
 
-const CardProject = ({ title, cover }) => {
-  return <Wrapper cover={cover}>{title && <Title>{title}</Title>}</Wrapper>
+const CardProject = ({ title, sourceCode, view, cover }) => {
+  return (
+    <Wrapper cover={cover}>
+      <Banner>
+        {title && <Title>{title}</Title>}
+        <Links>
+          <SourceCode href={view} target="_target" rel="noreferrer noopener">
+            <ExternalLink />
+          </SourceCode>
+          <SourceCode
+            href={sourceCode}
+            target="_target"
+            rel="noreferrer noopener"
+          >
+            <Github />
+          </SourceCode>
+        </Links>
+      </Banner>
+    </Wrapper>
+  )
 }
 
 CardProject.propTypes = {

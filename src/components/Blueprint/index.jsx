@@ -2,13 +2,12 @@ import React from "react"
 import { ParallaxProvider } from "react-scroll-parallax"
 import PropTypes from "prop-types"
 
-import Menu from "components/Menu"
-
+import Menu from "./Menu"
 import { Wrapper } from "./styled"
 
-import GeneralStyles from "../../styles/general"
+import GeneralStyles from "styles/general"
 
-import "../../styles/styles.css"
+import "styles/styles.css"
 
 const Blueprint = ({ children, content }) => {
   return (

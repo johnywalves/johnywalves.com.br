@@ -1,160 +1,74 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SampleList from "components/SampleList"
 import Strings from "components/strings"
-import { Header, Article } from "components/Cards"
+import { Header } from "components/Cards"
 
-import { Wrapper, List, ImageCover } from "./styled"
+import OnePageList from "./OnePageList"
+import Project from "./Project"
+import { Wrapper, List } from "./styled"
 
 const ProjectPage = () => {
   const images = useStaticQuery(graphql`
     query {
       machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       devflix: file(relativePath: { eq: "devflix.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       bomdia: file(relativePath: { eq: "bomdia.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       daisybell: file(relativePath: { eq: "daisybell.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       wolt: file(relativePath: { eq: "wolt.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       comicscreator: file(relativePath: { eq: "comicscreator.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       steamLibrary: file(relativePath: { eq: "steamLibrary.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
       }
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFields
+      }
+    }
+
+    fragment extractFields on File {
+      childImageSharp {
+        gatsbyImageData(
+          height: 140
+          placeholder: DOMINANT_COLOR
+          formats: [AUTO, WEBP]
+        )
       }
     }
   `)
+
   const getImage = (name) => images[name] || images.firemakebetter
 
   return (
     <Wrapper>
       <Header title={Strings.projects.title} left light />
       <List>
-        {Strings.projects.list.slice(0, 6).map((project, index) => (
-          <Article
+        {Strings.projects.list.map((project, index) => (
+          <Project
             key={index}
+            image={getImage(project.cover).childImageSharp.gatsbyImageData}
             {...project}
-            cover={
-              project.cover && (
-                <a
-                  href={project.view}
-                  aria-label={project.cover}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <ImageCover
-                    image={
-                      getImage(project.cover).childImageSharp.gatsbyImageData
-                    }
-                    style={{ objectPosition: project.coverPosition || "top" }}
-                    alt=""
-                  />
-                </a>
-              )
-            }
           />
         ))}
       </List>
-      <Header title={"One page projects"} left light small />
-      <SampleList />
+      <OnePageList />
     </Wrapper>
   )
 }

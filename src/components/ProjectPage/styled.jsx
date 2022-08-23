@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.section`
   position: relative;
@@ -8,15 +7,10 @@ export const Wrapper = styled.section`
 `
 
 export const List = styled.ul`
+  margin: 0 0 var(--24px) 0;
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
-`
-
-export const ImageCover = styled(GatsbyImage)`
-  height: 308px;
-  width: 100%;
-  object-fit: cover;
-  object-position: top left;
+  gap: var(--24px);
 `

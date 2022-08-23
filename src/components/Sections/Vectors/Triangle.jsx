@@ -44,7 +44,7 @@ const Triangle = (props) => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stop-color="var(--secondary)" offset="0" />
-        <stop stop-color="var(--highlightDark)" offset="1" />
+        <stop stop-color="var(--highlight-dark)" offset="1" />
       </linearGradient>
     </defs>
     <g>
@@ -65,7 +65,7 @@ const Triangle = (props) => (
       <path
         d="m10.212 5.2009 40.402 8.1983-25.626 17.192z"
         fill="none"
-        stroke="var(--secondary-neon)"
+        stroke="var(--third)"
         stroke-linecap="square"
         stroke-width="6.5881"
         style={{ paintOrder: "normal" }}

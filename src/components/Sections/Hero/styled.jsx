@@ -5,11 +5,11 @@ export const Wrapper = styled.section`
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    90deg,
-    var(--background) 50%,
-    var(--highlight) 50%
-  );
+  background: url("/vectors/triwallTL.svg"),
+    linear-gradient(90deg, var(--background) 50%, var(--highlight) 50%);
+  background-size: 20%, 100%;
+  background-repeat: no-repeat;
+  background-position: top left, center;
 `
 
 const Container = styled.div`

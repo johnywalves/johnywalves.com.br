@@ -64,6 +64,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               duration={0.6}
               disabled={firstOne}
               light={light}
+              aria-label="first"
             >
               <ArrowsLeft />
             </Icon>
@@ -75,6 +76,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               duration={0.6}
               disabled={firstOne}
               light={light}
+              aria-label="previous"
             >
               <ArrowLeft />
             </Icon>
@@ -95,6 +97,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               duration={0.6}
               disabled={lastOne}
               light={light}
+              aria-label="next"
             >
               <ArrowLeft rotate />
             </Icon>
@@ -106,6 +109,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
               duration={0.6}
               disabled={lastOne}
               light={light}
+              aria-label="last"
             >
               <ArrowsLeft rotate />
             </Icon>

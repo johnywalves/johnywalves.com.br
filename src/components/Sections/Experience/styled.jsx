@@ -6,7 +6,11 @@ export const Wrapper = styled.section`
   width: 100%;
   padding: 45px 25px;
   color: var(--texts);
+  background: url("/vectors/triwallBR.svg");
   background-color: var(--background);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 `
 
 export const Content = styled.div`

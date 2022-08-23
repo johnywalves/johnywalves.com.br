@@ -15,7 +15,7 @@ const CardWrapper = ({ cover, children, article }) => {
 CardWrapper.propTypes = {
   cover: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
-  article: PropTypes.bool.isRequired,
+  article: PropTypes.bool,
 }
 
 CardWrapper.defaultProps = {

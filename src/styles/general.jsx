@@ -20,6 +20,7 @@ const GeneralStyles = createGlobalStyle`
     --18px: 1.125rem;
     --21px: 1.3125rem;
     --24px: 1.5rem;
+    --32px: 2rem;
     --36px: 2.25rem;
     --48px: 3rem;
     --56px: 3.5rem;
@@ -47,11 +48,15 @@ const GeneralStyles = createGlobalStyle`
   }
 
   :root {
-    --highlightDark: #e352a8;
-    --highlightSemi: #de128cc0;
-    --highlight: #de128c;
+    --highlight: #e0138c;
+    --highlight-dark: #e352a8;
+    --highlight-light: #ff89fd;
+    --highlight-lighter: #ff6bfd;
+    --highlight-lightest: #fdbafd;
+    --highlight-semi: #e0138cd8;
     --secondary: #6a5acd;
-    --secondary-neon: #44b5ef;
+    --third: #44b5ef;
+    --third-light: #9fd5fd;
     --white: #fff;
   }
 

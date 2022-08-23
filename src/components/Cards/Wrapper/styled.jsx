@@ -1,19 +1,9 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
-export const Wrapper = styled.li`
-  position: relative;
+const styleFocusable = css`
   width: 512px;
   min-height: ${({ article }) => (article ? "400px" : "312px")};
-  transition: 0.5s ease-in-out;
-  border-radius: 25px;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
   transform: scale(0.8);
-  overflow: hidden;
-
-  & img {
-    opacity: 0.85 !important;
-  }
 
   &:hover {
     box-shadow: 0 0 16px 2px var(--shadowColors),
@@ -25,6 +15,21 @@ export const Wrapper = styled.li`
       opacity: 1 !important;
     }
   }
+`
+
+export const Wrapper = styled.li`
+  position: relative;
+  transition: 0.5s ease-in-out;
+  border-radius: 25px;
+  box-shadow: 0 0 8px 1px var(--shadowColors),
+    4px 4px 8px 1px var(--shadowColors);
+  overflow: hidden;
+
+  & img {
+    opacity: 0.9 !important;
+  }
+
+  ${styleFocusable}
 `
 
 export const Cover = styled.div`

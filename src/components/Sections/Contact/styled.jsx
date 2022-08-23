@@ -4,11 +4,16 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  padding: 80px 0;
-  background-color: var(--background);
+  padding: 80px 0 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  background: url("/vectors/triwallTL.svg"), url("/vectors/triwallBR.svg");
+  background-color: var(--background);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
 `
 
 export const Content = styled.div`
@@ -33,8 +38,10 @@ export const Line = styled.div`
 `
 
 export const Info = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding: 0 0 250px;
 `
 
 export const Description = styled.p`
@@ -53,9 +60,32 @@ export const SocialWrapper = styled.div`
 `
 
 export const Box = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
   opacity: 0.85;
+  overflow: hidden;
+  margin: 0 0 var(--32px) 0;
+`
+
+export const BoxSide = styled.div`
+  position: absolute;
+  top: 0;
+  left: -125px;
+  height: 100%;
+  opacity: 0.85;
+  overflow: hidden;
+
+  svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const Image = styled(GatsbyImage)`

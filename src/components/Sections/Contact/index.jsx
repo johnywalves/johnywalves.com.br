@@ -1,11 +1,13 @@
 import React from "react"
+import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
 import SocialLinks from "components/SocialLinks"
 import { Header } from "components/Cards"
 
-import Waves from "../Vectors/Waves"
+import Arrow from "../Vectors/Arrow"
+import ArrowOutline from "../Vectors/ArrowOutline"
 
 import {
   Wrapper,
@@ -16,6 +18,7 @@ import {
   SocialWrapper,
   Image,
   Box,
+  BoxSide,
 } from "./styled"
 
 const SectionContact = () => {
@@ -44,11 +47,25 @@ const SectionContact = () => {
             <SocialLinks about />
           </SocialWrapper>
           <Box>
-            <Waves />
+            <Parallax rotate={[0, 360]}>
+              <Arrow height="200" width="200" />
+            </Parallax>
           </Box>
         </Info>
         <Image image={avatarImage.childImageSharp.gatsbyImageData} alt="" />
       </Content>
+
+      <BoxSide>
+        <Parallax translateY={[-100, 300]}>
+          <ArrowOutline
+            height="300"
+            width="300"
+            style={{
+              transform: "rotate(-45deg) scale(-1, -1)",
+            }}
+          />
+        </Parallax>
+      </BoxSide>
     </Wrapper>
   )
 }
