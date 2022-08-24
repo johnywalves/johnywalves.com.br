@@ -23,7 +23,7 @@ export const Header = styled.div`
 
 export const Category = styled.p`
   padding: 4px 8px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 900;
   color: var(--background);
   background-color: var(--highlight);
@@ -35,6 +35,7 @@ export const Subtitle = styled.small`
   width: 100%;
   margin: 0 0 5px;
   font-size: 1rem;
+  font-weight: 400;
   text-align: right;
 `
 

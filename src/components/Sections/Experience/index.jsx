@@ -7,6 +7,12 @@ import { University } from "@styled-icons/fa-solid/University"
 import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
 import { Language } from "@styled-icons/ionicons-solid/Language"
 
+import { Code } from "@styled-icons/entypo/Code"
+import { CodeCurly } from "@styled-icons/boxicons-regular/CodeCurly"
+import { AcademicCap } from "@styled-icons/heroicons-outline/AcademicCap"
+import { ExpandLess } from "@styled-icons/material-outlined/ExpandLess"
+import { ExpandMore } from "@styled-icons/material-rounded/ExpandMore"
+
 import Button from "components/Button"
 import Strings from "components/strings"
 import { Header } from "components/Cards"
@@ -139,17 +145,17 @@ const SectionExperience = () => {
             onClick={toggleExperiences}
             light
           >
-            {Strings.experience.title}
+            <CodeCurly /> {Strings.experience.title}
           </Button>
           <Button
             selected={selectedEducations}
             onClick={toggleEducations}
             light
           >
-            {Strings.education.title}
+            <AcademicCap /> {Strings.education.title}
           </Button>
           <Button selected={selectedCourses} onClick={toggleCourses} light>
-            {Strings.courses.title}
+            <Code /> {Strings.courses.title}
           </Button>
         </Areas>
 
@@ -184,7 +190,15 @@ const SectionExperience = () => {
           )}
           <AreaButton>
             <Button light onClick={toggleAllExperiences}>
-              {allExperiences ? Strings.seeLess : Strings.seeMore}
+              {allExperiences ? (
+                <>
+                  <ExpandLess /> {Strings.seeLess}
+                </>
+              ) : (
+                <>
+                  <ExpandMore /> {Strings.seeMore}
+                </>
+              )}
             </Button>
           </AreaButton>
         </Area>
@@ -275,7 +289,15 @@ const SectionExperience = () => {
             ))}
           <AreaButton>
             <Button light onClick={toggleAllCourses}>
-              {allCourses ? Strings.seeLess : Strings.seeMore}
+              {allCourses ? (
+                <>
+                  <ExpandLess /> {Strings.seeLess}
+                </>
+              ) : (
+                <>
+                  <ExpandMore /> {Strings.seeMore}
+                </>
+              )}
             </Button>
           </AreaButton>
         </Area>

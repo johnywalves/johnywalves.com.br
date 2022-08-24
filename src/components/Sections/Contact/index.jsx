@@ -8,6 +8,7 @@ import { Header } from "components/Cards"
 
 import Arrow from "../Vectors/Arrow"
 import ArrowOutline from "../Vectors/ArrowOutline"
+import NeonTriange from "../Vectors/NeonTriange"
 
 import {
   Wrapper,
@@ -47,8 +48,11 @@ const SectionContact = () => {
             <SocialLinks about />
           </SocialWrapper>
           <Box>
-            <Parallax rotate={[0, 360]}>
-              <Arrow height="200" width="200" />
+            <Parallax translateY={[-50, 150]}>
+              <ArrowOutline height="250" width="250" />
+            </Parallax>
+            <Parallax translateY={[50, -150]}>
+              <Arrow height="250" width="250" />
             </Parallax>
           </Box>
         </Info>
@@ -56,14 +60,14 @@ const SectionContact = () => {
       </Content>
 
       <BoxSide>
-        <Parallax translateY={[-100, 300]}>
-          <ArrowOutline
-            height="300"
-            width="300"
-            style={{
-              transform: "rotate(-45deg) scale(-1, -1)",
-            }}
-          />
+        <Parallax translateY={[-120, 30]}>
+          <NeonTriange height="150" width="150" />
+        </Parallax>
+        <Parallax translateY={[-100, 175]}>
+          <NeonTriange height="300" width="300" />
+        </Parallax>
+        <Parallax translateY={[-100, 350]}>
+          <NeonTriange height="200" width="200" />
         </Parallax>
       </BoxSide>
     </Wrapper>

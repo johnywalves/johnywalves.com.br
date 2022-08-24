@@ -66,25 +66,46 @@ export const Box = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 100%;
   opacity: 0.85;
   overflow: hidden;
-  margin: 0 0 var(--32px) 0;
+
+  & div:nth-child(1) > svg {
+    transform: rotate(45deg) translateX(25%);
+  }
+
+  & div:nth-child(2) > svg {
+    transform: rotate(15deg) translateX(-25%);
+  }
 `
 
 export const BoxSide = styled.div`
   position: absolute;
   top: 0;
-  left: -125px;
+  left: -100px;
   height: 100%;
   opacity: 0.85;
-  overflow: hidden;
 
-  svg {
+  & > div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+  }
+
+  & svg {
+    transform-origin: center;
+  }
+
+  & div:nth-child(1) > svg {
+    transform: rotate(45deg) translateX(120px);
+  }
+
+  & div:nth-child(2) > svg {
+    transform: rotate(100deg);
+  }
+
+  & div:nth-child(3) > svg {
+    transform: rotate(15deg) translateX(60px);
   }
 `
 

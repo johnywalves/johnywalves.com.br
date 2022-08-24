@@ -75,7 +75,16 @@ const Menu = ({ hero }) => {
     <Wrapper>
       <MenuCheck id="menu-hamburger" type="checkbox" />
       <MenuBar className={classMenuBar}>
-        <Logo>{"{JWA}"}</Logo>
+        <Logo
+          cover
+          direction="left"
+          bg="var(--background)"
+          duration={0.6}
+          to={"/new"}
+          activeClassName="active"
+        >
+          {"{JWA}"}
+        </Logo>
         <div>
           <MenuTop>
             {strings.menuLinks.map(({ label, url }) => (

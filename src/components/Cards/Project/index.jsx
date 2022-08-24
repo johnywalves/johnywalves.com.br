@@ -13,13 +13,19 @@ const CardProject = ({ title, sourceCode, view, cover }) => {
       <Banner>
         {title && <Title>{title}</Title>}
         <Links>
-          <SourceCode href={view} target="_target" rel="noreferrer noopener">
+          <SourceCode
+            href={view}
+            target="_target"
+            rel="noreferrer noopener"
+            aria-label={`Link to ${cover}`}
+          >
             <ExternalLink />
           </SourceCode>
           <SourceCode
             href={sourceCode}
             target="_target"
             rel="noreferrer noopener"
+            aria-label={`Source code to ${cover}`}
           >
             <Github />
           </SourceCode>

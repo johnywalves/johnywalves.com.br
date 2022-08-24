@@ -77,4 +77,10 @@ export const Wrapper = styled.div`
   align-items: center;
 
   ${styleButton}
+
+  & svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin: 0 0.5rem 0 0;
+  }
 `

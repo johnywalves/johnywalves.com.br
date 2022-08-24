@@ -18,23 +18,19 @@ Interação com a luz é a maneira como vemos as coisas, nessa interação com a
 A propriedade `box-shadow` do CSS projeta uma cópia do elemento com uma cor única
 
 ```css
-box-shadow: 
-  <deslocamento-horizontal> 
-  <deslocamento-vertical> 
-  <raio de desfoque> 
-  <raio de espalhamento> 
-  <cor>;
+box-shadow: <deslocamento-horizontal> <deslocamento-vertical> <raio de desfoque>
+  <raio de espalhamento> <cor>;
 ```
 
 Detalhamento dos atributos
 
-* **deslocamento horizontal**: Quando a sombra está projetada para **direita** quando positivo e esquerda para valores negativas  
-* **deslocamento vertical**: Quando a sombra está projetada para **baixa** quando positivo e cima para valores negativas   
-* **raio de desfoque**: Quando a sombra possui desfoque devido a difusão da luz, a irregularidade de inscidência dela  
-* **raio de espalhamento** (opcional): Tamanho adicional para a sombra, somando medida apartir do centro ou reduzindo da borda quando negativo, uma boa indicação de ângulo da luz sobre o objeto
-* **cor**: Cor da sombra, lembrado a possiblidade de controlar opacidade pela cor
+- **deslocamento horizontal**: Quando a sombra está projetada para **direita** quando positivo e esquerda para valores negativas
+- **deslocamento vertical**: Quando a sombra está projetada para **baixa** quando positivo e cima para valores negativas
+- **raio de desfoque**: Quando a sombra possui desfoque devido a difusão da luz, a irregularidade de inscidência dela
+- **raio de espalhamento** (opcional): Tamanho adicional para a sombra, somando medida apartir do centro ou reduzindo da borda quando negativo, uma boa indicação de ângulo da luz sobre o objeto
+- **cor**: Cor da sombra, lembrado a possiblidade de controlar opacidade pela cor
 
-## Incidência de luz 
+## Incidência de luz
 
 Podemos usar para projetar uma sombra e indicar luz
 
@@ -90,7 +86,7 @@ Exemplos da direção das luzes
   </div>
 </div>
 
-Várias fontes de luzes 
+Várias fontes de luzes
 
 <div style="padding:20px 0 0;display:flex;justify-content:center" >
   <div>
@@ -104,8 +100,7 @@ Várias fontes de luzes
 Junção das luzes ambientes e luz chave, adicionando as duas sombras como uma lista separado por vírgula
 
 ```css
-box-shadow: 0 0 8px 1px #000003f, 
-  4px 4px 8px 1px #000003f;
+box-shadow: 0 0 8px 1px #000003f, 4px 4px 8px 1px #000003f;
 ```
 
 ## Luz de fundo
@@ -119,10 +114,10 @@ Um objeto com uma fonte de luz uniforme vindo de trás, como uma sanca no teto
 Usamos uma sombra sem deslocamentos com desfoque e espalhamento
 
 ```css
-box-shadow: 0 0 8px 4px #de128c;
+box-shadow: 0 0 8px 4px #e0138c;
 ```
 
-## Iluminação interna 
+## Iluminação interna
 
 Com as luzes vindo de forma regular internamente das margens
 
@@ -133,7 +128,7 @@ Com as luzes vindo de forma regular internamente das margens
 Basta incluir o `inset` para frente dos atributos
 
 ```css
-box-shadow: inset 0 0 8px 4px #de128c;
+box-shadow: inset 0 0 8px 4px #e0138c;
 ```
 
 ## Objetos espelhos
@@ -151,8 +146,7 @@ As sombras podem ser usadas para desenhar novos objetos com o mesmo formato
 Podemos fazer o espalhamento um como positivo para aumentar e outro como negativo para reduzir o tamanho da sombra
 
 ```css
-box-shadow: -120px 0 0 10px #de128c, 
-  100px 0 0 -10px #de128c;
+box-shadow: -120px 0 0 10px #e0138c, 100px 0 0 -10px #e0138c;
 ```
 
 ## Efeito de elevação com mouse
@@ -164,7 +158,7 @@ Para mudança de elevação podemos aumentar o desfoque da luz ambiente e desloc
   <p style="text-align:center;margin-top:40px;">Passe o mouse</p>
 </div>
 
-Elemento HTML com a classe `card-box-shadow` 
+Elemento HTML com a classe `card-box-shadow`
 
 ```html
 <div class="card-box-shadow"></div>
@@ -174,21 +168,19 @@ Estilo com `transition` de 300ms `hover` para um efeito suave passando a impress
 
 ```css
 .card-box-shadow {
-    width: 160px;
-    height: 160px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px 1px #000003f, 
-      8px 8px 16px 2px #000003f;
-    transition: box-shadow 0.3s;
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 1px #000003f, 8px 8px 16px 2px #000003f;
+  transition: box-shadow 0.3s;
 }
 
 .card-box-shadow:hover {
-    box-shadow: 0 0 16px 2px #000003f, 
-      16px 16px 32px 4px  #000003f;
+  box-shadow: 0 0 16px 2px #000003f, 16px 16px 32px 4px #000003f;
 }
 ```
 
-## Pequeno exemplo 
+## Pequeno exemplo
 
 Uma pequena chama com sombras, ou luzes :)
 
@@ -205,8 +197,7 @@ Segue o CSS
   background: #ffb726;
   border-radius: 15% 75% 50% 75%;
   transform: rotate(45deg);
-  box-shadow: -10px -10px 0 15px #ff7d17,
-    -20px -20px 0 30px #ff6236,
+  box-shadow: -10px -10px 0 15px #ff7d17, -20px -20px 0 30px #ff6236,
     -30px -30px 10px 45px #ff62343f;
 }
 ```

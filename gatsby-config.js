@@ -59,7 +59,7 @@ const pluginsConfig = [
       short_name: `Johny W. Alves`,
       start_url: `/`,
       background_color: `#ffffff`,
-      theme_color: `#de128c`,
+      theme_color: `#e0138c`,
       display: `minimal-ui`,
       icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
     },
@@ -154,13 +154,10 @@ const pluginsConfig = [
                 guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 custom_elements: [
                   {
-                    "content:encoded": `<p style='text-align:center'><a href='${
-                      site.siteMetadata.siteUrl + edge.node.fields.slug
-                    }'><img src='${site.siteMetadata.siteUrl}${
-                      edge.node.frontmatter.coverImage
-                    }' alt='${
-                      edge.node.frontmatter.transcription
-                    }' height='285px' width='auto'></a></p>`,
+                    "content:encoded": `<p style='text-align:center'><a href='${site.siteMetadata.siteUrl + edge.node.fields.slug
+                      }'><img src='${site.siteMetadata.siteUrl}${edge.node.frontmatter.coverImage
+                      }' alt='${edge.node.frontmatter.transcription
+                      }' height='285px' width='auto'></a></p>`,
                   },
                 ],
               })

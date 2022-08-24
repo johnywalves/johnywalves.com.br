@@ -1,4 +1,6 @@
 import React from "react"
+import { FileDownload } from "@styled-icons/material-rounded/FileDownload"
+import { Language as LanguageIcon } from "@styled-icons/ionicons-solid/Language"
 
 import { Header } from "components/Cards"
 import Button from "components/Button"
@@ -28,23 +30,33 @@ const SectionAbout = () => {
         </AboutMe>
 
         <Languages>
-          <Header title={Strings.languages.title} light left small fit />
+          <li>
+            <Header title={Strings.languages.title} light left small fit />
+          </li>
           {Strings.languages.list.map((language, index) => (
             <Language key={index}>
               <LanguageName>
-                {language.name} {language.proficiency}
+                <LanguageIcon /> {language.name} {language.proficiency}
               </LanguageName>
             </Language>
           ))}
         </Languages>
 
         <Resumes>
-          <Header title={Strings.resume.title} light left small fit />
+          <li>
+            <Header title={Strings.resume.title} light left small fit />
+          </li>
           {Strings.resume.files.map(({ name, file }, index) => (
-            <a key={index} href={file} target="_blank" rel="noreferrer">
+            <a
+              key={index}
+              href={file}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Download ${name}`}
+            >
               <Resume>
                 <Button light secondary={index !== 0}>
-                  {name}
+                  <FileDownload /> {name}
                 </Button>
               </Resume>
             </a>

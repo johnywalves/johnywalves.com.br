@@ -53,7 +53,7 @@ export const Resumes = styled.ul`
   gap: var(--24px);
   margin: var(--36px) 0 0;
 
-  & > div {
+  & > li div {
     margin: 0;
   }
 `
@@ -71,7 +71,7 @@ export const Languages = styled.ul`
   gap: var(--64px);
   margin: var(--36px) 0 0;
 
-  & > div {
+  & > li div {
     margin: 0;
   }
 `
@@ -92,4 +92,10 @@ export const LanguageName = styled.p`
   line-height: 125%;
   text-align: right;
   text-transform: uppercase;
+
+  & svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin: 0 0.5rem 0 0;
+  }
 `

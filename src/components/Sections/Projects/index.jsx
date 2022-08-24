@@ -10,114 +10,45 @@ const SectionProjects = () => {
   const images = useStaticQuery(graphql`
     query {
       machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       devflix: file(relativePath: { eq: "devflix.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       bomdia: file(relativePath: { eq: "bomdia.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       daisybell: file(relativePath: { eq: "daisybell.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       wolt: file(relativePath: { eq: "wolt.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       comicscreator: file(relativePath: { eq: "comicscreator.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       steamLibrary: file(relativePath: { eq: "steamLibrary.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
       }
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 312
-            width: 640
-            layout: FIXED
-            placeholder: DOMINANT_COLOR
-            formats: [AUTO, WEBP]
-          )
-        }
+        ...extractFieldsHome
+      }
+    }
+
+    fragment extractFieldsHome on File {
+      childImageSharp {
+        gatsbyImageData(
+          height: 312
+          width: 512
+          placeholder: DOMINANT_COLOR
+          formats: [AUTO, WEBP]
+        )
       }
     }
   `)

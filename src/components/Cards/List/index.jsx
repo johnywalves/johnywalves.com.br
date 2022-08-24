@@ -1,6 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+
+import { MoreVerticalOutline } from "@styled-icons/evaicons-outline/MoreVerticalOutline"
 
 import Button from "components/Button"
 
@@ -51,7 +53,9 @@ const CardList = ({ children, title, action, url, light, number }) => {
             bg="var(--background)"
             duration={0.6}
           >
-            <Button light={light}>{action}</Button>
+            <Button light={light}>
+              <MoreVerticalOutline /> {action}
+            </Button>
           </Navigation>
         )}
         {number && (
@@ -87,7 +91,9 @@ const CardList = ({ children, title, action, url, light, number }) => {
               bg="var(--background)"
               duration={0.6}
             >
-              <Button light={light}>{action}</Button>
+              <Button light={light}>
+                <MoreVerticalOutline /> {action}
+              </Button>
             </Navigation>
             <Icon
               to={`/comic-${number + 1}`}

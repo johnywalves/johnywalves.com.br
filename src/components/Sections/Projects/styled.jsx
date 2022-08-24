@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
 `
 
 export const ImageCover = styled(GatsbyImage)`
-  height: 308px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: top left;

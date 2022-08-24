@@ -30,18 +30,25 @@ export const MenuBar = styled.nav`
   &.nohero {
     background: var(--highlight);
 
-    & p {
-      color: var(--white);
+    & a,
+    & a:hover,
+    & a:visited {
+      color: var(--white) !important;
     }
   }
 `
 
-export const Logo = styled.p`
-  color: var(--highlight);
+export const Logo = styled(Anilink)`
   font-size: var(--36px);
   font-weight: 900;
   transition: 0.5s ease-in-out;
   text-shadow: 1px 1px var(--shadowColors);
+
+  &,
+  &:hover,
+  &:visited {
+    color: var(--highlight);
+  }
 `
 
 export const MenuTop = styled.ul`

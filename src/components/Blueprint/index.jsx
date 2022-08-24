@@ -14,8 +14,8 @@ const Blueprint = ({ children, content }) => {
     <ParallaxProvider>
       <GeneralStyles />
       <Wrapper content={content}>
-        {children}
         <Menu hero={!content} />
+        {children}
       </Wrapper>
     </ParallaxProvider>
   )
@@ -30,4 +30,5 @@ Blueprint.defaultTypes = {
   content: false,
 }
 
+export { default as Container } from "./Container"
 export default Blueprint

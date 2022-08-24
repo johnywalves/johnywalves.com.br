@@ -83,7 +83,7 @@ const GlobalStyles = createGlobalStyle`
     --texts: #555555;
     --titles: #222;
     --highlightDark: #cb1080;
-    --highlight: #de128c;
+    --highlight: #e0138c;
     --mediumBackground: #f0f0f3;
     --background: #fff;
     --white: #fff;
