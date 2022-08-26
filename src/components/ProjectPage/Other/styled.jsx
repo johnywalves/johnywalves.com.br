@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  width: 360px;
+
+  width: 240px;
   border-radius: var(--8px);
-  padding: 80px var(--16px) var(--16px);
-  margin: 80px 0 0 0;
+  padding: var(--16px);
   color: var(--highlight);
   box-shadow: 2px 2px 4px 1px var(--shadowColors);
   z-index: 2;
@@ -21,22 +21,6 @@ export const Wrapper = styled.li`
   background-position: top left;
 `
 
-export const Cover = styled.div`
-  position: absolute;
-  left: var(--16px);
-  top: -80px;
-  height: 160px;
-  width: 328px;
-  border-radius: var(--8px);
-  overflow: hidden;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
-`
-
-export const ImageCover = styled(GatsbyImage)`
-  object-fit: cover;
-`
-
 export const Links = styled.div`
   display: flex;
   flex-direction: row;
@@ -46,20 +30,21 @@ export const Links = styled.div`
   gap: var(--8px);
 `
 
-export const Label = styled.div`
-  color: var(--texts);
-`
-
 export const Title = styled.h3`
   font-weight: 900;
   font-size: 1rem;
   line-height: 1.2rem;
-  height: 2.4rem;
+  color: var(--texts);
   text-transform: uppercase;
-  margin: var(--24px) 0 var(--8px);
+  text-align: left;
+  width: 100%;
+  margin: var(--8px) 0;
 `
 
-export const Description = styled.p``
+export const Description = styled.p`
+  color: var(--texts);
+  margin: var(--4px) 0;
+`
 
 const negativeLink = css`
   border-radius: 50%;

@@ -257,14 +257,6 @@ const en = {
         description: "This pretty page, a small portfolio and area to experiment and share experiences",
       },
       {
-        title: "Register Switch",
-        sourceCode: "https://github.com/johnywalves/register-switch",
-        cover: "registerSwitch",
-        view: "https://register-switch.vercel.app",
-        description:
-          "Time spent executing tasks in a simple way to enable and disable",
-      },
-      {
         title: "Bom dia, equipes dev!",
         sourceCode: "https://github.com/johnywalves/bom-dia-equipes-dev",
         cover: "bomdia",
@@ -272,6 +264,14 @@ const en = {
         view: "https://bomdiaequipesdev.com.br/",
         description:
           "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã",
+      },
+      {
+        title: "Register Switch",
+        sourceCode: "https://github.com/johnywalves/register-switch",
+        cover: "registerSwitch",
+        view: "https://register-switch.vercel.app",
+        description:
+          "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Daisy Bell",

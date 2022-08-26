@@ -5,37 +5,12 @@ import Strings from "components/strings"
 import { Github } from "@styled-icons/fa-brands/Github"
 import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
 
-import {
-  Wrapper,
-  Cover,
-  ImageCover,
-  Label,
-  Title,
-  Description,
-  Links,
-  Link,
-} from "./styled"
+import { Wrapper, Title, Description, Links, Link } from "./styled"
 
-const Project = ({
-  view,
-  sourceCode,
-  image,
-  coverPosition,
-  title,
-  description,
-}) => (
+const Project = ({ view, sourceCode, title, description }) => (
   <Wrapper>
-    <Cover>
-      <ImageCover
-        image={image}
-        style={{ objectPosition: coverPosition || "top" }}
-        alt=""
-      />
-    </Cover>
-    <Label>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-    </Label>
+    <Title>{title}</Title>
+    <Description>{description}</Description>
     <Links>
       <Link
         href={view}

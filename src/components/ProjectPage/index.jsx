@@ -8,6 +8,8 @@ import { Header } from "components/Cards"
 import OnePage from "./OnePage"
 import Highlight from "./Highlight"
 import Project from "./Project"
+import Other from "./Other"
+import Hero from "./Hero"
 import {
   PageWrapper,
   BoxTop,
@@ -85,6 +87,8 @@ const ProjectPage = () => {
         </Parallax>
       </BoxTop>
 
+      <Hero />
+
       <Container>
         {Strings.projects.list.slice(0, 1).map((project, index) => (
           <Highlight key={index} {...project} />
@@ -92,7 +96,7 @@ const ProjectPage = () => {
       </Container>
 
       <ContainerProject>
-        <Header title={Strings.projects.title} />
+        <Header title={"Top projects"} />
         <List>
           {Strings.projects.list.slice(1, 4).map((project, index) => (
             <Project
@@ -105,17 +109,19 @@ const ProjectPage = () => {
       </ContainerProject>
 
       <Container>
-        <Header title={"Others projects"} dark />
+        {Strings.projects.list.slice(4, 5).map((project, index) => (
+          <Highlight key={index} revert {...project} />
+        ))}
+      </Container>
+
+      <ContainerProject>
+        <Header title={"Others projects"} />
         <ListOther>
-          {Strings.projects.list.slice(4).map((project, index) => (
-            <Project
-              key={index}
-              image={getImage(project.cover).childImageSharp.gatsbyImageData}
-              {...project}
-            />
+          {Strings.projects.list.slice(5).map((project, index) => (
+            <Other key={index} {...project} />
           ))}
         </ListOther>
-      </Container>
+      </ContainerProject>
 
       <Container>
         <Header title={"One page projects"} dark />

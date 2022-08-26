@@ -46,8 +46,12 @@ Apaixonado pelo triângulo e as escolhas de cores <span style="background-color:
 
 ### Projetos
 
-https://www.behance.net/gallery/109550375/foodly-food-web-page
+Buscando algumas referências encontrei no [Behance do Achraf El Gassab](https://www.behance.net/gallery/109550375/foodly-food-web-page) uma organização deliciosa:
 
 ![Área de habilidades com background com vários triângulos](/figures/layout_food.png "Background Far Cry 3 Blodd Dragon")
 
+Explorando as formas e cores, lembrei um jogo paródia com essa temática, [Far Cry 3 - Blood Dragon](https://store.steampowered.com/app/233270/Far_Cry_3__Blood_Dragon/) que tem um background lindo:
+
 ![Área de habilidades com background com vários triângulos](/figures/layout_blood_dragon.png "Background Far Cry 3 Blodd Dragon")
+
+Levando em consideração que a página deve funcionar bem com o tema claro e o escuro, adicionei um blur e transparência na imagem de background

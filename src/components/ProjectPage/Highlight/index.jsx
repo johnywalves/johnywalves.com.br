@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
@@ -12,7 +13,6 @@ import {
   Cover,
   ImageCover,
   Content,
-  Label,
   Title,
   Description,
   Links,
@@ -20,6 +20,7 @@ import {
 } from "./styled"
 
 const Highlight = ({
+  revert,
   view,
   sourceCode,
   cover,
@@ -77,46 +78,60 @@ const Highlight = ({
   `)
   const getImage = (name) => images[name] || images.firemakebetter
 
+  const renderCover = (
+    <Cover>
+      <ImageCover
+        image={getImage(cover).childImageSharp.gatsbyImageData}
+        style={{ objectPosition: coverPosition || "top" }}
+        alt=""
+      />
+    </Cover>
+  )
+
+  const renderContent = (
+    <Content revert={revert}>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+      <Links>
+        <Link
+          href={view}
+          aria-label={cover}
+          negative
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button light>
+            <ExternalLink /> {Strings.visite}
+          </Button>
+        </Link>
+        <Link
+          href={sourceCode}
+          aria-label={cover}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button light>
+            <Github /> {Strings.sourceCode}
+          </Button>
+        </Link>
+      </Links>
+    </Content>
+  )
+
   return (
-    <Wrapper>
-      <Cover>
-        <ImageCover
-          image={getImage(cover).childImageSharp.gatsbyImageData}
-          style={{ objectPosition: coverPosition || "top" }}
-          alt=""
-        />
-      </Cover>
-      <Content>
-        <Label>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </Label>
-        <Links>
-          <Link
-            href={view}
-            aria-label={cover}
-            negative
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button light>
-              <ExternalLink /> {Strings.visite}
-            </Button>
-          </Link>
-          <Link
-            href={sourceCode}
-            aria-label={cover}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button light>
-              <Github /> {Strings.sourceCode}
-            </Button>
-          </Link>
-        </Links>
-      </Content>
+    <Wrapper revert={revert}>
+      {revert ? renderContent : renderCover}
+      {revert ? renderCover : renderContent}
     </Wrapper>
   )
+}
+
+Highlight.propTypes = {
+  revert: PropTypes.bool,
+}
+
+Highlight.defaultTypes = {
+  revert: false,
 }
 
 export default Highlight
