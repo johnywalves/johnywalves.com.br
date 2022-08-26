@@ -1,20 +1,18 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.div``
-
-export const LinksWrapper = styled.div`
+export const Wrapper = styled.li`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: var(--16px);
+  z-index: 2;
 `
 
 export const Link = styled.a`
   cursor: pointer;
   padding: var(--16px) var(--24px);
-  border-radius: 2px;
+  border-radius: var(--8px);
   background-color: var(--background-card);
   box-shadow: 0 0 8px 1px var(--shadowColors),
     4px 4px 8px 1px var(--shadowColors);
@@ -38,4 +36,5 @@ export const Title = styled.h3`
 
 export const Description = styled.p`
   color: var(--texts);
+  text-decoration-color: var(--texts);
 `

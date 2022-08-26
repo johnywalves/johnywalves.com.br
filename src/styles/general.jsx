@@ -54,7 +54,7 @@ const GeneralStyles = createGlobalStyle`
     --highlight-lighter: #ff6bfd;
     --highlight-lightest: #fdbafd;
     --highlight-semi: #e0138cd8;
-    --secondary: #6a5acd;
+    --secondary: #8857c3;
     --third: #44b5ef;
     --third-light: #9fd5fd;
     --white: #fff;
@@ -73,6 +73,10 @@ const GeneralStyles = createGlobalStyle`
     --background-card: #fafafa;
     --shadowColors: #0000003f;
   }  
+
+  body {
+    --padding-content: var(--24px) calc((100% - 1600px + 50px) / 2);
+  }
 
   body {
     background-color: var(--background);

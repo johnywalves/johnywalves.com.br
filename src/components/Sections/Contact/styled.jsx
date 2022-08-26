@@ -9,7 +9,8 @@ export const Wrapper = styled.section`
   flex-direction: row;
   justify-content: center;
 
-  background: url("/vectors/triwallTL.svg"), url("/vectors/triwallBR.svg");
+  background: url("/vectors/triangle-wall-top.svg"),
+    url("/vectors/triangle-wall-bottom.svg");
   background-color: var(--background);
   background-size: 30%;
   background-repeat: no-repeat;
@@ -86,6 +87,7 @@ export const BoxSide = styled.div`
   left: -100px;
   height: 100%;
   opacity: 0.85;
+  overflow: hidden;
 
   & > div {
     display: flex;
@@ -97,15 +99,15 @@ export const BoxSide = styled.div`
   }
 
   & div:nth-child(1) > svg {
-    transform: rotate(45deg) translateX(120px);
+    transform: translateX(120px) rotate(-45deg);
   }
 
   & div:nth-child(2) > svg {
-    transform: rotate(100deg);
+    transform: rotate(25deg);
   }
 
   & div:nth-child(3) > svg {
-    transform: rotate(15deg) translateX(60px);
+    transform: translateX(60px) rotate(-50deg);
   }
 `
 

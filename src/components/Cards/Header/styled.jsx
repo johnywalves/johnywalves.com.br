@@ -52,9 +52,19 @@ const titleSize = ({ small }) =>
         font-weight: 500;
       `
 
+const colorText = ({ light, dark }) => {
+  if (light) {
+    return "var(--highlight)"
+  }
+  if (dark) {
+    return "var(--texts)"
+  }
+  return "var(--white)"
+}
+
 export const Title = styled.h2`
   text-transform: uppercase;
-  color: ${({ light }) => (light ? "var(--highlight)" : "var(--white)")};
+  color: ${colorText};
 
   ${titleSize}
 `
@@ -73,7 +83,7 @@ const lineSize = ({ small }) =>
 export const Line = styled.div`
   width: 5rem;
   border-style: solid;
-  border-color: ${({ light }) => (light ? "var(--highlight)" : "var(--white)")};
+  border-color: ${colorText};
 
   ${lineSize}
 `

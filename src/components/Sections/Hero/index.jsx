@@ -8,9 +8,9 @@ import SocialLinks from "components/SocialLinks"
 import getPercentHero from "utils/getPercentHero"
 import useListener from "utils/useListener"
 
-import Triangle from "../Vectors/Triangle"
-import Arrow from "../Vectors/Arrow"
-import ArrowOutline from "../Vectors/ArrowOutline"
+import Triangle from "vectors/Triangle"
+import Arrow from "vectors/Arrow"
+import ArrowOutline from "vectors/ArrowOutline"
 
 import {
   BoxTop,

@@ -1,0 +1,81 @@
+<svg width="147" height="119.25" version="1.1" viewBox="0 0 147 119.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <mask id="mask1573" maskUnits="userSpaceOnUse">
+   <rect x="-.004357" y=".015797" width="147" height="119.25" fill="url(#linearGradient1577)" fill-rule="evenodd" stroke-width="0" style="paint-order:stroke markers fill"/>
+  </mask>
+  <linearGradient id="linearGradient1577" x1="-89.256" x2="49.008" y1="-122.95" y2="94.989" gradientTransform="matrix(.78985 0 0 .81544 13.698 7.626)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+   <stop offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <g transform="rotate(180 73.496 59.641)" fill-rule="evenodd" mask="url(#mask1573)">
+   <path transform="matrix(.33259 0 0 .31116 -17.836 2.0003)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 6.6961 2.0003)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 -5.5701 17.877)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 31.229 2.0003)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 18.962 17.877)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 55.761 2.0026)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 43.495 17.879)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 80.294 2.0026)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 68.028 17.879)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 104.83 2.0026)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 92.56 17.879)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 117.09 17.879)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 92.56 21.884)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 117.09 21.884)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 104.83 37.761)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 80.294 37.761)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 -5.5701 21.877)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 -17.836 37.754)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 18.962 21.877)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 6.6961 37.754)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 43.495 21.88)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 31.229 37.756)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 68.023 21.882)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 55.757 37.759)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 -17.934 41.753)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 6.5985 41.753)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 -5.6678 57.63)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 31.131 41.753)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 18.865 57.63)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 55.664 41.756)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 43.397 57.632)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 80.196 41.756)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 67.93 57.632)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 104.73 41.756)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 92.462 57.632)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 116.99 57.632)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 -17.934 81.507)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 6.5985 81.507)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 -5.6678 97.384)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 31.131 81.507)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 18.865 97.384)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 55.664 81.51)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 43.397 97.386)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 80.196 81.51)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 67.93 97.386)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 92.462 97.386)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 92.462 61.637)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 104.73 77.514)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 80.196 77.514)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 -5.6678 61.63)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 -17.934 77.507)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 18.865 61.63)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 6.5985 77.507)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 43.397 61.633)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 31.131 77.509)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 67.926 61.635)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 55.659 77.511)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 80.192 117.27)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 -5.6721 101.38)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 -17.938 117.26)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 18.86 101.38)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 6.5941 117.26)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 43.393 101.39)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 31.127 117.26)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 .31116 67.921 101.39)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
+   <path transform="matrix(.33259 0 0 -.31116 55.655 117.27)" d="m90.51 57.459-73.762-0.01515 36.894-63.872z" fill="#fdbafd" opacity=".5" style="paint-order:stroke markers fill"/>
+  </g>
+ </g>
+</svg>

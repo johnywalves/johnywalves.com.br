@@ -1,15 +1,15 @@
 <svg width="147" height="119.25" version="1.1" viewBox="0 0 147 119.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
-  <mask id="mask3438" maskUnits="userSpaceOnUse">
-   <rect x="-.004357" y=".015797" width="147" height="119.25" fill="url(#linearGradient3442)" fill-rule="evenodd" stroke-width="0" style="paint-order:stroke markers fill"/>
+  <mask id="mask1573" maskUnits="userSpaceOnUse">
+   <rect x="-.004357" y=".015797" width="147" height="119.25" fill="url(#linearGradient1577)" fill-rule="evenodd" stroke-width="0" style="paint-order:stroke markers fill"/>
   </mask>
-  <linearGradient id="linearGradient3442" x1="-26.865" x2="52.421" y1="-53.431" y2="100.34" gradientTransform="matrix(.78985 0 0 .81544 13.698 7.626)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient1577" x1="-89.256" x2="49.008" y1="-122.95" y2="94.989" gradientTransform="matrix(.78985 0 0 .81544 13.698 7.626)" gradientUnits="userSpaceOnUse">
    <stop stop-color="#fff" offset="0"/>
    <stop offset="1"/>
   </linearGradient>
  </defs>
  <g>
-  <g fill-rule="evenodd" mask="url(#mask3438)">
+  <g fill-rule="evenodd" mask="url(#mask1573)">
    <path transform="matrix(.33259 0 0 .31116 -17.836 2.0003)" d="m90.51 57.459-73.762-0.015154 36.894-63.872z" fill="#ff1ffd" opacity=".5" style="paint-order:stroke markers fill"/>
    <path transform="matrix(.33259 0 0 .31116 6.6961 2.0003)" d="m90.51 57.459-73.762-0.015154 36.894-63.872z" fill="#ff6bfd" opacity=".5" style="paint-order:stroke markers fill"/>
    <path transform="matrix(.33259 0 0 -.31116 -5.5701 17.877)" d="m90.51 57.459-73.762-0.015154 36.894-63.872z" fill="#ff89fd" opacity=".5" style="paint-order:stroke markers fill"/>

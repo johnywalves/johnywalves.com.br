@@ -5,6 +5,8 @@ const br = {
   aboutMe: "Sobre mim",
   seeMore: "Ver mais",
   seeLess: "Ver menos",
+  visite: "Visitar",
+  sourceCode: "Código fonte",
   resume: {
     title: "Currículo",
     files: [
@@ -230,8 +232,7 @@ const br = {
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
-        description:
-          "Históricas curtas escritas por mim, amigos e domínio público",
+        description: "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar",
       },
       {
         title: "Devflix",
@@ -248,6 +249,13 @@ const br = {
         view: "https://johnywalves.github.io/cssanimatic",
         description:
           "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
+      },
+      {
+        title: "Johny W. Alves",
+        sourceCode: "https://github.com/johnywalves/johnywalves.com.br",
+        cover: "thumbnail",
+        view: "https://johnywalves.com.br",
+        description: "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiêncas",
       },
       {
         title: "Register Switch",
@@ -274,24 +282,10 @@ const br = {
         description: "Compartilhamento de imagens com contexto",
       },
       {
-        title: "Navegação de mapa",
-        sourceCode: "https://github.com/johnywalves/wolt",
-        cover: "wolt",
-        view: "https://johnywalves.github.io/wolt/",
-        description: "Projeto para construção de visualização de mapas",
-      },
-      {
         title: "Comics Creator",
         view: "https://comics.johnywalves.com.br",
         cover: "comicscreator",
         description: "Ferramenta para geração de tirinhas em SVG",
-      },
-      {
-        title: "Biblioteca Steam",
-        sourceCode: "https://github.com/johnywalves/steamlibrary",
-        cover: "steamLibrary",
-        view: "https://johnywalves.github.io/steamlibrary/",
-        description: "Visualização de biblioteca de jogos Steam",
       },
       {
         title: "Fire Make Better",
@@ -300,6 +294,20 @@ const br = {
         view: "https://johnywalves.github.io/fire-make-better/",
         description:
           "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
+      },
+      {
+        title: "Navegação de mapa",
+        sourceCode: "https://github.com/johnywalves/wolt",
+        cover: "wolt",
+        view: "https://johnywalves.github.io/wolt/",
+        description: "Projeto para construção de visualização de mapas",
+      },
+      {
+        title: "Biblioteca Steam",
+        sourceCode: "https://github.com/johnywalves/steamlibrary",
+        cover: "steamLibrary",
+        view: "https://johnywalves.github.io/steamlibrary/",
+        description: "Visualização de biblioteca de jogos Steam",
       },
     ],
   },

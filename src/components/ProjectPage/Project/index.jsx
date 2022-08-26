@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Github } from "@styled-icons/fa-brands/Github"
 import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
 
@@ -6,7 +7,6 @@ import {
   Wrapper,
   Cover,
   ImageCover,
-  Content,
   Label,
   Title,
   Description,
@@ -31,25 +31,29 @@ const Project = ({
         alt=""
       />
     </Cover>
-    <Content>
-      <Label>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-      </Label>
-      <Links>
-        <Link href={view} aria-label={cover} target="_blank" rel="noreferrer">
-          <ExternalLink />
-        </Link>
-        <Link
-          href={sourceCode}
-          aria-label={cover}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Github />
-        </Link>
-      </Links>
-    </Content>
+    <Label>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+    </Label>
+    <Links>
+      <Link
+        href={view}
+        aria-label={cover}
+        negative
+        target="_blank"
+        rel="noreferrer"
+      >
+        <ExternalLink />
+      </Link>
+      <Link
+        href={sourceCode}
+        aria-label={cover}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Github />
+      </Link>
+    </Links>
   </Wrapper>
 )
 

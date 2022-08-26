@@ -6,9 +6,9 @@ import Strings from "components/strings"
 import SocialLinks from "components/SocialLinks"
 import { Header } from "components/Cards"
 
-import Arrow from "../Vectors/Arrow"
-import ArrowOutline from "../Vectors/ArrowOutline"
-import NeonTriange from "../Vectors/NeonTriange"
+import Arrow from "vectors/Arrow"
+import ArrowOutline from "vectors/ArrowOutline"
+import TriangleNeon from "vectors/TriangleNeon"
 
 import {
   Wrapper,
@@ -60,14 +60,14 @@ const SectionContact = () => {
       </Content>
 
       <BoxSide>
-        <Parallax translateY={[-120, 30]}>
-          <NeonTriange height="150" width="150" />
+        <Parallax translateY={[-50, 80]}>
+          <TriangleNeon height="150" width="150" />
         </Parallax>
         <Parallax translateY={[-100, 175]}>
-          <NeonTriange height="300" width="300" />
+          <TriangleNeon height="300" width="300" />
         </Parallax>
         <Parallax translateY={[-100, 350]}>
-          <NeonTriange height="200" width="200" />
+          <TriangleNeon height="200" width="200" />
         </Parallax>
       </BoxSide>
     </Wrapper>

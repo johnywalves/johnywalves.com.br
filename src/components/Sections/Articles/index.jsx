@@ -7,10 +7,10 @@ import Anilink from "gatsby-plugin-transition-link/AniLink"
 import Strings from "components/strings"
 import { Article, List } from "components/Cards"
 
-import { Wrapper, BoxShape, BoxShapeOutline } from "./styled"
+import Arrow from "vectors/Arrow"
+import ArrowOutline from "vectors/ArrowOutline"
 
-import Arrow from "../Vectors/Arrow"
-import ArrowOutline from "../Vectors/ArrowOutline"
+import { Wrapper, BoxShape, BoxShapeOutline } from "./styled"
 
 const SectionArticles = () => {
   const {

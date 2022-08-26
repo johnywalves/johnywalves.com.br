@@ -8,7 +8,8 @@ export const Wrapper = styled.section`
   width: 100%;
   padding: 45px 15px 80px;
 
-  background: url("/vectors/triwallTL.svg"), url("/vectors/triwallBR.svg");
+  background: url("/vectors/triangle-wall-top.svg"),
+    url("/vectors/triangle-wall-bottom.svg");
   background-color: var(--background);
   background-size: 30%;
   background-repeat: no-repeat;

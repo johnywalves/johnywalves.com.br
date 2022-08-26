@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url("/vectors/triwallTL.svg"),
+  background: url("/vectors/triangle-wall-top.svg"),
     linear-gradient(90deg, var(--background) 50%, var(--highlight) 50%);
   background-size: 20%, 100%;
   background-repeat: no-repeat;

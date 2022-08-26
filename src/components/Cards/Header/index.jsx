@@ -3,13 +3,13 @@ import PropTypes from "prop-types"
 
 import { Header, Title, Line } from "./styled"
 
-const CardHeader = ({ title, light, left, right, small, fit }) => {
+const CardHeader = ({ title, light, dark, left, right, small, fit }) => {
   return (
     <Header left={left} right={right} fit={fit}>
-      <Title light={light} small={small}>
+      <Title light={light} dark={dark} small={small}>
         {title}
       </Title>
-      <Line light={light} small={small} />
+      <Line light={light} dark={dark} small={small} />
     </Header>
   )
 }
@@ -17,6 +17,7 @@ const CardHeader = ({ title, light, left, right, small, fit }) => {
 CardHeader.propTypes = {
   title: PropTypes.string.isRequired,
   light: PropTypes.bool,
+  dark: PropTypes.bool,
   left: PropTypes.bool,
   right: PropTypes.bool,
   small: PropTypes.bool,
@@ -25,6 +26,7 @@ CardHeader.propTypes = {
 
 CardHeader.defaultTypes = {
   light: false,
+  dark: false,
   left: false,
   right: false,
   small: false,

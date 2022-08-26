@@ -6,11 +6,12 @@ export const Wrapper = styled.section`
   width: 100%;
   padding: 45px 25px;
   color: var(--texts);
-  background: url("/vectors/triwallBR.svg");
+  background: url("/vectors/triangle-neon.svg"),
+    url("/vectors/triangle-wall-bottom.svg");
   background-color: var(--background);
-  background-size: 30%;
+  background-size: 20%, 30%;
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: top left, bottom right;
 `
 
 export const Content = styled.div`

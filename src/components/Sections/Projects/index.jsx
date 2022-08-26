@@ -36,6 +36,9 @@ const SectionProjects = () => {
       steamLibrary: file(relativePath: { eq: "steamLibrary.png" }) {
         ...extractFieldsHome
       }
+      thumbnail: file(relativePath: { eq: "thumbnail.png" }) {
+        ...extractFieldsHome
+      }
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
         ...extractFieldsHome
       }
@@ -60,7 +63,7 @@ const SectionProjects = () => {
       <List
         title={Strings.projects.title}
         action={Strings.projects.viewAll}
-        url={"/projects"}
+        url={"/new/projects"}
       >
         {Strings.projects.list.slice(0, 3).map((project, index) => (
           <Project

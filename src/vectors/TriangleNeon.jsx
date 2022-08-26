@@ -1,6 +1,6 @@
 import React from "react"
 
-const NeonTriange = (props) => (
+const TriangleNeon = (props) => (
   <svg
     width="350"
     height="350"
@@ -115,4 +115,4 @@ const NeonTriange = (props) => (
   </svg>
 )
 
-export default NeonTriange
+export default TriangleNeon

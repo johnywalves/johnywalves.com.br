@@ -17,7 +17,7 @@ import Button from "components/Button"
 import Strings from "components/strings"
 import { Header } from "components/Cards"
 
-import Triangle from "../Vectors/Triangle"
+import Triangle from "vectors/Triangle"
 
 import {
   Wrapper,
@@ -302,6 +302,7 @@ const SectionExperience = () => {
           </AreaButton>
         </Area>
       </Content>
+
       <BoxShape>
         <Parallax speed={50} translateY={[-50, 50]}>
           <Triangle width="456" height="314" />
