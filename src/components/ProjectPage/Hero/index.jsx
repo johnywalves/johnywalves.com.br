@@ -1,22 +1,42 @@
 import React from "react"
-import { Parallax } from "react-scroll-parallax"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
 
-import { Wrapper, Cover, Content, Title, Description } from "./styled"
+import {
+  Wrapper,
+  Cover,
+  ImageCover,
+  Content,
+  Title,
+  Description,
+} from "./styled"
 
 const Hero = () => {
+  const { show } = useStaticQuery(graphql`
+    query {
+      show: file(relativePath: { eq: "profile_neon.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 600
+            height: 529
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+          )
+        }
+      }
+    }
+  `)
+
   return (
     <Wrapper>
-      <Parallax translateY={[-200, 100]}>
-        <Cover></Cover>
-      </Parallax>
-      <Parallax translateY={[-140, 100]}>
-        <Content>
-          <Title>{Strings.projects.title}</Title>
-          <Description>{Strings.projects.description}</Description>
-        </Content>
-      </Parallax>
+      <Content>
+        <Title>{Strings.projects.title}</Title>
+        <Description>{Strings.projects.description}</Description>
+      </Content>
+      <Cover>
+        <ImageCover image={show.childImageSharp.gatsbyImageData} />
+      </Cover>
     </Wrapper>
   )
 }

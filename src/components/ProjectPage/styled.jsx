@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const PageWrapper = styled.main`
   position: relative;
   width: 100%;
+  padding: 0 0 200px 0;
   background: url("/vectors/mountains.svg"),
     linear-gradient(180deg, #e352a83f 0%, #e352a800 10%);
   background-size: 100%;
@@ -17,12 +18,25 @@ export const BoxTop = styled.div`
   top: 0;
   height: 100%;
 
-  svg:nth-child(1) {
-    filter: blur(2px);
+  & div:nth-child(1) > svg {
+    filter: blur(1px);
+    transform: rotate(120deg);
   }
 
-  svg:nth-child(2) {
-    filter: blur(1px);
+  & div:nth-child(2) > svg {
+    filter: blur(2px);
+    transform: translateX(-60px) rotate(-45deg);
+  }
+`
+
+export const BoxRight = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  & div:nth-child(1) > svg {
+    transform: rotate(45deg);
   }
 `
 
@@ -35,6 +49,7 @@ export const BoxSide = styled.div`
 `
 
 export const Container = styled.section`
+  position: relative;
   padding: var(--36px) 0;
 `
 

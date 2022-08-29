@@ -27,34 +27,24 @@ const SectionHero = () => {
   const { show, react, down } = useStaticQuery(graphql`
     query {
       show: file(relativePath: { eq: "profile_show.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            height: 600
-            layout: CONSTRAINED
-            placeholder: TRACED_SVG
-          )
-        }
+        ...extractFieldsHero
       }
       react: file(relativePath: { eq: "profile_react.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            height: 600
-            layout: CONSTRAINED
-            placeholder: TRACED_SVG
-          )
-        }
+        ...extractFieldsHero
       }
       down: file(relativePath: { eq: "profile_down.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            height: 600
-            layout: CONSTRAINED
-            placeholder: TRACED_SVG
-          )
-        }
+        ...extractFieldsHero
+      }
+    }
+
+    fragment extractFieldsHero on File {
+      childImageSharp {
+        gatsbyImageData(
+          width: 800
+          height: 600
+          layout: CONSTRAINED
+          placeholder: TRACED_SVG
+        )
       }
     }
   `)

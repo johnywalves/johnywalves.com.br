@@ -1,11 +1,11 @@
 import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: var(--24px) 0;
+  position: relative;
+  display: grid;
+  padding-top: var(--36px);
+  grid-template-columns: 50% 50%;
   background: linear-gradient(
     90deg,
     transparent 50%,
@@ -15,32 +15,39 @@ export const Wrapper = styled.section`
 `
 
 export const Cover = styled.div`
-  height: 300px;
-  width: 600px;
-  margin: var(--36px) 0;
-  background-color: red;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
+  width: 100%;
+  height: 100%;
+  padding: var(--36px) 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+`
+
+export const ImageCover = styled(GatsbyImage)`
+  object-fit: contain;
 `
 
 export const Content = styled.div`
-  padding: var(--36px) 0;
+  padding: 0 var(--36px) 0 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
 `
 
 export const Title = styled.h1`
   color: var(--texts);
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
+  text-align: right;
   text-shadow: 0 0 1px var(--shadowColors), 2px 2px 1px var(--shadowColors);
 `
 
 export const Description = styled.p`
   color: var(--texts);
   font-size: 1.25rem;
+  text-align: right;
   text-shadow: 0 0 1px var(--shadowColors), 2px 2px 1px var(--shadowColors);
 `

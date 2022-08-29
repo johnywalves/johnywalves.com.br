@@ -14,6 +14,7 @@ import {
   PageWrapper,
   BoxTop,
   BoxSide,
+  BoxRight,
   Container,
   ContainerProject,
   List,
@@ -21,8 +22,6 @@ import {
   ListOnePage,
 } from "./styled"
 
-import Arrow from "../../vectors/Arrow"
-import ArrowOutline from "../../vectors/ArrowOutline"
 import TriangleNeon from "../../vectors/TriangleNeon"
 
 const ProjectPage = () => {
@@ -78,18 +77,24 @@ const ProjectPage = () => {
 
   return (
     <PageWrapper>
-      <BoxTop>
-        <Parallax translateY={[-30, 50]}>
-          <ArrowOutline height="400" width="400" />
+      <BoxRight>
+        <Parallax translateY={[-50, 150]}>
+          <TriangleNeon />
         </Parallax>
-        <Parallax translateY={[-150, 50]}>
-          <Arrow height="400" width="400" />
-        </Parallax>
-      </BoxTop>
+      </BoxRight>
 
       <Hero />
 
       <Container>
+        <BoxTop>
+          <Parallax translateY={[-30, 50]}>
+            <TriangleNeon height="400" width="400" />
+          </Parallax>
+          <Parallax translateY={[-150, 200]}>
+            <TriangleNeon height="250" width="250" />
+          </Parallax>
+        </BoxTop>
+
         {Strings.projects.list.slice(0, 1).map((project, index) => (
           <Highlight key={index} {...project} />
         ))}
