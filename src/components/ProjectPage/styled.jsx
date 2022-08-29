@@ -27,12 +27,11 @@ export const PageWrapper = styled.main`
   position: relative;
   width: 100%;
   padding: 0 0 200px 0;
-  background: url("/vectors/mountains.svg"),
-    linear-gradient(180deg, #e352a83f 0%, #e352a800 10%);
+  background: url("/vectors/mountains.svg");
   background-size: 100%;
   background-color: var(--background);
   background-repeat: no-repeat;
-  background-position: bottom center, top center;
+  background-position: bottom center;
 `
 
 export const BoxTop = styled.div`
@@ -56,7 +55,6 @@ export const BoxRight = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 2;
 
   & div:nth-child(1) > svg {
     transform: rotate(45deg);

@@ -42,7 +42,7 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h1`
-  color: var(--texts);
+  color: var(--white);
   font-weight: 400;
   text-align: center;
   display: flex;

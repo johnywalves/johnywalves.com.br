@@ -279,9 +279,9 @@ export const MenuWrapper = styled.label`
   cursor: pointer;
   z-index: 2;
 
-  @media (max-width: 980px) {
+  ${media.lessThan("large")`
     display: block;
-  }
+  `}
 `
 
 export const Hamburger = styled.span`

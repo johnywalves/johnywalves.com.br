@@ -107,7 +107,7 @@ const ProjectPage = () => {
         </List>
 
         <BoxRight>
-          <Parallax translateY={[-50, 150]}>
+          <Parallax translateY={[50, 200]}>
             <TriangleNeon />
           </Parallax>
         </BoxRight>

@@ -2,13 +2,13 @@ import React from "react"
 
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import Search from "components/Search"
+import SearchPage from "components/SearchPage"
 
-const SearchPage = () => (
+const Search = () => (
   <Blueprint content>
     <Seo title="Pesquisa" />
-    <Search />
+    <SearchPage />
   </Blueprint>
 )
 
-export default SearchPage
+export default Search
