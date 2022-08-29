@@ -19,6 +19,7 @@ const CardProject = ({ title, sourceCode, view, cover }) => {
             target="_target"
             rel="noreferrer noopener"
             aria-label={`Link to ${cover}`}
+            negative
           >
             <ExternalLink />
           </SourceCode>

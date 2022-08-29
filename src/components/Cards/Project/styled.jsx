@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Banner = styled.div`
   position: absolute;
@@ -37,23 +37,36 @@ export const Links = styled.div`
   gap: var(--8px);
 `
 
+const sourceCodeNegative = css`
+  border-radius: 50%;
+  background-color: var(--white);
+  background-clip: padding-box;
+
+  svg {
+    color: var(--highlight);
+    height: 80%;
+    width: 80%;
+  }
+`
+
 export const SourceCode = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
 
+  border: 0.25rem solid transparent;
+  height: 2.25rem;
+  width: 2.25rem;
+  transition: 0.25s ease-in-out;
+
   svg {
-    transition: 0.25s ease-in-out;
-    margin: 0.25rem;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 100%;
+    width: 100%;
   }
 
   &:hover {
-    svg {
-      margin: 0;
-      height: 2rem;
-      width: 2rem;
-    }
+    border-width: 0;
   }
+
+  ${({ negative }) => negative && sourceCodeNegative}
 `
