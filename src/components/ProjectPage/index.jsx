@@ -77,12 +77,6 @@ const ProjectPage = () => {
 
   return (
     <PageWrapper>
-      <BoxRight>
-        <Parallax translateY={[-50, 150]}>
-          <TriangleNeon />
-        </Parallax>
-      </BoxRight>
-
       <Hero />
 
       <Container>
@@ -111,6 +105,12 @@ const ProjectPage = () => {
             />
           ))}
         </List>
+
+        <BoxRight>
+          <Parallax translateY={[-50, 150]}>
+            <TriangleNeon />
+          </Parallax>
+        </BoxRight>
       </ContainerProject>
 
       <Container>

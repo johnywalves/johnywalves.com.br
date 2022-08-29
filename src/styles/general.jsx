@@ -72,14 +72,17 @@ const GeneralStyles = createGlobalStyle`
     --background: #f6f6f6;
     --background-card: #fafafa;
     --shadowColors: #0000003f;
-  }  
-
-  body {
-    --padding-content: var(--24px) calc((100% - 1600px + 50px) / 2);
   }
 
   body {
     background-color: var(--background);
+    --padding-content: var(--36px) calc((100% - 1600px + 50px) / 2);
+  }
+
+  @media (max-width: 1600px) {
+    body {
+      --padding-content: var(--24px);
+    }
   }
 `
 

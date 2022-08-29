@@ -1,23 +1,29 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
+import media from "styled-media-query"
+
+import { neonHighlight } from "../styled"
 
 export const Wrapper = styled.section`
   position: relative;
   display: grid;
-  padding-top: var(--36px);
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   background: linear-gradient(
     90deg,
     transparent 50%,
     var(--highlight-semi) 50%
   );
   overflow: hidden;
+
+  ${media.lessThan("large")`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const Cover = styled.div`
   width: 100%;
   height: 100%;
-  padding: var(--36px) 0 0;
+  padding: var(--64px) 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,20 +35,37 @@ export const ImageCover = styled(GatsbyImage)`
 `
 
 export const Content = styled.div`
-  padding: 0 var(--36px) 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 `
 
 export const Title = styled.h1`
   color: var(--texts);
-  font-size: 4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: right;
-  text-shadow: 0 0 1px var(--shadowColors), 2px 2px 1px var(--shadowColors);
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  transform: rotate(-5deg);
+
+  ${neonHighlight}
+
+  & span:nth-child(1) {
+    font-size: 10rem;
+    line-height: 90%;
+  }
+
+  & span:nth-child(2) {
+    font-size: 4rem;
+    line-height: 80%;
+  }
+
+  & span:nth-child(3) {
+    font-size: 5rem;
+    line-height: 90%;
+  }
 `
 
 export const Description = styled.p`

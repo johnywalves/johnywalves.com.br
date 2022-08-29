@@ -1,4 +1,27 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import media from "styled-media-query"
+
+export const neonHighlight = css`
+  text-shadow: 0 0 7px var(--highlight), 0 0 10px var(--highlight),
+    0 0 21px var(--highlight), 0 0 42px var(--highlight-light),
+    0 0 82px var(--highlight-light), 0 0 92px var(--highlight-light),
+    0 0 102px var(--highlight-light), 0 0 151px var(--highlight-light);
+`
+
+export const neonThird = css`
+  text-shadow: 0 0 7px var(--third), 0 0 10px var(--third),
+    0 0 21px var(--third), 0 0 42px var(--third-light),
+    0 0 82px var(--third-light), 0 0 92px var(--third-light),
+    0 0 102px var(--third-light), 0 0 151px var(--third-light);
+`
+
+export const lightHighlight = css`
+  box-shadow: 0 0 16px 4px var(--highlight-light);
+`
+
+export const lightThird = css`
+  box-shadow: 0 0 16px 4px var(--third-light);
+`
 
 export const PageWrapper = styled.main`
   position: relative;
@@ -50,38 +73,43 @@ export const BoxSide = styled.div`
 
 export const Container = styled.section`
   position: relative;
-  padding: var(--36px) 0;
+  padding: var(--padding-content);
 `
 
 export const ContainerProject = styled.section`
-  padding: var(--36px) 0;
+  padding: var(--padding-content);
   background-color: var(--highlight-semi);
 `
 
 export const List = styled.ul`
-  padding: var(--padding-content);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--48px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--36px);
+
+  ${media.lessThan("large")`
+    grid-template-columns: repeat(2, 1fr);
+  `}
 `
 
 export const ListOther = styled.ul`
-  padding: var(--padding-content);
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: var(--48px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--36px);
+
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 1150px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 
 export const ListOnePage = styled.ul`
-  padding: var(--padding-content);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: var(--24px);
+  gap: var(--36px);
 `

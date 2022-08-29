@@ -55,3 +55,7 @@ Explorando as formas e cores, lembrei um jogo paródia com essa temática, [Far 
 ![Área de habilidades com background com vários triângulos](/figures/layout_blood_dragon.png "Background Far Cry 3 Blodd Dragon")
 
 Levando em consideração que a página deve funcionar bem com o tema claro e o escuro, adicionei um blur e transparência na imagem de background
+
+Resgatando
+
+https://johnywalves.com.br/web/neonletters.html

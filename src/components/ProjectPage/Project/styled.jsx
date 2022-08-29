@@ -1,7 +1,10 @@
 import styled, { css } from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+import { lightThird } from "../styled"
+
 export const Wrapper = styled.li`
+  justify-self: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,8 +14,9 @@ export const Wrapper = styled.li`
   padding: 80px var(--16px) var(--16px);
   margin: 80px 0 0 0;
   color: var(--highlight);
-  box-shadow: 2px 2px 4px 1px var(--shadowColors);
   z-index: 2;
+
+  ${lightThird}
 
   background: url("/vectors/triangle-wall-top.svg");
   background-color: var(--background-card);
@@ -29,8 +33,8 @@ export const Cover = styled.div`
   width: 328px;
   border-radius: var(--8px);
   overflow: hidden;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
+
+  ${lightThird}
 `
 
 export const ImageCover = styled(GatsbyImage)`

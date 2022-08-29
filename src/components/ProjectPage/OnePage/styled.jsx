@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { lightHighlight } from "../styled"
+
 export const Wrapper = styled.li`
   display: flex;
   flex-direction: row;
@@ -14,8 +16,8 @@ export const Link = styled.a`
   padding: var(--16px) var(--24px);
   border-radius: var(--8px);
   background-color: var(--background-card);
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
+
+  ${lightHighlight}
 
   &,
   &:hover,

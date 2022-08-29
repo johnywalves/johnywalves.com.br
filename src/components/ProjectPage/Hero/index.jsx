@@ -3,14 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
 
-import {
-  Wrapper,
-  Cover,
-  ImageCover,
-  Content,
-  Title,
-  Description,
-} from "./styled"
+import { Wrapper, Cover, ImageCover, Content, Title } from "./styled"
 
 const Hero = () => {
   const { show } = useStaticQuery(graphql`
@@ -31,8 +24,11 @@ const Hero = () => {
   return (
     <Wrapper>
       <Content>
-        <Title>{Strings.projects.title}</Title>
-        <Description>{Strings.projects.description}</Description>
+        <Title>
+          {Strings.projects.title.split(" ").map((word) => (
+            <span key={word}>{word}</span>
+          ))}
+        </Title>
       </Content>
       <Cover>
         <ImageCover image={show.childImageSharp.gatsbyImageData} />

@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components"
 
+import { lightThird } from "../styled"
+
 export const Wrapper = styled.li`
+  justify-self: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,8 +14,9 @@ export const Wrapper = styled.li`
   border-radius: var(--8px);
   padding: var(--16px);
   color: var(--highlight);
-  box-shadow: 2px 2px 4px 1px var(--shadowColors);
   z-index: 2;
+
+  ${lightThird}
 
   background: url("/vectors/triangle-wall-top.svg");
   background-color: var(--background-card);

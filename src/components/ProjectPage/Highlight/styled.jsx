@@ -1,20 +1,21 @@
 import styled, { css } from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+import { lightHighlight } from "../styled"
+
 const formGrid = ({ revert }) => {
   if (revert) {
     return css`
-      grid-template-columns: calc(40% - var(--24px)) 65%;
+      grid-template-columns: 2fr 3fr;
     `
   }
 
   return css`
-    grid-template-columns: 65% calc(40% - var(--24px));
+    grid-template-columns: 3fr 2fr;
   `
 }
 
 export const Wrapper = styled.div`
-  padding: var(--padding-content);
   margin: var(--36px) 0;
   display: grid;
   gap: var(--24px);
@@ -34,8 +35,8 @@ export const ImageCover = styled(GatsbyImage)`
   object-fit: cover;
   object-position: top left;
   border-radius: 4px;
-  box-shadow: 0 0 4px 1px var(--shadowColors),
-    4px 4px 4px 1px var(--shadowColors);
+
+  ${lightHighlight}
 `
 
 const alignContent = ({ revert }) => {
@@ -70,6 +71,7 @@ export const Links = styled.div`
   justify-content: flex-end;
   margin: var(--16px) 0 0 0;
   gap: var(--16px);
+  flex-wrap: wrap;
 `
 
 export const Link = styled.a``
