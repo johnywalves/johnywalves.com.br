@@ -48,7 +48,7 @@ export const Title = styled.h1`
   display: flex;
   flex-direction: column;
   font-style: italic;
-  transform: rotate(-5deg);
+  transform: rotate(-6deg);
 
   ${neonHighlight}
 

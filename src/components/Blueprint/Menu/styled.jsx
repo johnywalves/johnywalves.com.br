@@ -54,8 +54,18 @@ export const Logo = styled(Anilink)`
 export const MenuTop = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: 15px;
+  justify-self: flex-end;
+  margin: 0 var(--24px) var(--16px) 0;
+  gap: var(--24px);
+
+  & li {
+    align-self: flex-end;
+
+    & a,
+    & span {
+      line-height: 90%;
+    }
+  }
 
   ${media.lessThan("large")`
     display: none;
@@ -63,9 +73,8 @@ export const MenuTop = styled.ul`
 `
 
 export const MenuTopLink = styled(Anilink)`
-  margin: 0 var(--14px);
-  font-weight: 400;
-  transition: 0.25s ease-in-out;
+  font-size: var(--16px);
+  font-weight: 900;
 
   &,
   &:hover,
@@ -73,10 +82,19 @@ export const MenuTopLink = styled(Anilink)`
     color: var(--white);
   }
 
-  &:hover {
-    margin: var(--2px);
-    font-weight: 900;
-    font-size: var(--24px);
+  & span {
+    transition: 0.25s ease-in-out;
+  }
+
+  &.active {
+    font-weight: 300;
+    cursor: default;
+  }
+
+  &:not(.active):hover {
+    & span {
+      font-size: var(--24px);
+    }
   }
 `
 

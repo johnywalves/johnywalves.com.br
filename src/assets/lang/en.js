@@ -566,7 +566,7 @@ const en = {
   menuLinks: [
     {
       label: "johny",
-      url: "/new",
+      url: "/new/",
     },
     {
       label: "articles",

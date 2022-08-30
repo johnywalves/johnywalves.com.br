@@ -1,83 +1,75 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "styled-media-query"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const ArticleItemLink = styled(Anilink)`
-  color: var(--texts);
   display: flex;
   text-decoration: none;
   border-bottom: 1px solid var(--shadowColors);
+
+  &,
+  &:visited {
+    color: var(--texts);
+  }
 
   &:hover {
     color: var(--highlight);
   }
 `
 
-export const ArticleItemWrapper = styled.section`
+export const ArticleItemWrapper = styled.article`
   align-items: center;
-  border-bottom: 1px solid var(--borders);
   display: flex;
-  padding: 2rem 3rem;
+  padding: var(--32px);
+  gap: var(--24px);
   width: 100%;
 
   ${media.lessThan("medium")`
     align-items: flex-start;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: var(--32px) var(--16px);
+    gap: 0;
+  `}
+`
+
+const imageFormat = css`
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  color: var(--background);
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 700;
+  justify-content: center;
+  height: 120px;
+  width: 120px;
+  background-position: center;
+
+  ${media.lessThan("medium")`
+    display: none;
+    border-radius: 0;
+    font-size: 1rem;
+    min-height: auto;
+    min-width: auto;
+    padding: .2rem .5rem;
+    margin-bottom: .7rem;
   `}
 `
 
 export const ArticleItemImageFeatured = styled(GatsbyImage)`
-  align-items: center;
-  border-radius: 50%;
-  color: var(--background);
-  display: flex;
-  font-size: 1.3rem;
-  font-weight: 700;
-  justify-content: center;
-  height: 120px;
-  width: 120px;
-  background-position: center;
-
-  ${media.lessThan("medium")`
-    display: none;
-    border-radius: 0;
-    font-size: 1rem;
-    min-height: auto;
-    min-width: auto;
-    padding: .2rem .5rem;
-    margin-bottom: .7rem;
-  `}
+  ${imageFormat}
 `
 
 export const ArticleItemCoverImage = styled.div`
-  align-items: center;
-  border-radius: 50%;
-  color: var(--background);
-  display: flex;
-  font-size: 1.3rem;
-  font-weight: 700;
-  justify-content: center;
-  height: 120px;
-  width: 120px;
-  background-position: center;
-
-  ${media.lessThan("medium")`
-    display: none;
-    border-radius: 0;
-    font-size: 1rem;
-    min-height: auto;
-    min-width: auto;
-    padding: .2rem .5rem;
-    margin-bottom: .7rem;
-  `}
+  ${imageFormat}
 `
 
 export const ArticleItemTag = styled.div`
   align-items: center;
-  background-color: ${(props) =>
-    props.background ? props.background : "var(--highlight)"};
+  background-color: ${({ background }) =>
+    background ? background : "var(--highlight)"};
   border-radius: 50%;
   color: var(--background);
   display: flex;
@@ -91,7 +83,6 @@ export const ArticleItemTag = styled.div`
 export const ArticleItemInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
 
   ${media.lessThan("medium")`
     margin: 0;
@@ -111,11 +102,11 @@ export const ArticleItemTitle = styled.h1`
 export const ArticleItemDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 120%;
 `
 
 export const ArticleItemTags = styled.div`
-  margin: 0.5rem 0;
+  margin: var(--8px) 0;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

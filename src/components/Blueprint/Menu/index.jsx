@@ -80,7 +80,7 @@ const Menu = ({ hero }) => {
           direction="left"
           bg="var(--background)"
           duration={0.6}
-          to={"/new"}
+          to={"/new/"}
           activeClassName="active"
         >
           {"{JWA}"}
@@ -97,8 +97,7 @@ const Menu = ({ hero }) => {
                   to={url}
                   activeClassName="active"
                 >
-                  {label}
-                  <span>.</span>
+                  <span>{label}</span>.
                 </MenuTopLink>
               </li>
             ))}
