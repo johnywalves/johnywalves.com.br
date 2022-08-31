@@ -5,7 +5,7 @@ export const LogoWrapper = styled(Anilink)`
   font-size: var(--36px);
   font-weight: 900;
   transition: 0.5s ease-in-out;
-  text-shadow: 1px 1px var(--shadowColors);
+  text-shadow: 1px 1px var(--shadow-colors);
 
   &,
   &:hover,

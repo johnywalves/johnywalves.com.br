@@ -58,7 +58,7 @@ export const Type = styled.li`
   }
 
   &:hover {
-    color: var(--shadowColors);
+    color: var(--shadow-colors);
   }
 
   ${({ selected }) => selected && selectedType}
@@ -117,7 +117,7 @@ export const Skill = styled.li`
   margin: 15px 10px;
 
   & p {
-    text-shadow: 2px 2px 1px var(--shadowColors);
+    text-shadow: 2px 2px 1px var(--shadow-colors);
     text-align: center;
   }
 
@@ -126,8 +126,8 @@ export const Skill = styled.li`
   }
 
   & svg {
-    filter: drop-shadow(0 0 1px var(--shadowColors))
-      drop-shadow(2px 2px 1px var(--shadowColors));
+    filter: drop-shadow(0 0 1px var(--shadow-colors))
+      drop-shadow(2px 2px 1px var(--shadow-colors));
   }
 `
 
@@ -279,7 +279,7 @@ const WrapperAccomplishment = styled.li`
     left: 16px;
     top: 0;
     display: block;
-    border-left: 4px solid var(--shadowColors);
+    border-left: 4px solid var(--shadow-colors);
   }
 
   &:first-child::before {
@@ -309,7 +309,7 @@ const WrapperAccomplishment = styled.li`
 
   &:hover {
     &::after {
-      border-color: var(--shadowColors);
+      border-color: var(--shadow-colors);
     }
   }
 
@@ -325,13 +325,13 @@ const ContentAccomplishment = styled.div`
   border-radius: var(--14px);
 
   transition: 0.5s ease-in-out;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
+  box-shadow: 0 0 8px 1px var(--shadow-colors),
+    4px 4px 8px 1px var(--shadow-colors);
 
   ${WrapperAccomplishment}:hover & {
     transform: translateY(-2px);
-    box-shadow: 0 0 16px 2px var(--shadowColors),
-      8px 8px 16px 2px var(--shadowColors);
+    box-shadow: 0 0 16px 2px var(--shadow-colors),
+      8px 8px 16px 2px var(--shadow-colors);
   }
 `
 

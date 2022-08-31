@@ -6,8 +6,8 @@ const styleFocusable = css`
   transform: scale(0.8);
 
   &:hover {
-    box-shadow: 0 0 16px 2px var(--shadowColors),
-      16px 16px 32px 4px var(--shadowColors);
+    box-shadow: 0 0 16px 2px var(--shadow-colors),
+      16px 16px 32px 4px var(--shadow-colors);
     transform: scale(1);
 
     & img {
@@ -21,8 +21,8 @@ export const CardWrapper = styled.li`
   position: relative;
   transition: 0.5s ease-in-out;
   border-radius: 25px;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
+  box-shadow: 0 0 8px 1px var(--shadow-colors),
+    4px 4px 8px 1px var(--shadow-colors);
   overflow: hidden;
 
   & img {

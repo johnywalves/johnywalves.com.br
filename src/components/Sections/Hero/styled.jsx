@@ -84,8 +84,8 @@ export const ImageBox = styled(Container)`
   transform: translateX(-50%);
   transition: opacity 0.2s;
   z-index: 3;
-  filter: drop-shadow(0 0 2px var(--shadowColors))
-    drop-shadow(4px 4px 4px var(--shadowColors));
+  filter: drop-shadow(0 0 2px var(--shadow-colors))
+    drop-shadow(4px 4px 4px var(--shadow-colors));
 `
 
 export const ImageCover = styled(GatsbyImage)`

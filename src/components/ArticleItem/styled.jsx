@@ -6,7 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export const ArticleItemLink = styled(Anilink)`
   display: flex;
   text-decoration: none;
-  border-bottom: 1px solid var(--shadowColors);
+  border-bottom: 1px solid var(--shadow-colors);
 
   &,
   &:visited {
@@ -35,6 +35,7 @@ export const ArticleItemWrapper = styled.article`
 
 const imageFormat = css`
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 
   border-radius: 50%;
@@ -42,10 +43,11 @@ const imageFormat = css`
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
-  justify-content: center;
   height: 120px;
   width: 120px;
   background-position: center;
+  box-shadow: 0 0 4px 1px var(--shadow-colors),
+    2px 2px 4px 1px var(--shadow-colors);
 
   ${media.lessThan("medium")`
     display: none;

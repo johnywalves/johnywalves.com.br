@@ -12,7 +12,7 @@ export const Content = styled.div`
   flex-direction: column;
   color: var(--highlight);
   background-color: var(--background-card);
-  box-shadow: 0 -2px 8px var(--shadowColors);
+  box-shadow: 0 -2px 8px var(--shadow-colors);
 `
 
 export const Header = styled.div`

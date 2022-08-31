@@ -64,6 +64,7 @@ const GeneralStyles = createGlobalStyle`
     --texts: #f8f8f8;
     --background: #222;
     --background-card: #303030;
+    --shadow-colors: #ffffff88;
     --shadowColors: #ffffff88;
   }
 
@@ -71,6 +72,7 @@ const GeneralStyles = createGlobalStyle`
     --texts: #333;
     --background: #f6f6f6;
     --background-card: #fafafa;
+    --shadow-colors: #0000003f;
     --shadowColors: #0000003f;
   }
 

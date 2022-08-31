@@ -69,5 +69,5 @@ export const Description = styled.p`
   color: var(--texts);
   font-size: 1.25rem;
   text-align: right;
-  text-shadow: 0 0 1px var(--shadowColors), 2px 2px 1px var(--shadowColors);
+  text-shadow: 0 0 1px var(--shadow-colors), 2px 2px 1px var(--shadow-colors);
 `

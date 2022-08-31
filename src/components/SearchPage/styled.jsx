@@ -40,7 +40,7 @@ export const SearchWrapper = styled.section`
   .ais-SearchBox-input {
     background: none;
     border: none;
-    border-bottom: 1px solid var(--shadowColors);
+    border-bottom: 1px solid var(--shadow-colors);
     color: var(--texts);
     display: flex;
     font-size: 1.6rem;
