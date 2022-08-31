@@ -2,7 +2,6 @@ import React from "react"
 import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 import Strings from "components/strings"
 import { Article, List } from "components/Cards"
@@ -62,32 +61,25 @@ const SectionArticles = () => {
         url="/blog"
       >
         {edges.map(({ node }) => (
-          <Anilink
+          <Article
             key={node.fields.slug}
             to={node.fields.slug}
-            cover
-            direction="left"
-            bg="var(--background)"
-            duration={0.6}
-          >
-            <Article
-              category={node.frontmatter.category}
-              subtitle={node.frontmatter.date}
-              title={node.frontmatter.title}
-              description={node.frontmatter.description}
-              cover={
-                node.frontmatter.featuredImage && (
-                  <GatsbyImage
-                    image={
-                      node.frontmatter.featuredImage.childImageSharp
-                        .gatsbyImageData
-                    }
-                    alt={node.frontmatter.title}
-                  />
-                )
-              }
-            />
-          </Anilink>
+            category={node.frontmatter.category}
+            subtitle={node.frontmatter.date}
+            title={node.frontmatter.title}
+            description={node.frontmatter.description}
+            cover={
+              node.frontmatter.featuredImage && (
+                <GatsbyImage
+                  image={
+                    node.frontmatter.featuredImage.childImageSharp
+                      .gatsbyImageData
+                  }
+                  alt={node.frontmatter.title}
+                />
+              )
+            }
+          />
         ))}
       </List>
       <BoxShapeOutline>

@@ -14,8 +14,8 @@ const br = {
       { name: "VERSÃO IMPRESSÃO", file: "/docs/cv_johnywalves_pt_g.pdf" },
     ]
   },
-  status: "Brasileiro, Solteiro, 35 anos",
-  live: "Sao José do Rio Preto, São Paulo, Brasil",
+  status: "Brasileiro, Solteiro, 36 anos",
+  live: "São José do Rio Preto, São Paulo, Brasil",
   contact: {
     title: "Contatos",
     description: "Você pode me encontrar nas redes sociais",

@@ -47,19 +47,19 @@ const SectionAbout = () => {
             <Header title={Strings.resume.title} light left small fit />
           </li>
           {Strings.resume.files.map(({ name, file }, index) => (
-            <a
-              key={index}
-              href={file}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Download ${name}`}
-            >
-              <Resume>
+            <Resume>
+              <a
+                key={index}
+                href={file}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Download ${name}`}
+              >
                 <Button light secondary={index !== 0}>
                   <FileDownload /> {name}
                 </Button>
-              </Resume>
-            </a>
+              </a>
+            </Resume>
           ))}
         </Resumes>
       </Content>

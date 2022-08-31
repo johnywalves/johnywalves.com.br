@@ -66,27 +66,31 @@ const SectionComics = () => {
           url="/comics"
           light
         >
-          <Link
-            to={node.fields.slug}
-            cover
-            direction="left"
-            bg="var(--background)"
-            duration={0.6}
-            aria-label="Last Comics"
-          >
-            <Header>
-              <h3>{node.frontmatter.title}</h3>
-              <small>{node.frontmatter.date}</small>
-            </Header>
-            <Image
-              image={
-                (node.frontmatter.featuredImage || node.frontmatter.comicImage)
-                  .childImageSharp.gatsbyImageData
-              }
-              title={node.frontmatter.transcription}
-              alt=""
-            />
-          </Link>
+          <li>
+            <Link
+              to={node.fields.slug}
+              cover
+              direction="left"
+              bg="var(--background)"
+              duration={0.6}
+              aria-label="Last Comics"
+            >
+              <Header>
+                <h3>{node.frontmatter.title}</h3>
+                <small>{node.frontmatter.date}</small>
+              </Header>
+              <Image
+                image={
+                  (
+                    node.frontmatter.featuredImage ||
+                    node.frontmatter.comicImage
+                  ).childImageSharp.gatsbyImageData
+                }
+                title={node.frontmatter.transcription}
+                alt=""
+              />
+            </Link>
+          </li>
         </List>
       ))}
     </Wrapper>

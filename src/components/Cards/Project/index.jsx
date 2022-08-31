@@ -8,7 +8,7 @@ import Wrapper from "../Wrapper"
 
 import { Banner, Title, Links, SourceCode } from "./styled"
 
-const CardProject = ({ title, sourceCode, view, cover }) => {
+const Project = ({ title, sourceCode, view, cover }) => {
   return (
     <Wrapper cover={cover}>
       <Banner>
@@ -37,9 +37,9 @@ const CardProject = ({ title, sourceCode, view, cover }) => {
   )
 }
 
-CardProject.propTypes = {
+Project.propTypes = {
   cover: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
 }
 
-export default CardProject
+export default Project

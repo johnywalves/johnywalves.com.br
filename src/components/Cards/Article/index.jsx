@@ -12,7 +12,7 @@ import {
   Description,
 } from "./styled"
 
-const CardArticle = ({ cover, category, subtitle, title, description }) => {
+const Article = ({ cover, category, subtitle, title, description }) => {
   return (
     <Wrapper cover={cover} article>
       <Content>
@@ -27,7 +27,7 @@ const CardArticle = ({ cover, category, subtitle, title, description }) => {
   )
 }
 
-CardArticle.propTypes = {
+Article.propTypes = {
   cover: PropTypes.node.isRequired,
   category: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
@@ -35,4 +35,4 @@ CardArticle.propTypes = {
   description: PropTypes.string.isRequired,
 }
 
-export default CardArticle
+export default Article

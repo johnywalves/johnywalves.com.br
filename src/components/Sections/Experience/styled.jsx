@@ -164,7 +164,7 @@ export const Area = styled.ul`
   ${({ selected }) => selected && selectedArea}
 `
 
-export const AreaButton = styled.div`
+export const AreaButton = styled.li`
   padding: var(--16px) 0 0;
   display: flex;
   justify-content: center;
@@ -176,11 +176,11 @@ export const AreaButton = styled.div`
 
 export const DateText = styled.p`
   padding: 0 0 var(--8px);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--highlight);
 `
 
-export const Title = styled.h4`
+export const Title = styled.h3`
   font-size: 1.1rem;
   color: var(--highlight);
 `

@@ -17,7 +17,7 @@ const styleFocusable = css`
   }
 `
 
-export const Wrapper = styled.li`
+export const CardWrapper = styled.li`
   position: relative;
   transition: 0.5s ease-in-out;
   border-radius: 25px;
@@ -32,7 +32,7 @@ export const Wrapper = styled.li`
   ${styleFocusable}
 `
 
-export const Cover = styled.div`
+export const CardCover = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;

@@ -1,25 +1,44 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-import { Wrapper, Cover } from "./styled"
+import { CardWrapper, CardCover } from "./styled"
 
-const CardWrapper = ({ cover, children, article }) => {
+const Wrapper = ({ cover, children, article, to }) => {
+  if (to) {
+    return (
+      <CardWrapper article={article}>
+        <Anilink
+          to={to}
+          direction="left"
+          bg="var(--background)"
+          duration={0.6}
+          cover
+        >
+          <CardCover>{cover}</CardCover>
+          {children}
+        </Anilink>
+      </CardWrapper>
+    )
+  }
+
   return (
-    <Wrapper article={article}>
-      <Cover>{cover}</Cover>
+    <CardWrapper article={article}>
+      <CardCover>{cover}</CardCover>
       {children}
-    </Wrapper>
+    </CardWrapper>
   )
 }
 
-CardWrapper.propTypes = {
+Wrapper.propTypes = {
   cover: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired,
   article: PropTypes.bool,
 }
 
-CardWrapper.defaultProps = {
+Wrapper.defaultProps = {
   article: false,
 }
 
-export default CardWrapper
+export default Wrapper

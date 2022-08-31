@@ -35,6 +35,7 @@ export const ImageCover = styled(GatsbyImage)`
 `
 
 export const Content = styled.div`
+  justify-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;

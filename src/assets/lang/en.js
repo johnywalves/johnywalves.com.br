@@ -14,7 +14,7 @@ const en = {
       { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" },
     ]
   },
-  status: "Brazilian, Single, 35 years old",
+  status: "Brazilian, Single, 36 years old",
   live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
   contact: {
     title: "Contacts",

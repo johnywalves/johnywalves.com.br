@@ -30,7 +30,7 @@ const widthFit = css`
   width: fit-content;
 `
 
-export const Header = styled.div`
+export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -62,7 +62,7 @@ const colorText = ({ light, dark }) => {
   return "var(--white)"
 }
 
-export const Title = styled.h2`
+export const HeaderTitle = styled.h2`
   text-transform: uppercase;
   color: ${colorText};
 
@@ -80,7 +80,7 @@ const lineSize = ({ small }) =>
         border-width: 2px;
       `
 
-export const Line = styled.div`
+export const HeaderLine = styled.div`
   width: 5rem;
   border-style: solid;
   border-color: ${colorText};

@@ -12,7 +12,7 @@ import ArrowsLeft from "./icons/ArrowsLeft"
 import ArrowLeft from "./icons/ArrowLeft"
 import { Wrapper, Content, NavigationWrapper, Icon, Navigation } from "./styled"
 
-const CardList = ({ children, title, action, url, light, number }) => {
+const List = ({ children, title, action, url, light, number }) => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -126,7 +126,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
   )
 }
 
-CardList.propTypes = {
+List.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   action: PropTypes.string.isRequired,
@@ -135,8 +135,8 @@ CardList.propTypes = {
   number: PropTypes.number,
 }
 
-CardList.propTypes = {
+List.propTypes = {
   light: false,
 }
 
-export default CardList
+export default List
