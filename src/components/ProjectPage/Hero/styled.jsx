@@ -8,11 +8,7 @@ export const Wrapper = styled.section`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: linear-gradient(
-    90deg,
-    transparent 50%,
-    var(--highlight-semi) 50%
-  );
+  background: linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
   overflow: hidden;
 
   ${media.lessThan("large")`

@@ -42,7 +42,6 @@ export const Info = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 0 250px;
 `
 
 export const Description = styled.p`
@@ -61,9 +60,6 @@ export const SocialWrapper = styled.div`
 `
 
 export const Box = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;

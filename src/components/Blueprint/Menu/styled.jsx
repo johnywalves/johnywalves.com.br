@@ -4,7 +4,7 @@ import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-export const Wrapper = styled.div`
+export const HeaderWrapper = styled.header`
   z-index: 10;
 `
 
@@ -35,19 +35,6 @@ export const MenuBar = styled.nav`
     & a:visited {
       color: var(--white) !important;
     }
-  }
-`
-
-export const Logo = styled(Anilink)`
-  font-size: var(--36px);
-  font-weight: 900;
-  transition: 0.5s ease-in-out;
-  text-shadow: 1px 1px var(--shadowColors);
-
-  &,
-  &:hover,
-  &:visited {
-    color: var(--highlight);
   }
 `
 

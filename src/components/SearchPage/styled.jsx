@@ -9,6 +9,13 @@ export const SearchWrapper = styled.section`
   transition: opacity 0.4s;
   padding: var(--padding-content);
 
+  background: url("/vectors/triangle-wall-top.svg"),
+    url("/vectors/triangle-wall-bottom.svg");
+  background-color: var(--background);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+
   .ais-InstantSearch__root {
     display: flex;
     flex-direction: column;

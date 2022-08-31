@@ -5,12 +5,12 @@ import PropTypes from "prop-types"
 import getPercentHero from "utils/getPercentHero"
 import useListener from "utils/useListener"
 
-import strings from "components/strings"
+import Strings from "components/strings"
 
+import Logo from "../Logo"
 import {
-  Wrapper,
+  HeaderWrapper,
   MenuBar,
-  Logo,
   MenuTop,
   MenuTopLink,
   ThemeColorWrapper,
@@ -72,22 +72,13 @@ const Menu = ({ hero }) => {
   useListener("scroll", scrollMove, hero ? 10 : -1)
 
   return (
-    <Wrapper>
+    <HeaderWrapper>
       <MenuCheck id="menu-hamburger" type="checkbox" />
       <MenuBar className={classMenuBar}>
-        <Logo
-          cover
-          direction="left"
-          bg="var(--background)"
-          duration={0.6}
-          to={"/new/"}
-          activeClassName="active"
-        >
-          {"{JWA}"}
-        </Logo>
+        <Logo />
         <div>
           <MenuTop>
-            {strings.menuLinks.map(({ label, url }) => (
+            {Strings.menuLinks.map(({ label, url }) => (
               <li key={label}>
                 <MenuTopLink
                   cover
@@ -121,7 +112,7 @@ const Menu = ({ hero }) => {
       <MenuBox>
         <MenuBackground image={jellyfish.childImageSharp.gatsbyImageData} />
         <MenuLinks>
-          {strings.menuLinks.map(({ label, url }) => (
+          {Strings.menuLinks.map(({ label, url }) => (
             <li key={label}>
               <MenuLinksLink
                 cover
@@ -138,7 +129,7 @@ const Menu = ({ hero }) => {
           ))}
         </MenuLinks>
       </MenuBox>
-    </Wrapper>
+    </HeaderWrapper>
   )
 }
 

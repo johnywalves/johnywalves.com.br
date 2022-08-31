@@ -76,7 +76,7 @@ export const Container = styled.section`
 
 export const ContainerProject = styled.section`
   padding: var(--padding-content);
-  background-color: var(--highlight-semi);
+  background-color: var(--highlight);
 `
 
 export const List = styled.ul`

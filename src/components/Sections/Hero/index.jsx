@@ -3,7 +3,7 @@ import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import SocialLinks from "components/SocialLinks"
+import MenuSocial from "components/MenuSocial"
 
 import getPercentHero from "utils/getPercentHero"
 import useListener from "utils/useListener"
@@ -106,7 +106,7 @@ const SectionHero = () => {
       </ImageBox>
 
       <WrapperSocial>
-        <SocialLinks vertical />
+        <MenuSocial vertical />
       </WrapperSocial>
     </Wrapper>
   )
