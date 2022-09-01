@@ -34,6 +34,7 @@ export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  z-index: 2;
 
   ${({ fit }) => (fit ? widthFit : widthFull)};
   ${alignText}

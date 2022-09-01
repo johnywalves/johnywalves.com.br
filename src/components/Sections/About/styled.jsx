@@ -9,7 +9,11 @@ export const Wrapper = styled.section`
   position: relative;
   width: 100%;
   color: var(--texts);
+  background: url("/vectors/triangle-neon-right.svg");
   background-color: var(--background);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: top right;
 `
 
 export const Content = styled.div`

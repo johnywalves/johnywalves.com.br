@@ -5,6 +5,7 @@ export const SearchWrapper = styled.section`
   background: var(--background);
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 80px);
   width: 100%;
   transition: opacity 0.4s;
   padding: var(--padding-content);

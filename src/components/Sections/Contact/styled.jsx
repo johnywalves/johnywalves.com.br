@@ -49,9 +49,12 @@ export const Description = styled.p`
   font-size: 1.125rem;
   margin: 15px 0;
   line-height: 150%;
+  z-index: 2;
 `
 
 export const SocialWrapper = styled.div`
+  z-index: 2;
+
   a,
   a:hover,
   a:visited {
