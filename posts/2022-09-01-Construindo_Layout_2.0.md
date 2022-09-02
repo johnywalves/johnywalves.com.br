@@ -34,7 +34,7 @@ Ele também recomendou o uso de Parallax para as formas, resolvida pelo o uso da
 
 Citado pelo Josh, a ideia de trazer uma coisa criativa para perfil e trabalhando com o parallax fiz a animação para o scroll descendo, com fotos minhas reagindo
 
-Para produzir os grafismos usei conhecimento prévio sobre o Inkscape, conquistado na produção das tirinhas, e vários tutorias do [LogosByNick no Youtube](https://www.youtube.com/c/LogosByNick)
+Para produzir os grafismos usei conhecimento prévio sobre o Inkscape, conquistado na produção das tirinhas, e vários tutorias do [Logos By Nick no Youtube](https://www.youtube.com/c/LogosByNick)
 
 ![Software Inkscape com o um vetor de triângulo aberto](/figures/layout_inkscape.png "Criando no Inkscape")
 
@@ -46,16 +46,20 @@ Apaixonado pelo triângulo e as escolhas de cores <span style="background-color:
 
 ### Projetos
 
-Buscando algumas referências encontrei no [Behance do Achraf El Gassab](https://www.behance.net/gallery/109550375/foodly-food-web-page) uma organização deliciosa:
+Buscando algumas referências encontrei no [Behance do Achraf El Gassab](https://www.behance.net/gallery/109550375/foodly-food-web-page) uma pagina de serviço de comida, com uma organização deliciosa (piada intencional):
 
-![Área de habilidades com background com vários triângulos](/figures/layout_food.png "Background Far Cry 3 Blodd Dragon")
+![Imagem com vários pratos com fundo com efeito de vidro semi-transparente](/figures/layout_food.png "Layout do site de receita")
 
-Explorando as formas e cores, lembrei um jogo paródia com essa temática, [Far Cry 3 - Blood Dragon](https://store.steampowered.com/app/233270/Far_Cry_3__Blood_Dragon/) que tem um background lindo:
+Colocando os projetos organizados como um maneira semelhante, infelizmente as páginas fazer mais sentido representadas como retângulos e não formas divertidas, o desfoque (blur) é lindo também, anotar para um futuro uso 😉
 
-![Área de habilidades com background com vários triângulos](/figures/layout_blood_dragon.png "Background Far Cry 3 Blodd Dragon")
+Explorando as formas e cores, lembrei um jogo paródia com essa temática, o [Far Cry 3 - Blood Dragon](https://store.steampowered.com/app/233270/Far_Cry_3__Blood_Dragon/) que tem um background lindo, essa beleza aqui
 
-Levando em consideração que a página deve funcionar bem com o tema claro e o escuro, adicionei um blur e transparência na imagem de background
+![Área de habilidades com background com vários triângulos](/figures/layout_blood_dragon.png "Background Far Cry 3 Blood Dragon")
 
-Resgatando
+Levando em consideração que a página deve funcionar bem com o tema claro e o escuro, adicionei um desfoque e transparência na imagem de fundo
 
-https://johnywalves.com.br/web/neonletters.html
+![Horizonte em neon com montanhas ao fundo](/figures/layout_horizont.png "Fundo da página no tema claro e escuro")
+
+Resgatando a experiência [Neon Letters](/web/neonletters.html), para criar um letreiro neon fazendo uma composição de texto branco e várias sombras, no fundo ficou um pouco vazio, voltando ao [Logos By Nick](https://www.youtube.com/c/LogosByNick) encontrei entre os tutoriais como fazer uma séries de linhas com efeitos de fluídos com uso de lápis ondulado com alta suavição e interpolação de caminhos, que harmonizou demais como letreiro
+
+![Luminária com várias linhas no fundo com efeitos de fluidos](/figures/layout_letters.png "Letreiro neon com fundo de fluídos")

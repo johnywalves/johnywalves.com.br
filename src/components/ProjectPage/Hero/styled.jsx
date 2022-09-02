@@ -8,8 +8,14 @@ export const Wrapper = styled.section`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
   overflow: hidden;
+
+  background: url("/vectors/waves.svg"),
+    linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
+  background-color: var(--background);
+  background-size: 50%, 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom, center;
 
   ${media.lessThan("large")`
     grid-template-columns: 1fr;

@@ -69,7 +69,27 @@ export const BoxSide = styled.div`
   overflow: hidden;
 `
 
-export const Container = styled.section`
+export const ContainerHighlight = styled.section`
+  position: relative;
+  padding: var(--padding-content);
+
+  background: url("/vectors/neon-particles-bottom.svg");
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+`
+
+export const ContainerSecondHighlight = styled.section`
+  padding: var(--padding-content);
+
+  background: url("/vectors/neon-particles-top.svg"),
+    url("/vectors/neon-particles-bottom.svg");
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+`
+
+export const ContainerOpenPage = styled.section`
   position: relative;
   padding: var(--padding-content);
 `

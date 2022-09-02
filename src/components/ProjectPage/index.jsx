@@ -15,7 +15,9 @@ import {
   BoxTop,
   BoxSide,
   BoxRight,
-  Container,
+  ContainerHighlight,
+  ContainerSecondHighlight,
+  ContainerOpenPage,
   ContainerProject,
   List,
   ListOther,
@@ -79,7 +81,7 @@ const ProjectPage = () => {
     <PageWrapper>
       <Hero />
 
-      <Container>
+      <ContainerHighlight>
         <BoxTop>
           <Parallax translateY={[-30, 50]}>
             <TriangleNeon height="400" width="400" />
@@ -92,7 +94,7 @@ const ProjectPage = () => {
         {Strings.projects.list.slice(0, 1).map((project, index) => (
           <Highlight key={index} {...project} />
         ))}
-      </Container>
+      </ContainerHighlight>
 
       <ContainerProject>
         <Header title={"Top projects"} />
@@ -113,11 +115,11 @@ const ProjectPage = () => {
         </BoxRight>
       </ContainerProject>
 
-      <Container>
+      <ContainerSecondHighlight>
         {Strings.projects.list.slice(4, 5).map((project, index) => (
           <Highlight key={index} revert {...project} />
         ))}
-      </Container>
+      </ContainerSecondHighlight>
 
       <ContainerProject>
         <Header title={"Others projects"} />
@@ -128,14 +130,14 @@ const ProjectPage = () => {
         </ListOther>
       </ContainerProject>
 
-      <Container>
+      <ContainerOpenPage>
         <Header title={"One page projects"} dark />
         <ListOnePage>
           {Strings.samples.list.map((props, index) => (
             <OnePage key={index} {...props} />
           ))}
         </ListOnePage>
-      </Container>
+      </ContainerOpenPage>
 
       <BoxSide>
         <Parallax translateY={[0, 300]}>
