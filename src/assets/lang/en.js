@@ -12,14 +12,15 @@ const en = {
     files: [
       { name: "COLORFUL VERSION", file: "/docs/cv_johnywalves_en_c.pdf" },
       { name: "PRINT VERSION", file: "/docs/cv_johnywalves_en_g.pdf" },
-    ]
+    ],
   },
   status: "Brazilian, Single, 36 years old",
   live: "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
   contact: {
     title: "Contacts",
     description: "You can find me on social networks",
-    about: "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
+    about:
+      "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer.",
   },
   posts: {
     title: "Posts (portuguese)",
@@ -33,7 +34,7 @@ const en = {
     prev: "Previous",
     next: "Next",
     last: "Last",
-    viewAll: "View all comics"
+    viewAll: "View all comics",
   },
   languages: {
     title: "Languages",
@@ -52,12 +53,12 @@ const en = {
       {
         type: "Languages",
         list: [
-          { title: "HTML", icon: 'Html5' },
-          { title: "CSS", icon: 'Css3' },
-          { title: "Java", icon: 'Java' },
-          { title: "JavaScript", icon: 'Javascript' },
-          { title: "Python", icon: 'Python' },
-          { title: "TypeScript", icon: 'Typescript' },
+          { title: "HTML", icon: "Html5" },
+          { title: "CSS", icon: "Css3" },
+          { title: "Java", icon: "Java" },
+          { title: "JavaScript", icon: "Javascript" },
+          { title: "Python", icon: "Python" },
+          { title: "TypeScript", icon: "Typescript" },
         ],
       },
       {
@@ -231,7 +232,8 @@ const en = {
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
-        description: "Collection of short stories by various writers, written for the platform or public domain, to read and share",
+        description:
+          "Collection of short stories by various writers, written for the platform or public domain, to read and share",
       },
       {
         title: "Devflix",
@@ -254,7 +256,8 @@ const en = {
         sourceCode: "https://github.com/johnywalves/johnywalves.com.br",
         cover: "thumbnail",
         view: "https://johnywalves.com.br",
-        description: "This pretty page, a small portfolio and area to experiment and share experiences",
+        description:
+          "This pretty page, a small portfolio and area to experiment and share experiences",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -284,7 +287,7 @@ const en = {
         title: "Comics Creator",
         view: "https://comics.johnywalves.com.br",
         cover: "comicscreator",
-        description: "Ferramenta para geração de tirinhas em SVG",
+        description: "Ferramenta gatspara geração de tirinhas em SVG",
       },
       {
         title: "Fire Make Better",
@@ -407,8 +410,14 @@ const en = {
         ],
         awards: ["Highest Score Award", "Best Undergraduate Project Award"],
         kudos: [
-          { name: "Highest Score Award", file: "/cert/fatec_maior_media.jpg" },
-          { name: "Best Undergraduate Project Award", file: "/cert/fatec_melhor_tcc.jpg" }
+          {
+            name: "Highest Score Award",
+            file: "/cert/fatec_maior_media.jpg",
+          },
+          {
+            name: "Best Undergraduate Project Award",
+            file: "/cert/fatec_melhor_tcc.jpg",
+          },
         ],
         production: {
           title:
@@ -570,11 +579,11 @@ const en = {
     },
     {
       label: "articles",
-      url: "/blog/",
+      url: "/new/blog/",
     },
     {
       label: "comics",
-      url: "/comics/",
+      url: "/new/comics/",
     },
     {
       label: "projects",

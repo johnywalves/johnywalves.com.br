@@ -1,45 +1,42 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "components/Layout"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import PostItem from "components/PostItem"
-import Pagination from "components/Pagination"
+import ArticleItem from "components/ArticleItem"
+import NavigationPage from "components/NavigationPage"
 
-import * as S from "components/ListWrapper/styled"
+import { ListsWrapper } from "components/ListsPages"
 
-const BlogList = (props) => {
-  const postList = props.data.allMarkdownRemark.edges
+const BlogList = ({ data, pageContext }) => {
+  const postList = data.allMarkdownRemark.edges
 
-  const { currentPage, prevPage, nextPage, numPages } = props.pageContext
+  const { currentPage, prevPage, nextPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
 
   return (
-    <Layout>
-      <S.ListWrapper>
+    <Blueprint content>
+      <ListsWrapper>
         {postList.map(
-          (
-            {
-              node: {
-                frontmatter: {
-                  date,
-                  title,
-                  category,
-                  description,
-                  tags,
-                  coverImage,
-                  featuredImage,
-                },
-                timeToRead,
-                fields: { slug },
+          ({
+            node: {
+              frontmatter: {
+                date,
+                title,
+                category,
+                description,
+                tags,
+                coverImage,
+                featuredImage,
               },
+              timeToRead,
+              fields: { slug },
             },
-            index
-          ) => (
-            <PostItem
-              key={index}
-              slug={slug}
+          }) => (
+            <ArticleItem
+              key={slug}
+              slug={`/new${slug}`}
               category={category}
               date={date}
               timeToRead={timeToRead}
@@ -51,21 +48,21 @@ const BlogList = (props) => {
             />
           )
         )}
-      </S.ListWrapper>
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
-    </Layout>
+        <NavigationPage
+          isFirst={isFirst}
+          isLast={isLast}
+          currentPage={currentPage}
+          numPages={numPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      </ListsWrapper>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
+  query PostListNew($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {

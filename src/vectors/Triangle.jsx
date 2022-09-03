@@ -20,8 +20,8 @@ const Triangle = (props) => (
         y2="20.644"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#757566" offset="0" />
-        <stop stop-color="#efadb7" offset="1" />
+        <stop stopColor="#757566" offset="0" />
+        <stop stopColor="#efadb7" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient33243"
@@ -32,8 +32,8 @@ const Triangle = (props) => (
         gradientTransform="translate(1.8788 2.0711)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--secondary)" offset="0" />
-        <stop stop-color="var(--highlight)" offset="1" />
+        <stop stopColor="var(--secondary)" offset="0" />
+        <stop stopColor="var(--highlight)" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient33253"
@@ -43,12 +43,12 @@ const Triangle = (props) => (
         y2="26.242"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--secondary)" offset="0" />
-        <stop stop-color="var(--highlight-dark)" offset="1" />
+        <stop stopColor="var(--secondary)" offset="0" />
+        <stop stopColor="var(--highlight-dark)" offset="1" />
       </linearGradient>
     </defs>
     <g>
-      <g stroke-width="0">
+      <g strokeWidth="0">
         <path
           d="m3.681 0.49736-2.8344 5.5861 20.567 34.647 2.4859-5.4625"
           fill="url(#linearGradient21627)"
@@ -66,8 +66,8 @@ const Triangle = (props) => (
         d="m10.212 5.2009 40.402 8.1983-25.626 17.192z"
         fill="none"
         stroke="var(--third)"
-        stroke-linecap="square"
-        stroke-width="6.5881"
+        strokeLinecap="square"
+        strokeWidth="6.5881"
         style={{ paintOrder: "normal" }}
       />
     </g>

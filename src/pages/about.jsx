@@ -38,7 +38,6 @@ const About = () => {
 
   return (
     <Layout>
-      <Seo title="Sobre" />
       <S.Forehead>
         <S.Avatar image={avatarImage.childImageSharp.gatsbyImageData} alt="" />
       </S.Forehead>
@@ -164,3 +163,5 @@ const About = () => {
 }
 
 export default About
+
+export const Head = ({ location }) => <Seo location={location} title="Sobre" />

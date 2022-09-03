@@ -22,8 +22,8 @@ const TriangleHalf = ({ color, ...rest }) => (
         gradientUnits="userSpaceOnUse"
         spreadMethod="repeat"
       >
-        <stop stop-color={color} stop-opacity=".90" offset=".50" />
-        <stop stop-color={color} stop-opacity=".60" offset=".50" />
+        <stop stopColor={color} stop-opacity=".90" offset=".50" />
+        <stop stopColor={color} stop-opacity=".60" offset=".50" />
       </linearGradient>
     </defs>
     <g transform="matrix(1.2906 0 0 1.2906 -655.79 1.4945)">

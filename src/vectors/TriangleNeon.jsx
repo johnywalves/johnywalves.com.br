@@ -21,9 +21,9 @@ const TriangleNeon = (props) => (
         gradientTransform="translate(2821.5 -436.99)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#e352a8" offset="0" />
-        <stop stop-color="#8857c3" offset=".65" />
-        <stop stop-color="#44b5ef" offset="1" />
+        <stop stopColor="#e352a8" offset="0" />
+        <stop stopColor="#8857c3" offset=".65" />
+        <stop stopColor="#44b5ef" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient1403"
@@ -34,9 +34,9 @@ const TriangleNeon = (props) => (
         gradientTransform="translate(2821.5 -171.03)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#ec8bc5" offset="0" />
-        <stop stop-color="#ad91d8" offset=".65" />
-        <stop stop-color="#82cdf4" offset="1" />
+        <stop stopColor="#ec8bc5" offset="0" />
+        <stop stopColor="#ad91d8" offset=".65" />
+        <stop stopColor="#82cdf4" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient5761"
@@ -47,9 +47,9 @@ const TriangleNeon = (props) => (
         gradientTransform="translate(2821.5 94.938)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#f5c5e2" offset="0" />
-        <stop stop-color="#d7c7eb" offset=".65" />
-        <stop stop-color="#c0e6f9" offset="1" />
+        <stop stopColor="#f5c5e2" offset="0" />
+        <stop stopColor="#d7c7eb" offset=".65" />
+        <stop stopColor="#c0e6f9" offset="1" />
       </linearGradient>
       <filter
         id="filter8193"
@@ -57,7 +57,7 @@ const TriangleNeon = (props) => (
         y="-.040789"
         width="1.0939"
         height="1.0816"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feGaussianBlur stdDeviation="1.5687656" />
       </filter>
@@ -67,7 +67,7 @@ const TriangleNeon = (props) => (
         y="-.10499"
         width="1.2416"
         height="1.21"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feGaussianBlur stdDeviation="6.2750313" />
       </filter>
@@ -77,7 +77,7 @@ const TriangleNeon = (props) => (
         y="-.32687"
         width="1.7524"
         height="1.6538"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
         <feGaussianBlur stdDeviation="25.100128" />
       </filter>
@@ -85,31 +85,31 @@ const TriangleNeon = (props) => (
     <g
       transform="translate(-475.74 27.571)"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path
         d="m744.1 254.87-186.72-106.36h1e-3v-1e-3l185.48-108.52v1e-3z"
         filter="url(#filter8201)"
         stroke="url(#linearGradient1865)"
-        stroke-width="20"
+        strokeWidth="20"
       />
       <path
         d="m744.1 254.87-186.72-106.36 1e-3 -1e-3c0.24-0.141 185.24-108.38 185.48-108.52h1e-3v1e-3c1e-3 0.21 1.24 214.88 1.24 214.88"
         filter="url(#filter8197)"
         stroke="url(#linearGradient1403)"
-        stroke-width="15px"
+        strokeWidth="15px"
       />
       <path
         d="m744.1 254.87-186.72-106.36 1e-3 -1e-3c0.481-0.281 185.36-108.45 185.48-108.52l1e-3 1e-3v2e-3c2e-3 0.418 1.24 214.88 1.24 214.88"
         filter="url(#filter8193)"
         stroke="url(#linearGradient5761)"
-        stroke-width="10"
+        strokeWidth="10"
       />
       <path
         d="m744.1 254.87-186.72-106.36 185.48-108.52v0.0017z"
         stroke="#fff"
-        stroke-width="5"
+        strokeWidth="5"
       />
     </g>
   </svg>

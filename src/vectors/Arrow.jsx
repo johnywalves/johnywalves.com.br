@@ -21,8 +21,8 @@ const Arrow = (props) => (
         gradientTransform="translate(2.6458)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--highlight-light)" offset="0" />
-        <stop stop-color="var(--third-light)" offset="1" />
+        <stop stopColor="var(--highlight-light)" offset="0" />
+        <stop stopColor="var(--third-light)" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient32230"
@@ -33,8 +33,8 @@ const Arrow = (props) => (
         gradientTransform="translate(2.6458)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--highlight-lighter)" offset="0" />
-        <stop stop-color="var(--secondary)" offset="1" />
+        <stop stopColor="var(--highlight-lighter)" offset="0" />
+        <stop stopColor="var(--secondary)" offset="1" />
       </linearGradient>
       <linearGradient
         id="linearGradient32964"
@@ -45,8 +45,8 @@ const Arrow = (props) => (
         gradientTransform="translate(2.6458)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--highlight-lightest)" offset="0" />
-        <stop stop-color="var(--highlight)" offset="1" />
+        <stop stopColor="var(--highlight-lightest)" offset="0" />
+        <stop stopColor="var(--highlight)" offset="1" />
       </linearGradient>
     </defs>
     <g>

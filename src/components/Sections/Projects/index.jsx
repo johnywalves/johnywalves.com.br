@@ -63,7 +63,7 @@ const SectionProjects = () => {
       <List
         title={Strings.projects.title}
         action={Strings.projects.viewAll}
-        url={"/new/projects/"}
+        url="/new/projects/"
       >
         {Strings.projects.list.slice(0, 3).map((project, index) => (
           <Project

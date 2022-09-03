@@ -9,7 +9,6 @@ import ComicLast from "components/ComicLast"
 const Home = () => {
   return (
     <Layout>
-      <Seo title="" />
       <PostsHighlightList />
       <ProjectList simple />
       <ComicLast />
@@ -18,3 +17,5 @@ const Home = () => {
 }
 
 export default Home
+
+export const Head = ({ location }) => <Seo location={location} title="" />

@@ -12,14 +12,15 @@ const br = {
     files: [
       { name: "VERSÃO COLORIDA", file: "/docs/cv_johnywalves_pt_c.pdf" },
       { name: "VERSÃO IMPRESSÃO", file: "/docs/cv_johnywalves_pt_g.pdf" },
-    ]
+    ],
   },
   status: "Brasileiro, Solteiro, 36 anos",
   live: "São José do Rio Preto, São Paulo, Brasil",
   contact: {
     title: "Contatos",
     description: "Você pode me encontrar nas redes sociais",
-    about: "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
+    about:
+      "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder.",
   },
   posts: {
     title: "Artigos",
@@ -33,7 +34,7 @@ const br = {
     prev: "Anterior",
     next: "Próximo",
     last: "Último",
-    viewAll: "Ver todas as tirinhas"
+    viewAll: "Ver todas as tirinhas",
   },
   languages: {
     title: "Idiomas",
@@ -52,12 +53,12 @@ const br = {
       {
         type: "Linguagens",
         list: [
-          { title: "HTML", icon: 'Html5' },
-          { title: "CSS", icon: 'Css3' },
-          { title: "Java", icon: 'Java' },
-          { title: "JavaScript", icon: 'Javascript' },
-          { title: "Python", icon: 'Python' },
-          { title: "TypeScript", icon: 'Typescript' },
+          { title: "HTML", icon: "Html5" },
+          { title: "CSS", icon: "Css3" },
+          { title: "Java", icon: "Java" },
+          { title: "JavaScript", icon: "Javascript" },
+          { title: "Python", icon: "Python" },
+          { title: "TypeScript", icon: "Typescript" },
         ],
       },
       {
@@ -232,7 +233,8 @@ const br = {
         sourceCode: "https://github.com/johnywalves/machadoalves.com.br",
         cover: "machadoalves",
         view: "https://www.machadoalves.com.br/",
-        description: "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar",
+        description:
+          "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar",
       },
       {
         title: "Devflix",
@@ -255,7 +257,8 @@ const br = {
         sourceCode: "https://github.com/johnywalves/johnywalves.com.br",
         cover: "thumbnail",
         view: "https://johnywalves.com.br",
-        description: "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiêncas",
+        description:
+          "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiêncas",
       },
       {
         title: "Bom dia, equipes dev!",
@@ -412,8 +415,14 @@ const br = {
           "Premiação Melhor Trabalho de Graduação",
         ],
         kudos: [
-          { name: "Premiação de Maior Média", file: "/cert/fatec_maior_media.jpg" },
-          { name: "Premiação Melhor Trabalho de Graduação", file: "/cert/fatec_melhor_tcc.jpg" }
+          {
+            name: "Premiação de Maior Média",
+            file: "/cert/fatec_maior_media.jpg",
+          },
+          {
+            name: "Premiação Melhor Trabalho de Graduação",
+            file: "/cert/fatec_melhor_tcc.jpg",
+          },
         ],
         production: {
           title:
@@ -576,11 +585,11 @@ const br = {
     },
     {
       label: "artigos",
-      url: "/blog/",
+      url: "/new/blog/",
     },
     {
       label: "tirinhas",
-      url: "/comics/",
+      url: "/new/comics/",
     },
     {
       label: "projetos",

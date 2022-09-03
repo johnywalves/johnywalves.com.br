@@ -8,7 +8,6 @@ import Strings from "components/strings"
 
 const Certs = () => (
   <Layout>
-    <Seo title={Strings.certification.title} />
     <CertList>
       {Strings.certification.list
         .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -20,3 +19,7 @@ const Certs = () => (
 )
 
 export default Certs
+
+export const Head = ({ location }) => (
+  <Seo location={location} title={Strings.certification.title} />
+)

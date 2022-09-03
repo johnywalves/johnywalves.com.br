@@ -47,11 +47,11 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     <meta property="og:image" itemprop="image" content="/path/to/thumbnail" />
     <meta property="og:locale" content="pt_BR" />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://url.page" />
-    <meta property="twitter:title" content="Page Title" />
-    <meta property="twitter:description" content="Page Description" />
-    <meta property="twitter:image" content="/path/to/thumbnail" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://url.page" />
+    <meta name="twitter:title" content="Page Title" />
+    <meta name="twitter:description" content="Page Description" />
+    <meta name="twitter:image" content="/path/to/thumbnail" />
   </head>
 
   <style>

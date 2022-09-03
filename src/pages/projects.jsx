@@ -8,7 +8,6 @@ import Seo from "components/seo"
 const Projects = () => {
   return (
     <Layout>
-      <Seo title="Projetos" />
       <ProjectList />
       <SampleList />
     </Layout>
@@ -16,3 +15,7 @@ const Projects = () => {
 }
 
 export default Projects
+
+export const Head = ({ location }) => (
+  <Seo location={location} title="Pesquisa" />
+)

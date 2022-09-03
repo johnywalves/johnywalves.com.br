@@ -6,9 +6,12 @@ import SearchPage from "components/SearchPage"
 
 const Search = () => (
   <Blueprint content>
-    <Seo title="Pesquisa" />
     <SearchPage />
   </Blueprint>
 )
 
 export default Search
+
+export const Head = ({ location }) => (
+  <Seo location={location} title="Pesquisa" />
+)

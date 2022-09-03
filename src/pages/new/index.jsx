@@ -16,7 +16,6 @@ import {
 const Home = () => {
   return (
     <Blueprint>
-      <Seo title="" />
       <Hero />
       <About />
       <Experience />
@@ -29,3 +28,5 @@ const Home = () => {
 }
 
 export default Home
+
+export const Head = ({ location }) => <Seo location={location} title="" />

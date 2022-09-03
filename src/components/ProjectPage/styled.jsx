@@ -72,6 +72,8 @@ export const BoxSide = styled.div`
 export const ContainerHighlight = styled.section`
   position: relative;
   padding: var(--padding-content);
+  padding-top: var(--72px);
+  padding-bottom: var(--72px);
 
   background: url("/vectors/neon-particles-bottom.svg");
   background-color: var(--background);
@@ -81,6 +83,8 @@ export const ContainerHighlight = styled.section`
 
 export const ContainerSecondHighlight = styled.section`
   padding: var(--padding-content);
+  padding-top: var(--72px);
+  padding-bottom: var(--72px);
 
   background: url("/vectors/neon-particles-top.svg"),
     url("/vectors/neon-particles-bottom.svg");
@@ -92,10 +96,14 @@ export const ContainerSecondHighlight = styled.section`
 export const ContainerOpenPage = styled.section`
   position: relative;
   padding: var(--padding-content);
+  padding-top: var(--72px);
+  padding-bottom: var(--72px);
 `
 
 export const ContainerProject = styled.section`
   padding: var(--padding-content);
+  padding-top: var(--64px);
+  padding-bottom: var(--72px);
   background-color: var(--highlight);
 `
 

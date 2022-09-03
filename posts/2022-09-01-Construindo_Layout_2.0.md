@@ -63,3 +63,19 @@ Levando em consideração que a página deve funcionar bem com o tema claro e o 
 Resgatando a experiência [Neon Letters](/web/neonletters.html), para criar um letreiro neon fazendo uma composição de texto branco e várias sombras, no fundo ficou um pouco vazio, voltando ao [Logos By Nick](https://www.youtube.com/c/LogosByNick) encontrei entre os tutoriais como fazer uma séries de linhas com efeitos de fluídos com uso de lápis ondulado com alta suavição e interpolação de caminhos, que harmonizou demais como letreiro
 
 ![Luminária com várias linhas no fundo com efeitos de fluidos](/figures/layout_letters.png "Letreiro neon com fundo de fluídos")
+
+### Atualizando Gatsby
+
+Essa parte é mais técnica, pula quem tem interesse somente em design
+
+Fazendo uso da ferramenta [yarn upgrade-interactive](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade-interactive/) selecionei todos as mais novas versões
+
+A versão antiga do site usava 3.1.2 resolvi atualizar para 4.22.0, para evitar erros corrigidos e aproveitar as melhorias do biblioteca, entre as novidades da nova versão são ferramenta de criação de `<head>` sem a necessidade de um biblioteca extra
+
+#### Gatsby Head
+
+Na versão anterior fazia uso da biblioteca [react-helmet](https://github.com/nfl/react-helmet), a novidade é que as tags `link`, `meta`, `style`, `title`, `base`, `script`, e `noscript` quando usadas são inseridas no `<head>` como descrito na documentação (Gatsby Head)(https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) incorporando as configurações de SEO orientado pela documentação [Adicionando SEO Component](https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-seo-component/)
+
+#### React Version
+
+Após alguns problemas com a geração da versão de produção encontrei um problema com a última versão `react` e `react-dom`, trocando a última versão de `18.2.0` para major versão anterior a `17.0.2`

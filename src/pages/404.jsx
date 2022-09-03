@@ -1,12 +1,12 @@
 import React from "react"
 
-import Blueprint from "components/Blueprint"
+import Layout from "components/Layout"
 import Seo from "components/seo"
 
 import * as S from "components/Post/styled"
 
 const NotFoundPage = () => (
-  <Blueprint>
+  <Layout>
     <S.PostHeader>
       <S.PostTitle>404: Not Found</S.PostTitle>
       <S.PostDescription>
@@ -21,7 +21,7 @@ const NotFoundPage = () => (
         </p>
       </div>
     </S.MainContent>
-  </Blueprint>
+  </Layout>
 )
 
 export default NotFoundPage

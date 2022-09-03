@@ -6,9 +6,12 @@ import Search from "components/Search"
 
 const SearchPage = () => (
   <Layout>
-    <Seo title="Pesquisa" />
     <Search />
   </Layout>
 )
 
 export default SearchPage
+
+export const Head = ({ location }) => (
+  <Seo location={location} title="Pesquisa" />
+)

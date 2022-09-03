@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "components/Layout"
+
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import Comments from "components/Comments"
 import ComicNavigation from "components/ComicNavigation"
@@ -12,7 +13,7 @@ const ComicPost = ({ data, pageContext }) => {
   const { number, slug } = pageContext
 
   return (
-    <Layout>
+    <Blueprint content>
       <S.PostHeader comics>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostDate>{post.frontmatter.date}</S.PostDate>
@@ -31,12 +32,12 @@ const ComicPost = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
       <Comments title={post.frontmatter.title} url={slug} />
-    </Layout>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query Comic($slug: String!) {
+  query ComicNew($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")

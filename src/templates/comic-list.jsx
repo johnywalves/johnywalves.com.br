@@ -17,7 +17,6 @@ const ComicList = (props) => {
 
   return (
     <Layout>
-      <Seo title="Tirinhas" />
       <S.ListWrapper>
         {comicsList.map(
           (
@@ -107,3 +106,7 @@ export const query = graphql`
 `
 
 export default ComicList
+
+export const Head = ({ location }) => (
+  <Seo location={location} title="Tirinhas" />
+)

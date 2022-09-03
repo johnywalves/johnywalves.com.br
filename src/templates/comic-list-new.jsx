@@ -1,75 +1,68 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "components/Layout"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import PostItem from "components/PostItem"
-import Pagination from "components/Pagination"
+import PostItemComic from "components/PostItemComic"
+import NavigationPage from "components/NavigationPage"
 
-import * as S from "components/ListWrapper/styled"
+import { ListsWrapper } from "components/ListsPages"
 
-const BlogList = (props) => {
-  const postList = props.data.allMarkdownRemark.edges
+const ComicList = (props) => {
+  const comicsList = props.data.allMarkdownRemark.edges
 
   const { currentPage, prevPage, nextPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
 
   return (
-    <Layout>
-      <S.ListWrapper>
-        {postList.map(
+    <Blueprint content>
+      <ListsWrapper>
+        {comicsList.map(
           (
             {
               node: {
                 frontmatter: {
                   date,
                   title,
-                  category,
-                  description,
-                  tags,
-                  coverImage,
+                  transcription,
                   featuredImage,
+                  comicImage,
                 },
-                timeToRead,
                 fields: { slug },
               },
             },
             index
           ) => (
-            <PostItem
+            <PostItemComic
               key={index}
-              slug={slug}
-              category={category}
+              slug={`/new${slug}`}
               date={date}
-              timeToRead={timeToRead}
               title={title}
-              description={description}
-              tags={tags}
-              coverImage={coverImage}
-              featuredImage={featuredImage}
+              transcription={transcription}
+              featuredImage={featuredImage || comicImage}
             />
           )
         )}
-      </S.ListWrapper>
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
-    </Layout>
+        <NavigationPage
+          isFirst={isFirst}
+          isLast={isLast}
+          currentPage={currentPage}
+          numPages={numPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      </ListsWrapper>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
+  query ComicsListNew($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {
-        frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+        frontmatter: { published: { ne: false }, category: { eq: "Comic" } }
       }
       limit: $limit
       skip: $skip
@@ -80,14 +73,22 @@ export const query = graphql`
             date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
             title
             category
-            description
+            transcription
             tags
             coverImage
             featuredImage {
               childImageSharp {
                 gatsbyImageData(
-                  width: 120
-                  height: 120
+                  width: 800
+                  layout: CONSTRAINED
+                  placeholder: TRACED_SVG
+                )
+              }
+            }
+            comicImage {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 600
                   layout: CONSTRAINED
                   placeholder: TRACED_SVG
                 )
@@ -104,8 +105,8 @@ export const query = graphql`
   }
 `
 
-export default BlogList
+export default ComicList
 
 export const Head = ({ location }) => (
-  <Seo location={location} title="Artigos" />
+  <Seo location={location} title="Tirinhas" />
 )

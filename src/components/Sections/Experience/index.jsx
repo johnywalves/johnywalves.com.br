@@ -115,7 +115,7 @@ const SectionExperience = () => {
         </Types>
         <SkillsWrapper>
           {Strings.skills.list.map(({ list }, index) => (
-            <Skills selected={selectedType === index}>
+            <Skills key={`skill_${index}`} selected={selectedType === index}>
               {list.map(({ title, icon }, idx) => {
                 if (icon) {
                   const IconComponent = Icons[icon]
@@ -177,7 +177,7 @@ const SectionExperience = () => {
                 </Title>
                 <Descriptions list>
                   {description.map((text, idx) => (
-                    <Description>
+                    <Description index={idx}>
                       <span>
                         {text}
                         {description.length - 1 !== idx ? ";" : "."}
@@ -234,8 +234,8 @@ const SectionExperience = () => {
                   <Institution> | {institution}</Institution>
                 </Title>
                 <Descriptions>
-                  {description.map((text) => (
-                    <Description>{text}</Description>
+                  {description.map((text, idx) => (
+                    <Description key={idx}>{text}</Description>
                   ))}
                 </Descriptions>
                 {production && (

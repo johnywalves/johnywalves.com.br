@@ -7,10 +7,13 @@ import Seo from "components/seo"
 const Projects = () => {
   return (
     <Blueprint content>
-      <Seo title="Projetos" />
       <ProjectPage />
     </Blueprint>
   )
 }
 
 export default Projects
+
+export const Head = ({ location }) => (
+  <Seo location={location} title="Projetos" />
+)

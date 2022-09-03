@@ -113,6 +113,18 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    result.data.AllPosts.edges.forEach(({ node, next, previous }) => {
+      createPage({
+        path: `/new${node.fields.slug}`,
+        component: path.resolve(`src/templates/blog-post-new.jsx`),
+        context: {
+          slug: node.fields.slug,
+          previousPost: next,
+          nextPost: previous,
+        },
+      })
+    })
+
     // Listagem de artigos
     const postsPerPage = 6
     const numPagesPosts = Math.ceil(
@@ -134,11 +146,37 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Página de tirinhas
+    Array.from({ length: numPagesPosts }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/new/blog/` : `/new/page/${index + 1}`,
+        component: path.resolve(`src/templates/blog-list-new.jsx`),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numPages: numPagesPosts,
+          currentPage: index + 1,
+          prevPage: index === 1 ? `/new/blog/` : `/new/page/${index}`,
+          nextPage: `/new/page/${index + 2}`,
+        },
+      })
+    })
+
+    // Páginas de tirinhas
     result.data.AllComics.edges.forEach(({ node }) => {
       createPage({
         path: `/comic-${node.frontmatter.number}`,
         component: path.resolve(`src/templates/comic-post.jsx`),
+        context: {
+          slug: node.fields.slug,
+          number: node.frontmatter.number,
+        },
+      })
+    })
+
+    result.data.AllComics.edges.forEach(({ node }) => {
+      createPage({
+        path: `/new/comic-${node.frontmatter.number}`,
+        component: path.resolve(`src/templates/comic-post-new.jsx`),
         context: {
           slug: node.fields.slug,
           number: node.frontmatter.number,
@@ -163,6 +201,21 @@ exports.createPages = ({ graphql, actions }) => {
           currentPage: index + 1,
           prevPage: index === 1 ? `/comics/` : `/comics/${index}`,
           nextPage: `/comics/${index + 2}`,
+        },
+      })
+    })
+
+    Array.from({ length: numPagesComics }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/new/comics/` : `/new/comics/${index + 1}`,
+        component: path.resolve(`src/templates/comic-list-new.jsx`),
+        context: {
+          limit: comicsPerPage,
+          skip: index * comicsPerPage,
+          numPages: numPagesComics,
+          currentPage: index + 1,
+          prevPage: index === 1 ? `/new/comics/` : `/new/comics/${index}`,
+          nextPage: `/new/comics/${index + 2}`,
         },
       })
     })

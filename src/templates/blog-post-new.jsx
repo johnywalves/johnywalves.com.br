@@ -1,42 +1,50 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "components/Layout"
+
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import RecommendedPost from "components/RecommendedPost"
 import Comments from "components/Comments"
 
-import * as S from "components/Post/styled"
+import {
+  PostFeaturedImage,
+  PostHeader,
+  PostDate,
+  PostTitle,
+  PostDescription,
+  MainContent,
+} from "components/Article/styled"
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { nextPost, previousPost, slug } = pageContext
 
   return (
-    <Layout>
+    <Blueprint content>
       {post.frontmatter.featuredImage && (
-        <S.PostFeaturedImage
+        <PostFeaturedImage
           image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
           alt=""
         />
       )}
-      <S.PostHeader>
-        <S.PostDate>
+      <PostHeader>
+        <PostDate>
           {post.frontmatter.date} ● {post.timeToRead} min de leitura
-        </S.PostDate>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-      </S.PostHeader>
-      <S.MainContent>
+        </PostDate>
+        <PostTitle>{post.frontmatter.title}</PostTitle>
+        <PostDescription>{post.frontmatter.description}</PostDescription>
+      </PostHeader>
+      <MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </S.MainContent>
+      </MainContent>
       <RecommendedPost next={nextPost} previous={previousPost} />
       <Comments title={post.frontmatter.title} url={slug} />
-    </Layout>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query Post($slug: String!) {
+  query PostNew($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
@@ -46,7 +54,7 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 1600
-              height: 512
+              height: 320
               layout: CONSTRAINED
               placeholder: BLURRED
             )

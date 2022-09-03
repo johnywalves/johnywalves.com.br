@@ -6,10 +6,10 @@ import { MoreVerticalOutline } from "@styled-icons/evaicons-outline/MoreVertical
 
 import Button from "components/Button"
 
+import { ArrowLeft, ArrowsLeft } from "icons"
+
 import Header from "../Header"
 
-import ArrowsLeft from "./icons/ArrowsLeft"
-import ArrowLeft from "./icons/ArrowLeft"
 import { Wrapper, Content, NavigationWrapper, Icon, Navigation } from "./styled"
 
 const List = ({ children, title, action, url, light, number }) => {

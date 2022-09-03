@@ -3,7 +3,6 @@ require("dotenv").config()
 const queries = require("./src/utils/algolia_queries")
 
 const pluginsConfig = [
-  `gatsby-plugin-react-helmet`,
   `gatsby-plugin-transition-link`,
   `gatsby-plugin-styled-components`,
   {
@@ -154,10 +153,13 @@ const pluginsConfig = [
                 guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 custom_elements: [
                   {
-                    "content:encoded": `<p style='text-align:center'><a href='${site.siteMetadata.siteUrl + edge.node.fields.slug
-                      }'><img src='${site.siteMetadata.siteUrl}${edge.node.frontmatter.coverImage
-                      }' alt='${edge.node.frontmatter.transcription
-                      }' height='285px' width='auto'></a></p>`,
+                    "content:encoded": `<p style='text-align:center'><a href='${
+                      site.siteMetadata.siteUrl + edge.node.fields.slug
+                    }'><img src='${site.siteMetadata.siteUrl}${
+                      edge.node.frontmatter.coverImage
+                    }' alt='${
+                      edge.node.frontmatter.transcription
+                    }' height='285px' width='auto'></a></p>`,
                   },
                 ],
               })

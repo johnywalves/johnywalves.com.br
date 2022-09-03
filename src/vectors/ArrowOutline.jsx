@@ -20,8 +20,8 @@ const ArrowOutline = (props) => (
         y2="9.5625"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="var(--highlight)" offset="0" />
-        <stop stop-color="var(--secondary)" offset="1" />
+        <stop stopColor="var(--highlight)" offset="0" />
+        <stop stopColor="var(--secondary)" offset="1" />
       </linearGradient>
     </defs>
     <path
@@ -30,8 +30,8 @@ const ArrowOutline = (props) => (
       fill="none"
       opacity=".65"
       stroke="url(#linearGradient974)"
-      stroke-linecap="square"
-      stroke-width=".5"
+      strokeLinecap="square"
+      strokeWidth=".5"
     />
   </svg>
 )

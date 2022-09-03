@@ -58,7 +58,7 @@ const SectionArticles = () => {
       <List
         title={Strings.posts.title}
         action={Strings.posts.viewAll}
-        url="/blog"
+        url="/new/blog/"
       >
         {edges.map(({ node }) => (
           <Article
