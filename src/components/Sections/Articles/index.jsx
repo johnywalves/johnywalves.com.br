@@ -1,7 +1,6 @@
 import React from "react"
 import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import Strings from "components/strings"
 import { Article, List } from "components/Cards"
@@ -9,7 +8,7 @@ import { Article, List } from "components/Cards"
 import Arrow from "vectors/Arrow"
 import ArrowOutline from "vectors/ArrowOutline"
 
-import { Wrapper, BoxShape, BoxShapeOutline } from "./styled"
+import { Wrapper, BoxShape, BoxShapeOutline, ImageCover } from "./styled"
 
 const SectionArticles = () => {
   const {
@@ -63,14 +62,14 @@ const SectionArticles = () => {
         {edges.map(({ node }) => (
           <Article
             key={node.fields.slug}
-            to={node.fields.slug}
+            to={`/new${node.fields.slug}`}
             category={node.frontmatter.category}
             subtitle={node.frontmatter.date}
             title={node.frontmatter.title}
             description={node.frontmatter.description}
             cover={
               node.frontmatter.featuredImage && (
-                <GatsbyImage
+                <ImageCover
                   image={
                     node.frontmatter.featuredImage.childImageSharp
                       .gatsbyImageData

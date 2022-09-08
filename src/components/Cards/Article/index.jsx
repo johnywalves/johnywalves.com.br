@@ -12,9 +12,16 @@ import {
   Description,
 } from "./styled"
 
-const Article = ({ cover, category, subtitle, title, description }) => {
+const Article = ({
+  cover,
+  category,
+  subtitle,
+  title,
+  description,
+  ...rest
+}) => {
   return (
-    <Wrapper cover={cover} article>
+    <Wrapper cover={cover} article {...rest}>
       <Content>
         <Header>
           <Category>{category}</Category>

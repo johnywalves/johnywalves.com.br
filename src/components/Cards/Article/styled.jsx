@@ -35,7 +35,7 @@ export const Subtitle = styled.small`
   width: 100%;
   margin: 0 0 5px;
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 700;
   text-align: right;
 `
 

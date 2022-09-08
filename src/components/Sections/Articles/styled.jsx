@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.section`
   position: relative;
@@ -28,3 +29,5 @@ export const BoxShapeOutline = styled.div`
     filter: blur(2px);
   }
 `
+
+export const ImageCover = styled(GatsbyImage)``
