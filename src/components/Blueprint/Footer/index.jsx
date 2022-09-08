@@ -24,8 +24,8 @@ const Footer = () => {
       show: file(relativePath: { eq: "profile_neon.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 300
-            height: 263
+            width: 386
+            height: 340
             layout: CONSTRAINED
             placeholder: TRACED_SVG
           )
@@ -37,11 +37,13 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterContent>
-        <Logo />
-        <FooterDescription>
-          <strong>{site.siteMetadata.title}</strong> | {Strings.position}
-        </FooterDescription>
-        <MenuSocial about />
+        <div>
+          <Logo />
+          <FooterDescription>
+            <strong>{site.siteMetadata.title}</strong> | {Strings.position}
+          </FooterDescription>
+        </div>
+        <MenuSocial />
       </FooterContent>
       <FooterImageCover image={show.childImageSharp.gatsbyImageData} />
     </FooterWrapper>

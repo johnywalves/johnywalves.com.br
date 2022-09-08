@@ -42,6 +42,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 var(--36px);
 `
 
 export const Title = styled.h1`

@@ -4,7 +4,10 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export const FooterWrapper = styled.footer`
   color: var(--background);
   background-color: var(--highlight);
-  padding: 0 var(--24px);
+
+  padding: var(--padding-content);
+  padding-bottom: 0;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,20 +16,18 @@ export const FooterWrapper = styled.footer`
   & a:hover,
   & a:visited {
     color: var(--white);
-    margin-right: var(--36px);
   }
 
   & nav {
     width: 320px;
 
     svg {
-      color: var(--background);
+      color: var(--white);
     }
   }
 `
 
 export const FooterContent = styled.div`
-  padding: var(--24px) 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -34,7 +35,9 @@ export const FooterContent = styled.div`
 `
 
 export const FooterDescription = styled.p`
+  color: var(--white);
   padding: var(--16px) 0;
+  font-size: 0.9rem;
 `
 
 export const FooterImageCover = styled(GatsbyImage)`

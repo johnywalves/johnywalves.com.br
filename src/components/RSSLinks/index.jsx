@@ -2,23 +2,28 @@ import React from "react"
 import { RssSquare } from "@styled-icons/fa-solid/RssSquare"
 
 import links from "./content"
-import * as S from "./styled"
+import {
+  RSSLinksWrapper,
+  RSSLinksList,
+  RSSLinksItem,
+  IconWrapper,
+} from "./styled"
 
 const MenuLinks = () => (
-  <S.RSSLinksWrapper>
-    <S.RSSLinksList>
+  <RSSLinksWrapper>
+    <RSSLinksList>
       {links.map(({ description, url }, index) => (
-        <S.RSSLinksItem key={index}>
+        <RSSLinksItem key={index}>
           <a href={url} target="_target" rel="noreferrer noopener">
-            <S.IconWrapper>
+            <IconWrapper>
               <RssSquare />
-            </S.IconWrapper>
+            </IconWrapper>
             {description}
           </a>
-        </S.RSSLinksItem>
+        </RSSLinksItem>
       ))}
-    </S.RSSLinksList>
-  </S.RSSLinksWrapper>
+    </RSSLinksList>
+  </RSSLinksWrapper>
 )
 
 export default MenuLinks

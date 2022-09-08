@@ -12,9 +12,9 @@ tags:
 published: false
 ---
 
-Um desenvolvedor que tem um trabalho de tempo integral não precisa de um site de portfólio, os recrutadores geralmente usam o LinkedIn para encontrar profissionais, um bom perfil é mais prático, e dentro das empresas costumam ter seu próprio processo interno
+Um desenvolvedor que tem um trabalho de tempo integral não precisa de um site de portfólio, os recrutadores geralmente usam o LinkedIn para encontrar profissionais, um bom perfil lá é mais prático, e dentro das empresas costumam ter seu próprio processo interno
 
-Amo desenvolvimento, gosto muito de desenvolver e compartilhar minhas experiências, gerando conhecimento e documentando no processo por isso tenho uma página pessoal
+Amo desenvolvimento, gosto muito de aprender coisas novas e compartilhar minhas experiências, documentando conhecimento gerado e parte do processo por isso tenho uma página pessoal
 
 ## Contexto
 
@@ -22,7 +22,7 @@ Estava cansado da interface antiga, gerada no curso de Gatsby do [William Justen
 
 ![Interface do site com listagens três artigos e três projetos](/figures/layout_old.png "Interface antiga")
 
-Resolvi que era hora de abraçar algo mais exótico e menos contido e conciso, seguindo os conselhos [Josh Comeau](https://www.joshwcomeau.com/) descritos no ebook "Building an effective dev portfolio" comecei o meu processo
+Resolvi que era hora de abraçar algo mais exótico e menos contido e conciso, seguindo alguns conselhos do [Josh Comeau](https://www.joshwcomeau.com/) descritos no ebook "Building an effective dev portfolio" comecei o meu processo
 
 ## Processo
 
@@ -68,13 +68,13 @@ Resgatando a experiência [Neon Letters](/web/neonletters.html), para criar um l
 
 Essa parte é mais técnica, pula quem tem interesse somente em design
 
-Fazendo uso da ferramenta [yarn upgrade-interactive](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade-interactive/) selecionei todos as mais novas versões
+Fazendo uso da ferramenta [yarn upgrade-interactive](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade-interactive/) selecionei todos as mais novas versões, isso pode dar muito problema, só faça quando estiver disposto a lidar com eles
 
-A versão antiga do site usava 3.1.2 resolvi atualizar para 4.22.0, para evitar erros corrigidos e aproveitar as melhorias do biblioteca, entre as novidades da nova versão são ferramenta de criação de `<head>` sem a necessidade de um biblioteca extra
+A versão antiga do site usava `3.1.2` resolvi atualizar para `4.22.0`, para resolver erros já corrigidos e aproveitar as melhorias da biblioteca, entre as novidades da nova versão são ferramenta de criação de `<head>` sem a necessidade de um biblioteca extra
 
 #### Gatsby Head
 
-Na versão anterior fazia uso da biblioteca [react-helmet](https://github.com/nfl/react-helmet), a novidade é que as tags `link`, `meta`, `style`, `title`, `base`, `script`, e `noscript` quando usadas são inseridas no `<head>` como descrito na documentação (Gatsby Head)(https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) incorporando as configurações de SEO orientado pela documentação [Adicionando SEO Component](https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-seo-component/)
+Na versão anterior fazia uso da biblioteca [react-helmet](https://github.com/nfl/react-helmet), a novidade é que as tags `link`, `meta`, `style`, `title`, `base`, `script`, e `noscript` quando usadas são inseridas no `<head>` como descrito na documentação [Gatsby Head](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) incorporando as configurações de SEO orientado pela documentação [Adicionando SEO Component](https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-seo-component/)
 
 #### React Version
 

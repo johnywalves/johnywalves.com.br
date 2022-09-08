@@ -27,8 +27,14 @@ export const RSSLinksWrapper = styled.nav`
     color: var(--texts);
   }
 
-  a:hover {
-    color: var(--highlight);
+  li:hover {
+    svg {
+      color: var(--highlight);
+    }
+
+    a {
+      color: var(--highlight);
+    }
   }
 `
 

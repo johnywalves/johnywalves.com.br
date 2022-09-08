@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { RssSquare } from "@styled-icons/fa-solid/RssSquare"
 
 import Strings from "components/strings"
 
@@ -15,6 +16,34 @@ import {
 const MenuSocial = ({ vertical }) => {
   return (
     <MenuSocialWrapper vertical={vertical}>
+      {!vertical && (
+        <MenuSocialList>
+          <Item>
+            <Link
+              href={Strings.posts.feed}
+              title={Strings.posts.title}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconWrapper>
+                <RssSquare /> <p>{Strings.posts.title}</p>
+              </IconWrapper>
+            </Link>
+          </Item>
+          <Item>
+            <Link
+              href={Strings.comics.feed}
+              title={Strings.comics.title}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IconWrapper>
+                <RssSquare /> <p>{Strings.comics.title}</p>
+              </IconWrapper>
+            </Link>
+          </Item>
+        </MenuSocialList>
+      )}
       <MenuSocialList vertical={vertical}>
         {Strings.socialLinks.map(({ icon, url, label }) => {
           const Icon = Icons[icon]

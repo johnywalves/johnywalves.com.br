@@ -97,7 +97,7 @@ const ProjectPage = () => {
       </ContainerHighlight>
 
       <ContainerProject>
-        <Header title={"Top projects"} />
+        <Header title={Strings.projects.top} />
         <List>
           {Strings.projects.list.slice(1, 4).map((project, index) => (
             <Project
@@ -122,7 +122,7 @@ const ProjectPage = () => {
       </ContainerSecondHighlight>
 
       <ContainerProject>
-        <Header title={"Others projects"} />
+        <Header title={Strings.projects.others} />
         <ListOther>
           {Strings.projects.list.slice(5).map((project, index) => (
             <Other key={index} {...project} />
@@ -131,7 +131,7 @@ const ProjectPage = () => {
       </ContainerProject>
 
       <ContainerOpenPage>
-        <Header title={"One page projects"} dark />
+        <Header title={Strings.samples.title} dark />
         <ListOnePage>
           {Strings.samples.list.map((props, index) => (
             <OnePage key={index} {...props} />

@@ -125,7 +125,7 @@ export const MainContent = styled.section`
       margin-bottom: 0;
     }
   }
-  p,
+
   li {
     code {
       word-wrap: break-word;
@@ -224,7 +224,8 @@ export const MainContent = styled.section`
   .instagram-media {
     margin: 1rem auto !important;
   }
-  a {
+  a,
+  a:visited {
     border-bottom: 1px dashed var(--highlight);
     color: var(--highlight);
     text-decoration: none;
@@ -234,6 +235,7 @@ export const MainContent = styled.section`
     }
     &:hover {
       opacity: 0.8;
+      border-bottom: none;
     }
   }
   table {

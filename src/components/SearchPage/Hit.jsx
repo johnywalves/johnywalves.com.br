@@ -5,7 +5,7 @@ import ArticleItem from "components/ArticleItem"
 const Hit = ({ hit }) => (
   <ArticleItem
     key={hit.objectID}
-    slug={hit.slug}
+    slug={`/new${hit.slug}`}
     category={hit.category}
     date={hit.date}
     timeToRead={hit.timeToRead}

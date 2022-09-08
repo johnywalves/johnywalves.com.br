@@ -10,10 +10,18 @@ const verticalWrapper = css`
   ul {
     width: 2rem;
   }
+
+  svg {
+    fill: var(--highlight);
+  }
 `
 
 export const MenuSocialWrapper = styled.nav`
   width: 100%;
+
+  svg {
+    fill: var(--texts);
+  }
 
   ${({ vertical }) => vertical && verticalWrapper}
 `
@@ -32,19 +40,30 @@ export const MenuSocialList = styled.ul`
 `
 
 export const Item = styled.li`
-  margin: 1rem 0;
-  transition: 0.25s ease-in-out;
+  cursor: pointer;
 
-  div {
+  p {
+    margin-left: var(--8px);
+    transition: 0.25s ease-in-out;
+  }
+
+  svg {
+    margin: 1rem 0;
+    width: 1.5rem;
+    height: 1.5rem;
     transition: 0.25s ease-in-out;
   }
 
   &:hover {
-    margin: 0.5rem 0;
+    p {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
 
-    div {
-      width: 2.5rem;
-      height: 2.5rem;
+    svg {
+      margin: 0.25rem 0;
+      width: 2rem;
+      height: 2rem;
     }
   }
 `
@@ -53,14 +72,10 @@ export const Link = styled.a`
   color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
-
-  &:hover {
-    color: var(--highlight);
-  }
 `
 
 export const IconWrapper = styled.div`
-  fill: #bbb;
-  width: 1.5rem;
-  height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `

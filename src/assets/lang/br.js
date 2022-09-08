@@ -26,6 +26,7 @@ const br = {
     title: "Artigos",
     description: "Últimos artigos publicados sobre vida e desenvolvimento",
     viewAll: "Ver todos os artigos",
+    feed: "http://feeds.feedburner.com/johnywalves-posts"
   },
   comics: {
     title: "Tirinhas",
@@ -35,6 +36,7 @@ const br = {
     next: "Próximo",
     last: "Último",
     viewAll: "Ver todas as tirinhas",
+    feed: "http://feeds.feedburner.com/johnywalves-comics"
   },
   languages: {
     title: "Idiomas",
@@ -224,6 +226,8 @@ const br = {
   },
   projects: {
     title: "Projetos & Desenvolvimentos",
+    top: "Destaques",
+    others: "Outros",
     description: "Alguns projetos e experimentações desenvolvidas por mim",
     viewAll: "Ver todos os projetos",
     viewHighlight: "Visualizar somente destaques",
@@ -315,7 +319,7 @@ const br = {
     ],
   },
   samples: {
-    title: "Pequenos exemplos",
+    title: "Projetos de uma página",
     description: "Projetos de uma página para testar alguns conceitos",
     list: [
       {

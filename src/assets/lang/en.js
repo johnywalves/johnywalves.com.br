@@ -23,9 +23,10 @@ const en = {
       "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer.",
   },
   posts: {
-    title: "Posts (portuguese)",
+    title: "Articles",
     description: "Latest published articles on life and development",
     viewAll: "View all posts",
+    feed: "http://feeds.feedburner.com/johnywalves-posts"
   },
   comics: {
     title: "Comics",
@@ -35,6 +36,7 @@ const en = {
     next: "Next",
     last: "Last",
     viewAll: "View all comics",
+    feed: "http://feeds.feedburner.com/johnywalves-comics"
   },
   languages: {
     title: "Languages",
@@ -223,6 +225,8 @@ const en = {
   },
   projects: {
     title: "Projects & developments",
+    top: "Top projects",
+    others: "Others projects",
     description: "Some projects and experiments developed by me",
     viewAll: "View all projects",
     viewHighlight: "View only highlights",
@@ -314,7 +318,7 @@ const en = {
     ],
   },
   samples: {
-    title: "Little samples",
+    title: "One page projects",
     description: "One page designs to test some concepts",
     list: [
       {
