@@ -8,12 +8,13 @@ export const Wrapper = styled.section`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 75vh;
   overflow: hidden;
 
   background: url("/vectors/waves.svg"),
     linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
   background-color: var(--background);
-  background-size: 50%, 100%;
+  background-size: 50% 100%, 100%;
   background-repeat: no-repeat;
   background-position: left bottom, center;
 
@@ -30,6 +31,7 @@ export const Cover = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  background: url("/vectors/lowpoly-shadow.svg");
 `
 
 export const ImageCover = styled(GatsbyImage)`

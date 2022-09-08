@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
   position: relative;
   width: 100%;
   padding: 45px 15px 80px;
+  background: url("/vectors/lowpoly-shadow.svg");
   background-color: var(--highlight);
 `
 

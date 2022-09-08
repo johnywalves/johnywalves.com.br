@@ -69,11 +69,14 @@ export const BoxSide = styled.div`
   overflow: hidden;
 `
 
-export const ContainerHighlight = styled.section`
-  position: relative;
+export const SectionContainer = styled.section`
   padding: var(--padding-content);
   padding-top: var(--72px);
   padding-bottom: var(--72px);
+`
+
+export const ContainerHighlight = styled(SectionContainer)`
+  position: relative;
 
   background: url("/vectors/neon-particles-bottom.svg");
   background-color: var(--background);
@@ -81,11 +84,7 @@ export const ContainerHighlight = styled.section`
   background-position: bottom right;
 `
 
-export const ContainerSecondHighlight = styled.section`
-  padding: var(--padding-content);
-  padding-top: var(--72px);
-  padding-bottom: var(--72px);
-
+export const ContainerSecondHighlight = styled(SectionContainer)`
   background: url("/vectors/neon-particles-top.svg"),
     url("/vectors/neon-particles-bottom.svg");
   background-color: var(--background);
@@ -93,23 +92,19 @@ export const ContainerSecondHighlight = styled.section`
   background-position: top left, bottom right;
 `
 
-export const ContainerOpenPage = styled.section`
+export const ContainerOpenPage = styled(SectionContainer)`
   position: relative;
-  padding: var(--padding-content);
-  padding-top: var(--72px);
-  padding-bottom: var(--72px);
 `
 
-export const ContainerProject = styled.section`
-  padding: var(--padding-content);
-  padding-top: var(--64px);
-  padding-bottom: var(--72px);
+export const ContainerProject = styled(SectionContainer)`
+  background: url("/vectors/lowpoly-shadow.svg");
   background-color: var(--highlight);
 `
 
 export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: var(--72px) 0 var(--24px);
   gap: var(--36px);
 
   ${media.lessThan("large")`
@@ -120,6 +115,7 @@ export const List = styled.ul`
 export const ListOther = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  margin: var(--72px) 0 var(--24px);
   gap: var(--36px);
 
   @media (max-width: 1400px) {
@@ -137,5 +133,6 @@ export const ListOnePage = styled.ul`
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin: var(--72px) 0 var(--24px);
   gap: var(--36px);
 `

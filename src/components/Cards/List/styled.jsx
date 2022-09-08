@@ -3,13 +3,6 @@ import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const Wrapper = styled.div``
 
-export const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 30px;
-`
-
 export const Content = styled.ul`
   display: flex;
   flex-direction: row;

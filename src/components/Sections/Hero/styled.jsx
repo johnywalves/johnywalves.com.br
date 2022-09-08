@@ -78,6 +78,13 @@ export const BoxText = styled(Container)`
   }
 `
 
+export const BoxBackground = styled(Container)`
+  height: 100%;
+  width: 50%;
+  left: 50%;
+  background: url("/vectors/lowpoly-shadow.svg");
+`
+
 export const ImageBox = styled(Container)`
   left: 50%;
   bottom: 0;

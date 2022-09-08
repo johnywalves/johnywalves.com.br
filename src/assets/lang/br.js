@@ -226,8 +226,8 @@ const br = {
   },
   projects: {
     title: "Projetos & Desenvolvimentos",
-    top: "Destaques",
-    others: "Outros",
+    top: "Projetos em destaque",
+    others: "Outros projetos",
     description: "Alguns projetos e experimentações desenvolvidas por mim",
     viewAll: "Ver todos os projetos",
     viewHighlight: "Visualizar somente destaques",

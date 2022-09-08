@@ -287,7 +287,7 @@ const WrapperAccomplishment = styled.li`
     top: 50%;
   }
 
-  &:last-of-type::before {
+  &:nth-last-child(-n + 2)::before {
     height: 50%;
   }
 

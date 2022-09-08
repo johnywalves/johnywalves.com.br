@@ -28,7 +28,8 @@ export const MenuBar = styled.nav`
   }
 
   &.nohero {
-    background: var(--highlight);
+    background: url("/vectors/lowpoly-shadow.svg");
+    background-color: var(--highlight);
 
     & a,
     & a:hover,

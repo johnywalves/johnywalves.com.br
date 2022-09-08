@@ -17,6 +17,7 @@ import {
   BoxBack,
   BoxShadow,
   BoxText,
+  BoxBackground,
   Wrapper,
   ImageBox,
   ImageCover,
@@ -88,6 +89,8 @@ const SectionHero = () => {
         <h1>JOHNY</h1>
         <p>{Strings.position}</p>
       </BoxText>
+
+      <BoxBackground />
 
       <ImageBox style={{ opacity: opacities === 0 ? 1 : 0 }}>
         <Parallax speed={-10}>

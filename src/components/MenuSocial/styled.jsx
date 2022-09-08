@@ -18,9 +18,14 @@ const verticalWrapper = css`
 
 export const MenuSocialWrapper = styled.nav`
   width: 100%;
+  margin: 0 0 var(--24px);
+
+  p {
+    color: var(--white);
+  }
 
   svg {
-    fill: var(--texts);
+    fill: var(--white);
   }
 
   ${({ vertical }) => vertical && verticalWrapper}
@@ -34,42 +39,43 @@ export const MenuSocialList = styled.ul`
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: var(--8px);
 
   ${({ vertical }) => vertical && verticalList}
 `
 
 export const Item = styled.li`
+  margin: var(--4px) 0;
   cursor: pointer;
 
   p {
     margin-left: var(--8px);
-    transition: 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   svg {
-    margin: 1rem 0;
+    margin: 0.5rem;
     width: 1.5rem;
     height: 1.5rem;
-    transition: 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   &:hover {
     p {
+      margin-left: var(--4px);
       font-weight: 700;
       font-size: 1.25rem;
     }
 
     svg {
-      margin: 0.25rem 0;
-      width: 2rem;
-      height: 2rem;
+      margin: 0;
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 `
 
 export const Link = styled.a`
-  color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
 `

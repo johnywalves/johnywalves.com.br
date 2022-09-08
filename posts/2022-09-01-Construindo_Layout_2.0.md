@@ -70,7 +70,7 @@ Essa parte é mais técnica, pula quem tem interesse somente em design
 
 Fazendo uso da ferramenta [yarn upgrade-interactive](https://classic.yarnpkg.com/lang/en/docs/cli/upgrade-interactive/) selecionei todos as mais novas versões, isso pode dar muito problema, só faça quando estiver disposto a lidar com eles
 
-A versão antiga do site usava `3.1.2` resolvi atualizar para `4.22.0`, para resolver erros já corrigidos e aproveitar as melhorias da biblioteca, entre as novidades da nova versão são ferramenta de criação de `<head>` sem a necessidade de um biblioteca extra
+A versão antiga do site usava `3.1.2` resolvi atualizar para `4.22.0`, para aproveitar das correções de erros e as melhorias da biblioteca, entre as novidades da nova versão são ferramenta de criação de `<head>` sem a necessidade de um biblioteca extra
 
 #### Gatsby Head
 
