@@ -17,6 +17,19 @@ export const SearchWrapper = styled.section`
   background-repeat: no-repeat;
   background-position: top left, bottom right;
 
+  & a {
+    transition: color 0.2s ease-in-out;
+  }
+
+  & a,
+  & a:visited {
+    color: var(--texts);
+  }
+
+  & a:hover {
+    color: var(--highlight);
+  }
+
   .ais-InstantSearch__root {
     display: flex;
     flex-direction: column;

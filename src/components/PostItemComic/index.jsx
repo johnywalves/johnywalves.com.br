@@ -1,28 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import * as S from "./styled"
+import {
+  PostItemLink,
+  PostItemWrapper,
+  PostItemDate,
+  PostItemTitle,
+  PostItemImageFeatured,
+} from "./styled"
 
 const PostItemComic = ({ slug, date, title, transcription, featuredImage }) => (
-  <S.PostItemLink
-    to={slug}
-    cover
-    direction="left"
-    bg="var(--background)"
-    duration={0.6}
-  >
-    <S.PostItemWrapper>
-      <S.PostItemDate>{date}</S.PostItemDate>
-      <S.PostItemTitle>{title}</S.PostItemTitle>
+  <PostItemLink fade to={slug} duration={0.75}>
+    <PostItemWrapper>
+      <PostItemDate>{date}</PostItemDate>
+      <PostItemTitle>{title}</PostItemTitle>
       {featuredImage && (
-        <S.PostItemImageFeatured
+        <PostItemImageFeatured
           image={featuredImage.childImageSharp.gatsbyImageData}
           title={transcription}
           alt=""
         />
       )}
-    </S.PostItemWrapper>
-  </S.PostItemLink>
+    </PostItemWrapper>
+  </PostItemLink>
 )
 
 PostItemComic.propTypes = {

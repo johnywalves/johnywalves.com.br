@@ -7,15 +7,6 @@ export const ArticleItemLink = styled(Anilink)`
   display: flex;
   text-decoration: none;
   border-bottom: 1px solid var(--shadow-colors);
-
-  &,
-  &:visited {
-    color: var(--texts);
-  }
-
-  &:hover {
-    color: var(--highlight);
-  }
 `
 
 export const ArticleItemWrapper = styled.article`
@@ -39,7 +30,6 @@ const imageFormat = css`
   flex-shrink: 0;
 
   border-radius: 50%;
-  color: var(--background);
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;

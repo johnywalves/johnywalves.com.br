@@ -27,13 +27,7 @@ const ArticleItem = ({
   coverImage,
   category,
 }) => (
-  <ArticleItemLink
-    to={slug}
-    cover
-    direction="left"
-    bg="var(--background)"
-    duration={0.6}
-  >
+  <ArticleItemLink fade to={slug} duration={0.75}>
     <ArticleItemWrapper>
       {featuredImage && (
         <ArticleItemImageFeatured

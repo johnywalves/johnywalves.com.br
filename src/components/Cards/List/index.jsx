@@ -47,11 +47,11 @@ const List = ({ children, title, action, url, light, number }) => {
       <NavigationWrapper>
         {!number && (
           <Navigation
+            swipe
             to={url}
-            cover
             direction="right"
             bg="var(--background)"
-            duration={0.6}
+            duration={0.75}
           >
             <Button light={light}>
               <MoreVerticalOutline /> {action}
@@ -61,11 +61,11 @@ const List = ({ children, title, action, url, light, number }) => {
         {number && (
           <>
             <Icon
+              swipe
               to="/comic-1"
-              cover
               direction="right"
               bg="var(--background)"
-              duration={0.6}
+              duration={0.75}
               disabled={firstOne}
               light={light}
               aria-label="first"
@@ -73,11 +73,11 @@ const List = ({ children, title, action, url, light, number }) => {
               <ArrowsLeft />
             </Icon>
             <Icon
+              swipe
               to={`/comic-${number - 1}`}
-              cover
               direction="right"
               bg="var(--background)"
-              duration={0.6}
+              duration={0.75}
               disabled={firstOne}
               light={light}
               aria-label="previous"
@@ -85,22 +85,22 @@ const List = ({ children, title, action, url, light, number }) => {
               <ArrowLeft />
             </Icon>
             <Navigation
+              swipe
               to={url}
-              cover
               direction="right"
               bg="var(--background)"
-              duration={0.6}
+              duration={0.75}
             >
               <Button light={light}>
                 <MoreVerticalOutline /> {action}
               </Button>
             </Navigation>
             <Icon
-              to={`/comic-${number + 1}`}
-              cover
+              swipe
+              to={url}
               direction="left"
               bg="var(--background)"
-              duration={0.6}
+              duration={0.75}
               disabled={lastOne}
               light={light}
               aria-label="next"
@@ -108,11 +108,11 @@ const List = ({ children, title, action, url, light, number }) => {
               <ArrowLeft rotate />
             </Icon>
             <Icon
+              swipe
               to={`/comic-${lastNumber}`}
-              cover
               direction="left"
               bg="var(--background)"
-              duration={0.6}
+              duration={0.75}
               disabled={lastOne}
               light={light}
               aria-label="last"

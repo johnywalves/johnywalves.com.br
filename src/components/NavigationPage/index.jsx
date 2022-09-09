@@ -15,10 +15,9 @@ const NavigationPage = ({
 }) => (
   <NavigationWrapper>
     <LinkNavigation
+      swipe
       to={prevPage}
-      cover
       direction="left"
-      bg="var(--background)"
       duration={0.6}
       disabled={isFirst}
     >
@@ -28,11 +27,10 @@ const NavigationPage = ({
       {currentPage} de {numPages}
     </p>
     <LinkNavigation
-      to={nextPage}
-      cover
+      swipe
       mirror
+      to={nextPage}
       direction="right"
-      bg="var(--background)"
       duration={0.6}
       disabled={isLast}
     >

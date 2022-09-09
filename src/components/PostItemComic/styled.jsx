@@ -4,17 +4,8 @@ import Anilink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const PostItemLink = styled(Anilink)`
-  color: var(--texts);
   display: flex;
   text-decoration: none;
-
-  body#grid & {
-    background-color: var(--background);
-  }
-
-  &:hover {
-    color: var(--highlight);
-  }
 `
 
 export const PostItemWrapper = styled.section`
@@ -26,13 +17,6 @@ export const PostItemWrapper = styled.section`
   padding: 2rem 3rem;
   margin: 0 auto;
   width: minmax(100%, 800px);
-
-  body#grid & {
-    border: none;
-    padding: 2rem 1rem;
-    flex-direction: column;
-    justify-content: center;
-  }
 
   ${media.lessThan("large")`
     flex-direction: column;
@@ -61,10 +45,6 @@ export const PostItemTag = styled.div`
   justify-content: center;
   min-height: 120px;
   min-width: 120px;
-
-  body#grid & {
-    margin-bottom: 1.5rem;
-  }
 `
 
 export const PostItemDate = styled.time`
@@ -76,11 +56,6 @@ export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.2rem 8px 0.5rem;
-
-  body#grid & {
-    line-height: 1.1;
-    margin: 0.8rem 0;
-  }
 `
 
 export const PostItemDescription = styled.p`

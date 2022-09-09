@@ -4,13 +4,7 @@ import { LogoWrapper } from "./styled"
 
 const Logo = () => {
   return (
-    <LogoWrapper
-      to={"/new/"}
-      bg="var(--background)"
-      direction="left"
-      duration={0.6}
-      cover
-    >
+    <LogoWrapper fade to={"/new/"} duration={0.75}>
       {"{JWA}"}
     </LogoWrapper>
   )
