@@ -81,9 +81,8 @@ const Menu = ({ hero }) => {
             {Strings.menuLinks.map(({ label, url }) => (
               <li key={label}>
                 <MenuTopLink
-                  swipe
+                  face
                   to={url}
-                  direction="down"
                   duration={0.75}
                   activeClassName="active"
                 >
@@ -114,9 +113,8 @@ const Menu = ({ hero }) => {
           {Strings.menuLinks.map(({ label, url }) => (
             <li key={label}>
               <MenuLinksLink
-                swipe
+                fade
                 to={url}
-                direction="down"
                 duration={0.75}
                 activeClassName="active"
               >

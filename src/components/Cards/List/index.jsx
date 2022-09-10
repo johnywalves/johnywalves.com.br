@@ -46,13 +46,7 @@ const List = ({ children, title, action, url, light, number }) => {
       <Content>{children}</Content>
       <NavigationWrapper>
         {!number && (
-          <Navigation
-            swipe
-            to={url}
-            direction="right"
-            bg="var(--background)"
-            duration={0.75}
-          >
+          <Navigation fade to={url} duration={0.75}>
             <Button light={light}>
               <MoreVerticalOutline /> {action}
             </Button>
@@ -61,10 +55,8 @@ const List = ({ children, title, action, url, light, number }) => {
         {number && (
           <>
             <Icon
-              swipe
+              fade
               to="/comic-1"
-              direction="right"
-              bg="var(--background)"
               duration={0.75}
               disabled={firstOne}
               light={light}
@@ -73,10 +65,8 @@ const List = ({ children, title, action, url, light, number }) => {
               <ArrowsLeft />
             </Icon>
             <Icon
-              swipe
+              fade
               to={`/comic-${number - 1}`}
-              direction="right"
-              bg="var(--background)"
               duration={0.75}
               disabled={firstOne}
               light={light}
@@ -84,22 +74,14 @@ const List = ({ children, title, action, url, light, number }) => {
             >
               <ArrowLeft />
             </Icon>
-            <Navigation
-              swipe
-              to={url}
-              direction="right"
-              bg="var(--background)"
-              duration={0.75}
-            >
+            <Navigation fade to={url} duration={0.75}>
               <Button light={light}>
                 <MoreVerticalOutline /> {action}
               </Button>
             </Navigation>
             <Icon
-              swipe
+              fade
               to={url}
-              direction="left"
-              bg="var(--background)"
               duration={0.75}
               disabled={lastOne}
               light={light}
@@ -108,10 +90,8 @@ const List = ({ children, title, action, url, light, number }) => {
               <ArrowLeft rotate />
             </Icon>
             <Icon
-              swipe
+              fade
               to={`/comic-${lastNumber}`}
-              direction="left"
-              bg="var(--background)"
               duration={0.75}
               disabled={lastOne}
               light={light}

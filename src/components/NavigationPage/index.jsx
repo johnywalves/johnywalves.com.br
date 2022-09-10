@@ -14,26 +14,13 @@ const NavigationPage = ({
   nextPage,
 }) => (
   <NavigationWrapper>
-    <LinkNavigation
-      swipe
-      to={prevPage}
-      direction="left"
-      duration={0.6}
-      disabled={isFirst}
-    >
+    <LinkNavigation fade to={prevPage} duration={0.75} disabled={isFirst}>
       <ArrowLeft /> página anterior
     </LinkNavigation>
     <p>
       {currentPage} de {numPages}
     </p>
-    <LinkNavigation
-      swipe
-      mirror
-      to={nextPage}
-      direction="right"
-      duration={0.6}
-      disabled={isLast}
-    >
+    <LinkNavigation fade mirror to={nextPage} duration={0.75} disabled={isLast}>
       próxima página <ArrowLeft />
     </LinkNavigation>
   </NavigationWrapper>

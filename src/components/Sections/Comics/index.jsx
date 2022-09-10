@@ -68,10 +68,8 @@ const SectionComics = () => {
         >
           <li>
             <Link
-              swipe
+              fade
               to={node.fields.slug}
-              direction="left"
-              bg="var(--background)"
               duration={0.75}
               aria-label="Last Comics"
             >

@@ -8,13 +8,7 @@ const Wrapper = ({ cover, children, article, to }) => {
   if (to) {
     return (
       <CardWrapper article={article}>
-        <Anilink
-          swipe
-          to={to}
-          direction="left"
-          bg="var(--background)"
-          duration={0}
-        >
+        <Anilink fade to={to} duration={0}>
           <CardCover>{cover}</CardCover>
           {children}
         </Anilink>
