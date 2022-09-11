@@ -2,7 +2,7 @@
 date: 2018-09-10 20:33:15 -0300
 title: Iniciando com SQLAlchemy
 description: Lorem lipsunm
-category: Py
+category: Python
 tags: [SQLAlchemy, Python, "Serialização"]
 featuredImage: ./featured/alchemy-1.jpg
 coverImage: /figures/alchemy-1.jpg

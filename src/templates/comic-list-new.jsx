@@ -6,7 +6,7 @@ import Seo from "components/seo"
 import PostItemComic from "components/PostItemComic"
 import NavigationPage from "components/NavigationPage"
 
-import { ListsWrapper } from "components/ListsPages"
+import ListsPages from "components/ListsPages"
 
 const ComicList = (props) => {
   const comicsList = props.data.allMarkdownRemark.edges
@@ -17,7 +17,7 @@ const ComicList = (props) => {
 
   return (
     <Blueprint content>
-      <ListsWrapper>
+      <ListsPages>
         {comicsList.map(
           (
             {
@@ -52,7 +52,7 @@ const ComicList = (props) => {
           prevPage={prevPage}
           nextPage={nextPage}
         />
-      </ListsWrapper>
+      </ListsPages>
     </Blueprint>
   )
 }
@@ -70,7 +70,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+            date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
             title
             category
             transcription

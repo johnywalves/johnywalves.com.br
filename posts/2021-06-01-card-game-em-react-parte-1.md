@@ -5,7 +5,7 @@ description: Desenvolvendo um jogo tipo Hearthstone, Gwent e Yu-Gi-Oh! do
 date: 2021-06-01 08:26:08 -0300
 featuredImage: ./featured/pokemon_cardgame-1.jpg
 coverImage: figures/pokemon_cardgame-1.jpg
-category: JS
+category: JavaScript
 tags:
   - JavaScript
   - Game
@@ -33,10 +33,10 @@ Para o melhor entendimento vamos detalhar alguns termos que serão usados adiant
 Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação entre o jogador e o jogo", escolhi alguns elementos para realizar a interação, o jogo de cartas já traz um elemento aleatório adicionando os conceitos de turnos, pontos de ação, posicionamento e movimentação completam as mecânicas que vamos utilizar, segue como cada conceito vai funcionar:
 
 **Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações, intercalando para cada um, o primeiro a agir é sorteado com um cara ou coroa;\
-**Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e em cada turno 1 (uma) carta  do topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
+**Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e em cada turno 1 (uma) carta do topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;\
 **Pontos de Ação**: O jogador recebe 3 (três) pontos de ação no início de seu turno para realizar as invocações e movimentação, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;\
 **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo podem atingir inimigos na linha de corpo-a-corpo e na linha de ataques a distância caso não exista na linha corpo-a-corpo e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, independente do alcance todas podem atacar o invocador, o jogador deve somente colocar as cartas no seu lado no campo de batalha;\
-**Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha. 
+**Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha.
 
 As cartas podemos possuir descrições que alteração alguma mecânica, nesse caso a descrição da carta sempre deve prevalecer
 
@@ -86,13 +86,13 @@ A duração é definida como:\
 
 Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pontos de vida do adversário e preservar os próprios gerando as condições de vitória:
 
-* Desistência do adversário;
-* Quando os pontos de vida do adversário chegar a zero;
-* Após finalizar 10 turnos quem tiver mais pontos de vida, se forem iguais segue os critérios de desempate em ordem:  
+- Desistência do adversário;
+- Quando os pontos de vida do adversário chegar a zero;
+- Após finalizar 10 turnos quem tiver mais pontos de vida, se forem iguais segue os critérios de desempate em ordem:
 
-  * Maior número de cartas no campo de batalha; 
-  * Maior valor de ataque das criaturas;
-  * Maior valor de defesa das criaturas.
+  - Maior número de cartas no campo de batalha;
+  - Maior valor de ataque das criaturas;
+  - Maior valor de defesa das criaturas.
 
 ## Referências
 

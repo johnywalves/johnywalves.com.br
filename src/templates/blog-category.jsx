@@ -12,7 +12,8 @@ import ListsPages from "components/ListsPages"
 const BlogList = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges
 
-  const { currentPage, prevPage, nextPage, numPages, categories } = pageContext
+  const { currentPage, prevPage, nextPage, numPages, categories, category } =
+    pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
 
@@ -39,7 +40,9 @@ const BlogList = ({ data, pageContext }) => {
   return (
     <Blueprint content>
       <ListsPages Navigator={ArticleNavigatior}>
-        <h2>Todos os artigos</h2>
+        <h2>
+          Categoria: <strong>{category}</strong>
+        </h2>
         {postList.map(
           ({
             node: {
@@ -84,11 +87,11 @@ const BlogList = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query PostListNew($skip: Int!, $limit: Int!) {
+  query PostLCaterory($skip: Int!, $limit: Int!, $category: String!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {
-        frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+        frontmatter: { published: { ne: false }, category: { eq: $category } }
       }
       limit: $limit
       skip: $skip

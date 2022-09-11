@@ -1,12 +1,9 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-//const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 // To add the slug field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-
-  //fmImagesToRelative(node);
 
   // Ensures we are processing only markdown files
   if (node.internal.type === "MarkdownRemark") {
@@ -43,10 +40,9 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
               title
               category
-              number
               description
             }
             timeToRead
@@ -81,9 +77,8 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
               title
-              category
               number
               description
             }
@@ -99,6 +94,10 @@ exports.createPages = ({ graphql, actions }) => {
     if (result.errors) {
       throw result.errors
     }
+
+    const categories = result.data.AllPosts.edges
+      .map(({ node: { frontmatter: { category } } }) => category)
+      .filter((v, i, a) => a.indexOf(v) === i)
 
     // Páginas de artigos
     result.data.AllPosts.edges.forEach(({ node, next, previous }) => {
@@ -126,7 +125,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // Listagem de artigos
-    const postsPerPage = 6
+    const postsPerPage = 12
     const numPagesPosts = Math.ceil(
       result.data.AllPosts.edges.length / postsPerPage
     )
@@ -157,7 +156,32 @@ exports.createPages = ({ graphql, actions }) => {
           currentPage: index + 1,
           prevPage: index === 1 ? `/new/blog/` : `/new/page/${index}`,
           nextPage: `/new/page/${index + 2}`,
+          categories
         },
+      })
+    })
+
+    categories.forEach(name => {
+      const categoryName = name.toLowerCase()
+      const numPagesCategory = Math.ceil(
+        result.data.AllPosts.edges.filter(({ node: { frontmatter: { category } } }) => category === name).length / postsPerPage
+      )
+
+      Array.from({ length: numPagesCategory }).forEach((_, index) => {
+        createPage({
+          path: index === 0 ? `/new/category/${categoryName}/` : `/new/category/${categoryName}/${index + 1}`,
+          component: path.resolve(`src/templates/blog-category.jsx`),
+          context: {
+            limit: postsPerPage,
+            skip: index * postsPerPage,
+            category: name,
+            numPages: numPagesCategory,
+            currentPage: index + 1,
+            prevPage: index === 1 ? `/new/category/${categoryName}/` : `/new/category/${categoryName}/${index}`,
+            nextPage: `/new/category/${categoryName}/${index + 2}`,
+            categories
+          },
+        })
       })
     })
 
@@ -185,7 +209,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // Listagem de tirinhas
-    const comicsPerPage = 6
+    const comicsPerPage = 12
     const numPagesComics = Math.ceil(
       result.data.AllComics.edges.length / comicsPerPage
     )

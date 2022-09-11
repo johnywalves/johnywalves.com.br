@@ -81,9 +81,10 @@ const Menu = ({ hero }) => {
             {Strings.menuLinks.map(({ label, url }) => (
               <li key={label}>
                 <MenuTopLink
-                  face
+                  paintDrip
                   to={url}
-                  duration={0.75}
+                  hex="#e0138c"
+                  duration={0.5}
                   activeClassName="active"
                 >
                   <span>{label}</span>.

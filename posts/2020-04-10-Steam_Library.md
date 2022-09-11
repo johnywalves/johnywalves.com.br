@@ -4,7 +4,7 @@ description: Visualização da biblioteca de jogos com JavaScript apartir de um 
 date: 2020-04-10 11:03:00 -0300
 featuredImage: ./featured/steam-1.jpg
 coverImage: /figures/steam-1.jpg
-category: JS
+category: JavaScript
 tags:
   - JavaScript
   - HTML

@@ -4,7 +4,7 @@ description: Resumão para aplicação de Gradient Boosting Regressor para fonte
 date: 2020-06-14 12:08:58 -0300
 featuredImage: ./featured/graphics-1.jpg
 coverImage: /figures/graphics-1.jpg
-category: Py
+category: Python
 tags:
   - Python
   - ML

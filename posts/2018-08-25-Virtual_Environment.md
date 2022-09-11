@@ -2,7 +2,7 @@
 date: 2018-08-25 15:00:00 -0300
 title: PipEnv e Virtual Enviroment
 description: Lorem lipsunm
-category: Py
+category: Python
 tags: [Ambiente, Python]
 featuredImage: ./featured/library-1.jpg
 coverImage: /figures/library-1.jpg

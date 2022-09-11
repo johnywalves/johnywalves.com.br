@@ -12,6 +12,7 @@ import {
   ArticleItemInfo,
   ArticleItemDate,
   ArticleItemTitle,
+  ArticleItemCategory,
   ArticleItemDescription,
   ArticleItemTags,
 } from "./styled"
@@ -50,7 +51,10 @@ const ArticleItem = ({
         <ArticleItemDate>
           {date} ● {timeToRead} min de leitura
         </ArticleItemDate>
-        <ArticleItemTitle>{title}</ArticleItemTitle>
+        <ArticleItemTitle>
+          {category && <ArticleItemCategory>{category}</ArticleItemCategory>}
+          {title}
+        </ArticleItemTitle>
         <ArticleItemDescription>{description}</ArticleItemDescription>
         {tags && (
           <ArticleItemTags>

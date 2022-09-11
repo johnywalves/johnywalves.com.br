@@ -4,7 +4,7 @@ description: Uma análise de dados do que influência na facilidade geral de uma
 date: 2020-06-03 23:32:15 -0300
 featuredImage: ./featured/happy-1.jpg
 coverImage: /figures/happy-1.jpg
-category: Py
+category: Python
 tags:
   - Python
   - Pandas

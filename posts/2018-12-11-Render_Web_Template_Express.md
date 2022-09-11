@@ -2,7 +2,7 @@
 date: 2018-12-11 16:22:15 -0200
 title: Render Web Template (Express)
 description: Lorem lipsunm
-category: JS
+category: JavaScript
 tags: [Web, JavaScript, Express]
 topics:
   [

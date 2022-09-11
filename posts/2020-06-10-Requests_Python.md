@@ -4,7 +4,7 @@ description: Realização de Requisições HTTP com pyhton
 date: 2020-06-10 20:30:23 -0300
 featuredImage: ./featured/mailbox-1.jpg
 coverImage: /figures/mailbox-1.jpg
-category: Py
+category: Python
 tags:
   - Python
   - Requests

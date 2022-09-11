@@ -4,7 +4,7 @@ description: Gerar telas de páginas Web para testes Web com Selenium e Python
 date: "2020-06-20 17:50:32"
 featuredImage: ./featured/robot-1.jpg
 coverImage: /figures/robot-1.jpg
-category: Py
+category: Python
 tags:
   - Python
   - Selenium

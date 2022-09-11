@@ -2,7 +2,7 @@
 date: 2019-05-15 10:13:13 -0300
 title: Comunicação HTTP Servidor e Client
 description: Lorem lipsunm
-category: JS
+category: JavaScript
 tags: [Web, Server, Client, Request, Response, JavaScript]
 featuredImage: ./featured/mail-1.jpg
 coverImage: /figures/mail-1.jpg

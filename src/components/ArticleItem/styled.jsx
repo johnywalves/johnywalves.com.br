@@ -38,6 +38,9 @@ const imageFormat = css`
   background-position: center;
   box-shadow: 0 0 4px 1px var(--shadow-colors),
     2px 2px 4px 1px var(--shadow-colors);
+  filter: grayscale(1) brightness(1.15);
+  transform: rotate(10deg);
+  transition: 0.2s ease-in-out;
 
   ${media.lessThan("medium")`
     display: none;
@@ -48,6 +51,11 @@ const imageFormat = css`
     padding: .2rem .5rem;
     margin-bottom: .7rem;
   `}
+
+  ${ArticleItemLink}:hover & {
+    filter: none;
+    transform: none;
+  }
 `
 
 export const ArticleItemImageFeatured = styled(GatsbyImage)`
@@ -89,6 +97,27 @@ export const ArticleItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+export const ArticleItemCategory = styled.span`
+  margin: 0 var(--8px) 0 0;
+  padding: var(--4px) var(--8px);
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--background);
+  background-color: var(--highlight);
+  border-radius: 15px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+
+  ${ArticleItemLink}:hover & {
+    opacity: 1;
+  }
 `
 
 export const ArticleItemDescription = styled.p`
@@ -103,4 +132,10 @@ export const ArticleItemTags = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+
+  ${ArticleItemLink}:hover & {
+    opacity: 1;
+  }
 `

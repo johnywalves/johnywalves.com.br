@@ -1,16 +1,32 @@
 import styled from "styled-components"
 
 export const Text = styled.p`
-  font-weight: 700;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
   margin: 0.2rem;
   border-radius: 0.25rem;
-  color: var(--white);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-weight: 700;
+  color: var(--background);
   background-color: ${({ skill }) =>
     skill ? "var(--bagdeSkill)" : "var(--highlight)"};
 
   span {
     font-weight: 500;
     font-size: 0.8rem;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    height: var(--8px);
+    width: var(--8px);
+    margin: 0 0.5rem;
+
+    background: var(--background);
+    border-radius: 50%;
   }
 `

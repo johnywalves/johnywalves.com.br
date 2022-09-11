@@ -6,7 +6,6 @@ category: Bem-estar
 featuredImage: ./featured/rabbit-1.jpg
 coverImage: /figures/rabbit-1.jpg
 tags:
-  - Bem-estar
   - Desempenho
   - Rotina
 ---
