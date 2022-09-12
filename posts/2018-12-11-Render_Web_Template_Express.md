@@ -1,20 +1,21 @@
 ---
 date: 2018-12-11 16:22:15 -0200
-title: Render Web Template (Express)
-description: Lorem lipsunm
+title: Render Web Template com Node.js Express
+description: Geração de template HTML com Node.js Express
 category: JavaScript
-tags: [Web, JavaScript, Express]
-topics:
-  [
-    Montagem do Modelo,
-    Preparação,
-    Interpretação,
-    Arquivos Estáticos,
-    Favicon,
-    Execução,
-  ]
 featuredImage: ./featured/gearsjs-1.jpg
 coverImage: /figures/gearsjs-1.jpg
+topics:
+  - Montagem do Modelo
+  - Preparação
+  - Interpretação
+  - Arquivos Estáticos
+  - Favicon
+  - Execução
+tags:
+  - Web
+  - Node
+  - Express
 ---
 
 Entregar páginas Web intepretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponiveis somente neste ambiente

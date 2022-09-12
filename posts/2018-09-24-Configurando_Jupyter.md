@@ -1,11 +1,13 @@
 ---
 date: 2018-09-24 22:17:00 -0300
 title: Configurar Jupyter para Servidor
-description: Lorem lipsunm
+description: Alguns detalhes para Jupyter em trabalho em equipe
 category: Python
-tags: [Python, Jupyter]
 featuredImage: ./featured/jupiter-1.jpg
 coverImage: /figures/jupiter-1.jpg
+tags:
+  - Jupyter
+  - Ambiente
 ---
 
 Para usar o notebook em um servidor é necessário alterar o arquivo de configuração, que pode ser gerado pelo comando

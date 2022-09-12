@@ -3,9 +3,10 @@ date: 2018-08-19 15:00:00 -0300
 title: Mortes em Kill Bill
 description: Visualização de dados de filmes do Tarantino com a linguagem R
 category: R
-tags: [Visualização, R]
 featuredImage: ./featured/kill-bill-1.jpg
 coverImage: /figures/kill-bill-1.jpg
+tags:
+  - Visualização
 ---
 
 Quando estava aprendendo o básico da **Linguagem R** e o **R Studio** em uma workshop do Igor Alcantara, ele disponibilizou algumas bases de dados dentre eles com ofecenças e mortes em filmes do Quentin Tarantino.  

@@ -3,9 +3,11 @@ date: 2018-08-19 15:00:00 -0300
 title: Previsão de Sobreviventes do Titanic
 description: Visualização de dados e machine learning com o desafio do Kaggle do Titanic
 category: R
-tags: [Machine Learning, R]
 featuredImage: ./featured/titanic-1.jpg
 coverImage: /figures/titanic-1.jpg
+tags:
+  - Machine Learning
+  - Visualização
 ---
 
 Kaggle, um organizador de competições para cientistas de dados, o desafio inicial dele é a previsão dos sobreviventes da viagem inaugural do RMS TItanic. [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)

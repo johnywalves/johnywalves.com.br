@@ -6,7 +6,6 @@ featuredImage: ./featured/net-1.jpg
 coverImage: /figures/net-1.jpg
 category: Web
 tags:
-  - Web
   - HTML
   - Cheatsheet
 published: true

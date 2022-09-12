@@ -6,8 +6,7 @@ featuredImage: ./featured/graphics-1.jpg
 coverImage: /figures/graphics-1.jpg
 category: Python
 tags:
-  - Python
-  - ML
+  - Machine Learning
   - Regressor
 ---
 

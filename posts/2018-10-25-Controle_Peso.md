@@ -1,11 +1,12 @@
 ---
 date: 2018-10-25 20:33:15 -0300
 title: Controle da evolução corporal
-description: Lorem lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm lipsunm
+description: Em processo de emagrecer regitrando as medides de "sucesso"
 category: Python
-tags: [Python, Visualização]
 featuredImage: ./featured/balance-1.jpg
 coverImage: /figures/balance-1.jpg
+tags:
+  - Visualização
 ---
 
 Sempre tive um barriguinha redonda, na minha guerra constante resolvi usar um pouco de ciência de dados para ajudar em mais uma batalha, me desafiando por 100 dias para alcançar 85Kg  
@@ -36,12 +37,14 @@ Lendo e carregando o arquivo convertendo os textos em json, para acumular os his
 ```python
 import pandas as pd
 import numpy as np
+
 def LerJSON(data):
     import json
     if (data == ''):
         return json.loads('[]')
     else:
         return json.loads(data)
+
 df_dados = pd.read_csv('./dados.csv', quotechar='\'', converters={'AtividadeFisica':LerJSON, 'AlimentacaoTipo':LerJSON}, header=0)
 ```
 

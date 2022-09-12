@@ -6,8 +6,8 @@ featuredImage: ./featured/calendar-1.jpg
 coverImage: /figures/calendar-1.jpg
 category: JavaScript
 tags:
-  - JavaScript
   - Datas
+  - Formatação
 ---
 
 Recentemente estava pensando qual snippet utilizo no JavaScript, acredito que seja a formatação de datas

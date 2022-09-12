@@ -8,7 +8,6 @@ coverImage: /figures/python-1.jpg
 tags:
   - Linguagem Natural
   - Machine Learning
-  - Python
 published: false
 ---
 

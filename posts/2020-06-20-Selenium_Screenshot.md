@@ -6,7 +6,7 @@ featuredImage: ./featured/robot-1.jpg
 coverImage: /figures/robot-1.jpg
 category: Python
 tags:
-  - Python
+  - Automação
   - Selenium
   - Tests
 ---

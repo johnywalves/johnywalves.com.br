@@ -3,16 +3,21 @@ date: 2018-09-24 22:17:00 -0300
 title: Linux - Cheatsheet
 description: Comandos Básicos Linux para Consulta
 category: Linux
-topics:
-  [Arquivos e Diretórios, Redes, Usuário e Acessos, CRON, Processos, Serviços]
 featuredImage: ./featured/pinguim-1.jpg
 coverImage: /figures/pinguim-1.jpg
+topics:
+  - Arquivos e Diretórios
+  - Redes, Usuário e Acessos
+  - CRON
+  - Processos
+  - Serviços
 tags:
   - Linux
   - Bash
   - Shell
   - Cheatsheet
-cheatsheet: true  
+published: true
+cheatsheet: true
 ---
 
 ## Arquivos e Diretórios

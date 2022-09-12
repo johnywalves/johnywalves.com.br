@@ -3,9 +3,10 @@ date: 2018-08-19 15:00:00 -0300
 title: Classificação de Séries IMDb
 description: Visualização de dados da base dados do IMDb com a linguagem R
 category: R
-tags: [Visualização, R]
 featuredImage: ./featured/imdb-1.jpg
 coverImage: /figures/imdb-1.jpg
+tags:
+  - Visualização
 ---
 
 IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematografica apartir de _Passage de Venus_ de 1874 por _Pierre Jules César Janssen_ até os não lançados em pré-produção.  

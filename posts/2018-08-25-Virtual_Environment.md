@@ -1,11 +1,13 @@
 ---
 date: 2018-08-25 15:00:00 -0300
 title: PipEnv e Virtual Enviroment
-description: Lorem lipsunm
+description: Criação de ambiente virtual para isolar dependências em Python
 category: Python
-tags: [Ambiente, Python]
 featuredImage: ./featured/library-1.jpg
 coverImage: /figures/library-1.jpg
+tags:
+  - Ambiente
+  - Dependências
 ---
 
 Para facilitar o controle de dependências de uma projeto Python podemos isolar um ambiente para executar com um versão controlada do Python e dos seus pacotes  

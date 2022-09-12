@@ -1,14 +1,14 @@
 ---
 date: 2022-06-06 13:36:42 -0300
 title: Box Shadow
-description: Um pequeno estudo sobre uso de sombras
+description: Um estudo sobre uso de sombras em CSS
 category: CSS
 featuredImage: ./featured/desert-1.jpg
 coverImage: /figures/desert-1.jpg
 tags:
   - Designer
-  - CSS
   - HTML
+  - Animação
 ---
 
 Interação com a luz é a maneira como vemos as coisas, nessa interação com a luz é comum a geração de sombras sobre os objetos, o uso de sombras em interfaces Web trás uma sensação de volume e elevação

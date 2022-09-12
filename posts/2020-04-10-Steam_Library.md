@@ -6,7 +6,6 @@ featuredImage: ./featured/steam-1.jpg
 coverImage: /figures/steam-1.jpg
 category: JavaScript
 tags:
-  - JavaScript
   - HTML
   - CSS
 ---

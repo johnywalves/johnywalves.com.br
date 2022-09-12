@@ -1,20 +1,20 @@
 ---
 date: 2018-12-11 16:22:15 -0200
-title: Render Web Template (Python Flask)
-description: Lorem lipsunm
+title: Render Web Template com Python Flask
+description: Geração de template HTML com Python Flask
 category: Python
-tags: [Web, Python, Flask]
-topics:
-  [
-    Montagem do Modelo,
-    Preparação,
-    Interpretação,
-    Arquivos Estáticos,
-    Favicon,
-    Execução,
-  ]
 featuredImage: ./featured/gearspy-1.jpg
 coverImage: /figures/gearspy-1.jpg
+topics:
+  - Montagem do Modelo
+  - Preparação
+  - Interpretação
+  - Arquivos Estáticos
+  - Favicon
+  - Execução
+tags:
+  - Web
+  - Flask
 ---
 
 Entregar páginas Web intepretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponiveis somente neste ambiente

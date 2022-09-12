@@ -7,7 +7,7 @@ coverImage: /figures/hourglass-1.jpg
 category: CSS
 tags:
   - Web
-  - CSS
+  - Animação
 ---
 
 Pode não parecer, mas essa é uma div simples girando com CSS

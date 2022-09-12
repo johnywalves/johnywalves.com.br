@@ -7,9 +7,8 @@ featuredImage: ./featured/pokemon_cardgame-1.jpg
 coverImage: figures/pokemon_cardgame-1.jpg
 category: JavaScript
 tags:
-  - JavaScript
-  - Game
-  - React
+  - Games
+  - Design
 published: true
 ---
 

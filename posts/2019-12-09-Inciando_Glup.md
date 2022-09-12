@@ -3,7 +3,10 @@ date: 2019-12-09 11:03:00 -0300
 title: Iniciando com Gulp
 description: Automação de processo de desenvolvimento Web com hot reloading e minify
 category: Web
-tags: [HTML, CSS, Automação]
+tags:
+  - HTML
+  - CSS
+  - Automação
 featuredImage: ./featured/gulp-1.jpg
 coverImage: /figures/gulp-1.jpg
 ---

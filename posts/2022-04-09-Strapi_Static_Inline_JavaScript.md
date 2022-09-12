@@ -8,7 +8,6 @@ coverImage: /figures/armband-1.jpg
 tags:
   - Strapi
   - Static
-  - JavaScript
 ---
 
 Strapi é um headless CMS, em NodeJS com Koa, com grande facilidade de personalização, facilitando subir uma ferramenta e adequando para seu uso no decorer o projeto
@@ -25,7 +24,7 @@ Incluindo dentro dele comandos JavaScript com a tag `<script>` podemos incorpora
 
 ## Procedimento
 
-Dentro do **config/middlewares.js** alterar a declaração do `strapi::security` por 
+Dentro do **config/middlewares.js** alterar a declaração do `strapi::security` por
 
 ```javascript
 {

@@ -6,7 +6,6 @@ featuredImage: ./featured/mailbox-1.jpg
 coverImage: /figures/mailbox-1.jpg
 category: Python
 tags:
-  - Python
   - Requests
   - HTTP
 ---

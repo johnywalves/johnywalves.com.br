@@ -1,11 +1,14 @@
 ---
 date: 2018-09-10 20:33:15 -0300
 title: Iniciando com SQLAlchemy
-description: Lorem lipsunm
+description: Instação e primeiros passos com SQL Alchemy
 category: Python
-tags: [SQLAlchemy, Python, "Serialização"]
 featuredImage: ./featured/alchemy-1.jpg
 coverImage: /figures/alchemy-1.jpg
+tags:
+  - SQLAlchemy
+  - Ambiente
+  - Serialização
 ---
 
 Instalar o pacote do SQLAlchemy pelo repositório PiPy

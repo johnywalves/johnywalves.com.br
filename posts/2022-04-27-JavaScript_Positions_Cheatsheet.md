@@ -8,8 +8,7 @@ coverImage: /figures/planet-1.jpg
 tags:
   - Position
   - Cheatsheet
-  - JavaScript
-cheatsheet: true  
+cheatsheet: true
 ---
 
 Posicionamento de objeto com relação ao scroll da página
@@ -38,7 +37,7 @@ Movimentar scroll do navegador lentamente para posição
 window.scroll({
   top: 0,
   left: 0,
-  behavior: 'smooth',
+  behavior: "smooth",
 })
 ```
 
@@ -50,7 +49,8 @@ function isElementInViewport(el) {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   )
 }

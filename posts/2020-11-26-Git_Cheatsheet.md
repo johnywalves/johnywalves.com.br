@@ -6,9 +6,8 @@ category: Git
 featuredImage: ./featured/git-1.jpg
 coverImage: /figures/git-1.jpg
 tags:
-  - Git
   - Cheatsheet
-cheatsheet: true  
+cheatsheet: true
 ---
 
 Conferir se está instalado e a versão com `git --version` e usar `q` para sair das rotinas como a listagem de alteração

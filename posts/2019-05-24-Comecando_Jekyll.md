@@ -3,7 +3,9 @@ date: 2019-05-24 19:52:13 -0300
 title: Começando com Jekyll
 description: Geração de páginas estáticas com Jekyll e Markdown
 category: Jekyll
-tags: [Web, CMS, Jekyll]
+tags:
+  - Web
+  - CMS
 featuredImage: ./featured/jekyll-1.png
 coverImage: /figures/jekyll-1.png
 ---
@@ -82,7 +84,6 @@ As páginas devem possuir no topo o front matter com as informações da página
 ---
 nome_variavel: valor_variavel
 ---
-
 ```
 
 Com as variáveis padrão de `layout` com layout será usado, da pasta **\_layouts**, `permalink` o endereço para acessar a página e `published` se o arquivo será disponibilizado no build do projeto

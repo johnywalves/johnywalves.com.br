@@ -7,9 +7,8 @@ featuredImage: ./featured/hooks-1.jpg
 coverImage: /figures/hooks-1.jpg
 tags:
   - Cheatsheet
-  - JavaScript
-  - React
-cheatsheet: true  
+  - React Hooks
+cheatsheet: true
 ---
 
 ## useListener
@@ -17,7 +16,7 @@ cheatsheet: true
 Assistir atividades da janela com um atraso para evitar atualizações em excesso
 
 ```javascript
-import { useEffect } from 'react'
+import { useEffect } from "react"
 
 const useListener = (type, callback, delay) => {
   useEffect(() => {
@@ -42,21 +41,21 @@ export default useListener
 Hooks para uso de execução de função por um intervalo
 
 ```javascript
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react"
 
 const useInterval = (callback, delay) => {
-  const savedCallback = useRef(callback);
+  const savedCallback = useRef(callback)
 
   useEffect(() => {
-    savedCallback.current = callback;
-  });
+    savedCallback.current = callback
+  })
 
   useEffect(() => {
-    const tick = () => savedCallback.current();
+    const tick = () => savedCallback.current()
 
-    const id = setInterval(tick, delay);
-    return () => clearInterval(id);
-  }, []);
+    const id = setInterval(tick, delay)
+    return () => clearInterval(id)
+  }, [])
 }
 
 export default useInterval

@@ -1,11 +1,13 @@
 ---
 date: 2019-02-06 16:22:15 -0200
 title: Arquivos de texto grandes com PowerShell
-description: Lorem lipsunm
+description: Dividir arquivos grandes para processando
 category: Windows
-tags: [PowerShell, Arquivos]
 featuredImage: ./featured/files-1.jpg
 coverImage: /figures/files-1.jpg
+tags:
+  - PowerShell
+  - Arquivos
 ---
 
 Lidar com arquivos de texto extensos pode ser um pouco dificil ou demorado, mas podemos facilitar com algumas funções em PowerShell

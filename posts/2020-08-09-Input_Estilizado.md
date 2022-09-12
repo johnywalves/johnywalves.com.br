@@ -7,7 +7,7 @@ coverImage: /figures/paper-1.jpg
 category: CSS
 tags:
   - Web
-  - CSS
+  - Animação
 ---
 
 Placeholder é coisa do passado, a moda agora é título integrado

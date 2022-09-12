@@ -7,8 +7,8 @@ featuredImage: ./featured/coffee-1.jpg
 coverImage: /figures/coffee-1.jpg
 tags:
   - Designer
-  - CSS
-  - HTML
+  - Cores
+  - Ambiente
 published: false
 ---
 
