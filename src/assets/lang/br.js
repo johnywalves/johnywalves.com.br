@@ -24,7 +24,10 @@ const br = {
   },
   posts: {
     title: "Artigos",
+    category: "Categoria",
+    categories: "Categorias",
     description: "Últimos artigos publicados sobre vida e desenvolvimento",
+    allArticles: "Todos os artigos",
     viewAll: "Ver todos os artigos",
     feed: "http://feeds.feedburner.com/johnywalves-posts"
   },
@@ -270,29 +273,27 @@ const br = {
         cover: "bomdia",
         coverPosition: "center",
         view: "https://bomdiaequipesdev.com.br/",
-        description:
-          "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã",
+        description: "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã",
       },
       {
         title: "Register Switch",
         sourceCode: "https://github.com/johnywalves/register-switch",
         cover: "registerSwitch",
         view: "https://register-switch.vercel.app",
-        description:
-          "Time spent executing tasks in a simple way to enable and disable",
+        description: "Tempo gasto executando tarefas de forma simples para habilitar e desabilitar",
       },
       {
         title: "Daisy Bell",
         sourceCode: "https://github.com/johnywalves/daisy-bell",
         cover: "daisybell",
         view: "https://daisy.johnywalves.com.br",
-        description: "Compartilhamento de imagens com contexto",
+        description: "Modelo de projeto para compartilhamento de imagens com texto de contexto",
       },
       {
         title: "Comics Creator",
         view: "https://comics.johnywalves.com.br",
         cover: "comicscreator",
-        description: "Ferramenta para geração de tirinhas em SVG",
+        description: "Ferramenta para geração e visualização de tirinhas em SVG",
       },
       {
         title: "Fire Make Better",
@@ -300,14 +301,14 @@ const br = {
         cover: "firemakebetter",
         view: "https://johnywalves.github.io/fire-make-better/",
         description:
-          "Project developed for study in Angular, to organize some recipes, currently researching in Spoonacular",
+          "Projeto desenvolvido para estudo em Angular, para organizar algumas receitas, atualmente pesquisando no Spoonacular",
       },
       {
         title: "Navegação de mapa",
         sourceCode: "https://github.com/johnywalves/wolt",
         cover: "wolt",
         view: "https://johnywalves.github.io/wolt/",
-        description: "Projeto para construção de visualização de mapas",
+        description: "Projeto de visualização de mapa com pontos de interesses",
       },
       {
         title: "Biblioteca Steam",
@@ -315,6 +316,13 @@ const br = {
         cover: "steamLibrary",
         view: "https://johnywalves.github.io/steamlibrary/",
         description: "Visualização de biblioteca de jogos Steam",
+      },
+      {
+        title: "Perfil github.io",
+        sourceCode: "https://github.com/johnywalves/johnywalves.github.io/",
+        cover: "githubio",
+        view: "https://johnywalves.github.io/",
+        description: "Cartão de visitas Github.io",
       },
     ],
   },

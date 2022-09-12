@@ -24,8 +24,11 @@ const en = {
   },
   posts: {
     title: "Articles",
+    category: "Category",
+    categories: "Categories",
     description: "Latest published articles on life and development",
-    viewAll: "View all posts",
+    allArticles: "All articles",
+    viewAll: "View all artciles",
     feed: "http://feeds.feedburner.com/johnywalves-posts"
   },
   comics: {
@@ -244,16 +247,14 @@ const en = {
         sourceCode: "https://github.com/johnywalves/devflix",
         cover: "devflix",
         view: "https://devflix.johnywalves.com.br",
-        description:
-          "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira",
+        description: "Platform for sharing knowledge about software development in Brazilian language",
       },
       {
         title: "CSS Animatic",
         sourceCode: "https://github.com/johnywalves/cssanimatic",
         cover: "cssanimatic",
         view: "https://johnywalves.github.io/cssanimatic",
-        description:
-          "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS",
+        description: "CSS Animation easy, how should be: tool to help create aminations purely with CSS",
       },
       {
         title: "Johny W. Alves",
@@ -269,29 +270,27 @@ const en = {
         cover: "bomdia",
         coverPosition: "center",
         view: "https://bomdiaequipesdev.com.br/",
-        description:
-          "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã",
+        description: "A creative way to greet your fellow developers every morning",
       },
       {
         title: "Register Switch",
         sourceCode: "https://github.com/johnywalves/register-switch",
         cover: "registerSwitch",
         view: "https://register-switch.vercel.app",
-        description:
-          "Time spent executing tasks in a simple way to enable and disable",
+        description: "Time spent executing tasks in a simple way to enable and disable",
       },
       {
         title: "Daisy Bell",
         sourceCode: "https://github.com/johnywalves/daisy-bell",
         cover: "daisybell",
         view: "https://daisy.johnywalves.com.br",
-        description: "Compartilhamento de imagens com contexto",
+        description: "Project template for sharing images with text in context",
       },
       {
         title: "Comics Creator",
         view: "https://comics.johnywalves.com.br",
         cover: "comicscreator",
-        description: "Ferramenta gatspara geração de tirinhas em SVG",
+        description: "Tool for generating and viewing SVG strips",
       },
       {
         title: "Fire Make Better",
@@ -306,14 +305,21 @@ const en = {
         sourceCode: "https://github.com/johnywalves/wolt",
         cover: "wolt",
         view: "https://johnywalves.github.io/wolt/",
-        description: "Projeto para construção de visualização de mapas",
+        description: "Map visualization design with points of interest",
       },
       {
         title: "Biblioteca Steam",
         sourceCode: "https://github.com/johnywalves/steamlibrary",
         cover: "steamLibrary",
         view: "https://johnywalves.github.io/steamlibrary/",
-        description: "Visualização de biblioteca de jogos Steam",
+        description: "Steam game library view",
+      },
+      {
+        title: "Profile github.io",
+        sourceCode: "https://github.com/johnywalves/johnywalves.github.io/",
+        cover: "githubio",
+        view: "https://johnywalves.github.io/",
+        description: "Business card in Github.io",
       },
     ],
   },

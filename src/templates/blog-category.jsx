@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
+import Strings from "components/strings"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import ArticleItem from "components/ArticleItem"
@@ -19,7 +20,7 @@ const BlogList = ({ data, pageContext }) => {
 
   const ArticleNavigatior = () => (
     <>
-      <h2>Categorias</h2>
+      <h2>{Strings.posts.categories}</h2>
       <ul>
         {categories.map((category) => (
           <li>
@@ -41,7 +42,7 @@ const BlogList = ({ data, pageContext }) => {
     <Blueprint content>
       <ListsPages Navigator={ArticleNavigatior}>
         <h2>
-          Categoria: <strong>{category}</strong>
+          {Strings.posts.category}: <strong>{category}</strong>
         </h2>
         {postList.map(
           ({

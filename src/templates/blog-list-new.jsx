@@ -18,7 +18,7 @@ const BlogList = ({ data, pageContext }) => {
 
   const ArticleNavigatior = () => (
     <>
-      <h2>Categorias</h2>
+      <h2>{Strings.posts.categories}</h2>
       <ul>
         {categories.map((category) => (
           <li>
@@ -39,7 +39,7 @@ const BlogList = ({ data, pageContext }) => {
   return (
     <Blueprint content>
       <ListsPages Navigator={ArticleNavigatior}>
-        <h2>Todos os artigos</h2>
+        <h2>{Strings.posts.allArticles}</h2>
         {postList.map(
           ({
             node: {
