@@ -40,7 +40,7 @@ const imageFormat = css`
     2px 2px 4px 1px var(--shadow-colors);
   filter: grayscale(1) brightness(1.15);
   transform: rotate(10deg);
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
 
   ${media.lessThan("medium")`
     display: none;
@@ -113,7 +113,7 @@ export const ArticleItemCategory = styled.span`
   border-radius: 15px;
   text-transform: uppercase;
   opacity: 0.8;
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
 
   ${ArticleItemLink}:hover & {
     opacity: 1;
@@ -133,7 +133,8 @@ export const ArticleItemTags = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   opacity: 0.8;
-  transition: 0.2s ease-in-out;
+  transition: 0.25s ease-in-out;
+  gap: var(--2px);
 
   ${ArticleItemLink}:hover & {
     opacity: 1;

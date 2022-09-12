@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Text = styled.p`
   padding: 0.5rem 0.5rem 0.5rem 0;
-  margin: 0.2rem;
+  margin: 0.2rem 0.2rem 0.2rem 0;
   border-radius: 0.25rem;
 
   display: flex;
@@ -22,11 +22,12 @@ export const Text = styled.p`
   &:before {
     content: "";
     display: block;
-    height: var(--8px);
-    width: var(--8px);
+    height: 6px;
+    width: 6px;
     margin: 0 0.5rem;
 
     background: var(--background);
+    border: 2px solid var(--texts);
     border-radius: 50%;
   }
 `

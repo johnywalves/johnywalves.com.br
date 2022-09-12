@@ -31,7 +31,7 @@ export const ListsPagesWrapper = styled.section`
   }
 
   & a {
-    transition: color 0.2s ease-in-out;
+    transition: color 0.25s ease-in-out;
   }
 
   & a,
@@ -46,7 +46,15 @@ export const ListsPagesWrapper = styled.section`
 
 export const ListsPagesList = styled.div``
 
+export const ListsPagesNavigatorWrapper = styled.div`
+  position: relative;
+  display: flex;
+`
+
 export const ListsPagesNavigator = styled.nav`
+  position: sticky;
+  top: 100px;
+
   h2 {
     color: var(--texts);
     margin: 0 0 var(--16px) 0;
@@ -63,6 +71,7 @@ export const ListsPagesNavigator = styled.nav`
   li {
     background-color: var(--highlight);
     border-radius: 15px;
+    transition: 0.25s ease-in-out;
 
     & p {
       padding: var(--8px) var(--16px);
@@ -74,6 +83,10 @@ export const ListsPagesNavigator = styled.nav`
     & a:visited,
     & a:hover {
       color: var(--background);
+    }
+
+    &:hover {
+      opacity: 0.5;
     }
   }
 `

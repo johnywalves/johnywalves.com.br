@@ -144,4 +144,5 @@ export const PostItemTags = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: var(--16px);
 `

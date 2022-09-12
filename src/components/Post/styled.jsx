@@ -202,7 +202,7 @@ export const MainContent = styled.section`
   }
   .gatsby-resp-image-image {
     box-shadow: none !important;
-    transition: opacity 0.2s;
+    transition: opacity 0.25s;
     &.lazyload {
       opacity: 0;
     }

@@ -18,7 +18,7 @@ export const SearchWrapper = styled.section`
   background-position: top left, bottom right;
 
   & a {
-    transition: color 0.2s ease-in-out;
+    transition: color 0.25s ease-in-out;
   }
 
   & a,

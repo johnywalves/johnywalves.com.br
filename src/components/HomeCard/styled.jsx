@@ -9,7 +9,7 @@ export const Wrapper = styled.article`
     props.cover ? "none" : "3px var(--highlight) solid"};
   border-radius: 0.25rem;
   box-shadow: 0 0 2px var(--shadowColors), 2px 2px 4px var(--shadowColors);
-  transition: all 0.2s ease-out;
+  transition: all 0.25s ease-out;
 
   body.dark & {
     background-color: var(--mediumBackground);
@@ -102,4 +102,5 @@ export const Tags = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
+  gap: var(--16px);
 `

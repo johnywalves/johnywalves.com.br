@@ -104,6 +104,7 @@ export const Band = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   margin: 0.5rem 0;
+  gap: var(--16px);
 `
 
 export const Forehead = styled.div`

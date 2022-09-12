@@ -3,6 +3,7 @@ import React from "react"
 import {
   ListsPagesWrapper,
   ListsPagesList,
+  ListsPagesNavigatorWrapper,
   ListsPagesNavigator,
 } from "./styled"
 
@@ -10,9 +11,11 @@ const ListsPages = ({ Navigator, children }) => (
   <ListsPagesWrapper navigator={!!Navigator}>
     <ListsPagesList>{children}</ListsPagesList>
     {Navigator && (
-      <ListsPagesNavigator>
-        <Navigator />
-      </ListsPagesNavigator>
+      <ListsPagesNavigatorWrapper>
+        <ListsPagesNavigator>
+          <Navigator />
+        </ListsPagesNavigator>
+      </ListsPagesNavigatorWrapper>
     )}
   </ListsPagesWrapper>
 )
