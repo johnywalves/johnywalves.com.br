@@ -6,7 +6,6 @@ featuredImage: ./featured/jumpingdog-1.jpg
 coverImage: /figures/jumpingdog-1.jpg
 category: CSS
 tags:
-  - CSS
   - Animation
 ---
 

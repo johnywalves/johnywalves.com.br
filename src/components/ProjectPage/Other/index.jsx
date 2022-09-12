@@ -5,14 +5,20 @@ import Strings from "components/strings"
 import { Github } from "@styled-icons/fa-brands/Github"
 import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
 
-import { Wrapper, Title, Description, Links, Link } from "./styled"
+import {
+  OtherProjectWrapper,
+  OtherProjectTitle,
+  OtherProjectDescription,
+  OtherProjectLinks,
+  OtherProjectLink,
+} from "./styled"
 
-const Project = ({ view, sourceCode, title, description }) => (
-  <Wrapper>
-    <Title>{title}</Title>
-    <Description>{description}</Description>
-    <Links>
-      <Link
+const OtherProjects = ({ view, sourceCode, title, description }) => (
+  <OtherProjectWrapper>
+    <OtherProjectTitle>{title}</OtherProjectTitle>
+    <OtherProjectDescription>{description}</OtherProjectDescription>
+    <OtherProjectLinks>
+      <OtherProjectLink
         href={view}
         aria-label={`${Strings.visite} ${title}`}
         negative
@@ -20,17 +26,17 @@ const Project = ({ view, sourceCode, title, description }) => (
         rel="noreferrer"
       >
         <ExternalLink />
-      </Link>
-      <Link
+      </OtherProjectLink>
+      <OtherProjectLink
         href={sourceCode}
         aria-label={`${Strings.souceCode} ${title}`}
         target="_blank"
         rel="noreferrer"
       >
         <Github />
-      </Link>
-    </Links>
-  </Wrapper>
+      </OtherProjectLink>
+    </OtherProjectLinks>
+  </OtherProjectWrapper>
 )
 
-export default Project
+export default OtherProjects

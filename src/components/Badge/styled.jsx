@@ -22,12 +22,12 @@ export const Text = styled.p`
   &:before {
     content: "";
     display: block;
-    height: 6px;
-    width: 6px;
+    height: var(--8px);
+    width: var(--8px);
     margin: 0 0.5rem;
 
     background: var(--background);
-    border: 2px solid var(--texts);
+    border: 2px solid var(--shadow-colors);
     border-radius: 50%;
   }
 `

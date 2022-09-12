@@ -183,10 +183,12 @@ export const MenuBox = styled.div`
   width: 0%;
   top: -30%;
   right: -30%;
-  background-color: var(--highlight);
   z-index: 3;
   transition: 0.5s ease-in-out;
+  background: url("/vectors/lowpoly-shadow.svg");
+  background-color: var(--highlight);
   border-radius: 50% 25% / 50% 25%;
+  z-index: 8;
 `
 
 export const MenuLinksShow = keyframes`
@@ -278,16 +280,11 @@ export const MenuCheck = styled.input`
 `
 
 export const MenuWrapper = styled.label`
-  display: none;
   height: 30px;
   width: 30px;
   margin: 10px;
   cursor: pointer;
   z-index: 2;
-
-  ${media.lessThan("large")`
-    display: block;
-  `}
 `
 
 export const Hamburger = styled.span`

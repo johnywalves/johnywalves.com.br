@@ -342,14 +342,12 @@ const br = {
       },
       {
         title: "Carregando e Girando",
-        description:
-          "Efeito cíclico para indicação de carregamento de recursos",
+        description: "Efeito cíclico para indicação de carregamento de recursos",
         link: "/web/loadingspinner.html",
       },
       {
         title: "Pesquisa de Pessoas",
-        description:
-          "Cartas de apresentação de pessoas com opção de pesquisa por texto",
+        description: "Cartas de apresentação de pessoas com opção de pesquisa por texto",
         link: "/web/peoplesearch.html",
       },
       {
@@ -376,7 +374,7 @@ const br = {
         link: "/web/jumpingletters.html",
       },
       {
-        title: "Pequeno Kanban",
+        title: "Quadro Kanban",
         description: "Um pequeno Kanban com Drag and Drop",
         link: "/web/kanban/index.html",
       },

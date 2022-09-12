@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 import Strings from "components/strings"
 import Blueprint from "components/Blueprint"
@@ -8,7 +7,7 @@ import Seo from "components/seo"
 import ArticleItem from "components/ArticleItem"
 import NavigationPage from "components/NavigationPage"
 
-import ListsPages from "components/ListsPages"
+import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
 
 const BlogList = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges
@@ -19,23 +18,7 @@ const BlogList = ({ data, pageContext }) => {
   const isLast = currentPage === numPages
 
   const ArticleNavigatior = () => (
-    <>
-      <h2>{Strings.posts.categories}</h2>
-      <ul>
-        {categories.map((category) => (
-          <li>
-            <Anilink
-              paintDrip
-              to={`/new/category/${category.toLowerCase()}/`}
-              hex="#e0138c"
-              duration={0.5}
-            >
-              <p>{category}</p>
-            </Anilink>
-          </li>
-        ))}
-      </ul>
-    </>
+    <ArticleCategoryNavigatior categories={categories} />
   )
 
   return (

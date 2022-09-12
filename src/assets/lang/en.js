@@ -116,8 +116,8 @@ const en = {
     description: "Some courses to add some skills and knowledge",
   },
   certification: {
-    title: "Certificados",
-    description: "Lista de certificados",
+    title: "Certifications",
+    description: "Certifications list",
     list: [
       {
         date: "2022-07-08 00:00:00-0300",
@@ -338,7 +338,7 @@ const en = {
         link: "/web/inputanimation.html",
       },
       {
-        title: "Carregando e Girando",
+        title: "Loading and Spinning",
         description:
           "Efeito cíclico para indicação de carregamento de recursos",
         link: "/web/loadingspinner.html",
@@ -350,9 +350,8 @@ const en = {
         link: "/web/peoplesearch.html",
       },
       {
-        title: "Relógio com simulação do céu",
-        description:
-          "Manipulação de componentes e animações ao passar do tempo",
+        title: "Clock with sky simulation",
+        description: "Handling components and animations over time",
         link: "/web/clocksunandmon.html",
       },
       {
@@ -361,19 +360,18 @@ const en = {
         link: "/web/sunmoon.html",
       },
       {
-        title: "Questões Carreira Policial",
-        description:
-          "Listagem de questões resolvidas para estudo em carreira policial",
+        title: "Police career issues",
+        description: "List of resolved questions for study in police career",
         link: "/web/provascarreirapolicial/index.html",
       },
       {
-        title: "Letras pulando",
-        description: "Animação de letras pulando para placeholder para espera",
+        title: "Jumping letters",
+        description: "Animation of letters jumping to placeholder for hold",
         link: "/web/jumpingletters.html",
       },
       {
-        title: "Pequeno Kanban",
-        description: "Um pequeno Kanban com Drag and Drop",
+        title: "Chart Kanban",
+        description: "A chart Kanban with Drag and Drop",
         link: "/web/kanban/index.html",
       },
       {

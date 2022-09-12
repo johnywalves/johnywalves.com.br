@@ -10,7 +10,7 @@ export const ListsPagesWrapper = styled.section`
   background: var(--background);
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px - 256px);
   width: 100%;
   transition: opacity 0.4s;
   padding: var(--padding-content);
@@ -52,9 +52,6 @@ export const ListsPagesNavigatorWrapper = styled.div`
 `
 
 export const ListsPagesNavigator = styled.nav`
-  position: sticky;
-  top: 100px;
-
   h2 {
     color: var(--texts);
     margin: 0 0 var(--16px) 0;

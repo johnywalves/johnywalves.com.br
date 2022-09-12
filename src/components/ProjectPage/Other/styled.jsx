@@ -2,13 +2,13 @@ import styled, { css } from "styled-components"
 
 import { lightThird } from "../styled"
 
-export const Wrapper = styled.li`
+export const OtherProjectWrapper = styled.li`
   justify-self: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   width: 240px;
   border-radius: var(--8px);
@@ -25,16 +25,7 @@ export const Wrapper = styled.li`
   background-position: top left;
 `
 
-export const Links = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  justify-content: flex-end;
-  margin: var(--16px) 0 0 0;
-  gap: var(--8px);
-`
-
-export const Title = styled.h3`
+export const OtherProjectTitle = styled.h3`
   font-weight: 900;
   font-size: 1rem;
   line-height: 1.2rem;
@@ -45,9 +36,18 @@ export const Title = styled.h3`
   margin: var(--8px) 0;
 `
 
-export const Description = styled.p`
+export const OtherProjectDescription = styled.p`
   color: var(--texts);
   margin: var(--4px) 0;
+`
+
+export const OtherProjectLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  justify-content: flex-end;
+  margin: var(--16px) 0 0 0;
+  gap: var(--8px);
 `
 
 const negativeLink = css`
@@ -62,7 +62,7 @@ const negativeLink = css`
   }
 `
 
-export const Link = styled.a`
+export const OtherProjectLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

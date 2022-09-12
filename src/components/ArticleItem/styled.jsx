@@ -43,13 +43,12 @@ const imageFormat = css`
   transition: 0.25s ease-in-out;
 
   ${media.lessThan("medium")`
-    display: none;
-    border-radius: 0;
     font-size: 1rem;
     min-height: auto;
     min-width: auto;
     padding: .2rem .5rem;
     margin-bottom: .7rem;
+    align-self: center;
   `}
 
   ${ArticleItemLink}:hover & {
@@ -101,6 +100,11 @@ export const ArticleItemTitle = styled.h1`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    align-items: flex-start;
+  `}
 `
 
 export const ArticleItemCategory = styled.span`
