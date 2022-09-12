@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
+import Strings from "components/strings"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import ArticleItem from "components/ArticleItem"

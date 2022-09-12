@@ -22,7 +22,7 @@ Configurar nas variáveis de sistema `PATH` o caminho raiz e a pasta da instala�
 
 ### Ambiente Linux
 
-Distribuições Linux possuem uma ou duas versões do Python já embarcadas, que podem ser acessadas com os comandos `python2`, `python3` ou somente `python`, mas o gerenciador de pacotes precisa ser instalado
+Distribuições Linux possuem uma ou duas versões do Python já embarcadas, que podem ser acessadas com os comandos `python2`, `python3` ou somente `python`, mas o gerenciador de pacotes precisa ser instalado caso não esteja disponível
 
 ```bash
 apt-get install python-pip # Python 2
@@ -86,7 +86,7 @@ pip install -r requirements.txt
 
 ## Poema
 
-Para visualizar o poema basta usar comando no shell do Python
+Para visualizar o poema basta usar comando no shell do Python acessado por pelo comando `python`
 
 ```python
 import this
