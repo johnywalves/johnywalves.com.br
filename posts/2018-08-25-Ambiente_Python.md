@@ -1,7 +1,7 @@
 ---
 date: 2018-08-25 15:00:00 -0300
 title: Preparando Ambiente Python e Pacotes
-description: Visualização de dados e machine learning com o desafio do Kaggle do Titanic
+description: Configuração de ambiente para desenvolvimento em Python
 category: Python
 featuredImage: ./featured/python-2.jpg
 coverImage: /figures/python-2.jpg
