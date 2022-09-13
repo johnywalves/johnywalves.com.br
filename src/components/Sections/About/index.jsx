@@ -1,5 +1,5 @@
 import React from "react"
-import { FileDownload } from "@styled-icons/material-rounded/FileDownload"
+import { Download } from "@styled-icons/evaicons-solid/Download"
 import { Language as LanguageIcon } from "@styled-icons/ionicons-solid/Language"
 
 import { Header } from "components/Cards"
@@ -56,7 +56,7 @@ const SectionAbout = () => {
                 aria-label={`Download ${name}`}
               >
                 <Button light secondary={index !== 0}>
-                  <FileDownload /> {name}
+                  <Download /> {name}
                 </Button>
               </a>
             </Resume>

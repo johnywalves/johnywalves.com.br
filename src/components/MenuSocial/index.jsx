@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { RssSquare } from "@styled-icons/fa-solid/RssSquare"
+import { Rss } from "@styled-icons/fluentui-system-filled/Rss"
 
 import Strings from "components/strings"
 
@@ -26,7 +26,7 @@ const MenuSocial = ({ vertical }) => {
               rel="noopener noreferrer"
             >
               <IconWrapper>
-                <RssSquare /> <p>{Strings.posts.title}</p>
+                <Rss /> <p>{Strings.posts.title}</p>
               </IconWrapper>
             </Link>
           </Item>
@@ -38,7 +38,7 @@ const MenuSocial = ({ vertical }) => {
               rel="noopener noreferrer"
             >
               <IconWrapper>
-                <RssSquare /> <p>{Strings.comics.title}</p>
+                <Rss /> <p>{Strings.comics.title}</p>
               </IconWrapper>
             </Link>
           </Item>

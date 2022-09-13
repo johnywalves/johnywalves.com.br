@@ -2,8 +2,8 @@ import React, { useState, useMemo, useCallback } from "react"
 import { Parallax } from "react-scroll-parallax"
 
 import { Award } from "@styled-icons/fa-solid/Award"
-import { Tools } from "@styled-icons/fa-solid/Tools"
-import { University } from "@styled-icons/fa-solid/University"
+import { Toolbox } from "@styled-icons/fa-solid/Toolbox"
+import { School } from "@styled-icons/ionicons-sharp/School"
 import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
 import { Language } from "@styled-icons/ionicons-solid/Language"
 
@@ -223,7 +223,7 @@ const SectionExperience = () => {
                 icon={
                   certification && (
                     <Icon href={certification}>
-                      <University />
+                      <School />
                     </Icon>
                   )
                 }
@@ -257,11 +257,12 @@ const SectionExperience = () => {
               </Accomplishment>
             )
           )}
+          <AreaButton />
         </Area>
         <Area selected={selectedCourses}>
           {Strings.certification.list
             .filter((cert) =>
-              ["chartpie", "tools", "language"].includes(cert.icon)
+              ["chartpie", "toolbox", "language"].includes(cert.icon)
             )
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map(({ date, name, institute, icon, img }, index) => (
@@ -274,7 +275,7 @@ const SectionExperience = () => {
                 }
                 icon={
                   <Icon href={img}>
-                    {icon === "tools" && <Tools />}
+                    {icon === "toolbox" && <Toolbox />}
                     {icon === "chartpie" && <ChartPie />}
                     {icon === "language" && <Language />}
                   </Icon>

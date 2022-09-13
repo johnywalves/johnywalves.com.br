@@ -1,6 +1,6 @@
 import React from "react"
-import { Tools } from "@styled-icons/fa-solid/Tools"
-import { University } from "@styled-icons/fa-solid/University"
+import { Toolbox } from "@styled-icons/fa-solid/Toolbox"
+import { School } from "@styled-icons/ionicons-sharp/School"
 import { Award } from "@styled-icons/fa-solid/Award"
 import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
 import { Language } from "@styled-icons/ionicons-solid/Language"
@@ -26,8 +26,8 @@ const CertCard = ({ name, date, institute, img, icon }) => {
         description={institute}
         cover={
           <Icon>
-            {icon === "tools" && <Tools />}
-            {icon === "university" && <University />}
+            {icon === "toolbox" && <Toolbox />}
+            {icon === "school" && <School />}
             {icon === "award" && <Award />}
             {icon === "chartpie" && <ChartPie />}
             {icon === "language" && <Language />}

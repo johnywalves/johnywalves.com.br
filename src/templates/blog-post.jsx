@@ -52,6 +52,16 @@ export const query = graphql`
             )
           }
         }
+        openGraphImage: featuredImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 900
+              height: 600
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
+          }
+        }
       }
       html
       timeToRead
@@ -63,7 +73,7 @@ export default BlogPost
 
 export const Head = ({ location, data }) => {
   const {
-    frontmatter: { title, description, featuredImage },
+    frontmatter: { title, description, openGraphImage },
   } = data.markdownRemark
 
   return (
@@ -72,8 +82,10 @@ export const Head = ({ location, data }) => {
       title={title}
       description={description}
       image={
-        featuredImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src
+        openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src
       }
+      imagenWidth={900}
+      imageHeight={600}
     />
   )
 }

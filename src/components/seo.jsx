@@ -2,7 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ location, description, lang, title, image }) {
+function SEO({
+  location,
+  description,
+  lang,
+  title,
+  image,
+  imagenWidth,
+  imageHeight,
+  children,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -25,6 +34,8 @@ function SEO({ location, description, lang, title, image }) {
     pathImage = `${site.siteMetadata.siteUrl}${
       image || "/figures/thumbnail.png"
     }`,
+    sizeImageWidth = imagenWidth || 300,
+    sizeImageHeight = imageHeight || 148,
     urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
 
   return (
@@ -40,6 +51,8 @@ function SEO({ location, description, lang, title, image }) {
       <meta property="og:title" content={title || site.siteMetadata.title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={pathImage} />
+      <meta property="og:image:width" content={sizeImageWidth} />
+      <meta property="og:image:height" content={sizeImageHeight} />
       <meta property="og:locale" content={lang} />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -49,6 +62,8 @@ function SEO({ location, description, lang, title, image }) {
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:image" itemProp="image" content={pathImage} />
       <meta name="twitter:image:src" content={pathImage} />
+
+      {children}
     </>
   )
 }

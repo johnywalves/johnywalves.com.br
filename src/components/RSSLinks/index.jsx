@@ -1,5 +1,5 @@
 import React from "react"
-import { RssSquare } from "@styled-icons/fa-solid/RssSquare"
+import { Rss } from "@styled-icons/fluentui-system-filled/Rss"
 
 import links from "./content"
 import {
@@ -16,7 +16,7 @@ const MenuLinks = () => (
         <RSSLinksItem key={index}>
           <a href={url} target="_target" rel="noreferrer noopener">
             <IconWrapper>
-              <RssSquare />
+              <Rss />
             </IconWrapper>
             {description}
           </a>

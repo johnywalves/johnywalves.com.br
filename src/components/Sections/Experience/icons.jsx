@@ -5,7 +5,7 @@ import { Javascript } from "@styled-icons/simple-icons/Javascript"
 import { Python } from "@styled-icons/simple-icons/Python"
 import { Typescript } from "@styled-icons/simple-icons/Typescript"
 import { Gear } from "@styled-icons/bootstrap/Gear"
-import { Tools } from "@styled-icons/bootstrap/Tools"
+import { Toolbox } from "@styled-icons/fa-solid/Toolbox"
 import { Database } from "@styled-icons/entypo/Database"
 
 const Icons = {
@@ -16,7 +16,7 @@ const Icons = {
   Python,
   Typescript,
   Gear,
-  Tools,
+  Toolbox,
   Database,
 }
 

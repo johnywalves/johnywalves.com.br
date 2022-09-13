@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { FileDownload } from "@styled-icons/fa-solid/FileDownload"
+import { Download } from "@styled-icons/evaicons-solid/Download"
 
 import Badge from "components/Badge"
 import Strings from "components/strings"
@@ -57,7 +57,7 @@ const About = () => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FileDownload />
+                <Download />
                 <p>{file.name}</p>
               </a>
             ))}
@@ -131,7 +131,7 @@ const About = () => {
         </S.HeadSector>
         <div>
           {Strings.certification.list
-            .filter((cert) => ["chartpie", "tools"].includes(cert.icon))
+            .filter((cert) => ["chartpie", "toolbox"].includes(cert.icon))
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map((cert, index) => (
               <Experience

@@ -4,7 +4,7 @@ import { Linkedin } from "@styled-icons/fa-brands/Linkedin"
 import { Instagram } from "@styled-icons/fa-brands/Instagram"
 import { Twitter } from "@styled-icons/fa-brands/Twitter"
 import { Facebook } from "@styled-icons/fa-brands/Facebook"
-import { University } from "@styled-icons/fa-solid/University"
+import { School } from "@styled-icons/ionicons-sharp/School"
 import { Dev } from "@styled-icons/fa-brands/Dev"
 import { Hackerrank } from "@styled-icons/fa-brands/Hackerrank"
 import { Email } from "@styled-icons/material/Email"
@@ -16,7 +16,7 @@ const Icons = {
   Instagram,
   Twitter,
   Facebook,
-  University,
+  School,
   Dev,
   Hackerrank,
   Email,

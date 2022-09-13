@@ -100,13 +100,13 @@ const br = {
       {
         type: "Ferramentas",
         list: [
-          { title: "BPM", icon: "Tools" },
-          { title: "Docker", icon: "Tools" },
-          { title: "Firebase", icon: "Tools" },
-          { title: "Git", icon: "Tools" },
-          { title: "Scrum", icon: "Tools" },
-          { title: "Jenkins", icon: "Tools" },
-          { title: "VS Code", icon: "Tools" },
+          { title: "BPM", icon: "Toolbox" },
+          { title: "Docker", icon: "Toolbox" },
+          { title: "Firebase", icon: "Toolbox" },
+          { title: "Git", icon: "Toolbox" },
+          { title: "Scrum", icon: "Toolbox" },
+          { title: "Jenkins", icon: "Toolbox" },
+          { title: "VS Code", icon: "Toolbox" },
         ],
       },
     ],
@@ -132,21 +132,21 @@ const br = {
         name: "Pós-Graduação em Big Data",
         institute: "Centro Universitário Senac",
         img: "/cert/senac_bigdata.jpg",
-        icon: "university",
+        icon: "school",
       },
       {
         date: "2020-04-19 00:00:00-0300",
         name: "Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS",
         institute: "Udemy",
         img: "/cert/udemy_gatsby.jpg",
-        icon: "tools",
+        icon: "toolbox",
       },
       {
         date: "2018-07-27 00:00:00-0300",
         name: "Games 2D - Criando seu Primeiro Jogo",
         institute: "Senac São José do Rio Preto",
         img: "/cert/senac_games_2d.jpg",
-        icon: "tools",
+        icon: "toolbox",
       },
       {
         date: "2018-09-16 00:00:00-0300",
@@ -181,7 +181,7 @@ const br = {
         name: "Graduação em Tecnologia em Informática para Negócios",
         institute: "Fatec Rio Preto",
         img: "/cert/fatec_graduacao.jpg",
-        icon: "university",
+        icon: "school",
       },
       {
         date: "2018-03-13 00:00:00-0300",
@@ -628,7 +628,7 @@ const br = {
     },
     {
       label: "CNPq",
-      icon: "University",
+      icon: "School",
       url: "http://lattes.cnpq.br/0468996619713052",
     },
     {
