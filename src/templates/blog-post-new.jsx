@@ -67,7 +67,7 @@ export const query = graphql`
               height: 600
               layout: CONSTRAINED
               placeholder: BLURRED
-              formats: [PNG, JPG]
+              formats: [JPG]
             )
           }
         }
