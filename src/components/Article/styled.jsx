@@ -152,7 +152,7 @@ export const MainContent = styled.section`
     margin: 3.125rem auto;
   }
   hr {
-    border: 1px solid var(--borders);
+    border: 1px solid var(--shadow-colors);
     margin: 3rem auto;
   }
   #twitter-widget-0,

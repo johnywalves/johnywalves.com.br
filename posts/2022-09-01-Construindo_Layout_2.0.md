@@ -1,7 +1,7 @@
 ---
-date: 2022-09-01 21:07:54 -0300
 title: Construindo Layout 2.0
 description: Reconstruindo o layout desta bela página
+date: 2022-09-01 21:07:54 -0300
 category: CSS
 featuredImage: ./featured/coffee-1.jpg
 coverImage: /figures/coffee-1.jpg

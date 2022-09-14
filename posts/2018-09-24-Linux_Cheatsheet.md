@@ -81,6 +81,12 @@ cd /etc/NetworkManager/system-connections
 cat  /etc/NetworkManager/system-connections/<nome da rede>.nmconnection
 ```
 
+Limpar cache de DNS
+
+```bash
+sudo systemd-resolve --flush-caches
+```
+
 ## Compreeender Ambiente
 
 Visualizar pasta atual

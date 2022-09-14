@@ -2,9 +2,9 @@
 title: HTML Started
 description: Modelo para iniciar uma página HTML
 date: "2022-05-19 16:45:29"
+category: Web
 featuredImage: ./featured/net-1.jpg
 coverImage: /figures/net-1.jpg
-category: Web
 tags:
   - HTML
   - Cheatsheet
@@ -15,9 +15,9 @@ Um modelo simples para copiar e começar uma página HTML, cansei de ter de lemb
 
 Substituir as informações nas tags:
 
-**Page Title**: Título com o tamanho maáximo de 30 caracteres;  
-**Page Name**: Nome com o tamanho maáximo de 65 caracteres;  
-**Page Description**: Descrição com o tamanho maáximo de 155 caracteres;  
+**Page Title**: Título com o tamanho máximo de 30 caracteres;  
+**Page Name**: Nome com o tamanho máximo de 65 caracteres;  
+**Page Description**: Descrição com o tamanho máximo de 155 caracteres;  
 **url.page**: Endereço permanente para o conteúdo;  
 **/path/to/thumbnail**: caminho da imagem do thumbnail com tamanho máximo de 300KB e um link com HTTPS.
 
