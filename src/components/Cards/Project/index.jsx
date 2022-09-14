@@ -18,7 +18,7 @@ const Project = ({ title, sourceCode, view, cover }) => {
             href={view}
             target="_target"
             rel="noreferrer noopener"
-            aria-label={`Link to ${cover}`}
+            aria-label={`go to ${title}`}
             negative
           >
             <ExternalLink />
@@ -27,7 +27,7 @@ const Project = ({ title, sourceCode, view, cover }) => {
             href={sourceCode}
             target="_target"
             rel="noreferrer noopener"
-            aria-label={`Source code to ${cover}`}
+            aria-label={`source code of the ${title}`}
           >
             <Github />
           </SourceCode>

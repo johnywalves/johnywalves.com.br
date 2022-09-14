@@ -1,19 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Wrapper } from "./styled"
+import { ButtonWrapper } from "./styled"
 
 const Button = ({ children, selected, light, secondary, ...rest }) => {
   return (
-    <Wrapper
+    <ButtonWrapper
       {...rest}
       role="button"
       selected={selected}
-      light={light}
+      light={light ? 1 : 0}
       secondary={secondary}
     >
       {children}
-    </Wrapper>
+    </ButtonWrapper>
   )
 }
 

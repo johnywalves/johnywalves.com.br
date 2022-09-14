@@ -108,7 +108,10 @@ const Menu = ({ hero }) => {
         </div>
       </MenuBar>
       <MenuBox>
-        <MenuBackground image={jellyfish.childImageSharp.gatsbyImageData} />
+        <MenuBackground
+          image={jellyfish.childImageSharp.gatsbyImageData}
+          alt=""
+        />
         <MenuLinks>
           {Strings.menuLinks.map(({ label, url }) => (
             <li key={label}>

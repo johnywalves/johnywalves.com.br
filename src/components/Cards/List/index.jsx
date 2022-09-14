@@ -45,7 +45,7 @@ const List = ({ children, title, action, url, light, number }) => {
       <Header title={title} light={light} />
       <Content>{children}</Content>
       <NavigationWrapper>
-        {!number && (
+        {url && (
           <Navigation fade to={url} duration={0.75}>
             <Button light={light}>
               <MoreVerticalOutline /> {action}
@@ -81,7 +81,7 @@ const List = ({ children, title, action, url, light, number }) => {
             </Navigation>
             <Icon
               fade
-              to={url}
+              to={`/comic-${number + 1}`}
               duration={0.75}
               disabled={lastOne}
               light={light}
@@ -110,8 +110,8 @@ List.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   action: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
   light: PropTypes.bool.isRequired,
+  url: PropTypes.string,
   number: PropTypes.number,
 }
 

@@ -63,7 +63,7 @@ const styleButton = ({ light, selected }) => {
   return light ? lightButton : nonLightButton
 }
 
-export const Wrapper = styled.div`
+export const ButtonWrapper = styled.div`
   padding: 10px 30px;
   border-radius: 30px;
   cursor: pointer;

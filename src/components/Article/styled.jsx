@@ -63,6 +63,15 @@ export const PostDate = styled.p`
   font-size: 1.1rem;
   font-weight: 100;
   padding: 0 1.4rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    font-size: 0.8rem;
+    margin: 0 0.4rem;
+  }
 
   ${media.lessThan("large")`
     padding: 0 1rem;

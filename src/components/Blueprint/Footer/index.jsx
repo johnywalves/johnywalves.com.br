@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         <MenuSocial />
       </FooterContent>
-      <FooterImageCover image={show.childImageSharp.gatsbyImageData} />
+      <FooterImageCover image={show.childImageSharp.gatsbyImageData} alt="" />
     </FooterWrapper>
   )
 }

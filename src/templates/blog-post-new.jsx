@@ -29,7 +29,8 @@ const BlogPost = ({ data, pageContext }) => {
       )}
       <PostHeader>
         <PostDate>
-          {post.frontmatter.date} ● {post.timeToRead} min de leitura
+          {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
+          leitura
         </PostDate>
         <PostTitle>{post.frontmatter.title}</PostTitle>
         <PostDescription>{post.frontmatter.description}</PostDescription>
@@ -64,9 +65,9 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 900
-              height: 600
-              layout: CONSTRAINED
-              placeholder: BLURRED
+              aspectRatio: 1.5
+              layout: FIXED
+              placeholder: NONE
               formats: [JPG]
             )
           }
@@ -93,8 +94,8 @@ export const Head = ({ location, data }) => {
       image={
         openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src
       }
-      imagenWidth={900}
-      imageHeight={600}
+      imagenWidth={openGraphImage?.childImageSharp?.gatsbyImageData?.width}
+      imageHeight={openGraphImage?.childImageSharp?.gatsbyImageData?.height}
     />
   )
 }

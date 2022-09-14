@@ -53,7 +53,7 @@ const Arrow = (props) => (
       <path
         d="m12.541 2.468-6.5414 61.67 13.241-14.122z"
         fill="url(#linearGradient1556)"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       />
       <path
         d="m5.9998 64.138 55.568-23.686-42.357 9.3526z"

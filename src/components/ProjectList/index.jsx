@@ -130,6 +130,7 @@ const ProjectList = ({ simple }) => {
                         getImage(project.cover).childImageSharp.gatsbyImageData
                       }
                       style={{ objectPosition: project.coverPosition || "top" }}
+                      alt=""
                     />
                   </a>
                 )

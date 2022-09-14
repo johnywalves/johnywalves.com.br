@@ -31,7 +31,7 @@ const Hero = () => {
         </Title>
       </Content>
       <Cover>
-        <ImageCover image={show.childImageSharp.gatsbyImageData} />
+        <ImageCover image={show.childImageSharp.gatsbyImageData} alt="" />
       </Cover>
     </Wrapper>
   )

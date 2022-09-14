@@ -36,6 +36,7 @@ const imageFormat = css`
   height: 120px;
   width: 120px;
   background-position: center;
+  background-color: var(--background-card);
   box-shadow: 0 0 4px 1px var(--shadow-colors),
     2px 2px 4px 1px var(--shadow-colors);
   filter: grayscale(1) brightness(1.15);

@@ -5,11 +5,19 @@ import { HeaderWrapper, HeaderTitle, HeaderLine } from "./styled"
 
 const Header = ({ title, light, dark, left, right, small, fit }) => {
   return (
-    <HeaderWrapper left={left} right={right} fit={fit}>
-      <HeaderTitle light={light} dark={dark} small={small}>
+    <HeaderWrapper left={left ? 1 : 0} right={right ? 1 : 0} fit={fit ? 1 : 0}>
+      <HeaderTitle
+        light={light ? 1 : 0}
+        dark={dark ? 1 : 0}
+        small={small ? 1 : 0}
+      >
         {title}
       </HeaderTitle>
-      <HeaderLine light={light} dark={dark} small={small} />
+      <HeaderLine
+        light={light ? 1 : 0}
+        dark={dark ? 1 : 0}
+        small={small ? 1 : 0}
+      />
     </HeaderWrapper>
   )
 }

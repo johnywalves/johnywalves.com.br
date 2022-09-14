@@ -103,6 +103,7 @@ const ProjectPage = () => {
             <Project
               key={index}
               image={getImage(project.cover).childImageSharp.gatsbyImageData}
+              alt=""
               {...project}
             />
           ))}

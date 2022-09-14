@@ -31,7 +31,7 @@ const TriangleHalf = ({ color, ...rest }) => (
         transform="rotate(-6.9715 776.57 -4557.9)"
         d="m179.02 194.62-223.61-27.427 135.56-179.94z"
         fill={`url(#linearGradientTriangle${color.replace("#", "")})`}
-        fill-rule="evenodd"
+        fillRule="evenodd"
       />
     </g>
   </svg>

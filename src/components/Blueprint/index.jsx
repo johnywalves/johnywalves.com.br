@@ -14,7 +14,7 @@ const Blueprint = ({ children, content }) => {
   return (
     <ParallaxProvider>
       <GeneralStyles />
-      <Wrapper content={content}>
+      <Wrapper content={content ? 1 : 0}>
         <Menu hero={!content} />
         {children}
         {content && <Footer />}
