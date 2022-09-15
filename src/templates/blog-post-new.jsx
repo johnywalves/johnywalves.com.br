@@ -7,6 +7,7 @@ import RecommendedPost from "components/RecommendedPost"
 import Comments from "components/Comments"
 
 import {
+  ArticleWrapper,
   ArticleForehead,
   PostFeaturedImage,
   PostHeader,
@@ -22,29 +23,31 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Blueprint content>
-      {post.frontmatter.featuredImage && (
-        <ArticleForehead>
-          <PostFeaturedImage
-            image={
-              post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
-            }
-            alt=""
-          />
-        </ArticleForehead>
-      )}
-      <PostHeader>
-        <PostDate>
-          {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
-          leitura
-        </PostDate>
-        <PostTitle>{post.frontmatter.title}</PostTitle>
-        <PostDescription>{post.frontmatter.description}</PostDescription>
-      </PostHeader>
-      <MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </MainContent>
-      <RecommendedPost next={nextPost} previous={previousPost} />
-      <Comments title={post.frontmatter.title} url={slug} />
+      <ArticleWrapper>
+        {post.frontmatter.featuredImage && (
+          <ArticleForehead>
+            <PostFeaturedImage
+              image={
+                post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+              }
+              alt=""
+            />
+          </ArticleForehead>
+        )}
+        <PostHeader>
+          <PostDate>
+            {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
+            leitura
+          </PostDate>
+          <PostTitle>{post.frontmatter.title}</PostTitle>
+          <PostDescription>{post.frontmatter.description}</PostDescription>
+        </PostHeader>
+        <MainContent>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </MainContent>
+        <RecommendedPost next={nextPost} previous={previousPost} />
+        <Comments title={post.frontmatter.title} url={slug} />
+      </ArticleWrapper>
     </Blueprint>
   )
 }

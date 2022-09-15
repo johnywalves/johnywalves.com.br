@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import Menu from "./Menu"
 import Footer from "./Footer"
-import { Wrapper } from "./styled"
+import { BlueprintWrapper } from "./styled"
 
 import GeneralStyles from "styles/general"
 
@@ -14,11 +14,11 @@ const Blueprint = ({ children, content }) => {
   return (
     <ParallaxProvider>
       <GeneralStyles />
-      <Wrapper content={content ? 1 : 0}>
+      <BlueprintWrapper content={content ? 1 : 0}>
         <Menu hero={!content} />
         {children}
         {content && <Footer />}
-      </Wrapper>
+      </BlueprintWrapper>
     </ParallaxProvider>
   )
 }

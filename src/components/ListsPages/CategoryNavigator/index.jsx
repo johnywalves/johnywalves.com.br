@@ -39,12 +39,12 @@ const ArticleCategoryNavigatior = ({ categories }) => {
       <ArticleCategoryNavigatiorCover>
         <ArticleCategoryNavigatiorImage
           image={show.childImageSharp.gatsbyImageData}
-          delay={0.5}
+          delay={-3}
           alt=""
         />
         <ArticleCategoryNavigatiorImage
           image={react.childImageSharp.gatsbyImageData}
-          delay={4.5}
+          delay={3}
           alt=""
         />
       </ArticleCategoryNavigatiorCover>

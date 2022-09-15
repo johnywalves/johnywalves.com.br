@@ -66,22 +66,21 @@ const fadeEffect = keyframes`
   10% {
     opacity: 1;
   }
-  48% {
+  50% {
     opacity: 1;
     filter: blur(0);
   }
-  50% {
+  51% {
     opacity: 0;
     filter: blur(4px);
   }
   100% {
+    opacity: 0;
   }
 `
 
 export const ArticleCategoryNavigatiorImage = styled(GatsbyImage)`
-  position: absolute;
+  position: absolute !important;
   transition: none;
-  opacity: 0;
-  filter: blur(4px);
-  animation: ${fadeEffect} 8s ${({ delay }) => delay}s ease-in-out infinite;
+  animation: ${fadeEffect} 6s ${({ delay }) => delay}s ease-in-out infinite;
 `
