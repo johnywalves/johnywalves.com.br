@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import { List, Project } from "components/Cards"
+import { CardList, Project } from "components/Cards"
 
 import { Wrapper, ImageCover } from "./styled"
 
@@ -60,7 +60,7 @@ const SectionProjects = () => {
 
   return (
     <Wrapper>
-      <List
+      <CardList
         title={Strings.projects.title}
         action={Strings.projects.viewAll}
         url="/new/projects/"
@@ -89,7 +89,7 @@ const SectionProjects = () => {
             }
           />
         ))}
-      </List>
+      </CardList>
     </Wrapper>
   )
 }

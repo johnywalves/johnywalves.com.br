@@ -3,12 +3,17 @@ import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import { Article, List } from "components/Cards"
+import { CardArticle, CardList } from "components/Cards"
 
 import Arrow from "vectors/Arrow"
 import ArrowOutline from "vectors/ArrowOutline"
 
-import { Wrapper, BoxShape, BoxShapeOutline, ImageCover } from "./styled"
+import {
+  SectionArticlesWrapper,
+  SectionArticlesBoxShape,
+  SectionArticlesBoxShapeOutline,
+  SectionArticlesImageCover,
+} from "./styled"
 
 const SectionArticles = () => {
   const {
@@ -53,14 +58,14 @@ const SectionArticles = () => {
   `)
 
   return (
-    <Wrapper>
-      <List
+    <SectionArticlesWrapper>
+      <CardList
         title={Strings.posts.title}
         action={Strings.posts.viewAll}
         url="/new/blog/"
       >
         {edges.map(({ node }) => (
-          <Article
+          <CardArticle
             key={node.fields.slug}
             to={`/new${node.fields.slug}`}
             category={node.frontmatter.category}
@@ -69,7 +74,7 @@ const SectionArticles = () => {
             description={node.frontmatter.description}
             cover={
               node.frontmatter.featuredImage && (
-                <ImageCover
+                <SectionArticlesImageCover
                   image={
                     node.frontmatter.featuredImage.childImageSharp
                       .gatsbyImageData
@@ -80,18 +85,18 @@ const SectionArticles = () => {
             }
           />
         ))}
-      </List>
-      <BoxShapeOutline>
+      </CardList>
+      <SectionArticlesBoxShapeOutline>
         <Parallax translateY={[-35, 150]}>
           <ArrowOutline />
         </Parallax>
-      </BoxShapeOutline>
-      <BoxShape>
+      </SectionArticlesBoxShapeOutline>
+      <SectionArticlesBoxShape>
         <Parallax translateY={[-25, 50]}>
           <Arrow height="400" width="400" />
         </Parallax>
-      </BoxShape>
-    </Wrapper>
+      </SectionArticlesBoxShape>
+    </SectionArticlesWrapper>
   )
 }
 

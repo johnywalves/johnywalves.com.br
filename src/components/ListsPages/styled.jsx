@@ -10,7 +10,7 @@ export const ListsPagesWrapper = styled.section`
   background: var(--background);
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px - 256px);
+  min-height: max(980px, calc(100vh - 80px - 256px));
   width: 100%;
   transition: opacity 0.4s;
   padding: var(--padding-content);
@@ -49,41 +49,4 @@ export const ListsPagesList = styled.div``
 export const ListsPagesNavigatorWrapper = styled.div`
   position: relative;
   display: flex;
-`
-
-export const ListsPagesNavigator = styled.nav`
-  h2 {
-    color: var(--texts);
-    margin: 0 0 var(--16px) 0;
-    font-weight: 700;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: var(--8px);
-    flex-wrap: wrap;
-  }
-
-  li {
-    background-color: var(--highlight);
-    border-radius: 15px;
-    transition: 0.25s ease-in-out;
-
-    & p {
-      padding: var(--8px) var(--16px);
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    & a,
-    & a:visited,
-    & a:hover {
-      color: var(--background);
-    }
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
 `

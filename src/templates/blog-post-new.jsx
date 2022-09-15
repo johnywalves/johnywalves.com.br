@@ -7,6 +7,7 @@ import RecommendedPost from "components/RecommendedPost"
 import Comments from "components/Comments"
 
 import {
+  ArticleForehead,
   PostFeaturedImage,
   PostHeader,
   PostDate,
@@ -22,10 +23,14 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <Blueprint content>
       {post.frontmatter.featuredImage && (
-        <PostFeaturedImage
-          image={post.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-          alt=""
-        />
+        <ArticleForehead>
+          <PostFeaturedImage
+            image={
+              post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+            }
+            alt=""
+          />
+        </ArticleForehead>
       )}
       <PostHeader>
         <PostDate>
@@ -55,7 +60,7 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(
               width: 1200
-              height: 400
+              height: 500
               layout: CONSTRAINED
               placeholder: BLURRED
             )

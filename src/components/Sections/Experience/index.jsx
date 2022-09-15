@@ -19,6 +19,8 @@ import { Header } from "components/Cards"
 
 import Triangle from "vectors/Triangle"
 
+import Icons from "./icons"
+
 import {
   Wrapper,
   Content,
@@ -42,7 +44,6 @@ import {
   BoxShape,
   Icon,
 } from "./styled"
-import Icons from "./icons"
 
 const FormatDate = (text) => {
   const date = new Date(text),
@@ -175,9 +176,9 @@ const SectionExperience = () => {
                   {title}
                   <Institution> | {institution}</Institution>
                 </Title>
-                <Descriptions list>
+                <Descriptions list={1}>
                   {description.map((text, idx) => (
-                    <Description index={idx}>
+                    <Description key={idx}>
                       <span>
                         {text}
                         {description.length - 1 !== idx ? ";" : "."}

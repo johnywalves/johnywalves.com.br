@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-export const Wrapper = styled.div``
+export const CardListWrapper = styled.div``
 
 export const Content = styled.ul`
   display: flex;

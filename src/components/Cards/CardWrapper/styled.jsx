@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
-export const CardCover = styled.div`
+export const CardWrapperCover = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   transition: 0.5s ease-in-out;
 `
 
-export const CardWrapper = styled.li`
+export const CardWrapperWrapper = styled.li`
   position: relative;
   border-radius: 25px;
   overflow: hidden;
@@ -19,7 +19,7 @@ export const CardWrapper = styled.li`
   transform: scale(0.8);
   transition: all 0.5s ease-in-out;
 
-  ${CardCover} {
+  ${CardWrapperCover} {
     transform: rotate(11.25deg) translate(3%, 4%) scale(1.5);
     filter: grayscale(1);
   }
@@ -29,7 +29,7 @@ export const CardWrapper = styled.li`
       16px 16px 32px 4px var(--shadow-colors);
     transform: scale(1);
 
-    ${CardCover} {
+    ${CardWrapperCover} {
       transform: none;
       filter: none;
     }

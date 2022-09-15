@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Content = styled.div`
+export const CardArticleContent = styled.div`
   position: relative;
   left: 0;
   top: 226px;
@@ -15,13 +15,13 @@ export const Content = styled.div`
   box-shadow: 0 -2px 8px var(--shadow-colors);
 `
 
-export const Header = styled.div`
+export const CardArticleHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
-export const Category = styled.p`
+export const CardArticleCategory = styled.p`
   padding: 4px 8px;
   font-size: 1.25rem;
   font-weight: 900;
@@ -31,7 +31,7 @@ export const Category = styled.p`
   text-transform: uppercase;
 `
 
-export const Subtitle = styled.small`
+export const CardArticleSubtitle = styled.small`
   width: 100%;
   margin: 0 0 5px;
   font-size: 1.25rem;
@@ -39,12 +39,12 @@ export const Subtitle = styled.small`
   text-align: right;
 `
 
-export const Title = styled.h3`
+export const CardArticleTitle = styled.h3`
   font-size: 2rem;
   margin: 10px 0;
 `
 
-export const Description = styled.p`
+export const CardArticleDescription = styled.p`
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--texts);

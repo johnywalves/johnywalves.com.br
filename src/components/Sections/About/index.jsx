@@ -47,9 +47,8 @@ const SectionAbout = () => {
             <Header title={Strings.resume.title} light left small fit />
           </li>
           {Strings.resume.files.map(({ name, file }, index) => (
-            <Resume>
+            <Resume key={index}>
               <a
-                key={index}
                 href={file}
                 target="_blank"
                 rel="noreferrer"

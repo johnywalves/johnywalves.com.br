@@ -2,11 +2,23 @@ import styled, { css } from "styled-components"
 import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
+export const ArticleForehead = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
+export const PostFeaturedImage = styled(GatsbyImage)`
+  display: flex;
+  justify-content: center;
+`
+
 export const PostHeader = styled.header`
   color: var(--texts);
   margin: auto;
   max-width: 70rem;
-  padding: 2rem 5rem 0;
+  padding: var(--32px) 0 0;
 
   ${media.lessThan("large")`
     ${(props) =>
@@ -19,11 +31,6 @@ export const PostHeader = styled.header`
           `}
     max-width: 100%;
   `}
-`
-
-export const PostFeaturedImage = styled(GatsbyImage)`
-  display: flex;
-  justify-content: center;
 `
 
 export const ComicWrapper = styled.div`
@@ -81,7 +88,7 @@ export const PostDate = styled.p`
 export const MainContent = styled.section`
   margin: auto;
   max-width: 70rem;
-  padding: 2rem 5rem;
+  padding: var(--32px) 0;
 
   ${media.lessThan("large")`
     padding: 2rem 0;

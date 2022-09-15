@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const Wrapper = styled.section`
+export const SectionArticlesWrapper = styled.section`
   position: relative;
   width: 100%;
   padding: 45px 15px 80px;
@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   background-color: var(--highlight);
 `
 
-export const BoxShape = styled.div`
+export const SectionArticlesBoxShape = styled.div`
   position: absolute;
   left: -175px;
   z-index: 2;
@@ -20,7 +20,7 @@ export const BoxShape = styled.div`
   }
 `
 
-export const BoxShapeOutline = styled.div`
+export const SectionArticlesBoxShapeOutline = styled.div`
   position: absolute;
   left: 50px;
   z-index: 2;
@@ -31,4 +31,4 @@ export const BoxShapeOutline = styled.div`
   }
 `
 
-export const ImageCover = styled(GatsbyImage)``
+export const SectionArticlesImageCover = styled(GatsbyImage)``

@@ -93,9 +93,16 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const categories = result.data.AllPosts.edges
-      .map(({ node: { frontmatter: { category } } }) => category)
-      .filter((v, i, a) => a.indexOf(v) === i)
+    const categories = Object.entries(result.data.AllPosts.edges
+      .reduce((acumulator, { node: { frontmatter: { category } } }) => {
+        const currCount = acumulator[category] ?? 0;
+        return {
+          ...acumulator,
+          [category]: currCount + 1,
+        }
+      }, {}))
+      .sort(([, a], [, b]) => b - a)
+      .map(([category,]) => category)
 
     // Páginas de artigos
     result.data.AllPosts.edges.forEach(({ node, next, previous }) => {

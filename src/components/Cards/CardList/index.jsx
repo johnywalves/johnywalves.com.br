@@ -10,9 +10,15 @@ import { ArrowLeft, ArrowsLeft } from "icons"
 
 import Header from "../Header"
 
-import { Wrapper, Content, NavigationWrapper, Icon, Navigation } from "./styled"
+import {
+  CardListWrapper,
+  Content,
+  NavigationWrapper,
+  Icon,
+  Navigation,
+} from "./styled"
 
-const List = ({ children, title, action, url, light, number }) => {
+const CardList = ({ children, title, action, url, light, number }) => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -41,7 +47,7 @@ const List = ({ children, title, action, url, light, number }) => {
   const lastOne = number === lastNumber
 
   return (
-    <Wrapper>
+    <CardListWrapper>
       <Header title={title} light={light} />
       <Content>{children}</Content>
       <NavigationWrapper>
@@ -59,7 +65,7 @@ const List = ({ children, title, action, url, light, number }) => {
               to="/comic-1"
               duration={0.75}
               disabled={firstOne}
-              light={light}
+              light={light ? 1 : 0}
               aria-label="first"
             >
               <ArrowsLeft />
@@ -69,7 +75,7 @@ const List = ({ children, title, action, url, light, number }) => {
               to={`/comic-${number - 1}`}
               duration={0.75}
               disabled={firstOne}
-              light={light}
+              light={light ? 1 : 0}
               aria-label="previous"
             >
               <ArrowLeft />
@@ -84,7 +90,7 @@ const List = ({ children, title, action, url, light, number }) => {
               to={`/comic-${number + 1}`}
               duration={0.75}
               disabled={lastOne}
-              light={light}
+              light={light ? 1 : 0}
               aria-label="next"
             >
               <ArrowLeft rotate />
@@ -94,7 +100,7 @@ const List = ({ children, title, action, url, light, number }) => {
               to={`/comic-${lastNumber}`}
               duration={0.75}
               disabled={lastOne}
-              light={light}
+              light={light ? 1 : 0}
               aria-label="last"
             >
               <ArrowsLeft rotate />
@@ -102,21 +108,21 @@ const List = ({ children, title, action, url, light, number }) => {
           </>
         )}
       </NavigationWrapper>
-    </Wrapper>
+    </CardListWrapper>
   )
 }
 
-List.propTypes = {
+CardList.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   action: PropTypes.string.isRequired,
-  light: PropTypes.bool.isRequired,
+  light: PropTypes.bool,
   url: PropTypes.string,
   number: PropTypes.number,
 }
 
-List.propTypes = {
+CardList.defaultTypes = {
   light: false,
 }
 
-export default List
+export default CardList

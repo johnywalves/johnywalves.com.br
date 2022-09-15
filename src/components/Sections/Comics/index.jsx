@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import { List } from "components/Cards"
+import { CardList } from "components/Cards"
 
 import { Wrapper, Link, Header, Image } from "./styled"
 
@@ -58,7 +58,7 @@ const SectionComics = () => {
   return (
     <Wrapper>
       {edges.map(({ node }) => (
-        <List
+        <CardList
           key={node.fields.slug}
           title={Strings.comics.title}
           number={node.frontmatter.number}
@@ -89,7 +89,7 @@ const SectionComics = () => {
               />
             </Link>
           </li>
-        </List>
+        </CardList>
       ))}
     </Wrapper>
   )

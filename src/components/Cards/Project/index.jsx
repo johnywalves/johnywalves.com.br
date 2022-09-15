@@ -4,13 +4,13 @@ import PropTypes from "prop-types"
 import { Github } from "@styled-icons/fa-brands/Github"
 import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
 
-import Wrapper from "../Wrapper"
+import CardWrapper from "../CardWrapper"
 
 import { Banner, Title, Links, SourceCode } from "./styled"
 
 const Project = ({ title, sourceCode, view, cover }) => {
   return (
-    <Wrapper cover={cover}>
+    <CardWrapper cover={cover}>
       <Banner>
         {title && <Title>{title}</Title>}
         <Links>
@@ -33,7 +33,7 @@ const Project = ({ title, sourceCode, view, cover }) => {
           </SourceCode>
         </Links>
       </Banner>
-    </Wrapper>
+    </CardWrapper>
   )
 }
 

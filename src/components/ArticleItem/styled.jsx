@@ -39,7 +39,7 @@ const imageFormat = css`
   background-color: var(--background-card);
   box-shadow: 0 0 4px 1px var(--shadow-colors),
     2px 2px 4px 1px var(--shadow-colors);
-  filter: grayscale(1) brightness(1.15);
+  filter: saturate(0) brightness(1.15);
   transform: rotate(10deg);
   transition: 0.25s ease-in-out;
 
@@ -53,7 +53,7 @@ const imageFormat = css`
   `}
 
   ${ArticleItemLink}:hover & {
-    filter: none;
+    filter: saturate(125%);
     transform: none;
   }
 `
