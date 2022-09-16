@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const ArticleCategoryNavigatiorWrapper = styled.nav`
@@ -48,39 +48,38 @@ export const ArticleCategoryNavigatiorTitle = styled.h2`
 export const ArticleCategoryNavigatiorCover = styled.div`
   position: relative;
   height: 300px;
+  margin: 0 0 var(--16px);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 var(--16px);
 `
 
 const fadeEffect = keyframes`
-  0% {
+  0%, 50% {
     opacity: 0;
     filter: blur(4px);
   }
-  5% {
+  3%, 47% {
     opacity: 0.75;
     filter: blur(0);
   }
-  10% {
+  5%, 45% {
     opacity: 1;
-  }
-  50% {
-    opacity: 1;
-    filter: blur(0);
-  }
-  51% {
-    opacity: 0;
-    filter: blur(4px);
   }
   100% {
     opacity: 0;
   }
 `
 
+const alternateDirection = css`
+  animation-direction: reverse;
+`
+
 export const ArticleCategoryNavigatiorImage = styled(GatsbyImage)`
   position: absolute !important;
   transition: none;
-  animation: ${fadeEffect} 6s ${({ delay }) => delay}s ease-in-out infinite;
+  opacity: 0;
+  animation: ${fadeEffect} 4s linear infinite;
+
+  ${({ reverse }) => reverse && alternateDirection}
 `

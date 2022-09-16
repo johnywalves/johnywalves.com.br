@@ -2,6 +2,8 @@ import React from "react"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits, Stats } from "react-instantsearch-dom"
 
+import Strings from "components/strings"
+
 import Hit from "./Hit"
 import Algolia from "./Algolia"
 import { SearchWrapper, SearchPowerBy } from "./styled"
@@ -18,11 +20,13 @@ const Search = () => {
   return (
     <SearchWrapper>
       <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-        <SearchBox translations={{ placeholder: "Pesquisa..." }} />
+        <SearchBox translations={{ placeholder: `${Strings.search}...` }} />
         <Stats
           translations={{
             stats(nHits, timeSpentMs) {
-              return `${nHits} resultados encontrados em ${timeSpentMs}ms`
+              return Strings.searchResult
+                .replace("$1", nHits)
+                .replace("$2", timeSpentMs)
             },
           }}
         />

@@ -51,7 +51,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
       <Header title={title} light={light} />
       <Content>{children}</Content>
       <NavigationWrapper>
-        {url && (
+        {!number && url && (
           <Navigation fade to={url} duration={0.75}>
             <Button light={light}>
               <MoreVerticalOutline /> {action}

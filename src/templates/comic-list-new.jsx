@@ -6,7 +6,7 @@ import Seo from "components/seo"
 import PostItemComic from "components/PostItemComic"
 import NavigationPage from "components/NavigationPage"
 
-import ListsPages from "components/ListsPages"
+import ListsPages, { ArticleComicNavigator } from "components/ListsPages"
 
 const ComicList = (props) => {
   const comicsList = props.data.allMarkdownRemark.edges
@@ -17,7 +17,7 @@ const ComicList = (props) => {
 
   return (
     <Blueprint content>
-      <ListsPages>
+      <ListsPages Navigator={ArticleComicNavigator}>
         {comicsList.map(
           (
             {

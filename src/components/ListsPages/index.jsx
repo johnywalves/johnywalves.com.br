@@ -18,5 +18,6 @@ const ListsPages = ({ Navigator, children }) => (
 )
 
 export { default as ArticleCategoryNavigatior } from "./CategoryNavigator"
+export { default as ArticleComicNavigator } from "./ComicNavigator"
 
 export default ListsPages

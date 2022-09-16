@@ -6,6 +6,8 @@
   "seeLess": "Ver menos",
   "visite": "Visitar",
   "sourceCode": "Código fonte",
+  "search": "Pesquisa",
+  "searchResult": "$1 resultados encontrados em $2ms",
   "resume": {
     "title": "Currículo",
     "files": [

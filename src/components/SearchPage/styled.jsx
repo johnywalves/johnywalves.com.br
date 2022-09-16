@@ -2,10 +2,9 @@ import styled from "styled-components"
 import media from "styled-media-query"
 
 export const SearchWrapper = styled.section`
-  background: var(--background);
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px - 256px);
+  min-height: max(600px, calc(100vh - 80px - 256px));
   width: 100%;
   transition: opacity 0.4s;
   padding: var(--padding-content);
@@ -51,17 +50,26 @@ export const SearchWrapper = styled.section`
     color: var(--texts);
   }
 
+  .ais-SearchBox {
+    background: url("/vectors/lowpoly-shadow.svg");
+  }
+
   .ais-SearchBox-input {
     background: none;
     border: none;
-    border-bottom: 1px solid var(--shadow-colors);
+    border-bottom: 2px solid var(--shadow-colors);
     color: var(--texts);
     display: flex;
     font-size: 1.6rem;
     padding: 0.5rem;
     width: 100%;
+
     &::placeholder {
-      color: var(--texts);
+      color: var(--shadow-colors);
+    }
+
+    &:focus {
+      border-bottom: 2px solid var(--highlight);
     }
   }
 

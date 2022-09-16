@@ -6,6 +6,8 @@
   "seeLess": "See less",
   "visite": "Visite",
   "sourceCode": "Source code",
+  "search": "Search",
+  "searchResult": "$1 results founds in $2ms",
   "resume": {
     "title": "Resume",
     "files": [
