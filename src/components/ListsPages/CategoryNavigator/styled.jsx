@@ -47,7 +47,7 @@ export const ArticleCategoryNavigatiorTitle = styled.h2`
 
 export const ArticleCategoryNavigatiorCover = styled.div`
   position: relative;
-  height: 300px;
+  height: 450px;
   margin: 0 0 var(--16px);
   display: flex;
   align-items: center;
@@ -55,16 +55,14 @@ export const ArticleCategoryNavigatiorCover = styled.div`
 `
 
 const fadeEffect = keyframes`
-  0%, 50% {
-    opacity: 0;
-    filter: blur(4px);
-  }
-  3%, 47% {
-    opacity: 0.75;
-    filter: blur(0);
-  }
-  5%, 45% {
+  0% {
     opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
   }
   100% {
     opacity: 0;

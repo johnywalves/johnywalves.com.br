@@ -12,12 +12,12 @@ import {
 } from "./styled"
 
 const ArticleCategoryNavigatior = ({ categories }) => {
-  const { show, react } = useStaticQuery(graphql`
+  const { serious, laugh } = useStaticQuery(graphql`
     query {
-      show: file(relativePath: { eq: "profile_show.png" }) {
+      serious: file(relativePath: { eq: "profile_serious.png" }) {
         ...extractFieldsCategory
       }
-      react: file(relativePath: { eq: "profile_react.png" }) {
+      laugh: file(relativePath: { eq: "profile_laugh.png" }) {
         ...extractFieldsCategory
       }
     }
@@ -25,8 +25,7 @@ const ArticleCategoryNavigatior = ({ categories }) => {
     fragment extractFieldsCategory on File {
       childImageSharp {
         gatsbyImageData(
-          width: 400
-          height: 300
+          height: 400
           layout: CONSTRAINED
           placeholder: TRACED_SVG
         )
@@ -38,11 +37,11 @@ const ArticleCategoryNavigatior = ({ categories }) => {
     <ArticleCategoryNavigatiorWrapper>
       <ArticleCategoryNavigatiorCover>
         <ArticleCategoryNavigatiorImage
-          image={show.childImageSharp.gatsbyImageData}
+          image={serious.childImageSharp.gatsbyImageData}
           alt=""
         />
         <ArticleCategoryNavigatiorImage
-          image={react.childImageSharp.gatsbyImageData}
+          image={laugh.childImageSharp.gatsbyImageData}
           reverse={1}
           alt=""
         />

@@ -21,7 +21,7 @@ const Footer = () => {
           title
         }
       }
-      show: file(relativePath: { eq: "profile_neon.png" }) {
+      show: file(relativePath: { eq: "profile_bottom.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 386

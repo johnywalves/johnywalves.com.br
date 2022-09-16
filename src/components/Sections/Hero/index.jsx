@@ -28,24 +28,31 @@ const SectionHero = () => {
   const { show, react, down } = useStaticQuery(graphql`
     query {
       show: file(relativePath: { eq: "profile_show.png" }) {
-        ...extractFieldsHero
+        childImageSharp {
+          gatsbyImageData(
+            width: 400
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+          )
+        }
       }
       react: file(relativePath: { eq: "profile_react.png" }) {
-        ...extractFieldsHero
+        childImageSharp {
+          gatsbyImageData(
+            width: 600
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+          )
+        }
       }
       down: file(relativePath: { eq: "profile_down.png" }) {
-        ...extractFieldsHero
-      }
-    }
-
-    fragment extractFieldsHero on File {
-      childImageSharp {
-        gatsbyImageData(
-          width: 800
-          height: 600
-          layout: CONSTRAINED
-          placeholder: TRACED_SVG
-        )
+        childImageSharp {
+          gatsbyImageData(
+            width: 700
+            layout: CONSTRAINED
+            placeholder: TRACED_SVG
+          )
+        }
       }
     }
   `)
@@ -93,19 +100,13 @@ const SectionHero = () => {
       <BoxBackground />
 
       <ImageBox style={{ opacity: opacities === 0 ? 1 : 0 }}>
-        <Parallax speed={-10}>
-          <ImageCover image={show.childImageSharp.gatsbyImageData} alt="" />
-        </Parallax>
+        <ImageCover image={show.childImageSharp.gatsbyImageData} alt="" />
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 1 ? 1 : 0 }}>
-        <Parallax speed={-10}>
-          <ImageCover image={react.childImageSharp.gatsbyImageData} alt="" />
-        </Parallax>
+        <ImageCover image={react.childImageSharp.gatsbyImageData} alt="" />
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 2 ? 1 : 0 }}>
-        <Parallax speed={-10}>
-          <ImageCover image={down.childImageSharp.gatsbyImageData} alt="" />
-        </Parallax>
+        <ImageCover image={down.childImageSharp.gatsbyImageData} alt="" />
       </ImageBox>
 
       <WrapperSocial>

@@ -116,6 +116,6 @@ export const Image = styled(GatsbyImage)`
   border-radius: 50%;
   align-self: center;
   justify-self: center;
-  mask-image: linear-gradient(45deg, black 25%, transparent);
+  mask-image: linear-gradient(45deg, black 45%, transparent);
   mask-mode: alpha;
 `
