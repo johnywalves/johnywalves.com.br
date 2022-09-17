@@ -377,6 +377,11 @@
         "title": "Letras Neon",
         "description": "Letreiro neon animação",
         "link": "/web/neonletters.html"
+      },
+      {
+        "title": "Profiles",
+        "description": "Coleção de perfis online",
+        "link": "/web/profiles.html"
       }
     ]
   },

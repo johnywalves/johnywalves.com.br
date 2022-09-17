@@ -15,6 +15,7 @@ export const ListsPagesWrapper = styled.section`
   transition: opacity 0.4s;
   padding: var(--padding-content);
   padding-top: var(--48px);
+  padding-bottom: var(--96px);
 
   background: url("/vectors/triangle-wall-top.svg"),
     url("/vectors/triangle-wall-bottom.svg");

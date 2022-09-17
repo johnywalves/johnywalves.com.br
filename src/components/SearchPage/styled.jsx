@@ -8,6 +8,7 @@ export const SearchWrapper = styled.section`
   width: 100%;
   transition: opacity 0.4s;
   padding: var(--padding-content);
+  padding-bottom: var(--96px);
 
   background: url("/vectors/triangle-wall-top.svg"),
     url("/vectors/triangle-wall-bottom.svg");

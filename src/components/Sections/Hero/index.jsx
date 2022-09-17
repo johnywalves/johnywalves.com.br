@@ -21,6 +21,7 @@ import {
   Wrapper,
   ImageBox,
   ImageCover,
+  ImageCoverDown,
   WrapperSocial,
 } from "./styled"
 
@@ -106,7 +107,7 @@ const SectionHero = () => {
         <ImageCover image={react.childImageSharp.gatsbyImageData} alt="" />
       </ImageBox>
       <ImageBox style={{ opacity: opacities === 2 ? 1 : 0 }}>
-        <ImageCover image={down.childImageSharp.gatsbyImageData} alt="" />
+        <ImageCoverDown image={down.childImageSharp.gatsbyImageData} alt="" />
       </ImageBox>
 
       <WrapperSocial>

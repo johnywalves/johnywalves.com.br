@@ -98,6 +98,12 @@ export const ImageCover = styled(GatsbyImage)`
   object-position: bottom;
 `
 
+export const ImageCoverDown = styled(GatsbyImage)`
+  object-fit: cover;
+  object-position: bottom;
+  transform: translateY(7.6%);
+`
+
 export const WrapperSocial = styled(Container)`
   left: 32px;
   top: 50%;

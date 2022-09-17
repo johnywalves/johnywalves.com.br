@@ -377,6 +377,11 @@
         "title": "Neon Letters",
         "description": "Neon sign aninmate",
         "link": "/web/neonletters.html"
+      },
+      {
+        "title": "Profiles",
+        "description": "Online profile collection",
+        "link": "/web/profiles.html"
       }
     ]
   },
