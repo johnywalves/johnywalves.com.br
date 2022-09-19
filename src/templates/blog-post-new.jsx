@@ -108,7 +108,8 @@ export const Head = ({ location, data }) => {
     } = data.markdownRemark,
     { title: titleSite, author, siteUrl } = data.site.siteMetadata
 
-  const urlImage = `${siteUrl}${openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src}`,
+  const urlImage =
+      openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src,
     widthImage = openGraphImage?.childImageSharp?.gatsbyImageData?.width,
     heightImage = openGraphImage?.childImageSharp?.gatsbyImageData?.height,
     richSnipppet = {
