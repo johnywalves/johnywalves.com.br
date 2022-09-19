@@ -100,13 +100,14 @@ export const query = graphql`
 
 export default BlogPost
 
-export const Head = ({ location, data }) => {
+export const Head = ({ location, data, pageContext }) => {
   const {
       html,
       excerpt,
       frontmatter: { title, description, created, openGraphImage },
     } = data.markdownRemark,
-    { title: titleSite, author, siteUrl } = data.site.siteMetadata
+    { title: titleSite, author, siteUrl } = data.site.siteMetadata,
+    { slug } = pageContext
 
   const urlImage =
       openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src,
@@ -115,6 +116,7 @@ export const Head = ({ location, data }) => {
     richSnipppet = {
       "@context": "https://schema.org",
       "@type": "Article",
+      url: `${siteUrl}${slug}`,
       headline: title,
       alternativeHeadline: description,
       image: urlImage,
@@ -128,7 +130,6 @@ export const Head = ({ location, data }) => {
           url: `${siteUrl}/figures/favicon.png`,
         },
       },
-      url: siteUrl,
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `${siteUrl}/blog`,
