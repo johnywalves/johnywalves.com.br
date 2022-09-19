@@ -23,7 +23,7 @@ const BlogPost = ({ data, pageContext }) => {
   const { nextPost, previousPost, slug } = pageContext
 
   return (
-    <Blueprint content>
+    <Blueprint content openGraphImage={post.frontmatter.openGraphImage}>
       <ArticleWrapper>
         {post.frontmatter.featuredImage && (
           <ArticleForehead>

@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { ParallaxProvider } from "react-scroll-parallax"
 import PropTypes from "prop-types"
 
@@ -10,21 +11,62 @@ import GeneralStyles from "styles/general"
 
 import "styles/styles.css"
 
-const Blueprint = ({ children, content }) => {
+const Blueprint = ({ content, openGraphImage, children }) => {
+  const { site, thumbnail } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+        thumbnail: file(relativePath: { eq: "thumbnail.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 900
+              aspectRatio: 1.5
+              layout: FIXED
+              placeholder: NONE
+              formats: [JPG]
+            )
+          }
+        }
+      }
+    `
+  )
+
+  const pathImage = `${site.siteMetadata.siteUrl}${
+      (openGraphImage || thumbnail)?.childImageSharp?.gatsbyImageData?.images
+        ?.fallback.src
+    }`,
+    sizeImageWidth = (openGraphImage || thumbnail)?.childImageSharp
+      ?.gatsbyImageData?.width,
+    sizeImageHeight = (openGraphImage || thumbnail)?.childImageSharp
+      ?.gatsbyImageData?.height
+
   return (
-    <ParallaxProvider>
-      <GeneralStyles />
-      <BlueprintWrapper content={content ? 1 : 0}>
-        <Menu hero={!content} />
-        {children}
-        {content && <Footer />}
-      </BlueprintWrapper>
-    </ParallaxProvider>
+    <>
+      <ParallaxProvider>
+        <GeneralStyles />
+        <BlueprintWrapper content={content ? 1 : 0}>
+          <Menu hero={!content} />
+          {children}
+          {content && <Footer />}
+        </BlueprintWrapper>
+      </ParallaxProvider>
+      <link itemprop="thumbnailUrl" href={pathImage} />
+      <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href={pathImage} />
+        <meta itemprop="width" content={sizeImageWidth} />
+        <meta itemprop="height" content={sizeImageHeight} />
+      </span>
+    </>
   )
 }
 
 Blueprint.propTypes = {
   children: PropTypes.node.isRequired,
+  ogImage: PropTypes.object,
   content: PropTypes.bool,
 }
 

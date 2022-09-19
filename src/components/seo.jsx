@@ -68,17 +68,24 @@ function SEO({
       <meta property="og:site_name" content={titleName} />
       <meta property="og:title" content={title || site.siteMetadata.title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content={pathImage} />
+      <meta property="og:image" itemprop="image" content={pathImage} />
+      <meta
+        property="og:image:secure_url"
+        itemprop="image"
+        content={pathImage}
+      />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content={sizeImageWidth} />
       <meta property="og:image:height" content={sizeImageHeight} />
       <meta property="og:locale" content={lang} />
+      <meta property="og:updated_time" content="1440432930" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={urlContent} />
       <meta name="twitter:title" content={title || site.siteMetadata.title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:domain" content={site.siteMetadata.author} />
-      <meta name="twitter:site" content={site.siteMetadata.twitter} />
+      <meta name="twitter:site" content={site.siteMetadata.siteUrl} />
       <meta name="twitter:creator" content={site.siteMetadata.twitter} />
       <meta name="twitter:image:src" content={pathImage} />
 
