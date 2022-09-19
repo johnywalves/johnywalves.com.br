@@ -69,3 +69,18 @@ export const ArticleCategoryNavigatiorCover = styled.div`
     animation: ${breathing} 5s ease-in-out infinite;
   }
 `
+
+export const ArticleCategoryRss = styled.a`
+  color: var(--texts);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: var(--72px) 0 var(--24px);
+  align-self: flex-start;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    margin-right: var(--8px);
+  }
+`

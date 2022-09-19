@@ -1,14 +1,15 @@
 import styled from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
-import media from "styled-media-query"
 
 import { neonHighlight } from "../styled"
 
 export const Wrapper = styled.section`
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: max(80vh, 600px);
   overflow: hidden;
 
   background: url("/vectors/waves.svg"),
@@ -17,25 +18,6 @@ export const Wrapper = styled.section`
   background-size: 50% 100%, 100%;
   background-repeat: no-repeat;
   background-position: left bottom, center;
-
-  ${media.lessThan("large")`
-    grid-template-columns: 1fr;
-  `}
-`
-
-export const Cover = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: var(--64px) 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  background: url("/vectors/lowpoly-shadow.svg");
-`
-
-export const ImageCover = styled(GatsbyImage)`
-  object-fit: contain;
 `
 
 export const Content = styled.div`
@@ -54,12 +36,12 @@ export const Title = styled.h1`
   display: flex;
   flex-direction: column;
   font-style: italic;
-  transform: rotate(-6deg);
+  transform: rotate(-6deg) translateY(20%);
 
   ${neonHighlight}
 
   & span:nth-child(1) {
-    font-size: 10rem;
+    font-size: 11rem;
     line-height: 90%;
   }
 
@@ -69,14 +51,20 @@ export const Title = styled.h1`
   }
 
   & span:nth-child(3) {
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 90%;
   }
 `
 
-export const Description = styled.p`
-  color: var(--texts);
-  font-size: 1.25rem;
-  text-align: right;
-  text-shadow: 0 0 1px var(--shadow-colors), 2px 2px 1px var(--shadow-colors);
+export const ImageCover = styled(GatsbyImage)`
+  height: 400px;
+`
+
+export const Cover = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: url("/vectors/lowpoly-shadow.svg");
 `

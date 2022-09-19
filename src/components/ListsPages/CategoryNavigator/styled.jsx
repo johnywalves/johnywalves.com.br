@@ -45,6 +45,20 @@ export const ArticleCategoryNavigatiorTitle = styled.h2`
   font-weight: 700;
 `
 
+export const ArticleCategoryRss = styled.a`
+  color: var(--texts);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 0 var(--24px);
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    margin-right: var(--8px);
+  }
+`
+
 export const ArticleCategoryNavigatiorCover = styled.div`
   position: relative;
   height: 450px;

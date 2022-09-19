@@ -2,11 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
+import { Rss } from "@styled-icons/fluentui-system-filled/Rss"
+
 import Strings from "components/strings"
 
 import {
   ArticleCategoryNavigatiorWrapper,
   ArticleCategoryNavigatiorTitle,
+  ArticleCategoryRss,
   ArticleCategoryNavigatiorCover,
   ArticleCategoryNavigatiorImage,
 } from "./styled"
@@ -46,6 +49,13 @@ const ArticleCategoryNavigatior = ({ categories }) => {
           alt=""
         />
       </ArticleCategoryNavigatiorCover>
+      <ArticleCategoryRss
+        href={Strings.posts.feed}
+        target="_target"
+        rel="noreferrer noopener"
+      >
+        <Rss /> RSS {Strings.posts.title}
+      </ArticleCategoryRss>
       <ArticleCategoryNavigatiorTitle>
         {Strings.posts.categories}
       </ArticleCategoryNavigatiorTitle>
