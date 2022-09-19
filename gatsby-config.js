@@ -227,11 +227,12 @@ if (process.env.CONTEXT === "production") {
 module.exports = {
   siteMetadata: {
     title: `Johny W. Alves`,
-    position: `Desenvolvedor Web`,
     subtitle: `Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem`,
     description: `Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem`,
-    author: `@johnywalves`,
+    author: `johnywalves`,
+    twitter: `@johnywalves`,
     siteUrl: `https://www.johnywalves.com.br`,
+    siteUrlWithoutProtocol: `www.johnywalves.com.br`,
   },
   plugins: pluginsConfig,
   flags: {

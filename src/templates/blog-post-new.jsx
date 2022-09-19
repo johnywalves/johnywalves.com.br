@@ -9,6 +9,7 @@ import Comments from "components/Comments"
 import {
   ArticleWrapper,
   ArticleForehead,
+  ArticleForeheadCover,
   PostFeaturedImage,
   PostHeader,
   PostDate,
@@ -32,16 +33,17 @@ const BlogPost = ({ data, pageContext }) => {
               }
               alt=""
             />
+            <ArticleForeheadCover />
+            <PostHeader>
+              <PostDate>
+                {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
+                leitura
+              </PostDate>
+              <PostTitle>{post.frontmatter.title}</PostTitle>
+              <PostDescription>{post.frontmatter.description}</PostDescription>
+            </PostHeader>
           </ArticleForehead>
         )}
-        <PostHeader>
-          <PostDate>
-            {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
-            leitura
-          </PostDate>
-          <PostTitle>{post.frontmatter.title}</PostTitle>
-          <PostDescription>{post.frontmatter.description}</PostDescription>
-        </PostHeader>
         <MainContent>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </MainContent>
@@ -54,9 +56,17 @@ const BlogPost = ({ data, pageContext }) => {
 
 export const query = graphql`
   query PostNew($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+        siteUrl
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+        date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+        created: date
         title
         description
         featuredImage {
@@ -83,6 +93,7 @@ export const query = graphql`
       }
       html
       timeToRead
+      excerpt(format: PLAIN)
     }
   }
 `
@@ -91,19 +102,53 @@ export default BlogPost
 
 export const Head = ({ location, data }) => {
   const {
-    frontmatter: { title, description, openGraphImage },
-  } = data.markdownRemark
+      html,
+      excerpt,
+      frontmatter: { title, description, created, openGraphImage },
+    } = data.markdownRemark,
+    { title: titleSite, author, siteUrl } = data.site.siteMetadata
+
+  const urlImage = `${siteUrl}${openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src}`,
+    widthImage = openGraphImage?.childImageSharp?.gatsbyImageData?.width,
+    heightImage = openGraphImage?.childImageSharp?.gatsbyImageData?.height,
+    richSnipppet = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      alternativeHeadline: description,
+      image: urlImage,
+      author: author,
+      wordcount: html.length,
+      publisher: {
+        "@type": "Organization",
+        name: titleSite,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/figures/favicon.png`,
+        },
+      },
+      url: siteUrl,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/blog`,
+      },
+      datePublished: created,
+      dateCreated: created,
+      dateModified: created,
+      description: description,
+      articleBody: excerpt.slice(0, 128) + "...",
+    }
 
   return (
     <Seo
       location={location}
       title={title}
       description={description}
-      image={
-        openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src
-      }
-      imagenWidth={openGraphImage?.childImageSharp?.gatsbyImageData?.width}
-      imageHeight={openGraphImage?.childImageSharp?.gatsbyImageData?.height}
-    />
+      image={urlImage}
+      imagenWidth={widthImage}
+      imageHeight={heightImage}
+    >
+      <script type="application/ld+json">{JSON.stringify(richSnipppet)}</script>
+    </Seo>
   )
 }

@@ -63,6 +63,7 @@ const GeneralStyles = createGlobalStyle`
   body.dark {
     --texts: #f8f8f8;
     --background: #222;
+    --background-semi: #222222c0;
     --background-card: #303030;
     --shadow-colors: #ffffff88;
     --shadowColors: #ffffff88;
@@ -71,6 +72,7 @@ const GeneralStyles = createGlobalStyle`
   body.light {
     --texts: #333;
     --background: #f6f6f6;
+    --background-semi: #f6f6f6c0;
     --background-card: #fafafa;
     --shadow-colors: #0000003f;
     --shadowColors: #0000003f;
@@ -78,12 +80,14 @@ const GeneralStyles = createGlobalStyle`
 
   body {
     background-color: var(--background);
-    --padding-content: var(--36px) calc((100% - 1600px + 50px) / 2);
+    --padding-horizontal: calc((100% - 1600px + 50px) / 2);
+    --padding-content: var(--36px) var(--padding-horizontal);
   }
 
   @media (max-width: 1600px) {
     body {
-      --padding-content: var(--24px);
+      --padding-horizontal: var(--24px);
+      --padding-content: var(--24px) var(--padding-horizontal);
     }
   }
 `

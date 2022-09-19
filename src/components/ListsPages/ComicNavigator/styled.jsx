@@ -43,14 +43,18 @@ export const ArticleCategoryNavigatiorCover = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--shadow-colors);
-  border-radius: 50%;
-  box-shadow: 0 0 4px var(--shadowColors), 4px 4px 8px var(--shadowColors);
   overflow: hidden;
-  background: linear-gradient(var(--highlight-semi) -50%, var(--white) 150%);
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 50%,
+    var(--highlight) 50%,
+    var(--highlight) 100%
+  );
+  transform: rotate(65deg);
 
   svg {
-    transform: scale(-1, 1) translateY(20%);
+    transform: scale(-1, 1) translate(-28%, 11%) rotate(65deg);
   }
 
   & .headandhair {

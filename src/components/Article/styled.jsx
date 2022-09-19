@@ -14,22 +14,28 @@ export const ArticleWrapper = styled.article`
 `
 
 export const ArticleForehead = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 `
 
-export const PostFeaturedImage = styled(GatsbyImage)`
-  display: flex;
-  justify-content: center;
+export const ArticleForeheadCover = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-semi);
 `
 
-export const PostHeader = styled.header`
-  color: var(--texts);
-  margin: auto;
-  max-width: 70rem;
-  padding: var(--32px) 0 0;
+export const PostHeader = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   ${media.lessThan("large")`
     ${(props) =>
@@ -44,6 +50,11 @@ export const PostHeader = styled.header`
   `}
 `
 
+export const PostFeaturedImage = styled(GatsbyImage)`
+  display: flex;
+  justify-content: center;
+`
+
 export const ComicWrapper = styled.div`
   margin-top: 1.5rem;
   display: flex;
@@ -52,11 +63,34 @@ export const ComicWrapper = styled.div`
 
 export const PostComic = styled(GatsbyImage)``
 
+export const PostDate = styled.p`
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0 1.4rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--texts);
+
+  span {
+    font-size: 0.5rem;
+    margin: 0 0.4rem;
+  }
+
+  ${media.lessThan("large")`
+    padding: 0 1rem;
+  `}
+`
+
 export const PostTitle = styled.h1`
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   padding: 0 1.4rem;
   margin: 1rem auto;
+  color: var(--highlight);
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--shadow-colors);
 
   ${media.lessThan("large")`
     font-size: 2.8rem;
@@ -67,31 +101,14 @@ export const PostTitle = styled.h1`
 
 export const PostDescription = styled.h2`
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 400;
+  text-align: center;
   padding: 0 1.4rem;
+  color: var(--texts);
 
   ${media.lessThan("large")`
     font-size: 1.6rem;
     line-height: 1.3;
-    padding: 0 1rem;
-  `}
-`
-
-export const PostDate = styled.p`
-  font-size: 1.1rem;
-  font-weight: 100;
-  padding: 0 1.4rem;
-  vertical-align: middle;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  span {
-    font-size: 0.8rem;
-    margin: 0 0.4rem;
-  }
-
-  ${media.lessThan("large")`
     padding: 0 1rem;
   `}
 `
