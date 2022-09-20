@@ -12,10 +12,12 @@ const colorBackground = ({ secondary }) =>
 const colorOutline = ({ secondary }) =>
   !secondary
     ? css`
+        background-color: var(--background);
         border: 2px solid var(--highlight) !important;
         color: var(--highlight) !important;
       `
     : css`
+        background-color: var(--background);
         border: 2px solid var(--secondary) !important;
         color: var(--secondary) !important;
       `

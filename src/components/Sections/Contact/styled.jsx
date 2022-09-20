@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.section`
@@ -23,6 +24,10 @@ export const Content = styled.div`
   gap: 30px;
   width: min-content;
   margin: 0 auto;
+
+  ${media.lessThan("large")`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const Line = styled.div`
@@ -118,4 +123,5 @@ export const Image = styled(GatsbyImage)`
   justify-self: center;
   mask-image: linear-gradient(45deg, black 45%, transparent);
   mask-mode: alpha;
+  margin: var(--16px) 0;
 `

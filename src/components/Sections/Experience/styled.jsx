@@ -4,8 +4,9 @@ import styled, { css, keyframes } from "styled-components"
 export const Wrapper = styled.section`
   position: relative;
   width: 100%;
-  padding: 45px 25px;
+  padding: 45px var(--padding-horizontal);
   color: var(--texts);
+
   background: url("/vectors/triangle-neon.svg"),
     url("/vectors/triangle-wall-bottom.svg");
   background-color: var(--background);
@@ -143,6 +144,7 @@ export const Areas = styled.div`
   flex-direction: row;
   gap: 25px;
   margin: 30px 0 15px;
+  padding: 0 var(--padding-horizontal);
 `
 
 const selectedArea = css`

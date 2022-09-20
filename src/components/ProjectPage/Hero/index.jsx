@@ -11,7 +11,7 @@ const Hero = () => {
       show: file(relativePath: { eq: "profile_neon.png" }) {
         childImageSharp {
           gatsbyImageData(
-            height: 400
+            height: 500
             layout: CONSTRAINED
             placeholder: TRACED_SVG
           )

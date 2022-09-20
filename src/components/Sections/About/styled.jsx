@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   flex-direction: row;
   justify-content: center;
   margin: var(--56px) 0 0;
-  padding: 0 25px;
+  padding: 0 var(--padding-horizontal);
   position: relative;
   width: 100%;
   color: var(--texts);

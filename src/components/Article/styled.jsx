@@ -63,7 +63,7 @@ export const ComicWrapper = styled.div`
 
 export const PostComic = styled(GatsbyImage)``
 
-export const PostDate = styled.p`
+export const PostDate = styled.time`
   font-size: 1.1rem;
   font-weight: 600;
   padding: 0 1.4rem;

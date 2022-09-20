@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: max(80vh, 600px);
+  min-height: max(85vh, 650px);
   overflow: hidden;
 
   background: url("/vectors/waves.svg"),
@@ -41,23 +41,23 @@ export const Title = styled.h1`
   ${neonHighlight}
 
   & span:nth-child(1) {
-    font-size: 11rem;
+    font-size: 15rem;
     line-height: 90%;
   }
 
   & span:nth-child(2) {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 80%;
   }
 
   & span:nth-child(3) {
-    font-size: 6rem;
+    font-size: 8rem;
     line-height: 90%;
   }
 `
 
 export const ImageCover = styled(GatsbyImage)`
-  height: 400px;
+  height: 500px;
 `
 
 export const Cover = styled.div`

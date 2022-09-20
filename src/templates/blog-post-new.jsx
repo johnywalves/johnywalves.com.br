@@ -35,12 +35,20 @@ const BlogPost = ({ data, pageContext }) => {
             />
             <ArticleForeheadCover />
             <PostHeader>
-              <PostDate>
+              <PostDate
+                itemprop="datePublished"
+                datetime={post.frontmatter.created}
+              >
                 {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
                 leitura
               </PostDate>
-              <PostTitle>{post.frontmatter.title}</PostTitle>
-              <PostDescription>{post.frontmatter.description}</PostDescription>
+              <PostTitle itemprop="headline">
+                {post.frontmatter.title}
+              </PostTitle>
+              <PostDescription itemprop="description">
+                {post.frontmatter.description}
+              </PostDescription>
+              <meta itemprop="wordCount" content={post.html.length} />
             </PostHeader>
           </ArticleForehead>
         )}
