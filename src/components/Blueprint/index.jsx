@@ -11,7 +11,7 @@ import GeneralStyles from "styles/general"
 
 import "styles/styles.css"
 
-const Blueprint = ({ content, openGraphImage, children }) => {
+const Blueprint = ({ content, whiteLogo, openGraphImage, children }) => {
   const { site, thumbnail } = useStaticQuery(
     graphql`
       query {
@@ -49,7 +49,7 @@ const Blueprint = ({ content, openGraphImage, children }) => {
       <ParallaxProvider>
         <GeneralStyles />
         <BlueprintWrapper content={content ? 1 : 0}>
-          <Menu hero={!content} />
+          <Menu hero={!content} whiteLogo={whiteLogo} />
           {children}
           {content && <Footer />}
         </BlueprintWrapper>
@@ -68,10 +68,12 @@ Blueprint.propTypes = {
   children: PropTypes.node.isRequired,
   ogImage: PropTypes.object,
   content: PropTypes.bool,
+  whiteLogo: PropTypes.bool,
 }
 
 Blueprint.defaultTypes = {
   content: false,
+  whiteLogo: false,
 }
 
 export { default as Container } from "./Container"

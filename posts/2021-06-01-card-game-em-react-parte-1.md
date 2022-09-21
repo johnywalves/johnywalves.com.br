@@ -87,7 +87,6 @@ Cada invocar tem uma quantidade de pontos de vida o objetivo do é zerar os pont
 - Desistência do adversário;
 - Quando os pontos de vida do adversário chegar a zero;
 - Após finalizar 10 turnos quem tiver mais pontos de vida, se forem iguais segue os critérios de desempate em ordem:
-
   - Maior número de cartas no campo de batalha;
   - Maior valor de ataque das criaturas;
   - Maior valor de defesa das criaturas.

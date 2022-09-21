@@ -1,31 +1,15 @@
 import React from "react"
 
 import Blueprint from "components/Blueprint"
+import NotFoundPage from "components/NotFoundPage"
 import Seo from "components/seo"
 
-import * as S from "components/Post/styled"
-
-const NotFoundPage = () => (
-  <Blueprint>
-    <S.PostHeader>
-      <S.PostTitle>404: Not Found</S.PostTitle>
-      <S.PostDescription>
-        Um endereço para apresentar ausência de algum endereço
-      </S.PostDescription>
-    </S.PostHeader>
-    <S.MainContent>
-      <div>
-        <p>
-          Pode ser problema de um link quebrado, apontando para o endereço
-          errado, ou erro de digitação do usuário
-        </p>
-      </div>
-    </S.MainContent>
+const Page404 = () => (
+  <Blueprint whiteLogo>
+    <NotFoundPage />
   </Blueprint>
 )
 
-export default NotFoundPage
+export default Page404
 
-export const Head = ({ location }) => (
-  <Seo location={location} title="Not Found" />
-)
+export const Head = ({ location }) => <Seo location={location} title="404" />

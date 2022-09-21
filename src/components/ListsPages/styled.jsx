@@ -10,7 +10,7 @@ export const ListsPagesWrapper = styled.section`
   background: var(--background);
   display: flex;
   flex-direction: column;
-  min-height: max(600px, calc(100vh - 80px - 256px));
+  min-height: var(--min-height);
   width: 100%;
   transition: opacity 0.4s;
   padding: var(--padding-content);

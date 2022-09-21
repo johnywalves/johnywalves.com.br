@@ -8,6 +8,8 @@
   "sourceCode": "Source code",
   "search": "Search",
   "searchResult": "$1 results founds in $2ms",
+  "notfound": "The page you are looking for does not exist",
+  "backToHome": "back to home",
   "resume": {
     "title": "Resume",
     "files": [

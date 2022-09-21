@@ -8,6 +8,8 @@
   "sourceCode": "Código fonte",
   "search": "Pesquisa",
   "searchResult": "$1 resultados encontrados em $2ms",
+  "notfound": "A página que você procura não existe",
+  "backToHome": "voltar para a home",
   "resume": {
     "title": "Currículo",
     "files": [

@@ -80,6 +80,7 @@ const GeneralStyles = createGlobalStyle`
 
   body {
     background-color: var(--background);
+    --min-height: max(600px, calc(100vh - 80px - 256px));
     --padding-horizontal: calc((100% - 1600px + 50px) / 2);
     --padding-content: var(--36px) var(--padding-horizontal);
   }

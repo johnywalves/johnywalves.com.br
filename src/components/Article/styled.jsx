@@ -159,20 +159,25 @@ export const MainContent = styled.section`
   }
   ul,
   ol {
-    list-style: disc;
+    list-style: none;
     padding-left: 2.5rem;
     margin: 0 auto 1.6rem;
   }
   li {
     padding: 0.625rem 0;
+    code {
+      word-wrap: break-word;
+    }
     & > ul {
       margin-bottom: 0;
     }
-  }
-
-  li {
-    code {
-      word-wrap: break-word;
+    &::before {
+      content: "•";
+      color: var(--highlight);
+      font-weight: 900;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
     }
   }
   img {
@@ -212,6 +217,7 @@ export const MainContent = styled.section`
     font-weight: 800;
     letter-spacing: 0.069rem;
     line-height: 1.4;
+    color: var(--highlight);
   }
   h1 {
     font-size: 2.8rem;

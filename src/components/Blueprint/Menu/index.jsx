@@ -8,6 +8,7 @@ import useListener from "utils/useListener"
 import Strings from "components/strings"
 
 import Logo from "../Logo"
+
 import {
   HeaderWrapper,
   MenuBar,
@@ -24,7 +25,7 @@ import {
   Hamburger,
 } from "./styled"
 
-const Menu = ({ hero }) => {
+const Menu = ({ hero, whiteLogo }) => {
   const { jellyfish } = useStaticQuery(graphql`
     query {
       jellyfish: file(relativePath: { eq: "jellyfish.jpg" }) {
@@ -75,7 +76,7 @@ const Menu = ({ hero }) => {
     <HeaderWrapper>
       <MenuCheck id="menu-hamburger" type="checkbox" />
       <MenuBar className={classMenuBar}>
-        <Logo />
+        <Logo whiteLogo={whiteLogo ? 1 : 0} />
         <div>
           <MenuTop>
             {Strings.menuLinks.map(({ label, url }) => (
@@ -134,10 +135,12 @@ const Menu = ({ hero }) => {
 
 Menu.propTypes = {
   hero: PropTypes.bool,
+  whiteLogo: PropTypes.bool,
 }
 
 Menu.defaultTypes = {
   hero: false,
+  whiteLogo: false,
 }
 
 export default Menu

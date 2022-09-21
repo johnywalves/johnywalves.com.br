@@ -24,11 +24,11 @@ box-shadow: <deslocamento-horizontal> <deslocamento-vertical> <raio de desfoque>
 
 Detalhamento dos atributos
 
-- **deslocamento horizontal**: Quando a sombra está projetada para **direita** quando positivo e esquerda para valores negativas
-- **deslocamento vertical**: Quando a sombra está projetada para **baixa** quando positivo e cima para valores negativas
-- **raio de desfoque**: Quando a sombra possui desfoque devido a difusão da luz, a irregularidade de inscidência dela
-- **raio de espalhamento** (opcional): Tamanho adicional para a sombra, somando medida apartir do centro ou reduzindo da borda quando negativo, uma boa indicação de ângulo da luz sobre o objeto
-- **cor**: Cor da sombra, lembrado a possiblidade de controlar opacidade pela cor
+- **deslocamento horizontal**: Quando a sombra está projetada para **direita** quando positivo e esquerda para valores negativas;
+- **deslocamento vertical**: Quando a sombra está projetada para **baixa** quando positivo e cima para valores negativas;
+- **raio de desfoque**: Quando a sombra possui desfoque devido a difusão da luz, a irregularidade de inscidência dela;
+- **raio de espalhamento** (opcional): Tamanho adicional para a sombra, somando medida apartir do centro ou reduzindo da borda quando negativo, uma boa indicação de ângulo da luz sobre o objeto;
+- **cor**: Cor da sombra, lembrado a possiblidade de controlar opacidade pela cor.
 
 ## Incidência de luz
 

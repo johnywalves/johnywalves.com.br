@@ -1,5 +1,13 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
+
+const whiteLogoColor = css`
+  &,
+  &:hover,
+  &:visited {
+    color: var(--white);
+  }
+`
 
 export const LogoWrapper = styled(Anilink)`
   font-size: var(--36px);
@@ -12,4 +20,6 @@ export const LogoWrapper = styled(Anilink)`
   &:visited {
     color: var(--highlight);
   }
+
+  ${({ whiteLogo }) => whiteLogoColor}
 `

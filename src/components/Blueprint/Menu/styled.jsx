@@ -14,7 +14,7 @@ export const MenuBar = styled.nav`
   right: 0;
   height: 80px;
   width: 100%;
-  padding: 0 35px;
+  padding: 0 var(--36px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +37,10 @@ export const MenuBar = styled.nav`
       color: var(--white) !important;
     }
   }
+
+  ${media.lessThan("medium")`
+    padding: 0 var(--16px);
+  `}
 `
 
 export const MenuTop = styled.ul`
