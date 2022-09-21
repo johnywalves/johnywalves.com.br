@@ -5,13 +5,6 @@ description: Geração de template HTML com Python Flask
 category: Python
 featuredImage: ./featured/gearspy-1.jpg
 coverImage: /figures/gearspy-1.jpg
-topics:
-  - Montagem do Modelo
-  - Preparação
-  - Interpretação
-  - Arquivos Estáticos
-  - Favicon
-  - Execução
 tags:
   - Web
   - Flask

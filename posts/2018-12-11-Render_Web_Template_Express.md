@@ -5,13 +5,6 @@ description: Geração de template HTML com Node.js Express
 category: JavaScript
 featuredImage: ./featured/gearsjs-1.jpg
 coverImage: /figures/gearsjs-1.jpg
-topics:
-  - Montagem do Modelo
-  - Preparação
-  - Interpretação
-  - Arquivos Estáticos
-  - Favicon
-  - Execução
 tags:
   - Web
   - Node

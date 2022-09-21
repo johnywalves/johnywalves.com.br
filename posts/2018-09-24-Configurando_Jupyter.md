@@ -1,10 +1,10 @@
 ---
-date: 2018-09-24 22:17:00 -0300
 title: Configurar Jupyter para Servidor
 description: Alguns detalhes para Jupyter em trabalho em equipe
-category: Python
+date: 2018-09-24 22:17:00 -0300
 featuredImage: ./featured/jupiter-1.jpg
 coverImage: /figures/jupiter-1.jpg
+category: Python
 tags:
   - Jupyter
   - Ambiente

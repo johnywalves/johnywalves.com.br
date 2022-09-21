@@ -1,10 +1,10 @@
 ---
-date: 2020-09-10 18:18:49 -0300
 title: Não seja motivado, seja disciplinado
 description: Alguns pensamentos como lidar com o dia a dia
-category: Bem-estar
+date: 2020-09-10 18:18:49 -0300
 featuredImage: ./featured/rabbit-1.jpg
 coverImage: /figures/rabbit-1.jpg
+category: Bem-estar
 tags:
   - Desempenho
   - Rotina

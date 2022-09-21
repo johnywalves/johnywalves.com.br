@@ -2,6 +2,8 @@
 date: 2019-05-15 10:13:13 -0300
 title: Comunicação HTTP Servidor e Client
 description: Iniciando com Node Express
+featuredImage: ./featured/mail-1.jpg
+coverImage: /figures/mail-1.jpg
 category: JavaScript
 tags:
   - Web
@@ -10,8 +12,6 @@ tags:
   - Request
   - Response
   - Tutorial
-featuredImage: ./featured/mail-1.jpg
-coverImage: /figures/mail-1.jpg
 ---
 
 Usar a mesma linguagem na ponta-a-ponta em um ambiente favorece a troca de conhecimento entre equipes e atualmente JavaScript é uma ótima opção, pois tem suporte nativo nos navegadores e facilidade desenvolvimento com o Node

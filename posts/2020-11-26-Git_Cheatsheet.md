@@ -1,10 +1,10 @@
 ---
-date: 2020-11-26 14:18:35 -0300
 title: Git - Cheatsheet
 description: Comandos Git para Consulta
-category: Git
+date: 2020-11-26 14:18:35 -0300
 featuredImage: ./featured/git-1.jpg
 coverImage: /figures/git-1.jpg
+category: Git
 tags:
   - Cheatsheet
 cheatsheet: true

@@ -1,10 +1,10 @@
 ---
-date: 2018-08-19 15:00:00 -0300
 title: Mortes em Kill Bill
 description: Visualização de dados de filmes do Tarantino com a linguagem R
-category: R
+date: 2018-08-19 15:00:00 -0300
 featuredImage: ./featured/kill-bill-1.jpg
 coverImage: /figures/kill-bill-1.jpg
+category: R
 tags:
   - Visualização
 ---

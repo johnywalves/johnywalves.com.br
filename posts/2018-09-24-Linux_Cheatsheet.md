@@ -5,12 +5,6 @@ description: Comandos Básicos Linux para Consulta
 category: Linux
 featuredImage: ./featured/pinguim-1.jpg
 coverImage: /figures/pinguim-1.jpg
-topics:
-  - Arquivos e Diretórios
-  - Redes, Usuário e Acessos
-  - CRON
-  - Processos
-  - Serviços
 tags:
   - Linux
   - Bash

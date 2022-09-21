@@ -1,10 +1,10 @@
 ---
-date: 2019-03-03 10:13:13 -0300
 title: Http Server para arquivos estáticos (Python e JavaScript)
 description: Compartilhar arquivos ou testar um site rápido
-category: Web
+date: 2019-03-03 10:13:13 -0300
 featuredImage: ./featured/gift-1.jpg
 coverImage: /figures/gift-1.jpg
+category: Web
 tags:
   - Python
   - JavaScript

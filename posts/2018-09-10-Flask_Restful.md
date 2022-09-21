@@ -1,19 +1,10 @@
 ---
-date: 2018-09-10 20:33:15 -0300
 title: Web API Python com Flask, Restful e Token
-description: Lorem lipsunm
+description: Um pequeno servidor em Python, com uma camada simples de segurança
+date: 2018-09-10 20:33:15 -0300
 category: Python
 featuredImage: ./featured/flask-1.jpg
 coverImage: /figures/flask-1.jpg
-topics:
-  - Ambiente
-  - Flask
-  - REST
-  - JSON
-  - Token
-  - Testando
-  - Criptografia Hash
-  - Compilando
 tags:
   - Flask
   - Web

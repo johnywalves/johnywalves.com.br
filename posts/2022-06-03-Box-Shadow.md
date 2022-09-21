@@ -2,9 +2,9 @@
 title: Box Shadow
 description: Um estudo sobre uso de sombras em CSS
 date: 2022-06-06 13:36:42 -0300
-category: CSS
 featuredImage: ./featured/desert-1.jpg
 coverImage: /figures/desert-1.jpg
+category: CSS
 tags:
   - Designer
   - HTML

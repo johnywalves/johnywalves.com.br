@@ -3,12 +3,11 @@ date: 2019-10-10 11:03:00 -0300
 title: Iniciando Ciência de Dados
 description: Lorem lipsunm
 category: Python
+featuredImage: ./featured/alchemy-1.jpg
+coverImage: /figures/alchemy-1.jpg
 tags:
   - Pandas
   - Ciência de Dados
-topics: [Ambiente, "Instalação de Pacotes", "Carregar e Entender os dados"]
-featuredImage: ./featured/alchemy-1.jpg
-coverImage: /figures/alchemy-1.jpg
 published: false
 ---
 

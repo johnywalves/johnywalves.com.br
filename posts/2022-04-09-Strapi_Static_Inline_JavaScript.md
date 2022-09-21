@@ -1,10 +1,10 @@
 ---
-date: 2022-04-09 12:18:34 -0300
 title: Strapi - Static com JavaScript Inline
 description: Disponibilizar arquivos pela raiz do Strapi com JavaScript embutido
-category: Strapi
+date: 2022-04-09 12:18:34 -0300
 featuredImage: ./featured/armband-1.jpg
 coverImage: /figures/armband-1.jpg
+category: Strapi
 tags:
   - Strapi
   - Static

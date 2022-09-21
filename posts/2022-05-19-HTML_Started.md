@@ -2,9 +2,9 @@
 title: HTML Started
 description: Modelo para iniciar uma página HTML
 date: "2022-05-19 16:45:29"
-category: Web
 featuredImage: ./featured/net-1.jpg
 coverImage: /figures/net-1.jpg
+category: Web
 tags:
   - HTML
   - Cheatsheet

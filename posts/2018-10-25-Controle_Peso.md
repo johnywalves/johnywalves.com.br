@@ -1,10 +1,10 @@
 ---
-date: 2018-10-25 20:33:15 -0300
 title: Controle da evolução corporal
 description: Em processo de emagrecer regitrando as medides de "sucesso"
-category: Python
+date: 2018-10-25 20:33:15 -0300
 featuredImage: ./featured/balance-1.jpg
 coverImage: /figures/balance-1.jpg
+category: Python
 tags:
   - Visualização
 ---

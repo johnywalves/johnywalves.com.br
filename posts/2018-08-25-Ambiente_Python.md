@@ -1,10 +1,10 @@
 ---
-date: 2018-08-25 15:00:00 -0300
 title: Preparando Ambiente Python e Pacotes
 description: Configuração de ambiente para desenvolvimento em Python
-category: Python
+date: 2018-08-25 15:00:00 -0300
 featuredImage: ./featured/python-2.jpg
 coverImage: /figures/python-2.jpg
+category: Python
 tags:
   - Ambiente
 ---

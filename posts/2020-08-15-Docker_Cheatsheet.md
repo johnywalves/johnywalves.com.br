@@ -2,14 +2,14 @@
 date: 2020-08-15 14:18:35 -0300
 title: Docker - Cheatsheet
 description: Comandos Básicos Docker para Consulta
-category: Docker
 featuredImage: ./featured/docker-1.jpg
 coverImage: /figures/docker-1.jpg
+category: Docker
 tags:
   - Docker
   - Container
   - Cheatsheet
-cheatsheet: true  
+cheatsheet: true
 ---
 
 ## Docker

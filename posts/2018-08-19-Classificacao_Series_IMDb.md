@@ -1,10 +1,10 @@
 ---
-date: 2018-08-19 15:00:00 -0300
 title: Classificação de Séries IMDb
 description: Visualização de dados da base dados do IMDb com a linguagem R
-category: R
+date: 2018-08-19 15:00:00 -0300
 featuredImage: ./featured/imdb-1.jpg
 coverImage: /figures/imdb-1.jpg
+category: R
 tags:
   - Visualização
 ---

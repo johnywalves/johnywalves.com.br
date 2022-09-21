@@ -1,10 +1,10 @@
 ---
-date: 2018-08-19 15:00:00 -0300
 title: Previsão de Sobreviventes do Titanic
 description: Visualização de dados e machine learning com o desafio do Kaggle do Titanic
-category: R
+date: 2018-08-19 15:00:00 -0300
 featuredImage: ./featured/titanic-1.jpg
 coverImage: /figures/titanic-1.jpg
+category: R
 tags:
   - Machine Learning
   - Visualização

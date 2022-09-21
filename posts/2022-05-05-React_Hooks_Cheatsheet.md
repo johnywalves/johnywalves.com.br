@@ -1,10 +1,10 @@
 ---
-date: 2022-05-05 09:01:55 -0300
 title: React Hooks - Cheatsheet
 description: Cheatsheet de alguns Hooks para resolver algumas situações
-category: React
+date: 2022-05-05 09:01:55 -0300
 featuredImage: ./featured/hooks-1.jpg
 coverImage: /figures/hooks-1.jpg
+category: React
 tags:
   - Cheatsheet
   - React Hooks

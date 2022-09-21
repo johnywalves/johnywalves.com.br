@@ -1,14 +1,14 @@
 ---
-date: 2019-12-09 11:03:00 -0300
 title: Iniciando com Gulp
 description: Automação de processo de desenvolvimento Web com hot reloading e minify
+date: 2019-12-09 11:03:00 -0300
 category: Web
+featuredImage: ./featured/gulp-1.jpg
+coverImage: /figures/gulp-1.jpg
 tags:
   - HTML
   - CSS
   - Automação
-featuredImage: ./featured/gulp-1.jpg
-coverImage: /figures/gulp-1.jpg
 ---
 
 Desenvolvimento Web é simples de começar, HTML + CSS são de fácil compressão para iniciar e pode escalar como se fosso eterno, para facilitar esse proceso existe várias ferramentas um das mais fáceis de iniciar é o Gulp
