@@ -8,7 +8,7 @@ import Sidebar from "../Sidebar"
 import MenuBar from "../MenuBar"
 import GlobalStyles from "../../styles/global"
 
-import "../../styles/styles.css"
+import "../../styles/box-shadow.css"
 
 const Layout = ({ children }) => (
   <S.LayoutWrapper>

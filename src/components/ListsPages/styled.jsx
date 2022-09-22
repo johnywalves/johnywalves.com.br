@@ -1,9 +1,15 @@
 import styled, { css } from "styled-components"
+import media from "styled-media-query"
 
 const hasNavigator = css`
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: var(--24px);
+
+  ${media.lessThan("large")`
+      display: flex;
+      flex-direction: column-reverse;
+  `}
 `
 
 export const ListsPagesWrapper = styled.section`

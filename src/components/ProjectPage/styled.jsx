@@ -110,6 +110,12 @@ export const List = styled.ul`
   ${media.lessThan("large")`
     grid-template-columns: repeat(2, 1fr);
   `}
+
+  ${media.lessThan("medium")`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `}
 `
 
 export const ListOther = styled.ul`
@@ -125,6 +131,10 @@ export const ListOther = styled.ul`
   @media (max-width: 1150px) {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  ${media.lessThan("medium")`
+    grid-template-columns: repeat(2, 1fr);
+  `}
 `
 
 export const ListOnePage = styled.ul`
@@ -135,4 +145,8 @@ export const ListOnePage = styled.ul`
   flex-wrap: wrap;
   margin: var(--72px) 0 var(--24px);
   gap: var(--36px);
+
+  ${media.lessThan("medium")`
+    justify-content: center;
+  `}
 `

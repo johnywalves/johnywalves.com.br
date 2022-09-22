@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const FooterWrapper = styled.footer`
@@ -26,6 +27,10 @@ export const FooterWrapper = styled.footer`
       color: var(--white);
     }
   }
+
+  ${media.lessThan("large")`
+    flex-direction: column;
+  `}
 `
 
 export const FooterContent = styled.div`
@@ -46,7 +51,12 @@ export const FooterDescription = styled.p`
 `
 
 export const FooterImageCover = styled(GatsbyImage)`
-  object-fit: contain;
+  object-fit: cover;
   margin: 0 0 -120px 0;
   transform: translateY(-120px);
+
+  ${media.lessThan("large")`
+    margin: 0;
+    transform: none;
+  `}
 `

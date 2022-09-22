@@ -145,6 +145,10 @@ export const Areas = styled.div`
   gap: 25px;
   margin: 30px 0 15px;
   padding: 0 var(--padding-horizontal);
+
+  & > div {
+    z-index: 3;
+  }
 `
 
 const selectedArea = css`

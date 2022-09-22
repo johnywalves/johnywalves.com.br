@@ -68,7 +68,7 @@ const ProjectPage = () => {
       childImageSharp {
         gatsbyImageData(
           width: 328
-          height: 160
+          layout: CONSTRAINED
           placeholder: DOMINANT_COLOR
           formats: [AUTO, WEBP]
         )

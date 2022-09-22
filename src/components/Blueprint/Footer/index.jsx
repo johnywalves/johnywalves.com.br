@@ -24,7 +24,6 @@ const Footer = () => {
       show: file(relativePath: { eq: "profile_bottom.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 386
             height: 340
             layout: CONSTRAINED
             placeholder: TRACED_SVG

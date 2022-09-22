@@ -397,7 +397,11 @@
         "institution": "Fatec Rio Preto",
         "description": [
           "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software."
-        ]
+        ],
+        "production": {
+          "title": "Essay: Analizo - Textual analysis for corporate communication validation (Brazilian)",
+          "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
+        }
       },
       {
         "date": "Mar 2018 - Mar 2020",
@@ -408,7 +412,7 @@
           "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
         ],
         "production": {
-          "title": "Essay: Proposta para aplicação de Regras de Associação para varejos online (Portuguese)",
+          "title": "Essay: Proposal for the application of Rules of Association for online retailers (Brazilian)",
           "file": "/docs/associacao_varejo_online.pdf"
         }
       },
@@ -455,9 +459,8 @@
         "title": "Senior Developer Frontend",
         "institution": "CI&T",
         "description": [
-          "Development of a tool for ANBIMA (financial services) to receive information regarding portfolios managed by financial institutions",
-          "Improved SEO and performance of the financial products data publishing platform",
-          "Technologies: HTML, CSS, JavaScript, React, NextJS, Gitlab, Vanilla JavaScript e jQuery"
+          "ANBIMA | Development of a tool for financial institutions to collect operations from managed portfolios, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
+          "Coca-Cola | Updating and maintaining marketing tools in collecting leads and tracking user metrics (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
         ]
       },
       {
@@ -465,8 +468,8 @@
         "title": "Frontend Developer",
         "institution": "Meta",
         "description": [
-          "Service provision for Localiza in the maintenance and evolution of the Zarp tool, for vehicle rental and other services, aimed at capturing and retaining customers",
-          "Restructuring of Zarp focused on user experience, value delivery and search engine optimization (SEO)"
+          "Service provision for Localiza in the maintenance and evolution of the Zarp Localiza tool, for vehicle rental and other services, aimed at capturing and retaining customers",
+          "Restructuring of Zarp Localiza focused on user experience, value delivery and search engine optimization (SEO) with NextJS"
         ]
       },
       {
@@ -483,9 +486,9 @@
         "title": "Full Web Developer",
         "institution": "Unimed Rio Preto",
         "description": [
-          "Development of the service portal to customers (JavaScript, TypeScript, React, NextJS, HTML e CSS)",
-          "Design and development API to authentication e data deliver (PL/SQL, Java, Spring Boot e RESTFul)",
-          "Test Automation and DevOps (Apache Tomcat, Jenkins, Jest and Python)"
+          "Web development of the service portal for beneficiaries for financial control, exams, appointment scheduling, among others (JavaScript, TypeScript, React, NextJS, HTML e CSS)",
+          "API planning and development for authentication and delivery of beneficiary data (PL/SQL, Java, Spring Boot e RESTFul)",
+          "Test Automation and DevOps for in-house and third-party development (Apache Tomcat, Jenkins, Jest and Python)"
         ]
       },
       {
@@ -493,10 +496,9 @@
         "title": "Full Developer",
         "institution": "GS Group",
         "description": [
-          "Acting as software engineer and developer web plataform with mobile integration (Asp.NET MVC and React Native)",
-          "Process automation (Java and Python)",
-          "Dashboards for view management (JavaScript with NodeJS)",
-          "Data quality maintenance process (Pentaho)"
+          "Web management and development with mobile integration for tracking promoters at points of sale (Asp.NET MVC and React Native)",
+          "Dashboards for visual management to monitor JBS supply (JavaScript with NodeJS)",
+          "Maintenance of the loading and transformation process of JBS partner butchers (Pentaho)"
         ]
       },
       {
@@ -504,9 +506,8 @@
         "title": "Process Automation Consultant",
         "institution": "Grupo WDG",
         "description": [
-          "Process automation and chatbots (WDG Automation)",
-          "Struturing of projects with BPMN (Bizagi BPMN Modeler)",
-          "Development of extensions for Google Chrome (JavaScript) "
+          "Automation of processes and chatbots (WDG Automation) and structuring of projects with BPMN for calls to Recalls for Toyota Rodobens (Bizagi BPMN Modeler)",
+          "Extension development for Google Chrome of telemarketing tool from Claro (JavaScript)"
         ]
       },
       {
@@ -523,7 +524,8 @@
         "title": "Full Developer",
         "institution": "Freelancer",
         "description": [
-          "Provision of services for adjustments and automation of tax obligation deliveries (.Net C #)"
+          "Provision of services for adjustments and automation of tax obligation deliveries",
+          "Technology: .Net C# and Microsoft SQL Server"
         ]
       },
       {
@@ -531,7 +533,8 @@
         "title": "Software Developer",
         "institution": "Dual Consultoria e Sistemas",
         "description": [
-          "Development of management software for distributors with a focus on financial transactions and tax obligations (Progress)"
+          "Development of management software for distributors with a focus on financial transactions and tax obligations",
+          "Technology: Progress"
         ]
       },
       {
@@ -548,7 +551,8 @@
         "title": "Software Developer",
         "institution": "Condor Informática",
         "description": [
-          "ERP development for financial control, inventory and generation of deliveries for tax obligations (Delphi and Firebase)"
+          "ERP development for financial control, inventory and generation of deliveries for tax obligations",
+          "Technologies: Delphi and Firebase"
         ]
       },
       {
@@ -556,7 +560,8 @@
         "title": "Software Developer",
         "institution": "SOC Informática",
         "description": [
-          "Consulting and provision of services in accounting and information technology for individuals and companies (Delphi and Firebase)"
+          "Consulting and provision of services in accounting and information technology for individuals and companies",
+          "Technologies: Delphi and Firebase"
         ]
       }
     ]

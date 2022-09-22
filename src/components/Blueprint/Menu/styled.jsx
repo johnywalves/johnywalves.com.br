@@ -197,7 +197,7 @@ export const MenuBox = styled.div`
 
 export const MenuLinksShow = keyframes`
   from { opacity: 0; }
-  to { opacity: 0.5; }
+  to { opacity: 1; }
 `
 
 export const MenuBackground = styled(GatsbyImage)`
@@ -209,6 +209,10 @@ export const MenuBackground = styled(GatsbyImage)`
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
   border-radius: 30% 80% 80% 30% / 55%;
+
+  & picture {
+    opacity: 0.3;
+  }
 `
 
 export const MenuLinks = styled.ul`
@@ -223,26 +227,41 @@ export const MenuLinks = styled.ul`
   color: var(--white);
   font-size: var(--80px);
   font-weight: 700;
-
-  &.active {
-    opacity: 1;
-  }
 `
 
 export const MenuLinksLink = styled(Anilink)`
   text-decoration: none;
   transition: 0.25s ease-in-out;
+  opacity: 0.75;
 
-  &:hover {
-    opacity: 1;
-
-    & span {
-      color: var(--white);
-    }
+  &.active {
+    cursor: default;
+    font-weight: 300;
+    pointer-events: none;
   }
 
-  & span {
-    color: var(--texts);
+  &:not(.active) {
+    & span {
+      opacity: 1;
+      transition: 0.25s ease-in-out;
+      color: var(--texts);
+
+      .dark & {
+        color: var(--background);
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+
+      & span {
+        color: var(--white);
+
+        .dark & {
+          color: var(--white);
+        }
+      }
+    }
   }
 `
 

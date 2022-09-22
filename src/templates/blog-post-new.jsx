@@ -25,33 +25,31 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <Blueprint content openGraphImage={post.frontmatter.openGraphImage}>
       <ArticleWrapper>
-        {post.frontmatter.featuredImage && (
-          <ArticleForehead>
+        <ArticleForehead>
+          {post.frontmatter.featuredImage && (
             <PostFeaturedImage
               image={
                 post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
               }
               alt=""
             />
-            <ArticleForeheadCover />
-            <PostHeader>
-              <PostDate
-                itemprop="datePublished"
-                datetime={post.frontmatter.created}
-              >
-                {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
-                leitura
-              </PostDate>
-              <PostTitle itemprop="headline">
-                {post.frontmatter.title}
-              </PostTitle>
-              <PostDescription itemprop="description">
-                {post.frontmatter.description}
-              </PostDescription>
-              <meta itemprop="wordCount" content={post.html.length} />
-            </PostHeader>
-          </ArticleForehead>
-        )}
+          )}
+          <ArticleForeheadCover />
+          <PostHeader>
+            <PostDate
+              itemprop="datePublished"
+              datetime={post.frontmatter.created}
+            >
+              {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
+              leitura
+            </PostDate>
+            <PostTitle itemprop="headline">{post.frontmatter.title}</PostTitle>
+            <PostDescription itemprop="description">
+              {post.frontmatter.description}
+            </PostDescription>
+            <meta itemprop="wordCount" content={post.html.length} />
+          </PostHeader>
+        </ArticleForehead>
         <MainContent>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </MainContent>

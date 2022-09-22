@@ -48,7 +48,7 @@ const imageFormat = css`
     min-height: auto;
     min-width: auto;
     padding: .2rem .5rem;
-    margin-bottom: .7rem;
+    margin-bottom: var(--32px);
     align-self: center;
   `}
 

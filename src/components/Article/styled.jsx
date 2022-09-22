@@ -19,6 +19,7 @@ export const ArticleForehead = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 20rem;
 `
 
 export const ArticleForeheadCover = styled.div`
@@ -30,9 +31,6 @@ export const ArticleForeheadCover = styled.div`
 
 export const PostHeader = styled.div`
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +42,7 @@ export const PostHeader = styled.div`
             padding: 0.5rem 0.5rem 0;
           `
         : css`
-            padding: 3rem 0 0;
+            padding: 0;
           `}
     max-width: 100%;
   `}

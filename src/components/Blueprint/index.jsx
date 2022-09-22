@@ -9,7 +9,7 @@ import { BlueprintWrapper } from "./styled"
 
 import GeneralStyles from "styles/general"
 
-import "styles/styles.css"
+import "styles/box-shadow.css"
 
 const Blueprint = ({ content, whiteLogo, openGraphImage, children }) => {
   const { site, thumbnail } = useStaticQuery(

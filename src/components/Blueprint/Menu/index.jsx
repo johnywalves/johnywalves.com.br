@@ -31,7 +31,6 @@ const Menu = ({ hero, whiteLogo }) => {
       jellyfish: file(relativePath: { eq: "jellyfish.jpg" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 800
             height: 600
             layout: CONSTRAINED
             placeholder: TRACED_SVG
@@ -87,7 +86,8 @@ const Menu = ({ hero, whiteLogo }) => {
                   duration={0.75}
                   activeClassName="active"
                 >
-                  <span>{label}</span>.
+                  {label}
+                  <span>.</span>
                 </MenuTopLink>
               </li>
             ))}

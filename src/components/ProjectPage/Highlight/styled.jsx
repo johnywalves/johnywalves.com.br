@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import { lightHighlight } from "../styled"
@@ -7,11 +8,19 @@ const formGrid = ({ revert }) => {
   if (revert) {
     return css`
       grid-template-columns: 2fr 3fr;
+
+      ${media.lessThan("large")`
+        grid-template-columns: 1fr;
+      `}
     `
   }
 
   return css`
     grid-template-columns: 3fr 2fr;
+
+    ${media.lessThan("large")`
+      grid-template-columns: 1fr;
+    `}
   `
 }
 
@@ -37,6 +46,11 @@ export const ImageCover = styled(GatsbyImage)`
   border-radius: 4px;
 
   ${lightHighlight}
+
+  ${media.lessThan("medium")`
+    height: 240px;
+    width: 400px;
+  `}
 `
 
 const alignContent = ({ revert }) => {
@@ -63,6 +77,10 @@ export const Content = styled.div`
   color: var(--texts);
 
   ${alignContent}
+
+  ${media.lessThan("large")`
+    align-items: center;
+  `}
 `
 
 export const Links = styled.div`
@@ -74,7 +92,9 @@ export const Links = styled.div`
   flex-wrap: wrap;
 `
 
-export const Link = styled.a``
+export const Link = styled.a`
+  z-index: 1;
+`
 
 export const Title = styled.h2`
   font-weight: 700;
@@ -82,9 +102,16 @@ export const Title = styled.h2`
   line-height: 2.4rem;
   text-transform: uppercase;
   color: var(--texts);
+  z-index: 1;
 `
 
 export const Description = styled.p`
   color: var(--texts);
   margin: var(--24px) 0;
+  z-index: 1;
+
+  ${media.lessThan("large")`
+    width: 75%;
+    text-align: center !important;
+  `}
 `

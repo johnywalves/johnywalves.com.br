@@ -6,7 +6,14 @@ import Seo from "components/seo"
 import Comments from "components/Comments"
 import ComicNavigation from "components/ComicNavigation"
 
-import * as S from "components/Post/styled"
+import {
+  PostHeader,
+  PostTitle,
+  PostDate,
+  ComicWrapper,
+  PostComic,
+  MainContent,
+} from "components/Post/styled"
 
 const ComicPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -14,23 +21,23 @@ const ComicPost = ({ data, pageContext }) => {
 
   return (
     <Blueprint content>
-      <S.PostHeader comics>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDate>{post.frontmatter.date}</S.PostDate>
-        <S.ComicWrapper>
-          <S.PostComic
+      <PostHeader comics>
+        <PostTitle>{post.frontmatter.title}</PostTitle>
+        <PostDate>{post.frontmatter.date}</PostDate>
+        <ComicWrapper>
+          <PostComic
             image={
               (post.frontmatter.featuredImage || post.frontmatter.comicImage)
                 .childImageSharp.gatsbyImageData
             }
             alt={post.frontmatter.transcription}
           />
-        </S.ComicWrapper>
+        </ComicWrapper>
         <ComicNavigation number={number} />
-      </S.PostHeader>
-      <S.MainContent>
+      </PostHeader>
+      <MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </S.MainContent>
+      </MainContent>
       <Comments title={post.frontmatter.title} url={slug} />
     </Blueprint>
   )

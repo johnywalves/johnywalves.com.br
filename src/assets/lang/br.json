@@ -397,7 +397,11 @@
         "institution": "Fatec Rio Preto",
         "description": [
           "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software."
-        ]
+        ],
+        "production": {
+          "title": "Título: Analizo - Análise textual para validação de comunicação corporativa",
+          "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
+        }
       },
       {
         "date": "Mar 2018 - Mar 2020",
@@ -458,7 +462,7 @@
         "title": "Desenvolvedor Frontend Senior",
         "institution": "CI&T",
         "description": [
-          "ANBIMA | Desenvolvimento de ferramenta para instituições financeiras informarem resumos de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
+          "ANBIMA | Desenvolvimento de ferramenta para instituições financeiras coletar operaçẽos de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
           "Coca-Cola | Atualização e manutenção nas ferramentas de marketing em coleta de leads e acompanhamento das métricas de usuários (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
         ]
       },
@@ -496,7 +500,7 @@
         "institution": "GS Group",
         "description": [
           "Gerencia e desenvolvimento de Web com integração mobile para acompanhamento de promoters em pontos de revenda (Asp.NET MVC, JavaScript e React Native)",
-          "Dashboards para gestão a vista para acompamento do abastecimento da JBS (JavaScript com NodeJS)",
+          "Dashboards para gestão a vista para acompanhamento do abastecimento da JBS (JavaScript com NodeJS)",
           "Manutenção do processo de carga e transformação de açougues parceiros da JBS (Pentaho)"
         ]
       },
@@ -532,7 +536,8 @@
         "title": "Desenvolvedor de Software",
         "institution": "Dual Consultoria e Sistemas",
         "description": [
-          "Desenvolvimento de software para gestão para distribuidoras com foco em movimentações financeiras e obrigações fiscais (Progress)"
+          "Desenvolvimento de software para gestão para distribuidoras com foco em movimentações financeiras e obrigações fiscais",
+          "Tecnologia: Progress"
         ]
       },
       {

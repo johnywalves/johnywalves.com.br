@@ -30,6 +30,7 @@ export const Header = styled.div`
   align-items: center;
   color: var(--highlight);
   margin-bottom: 5px;
+  z-index: 2;
 
   & h3 {
     font-size: 2rem;
@@ -48,6 +49,7 @@ export const Image = styled(GatsbyImage)`
   background-color: var(--white);
   box-shadow: 0 0 8px 1px var(--shadow-colors),
     4px 4px 8px 1px var(--shadow-colors);
+  z-index: 2;
 
   &:hover {
     transform: scale(1);

@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import media from "styled-media-query"
 
 export const ArticleComicNavigatiorWrapper = styled.nav`
   width: 100%;
@@ -6,6 +7,10 @@ export const ArticleComicNavigatiorWrapper = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${media.lessThan("large")`
+      margin: 0;
+  `}
 `
 
 export const eyeBlink = keyframes`
@@ -71,11 +76,11 @@ export const ArticleCategoryNavigatiorCover = styled.div`
 `
 
 export const ArticleCategoryRss = styled.a`
+  margin: var(--72px) var(--48px) var(--24px);
   color: var(--texts);
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: var(--72px) 0 var(--24px);
   align-self: flex-start;
 
   svg {

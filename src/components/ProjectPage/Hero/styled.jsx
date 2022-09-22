@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import { neonHighlight } from "../styled"
@@ -54,10 +55,25 @@ export const Title = styled.h1`
     font-size: 8rem;
     line-height: 90%;
   }
+
+  ${media.lessThan("large")`
+    & span:nth-child(1) {
+      font-size: 8rem;
+    }
+
+    & span:nth-child(2) {
+      font-size: 2.5rem;
+    }
+
+    & span:nth-child(3) {
+      font-size: 4rem;
+    }
+  `}
 `
 
 export const ImageCover = styled(GatsbyImage)`
   height: 500px;
+  z-index: 1;
 `
 
 export const Cover = styled.div`
