@@ -227,6 +227,10 @@ export const MenuLinks = styled.ul`
   color: var(--white);
   font-size: var(--80px);
   font-weight: 700;
+
+  ${media.lessThan("medium")`
+    font-size: var(--48px);
+  `}
 `
 
 export const MenuLinksLink = styled(Anilink)`
@@ -253,6 +257,7 @@ export const MenuLinksLink = styled(Anilink)`
 
     &:hover {
       opacity: 1;
+      padding-left: var(--16px);
 
       & span {
         color: var(--white);

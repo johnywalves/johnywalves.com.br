@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const Wrapper = styled.section`
   display: flex;
@@ -34,6 +35,16 @@ export const AboutMe = styled.div`
     justify-content: center;
     padding: 35px 0;
   }
+
+  ${media.lessThan("medium")`
+    display: flex;
+    flex-direction: column;
+
+    & > div:first-of-type,
+    & > p {
+      padding: 0;
+    }
+  `}
 `
 
 export const Line = styled.div`
@@ -41,6 +52,10 @@ export const Line = styled.div`
   width: var(--24px);
   height: 100%;
   background: linear-gradient(0deg, var(--highlight) 0%, transparent 100%);
+
+  ${media.lessThan("medium")`
+    display: none;
+  `}
 `
 
 export const Description = styled.p`
@@ -60,6 +75,11 @@ export const Resumes = styled.ul`
   & > li div {
     margin: 0;
   }
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    align-items: flex-start;
+  `}
 `
 
 export const Resume = styled.li`
@@ -78,6 +98,12 @@ export const Languages = styled.ul`
   & > li div {
     margin: 0;
   }
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--32px);
+  `}
 `
 
 export const Language = styled.li`

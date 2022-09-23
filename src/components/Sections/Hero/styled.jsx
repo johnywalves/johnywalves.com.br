@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const Wrapper = styled.section`
@@ -109,4 +110,8 @@ export const WrapperSocial = styled(Container)`
   top: 50%;
   transform: translateY(-50%);
   z-index: 4;
+
+  ${media.lessThan("medium")`
+    left: var(--16px);
+  `}
 `

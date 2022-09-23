@@ -1,4 +1,5 @@
 import React from "react"
+import media from "styled-media-query"
 import styled, { css, keyframes } from "styled-components"
 
 export const Wrapper = styled.section`
@@ -25,6 +26,11 @@ export const Types = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 20px;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    gap: 0;
+  `}
 `
 
 const selectedType = css`
@@ -63,6 +69,14 @@ export const Type = styled.li`
   }
 
   ${({ selected }) => selected && selectedType}
+
+  ${media.lessThan("medium")`
+    margin: var(--16px) 0;
+
+    &:not(:last-of-type):after {
+      content: "";
+    }
+  `}
 `
 
 export const SkillsWrapper = styled.div`
@@ -149,6 +163,10 @@ export const Areas = styled.div`
   & > div {
     z-index: 3;
   }
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `
 
 const selectedArea = css`

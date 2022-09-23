@@ -86,8 +86,7 @@ const Menu = ({ hero, whiteLogo }) => {
                   duration={0.75}
                   activeClassName="active"
                 >
-                  {label}
-                  <span>.</span>
+                  <span>{label}</span>.
                 </MenuTopLink>
               </li>
             ))}
