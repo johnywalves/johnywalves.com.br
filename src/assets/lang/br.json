@@ -148,7 +148,7 @@
       },
       {
         "date": "2018-07-27 00:00:00-0300",
-        "name": "Games 2D - Criando seu Primeiro Jogo",
+        "name": "Games 2D: com Unity e C#",
         "institute": "Senac São José do Rio Preto",
         "img": "/cert/senac_games_2d.jpg",
         "icon": "toolbox"
@@ -462,8 +462,8 @@
         "title": "Desenvolvedor Frontend Senior",
         "institution": "CI&T",
         "description": [
-          "ANBIMA | Desenvolvimento de ferramenta para instituições financeiras coletar operaçẽos de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
-          "Coca-Cola | Atualização e manutenção nas ferramentas de marketing em coleta de leads e acompanhamento das métricas de usuários (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
+          "<strong>ANBIMA</strong>: Desenvolvimento de ferramenta para instituições financeiras coletar operaçẽos de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
+          "<strong>Coca-Cola</strong>: Atualização e manutenção nas ferramentas de marketing em coleta de leads e acompanhamento das métricas de usuários (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
         ]
       },
       {
@@ -471,8 +471,8 @@
         "title": "Desenvolvedor Frontend",
         "institution": "Meta",
         "description": [
-          "Prestação de serviço para Localiza na manutenção e evolução da ferramenta Zarp Localiza, para aluguel de veículos e outros serviços, voltado para captação e retenção de clientes com as tecnologias JavaScript, React, NextJS, HTML e CSS",
-          "Reestruturação do Zarp Localiza focado na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO) com NextJS"
+          "Prestação de serviço para Localiza na manutenção e evolução da ferramenta <strong>Zarp Localiza</strong>, para aluguel de veículos e outros serviços, voltado para captação e retenção de clientes com as tecnologias JavaScript, React, NextJS, HTML e CSS",
+          "Reestruturação do <strong>Zarp Localiza</strong> focado na experiência do usuário, entrega de valor e otimização para resultados em buscas (SEO) com NextJS"
         ]
       },
       {
@@ -480,7 +480,7 @@
         "title": "Analista Desenvolvedor",
         "institution": "Invillia",
         "description": [
-          "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da Invillia Apps, interfaces ricas para visualização de dados com treinamento e destaque dos colaboradores",
+          "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da <strong>Invillia Apps</strong>, interfaces ricas para visualização de dados com treinamento e destaque dos colaboradores",
           "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)"
         ]
       },
@@ -500,8 +500,8 @@
         "institution": "GS Group",
         "description": [
           "Gerencia e desenvolvimento de Web com integração mobile para acompanhamento de promoters em pontos de revenda (Asp.NET MVC, JavaScript e React Native)",
-          "Dashboards para gestão a vista para acompanhamento do abastecimento da JBS (JavaScript com NodeJS)",
-          "Manutenção do processo de carga e transformação de açougues parceiros da JBS (Pentaho)"
+          "Dashboards para gestão a vista para acompanhamento do abastecimento da <strong>JBS</strong> (JavaScript com NodeJS)",
+          "Manutenção do processo de carga e transformação de açougues parceiros da <strong>JBS</strong> (Pentaho)"
         ]
       },
       {
@@ -509,8 +509,8 @@
         "title": "Consultor de Automação de Processos",
         "institution": "Grupo WDG",
         "description": [
-          "Automação de processos e chatbots (WDG Automation) e estruturação de projetos com BPMN para atendimentos de Recalls para Toyota Rodobens (Bizagi BPMN Modeler)",
-          "Desenvolvimento de extensão para o Google Chrome de ferramenta de telemarketing da Claro (JavaScript)"
+          "Automação de processos e chatbots (WDG Automation) e estruturação de projetos com BPMN para atendimentos de Recalls para <strong>Toyota Rodobens</strong> (Bizagi BPMN Modeler)",
+          "Desenvolvimento de extensão para o Google Chrome de ferramenta de telemarketing da <strong>Claro</strong> (JavaScript)"
         ]
       },
       {

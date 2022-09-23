@@ -148,7 +148,7 @@
       },
       {
         "date": "2018-07-27 00:00:00-0300",
-        "name": "Games 2D - Criando seu Primeiro Jogo",
+        "name": "Games 2D: with Unity and C#",
         "institute": "Senac São José do Rio Preto",
         "img": "/cert/senac_games_2d.jpg",
         "icon": "toolbox"
@@ -459,8 +459,8 @@
         "title": "Senior Developer Frontend",
         "institution": "CI&T",
         "description": [
-          "ANBIMA | Development of a tool for financial institutions to collect operations from managed portfolios, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
-          "Coca-Cola | Updating and maintaining marketing tools in collecting leads and tracking user metrics (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
+          "<strong>ANBIMA</strong>: Development of a tool for financial institutions to collect operations from managed portfolios, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
+          "<strong>Coca-Cola</strong>: Updating and maintaining marketing tools in collecting leads and tracking user metrics (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
         ]
       },
       {
@@ -468,8 +468,8 @@
         "title": "Frontend Developer",
         "institution": "Meta",
         "description": [
-          "Service provision for Localiza in the maintenance and evolution of the Zarp Localiza tool, for vehicle rental and other services, aimed at capturing and retaining customers",
-          "Restructuring of Zarp Localiza focused on user experience, value delivery and search engine optimization (SEO) with NextJS"
+          "Service provision for Localiza in the maintenance and evolution of the <strong>Zarp Localiza</strong> tool, for vehicle rental and other services, aimed at capturing and retaining customers",
+          "Restructuring of <strong>Zarp Localiza</strong> focused on user experience, value delivery and search engine optimization (SEO) with NextJS"
         ]
       },
       {
@@ -477,7 +477,7 @@
         "title": "Developer",
         "institution": "Invillia",
         "description": [
-          "Part of the development and maintenance team for the Invillia Apps application suite, rich interfaces for data visualization and employee training",
+          "Part of the development and maintenance team for the <strong>Invillia Apps</strong> application suite, rich interfaces for data visualization and employee training",
           "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, NextJS)"
         ]
       },
@@ -497,8 +497,8 @@
         "institution": "GS Group",
         "description": [
           "Web management and development with mobile integration for tracking promoters at points of sale (Asp.NET MVC and React Native)",
-          "Dashboards for visual management to monitor JBS supply (JavaScript with NodeJS)",
-          "Maintenance of the loading and transformation process of JBS partner butchers (Pentaho)"
+          "Dashboards for visual management to monitor <strong>JBS</strong> supply (JavaScript with NodeJS)",
+          "Maintenance of the loading and transformation process of <strong>JBS</strong> partner butchers (Pentaho)"
         ]
       },
       {
@@ -506,8 +506,8 @@
         "title": "Process Automation Consultant",
         "institution": "Grupo WDG",
         "description": [
-          "Automation of processes and chatbots (WDG Automation) and structuring of projects with BPMN for calls to Recalls for Toyota Rodobens (Bizagi BPMN Modeler)",
-          "Extension development for Google Chrome of telemarketing tool from Claro (JavaScript)"
+          "Automation of processes and chatbots (WDG Automation) and structuring of projects with BPMN for calls to Recalls for <strong>Toyota Rodobens</strong> (Bizagi BPMN Modeler)",
+          "Extension development for Google Chrome of telemarketing tool from <strong>Claro</strong> (JavaScript)"
         ]
       },
       {

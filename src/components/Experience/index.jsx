@@ -21,7 +21,7 @@ const Experience = ({
     {description && (
       <S.Description job={job}>
         {description.map((text, index) => (
-          <li key={index}>{text}</li>
+          <li key={index} dangerouslySetInnerHTML={{ __html: text }} />
         ))}
       </S.Description>
     )}
