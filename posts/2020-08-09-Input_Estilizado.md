@@ -2,8 +2,8 @@
 title: Input estilizado
 description: Input para texto estilizado com mudanças no foco
 date: "2020-08-09 18:50:32"
-featuredImage: ./featured/paper-1.jpg
-coverImage: /figures/paper-1.jpg
+featuredImage: ./featured/planner-1.jpg
+coverImage: /figures/planner-1.jpg
 category: CSS
 tags:
   - Web

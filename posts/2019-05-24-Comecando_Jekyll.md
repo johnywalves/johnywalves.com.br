@@ -2,8 +2,8 @@
 title: Começando com Jekyll
 description: Geração de páginas estáticas com Jekyll e Markdown
 date: 2019-05-24 19:52:13 -0300
-featuredImage: ./featured/jekyll-1.png
-coverImage: /figures/jekyll-1.png
+featuredImage: ./featured/medicine-1.jpg
+coverImage: /figures/medicine-1.jpg
 category: Jekyll
 tags:
   - Web

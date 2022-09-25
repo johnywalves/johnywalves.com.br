@@ -2,8 +2,8 @@
 title: Git - Cheatsheet
 description: Comandos Git para Consulta
 date: 2020-11-26 14:18:35 -0300
-featuredImage: ./featured/git-1.jpg
-coverImage: /figures/git-1.jpg
+featuredImage: ./featured/library-2.jpg
+coverImage: /figures/library-2.jpg
 category: Git
 tags:
   - Cheatsheet
