@@ -135,6 +135,10 @@ export const ListOther = styled.ul`
   ${media.lessThan("medium")`
     grid-template-columns: repeat(2, 1fr);
   `}
+
+  ${media.lessThan("small")`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const ListOnePage = styled.ul`

@@ -47,6 +47,11 @@ export const Info = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 2;
+
+  ${media.lessThan("small")`
+    width: 250px;
+  `}
 `
 
 export const Description = styled.p`
@@ -124,4 +129,10 @@ export const Image = styled(GatsbyImage)`
   mask-image: linear-gradient(45deg, black 45%, transparent);
   mask-mode: alpha;
   margin: var(--16px) 0;
+
+  ${media.lessThan("medium")`
+    margin: var(--16px);
+    width: 200px;
+    height: 200px;
+  `}
 `

@@ -59,7 +59,6 @@ export const Title = styled.h1`
   ${media.lessThan("large")`
     & span:nth-child(1) {
       font-size: 8rem;
-    }
 
     & span:nth-child(2) {
       font-size: 2.5rem;
@@ -67,6 +66,20 @@ export const Title = styled.h1`
 
     & span:nth-child(3) {
       font-size: 4rem;
+    }
+  `}
+
+  ${media.lessThan("small")`
+    & span:nth-child(1) {
+      font-size: 4rem;
+    }
+
+    & span:nth-child(2) {
+      font-size: 1.25rem;
+    }
+
+    & span:nth-child(3) {
+      font-size: 2rem;
     }
   `}
 `
@@ -79,6 +92,7 @@ export const ImageCover = styled(GatsbyImage)`
 export const Cover = styled.div`
   position: absolute;
   left: 50%;
+
   top: 0;
   width: 50%;
   height: 100%;

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const CardArticleContent = styled.div`
   position: relative;
@@ -13,6 +14,10 @@ export const CardArticleContent = styled.div`
   color: var(--highlight);
   background-color: var(--background-card);
   box-shadow: 0 -2px 8px var(--shadow-colors);
+
+  ${media.lessThan("small")`
+    height: 475px;
+  `}
 `
 
 export const CardArticleHeader = styled.div`

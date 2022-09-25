@@ -112,6 +112,6 @@ export const WrapperSocial = styled(Container)`
   z-index: 4;
 
   ${media.lessThan("medium")`
-    left: var(--16px);
+    left: var(--8px);
   `}
 `

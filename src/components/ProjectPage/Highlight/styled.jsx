@@ -51,6 +51,11 @@ export const ImageCover = styled(GatsbyImage)`
     height: 240px;
     width: 400px;
   `}
+
+  ${media.lessThan("small")`
+    height: 120px;
+    width: 200px;
+  `}
 `
 
 const alignContent = ({ revert }) => {
