@@ -5,7 +5,7 @@ import ProjectPage from "components/ProjectPage"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 
-const title = "Projetos",
+const title = "Projetos e Desenvolvimento",
   description = "Apresentação de projetos desenvolvidos ou em desenvolvimento"
 
 const Projects = ({ data }) => {

@@ -32,6 +32,7 @@ const BlogPost = ({ data, pageContext }) => {
         <ArticleForehead>
           {post.frontmatter.featuredImage && (
             <PostFeaturedImage
+              itemProp="image"
               image={
                 post.frontmatter.featuredImage.childImageSharp.gatsbyImageData
               }
@@ -52,6 +53,7 @@ const BlogPost = ({ data, pageContext }) => {
             <PostDescription itemProp="description">
               {post.frontmatter.description}
             </PostDescription>
+            <meta itemProp="author" content={data.site.siteMetadata.author} />
             <meta
               itemProp="keywords"
               content={`${post.frontmatter.category.toLowerCase()}, ${post.frontmatter.tags
@@ -137,8 +139,14 @@ export const Head = ({ location, data, pageContext }) => {
       url: `${siteUrl}${slug}`,
       headline: title,
       alternativeHeadline: description,
-      image: urlImage,
-      author: author,
+      image: [urlImage],
+      author: [
+        {
+          "@type": "Person",
+          name: author,
+          url: siteUrl,
+        },
+      ],
       wordcount: html.length,
       publisher: {
         "@type": "Organization",

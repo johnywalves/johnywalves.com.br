@@ -12,11 +12,10 @@ const titlePage = "Tirinhas",
   descriptionPage = "Listagens tirinhas geradas e publicacas"
 
 const ComicList = (props) => {
-  const comicsList = props.data.allMarkdownRemark.edges
-
-  const { currentPage, prevPage, nextPage, numPages } = props.pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+  const comicsList = props.data.allMarkdownRemark.edges,
+    { currentPage, prevPage, nextPage, numPages } = props.pageContext,
+    isFirst = currentPage === 1,
+    isLast = currentPage === numPages
 
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>

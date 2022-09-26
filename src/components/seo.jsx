@@ -63,28 +63,50 @@ function SEO({
       <title>{titleName}</title>
       <meta name="title" content={titleName} />
       <meta name="description" content={metaDescription} />
+      <meta name="image" content={pathImage} />
       <meta name="author" content={site.siteMetadata.title} />
 
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={urlContent} />
-      <meta property="og:site_name" content={titleName} />
-      <meta property="og:title" content={title || site.siteMetadata.title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" itemProp="image" content={pathImage} />
+      <meta name="og:type" property="og:type" content="website" />
+      <meta name="og:url" property="og:url" content={urlContent} />
+      <meta name="og:site_name" property="og:site_name" content={titleName} />
+      <meta name="og:title" property="og:title" content={titleName} />
+      <meta
+        name="og:description"
+        property="og:description"
+        content={metaDescription}
+      />
+      <meta
+        name="og:image"
+        property="og:image"
+        itemProp="image"
+        content={pathImage}
+      />
       <meta
         property="og:image:secure_url"
         itemProp="image"
         content={pathImage}
       />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content={sizeImageWidth} />
-      <meta property="og:image:height" content={sizeImageHeight} />
-      <meta property="og:locale" content={lang} />
-      <meta property="og:updated_time" content="0" />
+      <meta
+        name="og:image:type"
+        property="og:image:type"
+        content="image/jpeg"
+      />
+      <meta
+        name="og:image:width"
+        property="og:image:width"
+        content={sizeImageWidth}
+      />
+      <meta
+        name="og:image:height"
+        property="og:image:height"
+        content={sizeImageHeight}
+      />
+      <meta name="og:locale" property="og:locale" content={lang} />
+      <meta name="og:updated_time" property="og:updated_time" content="0" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={urlContent} />
-      <meta name="twitter:title" content={title || site.siteMetadata.title} />
+      <meta name="twitter:title" content={titleName} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:domain" content={site.siteMetadata.author} />
       <meta name="twitter:site" content={site.siteMetadata.siteUrl} />

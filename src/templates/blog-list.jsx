@@ -13,11 +13,10 @@ const titlePage = "Artigos",
   descriptionPage = "Listagem de todos artigos publicados"
 
 const BlogList = ({ data, pageContext }) => {
-  const postList = data.allMarkdownRemark.edges
-
-  const { currentPage, prevPage, nextPage, numPages, categories } = pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+  const postList = data.allMarkdownRemark.edges,
+    { currentPage, prevPage, nextPage, numPages, categories } = pageContext,
+    isFirst = currentPage === 1,
+    isLast = currentPage === numPages
 
   const ArticleNavigatior = () => (
     <ArticleCategoryNavigatior categories={categories} />
