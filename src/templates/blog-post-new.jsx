@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import RecommendedPost from "components/RecommendedPost"
 import Comments from "components/Comments"
 
 import {
@@ -20,11 +19,16 @@ import {
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const { nextPost, previousPost, slug } = pageContext
+  const { slug } = pageContext
 
   return (
-    <Blueprint content openGraphImage={post.frontmatter.openGraphImage}>
-      <ArticleWrapper>
+    <Blueprint
+      content
+      openGraphImage={post.frontmatter.openGraphImage}
+      title={post.frontmatter.title}
+      description={post.frontmatter.description}
+    >
+      <ArticleWrapper itemScope itemType="http://schema.org/Article">
         <ArticleForehead>
           {post.frontmatter.featuredImage && (
             <PostFeaturedImage
@@ -37,23 +41,29 @@ const BlogPost = ({ data, pageContext }) => {
           <ArticleForeheadCover />
           <PostHeader>
             <PostDate
-              itemprop="datePublished"
+              itemProp="datePublished"
               datetime={post.frontmatter.created}
             >
               {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
               leitura
             </PostDate>
-            <PostTitle itemprop="headline">{post.frontmatter.title}</PostTitle>
-            <PostDescription itemprop="description">
+            <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
+            <meta itemProp="name" content={post.frontmatter.title} />
+            <PostDescription itemProp="description">
               {post.frontmatter.description}
             </PostDescription>
-            <meta itemprop="wordCount" content={post.html.length} />
+            <meta
+              itemProp="keywords"
+              content={`${post.frontmatter.category.toLowerCase()}, ${post.frontmatter.tags
+                .join(", ")
+                .toLowerCase()}`}
+            />
+            <meta itemProp="wordCount" content={post.html.length} />
           </PostHeader>
         </ArticleForehead>
         <MainContent>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </MainContent>
-        <RecommendedPost next={nextPost} previous={previousPost} />
         <Comments title={post.frontmatter.title} url={slug} />
       </ArticleWrapper>
     </Blueprint>
@@ -75,6 +85,8 @@ export const query = graphql`
         created: date
         title
         description
+        category
+        tags
         featuredImage {
           childImageSharp {
             gatsbyImageData(

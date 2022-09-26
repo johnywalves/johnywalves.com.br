@@ -68,10 +68,10 @@ function SEO({
       <meta property="og:site_name" content={titleName} />
       <meta property="og:title" content={title || site.siteMetadata.title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" itemprop="image" content={pathImage} />
+      <meta property="og:image" itemProp="image" content={pathImage} />
       <meta
         property="og:image:secure_url"
-        itemprop="image"
+        itemProp="image"
         content={pathImage}
       />
       <meta property="og:image:type" content="image/jpeg" />

@@ -11,12 +11,21 @@ import GeneralStyles from "styles/general"
 
 import "styles/box-shadow.css"
 
-const Blueprint = ({ content, whiteLogo, openGraphImage, children }) => {
+const Blueprint = ({
+  content,
+  whiteLogo,
+  openGraphImage,
+  title,
+  description,
+  children,
+}) => {
   const { site, thumbnail } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            title
+            description
             siteUrl
           }
         }
@@ -48,18 +57,34 @@ const Blueprint = ({ content, whiteLogo, openGraphImage, children }) => {
     <>
       <ParallaxProvider>
         <GeneralStyles />
-        <BlueprintWrapper content={content ? 1 : 0}>
+        <BlueprintWrapper
+          itemScope
+          itemProp="mainContentOfPage"
+          content={content ? 1 : 0}
+        >
+          <meta
+            itemProp="headline"
+            content={title || site.siteMetadata.title}
+          />
+          <meta
+            itemProp="description"
+            content={description || site.siteMetadata.description}
+          />
+          <link itemProp="thumbnailUrl" href={pathImage} />
+          <span
+            itemScope
+            itemProp="image"
+            itemtype="http://schema.org/ImageObject"
+          >
+            <link itemProp="url" href={pathImage} />
+            <meta itemProp="width" content={sizeImageWidth} />
+            <meta itemProp="height" content={sizeImageHeight} />
+          </span>
           <Menu hero={!content} whiteLogo={whiteLogo} />
           {children}
           {content && <Footer />}
         </BlueprintWrapper>
       </ParallaxProvider>
-      <link itemprop="thumbnailUrl" href={pathImage} />
-      <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-        <link itemprop="url" href={pathImage} />
-        <meta itemprop="width" content={sizeImageWidth} />
-        <meta itemprop="height" content={sizeImageHeight} />
-      </span>
     </>
   )
 }
