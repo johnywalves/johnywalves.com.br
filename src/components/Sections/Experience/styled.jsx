@@ -123,6 +123,11 @@ export const Skills = styled.ul`
   max-height: 0;
   opacity: 0;
   transition: opacity 0.5s ease-out;
+  width: 835px;
+
+  ${media.lessThan("medium")`
+    width: calc( 100% - var(--32px));
+  `}
 
   ${({ selected }) => selected && selectedSkill}
 `

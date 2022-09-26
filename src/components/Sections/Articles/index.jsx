@@ -62,12 +62,12 @@ const SectionArticles = () => {
       <CardList
         title={Strings.posts.title}
         action={Strings.posts.viewAll}
-        url="/new/blog/"
+        url="/blog/"
       >
         {edges.map(({ node }) => (
           <CardArticle
             key={node.fields.slug}
-            to={`/new${node.fields.slug}`}
+            to={node.fields.slug}
             category={node.frontmatter.category}
             subtitle={node.frontmatter.date}
             title={node.frontmatter.title}

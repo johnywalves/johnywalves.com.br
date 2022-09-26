@@ -1693,17 +1693,6 @@
                     }
                   ]
                 },
-                "awards": {
-                  "type": "array",
-                  "items": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    }
-                  ]
-                },
                 "kudos": {
                   "type": "array",
                   "items": [
@@ -1752,7 +1741,6 @@
                 "institution",
                 "certification",
                 "description",
-                "awards",
                 "kudos",
                 "production"
               ]
@@ -2120,71 +2108,6 @@
       },
       "required": ["title", "description", "list"]
     },
-    "links": {
-      "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "label": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": ["label", "url"]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "label": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": ["label", "url"]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "label": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": ["label", "url"]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "label": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": ["label", "url"]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "label": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          },
-          "required": ["label", "url"]
-        }
-      ]
-    },
     "menuLinks": {
       "type": "array",
       "items": [
@@ -2357,7 +2280,6 @@
     "samples",
     "education",
     "experience",
-    "links",
     "menuLinks",
     "socialLinks"
   ]

@@ -91,7 +91,7 @@ export const ArticleCategoryNavigatiorImage = styled(GatsbyImage)`
   position: absolute !important;
   transition: none;
   opacity: 0;
-  animation: ${fadeEffect} 2s linear infinite;
+  animation: ${fadeEffect} 1.5s linear infinite;
 
   ${({ reverse }) => reverse && alternateDirection}
 `

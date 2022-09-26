@@ -2,7 +2,20 @@ import styled, { css } from "styled-components"
 import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const PostHeader = styled.header`
+export const ComicPostWrapper = styled.article`
+  background: url("/vectors/triangle-wall-top.svg"),
+    url("/vectors/triangle-wall-bottom.svg");
+  background-color: var(--background);
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+
+  ${media.lessThan("medium")`
+    background-size: 50%;
+  `}
+`
+
+export const ComicPostHeader = styled.header`
   color: var(--texts);
   margin: auto;
   max-width: 70rem;
@@ -58,7 +71,7 @@ export const PostDescription = styled.h2`
 
 export const PostDate = styled.p`
   font-size: 1.1rem;
-  font-weight: 100;
+  font-weight: 400;
   padding: 0 1.4rem;
 
   ${media.lessThan("large")`

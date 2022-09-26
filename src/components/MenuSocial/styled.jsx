@@ -44,6 +44,12 @@ export const MenuSocialList = styled.ul`
   ${({ vertical }) => vertical && verticalList}
 `
 
+const itemContact = css`
+  svg {
+    fill: var(--highlight);
+  }
+`
+
 export const Item = styled.li`
   margin: var(--4px) 0;
   cursor: pointer;
@@ -73,6 +79,8 @@ export const Item = styled.li`
       height: 2.5rem;
     }
   }
+
+  ${({ contact }) => contact && itemContact}
 `
 
 export const Link = styled.a`

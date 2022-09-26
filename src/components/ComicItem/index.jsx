@@ -9,7 +9,7 @@ import {
   PostItemImageFeatured,
 } from "./styled"
 
-const PostItemComic = ({ slug, date, title, transcription, featuredImage }) => (
+const ComicItem = ({ slug, date, title, transcription, featuredImage }) => (
   <PostItemLink fade to={slug} duration={0.75}>
     <PostItemWrapper>
       <PostItemDate>{date}</PostItemDate>
@@ -25,11 +25,11 @@ const PostItemComic = ({ slug, date, title, transcription, featuredImage }) => (
   </PostItemLink>
 )
 
-PostItemComic.propTypes = {
+ComicItem.propTypes = {
   slug: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   transcription: PropTypes.string.isRequired,
 }
 
-export default PostItemComic
+export default ComicItem

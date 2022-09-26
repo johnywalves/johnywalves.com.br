@@ -95,7 +95,6 @@
         "list": [
           { "title": "SQL Server", "icon": "Database" },
           { "title": "MySQL", "icon": "Database" },
-          { "title": "Pentaho", "icon": "Database" },
           { "title": "PostgreSQL", "icon": "Database" },
           { "title": "Python", "icon": "Database" },
           { "title": "PL/SQL", "icon": "Database" },
@@ -424,10 +423,6 @@
         "description": [
           "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas."
         ],
-        "awards": [
-          "Premiação de Maior Média",
-          "Premiação Melhor Trabalho de Graduação"
-        ],
         "kudos": [
           {
             "name": "Premiação de Maior Média",
@@ -569,48 +564,26 @@
       }
     ]
   },
-  "links": [
-    {
-      "label": "Início",
-      "url": "/"
-    },
-    {
-      "label": "Artigos",
-      "url": "/blog/"
-    },
-    {
-      "label": "Tirinhas",
-      "url": "/comics/"
-    },
-    {
-      "label": "Pesquisa",
-      "url": "/search/"
-    },
-    {
-      "label": "Sobre",
-      "url": "/about/"
-    }
-  ],
   "menuLinks": [
     {
       "label": "johny",
-      "url": "/new/"
+      "url": "/"
     },
     {
       "label": "artigos",
-      "url": "/new/blog/"
+      "url": "/blog/"
     },
     {
       "label": "tirinhas",
-      "url": "/new/comics/"
+      "url": "/comics/"
     },
     {
       "label": "projetos",
-      "url": "/new/projects/"
+      "url": "/projects/"
     },
     {
       "label": "pesquisa",
-      "url": "/new/search/"
+      "url": "/search/"
     }
   ],
   "socialLinks": [

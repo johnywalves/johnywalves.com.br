@@ -36,7 +36,7 @@ const NotFoundPage = () => (
 
     <NotFoundTitle>404</NotFoundTitle>
     <NotFoundDescription>{Strings.notfound}</NotFoundDescription>
-    <Anilink fade to="/new/" duration={0.75}>
+    <Anilink fade to="/" duration={0.75}>
       <Button>{Strings.backToHome}</Button>
     </Anilink>
   </NotFoundWrapper>

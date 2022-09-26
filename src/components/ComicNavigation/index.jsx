@@ -1,12 +1,16 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-import Strings from "components/strings"
+import { MoreVerticalOutline } from "@styled-icons/evaicons-outline/MoreVerticalOutline"
 
-import * as S from "./styled"
+import Button from "components/Button"
 
-const ComicLast = ({ number }) => {
+import { ArrowLeft, ArrowsLeft } from "icons"
+
+import { NavigationWrapper, Navigation, Icon } from "./styled"
+
+const ComicNavigation = ({ light, action, url, number }) => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -22,7 +26,6 @@ const ComicLast = ({ number }) => {
           node {
             frontmatter {
               number
-              description
             }
           }
         }
@@ -35,64 +38,67 @@ const ComicLast = ({ number }) => {
   const lastOne = number === lastNumber
 
   return (
-    <S.Navigation>
-      {firstOne ? (
-        <p>{Strings.comics.first}</p>
-      ) : (
-        <Anilink
-          to="/comic-1"
-          cover
-          direction="right"
-          bg="var(--background)"
-          duration={0.6}
-        >
-          {Strings.comics.first}
-        </Anilink>
-      )}
-
-      {firstOne ? (
-        <p>{Strings.comics.prev}</p>
-      ) : (
-        <Anilink
-          to={`/comic-${number - 1}`}
-          cover
-          direction="right"
-          bg="var(--background)"
-          duration={0.6}
-        >
-          {Strings.comics.prev}
-        </Anilink>
-      )}
-
-      {lastOne ? (
-        <p>{Strings.comics.next}</p>
-      ) : (
-        <Anilink
-          to={`/comic-${number + 1}`}
-          cover
-          direction="left"
-          bg="var(--background)"
-          duration={0.6}
-        >
-          {Strings.comics.next}
-        </Anilink>
-      )}
-
-      {lastOne ? (
-        <p>{Strings.comics.last}</p>
-      ) : (
-        <Anilink
-          to={`/comic-${lastNumber}`}
-          cover
-          direction="left"
-          bg="var(--background)"
-          duration={0.6}
-        >
-          {Strings.comics.last}
-        </Anilink>
-      )}
-    </S.Navigation>
+    <NavigationWrapper>
+      <Icon
+        fade
+        to="/comic-1"
+        duration={0.75}
+        disabled={firstOne}
+        light={light ? 1 : 0}
+        aria-label="first"
+      >
+        <ArrowsLeft />
+      </Icon>
+      <Icon
+        fade
+        to={`/comic-${number - 1}`}
+        duration={0.75}
+        disabled={firstOne}
+        light={light ? 1 : 0}
+        aria-label="previous"
+      >
+        <ArrowLeft />
+      </Icon>
+      <Navigation fade to={url} duration={0.75}>
+        <Button light={light}>
+          <MoreVerticalOutline /> {action}
+        </Button>
+      </Navigation>
+      <Icon
+        fade
+        to={`/comic-${number + 1}`}
+        duration={0.75}
+        disabled={lastOne}
+        light={light ? 1 : 0}
+        aria-label="next"
+      >
+        <ArrowLeft rotate />
+      </Icon>
+      <Icon
+        fade
+        to={`/comic-${lastNumber}`}
+        duration={0.75}
+        disabled={lastOne}
+        light={light ? 1 : 0}
+        aria-label="last"
+      >
+        <ArrowsLeft rotate />
+      </Icon>
+    </NavigationWrapper>
   )
 }
 
-export default ComicLast
+ComicNavigation.propTypes = {
+  light: PropTypes.bool,
+  action: PropTypes.string,
+  url: PropTypes.string,
+  number: PropTypes.number,
+}
+
+ComicNavigation.defaultProps = {
+  light: true,
+  action: "",
+  url: "/comics/",
+}
+
+export default ComicNavigation

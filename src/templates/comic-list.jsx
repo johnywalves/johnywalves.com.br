@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "components/Layout"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import PostItemComic from "components/PostItemComic"
-import Pagination from "components/Pagination"
+import ComicItem from "components/ComicItem"
+import NavigationPage from "components/NavigationPage"
 
-import * as S from "components/ListWrapper/styled"
+import ListsPages, { ArticleComicNavigator } from "components/ListsPages"
 
 const ComicList = (props) => {
   const comicsList = props.data.allMarkdownRemark.edges
@@ -16,8 +16,8 @@ const ComicList = (props) => {
   const isLast = currentPage === numPages
 
   return (
-    <Layout>
-      <S.ListWrapper>
+    <Blueprint content>
+      <ListsPages Navigator={ArticleComicNavigator}>
         {comicsList.map(
           (
             {
@@ -34,7 +34,7 @@ const ComicList = (props) => {
             },
             index
           ) => (
-            <PostItemComic
+            <ComicItem
               key={index}
               slug={slug}
               date={date}
@@ -44,21 +44,21 @@ const ComicList = (props) => {
             />
           )
         )}
-      </S.ListWrapper>
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
-    </Layout>
+        <NavigationPage
+          isFirst={isFirst}
+          isLast={isLast}
+          currentPage={currentPage}
+          numPages={numPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      </ListsPages>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query ComicsList($skip: Int!, $limit: Int!) {
+  query ComicsListNew($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {
@@ -70,7 +70,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+            date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
             title
             category
             transcription

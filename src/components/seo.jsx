@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-const limitDescription = (text) =>
-  text.length < 155 ? text : text.slice(152) + "..."
+const limitText = (number, text) =>
+  text.length < number ? text : text.slice(number - 3) + "..."
 
 function SEO({
   location,
@@ -41,10 +41,12 @@ function SEO({
     `
   )
 
-  const titleName = title
-      ? `${title} | ${site.siteMetadata.title}`
-      : site.siteMetadata.title,
-    metaDescription = limitDescription(
+  const titleName = limitText(
+      65,
+      title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title
+    ),
+    metaDescription = limitText(
+      155,
       description || site.siteMetadata.description
     ),
     pathImage = `${site.siteMetadata.siteUrl}${
@@ -78,7 +80,7 @@ function SEO({
       <meta property="og:image:width" content={sizeImageWidth} />
       <meta property="og:image:height" content={sizeImageHeight} />
       <meta property="og:locale" content={lang} />
-      <meta property="og:updated_time" content="1440432930" />
+      <meta property="og:updated_time" content="0" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={urlContent} />

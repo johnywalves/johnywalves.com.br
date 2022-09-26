@@ -95,7 +95,6 @@
         "list": [
           { "title": "SQL Server", "icon": "Database" },
           { "title": "MySQL", "icon": "Database" },
-          { "title": "Pentaho", "icon": "Database" },
           { "title": "PostgreSQL", "icon": "Database" },
           { "title": "Python", "icon": "Database" },
           { "title": "PL/SQL", "icon": "Database" },
@@ -424,7 +423,6 @@
         "description": [
           "Informatics for Business, Software Development and Manager Business"
         ],
-        "awards": ["Highest Score Award", "Best Undergraduate Project Award"],
         "kudos": [
           {
             "name": "Highest Score Award",
@@ -566,48 +564,26 @@
       }
     ]
   },
-  "links": [
-    {
-      "label": "Home",
-      "url": "/"
-    },
-    {
-      "label": "Articles (PT)",
-      "url": "/blog/"
-    },
-    {
-      "label": "Comics",
-      "url": "/comics/"
-    },
-    {
-      "label": "Search",
-      "url": "/search/"
-    },
-    {
-      "label": "About",
-      "url": "/about/"
-    }
-  ],
   "menuLinks": [
     {
       "label": "johny",
-      "url": "/new/"
+      "url": "/"
     },
     {
       "label": "articles",
-      "url": "/new/blog/"
+      "url": "/blog/"
     },
     {
       "label": "comics",
-      "url": "/new/comics/"
+      "url": "/comics/"
     },
     {
       "label": "projects",
-      "url": "/new/projects/"
+      "url": "/projects/"
     },
     {
       "label": "search",
-      "url": "/new/search/"
+      "url": "/search/"
     }
   ],
   "socialLinks": [

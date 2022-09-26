@@ -3,7 +3,7 @@ import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import SocialLinks from "components/SocialLinks"
+import MenuSocial from "components/MenuSocial"
 import { Header } from "components/Cards"
 
 import Arrow from "vectors/Arrow"
@@ -45,7 +45,7 @@ const SectionContact = () => {
           <Header title={Strings.contact.title} light left />
           <Description>{Strings.contact.about}</Description>
           <SocialWrapper>
-            <SocialLinks about />
+            <MenuSocial contact />
           </SocialWrapper>
           <Box>
             <Parallax translateY={[-50, 150]}>

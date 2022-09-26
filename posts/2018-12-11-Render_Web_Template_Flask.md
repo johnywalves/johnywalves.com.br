@@ -3,8 +3,8 @@ date: 2018-12-11 16:22:15 -0200
 title: Render Web Template com Python Flask
 description: Geração de template HTML com Python Flask
 category: Python
-featuredImage: ./featured/gearspy-1.jpg
-coverImage: /figures/gearspy-1.jpg
+featuredImage: ./featured/gears-1.jpg
+coverImage: /figures/gears-1.jpg
 tags:
   - Web
   - Flask

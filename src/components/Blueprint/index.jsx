@@ -11,6 +11,9 @@ import GeneralStyles from "styles/general"
 
 import "styles/box-shadow.css"
 
+const limitText = (number, text) =>
+  text.length < number ? text : text.slice(number - 3) + "..."
+
 const Blueprint = ({
   content,
   whiteLogo,
@@ -44,7 +47,12 @@ const Blueprint = ({
     `
   )
 
-  const pathImage = `${site.siteMetadata.siteUrl}${
+  const titleName = limitText(65, title || site.siteMetadata.title),
+    metaDescription = limitText(
+      155,
+      description || site.siteMetadata.description
+    ),
+    pathImage = `${site.siteMetadata.siteUrl}${
       (openGraphImage || thumbnail)?.childImageSharp?.gatsbyImageData?.images
         ?.fallback.src
     }`,
@@ -62,19 +70,13 @@ const Blueprint = ({
           itemProp="mainContentOfPage"
           content={content ? 1 : 0}
         >
-          <meta
-            itemProp="headline"
-            content={title || site.siteMetadata.title}
-          />
-          <meta
-            itemProp="description"
-            content={description || site.siteMetadata.description}
-          />
+          <meta itemProp="headline" content={titleName} />
+          <meta itemProp="description" content={metaDescription} />
           <link itemProp="thumbnailUrl" href={pathImage} />
           <span
             itemScope
             itemProp="image"
-            itemtype="http://schema.org/ImageObject"
+            itemType="http://schema.org/ImageObject"
           >
             <link itemProp="url" href={pathImage} />
             <meta itemProp="width" content={sizeImageWidth} />

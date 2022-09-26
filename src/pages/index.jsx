@@ -1,18 +1,29 @@
 import React from "react"
 
-import Layout from "components/Layout"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import ProjectList from "components/ProjectList"
-import PostsHighlightList from "components/PostsHighlightList"
-import ComicLast from "components/ComicLast"
+
+import {
+  Hero,
+  About,
+  Experience,
+  Articles,
+  Comics,
+  Projects,
+  Contact,
+} from "components/Sections"
 
 const Home = () => {
   return (
-    <Layout>
-      <PostsHighlightList />
-      <ProjectList simple />
-      <ComicLast />
-    </Layout>
+    <Blueprint>
+      <Hero />
+      <About />
+      <Experience />
+      <Articles />
+      <Comics />
+      <Projects />
+      <Contact />
+    </Blueprint>
   )
 }
 

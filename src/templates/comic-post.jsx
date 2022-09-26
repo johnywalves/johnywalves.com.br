@@ -1,45 +1,57 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "components/Layout"
+
+import Strings from "components/strings"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import Comments from "components/Comments"
 import ComicNavigation from "components/ComicNavigation"
 
-import * as S from "components/Post/styled"
+import {
+  ComicPostWrapper,
+  ComicPostHeader,
+  PostTitle,
+  PostDate,
+  ComicWrapper,
+  PostComic,
+  MainContent,
+} from "components/Comic/styled"
 
 const ComicPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { number, slug } = pageContext
 
   return (
-    <Layout>
-      <S.PostHeader comics>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDate>{post.frontmatter.date}</S.PostDate>
-        <S.ComicWrapper>
-          <S.PostComic
-            image={
-              (post.frontmatter.featuredImage || post.frontmatter.comicImage)
-                .childImageSharp.gatsbyImageData
-            }
-            alt={post.frontmatter.transcription}
-          />
-        </S.ComicWrapper>
-        <ComicNavigation number={number} />
-      </S.PostHeader>
-      <S.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </S.MainContent>
-      <Comments title={post.frontmatter.title} url={slug} />
-    </Layout>
+    <Blueprint content>
+      <ComicPostWrapper>
+        <ComicPostHeader comics>
+          <PostTitle>{post.frontmatter.title}</PostTitle>
+          <PostDate>{post.frontmatter.date}</PostDate>
+          <ComicWrapper>
+            <PostComic
+              image={
+                (post.frontmatter.featuredImage || post.frontmatter.comicImage)
+                  .childImageSharp.gatsbyImageData
+              }
+              alt={post.frontmatter.transcription}
+            />
+          </ComicWrapper>
+          <ComicNavigation action={Strings.comics.viewAll} number={number} />
+        </ComicPostHeader>
+        <MainContent>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </MainContent>
+        <Comments title={post.frontmatter.title} url={slug} />
+      </ComicPostWrapper>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query Comic($slug: String!) {
+  query ComicNew($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+        date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
         title
         description
         transcription

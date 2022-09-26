@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import media from "styled-media-query"
+import styled from "styled-components"
+
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const CardListWrapper = styled.div``
@@ -20,47 +20,6 @@ export const NavigationWrapper = styled.div`
   align-items: center;
   gap: 2rem;
   padding: 35px 0 15px;
-`
-
-const iconDisabled = css`
-  color: var(--texts) !important;
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
-`
-
-const iconHover = css`
-  &:hover {
-    transform: scale(1.5);
-  }
-`
-
-const colorHighlight = css`
-  color: var(--highlight) !important;
-`
-
-const colorWhite = css`
-  color: var(--white) !important;
-`
-
-export const Icon = styled(Anilink)`
-  width: 2rem;
-  height: 2rem;
-  transition: 0.25s ease-in-out;
-  z-index: 3;
-
-  ${({ light }) => (light ? colorHighlight : colorWhite)}
-  ${({ disabled }) => (disabled ? iconDisabled : iconHover)}
-
-  & svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  ${media.lessThan("medium")`
-    width: 3rem;
-    height: 3rem;
-  `}
 `
 
 export const Navigation = styled(Anilink)`

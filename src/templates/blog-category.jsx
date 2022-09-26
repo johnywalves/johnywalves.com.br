@@ -45,7 +45,7 @@ const BlogList = ({ data, pageContext }) => {
           }) => (
             <ArticleItem
               key={slug}
-              slug={`/new${slug}`}
+              slug={slug}
               category={category}
               date={date}
               timeToRead={timeToRead}

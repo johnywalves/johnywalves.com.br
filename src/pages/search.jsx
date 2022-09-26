@@ -1,17 +1,20 @@
 import React from "react"
 
-import Layout from "components/Layout"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import Search from "components/Search"
+import SearchPage from "components/SearchPage"
 
-const SearchPage = () => (
-  <Layout>
-    <Search />
-  </Layout>
+const title = "Pesquisa",
+  description = "Busca por texto de conteúdos"
+
+const Search = () => (
+  <Blueprint content title={title} description={description}>
+    <SearchPage />
+  </Blueprint>
 )
 
-export default SearchPage
+export default Search
 
 export const Head = ({ location }) => (
-  <Seo location={location} title="Pesquisa" />
+  <Seo location={location} title={title} description={description} />
 )

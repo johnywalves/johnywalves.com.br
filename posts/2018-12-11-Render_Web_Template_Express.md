@@ -3,8 +3,8 @@ date: 2018-12-11 16:22:15 -0200
 title: Render Web Template com Node.js Express
 description: Geração de template HTML com Node.js Express
 category: JavaScript
-featuredImage: ./featured/gearsjs-1.jpg
-coverImage: /figures/gearsjs-1.jpg
+featuredImage: ./featured/gears-1.jpg
+coverImage: /figures/gears-1.jpg
 tags:
   - Web
   - Node

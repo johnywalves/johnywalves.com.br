@@ -29,7 +29,7 @@ yarn
 Run the development server:
 
 ```bash
-npm start
+npm dev
 # or
-yarn start
+yarn dev
 ```

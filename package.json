@@ -2,7 +2,7 @@
   "name": "johnywalves.com.br",
   "private": true,
   "description": "Página pessoal por Johny W. Alves",
-  "version": "2.1.15",
+  "version": "3.0.24",
   "author": "Johny W. Alves <johnywalves@gmail.com>",
   "dependencies": {
     "algoliasearch": "^4.14.2",

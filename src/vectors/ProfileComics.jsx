@@ -20,7 +20,7 @@ const ProfileComics = (props) => (
           <feFuncA type="table" tableValues="1 0" />
         </feComponentTransfer>
         <feOffset dx="-25" dy="-5" result="offsetblur" />
-        <feFlood flood-color="#d7a787" result="color" />
+        <feFlood floodColor="#d7a787" result="color" />
         <feComposite in2="offsetblur" operator="in" />
         <feComposite in2="SourceAlpha" operator="in" />
         <feMerge>
@@ -88,7 +88,7 @@ const ProfileComics = (props) => (
           <feFuncA type="table" tableValues="1 0"></feFuncA>
         </feComponentTransfer>
         <feOffset dx="-25" dy="-5" result="offsetblur" />
-        <feFlood flood-color="#5e1b23" result="color" />
+        <feFlood floodColor="#5e1b23" result="color" />
         <feComposite in2="offsetblur" operator="in" />
         <feComposite in2="SourceAlpha" operator="in" />
         <feMerge>
@@ -107,7 +107,7 @@ const ProfileComics = (props) => (
           <feFuncA type="table" tableValues="1 0"></feFuncA>
         </feComponentTransfer>
         <feOffset dx="-15" dy="-5" result="offsetblur"></feOffset>
-        <feFlood flood-color="#e34f4f" result="color"></feFlood>
+        <feFlood floodColor="#e34f4f" result="color"></feFlood>
         <feComposite in2="offsetblur" operator="in"></feComposite>
         <feComposite in2="SourceAlpha" operator="in"></feComposite>
         <feMerge>
@@ -206,8 +206,8 @@ const ProfileComics = (props) => (
           <g transform="translate(40, 25)">
             <g transform="translate(-55, 0)">
               <g
-                transformOrigin="0px 0px"
-                style={{ transform: "none", transformOrigin: "0px 0px" }}
+                transformorigin="0px 0px"
+                style={{ transform: "none", transformorigin: "0px 0px" }}
               >
                 <ellipse
                   cx="0"
@@ -227,8 +227,8 @@ const ProfileComics = (props) => (
             </g>
             <g transform="translate(55, 0)">
               <g
-                transformOrigin="0px 0px"
-                style={{ transform: "none", transformOrigin: "0px 0px" }}
+                transformorigin="0px 0px"
+                style={{ transform: "none", transformorigin: "0px 0px" }}
               >
                 <ellipse
                   cx="0"
@@ -266,15 +266,15 @@ const ProfileComics = (props) => (
               transform="translate(-446, -469)"
             />
             <g
-              transformOrigin="0px 24px"
-              style={{ transform: "none", transformOrigin: "0px 24px" }}
+              transformorigin="0px 24px"
+              style={{ transform: "none", transformorigin: "0px 24px" }}
             >
               <path
                 id="mouth-12ee431c-8604-4d7b-bbee-ee7b1c3595f1"
-                d="m -60 0 a 5 5 0 0 0 120 0 a 5 1 0 0 0 -120 0"
+                d="M -60 0 a 5 5 0 0 0 120 0 a 5 1 0 0 0 -120 0 Z"
               />
               <path
-                d="m -6 0 0 a 5 5 0 0 0 120 0 a 5 1 0 0 0 -120 0"
+                d="M -6 0 0 a 5 5 0 0 0 120 0 a 5 1 0 0 0 -120 0 Z"
                 style={{
                   fillOpacity: "0",
                   stroke: "black",

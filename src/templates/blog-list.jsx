@@ -1,44 +1,47 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "components/Layout"
+import Strings from "components/strings"
+import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import PostItem from "components/PostItem"
-import Pagination from "components/Pagination"
+import ArticleItem from "components/ArticleItem"
+import NavigationPage from "components/NavigationPage"
 
-import * as S from "components/ListWrapper/styled"
+import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
 
-const BlogList = (props) => {
-  const postList = props.data.allMarkdownRemark.edges
+const BlogList = ({ data, pageContext }) => {
+  const postList = data.allMarkdownRemark.edges
 
-  const { currentPage, prevPage, nextPage, numPages } = props.pageContext
+  const { currentPage, prevPage, nextPage, numPages, categories } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
 
+  const ArticleNavigatior = () => (
+    <ArticleCategoryNavigatior categories={categories} />
+  )
+
   return (
-    <Layout>
-      <S.ListWrapper>
+    <Blueprint content>
+      <ListsPages Navigator={ArticleNavigatior}>
+        <h2>{Strings.posts.allArticles}</h2>
         {postList.map(
-          (
-            {
-              node: {
-                frontmatter: {
-                  date,
-                  title,
-                  category,
-                  description,
-                  tags,
-                  coverImage,
-                  featuredImage,
-                },
-                timeToRead,
-                fields: { slug },
+          ({
+            node: {
+              frontmatter: {
+                date,
+                title,
+                category,
+                description,
+                tags,
+                coverImage,
+                featuredImage,
               },
+              timeToRead,
+              fields: { slug },
             },
-            index
-          ) => (
-            <PostItem
-              key={index}
+          }) => (
+            <ArticleItem
+              key={slug}
               slug={slug}
               category={category}
               date={date}
@@ -51,21 +54,21 @@ const BlogList = (props) => {
             />
           )
         )}
-      </S.ListWrapper>
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        currentPage={currentPage}
-        numPages={numPages}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
-    </Layout>
+        <NavigationPage
+          isFirst={isFirst}
+          isLast={isLast}
+          currentPage={currentPage}
+          numPages={numPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      </ListsPages>
+    </Blueprint>
   )
 }
 
 export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
+  query PostListNew($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {
@@ -77,7 +80,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+            date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
             title
             category
             description

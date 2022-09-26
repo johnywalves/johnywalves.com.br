@@ -5,28 +5,28 @@
 }
 
 .card-box-shadow-env {
-  box-shadow: 0 0 8px 1px var(--shadowColors);
+  box-shadow: 0 0 8px 1px var(--shadow-colors);
 }
 
 .card-box-shadow-key {
-  box-shadow: 4px 4px 8px 1px var(--shadowColors);
+  box-shadow: 4px 4px 8px 1px var(--shadow-colors);
 }
 
 .card-box-shadow-combined {
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    4px 4px 8px 1px var(--shadowColors);
+  box-shadow: 0 0 8px 1px var(--shadow-colors),
+    4px 4px 8px 1px var(--shadow-colors);
 }
 
 .card-box-shadow-interactive {
   margin: 0 auto;
-  box-shadow: 0 0 8px 1px var(--shadowColors),
-    8px 8px 16px 2px var(--shadowColors);
+  box-shadow: 0 0 8px 1px var(--shadow-colors),
+    8px 8px 16px 2px var(--shadow-colors);
   transition: box-shadow 0.3s;
 }
 
 .card-box-shadow-interactive:hover {
-  box-shadow: 0 0 16px 2px var(--shadowColors),
-    16px 16px 32px 4px var(--shadowColors);
+  box-shadow: 0 0 16px 2px var(--shadow-colors),
+    16px 16px 32px 4px var(--shadow-colors);
 }
 
 @media (max-width: 980px) {

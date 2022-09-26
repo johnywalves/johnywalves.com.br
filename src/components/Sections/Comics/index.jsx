@@ -63,7 +63,7 @@ const SectionComics = () => {
           title={Strings.comics.title}
           number={node.frontmatter.number}
           action={Strings.comics.viewAll}
-          url="/new/comics/"
+          url="/comics/"
           light
         >
           <li>

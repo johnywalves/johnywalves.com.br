@@ -1,28 +1,57 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
+import media from "styled-media-query"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-export const Navigation = styled.div`
-  width: fit-content;
-  margin: 1rem auto 0;
+export const NavigationWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 35px 0 15px;
+`
 
-  a,
-  p {
-    color: var(--texts);
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: min(1.5rem, 3vw);
+export const Navigation = styled(Anilink)`
+  z-index: 3;
+`
+
+const iconDisabled = css`
+  color: var(--texts) !important;
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+`
+
+const iconHover = css`
+  &:hover {
+    transform: scale(1.5);
+  }
+`
+
+const colorHighlight = css`
+  color: var(--highlight) !important;
+`
+
+const colorWhite = css`
+  color: var(--white) !important;
+`
+
+export const Icon = styled(Anilink)`
+  width: 2rem;
+  height: 2rem;
+  transition: 0.25s ease-in-out;
+  z-index: 3;
+
+  ${({ light }) => (light ? colorHighlight : colorWhite)}
+  ${({ disabled }) => (disabled ? iconDisabled : iconHover)}
+
+  & svg {
+    width: 100%;
+    height: 100%;
   }
 
-  p {
-    display: inline;
-    font-weight: 300;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 700;
-  }
-
-  a:hover {
-    color: var(--highlight);
-  }
+  ${media.lessThan("medium")`
+    width: 3rem;
+    height: 3rem;
+  `}
 `

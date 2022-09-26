@@ -64,7 +64,7 @@ const ArticleCategoryNavigatior = ({ categories }) => {
           <li key={category}>
             <Anilink
               fade
-              to={`/new/category/${category.toLowerCase()}/`}
+              to={`/category/${category.toLowerCase()}/`}
               duration={0.75}
               activeClassName="active"
             >

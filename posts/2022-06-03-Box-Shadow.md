@@ -69,19 +69,19 @@ Exemplos da direção das luzes
 
 <div style="padding:20px 0;display:flex;justify-content:space-evenly;" >
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:-4px 4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:-4px 4px 8px 2px var(--shadow-colors)"></div>
     <p style="text-align:center;margin-top:20px;">Topo-Direita</p>
   </div>
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:4px 4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:4px 4px 8px 2px var(--shadow-colors)"></div>
     <p style="text-align:center;margin-top:20px;">Topo-Esquerda</p>
   </div>
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:4px -4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:4px -4px 8px 2px var(--shadow-colors)"></div>
     <p style="text-align:center;margin-top:20px;">Baixo-Direita</p>
   </div>
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:-4px -4px 8px 2px var(--shadowColors)"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;box-shadow:-4px -4px 8px 2px var(--shadow-colors)"></div>
     <p style="text-align:center;margin-top:20px;">Baixo-Esquerda</p>
   </div>
 </div>
@@ -90,7 +90,7 @@ Várias fontes de luzes
 
 <div style="padding:20px 0 0;display:flex;justify-content:center" >
   <div>
-    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;border:2px var(--shadowColors) solid;box-shadow: -45px -8px 4px 1px var(--shadowColors), 45px -8px 4px 1px var(--shadowColors);"></div>
+    <div style="width:80px;height:80px;margin:0 auto;border-radius:8px;border:2px var(--shadow-colors) solid;box-shadow: -45px -8px 4px 1px var(--shadow-colors), 45px -8px 4px 1px var(--shadow-colors);"></div>
     <p style="text-align:center;margin-top:20px;">Baixo-Direita e Baixo-Esquerda</p>
   </div>
 </div>
@@ -136,11 +136,11 @@ box-shadow: inset 0 0 8px 4px #e0138c;
 As sombras podem ser usadas para desenhar novos objetos com o mesmo formato
 
 <div style="padding:20px;display:flex;justify-content:center;" >
-    <div style="width:80px;height:80px;border:2px var(--shadowColors) solid;border-radius:8px;box-shadow: -120px 0 0 10px var(--highlight), 100px 0 0 -10px var(--highlight)"></div>
+    <div style="width:80px;height:80px;border:2px var(--shadow-colors) solid;border-radius:8px;box-shadow: -120px 0 0 10px var(--highlight), 100px 0 0 -10px var(--highlight)"></div>
 </div>
 
 <div style="padding:20px;display:flex;justify-content:center;" >
-    <div style="width:80px;height:80px;border:2px var(--shadowColors) solid;border-radius:50%;box-shadow: -120px 0 0 10px var(--highlight), 100px 0 0 -10px var(--highlight)"></div>
+    <div style="width:80px;height:80px;border:2px var(--shadow-colors) solid;border-radius:50%;box-shadow: -120px 0 0 10px var(--highlight), 100px 0 0 -10px var(--highlight)"></div>
 </div>
 
 Podemos fazer o espalhamento um como positivo para aumentar e outro como negativo para reduzir o tamanho da sombra
