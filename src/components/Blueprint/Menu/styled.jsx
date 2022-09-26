@@ -204,8 +204,8 @@ export const MenuBackground = styled(GatsbyImage)`
   opacity: 0;
   display: none;
   position: fixed;
-  width: 60%;
-  height: calc(90% - 160px);
+  width: 50%;
+  height: calc(60% - 160px);
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);

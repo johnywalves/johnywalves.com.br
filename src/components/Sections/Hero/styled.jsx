@@ -8,13 +8,9 @@ export const Wrapper = styled.section`
   height: 100vh;
   background: url("/vectors/triangle-wall-top.svg"),
     linear-gradient(90deg, var(--background) 50%, var(--highlight) 50%);
-  background-size: 20%, 100%;
+  background-size: 50%, 100%;
   background-repeat: no-repeat;
   background-position: top left, center;
-
-  ${media.lessThan("medium")`
-    background-size: 50%, 100%;
-  `}
 `
 
 const Container = styled.div`
