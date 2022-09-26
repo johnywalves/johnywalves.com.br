@@ -114,8 +114,9 @@ export const query = graphql`
 
 export default BlogCategory
 
-export const Head = ({ location }) => {
-  const descriptionPage = `Listagem de artigos de ${category}`
+export const Head = ({ location, pageContext }) => {
+  const { category } = pageContext,
+    descriptionPage = `Listagem de artigos de ${category}`
 
   return (
     <Seo location={location} title={titlePage} description={descriptionPage} />
