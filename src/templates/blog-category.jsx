@@ -9,20 +9,22 @@ import NavigationPage from "components/NavigationPage"
 
 import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
 
-const BlogList = ({ data, pageContext }) => {
-  const postList = data.allMarkdownRemark.edges
+const titlePage = "Artigos"
 
-  const { currentPage, prevPage, nextPage, numPages, categories, category } =
-    pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
+const BlogCategory = ({ data, pageContext }) => {
+  const postList = data.allMarkdownRemark.edges,
+    { currentPage, prevPage, nextPage, numPages, categories, category } =
+      pageContext,
+    isFirst = currentPage === 1,
+    isLast = currentPage === numPages,
+    descriptionPage = `Listagem de artigos de ${category}`
 
   const ArticleNavigatior = () => (
     <ArticleCategoryNavigatior categories={categories} />
   )
 
   return (
-    <Blueprint content>
+    <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleNavigatior}>
         <h2>
           {Strings.posts.category}: <strong>{category}</strong>
@@ -110,8 +112,12 @@ export const query = graphql`
   }
 `
 
-export default BlogList
+export default BlogCategory
 
-export const Head = ({ location }) => (
-  <Seo location={location} title="Artigos" />
-)
+export const Head = ({ location }) => {
+  const descriptionPage = `Listagem de artigos de ${category}`
+
+  return (
+    <Seo location={location} title={titlePage} description={descriptionPage} />
+  )
+}

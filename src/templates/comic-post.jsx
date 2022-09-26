@@ -22,7 +22,7 @@ const ComicPost = ({ data, pageContext }) => {
   const { number, slug } = pageContext
 
   return (
-    <Blueprint content>
+    <Blueprint content title={post.frontmatter.title}>
       <ComicPostWrapper>
         <ComicPostHeader comics>
           <PostTitle>{post.frontmatter.title}</PostTitle>
@@ -91,9 +91,9 @@ export const Head = ({ location, data }) => {
   return (
     <Seo
       location={location}
+      image={coverImage}
       title={title}
       description={transcription}
-      image={coverImage}
     />
   )
 }

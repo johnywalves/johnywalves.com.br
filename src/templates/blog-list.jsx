@@ -9,6 +9,9 @@ import NavigationPage from "components/NavigationPage"
 
 import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
 
+const titlePage = "Artigos",
+  descriptionPage = "Listagem de todos artigos publicados"
+
 const BlogList = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges
 
@@ -21,7 +24,7 @@ const BlogList = ({ data, pageContext }) => {
   )
 
   return (
-    <Blueprint content>
+    <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleNavigatior}>
         <h2>{Strings.posts.allArticles}</h2>
         {postList.map(
@@ -110,5 +113,5 @@ export const query = graphql`
 export default BlogList
 
 export const Head = ({ location }) => (
-  <Seo location={location} title="Artigos" />
+  <Seo location={location} title={titlePage} description={descriptionPage} />
 )

@@ -8,6 +8,9 @@ import NavigationPage from "components/NavigationPage"
 
 import ListsPages, { ArticleComicNavigator } from "components/ListsPages"
 
+const titlePage = "Tirinhas",
+  descriptionPage = "Listagens tirinhas geradas e publicacas"
+
 const ComicList = (props) => {
   const comicsList = props.data.allMarkdownRemark.edges
 
@@ -16,7 +19,7 @@ const ComicList = (props) => {
   const isLast = currentPage === numPages
 
   return (
-    <Blueprint content>
+    <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleComicNavigator}>
         {comicsList.map(
           (
@@ -108,5 +111,5 @@ export const query = graphql`
 export default ComicList
 
 export const Head = ({ location }) => (
-  <Seo location={location} title="Tirinhas" />
+  <Seo location={location} title={titlePage} description={descriptionPage} />
 )
