@@ -51,6 +51,15 @@ export const PostHeader = styled.div`
 export const PostFeaturedImage = styled(GatsbyImage)`
   display: flex;
   justify-content: center;
+
+  ${media.lessThan("medium")`
+    &,
+    & picture,
+    & img {
+      min-height: 20rem;
+      height: 100%;
+    }
+  `}
 `
 
 export const ComicWrapper = styled.div`

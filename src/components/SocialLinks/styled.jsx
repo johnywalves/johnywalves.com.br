@@ -1,15 +1,8 @@
 import styled from "styled-components"
-import media from "styled-media-query"
 
 export const Wrapper = styled.nav`
   margin: 2rem auto;
   width: 100%;
-
-  &.about {
-    ${media.lessThan("large")`
-      display: none;
-    `}
-  }
 
   &.vertical {
     a,

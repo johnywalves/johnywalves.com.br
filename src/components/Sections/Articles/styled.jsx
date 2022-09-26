@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const SectionArticlesWrapper = styled.section`
@@ -18,6 +19,10 @@ export const SectionArticlesBoxShape = styled.div`
     transform: rotate(45deg);
     filter: blur(2px);
   }
+
+  ${media.lessThan("medium")`
+    left: -250px;
+  `}
 `
 
 export const SectionArticlesBoxShapeOutline = styled.div`

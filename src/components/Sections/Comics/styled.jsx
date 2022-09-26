@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Anilink from "gatsby-plugin-transition-link/AniLink"
@@ -14,6 +15,10 @@ export const Wrapper = styled.section`
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: top left, bottom right;
+
+  ${media.lessThan("medium")`
+    background-size: 50%;
+  `}
 `
 
 export const Link = styled(Anilink)`

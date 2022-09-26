@@ -2,7 +2,7 @@ import React from "react"
 import media from "styled-media-query"
 import styled, { css, keyframes } from "styled-components"
 
-export const Wrapper = styled.section`
+export const ExperienceWrapper = styled.section`
   position: relative;
   width: 100%;
   padding: 45px var(--padding-horizontal);
@@ -14,12 +14,18 @@ export const Wrapper = styled.section`
   background-size: 20%, 30%;
   background-repeat: no-repeat;
   background-position: top left, bottom right;
+
+  ${media.lessThan("medium")`
+    background-size: 30%, 50%;
+  `}
 `
 
-export const Content = styled.div`
+export const ExperienceContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
 `
 
 export const Types = styled.ul`
@@ -102,7 +108,7 @@ const fadeInInfo = keyframes`
 `
 
 const selectedSkill = css`
-  max-height: 100rem;
+  max-height: 200rem;
   animation: ${fadeInInfo} 1s ease-out forwards;
 `
 
@@ -160,17 +166,13 @@ export const Areas = styled.div`
   margin: 30px 0 15px;
   padding: 0 var(--padding-horizontal);
 
-  & > div {
-    z-index: 3;
-  }
-
   ${media.lessThan("medium")`
     flex-direction: column;
   `}
 `
 
 const selectedArea = css`
-  max-height: 200rem;
+  max-height: 5000px;
   padding: 30px 0 0;
   animation: ${fadeInInfo} 1s ease-out forwards;
 `
@@ -290,10 +292,13 @@ const hiddenWrapperAccomplishment = css`
 `
 
 const WrapperAccomplishment = styled.li`
-  position: relative;
   max-height: 50rem;
   padding: 0 var(--36px) var(--36px) var(--48px);
   animation: ${fadeInInfo} 1s ease-out forwards;
+
+  ${media.lessThan("medium")`
+    padding: 0 var(--16px) var(--36px) var(--48px);
+  `}
 
   &::before {
     content: "";
@@ -371,5 +376,9 @@ export const Accomplishment = ({ children, icon, hidden }) => (
 export const BoxShape = styled.div`
   position: absolute;
   right: -250px;
-  z-index: 2;
+  z-index: 1;
+
+  ${media.lessThan("medium")`
+    right: -350px;
+  `}
 `

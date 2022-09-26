@@ -1,10 +1,12 @@
 import styled, { css } from "styled-components"
+import media from "styled-media-query"
 
 const alignLeft = css`
   align-items: flex-start;
 `
 
 const alignCenter = css`
+  text-align: center;
   align-items: center;
 `
 
@@ -34,7 +36,6 @@ export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  z-index: 2;
 
   ${({ fit }) => (fit ? widthFit : widthFull)};
   ${alignText}
@@ -46,11 +47,19 @@ const titleSize = ({ small }) =>
         font-size: 2.5rem;
         margin-bottom: 12px;
         font-weight: 700;
+
+        ${media.lessThan("medium")`
+          font-size: 1.5rem;
+        `}
       `
     : css`
         font-size: 1.5rem;
         margin-bottom: 8px;
         font-weight: 500;
+
+        ${media.lessThan("medium")`
+          font-size: 1rem;
+        `}
       `
 
 const colorText = ({ light, dark }) => {
@@ -66,6 +75,7 @@ const colorText = ({ light, dark }) => {
 export const HeaderTitle = styled.h2`
   text-transform: uppercase;
   color: ${colorText};
+  z-index: 2;
 
   ${titleSize}
 `
@@ -85,6 +95,7 @@ export const HeaderLine = styled.div`
   width: 5rem;
   border-style: solid;
   border-color: ${colorText};
+  z-index: 2;
 
   ${lineSize}
 `

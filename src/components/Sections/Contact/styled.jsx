@@ -16,6 +16,10 @@ export const Wrapper = styled.section`
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: top left, bottom right;
+
+  ${media.lessThan("medium")`
+    background-size: 50%;
+  `}
 `
 
 export const Content = styled.div`
@@ -47,10 +51,9 @@ export const Info = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 2;
 
   ${media.lessThan("small")`
-    width: 250px;
+    width: 275px;
   `}
 `
 
@@ -118,6 +121,10 @@ export const BoxSide = styled.div`
   & div:nth-child(3) > svg {
     transform: translateX(60px) rotate(-50deg);
   }
+
+  ${media.lessThan("large")`
+    left: -200px;
+  `}
 `
 
 export const Image = styled(GatsbyImage)`

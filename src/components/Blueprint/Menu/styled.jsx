@@ -204,14 +204,16 @@ export const MenuBackground = styled(GatsbyImage)`
   opacity: 0;
   display: none;
   position: fixed;
+  width: 60%;
+  height: calc(90% - 160px);
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
-  border-radius: 30% 80% 80% 30% / 55%;
+  border-radius: 90% 50% 80% 20% / 55%;
 
   & picture {
-    opacity: 0.3;
+    opacity: 0.7;
   }
 `
 

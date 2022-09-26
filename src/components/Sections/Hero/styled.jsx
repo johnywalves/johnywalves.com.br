@@ -11,6 +11,10 @@ export const Wrapper = styled.section`
   background-size: 20%, 100%;
   background-repeat: no-repeat;
   background-position: top left, center;
+
+  ${media.lessThan("medium")`
+    background-size: 50%, 100%;
+  `}
 `
 
 const Container = styled.div`

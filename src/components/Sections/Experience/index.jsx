@@ -22,8 +22,8 @@ import Triangle from "vectors/Triangle"
 import Icons from "./icons"
 
 import {
-  Wrapper,
-  Content,
+  ExperienceWrapper,
+  ExperienceContent,
   Types,
   Type,
   SkillsWrapper,
@@ -100,9 +100,9 @@ const SectionExperience = () => {
   )
 
   return (
-    <Wrapper>
+    <ExperienceWrapper>
       <Header title={Strings.skills.title} light />
-      <Content>
+      <ExperienceContent>
         <Types>
           {Strings.skills.list.map(({ type }, index) => (
             <Type
@@ -311,14 +311,14 @@ const SectionExperience = () => {
             </Button>
           </AreaButton>
         </Area>
-      </Content>
+      </ExperienceContent>
 
       <BoxShape>
         <Parallax speed={50} translateY={[-50, 50]}>
           <Triangle width="456" height="314" />
         </Parallax>
       </BoxShape>
-    </Wrapper>
+    </ExperienceWrapper>
   )
 }
 
