@@ -179,13 +179,15 @@ const SectionExperience = () => {
                 <Descriptions list={1}>
                   {description.map((text, idx) => (
                     <Description key={idx}>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: `${text}${
-                            description.length - 1 !== idx ? ";" : "."
-                          }`,
-                        }}
-                      />
+                      <span>
+                        {`${text
+                          .split("</strong>")
+                          .join("")
+                          .split("<strong>")
+                          .join("")}${
+                          description.length - 1 !== idx ? ";" : "."
+                        }`}
+                      </span>
                     </Description>
                   ))}
                 </Descriptions>
@@ -239,12 +241,7 @@ const SectionExperience = () => {
                 </Title>
                 <Descriptions>
                   {description.map((text, idx) => (
-                    <Description
-                      key={idx}
-                      dangerouslySetInnerHTML={{
-                        __html: text,
-                      }}
-                    />
+                    <Description key={idx}>{text}</Description>
                   ))}
                 </Descriptions>
                 {production && (

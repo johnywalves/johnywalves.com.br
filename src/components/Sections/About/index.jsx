@@ -1,4 +1,6 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import { Download } from "@styled-icons/evaicons-solid/Download"
 import { Language as LanguageIcon } from "@styled-icons/ionicons-solid/Language"
 
@@ -20,20 +22,34 @@ import {
 } from "./styled"
 
 const SectionAbout = () => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `)
+
+  const { aboutMe, description, languages, resume } = Strings
+
   return (
     <Wrapper>
       <Content>
         <AboutMe>
-          <Header title={Strings.aboutMe} light left />
+          <Header title={aboutMe} light left />
           <Line />
-          <Description>{Strings.description}</Description>
+          <Description>{description}</Description>
         </AboutMe>
 
         <Languages>
           <li>
-            <Header title={Strings.languages.title} light left small fit />
+            <Header title={languages.title} light left small fit />
           </li>
-          {Strings.languages.list.map((language, index) => (
+          {languages.list.map((language, index) => (
             <Language key={index}>
               <LanguageName>
                 <LanguageIcon /> {language.name} {language.proficiency}
@@ -44,15 +60,15 @@ const SectionAbout = () => {
 
         <Resumes>
           <li>
-            <Header title={Strings.resume.title} light left small fit />
+            <Header title={resume.title} light left small fit />
           </li>
-          {Strings.resume.files.map(({ name, file }, index) => (
+          {resume.files.map(({ name, file }, index) => (
             <Resume key={index}>
               <a
-                href={file}
+                href={`${siteMetadata.siteUrl}${file}`}
                 target="_blank"
                 rel="noreferrer"
-                aria-label={`Download ${name}`}
+                aria-label={`Download ${name.toLowerCase()} ${resume.title.toLowerCase()}`}
               >
                 <Button light secondary={index !== 0}>
                   <Download /> {name}

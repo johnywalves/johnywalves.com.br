@@ -29,6 +29,12 @@
     "searchResult": {
       "type": "string"
     },
+    "notfound": {
+      "type": "string"
+    },
+    "backToHome": {
+      "type": "string"
+    },
     "resume": {
       "type": "object",
       "properties": {
@@ -182,12 +188,9 @@
                 },
                 "proficiency": {
                   "type": "string"
-                },
-                "image": {
-                  "type": "string"
                 }
               },
-              "required": ["name", "proficiency", "image"]
+              "required": ["name", "proficiency"]
             },
             {
               "type": "object",
@@ -197,12 +200,9 @@
                 },
                 "proficiency": {
                   "type": "string"
-                },
-                "image": {
-                  "type": "string"
                 }
               },
-              "required": ["name", "proficiency", "image"]
+              "required": ["name", "proficiency"]
             }
           ]
         }
@@ -1551,6 +1551,21 @@
                 }
               },
               "required": ["title", "description", "link"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              },
+              "required": ["title", "description", "link"]
             }
           ]
         }
@@ -1588,9 +1603,27 @@
                       "type": "string"
                     }
                   ]
+                },
+                "production": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "file": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["title", "file"]
                 }
               },
-              "required": ["date", "title", "institution", "description"]
+              "required": [
+                "date",
+                "title",
+                "institution",
+                "description",
+                "production"
+              ]
             },
             {
               "type": "object",
@@ -1995,6 +2028,9 @@
                   "items": [
                     {
                       "type": "string"
+                    },
+                    {
+                      "type": "string"
                     }
                   ]
                 }
@@ -2305,6 +2341,8 @@
     "sourceCode",
     "search",
     "searchResult",
+    "notfound",
+    "backToHome",
     "resume",
     "status",
     "live",
