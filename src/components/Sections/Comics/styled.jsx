@@ -32,18 +32,41 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   color: var(--highlight);
   margin-bottom: 5px;
   z-index: 2;
 
   & h3 {
     font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      font-size: 1rem;
+      margin: 0 var(--8px);
+    }
   }
 
   & small {
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
+
+  ${media.lessThan("medium")`
+    & h3 {
+      font-size: 1rem;
+
+      span {
+        font-size: .25rem;
+      }
+    }
+
+    & small {
+      font-size: 0.5rem;
+    }
+  `}
 `
 
 export const Image = styled(GatsbyImage)`

@@ -27,11 +27,6 @@ const Share = ({ slug, title }) => {
   const url = `${siteUrl}${slug}`,
     encoded = encodeURIComponent(url)
 
-  // https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fespirian.co.uk%2Flinkedin-links%2F
-  // https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fjohnywalves.com.br%2Fconstruindo-layout-2.0%2F
-  // https://www.linkedin.com/sharing/share-offsite/?mini=true&url=https%3A%2F%2Fwww.johnywalves.com.br
-  // https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fwww.google.com&title=This+is+google+a+search+engin
-
   return (
     <ShareWrapper>
       <ShareTitle>Compartilhe: </ShareTitle>

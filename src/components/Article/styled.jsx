@@ -31,6 +31,7 @@ export const ArticleForeheadCover = styled.div`
 
 export const PostHeader = styled.div`
   position: absolute;
+  max-width: 70rem;
   display: flex;
   flex-direction: column;
   align-items: center;

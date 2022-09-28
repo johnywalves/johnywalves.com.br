@@ -116,13 +116,9 @@
       }
     ]
   },
-  "courses": {
-    "title": "Cursos Complementares",
-    "description": "Alguns cursos para adicionar algumas habilidades e conhecimentos"
-  },
   "certification": {
     "title": "Certificados",
-    "description": "Lista de certificados",
+    "courses": "Cursos Complementares",
     "list": [
       {
         "date": "2022-07-08 00:00:00-0300",
@@ -235,7 +231,6 @@
     "title": "Projetos & Desenvolvimentos",
     "top": "Projetos em destaque",
     "others": "Outros projetos",
-    "description": "Alguns projetos e experimentações desenvolvidas por mim",
     "viewAll": "Ver todos os projetos",
     "viewHighlight": "Visualizar somente destaques",
     "list": [

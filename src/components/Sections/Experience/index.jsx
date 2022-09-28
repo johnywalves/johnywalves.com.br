@@ -156,7 +156,7 @@ const SectionExperience = () => {
             <AcademicCap /> {Strings.education.title}
           </Button>
           <Button selected={selectedCourses} onClick={toggleCourses} light>
-            <Code /> {Strings.courses.title}
+            <Code /> {Strings.certification.courses}
           </Button>
         </Areas>
 

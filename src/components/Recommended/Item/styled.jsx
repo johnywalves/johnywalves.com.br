@@ -57,6 +57,7 @@ export const RecommendedContent = styled.div`
     color: var(--highlight);
     font-size: 1.75rem;
     margin-bottom: var(--8px);
+    text-align: center;
   }
 
   & p {

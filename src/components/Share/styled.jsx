@@ -8,7 +8,7 @@ export const ShareWrapper = styled.section`
 
   margin: auto;
   max-width: 70rem;
-  padding: var(--16px) var(--80px);
+  padding: var(--8px) var(--80px);
 
   ${media.lessThan("large")`
     padding: 3rem 1.4rem 0;

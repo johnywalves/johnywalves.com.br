@@ -29,7 +29,7 @@ const SectionComics = () => {
               featuredImage {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 800
+                    width: 1200
                     layout: CONSTRAINED
                     placeholder: DOMINANT_COLOR
                     formats: [AUTO, WEBP]
@@ -39,7 +39,7 @@ const SectionComics = () => {
               comicImage {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 600
+                    width: 750
                     layout: CONSTRAINED
                     placeholder: TRACED_SVG
                   )
@@ -74,7 +74,11 @@ const SectionComics = () => {
               aria-label="Last Comics"
             >
               <Header>
-                <h3>{node.frontmatter.title}</h3>
+                <h3>
+                  #{node.frontmatter.number.toString().padStart(3, "0")}
+                  <span>●</span>
+                  {node.frontmatter.title}
+                </h3>
                 <small>{node.frontmatter.date}</small>
               </Header>
               <Image

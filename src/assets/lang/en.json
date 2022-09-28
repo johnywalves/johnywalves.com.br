@@ -116,13 +116,9 @@
       }
     ]
   },
-  "courses": {
-    "title": "Complementary courses",
-    "description": "Some courses to add some skills and knowledge"
-  },
   "certification": {
     "title": "Certifications",
-    "description": "Certifications list",
+    "courses": "Complementary courses",
     "list": [
       {
         "date": "2022-07-08 00:00:00-0300",
@@ -133,14 +129,14 @@
       },
       {
         "date": "2020-04-30 00:00:00-0300",
-        "name": "Pós-Graduação em Big Data",
+        "name": "Specialization in Big Data",
         "institute": "Centro Universitário Senac",
         "img": "/cert/senac_bigdata.jpg",
         "icon": "school"
       },
       {
         "date": "2020-04-19 00:00:00-0300",
-        "name": "Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS",
+        "name": "Gatsby: Create a site PWA with React, GraphQL and Netlify CMS",
         "institute": "Udemy",
         "img": "/cert/udemy_gatsby.jpg",
         "icon": "toolbox"
@@ -154,77 +150,77 @@
       },
       {
         "date": "2018-09-16 00:00:00-0300",
-        "name": "Ciência de Dados e Machine Learing em Python",
+        "name": "Data Science and Machine Learing in Python",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_ml_python.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2018-07-18 00:00:00-0300",
-        "name": "Linguagem R para Desenvolvedores Qlik",
+        "name": "Language R to Qlik Developers",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_r_qlik.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2018-07-10 00:00:00-0300",
-        "name": "Introdução ao Qlik Sense",
+        "name": "Introduction to Qlik Sense",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_qlik.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2018-07-22 00:00:00-0300",
-        "name": "Estatística em Qlik",
+        "name": "Statistic in Qlik",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_estatistica_qlik.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2018-03-10 00:00:00-0300",
-        "name": "Graduação em Tecnologia em Informática para Negócios",
+        "name": "University graduate in Business Informatics",
         "institute": "Fatec Rio Preto",
         "img": "/cert/fatec_graduacao.jpg",
         "icon": "school"
       },
       {
         "date": "2018-03-13 00:00:00-0300",
-        "name": "Fundamentos da Ciência de Dados",
+        "name": "Fundamentals of Data Science",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_fundamentos_cd.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2018-03-10 00:00:00-0300",
-        "name": "Redes Neurais Artificiais e Deep Learning",
+        "name": "Artificial Neural Networks and Deep Learning",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_rna_dp.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2018-03-10 00:00:00-0300",
-        "name": "Melhor TCC",
+        "name": "Best Undergraduate Project Award",
         "institute": "Fatec Rio Preto",
         "img": "/cert/fatec_melhor_tcc.jpg",
         "icon": "award"
       },
       {
         "date": "2018-03-10 00:00:00-0300",
-        "name": "Maior Média",
+        "name": "Highest Score Award",
         "institute": "Fatec Rio Preto",
         "img": "/cert/fatec_maior_media.jpg",
         "icon": "award"
       },
       {
         "date": "2017-09-24 00:00:00-0300",
-        "name": "Introdução à Machine Learning",
+        "name": "Fundamentals of Machine Learning",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_ml.jpg",
         "icon": "chartpie"
       },
       {
         "date": "2017-08-27 00:00:00-0300",
-        "name": "Linguagem R",
+        "name": "Language R",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_r.jpg",
         "icon": "chartpie"
@@ -235,7 +231,6 @@
     "title": "Projects & developments",
     "top": "Top projects",
     "others": "Others projects",
-    "description": "Some projects and experiments developed by me",
     "viewAll": "View all projects",
     "viewHighlight": "View only highlights",
     "list": [
