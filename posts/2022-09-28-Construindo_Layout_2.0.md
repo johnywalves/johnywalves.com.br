@@ -9,7 +9,6 @@ tags:
   - Designer
   - Cores
   - Ambiente
-published: false
 ---
 
 Um desenvolvedor que tem um trabalho de tempo integral não precisa de um portfólio, os recrutadores geralmente usam o LinkedIn para encontrar profissionais, um bom perfil lá é mais prático, e dentro das empresas costumam ter seu próprio processo interno
