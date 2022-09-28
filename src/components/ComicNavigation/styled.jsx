@@ -55,3 +55,18 @@ export const Icon = styled(Anilink)`
     height: 3rem;
   `}
 `
+
+export const Pagination = styled.p`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-weight: 300;
+
+  & span {
+    margin: 0 var(--8px);
+    font-weight: 500;
+  }
+`

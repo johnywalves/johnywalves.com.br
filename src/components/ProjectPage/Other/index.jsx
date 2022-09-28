@@ -23,7 +23,7 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
         aria-label={`${Strings.visite} ${title}`}
         negative
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noreferrer"
       >
         <ExternalLink />
       </OtherProjectLink>
@@ -31,7 +31,7 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
         href={sourceCode}
         aria-label={`${Strings.souceCode} ${title}`}
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noreferrer"
       >
         <Github />
       </OtherProjectLink>

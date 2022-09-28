@@ -18,8 +18,8 @@ export const ComicPostWrapper = styled.article`
 export const ComicPostHeader = styled.header`
   color: var(--texts);
   margin: auto;
-  max-width: 70rem;
-  padding: 2rem 5rem 0;
+  max-width: 1200px;
+  padding: var(--56px) 5rem 0;
 
   ${media.lessThan("large")`
     ${(props) =>
@@ -44,11 +44,18 @@ export const ComicWrapper = styled.div`
 
 export const PostComic = styled(GatsbyImage)``
 
+export const PostDate = styled.time`
+  font-size: 1.1rem;
+  font-weight: 600;
+`
+
 export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
-  padding: 0 1.4rem;
+  padding: var(--8px) 0 var(--16px);
   margin: 1rem auto;
+  color: var(--highlight);
+  text-shadow: 1px 1px 2px var(--shadow-colors);
 
   ${media.lessThan("large")`
     font-size: 2.8rem;
@@ -65,16 +72,6 @@ export const PostDescription = styled.h2`
   ${media.lessThan("large")`
     font-size: 1.6rem;
     line-height: 1.3;
-    padding: 0 1rem;
-  `}
-`
-
-export const PostDate = styled.p`
-  font-size: 1.1rem;
-  font-weight: 400;
-  padding: 0 1.4rem;
-
-  ${media.lessThan("large")`
     padding: 0 1rem;
   `}
 `
@@ -114,6 +111,7 @@ export const MainContent = styled.section`
   video,
   p {
     display: block;
+    text-align: justify;
     margin: 0 auto 1.6rem;
   }
   h1,

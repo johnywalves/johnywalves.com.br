@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import Comments from "components/Comments"
+import Recommended from "components/Recommended"
+import Share from "components/Share"
 
 import {
   ArticleWrapper,
@@ -19,7 +21,7 @@ import {
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const { slug } = pageContext
+  const { slug, recommendedLast, recommendedCategory } = pageContext
 
   return (
     <Blueprint
@@ -63,9 +65,18 @@ const BlogPost = ({ data, pageContext }) => {
             <meta itemProp="wordCount" content={post.html.length} />
           </PostHeader>
         </ArticleForehead>
+
         <MainContent>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </MainContent>
+
+        <Share slug={slug} title={post.frontmatter.title} />
+
+        <Recommended
+          recommendedLast={recommendedLast}
+          recommendedCategory={recommendedCategory}
+        />
+
         <Comments title={post.frontmatter.title} url={slug} />
       </ArticleWrapper>
     </Blueprint>
@@ -83,7 +94,7 @@ export const query = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+        date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
         created: date
         title
         description

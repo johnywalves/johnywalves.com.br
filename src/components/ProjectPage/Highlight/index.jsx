@@ -98,7 +98,7 @@ const Highlight = ({
           aria-label={cover}
           negative
           target="_blank"
-          rel="noreferrer"
+          rel="nofollow noreferrer"
         >
           <Button light>
             <ExternalLink /> {Strings.visite}
@@ -108,7 +108,7 @@ const Highlight = ({
           href={sourceCode}
           aria-label={cover}
           target="_blank"
-          rel="noreferrer"
+          rel="nofollow noreferrer"
         >
           <Button light>
             <Github /> {Strings.sourceCode}

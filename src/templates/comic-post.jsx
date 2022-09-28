@@ -5,6 +5,7 @@ import Strings from "components/strings"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import Comments from "components/Comments"
+import Share from "components/Share"
 import ComicNavigation from "components/ComicNavigation"
 
 import {
@@ -25,8 +26,8 @@ const ComicPost = ({ data, pageContext }) => {
     <Blueprint content title={post.frontmatter.title}>
       <ComicPostWrapper>
         <ComicPostHeader comics>
-          <PostTitle>{post.frontmatter.title}</PostTitle>
           <PostDate>{post.frontmatter.date}</PostDate>
+          <PostTitle>{post.frontmatter.title}</PostTitle>
           <ComicWrapper>
             <PostComic
               image={
@@ -36,11 +37,19 @@ const ComicPost = ({ data, pageContext }) => {
               alt={post.frontmatter.transcription}
             />
           </ComicWrapper>
-          <ComicNavigation action={Strings.comics.viewAll} number={number} />
+          <ComicNavigation
+            action={Strings.comics.viewAll}
+            number={number}
+            showCount
+          />
         </ComicPostHeader>
+
         <MainContent>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </MainContent>
+
+        <Share slug={slug} title={post.frontmatter.title} />
+
         <Comments title={post.frontmatter.title} url={slug} />
       </ComicPostWrapper>
     </Blueprint>
@@ -51,7 +60,7 @@ export const query = graphql`
   query ComicNew($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+        date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
         title
         description
         transcription
@@ -59,7 +68,7 @@ export const query = graphql`
         featuredImage {
           childImageSharp {
             gatsbyImageData(
-              width: 800
+              width: 1200
               layout: CONSTRAINED
               placeholder: TRACED_SVG
             )
@@ -68,7 +77,7 @@ export const query = graphql`
         comicImage {
           childImageSharp {
             gatsbyImageData(
-              width: 600
+              width: 750
               layout: CONSTRAINED
               placeholder: TRACED_SVG
             )

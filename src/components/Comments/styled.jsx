@@ -4,7 +4,7 @@ import media from "styled-media-query"
 export const CommentsWrapper = styled.section`
   margin: auto;
   max-width: 70rem;
-  padding: var(--32px) 6.4rem var(--48px);
+  padding: var(--32px) var(--80px) var(--24px);
 
   ${media.lessThan("large")`
     padding: 3rem 1.4rem 0;
@@ -18,19 +18,23 @@ export const CommentsWrapper = styled.section`
   #disqus_thread {
     color: var(--texts) !important;
 
-    a {
+    & a {
       color: var(--highlight) !important;
     }
 
-    .text-bold {
+    & .text-bold {
+      color: var(--texts) !important;
+    }
+
+    & div {
       color: var(--texts) !important;
     }
   }
 `
 
 export const CommentsTitle = styled.h2`
-  color: var(--texts);
-  font-size: 2rem;
+  color: var(--highlight);
+  font-size: 1.75rem;
   font-weight: 700;
   padding-bottom: var(--8px);
 

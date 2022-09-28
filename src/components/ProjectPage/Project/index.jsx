@@ -42,7 +42,7 @@ const Project = ({
         aria-label={`${Strings.visite} ${title}`}
         negative
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noreferrer"
       >
         <ExternalLink />
       </Link>
@@ -50,7 +50,7 @@ const Project = ({
         href={sourceCode}
         aria-label={`${Strings.souceCode} ${title}`}
         target="_blank"
-        rel="noreferrer"
+        rel="nofollow noreferrer"
       >
         <Github />
       </Link>

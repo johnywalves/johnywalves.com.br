@@ -21,7 +21,7 @@ const SectionComics = () => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
               title
               number
               description

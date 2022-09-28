@@ -155,6 +155,7 @@ export const MainContent = styled.section`
   video,
   p {
     display: block;
+    text-align: justify;
     margin: 0 auto 1.6rem;
   }
   h1,

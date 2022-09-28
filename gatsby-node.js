@@ -40,27 +40,22 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
               title
               category
+              description
+              featuredImage {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 1200
+                    height: 500
+                    layout: CONSTRAINED
+                    placeholder: BLURRED
+                  )
+                }
+              }
             }
             timeToRead
-            fields {
-              slug
-            }
-          }
-          next {
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-            }
-          }
-          previous {
-            frontmatter {
-              title
-            }
             fields {
               slug
             }
@@ -76,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
               title
               number
             }
@@ -93,7 +88,9 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const categories = Object.entries(result.data.AllPosts.edges
+    const AllPostsEdges = result.data.AllPosts.edges
+
+    const categories = Object.entries(AllPostsEdges
       .reduce((acumulator, { node: { frontmatter: { category } } }) => {
         const currCount = acumulator[category] ?? 0;
         return {
@@ -105,14 +102,21 @@ exports.createPages = ({ graphql, actions }) => {
       .map(([category,]) => category)
 
     // Páginas de artigos
-    result.data.AllPosts.edges.forEach(({ node, next, previous }) => {
+    AllPostsEdges.forEach(({ node }) => {
+      const bylast = AllPostsEdges.find(({ node: nodeLast }) => node.fields.slug !== nodeLast.fields.slug),
+        byCategory = AllPostsEdges.find(({ node: nodeLast }) =>
+          node.fields.slug !== nodeLast.fields.slug
+          && node.frontmatter.category === nodeLast.frontmatter.category
+          && (!bylast || bylast.node.fields.slug !== nodeLast.fields.slug)
+        )
+
       createPage({
         path: node.fields.slug,
         component: path.resolve(`src/templates/blog-post.jsx`),
         context: {
           slug: node.fields.slug,
-          previousPost: next,
-          nextPost: previous,
+          recommendedLast: bylast?.node,
+          recommendedCategory: byCategory?.node
         },
       })
     })
@@ -120,7 +124,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Listagem de artigos
     const postsPerPage = 12
     const numPagesPosts = Math.ceil(
-      result.data.AllPosts.edges.length / postsPerPage
+      AllPostsEdges.length / postsPerPage
     )
 
     Array.from({ length: numPagesPosts }).forEach((_, index) => {
@@ -143,7 +147,7 @@ exports.createPages = ({ graphql, actions }) => {
     categories.forEach(name => {
       const categoryName = name.toLowerCase()
       const numPagesCategory = Math.ceil(
-        result.data.AllPosts.edges.filter(({ node: { frontmatter: { category } } }) => category === name).length / postsPerPage
+        AllPostsEdges.filter(({ node: { frontmatter: { category } } }) => category === name).length / postsPerPage
       )
 
       Array.from({ length: numPagesCategory }).forEach((_, index) => {

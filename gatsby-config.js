@@ -231,8 +231,8 @@ module.exports = {
     description: `Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem`,
     author: `johnywalves`,
     twitter: `@johnywalves`,
-    siteUrl: `https://www.johnywalves.com.br`,
-    siteUrlWithoutProtocol: `www.johnywalves.com.br`,
+    siteUrl: `https://johnywalves.com.br`,
+    siteUrlWithoutProtocol: `johnywalves.com.br`,
   },
   plugins: pluginsConfig,
   flags: {

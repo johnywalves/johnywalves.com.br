@@ -85,7 +85,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
             title
             category
             description

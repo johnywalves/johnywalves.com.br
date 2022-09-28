@@ -28,6 +28,7 @@ const ComicList = (props) => {
                   date,
                   title,
                   transcription,
+                  number,
                   featuredImage,
                   comicImage,
                 },
@@ -39,6 +40,7 @@ const ComicList = (props) => {
             <ComicItem
               key={index}
               slug={slug}
+              number={number}
               date={date}
               title={title}
               transcription={transcription}
@@ -72,16 +74,17 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            date(locale: "pt_br", formatString: "DD [de] MMMM YYYY")
+            date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
             title
             category
             transcription
+            number
             tags
             coverImage
             featuredImage {
               childImageSharp {
                 gatsbyImageData(
-                  width: 800
+                  width: 900
                   layout: CONSTRAINED
                   placeholder: TRACED_SVG
                 )

@@ -12,7 +12,9 @@ cheatsheet: true
 published: false
 ---
 
-## Eleemnto único
+## Elemneto único
+
+Remover elementos
 
 ```javascript
 lista.filter((v, i, a) => a.indexOf(v) === i)

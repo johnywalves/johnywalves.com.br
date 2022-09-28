@@ -67,7 +67,7 @@ const SectionAbout = () => {
               <a
                 href={`${siteMetadata.siteUrl}${file}`}
                 target="_blank"
-                rel="noreferrer"
+                rel="nofollow noreferrer"
                 aria-label={`Download ${name.toLowerCase()} ${resume.title.toLowerCase()}`}
               >
                 <Button light secondary={index !== 0}>
