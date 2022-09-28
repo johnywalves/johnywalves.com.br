@@ -6,16 +6,38 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 export const RecommendedLink = styled(Anilink)`
   position: relative;
-  align-items: center;
   background: var(--background-card);
+
+  &:hover {
+    & picture {
+      opacity: 0.65;
+    }
+  }
+`
+
+export const RecommendedCover = styled(GatsbyImage)`
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 1;
+`
+
+export const RecommendedContent = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: var(--24px);
   border-radius: var(--8px);
   text-decoration: none;
   transition: background-color 0.5s;
+  padding: var(--24px);
+  z-index: 2;
 
   & time {
     display: flex;
@@ -43,23 +65,9 @@ export const RecommendedLink = styled(Anilink)`
     font-size: 1rem;
   }
 
-  &:hover {
-    opacity: 0.65;
-  }
-
   ${media.lessThan("medium")`
     h3 {
       font-size: 1.25rem;
     }
   `}
-`
-
-export const RecommendedCover = styled(GatsbyImage)`
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.15;
 `

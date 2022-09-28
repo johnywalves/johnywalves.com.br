@@ -1,5 +1,6 @@
 import React from "react"
-import { RecommendedLink, RecommendedCover } from "./styled"
+
+import { RecommendedLink, RecommendedCover, RecommendedContent } from "./styled"
 
 const Item = ({ recommended }) => {
   const {
@@ -14,11 +15,13 @@ const Item = ({ recommended }) => {
         image={featuredImage.childImageSharp.gatsbyImageData}
         alt=""
       />
-      <time>
-        {date} <span>●</span> {timeToRead} min de leitura
-      </time>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <RecommendedContent>
+        <time>
+          {date} <span>●</span> {timeToRead} min de leitura
+        </time>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </RecommendedContent>
     </RecommendedLink>
   )
 }
