@@ -21,7 +21,7 @@ const TriangleNeon = (props) => (
         gradientTransform="translate(2821.5 -436.99)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#e352a8" offset="0" />
+        <stop stopColor="#e0138c" offset="0" />
         <stop stopColor="#8857c3" offset=".65" />
         <stop stopColor="#44b5ef" offset="1" />
       </linearGradient>

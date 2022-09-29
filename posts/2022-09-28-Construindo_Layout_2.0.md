@@ -43,7 +43,7 @@ Acabei me empolgando com os triângulos mudando as formas mais arredondas para c
 
 ![Área de habilidades com background com vários triângulos](/figures/layout_triangles.png "Porfólio com decoração de triângulos")
 
-Apaixonado pelos triângulos e as cores recomendadas <span style="background-color: #e352a8; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#e352a8</span>, <span style="background-color: #8857c3; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#8857c3</span> e <span style="background-color: #44b5ef; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#44b5ef</span>, no processo de experimentação apareceu o efeito neon, abrindo a possibilidade de aloprar um pouco mais na área de projetos
+Apaixonado pelos triângulos e as cores recomendadas <span style="background-color: #e0138c; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#e0138c</span>, <span style="background-color: #8857c3; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#8857c3</span> e <span style="background-color: #44b5ef; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#44b5ef</span>, no processo de experimentação apareceu o efeito neon, abrindo a possibilidade de aloprar um pouco mais na área de projetos
 
 ## Projetos
 

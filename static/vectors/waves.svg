@@ -2,7 +2,7 @@
  <defs>
   <linearGradient id="linearGradient4459">
    <stop stop-color="#44b5ef" offset=".23653"/>
-   <stop stop-color="#e352a8" offset=".75"/>
+   <stop stop-color="#e0138c" offset=".75"/>
   </linearGradient>
   <linearGradient id="linearGradient4461" x1="-428.37" x2="875.5" y1="120.67" y2="120.67" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4459"/>
   <filter id="filter12963" x="-.010302" y="-.01485" width="1.0206" height="1.0297" color-interpolation-filters="sRGB">

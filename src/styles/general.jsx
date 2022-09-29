@@ -49,7 +49,7 @@ const GeneralStyles = createGlobalStyle`
 
   :root {
     --highlight: #e0138c;
-    --highlight-dark: #e352a8;
+    --highlight-dark: #e0138c;
     --highlight-light: #ff89fd;
     --highlight-lighter: #ff6bfd;
     --highlight-lightest: #fdbafd;
