@@ -19,7 +19,7 @@ export const OpenGraphicContent = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 48px;
+  padding: 72px 52px;
 
   display: flex;
   flex-direction: column;
