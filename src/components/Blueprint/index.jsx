@@ -9,8 +9,6 @@ import { BlueprintWrapper } from "./styled"
 
 import GeneralStyles from "styles/general"
 
-import "styles/box-shadow.css"
-
 const limitText = (number, text) =>
   text.length < number ? text : text.slice(number - 3) + "..."
 

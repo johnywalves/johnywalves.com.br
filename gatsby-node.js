@@ -103,7 +103,19 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Páginas de artigos
     AllPostsEdges.forEach(({ node }) => {
-      const bylast = AllPostsEdges.find(({ node: nodeLast }) => node.fields.slug !== nodeLast.fields.slug),
+      // Open Graphics Images
+      createPage({
+        path: `/__generated${node.fields.slug}`,
+        component: path.resolve(`src/templates/open-graph-image.jsx`),
+        context: {
+          slug: node.fields.slug
+        },
+      })
+
+      // Página dos Artigos
+      const bylast = AllPostsEdges.find(({ node: nodeLast }) =>
+        node.fields.slug !== nodeLast.fields.slug
+      ),
         byCategory = AllPostsEdges.find(({ node: nodeLast }) =>
           node.fields.slug !== nodeLast.fields.slug
           && node.frontmatter.category === nodeLast.frontmatter.category

@@ -45,8 +45,10 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
+    "express": "^4.18.1",
     "gatsby-plugin-root-import": "^2.0.8",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "puppeteer": "^18.0.5"
   },
   "keywords": [
     "gatsby",
@@ -55,7 +57,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && node get-open-graphic-images.js",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "start": "gatsby develop",

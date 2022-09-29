@@ -79,6 +79,16 @@ const BlogPost = ({ data, pageContext }) => {
 
         <Comments title={post.frontmatter.title} url={slug} />
       </ArticleWrapper>
+
+      {post.frontmatter.extras &&
+        post.frontmatter.extras.map((extra, index) => {
+          if (extra.endsWith("css")) {
+            return (
+              <link key={index} rel="stylesheet" href={`/extras/${extra}`} />
+            )
+          }
+          return <script key={index} src={`/extras/${extra}`} />
+        })}
     </Blueprint>
   )
 }
@@ -100,6 +110,7 @@ export const query = graphql`
         description
         category
         tags
+        extras
         featuredImage {
           childImageSharp {
             gatsbyImageData(
