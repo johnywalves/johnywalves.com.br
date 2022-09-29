@@ -20,13 +20,14 @@ import {
 } from "components/Article/styled"
 
 const BlogPost = ({ data, pageContext }) => {
-  const post = data.markdownRemark
-  const { slug, recommendedLast, recommendedCategory } = pageContext
+  const post = data.markdownRemark,
+    { slug, recommendedLast, recommendedCategory } = pageContext,
+    uriImage = `/ogimages/${slug.split("/").join("")}.jpg`
 
   return (
     <Blueprint
       content
-      openGraphImage={post.frontmatter.openGraphImage}
+      openGraphImage={uriImage}
       title={post.frontmatter.title}
       description={post.frontmatter.description}
     >
@@ -121,17 +122,6 @@ export const query = graphql`
             )
           }
         }
-        openGraphImage: featuredImage {
-          childImageSharp {
-            gatsbyImageData(
-              width: 900
-              aspectRatio: 1.5
-              layout: FIXED
-              placeholder: NONE
-              formats: [JPG]
-            )
-          }
-        }
       }
       html
       timeToRead
@@ -146,22 +136,19 @@ export const Head = ({ location, data, pageContext }) => {
   const {
       html,
       excerpt,
-      frontmatter: { title, description, created, openGraphImage },
+      frontmatter: { title, description, created },
     } = data.markdownRemark,
     { title: titleSite, author, siteUrl } = data.site.siteMetadata,
     { slug } = pageContext
 
-  const urlImage =
-      openGraphImage?.childImageSharp?.gatsbyImageData?.images?.fallback.src,
-    widthImage = openGraphImage?.childImageSharp?.gatsbyImageData?.width,
-    heightImage = openGraphImage?.childImageSharp?.gatsbyImageData?.height,
+  const uriImage = `/ogimages/${slug.split("/").join("")}.jpg`,
     richSnipppet = {
       "@context": "https://schema.org",
       "@type": "Article",
       url: `${siteUrl}${slug}`,
       headline: title,
       alternativeHeadline: description,
-      image: [urlImage],
+      image: [`${siteUrl}${uriImage}`],
       author: [
         {
           "@type": "Person",
@@ -194,9 +181,7 @@ export const Head = ({ location, data, pageContext }) => {
       location={location}
       title={title}
       description={description}
-      image={urlImage}
-      imagenWidth={widthImage}
-      imageHeight={heightImage}
+      image={uriImage}
     >
       <script type="application/ld+json">{JSON.stringify(richSnipppet)}</script>
     </Seo>

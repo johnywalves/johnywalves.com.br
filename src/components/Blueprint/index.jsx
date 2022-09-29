@@ -20,7 +20,7 @@ const Blueprint = ({
   description,
   children,
 }) => {
-  const { site, thumbnail } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -28,17 +28,6 @@ const Blueprint = ({
             title
             description
             siteUrl
-          }
-        }
-        thumbnail: file(relativePath: { eq: "thumbnail.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 900
-              aspectRatio: 1.5
-              layout: FIXED
-              placeholder: NONE
-              formats: [JPG]
-            )
           }
         }
       }
@@ -50,14 +39,11 @@ const Blueprint = ({
       155,
       description || site.siteMetadata.description
     ),
-    pathImage = `${site.siteMetadata.siteUrl}${
-      (openGraphImage || thumbnail)?.childImageSharp?.gatsbyImageData?.images
-        ?.fallback.src
+    pathImage = `${site.siteMetadata.siteUrl}/${
+      openGraphImage || "/figures/thumbnail.jpg"
     }`,
-    sizeImageWidth = (openGraphImage || thumbnail)?.childImageSharp
-      ?.gatsbyImageData?.width,
-    sizeImageHeight = (openGraphImage || thumbnail)?.childImageSharp
-      ?.gatsbyImageData?.height
+    sizeImageWidth = 900,
+    sizeImageHeight = 600
 
   return (
     <>

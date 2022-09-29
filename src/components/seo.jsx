@@ -15,7 +15,7 @@ function SEO({
   imageHeight,
   children,
 }) {
-  const { site, thumbnail } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -24,17 +24,6 @@ function SEO({
             description
             author
             siteUrl
-          }
-        }
-        thumbnail: file(relativePath: { eq: "thumbnail.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 900
-              aspectRatio: 1.5
-              layout: FIXED
-              placeholder: NONE
-              formats: [JPG]
-            )
           }
         }
       }
@@ -50,12 +39,10 @@ function SEO({
       description || site.siteMetadata.description
     ),
     pathImage = `${site.siteMetadata.siteUrl}${
-      image || thumbnail?.childImageSharp?.gatsbyImageData?.images?.fallback.src
+      image || "/figures/thumbnail.jpg"
     }`,
-    sizeImageWidth =
-      imagenWidth || thumbnail?.childImageSharp?.gatsbyImageData?.width,
-    sizeImageHeight =
-      imageHeight || thumbnail?.childImageSharp?.gatsbyImageData?.height,
+    sizeImageWidth = imagenWidth || 900,
+    sizeImageHeight = imageHeight || 600,
     urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
 
   return (
