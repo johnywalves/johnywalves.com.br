@@ -27,7 +27,7 @@ const openGraphImage = ({ data, pageContext }) => {
         timeToRead,
       },
       site: {
-        siteMetadata: { siteUrl, author, title: titleSite },
+        siteMetadata: { siteUrlWithoutProtocol, author, title: titleSite },
       },
       avatarImage,
     } = data,
@@ -61,7 +61,7 @@ const openGraphImage = ({ data, pageContext }) => {
             />
             <OpenGraphicFooterContent>
               <OpenGraphicName>{titleSite}</OpenGraphicName>
-              <OpenGraphicUrl>{`${siteUrl}${slug}`}</OpenGraphicUrl>
+              <OpenGraphicUrl>{`${siteUrlWithoutProtocol}${slug}`}</OpenGraphicUrl>
               <OpenGraphicAuthor>{`@${author}`}</OpenGraphicAuthor>
             </OpenGraphicFooterContent>
           </OpenGraphicFooter>
@@ -77,7 +77,7 @@ export const query = graphql`
       siteMetadata {
         title
         author
-        siteUrl
+        siteUrlWithoutProtocol
       }
     }
     avatarImage: file(relativePath: { eq: "johnywalves.png" }) {

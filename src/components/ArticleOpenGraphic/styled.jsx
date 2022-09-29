@@ -12,14 +12,14 @@ export const OpenGraphicCover = styled.img`
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0.2;
+  opacity: 0.15;
 `
 
 export const OpenGraphicContent = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 72px 52px;
+  padding: 90px 60px;
 
   display: flex;
   flex-direction: column;

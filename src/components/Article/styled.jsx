@@ -204,10 +204,11 @@ export const MainContent = styled.section`
     `}
   }
   blockquote {
-    color: var(--white);
+    color: var(--texts);
+    background-color: var(--background-card);
     border-left: 0.3rem solid var(--highlight);
-    padding: 0 1.875rem;
-    margin: 3.125rem auto;
+    padding: 1.5rem 1.25rem 1rem;
+    margin: 3rem auto;
   }
   hr {
     border: 1px solid var(--shadow-colors);

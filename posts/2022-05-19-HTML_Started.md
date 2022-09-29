@@ -15,9 +15,9 @@ Um modelo simples para copiar e começar uma página HTML, cansei de ter de lemb
 
 Substituir as informações nas tags:
 
-**Page Title**: Título com o tamanho máximo de 30 caracteres;  
-**Page Name**: Nome com o tamanho máximo de 65 caracteres;  
-**Page Description**: Descrição com o tamanho máximo de 155 caracteres;  
+**Page Title**: Título com o tamanho máximo de 60 caracteres, recomendável superior a 50 caracteres;  
+**Page Name**: Nome do site com o tamanho máximo de 65 caracteres;  
+**Page Description**: Descrição com o tamanho máximo de 160 caracteres, recomendável superior a 100 caracteres;  
 **url.page**: Endereço permanente para o conteúdo;  
 **/path/to/thumbnail**: caminho da imagem do thumbnail com tamanho máximo de 300KB e um link com HTTPS.
 
@@ -35,26 +35,22 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     <meta name="theme-color" content="#ed34a2" />
 
     <title>Page Title</title>
-    <meta name="title" content="Page Title" />
-    <meta name="description" content="Page Description" />
-    <meta name="image" content="/path/to/thumbnail" />
-
-    <meta name="og:type" property="og:type" content="website" />
-    <meta name="og:url" property="og:url" content="https://url.page" />
-    <meta name="og:site_name" property="og:site_name" content="Page Name" />
-    <meta name="og:title" property="og:title" content="Page Title" />
+    <meta name="title" property="og:title" content="Page Title" />
     <meta
-      name="og:description"
+      name="description"
       property="og:description"
       content="Page Description"
     />
     <meta
-      name="og:image"
+      name="image"
       property="og:image"
       itemprop="image"
       content="/path/to/thumbnail"
     />
-    <meta name="og:locale" property="og:locale" content="pt_BR" />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="url" property="og:url" content="https://url.page" />
+    <meta name="site_name" property="og:site_name" content="Page Name" />
+    <meta name="locale" property="og:locale" content="pt_BR" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://url.page" />
