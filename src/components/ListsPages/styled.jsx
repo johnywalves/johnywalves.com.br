@@ -49,6 +49,10 @@ export const ListsPagesWrapper = styled.section`
   & a:hover {
     color: var(--highlight);
   }
+
+  ${media.lessThan("medium")`
+    padding-top: 0;
+  `}
 `
 
 export const ListsPagesList = styled.div``

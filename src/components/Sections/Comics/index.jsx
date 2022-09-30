@@ -4,7 +4,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import Strings from "components/strings"
 import { CardList } from "components/Cards"
 
-import { Wrapper, Link, Header, Image } from "./styled"
+import {
+  HomeComicsWrapper,
+  HomeComicsLink,
+  HomeComicsHeader,
+  HomeComicsImage,
+} from "./styled"
 
 const SectionComics = () => {
   const {
@@ -56,7 +61,7 @@ const SectionComics = () => {
   `)
 
   return (
-    <Wrapper>
+    <HomeComicsWrapper>
       {edges.map(({ node }) => (
         <CardList
           key={node.fields.slug}
@@ -67,21 +72,21 @@ const SectionComics = () => {
           light
         >
           <li>
-            <Link
+            <HomeComicsLink
               fade
               to={node.fields.slug}
               duration={0.75}
               aria-label="Last Comics"
             >
-              <Header>
+              <HomeComicsHeader>
                 <h3>
                   #{node.frontmatter.number.toString().padStart(3, "0")}
                   <span>●</span>
                   {node.frontmatter.title}
                 </h3>
                 <small>{node.frontmatter.date}</small>
-              </Header>
-              <Image
+              </HomeComicsHeader>
+              <HomeComicsImage
                 image={
                   (
                     node.frontmatter.featuredImage ||
@@ -91,11 +96,11 @@ const SectionComics = () => {
                 title={node.frontmatter.transcription}
                 alt=""
               />
-            </Link>
+            </HomeComicsLink>
           </li>
         </CardList>
       ))}
-    </Wrapper>
+    </HomeComicsWrapper>
   )
 }
 

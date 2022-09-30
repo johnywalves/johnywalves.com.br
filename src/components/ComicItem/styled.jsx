@@ -14,6 +14,10 @@ export const PostItemLink = styled(Anilink)`
       opacity: 0.75;
     }
   }
+
+  ${media.lessThan("medium")`
+    padding: 0;
+  `}
 `
 
 export const PostItemWrapper = styled.section`
@@ -28,6 +32,10 @@ export const PostItemWrapper = styled.section`
   ${media.lessThan("large")`
     flex-direction: column;
     padding: 2rem 1rem;
+  `}
+
+  ${media.lessThan("medium")`
+    padding: 1rem 0.25rem;
   `}
 `
 
@@ -48,6 +56,11 @@ export const PostItemHeader = styled.div`
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
+
+  ${media.lessThan("medium")`
+    flex-direction: column;
+    align-items: flex-start;
+  `}
 `
 
 export const PostItemDate = styled.time`

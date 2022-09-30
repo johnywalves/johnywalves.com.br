@@ -6,6 +6,7 @@ import Seo from "components/seo"
 import Comments from "components/Comments"
 import Recommended from "components/Recommended"
 import Share from "components/Share"
+import MainContent from "components/MainContent"
 
 import {
   ArticleWrapper,
@@ -16,7 +17,6 @@ import {
   PostDate,
   PostTitle,
   PostDescription,
-  MainContent,
 } from "components/Article/styled"
 
 const BlogPost = ({ data, pageContext }) => {

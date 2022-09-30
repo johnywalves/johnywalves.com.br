@@ -7,6 +7,7 @@ import Seo from "components/seo"
 import Comments from "components/Comments"
 import Share from "components/Share"
 import ComicNavigation from "components/ComicNavigation"
+import MainContent from "components/MainContent"
 
 import {
   ComicPostWrapper,
@@ -15,7 +16,6 @@ import {
   PostDate,
   ComicWrapper,
   PostComic,
-  MainContent,
 } from "components/Comic/styled"
 
 const ComicPost = ({ data, pageContext }) => {

@@ -203,7 +203,7 @@ export const MenuLinksShow = keyframes`
 export const MenuBackground = styled(GatsbyImage)`
   opacity: 0;
   display: none;
-  position: fixed;
+  position: fixed !important;
   top: calc(3% + 80px);
   left: 10%;
   width: 55%;

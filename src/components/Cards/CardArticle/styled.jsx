@@ -5,7 +5,7 @@ export const CardArticleContent = styled.div`
   position: relative;
   left: 0;
   top: 226px;
-  height: 400px;
+  height: 450px;
   padding: 20px 30px;
   border-top-left-radius: 30px;
   border-top-right-radius: 5px;
@@ -16,7 +16,7 @@ export const CardArticleContent = styled.div`
   box-shadow: 0 -2px 8px var(--shadow-colors);
 
   ${media.lessThan("small")`
-    height: 475px;
+    height: 500px;
   `}
 `
 

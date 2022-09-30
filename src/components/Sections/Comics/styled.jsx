@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-export const Wrapper = styled.section`
+export const HomeComicsWrapper = styled.section`
   position: relative;
   width: 100%;
   padding: 45px 15px 80px;
@@ -21,24 +21,24 @@ export const Wrapper = styled.section`
   `}
 `
 
-export const Link = styled(Anilink)`
+export const HomeComicsLink = styled(Anilink)`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-export const Header = styled.div`
+export const HomeComicsHeader = styled.div`
   width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   color: var(--highlight);
-  margin-bottom: 5px;
+  margin-bottom: var(--16px);
   z-index: 2;
 
   & h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -50,26 +50,30 @@ export const Header = styled.div`
   }
 
   & small {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
   }
 
   ${media.lessThan("medium")`
+    flex-direction: column;
+    align-items: flex-start;
+
     & h3 {
-      font-size: 1rem;
+      font-size: 1.5rem;
 
       span {
-        font-size: .25rem;
+        font-size: 0.5rem;
+        margin: 0 var(--4px);
       }
     }
 
     & small {
-      font-size: 0.5rem;
+      font-size: 1rem;
     }
   `}
 `
 
-export const Image = styled(GatsbyImage)`
+export const HomeComicsImage = styled(GatsbyImage)`
   border: 15px solid var(--white);
   border-radius: 15px;
   transition: 0.5s ease-in-out;
@@ -84,4 +88,8 @@ export const Image = styled(GatsbyImage)`
     box-shadow: 0 0 16px 2px var(--shadow-colors),
       16px 16px 32px 4px var(--shadow-colors);
   }
+
+  ${media.lessThan("medium")`
+    transform: none;
+  `}
 `

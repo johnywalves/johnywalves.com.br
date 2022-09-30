@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 export const CardWrapperCover = styled.div`
   position: absolute;
@@ -35,4 +36,8 @@ export const CardWrapperWrapper = styled.li`
       filter: none;
     }
   }
+
+  ${media.lessThan("medium")`
+    transform: none;
+  `}
 `
