@@ -1,6 +1,6 @@
 ---
-title: Construindo Layout 2.0
-description: Reconstruindo o layout desta bela página
+title: Construindo o layout 2.0, refazendo esta página
+description: Documentando o processo e descobertas na reconstrução o layout desta bela página
 date: 2022-09-28 21:07:54 -0300
 featuredImage: ./featured/coffee-1.jpg
 coverImage: /figures/coffee-1.jpg
@@ -25,7 +25,7 @@ Resolvi que era hora de abraçar algo mais exótico e menos contido e conciso, s
 
 ## Início
 
-Para começar entendi minha limitação para criar um design atrativo, contratei pelo Workana um designer para dar algumas ideias e suprir essa limitação, o designer [Rodrigo Fialho](https://www.workana.com/freelancer/17653ac19b78d52f0e33c7950cab1bbb) que com a indicação de manter a cor <span style="background-color: var(--highlight); color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#e0138c</span>, ele gerou a interface a seguir:
+Para começar entendi minha limitação para criar um design atrativo, contratei pelo Workana um designer para dar algumas ideias e suprir essa limitação, o designer [Rodrigo Fialho](https://www.workana.com/freelancer/17653ac19b78d52f0e33c7950cab1bbb) que com a indicação de manter a cor <span style="background-color: var(--highlight);" class="text-color">#e0138c</span>, ele gerou a interface a seguir:
 
 ![Solução do desafio com a palavra pagos](/figures/layout_design.png "Interface do freelancer")
 
@@ -43,7 +43,7 @@ Acabei me empolgando com os triângulos mudando as formas mais arredondas para c
 
 ![Área de habilidades com background com vários triângulos](/figures/layout_triangles.png "Porfólio com decoração de triângulos")
 
-Apaixonado pelos triângulos e as cores recomendadas <span style="background-color: #e0138c; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#e0138c</span>, <span style="background-color: #8857c3; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#8857c3</span> e <span style="background-color: #44b5ef; color: var(--white);font-weight:700;padding: 2px 4px;border-radius:4px;">#44b5ef</span>, no processo de experimentação apareceu o efeito neon, abrindo a possibilidade de aloprar um pouco mais na área de projetos
+Apaixonado pelos triângulos e as cores recomendadas <span style="background-color: #e0138c;" class="text-color">#e0138c</span>, <span style="background-color: #8857c3;" class="text-color">#8857c3</span> e <span style="background-color: #44b5ef;color: #333;" class="text-color">#44b5ef</span>, no processo de experimentação apareceu o efeito neon, abrindo a possibilidade de aloprar um pouco mais na área de projetos
 
 ## Projetos
 
@@ -73,7 +73,7 @@ Fazendo uso da ferramenta [yarn upgrade-interactive](https://classic.yarnpkg.com
 
 A versão antiga do site usava `3.1.2` resolvi atualizar para `4.22.0`, versão mais nova, entre as novidades da nova versão, é a ferramenta de criação de `<head>` sem a necessidade de uma biblioteca como o `gastby-helmet` anteriormente usada
 
-#### Gatsby Head
+### Gatsby Head
 
 Na versão anterior fazia uso da biblioteca [react-helmet](https://github.com/nfl/react-helmet), a novidade é que as tags `link`, `meta`, `style`, `title`, `base`, `script`, e `noscript` quando usadas são inseridas no `<head>` como descrito na documentação [Gatsby Head](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/)
 
@@ -83,7 +83,7 @@ Incorporando as configurações de SEO orientado pela documentação [Adicionand
 
 Realizado com sucesso para todas as redes sociais testada, exceto no Whatsapp, futuramento resolvo essa situação ou se souber o que falta comente por favor ou entre em contato por alguma rede social
 
-#### React Version
+### React Version
 
 Após alguns problemas com a geração da versão de produção, encontrei um conflito com a última versão do `react` e do `react-dom`, resolvido dando um _downgrade_ a última versão `18.2.0` para última _major_ anterior a `17.0.2`
 

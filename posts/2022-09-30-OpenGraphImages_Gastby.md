@@ -1,5 +1,5 @@
 ---
-title: Open Graph Images com Gastby
+title: Gastby - Geração de miniaturas por contexto
 description: Otimizando as imagens de thumbnail das postagens
 date: 2022-09-30 12:00:25 -0300
 featuredImage: ./featured/museum-1.jpg
@@ -9,7 +9,6 @@ tags:
   - SEO
   - Automação
   - Imagem
-published: false
 ---
 
 No momento de estruturar os artigos costumo usar uma imagem para ilustrar, com direitos de uso permitido encontradas no Google Imagens ou WikiCommons, quando compartilhada nas redes socias ela aparece juntamente com o título e descrição, como neste exemplo do twitter
@@ -125,4 +124,4 @@ Depois foi atualizar o das metatags com os caminhos novos, como no exemplo
 
 ## Referências
 
-[Gatsby Plugin Open Graph Images Public](https://github.com/squer-solutions/gatsby-plugin-open-graph-images)
+[Gatsby Plugin Open Graph - Images Public](https://github.com/squer-solutions/gatsby-plugin-open-graph-images)

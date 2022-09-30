@@ -17,9 +17,7 @@ async function getImage(servingUrl, page, slug) {
 // Gerar os Open Graphics Images 
 async function navigateOpenGraphic() {
     // Gerar pastas de origem
-    if (!fs.existsSync('./public/ogimages')) {
-        fs.mkdirSync('./public/ogimages')
-    }
+    !fs.existsSync('./public/ogimages') && fs.mkdirSync('./public/ogimages')
 
     // Pegar caminhos possíveis
     const slugs = []

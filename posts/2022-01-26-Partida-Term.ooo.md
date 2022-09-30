@@ -1,6 +1,6 @@
 ---
-title: Partida Term.ooo
-description: Análise de uma partida do Term.ooo
+title: Como trapacear Term.ooo, ou jogar com um conselheiro
+description: Análise de uma partida do Term.ooo com Python e Pandas para recomendar melhores possibilidades
 date: 2022-01-26 12:34:26 -0300
 featuredImage: ./featured/termooo_slice-1.png
 coverImage: /figures/termooo-1.png

@@ -1,0 +1,23 @@
+.rect-color {
+  width: 100px;
+  height: 1.5rem;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.rect-color > div {
+  width: 100%;
+  height: 100%;
+}
+
+.rect-color.red > div {
+  background-color:#FF0000e0;
+}
+
+.rect-color.green > div {
+  background-color: #00FF0040;
+}
+
+.rect-color.blue > div {
+  background-color: #0000FF8c;
+}

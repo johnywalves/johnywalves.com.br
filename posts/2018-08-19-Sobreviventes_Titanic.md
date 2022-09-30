@@ -244,7 +244,7 @@ ggplot(train, aes(Fare, fill = Sub, colour = Sub)) +
   scale_colour_manual(values=cbPalette)
 ```
 
-![plot of chunk titanic_preco](./figures/titanic_preco-1.svg")
+![plot of chunk titanic_preco](/figures/titanic_preco-1.svg)
 
 Embora seja o sétimo o tamanho da família é um dados interessante, proporcionalmente os solteiros tiveram a menor oportunidade de sobrevivência
 

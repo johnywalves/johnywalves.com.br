@@ -1,12 +1,14 @@
 ---
-title: Letras pulando
-description: Animação de letras pulando para texto carregando
+title: Animação de letras pulando com HTML e CSS puro
+description: Usando HTML, CSS e keyframes para realizar animação de letras em sequência como corda
 date: "2022-05-16 09:28:16"
 featuredImage: ./featured/jumpingdog-1.jpg
 coverImage: /figures/jumpingdog-1.jpg
 category: CSS
 tags:
-  - Animation
+  - Animação
+  - Interface
+published: true
 ---
 
 Busca de informações, cálculos, carregamento de recursos demandam tempo e comunicar para o usuário é essencial uma maneira vi recentimente e amei, as letras pulando em sequência

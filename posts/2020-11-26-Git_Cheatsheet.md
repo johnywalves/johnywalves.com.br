@@ -1,6 +1,6 @@
 ---
 title: Git - Cheatsheet
-description: Comandos Git para Consulta
+description: Comandos para consulta da ferramenta de versionamento Git
 date: 2020-11-26 14:18:35 -0300
 featuredImage: ./featured/library-2.jpg
 coverImage: /figures/library-2.jpg

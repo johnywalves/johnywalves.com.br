@@ -36,13 +36,13 @@ df = pd.read_csv("./datasets_894_813759_2019.csv")
 df.head()
 ```
 
-| **Overall rank** | **Country or region** | **Score** | **GDP per capita** | **Social support** | **Healthy life expectancy** | **Freedom to make life choices** | **Generosity** | **Perceptions of corruption** |
-| ---------------: | :-------------------- | --------: | -----------------: | -----------------: | --------------------------: | -------------------------------: | -------------: | ----------------------------: |
-|                1 | Finland               |     7.769 |              1.340 |              1.587 |                       0.986 |                            0.596 |          0.153 |                         0.393 |
-|                2 | Denmark               |     7.600 |              1.383 |              1.573 |                       0.996 |                            0.592 |           .252 |                         0.410 |
-|                3 | Norway                |     7.554 |              1.488 |              1.582 |                       1.028 |                            0.603 |          0.271 |                         0.341 |
-|                4 | Iceland               |     7.494 |              1.380 |              1.624 |                       1.026 |                            0.591 |          0.354 |                         0.118 |
-|                5 | Netherlands           |     7.488 |              1.396 |              1.522 |                       0.999 |                            0.557 |          0.322 |                         0.298 |
+| Overall rank | Country or region | Score | GDP per capita | Social support | Healthy life expectancy | Freedom to make life choices | Generosity | Perceptions of corruption |
+| -----------: | :---------------- | ----: | -------------: | -------------: | ----------------------: | ---------------------------: | ---------: | ------------------------: |
+|            1 | Finland           | 7.769 |          1.340 |          1.587 |                   0.986 |                        0.596 |      0.153 |                     0.393 |
+|            2 | Denmark           | 7.600 |          1.383 |          1.573 |                   0.996 |                        0.592 |       .252 |                     0.410 |
+|            3 | Norway            | 7.554 |          1.488 |          1.582 |                   1.028 |                        0.603 |      0.271 |                     0.341 |
+|            4 | Iceland           | 7.494 |          1.380 |          1.624 |                   1.026 |                        0.591 |      0.354 |                     0.118 |
+|            5 | Netherlands       | 7.488 |          1.396 |          1.522 |                   0.999 |                        0.557 |      0.322 |                     0.298 |
 
 Trabalhar com esses nomes é muito chato, vamos simplificar um pouco, renomeando as colunas
 

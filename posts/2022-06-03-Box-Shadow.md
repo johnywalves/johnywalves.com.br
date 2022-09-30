@@ -1,6 +1,6 @@
 ---
-title: Box Shadow
-description: Um estudo sobre uso de sombras em CSS
+title: Box Shadow - Propriedade CSS
+description: Um estudo sobre uso de sombras box-shadow com a propriedade em CSS
 date: 2022-06-06 13:36:42 -0300
 featuredImage: ./featured/desert-1.jpg
 coverImage: /figures/desert-1.jpg

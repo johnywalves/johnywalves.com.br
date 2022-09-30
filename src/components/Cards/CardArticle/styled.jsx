@@ -5,7 +5,7 @@ export const CardArticleContent = styled.div`
   position: relative;
   left: 0;
   top: 226px;
-  height: 450px;
+  min-height: 475px;
   padding: 20px 30px;
   border-top-left-radius: 30px;
   border-top-right-radius: 5px;
@@ -15,8 +15,8 @@ export const CardArticleContent = styled.div`
   background-color: var(--background-card);
   box-shadow: 0 -2px 8px var(--shadow-colors);
 
-  ${media.lessThan("small")`
-    height: 500px;
+  ${media.lessThan("medium")`
+    min-height: 500px;
   `}
 `
 

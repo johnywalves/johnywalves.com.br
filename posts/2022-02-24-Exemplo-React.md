@@ -1,12 +1,13 @@
 ---
-title: Exemplo React
-description: O que você precisa saber de React para falar que sabe algo
+title: Passo a passo na construção de exemplo em React
+description: O que você precisa saber de React para falar que sabe algo, um um pouco
 date: 2022-02-24 07:34:26 -0300
 featuredImage: ./featured/atom-1.jpg
 coverImage: /figures/atom-1.jpg
 category: React
 tags:
   - Tutorial
+  - Iniciante
 published: true
 ---
 

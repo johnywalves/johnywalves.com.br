@@ -202,7 +202,7 @@ export const MenuLinksShow = keyframes`
 
 export const MenuBackground = styled(GatsbyImage)`
   opacity: 0;
-  display: none;
+  display: none !important;
   position: fixed !important;
   top: calc(3% + 80px);
   left: 10%;
@@ -285,7 +285,7 @@ export const MenuCheck = styled.input`
 
   &:checked ~ div > ul,
   &:checked ~ div > .gatsby-image-wrapper {
-    display: block;
+    display: block !important;
     animation: ${MenuLinksShow} 1.5s 0.5s ease forwards;
   }
 

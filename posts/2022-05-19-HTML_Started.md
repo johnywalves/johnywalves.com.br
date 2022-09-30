@@ -1,6 +1,6 @@
 ---
-title: HTML Started
-description: Modelo para iniciar uma página HTML
+title: Modelo para iniciar com HTML
+description: Modelo para iniciar uma página HTML com metatags e recomendações de valores
 date: "2022-05-19 16:45:29"
 featuredImage: ./featured/net-1.jpg
 coverImage: /figures/net-1.jpg
@@ -8,7 +8,6 @@ category: Web
 tags:
   - HTML
   - Cheatsheet
-published: true
 ---
 
 Um modelo simples para copiar e começar uma página HTML, cansei de ter de lembrar toda vez :)
