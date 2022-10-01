@@ -19,22 +19,30 @@ export const ArticleForehead = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 20rem;
+  min-height: 30rem;
+`
+
+export const PostFeaturedImage = styled(GatsbyImage)`
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `
 
 export const ArticleForeheadCover = styled.div`
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   height: 100%;
   background-color: var(--background-semi);
 `
 
 export const PostHeader = styled.div`
-  position: absolute;
   max-width: 70rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 
   ${media.lessThan("large")`
     ${(props) =>
@@ -43,23 +51,9 @@ export const PostHeader = styled.div`
             padding: 0.5rem 0.5rem 0;
           `
         : css`
-            padding: 0;
+            padding: 1rem;
           `}
     max-width: 100%;
-  `}
-`
-
-export const PostFeaturedImage = styled(GatsbyImage)`
-  display: flex;
-  justify-content: center;
-
-  ${media.lessThan("medium")`
-    &,
-    & picture,
-    & img {
-      min-height: 20rem;
-      height: 100%;
-    }
   `}
 `
 
