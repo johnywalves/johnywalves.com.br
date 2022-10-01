@@ -47,7 +47,7 @@ export const OpenGraphicTime = styled.time`
 
 export const OpenGraphicTitle = styled.h1`
   color: #e0138c;
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   margin-bottom: 16px;
   text-shadow: 1px 1px 2px #ffffff88;
 `

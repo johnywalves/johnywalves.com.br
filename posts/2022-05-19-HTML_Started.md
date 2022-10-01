@@ -29,6 +29,7 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#ed34a2" />

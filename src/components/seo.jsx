@@ -41,6 +41,7 @@ function SEO({
     pathImage = `${site.siteMetadata.siteUrl}${
       image || "/figures/thumbnail.jpg"
     }`,
+    pathIcon = `${site.siteMetadata.siteUrl}/figures/favicon.png`,
     sizeImageWidth = imagenWidth || 900,
     sizeImageHeight = imageHeight || 600,
     urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
@@ -78,6 +79,9 @@ function SEO({
       <meta name="twitter:site" content={site.siteMetadata.siteUrl} />
       <meta name="twitter:creator" content={site.siteMetadata.twitter} />
       <meta name="twitter:image:src" content={pathImage} />
+
+      <meta name="msapplication-TileColor" content="#e0138c" />
+      <meta name="msapplication-TileImage" content={pathIcon} />
 
       <link
         rel="canonical"

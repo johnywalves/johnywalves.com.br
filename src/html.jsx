@@ -6,6 +6,7 @@ export default function HTML(props) {
     <html lang="pt-br" {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
+        <meta name="robots" content="index, follow" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"

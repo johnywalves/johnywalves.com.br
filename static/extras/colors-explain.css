@@ -11,13 +11,50 @@
 }
 
 .rect-color.red > div {
-  background-color:#FF0000e0;
+  background-color: #ff0000e0;
 }
 
 .rect-color.green > div {
-  background-color: #00FF0040;
+  background-color: #00ff0040;
 }
 
 .rect-color.blue > div {
-  background-color: #0000FF8c;
+  background-color: #0000ff8c;
+}
+
+.two-colors,
+.three-colors,
+.four-colors,
+.five-colors {
+  margin: 2rem 2rem 1rem;
+  display: grid;
+}
+
+.two-colors {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.three-colors {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-colors {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.five-colors {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.two-colors span,
+.three-colors span,
+.four-colors span,
+.five-colors span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0 !important;
+  font-weight: 900 !important;
+  text-align: center;
 }

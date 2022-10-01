@@ -34,7 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
       AllPosts: allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
         filter: {
-          frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
+          frontmatter: { category: { ne: "Comic" } }
         }
       ) {
         edges {
@@ -54,6 +54,7 @@ exports.createPages = ({ graphql, actions }) => {
                   )
                 }
               }
+              published
             }
             timeToRead
             fields {
@@ -88,7 +89,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const AllPostsEdges = result.data.AllPosts.edges
+    const AllPostsEdges = result.data.AllPosts.edges.filter(({ node: { frontmatter: { published } } }) => published !== false)
 
     const categories = Object.entries(AllPostsEdges
       .reduce((acumulator, { node: { frontmatter: { category } } }) => {
@@ -102,7 +103,7 @@ exports.createPages = ({ graphql, actions }) => {
       .map(([category,]) => category)
 
     // Páginas de artigos
-    AllPostsEdges.forEach(({ node }) => {
+    result.data.AllPosts.edges.forEach(({ node }) => {
       // Open Graphics Images
       createPage({
         path: `/__generated${node.fields.slug}`,

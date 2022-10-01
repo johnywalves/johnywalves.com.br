@@ -209,5 +209,9 @@ export const MainContentWrapper = styled.section`
     font-weight: 700;
     padding: 2px 4px;
     border-radius: 4px;
+
+    &.light {
+      color: #333;
+    }
   }
 `
