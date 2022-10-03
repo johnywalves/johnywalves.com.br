@@ -1,332 +1,292 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Relógio Solar | Johny W. Alves</title>
-  </head>
 
-  <style>
-    /* Reset CSS */
-    *,
-    *:before,
-    *:after {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      box-sizing: border-box;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Relógio Solar | Johny W. Alves</title>
+</head>
 
-    html {
-      font-size: 62.5%;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    }
+<style>
+  /* Reset CSS */
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
 
-    a,
-    a:hover,
-    a:visited {
-      text-decoration: none;
-      color: inherit;
-    }
+  html {
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 
-    /* Content CSS */
-    body {
-      width: 100%;
-      height: 100vh;
-      color: #333;
-      background-color: #333;
-      overflow: hidden;
+  a,
+  a:hover,
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  /* Content CSS */
+  body {
+    width: 100%;
+    height: 100vh;
+    color: #333;
+    background-color: #333;
+    overflow: hidden;
 
-    .time {
-      font-size: 7vw;
-      font-weight: 700;
-      letter-spacing: 0.35w;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-      transition: color 0.3s;
-    }
+  .time {
+    font-size: 7vw;
+    font-weight: 700;
+    letter-spacing: 0.35w;
 
-    .sky {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 2400%;
-      width: 100%;
-      z-index: -2;
-      background-image: linear-gradient(
-        180deg,
+    transition: color 0.3s;
+  }
+
+  .sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2400%;
+    width: 100%;
+    z-index: -2;
+    background-image: linear-gradient(180deg,
         #333 20%,
         #fef5cf 22.5%,
         #cffefd 25%,
         #cffefd 75%,
         #ffd5cf 77.5%,
-        #333 80%
-      );
+        #333 80%);
+  }
+
+  .astro {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .eyes {
+    animation: blink 8s infinite;
+  }
+
+  .face {
+    animation: eager 15s 5s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      ry: 15;
     }
 
-    .astro {
-      position: absolute;
-      top: 10%;
-      left: 10%;
-      z-index: -1;
-
-      opacity: 0;
-      transition: opacity 0.3s;
+    25% {
+      ry: 15;
     }
 
-    .eyes {
-      animation: blink 8s infinite;
+    26% {
+      ry: 1;
     }
 
-    .face {
-      animation: eager 15s 5s infinite;
+    27% {
+      ry: 15;
     }
 
-    @keyframes blink {
-      0% {
-        ry: 15;
-      }
-      25% {
-        ry: 15;
-      }
-      26% {
-        ry: 1;
-      }
-      27% {
-        ry: 15;
-      }
-      75% {
-        ry: 15;
-      }
-      76% {
-        ry: 1;
-      }
-      77% {
-        ry: 15;
-      }
-      100% {
-        ry: 15;
-      }
+    75% {
+      ry: 15;
     }
 
-    @keyframes eager {
-      0% {
-        transform: translate(0, 0);
-      }
-      10% {
-        transform: translate(-1vh, -1vw);
-      }
-      20% {
-        transform: translate(-1vh, -1vw);
-      }
-      30% {
-        transform: translate(0, 0);
-      }
-      70% {
-        transform: translate(0, 0);
-      }
-      80% {
-        transform: translate(1vh, -1vw);
-      }
-      90% {
-        transform: translate(1vh, -1vw);
-      }
-      100% {
-        transform: translate(0, 0);
-      }
+    76% {
+      ry: 1;
     }
-  </style>
 
-  <body>
-    <div id="sky" class="sky"></div>
-    <div id="moon" class="astro">
-      <svg
-        width="25vh"
-        height="25vh"
-        version="1.1"
-        viewBox="0 0 200 200"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="100"
-          cy="100"
-          r="96"
-          fill="#fff"
-          stroke="#d8e8f7"
-          stroke-width="2"
-        />
+    77% {
+      ry: 15;
+    }
+
+    100% {
+      ry: 15;
+    }
+  }
+
+  @keyframes eager {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    10% {
+      transform: translate(-1vh, -1vw);
+    }
+
+    20% {
+      transform: translate(-1vh, -1vw);
+    }
+
+    30% {
+      transform: translate(0, 0);
+    }
+
+    70% {
+      transform: translate(0, 0);
+    }
+
+    80% {
+      transform: translate(1vh, -1vw);
+    }
+
+    90% {
+      transform: translate(1vh, -1vw);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+</style>
+
+<body>
+  <div id="sky" class="sky"></div>
+  <div id="moon" class="astro">
+    <svg width="25vh" height="25vh" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="96" fill="#fff" stroke="#d8e8f7" stroke-width="2" />
+      <path d="M 153.298,20.5 C 214.715,117.38 144.433,206.62 71,191.68 186.2,219.337 241.29,83.11 153.298,20.5 Z"
+        fill="#d8e8f7" />
+      <g fill="#d8e8f7" opacity=".5" stroke-width="0">
+        <circle cx="130" cy="50" r="8" />
+        <circle cx="120" cy="40" r="4" />
+        <circle cx="130" cy="35" r="3" />
+      </g>
+
+      <g class="face">
+        <g opacity=".5">
+          <ellipse cx="87" cy="115" rx="7" ry="15" class="eyes" />
+          <ellipse cx="53" cy="115" rx="7" ry="15" class="eyes" />
+        </g>
+        <g fill="none" opacity=".5" stroke="#000" stroke-linecap="round" stroke-width="2">
+          <path d="m79.579 96.254c5.1843-9.6487 15.841-2.5922 15.841-2.5922" />
+          <path d="m60.437 96.995c-5.1843-9.6487-15.841-2.5922-15.841-2.5922" />
+          <path d="m56.505 147.65c4.4802 15.512 24.261 14.843 27.971-0.87416" />
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div id="sun" class="astro">
+    <svg width="25vh" height="25vh" version="1.1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="96" fill="#ffc201" stroke="#ff8603" stroke-width="2" />
+      <path d="M 153.298,20.5 C 214.715,117.38 144.433,206.62 71,191.68 186.2,219.337 241.29,83.11 153.298,20.5 Z"
+        fill="#ff8603" />
+
+      <g class="face">
+        <g opacity=".5">
+          <ellipse cx="87" cy="115" rx="7" ry="15" class="eyes" />
+          <ellipse cx="53" cy="115" rx="7" ry="15" class="eyes" />
+        </g>
+        <g fill="none" opacity=".5" stroke="#000" stroke-linecap="round" stroke-width="2">
+          <path d="m79.579 96.254c5.1843-9.6487 15.841-2.5922 15.841-2.5922" />
+          <path d="m60.437 96.995c-5.1843-9.6487-15.841-2.5922-15.841-2.5922" />
+        </g>
         <path
-          d="M 153.298,20.5 C 214.715,117.38 144.433,206.62 71,191.68 186.2,219.337 241.29,83.11 153.298,20.5 Z"
-          fill="#d8e8f7"
-        />
-        <g fill="#d8e8f7" opacity=".5" stroke-width="0">
-          <circle cx="130" cy="50" r="8" />
-          <circle cx="120" cy="40" r="4" />
-          <circle cx="130" cy="35" r="3" />
-        </g>
-
-        <g class="face">
-          <g opacity=".5">
-            <ellipse cx="87" cy="115" rx="7" ry="15" class="eyes" />
-            <ellipse cx="53" cy="115" rx="7" ry="15" class="eyes" />
-          </g>
-          <g
-            fill="none"
-            opacity=".5"
-            stroke="#000"
-            stroke-linecap="round"
-            stroke-width="2"
-          >
-            <path
-              d="m79.579 96.254c5.1843-9.6487 15.841-2.5922 15.841-2.5922"
-            />
-            <path
-              d="m60.437 96.995c-5.1843-9.6487-15.841-2.5922-15.841-2.5922"
-            />
-            <path
-              d="m56.505 147.65c4.4802 15.512 24.261 14.843 27.971-0.87416"
-            />
-          </g>
-        </g>
-      </svg>
-    </div>
-    <div id="sun" class="astro">
-      <svg
-        width="25vh"
-        height="25vh"
-        version="1.1"
-        viewBox="0 0 200 200"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="100"
-          cy="100"
-          r="96"
-          fill="#ffc201"
-          stroke="#ff8603"
-          stroke-width="2"
-        />
+          d="m 46.015257,141.42288 c -3.266294,7.56108 10.518282,15.62893 24.073055,15.52693 15.376948,-0.11555 27.051815,-6.98173 24.618699,-13.92774 -2.406269,-6.08071 -15.377228,1.09026 -25.601249,1.0379 -10.554154,-0.0539 -20.164151,-7.0863 -23.090785,-2.637 z"
+          opacity=".5" />
         <path
-          d="M 153.298,20.5 C 214.715,117.38 144.433,206.62 71,191.68 186.2,219.337 241.29,83.11 153.298,20.5 Z"
-          fill="#ff8603"
-        />
+          d="m 64.854,156.61005 c 3.550632,-5.69256 12.594794,-10.83479 24.963727,-4.52622 -3.502661,2.29962 -13.047565,5.95843 -24.963727,4.52622 z"
+          fill="#fc5b00" />
+      </g>
+    </svg>
+  </div>
+  <div id="time" class="time">00:00:00</div>
+</body>
 
-        <g class="face">
-          <g opacity=".5">
-            <ellipse cx="87" cy="115" rx="7" ry="15" class="eyes" />
-            <ellipse cx="53" cy="115" rx="7" ry="15" class="eyes" />
-          </g>
-          <g
-            fill="none"
-            opacity=".5"
-            stroke="#000"
-            stroke-linecap="round"
-            stroke-width="2"
-          >
-            <path
-              d="m79.579 96.254c5.1843-9.6487 15.841-2.5922 15.841-2.5922"
-            />
-            <path
-              d="m60.437 96.995c-5.1843-9.6487-15.841-2.5922-15.841-2.5922"
-            />
-          </g>
-          <path
-            d="m 46.015257,141.42288 c -3.266294,7.56108 10.518282,15.62893 24.073055,15.52693 15.376948,-0.11555 27.051815,-6.98173 24.618699,-13.92774 -2.406269,-6.08071 -15.377228,1.09026 -25.601249,1.0379 -10.554154,-0.0539 -20.164151,-7.0863 -23.090785,-2.637 z"
-            opacity=".5"
-          />
-          <path
-            d="m 64.854,156.61005 c 3.550632,-5.69256 12.594794,-10.83479 24.963727,-4.52622 -3.502661,2.29962 -13.047565,5.95843 -24.963727,4.52622 z"
-            fill="#fc5b00"
-          />
-        </g>
-      </svg>
-    </div>
-    <div id="time" class="time">00:00:00</div>
-  </body>
+<script type="text/javascript">
+  // Startup
+  var elementBody = document.querySelector("body"),
+    elementTime,
+    elementMoon,
+    elementSun,
+    elementSky
 
-  <script>
-    // Startup
-    var elementBody = document.querySelector("body"),
-      elementTime,
-      elementMoon,
-      elementSun,
-      elementSky
+  function getProperties() {
+    var date = new Date(),
+      hours = date.getHours(),
+      minutes = date.getMinutes()
+    var topSky =
+      parseInt((hours / 24) * -2400) + parseInt((minutes / 60) * -100) + "%"
 
-    function getProperties() {
-      var date = new Date(),
-        hours = date.getHours(),
-        minutes = date.getMinutes()
-      var topSky =
-        parseInt((hours / 24) * -2400) + parseInt((minutes / 60) * -100) + "%"
-
-      if (parseInt(hours) >= 5 && parseInt(hours) < 18) {
-        // Day
-        return {
-          text: "#333",
-          topSky,
-          moon: 0,
-          sun: 1,
-        }
-      } else {
-        // Night
-        return {
-          text: "#fff",
-          topSky,
-          top: 1,
-          moon: 1,
-          sun: 0,
-        }
+    if (parseInt(hours) >= 5 && parseInt(hours) < 18) {
+      // Day
+      return {
+        text: "#333",
+        topSky,
+        moon: 0,
+        sun: 1,
+      }
+    } else {
+      // Night
+      return {
+        text: "#fff",
+        topSky,
+        top: 1,
+        moon: 1,
+        sun: 0,
       }
     }
+  }
 
-    ;(function () {
-      var colors = getProperties()
-      elementBody.style.color = colors.text
-      elementBody.style.backgroundColor = colors.text
-    })()
+  ; (function () {
+    var colors = getProperties()
+    elementBody.style.color = colors.text
+    elementBody.style.backgroundColor = colors.text
+  })()
 
-    // Loop settings
-    function refresh() {
-      var date = new Date(),
-        hours = date.getHours().toString().padStart(2, "0"),
-        minutes = date.getMinutes().toString().padStart(2, "0"),
-        seconds = date.getSeconds().toString().padStart(2, "0")
+  // Loop settings
+  function refresh() {
+    var date = new Date(),
+      hours = date.getHours().toString().padStart(2, "0"),
+      minutes = date.getMinutes().toString().padStart(2, "0"),
+      seconds = date.getSeconds().toString().padStart(2, "0")
 
-      elementTime.innerText = hours + ":" + minutes + ":" + seconds
-    }
+    elementTime.innerText = hours + ":" + minutes + ":" + seconds
+  }
 
-    function refreshColors() {
-      var colors = getProperties()
-      elementBody.style.color = colors.text
-      elementSky.style.top = colors.topSky
-      elementSun.style.opacity = colors.sun
-      elementMoon.style.opacity = colors.moon
-    }
+  function refreshColors() {
+    var colors = getProperties()
+    elementBody.style.color = colors.text
+    elementSky.style.top = colors.topSky
+    elementSun.style.opacity = colors.sun
+    elementMoon.style.opacity = colors.moon
+  }
 
-    function runOnLoad() {
-      elementTime = document.getElementById("time")
-      elementMoon = document.getElementById("moon")
-      elementSun = document.getElementById("sun")
-      elementSky = document.getElementById("sky")
+  function runOnLoad() {
+    elementTime = document.getElementById("time")
+    elementMoon = document.getElementById("moon")
+    elementSun = document.getElementById("sun")
+    elementSky = document.getElementById("sky")
 
-      refresh()
-      refreshColors()
+    refresh()
+    refreshColors()
 
-      setInterval(refresh, 1000)
-      setTimeout(function () {
-        elementSky.style.transition = "top 1.0s ease-in-out"
-        setInterval(refreshColors, 1000)
-      }, 1000)
-    }
+    setInterval(refresh, 1000)
+    setTimeout(function () {
+      elementSky.style.transition = "top 1.0s ease-in-out"
+      setInterval(refreshColors, 1000)
+    }, 1000)
+  }
 
-    // Run when elements are available
-    window.onload = runOnLoad
-  </script>
+  // Run when elements are available
+  window.onload = runOnLoad
+</script>
+
 </html>

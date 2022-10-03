@@ -108,7 +108,7 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
 
   <body></body>
 
-  <script></script>
+  <script type="text/javascript"></script>
 </html>
 ```
 
@@ -153,7 +153,7 @@ Podemos referências arquivos externos como
 ### Script externo
 
 ```html
-<script src="/path/to/scripts.js" />
+<script src="/path/to/scripts.js"></script>
 ```
 
 ### Sitemap
