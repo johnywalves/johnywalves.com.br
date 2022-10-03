@@ -164,5 +164,6 @@ print(resultado_gp.fun)
 
 ## Referências
 
-[How to Automate Hyperparameter Optimization](https://www.kdnuggets.com/2019/06/automate-hyperparameter-optimization.html)  
+[How to Automate Hyperparameter Optimization](https://www.kdnuggets.com/2019/06/automate-hyperparameter-optimization.html)
+
 [scikit-learn: sklearn.ensemble.GradientBoostingRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)

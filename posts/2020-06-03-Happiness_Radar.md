@@ -1,5 +1,5 @@
 ---
-title: Happiness Radar
+title: Analisando felicidade mundial
 description: Uma análise de dados do que influência na facilidade geral de uma nação
 date: 2020-06-03 23:32:15 -0300
 featuredImage: ./featured/happy-1.jpg

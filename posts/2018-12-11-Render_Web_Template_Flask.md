@@ -175,7 +175,10 @@ Uma mensagem no shell apresenta que o site está disponível no [localhost:5000]
 
 ### Referências
 
-[Flask - Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)  
-[Flask - Templates](http://flask.pocoo.org/docs/1.0/tutorial/templates/)  
-[Flask - Static Files](http://flask.pocoo.org/docs/1.0/tutorial/static/)  
+[Flask - Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)
+
+[Flask - Templates](http://flask.pocoo.org/docs/1.0/tutorial/templates/)
+
+[Flask - Static Files](http://flask.pocoo.org/docs/1.0/tutorial/static/)
+
 [Jinja - Template Designer Documentation](http://jinja.pocoo.org/docs/2.10/templates/)

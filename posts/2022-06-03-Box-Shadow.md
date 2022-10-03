@@ -208,5 +208,6 @@ Segue o CSS
 
 ## Referências
 
-[W3Schools - Box Shadow](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)  
+[W3Schools - Box Shadow](https://www.w3schools.com/cssref/css3_pr_box-shadow.asp)
+
 [Material Designer - Light and shadows](https://material.io/design/environment/light-shadows.html)

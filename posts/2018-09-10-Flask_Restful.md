@@ -325,7 +325,10 @@ if __name__ == '__main__':
 
 ### Referências
 
-[Flask - Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)  
-[Flask - Configuration Handling](http://flask.pocoo.org/docs/1.0/config/)  
-[Flask-RESTful - Quickstart](https://flask-restful.readthedocs.io/en/latest/quickstart.html)  
+[Flask - Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)
+
+[Flask - Configuration Handling](http://flask.pocoo.org/docs/1.0/config/)
+
+[Flask-RESTful - Quickstart](https://flask-restful.readthedocs.io/en/latest/quickstart.html)
+
 [JWT authorization in Flask](https://codeburst.io/jwt-authorization-in-flask-c63c1acf4eeb)

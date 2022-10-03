@@ -182,5 +182,6 @@ com o modelo de sitemap
 
 ## Referências
 
-[Meta Tags](https://metatags.io/)  
+[Metatags](https://metatags.io/)
+
 [Josh W Comeau - The Surprising Truth About Pixels and Accessibility](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/)

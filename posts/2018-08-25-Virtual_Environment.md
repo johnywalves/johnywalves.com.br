@@ -99,5 +99,6 @@ pipenv run python app.py
 
 ## Referências
 
-[Flask - Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)  
+[Flask - Quickstart](http://flask.pocoo.org/docs/1.0/quickstart/)
+
 [How to manage your Python projects with Pipenv](https://robots.thoughtbot.com/how-to-manage-your-python-projects-with-pipenv)

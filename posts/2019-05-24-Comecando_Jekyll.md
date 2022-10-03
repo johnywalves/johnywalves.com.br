@@ -119,5 +119,6 @@ endif %}
 
 ## Referências
 
-[Jekyll - Setup](https://jekyllrb.com/docs/step-by-step/01-setup/)  
+[Jekyll - Setup](https://jekyllrb.com/docs/step-by-step/01-setup/)
+
 [Jekyll - Variables](https://jekyllrb.com/docs/variables/)
