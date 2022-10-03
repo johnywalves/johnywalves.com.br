@@ -30,6 +30,10 @@ export const CommentsWrapper = styled.section`
       color: var(--texts) !important;
     }
   }
+
+  ${media.lessThan("large")`
+    padding-top: var(--24px);
+  `}
 `
 
 export const CommentsTitle = styled.h2`

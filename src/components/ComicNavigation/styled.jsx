@@ -51,8 +51,8 @@ export const Icon = styled(Anilink)`
   }
 
   ${media.lessThan("medium")`
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
   `}
 `
 

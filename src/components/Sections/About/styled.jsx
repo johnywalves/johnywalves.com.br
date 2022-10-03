@@ -64,7 +64,11 @@ export const Line = styled.div`
 
 export const Description = styled.p`
   font-size: 1.25rem;
-  text-align: justify;
+  text-align: left;
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+  `}
 `
 
 export const Resumes = styled.ul`

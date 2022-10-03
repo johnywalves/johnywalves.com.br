@@ -9,6 +9,7 @@ tags:
   - Tutorial
   - Iniciante
 published: true
+cheatsheet: true
 ---
 
 Biblioteca [React](https://reactjs.org/) criada para facilitar a criação de aplicativos para execução no navegador

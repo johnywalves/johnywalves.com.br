@@ -11,6 +11,8 @@ tags:
   - Animação
 extras:
   - box-shadow.css
+published: true
+cheatsheet: false
 ---
 
 Interação com a luz é a maneira como vemos as coisas, nessa interação com a luz é comum a geração de sombras sobre os objetos, o uso de sombras em interfaces Web trás uma sensação de volume e elevação

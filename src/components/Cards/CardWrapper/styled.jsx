@@ -35,9 +35,9 @@ export const CardWrapperWrapper = styled.li`
       transform: none;
       filter: none;
     }
-  }
 
-  ${media.lessThan("medium")`
-    transform: none;
-  `}
+    ${media.lessThan("medium")`
+      transform: scale(0.8);
+    `}
+  }
 `

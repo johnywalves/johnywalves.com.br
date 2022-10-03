@@ -11,6 +11,10 @@ export const MainContentWrapper = styled.section`
     max-width: 100%;
   `}
 
+  ${media.lessThan("medium")`
+    padding: 1.5rem 0;
+  `}
+
   p,
   h1,
   h2,
@@ -36,7 +40,12 @@ export const MainContentWrapper = styled.section`
   video,
   p {
     display: block;
-    margin: 0 auto 1.6rem;
+    margin: 0 auto var(--24px);
+
+    ${media.lessThan("medium")`
+      font-size: 1rem;
+      margin: 0 auto var(--8px);
+    `}
   }
   h1,
   h2,
@@ -207,7 +216,7 @@ export const MainContentWrapper = styled.section`
   .text-color {
     color: var(--white);
     font-weight: 700;
-    padding: 2px 4px;
+    padding: 2px 6px;
     border-radius: 4px;
 
     &.light {

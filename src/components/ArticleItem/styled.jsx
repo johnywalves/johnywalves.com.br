@@ -103,6 +103,9 @@ export const ArticleItemTitle = styled.h1`
   align-items: center;
 
   ${media.lessThan("medium")`
+    margin-top: var(--8px);
+    margin-bottom: var(--8px);
+    font-size: 1.25rem;
     flex-direction: column;
     align-items: flex-start;
   `}
@@ -123,12 +126,20 @@ export const ArticleItemCategory = styled.span`
   ${ArticleItemLink}:hover & {
     opacity: 1;
   }
+
+  ${media.lessThan("medium")`
+    margin-bottom: var(--8px);
+  `}
 `
 
 export const ArticleItemDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 120%;
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+  `}
 `
 
 export const ArticleItemTags = styled.div`

@@ -20,6 +20,10 @@ export const ArticleForehead = styled.div`
   align-items: center;
   width: 100%;
   min-height: 30rem;
+
+  ${media.lessThan("medium")`
+    min-height: 20rem;
+  `}
 `
 
 export const PostFeaturedImage = styled(GatsbyImage)`
@@ -99,6 +103,10 @@ export const PostTitle = styled.h1`
     line-height: 1.1;
     padding: 0 1rem;
   `}
+
+  ${media.lessThan("medium")`
+    font-size: 1.75rem;
+  `}
 `
 
 export const PostDescription = styled.h2`
@@ -112,5 +120,9 @@ export const PostDescription = styled.h2`
     font-size: 1.6rem;
     line-height: 1.3;
     padding: 0 1rem;
+  `}
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
   `}
 `

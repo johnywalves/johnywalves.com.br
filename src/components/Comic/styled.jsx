@@ -32,6 +32,10 @@ export const ComicPostHeader = styled.header`
           `}
     max-width: 100%;
   `}
+
+  ${media.lessThan("medium")`
+    padding-top: var(--16px);
+  `}
 `
 
 export const PostFeaturedImage = styled(GatsbyImage)``
@@ -45,8 +49,8 @@ export const ComicWrapper = styled.div`
 export const PostComic = styled(GatsbyImage)``
 
 export const PostDate = styled.time`
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
 `
 
 export const PostTitle = styled.h1`
@@ -61,6 +65,11 @@ export const PostTitle = styled.h1`
     font-size: 2.8rem;
     line-height: 1.1;
     padding: 0 1rem;
+  `}
+
+  ${media.lessThan("medium")`
+    font-size: 2rem;
+    padding: 0;
   `}
 `
 

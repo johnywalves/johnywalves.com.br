@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import media from "styled-media-query"
 
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
@@ -11,6 +12,10 @@ export const Content = styled.ul`
   gap: 25px;
   list-style: none;
   flex-wrap: wrap;
+
+  ${media.lessThan("medium")`
+    gap: var(--8px);
+  `}
 `
 
 export const NavigationWrapper = styled.div`
@@ -18,8 +23,13 @@ export const NavigationWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 35px 0 15px;
+  gap: var(--32px);
+  padding: var(--32px) 0 var(--16px);
+
+  ${media.lessThan("medium")`
+    gap: var(--16px);
+    padding: 0;
+  `}
 `
 
 export const Navigation = styled(Anilink)`

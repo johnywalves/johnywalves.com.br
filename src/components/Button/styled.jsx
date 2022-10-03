@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import media from "styled-media-query"
 
 const colorBackground = ({ secondary }) =>
   !secondary
@@ -85,4 +86,13 @@ export const ButtonWrapper = styled.div`
     width: 1.25rem;
     margin: 0 0.5rem 0 0;
   }
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+
+    & svg {
+      height: 1rem;
+      width: 1rem;
+    }
+  `}
 `

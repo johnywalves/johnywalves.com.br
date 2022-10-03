@@ -9,6 +9,7 @@ tags:
   - Strings
   - Term.ooo
 published: true
+cheatsheet: true
 ---
 
 O term.ooo é uma versão nacional do Wordle um jogo de adivinhar palavras com algumas indicações de acertos e erros

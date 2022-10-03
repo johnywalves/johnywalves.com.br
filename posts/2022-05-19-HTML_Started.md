@@ -8,6 +8,8 @@ category: Web
 tags:
   - HTML
   - Cheatsheet
+published: true
+cheatsheet: false
 ---
 
 Um modelo simples para copiar e começar uma página HTML, cansei de ter de lembrar toda vez :)

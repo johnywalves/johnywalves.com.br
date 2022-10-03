@@ -8,6 +8,8 @@ category: Strapi
 tags:
   - Strapi
   - Static
+published: true
+cheatsheet: true
 ---
 
 Strapi é um headless CMS, em NodeJS com Koa, com grande facilidade de personalização, facilitando subir uma ferramenta e adequando para seu uso no decorer o projeto

@@ -16,7 +16,7 @@ export const CardArticleContent = styled.div`
   box-shadow: 0 -2px 8px var(--shadow-colors);
 
   ${media.lessThan("medium")`
-    min-height: 500px;
+    min-height: 425px;
   `}
 `
 
@@ -34,6 +34,10 @@ export const CardArticleCategory = styled.p`
   background-color: var(--highlight);
   border-radius: 15px;
   text-transform: uppercase;
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+  `}
 `
 
 export const CardArticleSubtitle = styled.small`
@@ -42,15 +46,27 @@ export const CardArticleSubtitle = styled.small`
   font-size: 1.5rem;
   font-weight: 700;
   text-align: right;
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+  `}
 `
 
 export const CardArticleTitle = styled.h3`
   font-size: 2rem;
   margin: 10px 0;
+
+  ${media.lessThan("medium")`
+    font-size: 1.5rem;
+  `}
 `
 
 export const CardArticleDescription = styled.p`
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--texts);
+
+  ${media.lessThan("medium")`
+    font-size: 1rem;
+  `}
 `

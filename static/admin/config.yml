@@ -43,6 +43,7 @@ collections:
             ],
         }
       - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Extras", name: "extras", widget: "list" }
       - { label: "Published", name: "published", widget: "boolean" }
       - { label: "Cheatsheet", name: "cheatsheet", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }

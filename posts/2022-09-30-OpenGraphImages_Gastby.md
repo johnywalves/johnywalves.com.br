@@ -9,6 +9,8 @@ tags:
   - SEO
   - Automação
   - Imagem
+published: true
+cheatsheet: false
 ---
 
 No momento de estruturar os artigos costumo usar uma imagem para ilustrar, com direitos de uso permitido encontradas no Google Imagens ou WikiCommons, quando compartilhada nas redes socias ela aparece juntamente com o título e descrição, como neste exemplo do twitter
