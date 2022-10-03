@@ -29,7 +29,6 @@ export const OpenGraphicContent = styled.div`
 
 export const OpenGraphicHeader = styled.header`
   width: 100%;
-  text-shadow: 1px 1px 2px var(--shadow-colors);
 `
 
 export const OpenGraphicTime = styled.time`
@@ -47,9 +46,11 @@ export const OpenGraphicTime = styled.time`
 
 export const OpenGraphicTitle = styled.h1`
   color: #e0138c;
-  font-size: 3.25rem;
+  font-size: 3rem;
+  margin-top: 4px;
   margin-bottom: 16px;
-  text-shadow: 1px 1px 2px #ffffff88;
+  text-shadow: 1px 1px 1px #ffffff;
+  transform: translateX(-2px);
 `
 
 export const OpenGraphicDescription = styled.p`
@@ -60,11 +61,12 @@ export const OpenGraphicDescription = styled.p`
 export const OpenGraphicCategory = styled.p`
   color: #222;
   background-color: #e0138c;
+  box-shadow: 1px 1px 1px #ffffff;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 4px 8px;
   width: fit-content;
-  border-radius: 16px;
+  border-radius: 12px;
   margin-bottom: 16px;
 `
 
@@ -92,7 +94,7 @@ export const OpenGraphicFooterContent = styled.div`
 
 export const OpenGraphicName = styled.p`
   color: #f8f8f8;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
 `
 

@@ -64,7 +64,9 @@ const fs = require("fs")
 const http = require("http")
 
 async function getImage(servingUrl, page, slug) {
-  await page.goto(`${servingUrl}__generated/${slug}/index.html`)
+  await page.goto(`${servingUrl}__generated/${slug}/index.html`, {
+    waitUntil: "networkidle0",
+  })
 
   const elementThumbnail = await page.$("#ogimage")
   await elementThumbnail.screenshot({
