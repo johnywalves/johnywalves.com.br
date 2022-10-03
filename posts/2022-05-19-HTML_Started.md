@@ -34,7 +34,7 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#ed34a2" />
+    <meta name="theme-color" content="#e0138c" />
 
     <title>Page Title</title>
     <meta name="title" property="og:title" content="Page Title" />
@@ -97,7 +97,7 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     /* Content CSS */
     :root {
       --color-background: #282c35;
-      --color-text: #ed34a2;
+      --color-text: #e0138c;
     }
 
     body {

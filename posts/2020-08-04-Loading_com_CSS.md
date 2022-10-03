@@ -38,7 +38,7 @@ body {
 
 .spinner {
   border: 12px solid #ffffff29;
-  border-left-color: #ed34a2;
+  border-left-color: #e0138c;
   height: 120px;
   width: 120px;
   border-radius: 50%;

@@ -1,135 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Menu Hamburger Fullscreen | Johny W. Alves</title>
-  </head>
 
-  <style>
-    /* Reset CSS */
-    *,
-    *:before,
-    *:after {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      box-sizing: border-box;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Menu Hamburger Fullscreen | Johny W. Alves</title>
+</head>
 
-    body {
-      background: #282c35;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    }
+<style>
+  /* Reset CSS */
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+  }
 
-    /* Content CSS */
-    .menu {
-      background: #fff;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      cursor: pointer;
-      transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-      box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
-    }
+  body {
+    background: #282c35;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 
-    .menu:hover {
-      box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
-    }
+  /* Content CSS */
+  .menu {
+    background: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    cursor: pointer;
+    transition: box-shadow 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  }
 
-    .hamburger {
-      position: relative;
-      display: block;
-      background: #000;
-      width: 30px;
-      height: 2px;
-      top: 29px;
-      left: 15px;
-      transition: 0.5s ease-in-out;
-    }
+  .menu:hover {
+    box-shadow: 0 0 0 8px #fff, 0 0 0 8px #fff;
+  }
 
-    .hamburger::before,
-    .hamburger::after {
-      content: "";
-      display: block;
-      background: #000;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      transition: 0.5s ease-in-out;
-    }
+  .hamburger {
+    position: relative;
+    display: block;
+    background: #000;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+  }
 
-    .hamburger::before {
-      top: -10px;
-    }
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+  }
 
-    .hamburger::after {
-      bottom: -10px;
-    }
+  .hamburger::before {
+    top: -10px;
+  }
 
-    input {
-      display: none;
-    }
+  .hamburger::after {
+    bottom: -10px;
+  }
 
-    input:checked ~ ul {
-      opacity: 1;
-    }
+  input {
+    display: none;
+  }
 
-    input:checked ~ label .menu {
-      box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
-    }
+  input:checked~ul {
+    opacity: 1;
+  }
 
-    input:checked ~ label .hamburger {
-      transform: rotate(45deg);
-    }
+  input:checked~label .menu {
+    box-shadow: 0 0 0 130vw #fff, 0 0 0 130vh #fff;
+  }
 
-    input:checked ~ label .hamburger::before {
-      transform: rotate(-90deg);
-      top: 0;
-    }
+  input:checked~label .hamburger {
+    transform: rotate(45deg);
+  }
 
-    input:checked ~ label .hamburger::after {
-      transform: rotate(-90deg);
-      bottom: 0;
-    }
+  input:checked~label .hamburger::before {
+    transform: rotate(-90deg);
+    top: 0;
+  }
 
-    ul {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      list-style: none;
-      opacity: 0;
-      transition: 0.25s 0.1s cubic-bezier(0, 1.07, 1.02);
-    }
+  input:checked~label .hamburger::after {
+    transform: rotate(-90deg);
+    bottom: 0;
+  }
 
-    a {
-      display: block;
-      margin-bottom: 40px;
-      color: #ed34a2;
-      font-size: 47px;
-      text-decoration: none;
-    }
-  </style>
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    opacity: 0;
+    transition: 0.25s 0.1s cubic-bezier(0, 1.07, 1.02);
+  }
 
-  <body>
-    <input id="menu-hamburger" type="checkbox" />
+  a {
+    display: block;
+    margin-bottom: 40px;
+    color: #e0138c;
+    font-size: 47px;
+    text-decoration: none;
+  }
+</style>
 
-    <label for="menu-hamburger">
-      <div class="menu">
-        <span class="hamburger"></span>
-      </div>
-    </label>
+<body>
+  <input id="menu-hamburger" type="checkbox" />
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </body>
+  <label for="menu-hamburger">
+    <div class="menu">
+      <span class="hamburger"></span>
+    </div>
+  </label>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+
 </html>

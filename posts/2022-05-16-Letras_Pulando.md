@@ -46,7 +46,7 @@ Aplicação de estilo, em uma página HTML com o [básico](/html-started)
 
 ```css
 body {
-  color: #ed34a2;
+  color: #e0138c;
   background: #282c35;
   display: flex;
   align-items: center;

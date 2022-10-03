@@ -83,7 +83,7 @@ label::after {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid #ed34a2;
+  border-bottom: 3px solid #e0138c;
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -93,7 +93,7 @@ input:valid + label span {
   transform: translateY(-150%);
   font-size: 14px;
   bottom: 10px;
-  color: #ed34a2;
+  color: #e0138c;
 }
 
 input:focus + label::after,
