@@ -216,7 +216,7 @@ export const MainContentWrapper = styled.section`
   .text-color {
     color: var(--white);
     font-weight: 700;
-    padding: 2px 6px;
+    padding: 4px 8px;
     border-radius: 4px;
 
     &.light {
