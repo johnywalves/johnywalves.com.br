@@ -1,4 +1,5 @@
 import React from "react"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 import ProjectPage from "components/ProjectPage"
 import Blueprint from "components/Blueprint"
@@ -9,14 +10,16 @@ const title = "Projetos e Desenvolvimento",
 
 const Projects = () => {
   return (
-    <Blueprint
-      content
-      openGraphImage="/figures/thumbnail_project.png"
-      title={title}
-      description={description}
-    >
-      <ProjectPage />
-    </Blueprint>
+    <ParallaxProvider>
+      <Blueprint
+        content
+        openGraphImage="/figures/thumbnail_project.png"
+        title={title}
+        description={description}
+      >
+        <ProjectPage />
+      </Blueprint>
+    </ParallaxProvider>
   )
 }
 

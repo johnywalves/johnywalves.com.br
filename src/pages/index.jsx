@@ -1,4 +1,5 @@
 import React from "react"
+import { ParallaxProvider } from "react-scroll-parallax"
 
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
@@ -15,15 +16,17 @@ import {
 
 const Home = () => {
   return (
-    <Blueprint>
-      <Hero />
-      <About />
-      <Experience />
-      <Articles />
-      <Comics />
-      <Projects />
-      <Contact />
-    </Blueprint>
+    <ParallaxProvider>
+      <Blueprint>
+        <Hero />
+        <About />
+        <Experience />
+        <Articles />
+        <Comics />
+        <Projects />
+        <Contact />
+      </Blueprint>
+    </ParallaxProvider>
   )
 }
 

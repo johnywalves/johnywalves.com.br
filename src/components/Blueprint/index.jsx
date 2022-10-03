@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { ParallaxProvider } from "react-scroll-parallax"
 import PropTypes from "prop-types"
 
 import Menu from "./Menu"
@@ -47,30 +46,28 @@ const Blueprint = ({
 
   return (
     <>
-      <ParallaxProvider>
-        <GeneralStyles />
-        <BlueprintWrapper
+      <GeneralStyles />
+      <BlueprintWrapper
+        itemScope
+        itemProp="mainContentOfPage"
+        content={content ? 1 : 0}
+      >
+        <meta itemProp="headline" content={titleName} />
+        <meta itemProp="description" content={metaDescription} />
+        <link itemProp="thumbnailUrl" href={pathImage} />
+        <span
           itemScope
-          itemProp="mainContentOfPage"
-          content={content ? 1 : 0}
+          itemProp="image"
+          itemType="http://schema.org/ImageObject"
         >
-          <meta itemProp="headline" content={titleName} />
-          <meta itemProp="description" content={metaDescription} />
-          <link itemProp="thumbnailUrl" href={pathImage} />
-          <span
-            itemScope
-            itemProp="image"
-            itemType="http://schema.org/ImageObject"
-          >
-            <link itemProp="url" href={pathImage} />
-            <meta itemProp="width" content={sizeImageWidth} />
-            <meta itemProp="height" content={sizeImageHeight} />
-          </span>
-          <Menu hero={!content} whiteLogo={whiteLogo} />
-          {children}
-          {content && <Footer />}
-        </BlueprintWrapper>
-      </ParallaxProvider>
+          <link itemProp="url" href={pathImage} />
+          <meta itemProp="width" content={sizeImageWidth} />
+          <meta itemProp="height" content={sizeImageHeight} />
+        </span>
+        <Menu hero={!content} whiteLogo={whiteLogo} />
+        {children}
+        {content && <Footer />}
+      </BlueprintWrapper>
     </>
   )
 }
