@@ -4,17 +4,6 @@ import media from "styled-media-query"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const RecommendedLink = styled(Anilink)`
-  position: relative;
-  background: var(--background-card);
-
-  &:hover {
-    & picture {
-      opacity: 0.65;
-    }
-  }
-`
-
 export const RecommendedCover = styled(GatsbyImage)`
   position: absolute !important;
   left: 0;
@@ -23,8 +12,23 @@ export const RecommendedCover = styled(GatsbyImage)`
   bottom: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.15;
   z-index: 1;
+  transition: opacity 0.25s;
+`
+
+export const RecommendedLink = styled(Anilink)`
+  position: relative;
+  background: var(--background-card);
+
+  & ${RecommendedCover} {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    & ${RecommendedCover} {
+      opacity: 0.1;
+    }
+  }
 `
 
 export const RecommendedContent = styled.div`
