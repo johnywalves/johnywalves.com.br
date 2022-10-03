@@ -2,13 +2,14 @@
 date: 2020-08-10 19:35:00 -0300
 title: Classificação de Texto em Python
 description: Lorem lipsunm
-featuredImage: ./featured/python-1.jpg
-coverImage: /figures/python-1.jpg
+featuredImage: ./featured/python-2.jpg
+coverImage: /figures/python-2.jpg
 category: Python
 tags:
   - Linguagem Natural
   - Machine Learning
 published: false
+cheatsheet: false
 ---
 
 Lorem lipsum, Lorem lipsum, Lorem lipsum

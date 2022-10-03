@@ -9,6 +9,7 @@ tags:
   - Pandas
   - Ciência de Dados
 published: false
+cheatsheet: false
 ---
 
 Apresentação da aplicação de conceitos de estátisticas (média, mediana, outliners, quatis, percentis, desvio padrão...), carga e transformação de dados, gráficos (boxplot, colunas, linhas...) com Python e Jupyter Notebook
