@@ -57,7 +57,7 @@ const pluginsConfig = [
       name: `Johny W. Alves`,
       short_name: `Johny W. Alves`,
       start_url: `/`,
-      background_color: `#ffffff`,
+      background_color: `#f6f6f6`,
       theme_color: `#e0138c`,
       display: `minimal-ui`,
       icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
@@ -81,6 +81,7 @@ const pluginsConfig = [
             maxWidth: 960,
             withWebp: true,
             linkImagesToOriginal: false,
+            disableBgImageOnAlpha: true,
           },
         },
         "gatsby-remark-static-images",

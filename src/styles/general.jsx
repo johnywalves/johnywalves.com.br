@@ -48,13 +48,14 @@ const GeneralStyles = createGlobalStyle`
   }
 
   :root {
-    --highlight: #e0138c;
     --highlight-dark: #e0138c;
+    --highlight: #e0138c;
     --highlight-light: #ff89fd;
     --highlight-lighter: #ff6bfd;
     --highlight-lightest: #fdbafd;
     --highlight-semi: #e0138cd8;
-    --secondary: #8857c3;
+
+    --secondary: #8857c3; 
     --third: #44b5ef;
     --third-light: #9fd5fd;
     --white: #fff;

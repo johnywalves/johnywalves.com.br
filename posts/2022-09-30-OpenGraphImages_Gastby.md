@@ -15,7 +15,7 @@ cheatsheet: false
 
 No momento de estruturar os artigos costumo usar uma imagem para ilustrar, com direitos de uso permitido encontradas no Google Imagens ou WikiCommons, quando compartilhada nas redes socias ela aparece juntamente com o título e descrição, como neste exemplo do twitter
 
-![Café cremoso em uma xícara com o nome "Construindo Layout 2.0" do artigo abaixo](/figures/og_gastby_before.png "Compartilhamento de postagem no Twitter")
+![Café cremoso em uma xícara com o nome "Construindo Layout 2.0" do artigo abaixo](/figures/og_gastby_before.jpg "Compartilhamento de postagem no Twitter")
 
 Podemos fazer melhor a imagem não é o objetivo, diferente do instagram ou outras redes sociais, temos de dar mais destaque o título, descrição e entre outras que fazem mais sentido
 
