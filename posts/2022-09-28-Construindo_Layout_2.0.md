@@ -21,7 +21,7 @@ Amo desenvolvimento, gosto muito de aprender e experimentar coisas novas, docume
 
 Estava cansado da interface antiga, gerada no curso de Gatsby do [William Justen](https://willianjusten.com.br/)
 
-![Interface do site com listagens três artigos e três projetos](/figures/layout_old.png "Interface antiga")
+![Interface do site com listagens três artigos e três projetos](/figures/layout_old.jpg "Interface antiga")
 
 Resolvi que era hora de abraçar algo mais exótico e menos contido e conciso, seguindo alguns conselhos do [Josh Comeau](https://www.joshwcomeau.com/) descritos no ebook "Building an effective dev portfolio" comecei o meu processo
 
@@ -35,7 +35,7 @@ Ele também recomendou o uso de Parallax para as formas, resolvida pelo o uso da
 
 Recomendado pelo Josh, trazer uma coisa criativa para perfil, trabalhei com o _scroll_ da tela fiz uma animação reagindo a barra descendo
 
-![Homem em tons de cinza olhando para cima](/figures/layout_react.png "Reagindo a barra descendo")
+![Homem em tons de cinza olhando para cima](/figures/layout_react.jpg "Reagindo a barra descendo")
 
 Para produzir os grafismos usei conhecimento prévio sobre o Inkscape, conquistado na produção das tirinhas, e vários tutorias do [Logos By Nick no Youtube](https://www.youtube.com/c/LogosByNick)
 
@@ -43,7 +43,7 @@ Para produzir os grafismos usei conhecimento prévio sobre o Inkscape, conquista
 
 Acabei me empolgando com os triângulos mudando as formas mais arredondas para composição de triângulos
 
-![Área de habilidades com background com vários triângulos](/figures/layout_triangles.png "Porfólio com decoração de triângulos")
+![Área de habilidades com background com vários triângulos](/figures/layout_triangles.jpg "Porfólio com decoração de triângulos")
 
 Apaixonado pelos triângulos e as cores recomendadas <span style="background-color: #e0138c;" class="text-color">#e0138c</span>, <span style="background-color: #8857c3;" class="text-color">#8857c3</span> e <span style="background-color: #44b5ef;" class="text-color light">#44b5ef</span>, no processo de experimentação apareceu o efeito neon, abrindo a possibilidade de aloprar um pouco mais na área de projetos
 
@@ -51,21 +51,21 @@ Apaixonado pelos triângulos e as cores recomendadas <span style="background-col
 
 Buscando algumas referências encontrei no [Behance do Achraf El Gassab](https://www.behance.net/gallery/109550375/foodly-food-web-page) um desenho para uma página de serviço de alimentação, com uma organização deliciosa (piada intencional):
 
-![Imagem com vários pratos com fundo com efeito de vidro semi-transparente](/figures/layout_food.png "Layout do site de receita")
+![Imagem com vários pratos com fundo com efeito de vidro semi-transparente](/figures/layout_food.jpg "Layout do site de receita")
 
 Me inspirando, organizei os projetos de uma maneira semelhante, infelizmente as páginas fazem mais sentido serem representadas com retângulos, diferente dos pratos, o efeito de desfoque (_blur_) simulando vidro é lindo, anotar para um futuro uso 😉
 
 Explorando as formas e cores, lembrei um jogo que paródia essa temática, o [Far Cry 3 - Blood Dragon](https://store.steampowered.com/app/233270/Far_Cry_3__Blood_Dragon/) que tem um background lindo, essa beleza aqui:
 
-![Área de habilidades com background com vários triângulos](/figures/layout_blood_dragon.png "Background Far Cry 3 Blood Dragon")
+![Área de habilidades com background com vários triângulos](/figures/layout_blood_dragon.jpg "Background Far Cry 3 Blood Dragon")
 
 Levando em consideração que a página deve funcionar bem com o tema claro e o escuro, adicionei um desfoque e transparência na imagem de fundo com esse resultado:
 
-![Horizonte em neon com montanhas ao fundo](/figures/layout_horizont.png "Fundo da página no tema claro e escuro")
+![Horizonte em neon com montanhas ao fundo](/figures/layout_horizont.jpg "Fundo da página no tema claro e escuro")
 
 Resgatando a experiência [Neon Letters](/web/neonletters.html), para criar um letreiro neon, com a composição de texto branco e várias sombras, criei o descrição da página. No fundo ficou um pouco vazio, voltando ao [Logos By Nick](https://www.youtube.com/c/LogosByNick) encontrei nos tutoriais como fazer uma séries de linhas para dar efeito de fluídos, com uso de lápis ondulado com alta suavição e interpolação de caminhos (_paths_), que harmonizou demais com o letreiro
 
-![Luminária com várias linhas no fundo com efeitos de fluidos](/figures/layout_letters.png "Letreiro neon com fundo de fluídos")
+![Luminária com várias linhas no fundo com efeitos de fluidos](/figures/layout_letters.jpg "Letreiro neon com fundo de fluídos")
 
 ## Atualizando Gatsby
 
@@ -81,7 +81,7 @@ Na versão anterior fazia uso da biblioteca [react-helmet](https://github.com/nf
 
 Incorporando as configurações de SEO orientado pela documentação [Adicionando SEO Component](https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-seo-component/) para melhorar os resultados de pesquisa no Google Search e gerar os cards com _thumbnail_ e descrição quando compartilhado o link
 
-![Homem em tons de cinza abaixado olhando para frente](/figures/layout_thumbnail.png "Reagindo a barra descendo")
+![Homem em tons de cinza abaixado olhando para frente](/figures/layout_thumbnail.jpg "Reagindo a barra descendo")
 
 Realizado com sucesso para todas as redes sociais testada, exceto no Whatsapp, futuramento resolvo essa situação ou se souber o que falta comente por favor ou entre em contato por alguma rede social
 
@@ -114,7 +114,7 @@ Ver esses confetes dá uma alegria no coração
 
 A versão antiga da listagem de artigos tinha um certo charme por ser simples, as imagens dos artigos e a listagem com tags dos artigos passa uma mensagem clara
 
-![Lista de artigos com barra lateral com foto pequena e links](/figures/layout_old_list.png "Lista antiga de artigos")
+![Lista de artigos com barra lateral com foto pequena e links](/figures/layout_old_list.jpg "Lista antiga de artigos")
 
 Mantendo a simplicidade da listagem dos artigos e trazendo sobreposição de cinza com magenta, característica dessa nova interface, adicionei um filtro de escala de cinza para as imagens, fazendo elas ganharam cores saturadas quando o mouse passa por cima e as tags para passar mais uma experiência de etiqueta, coloquei um buraco e com anel de metal para passar a linha
 
@@ -122,7 +122,7 @@ Adicionei também uma imagem minha com uma animação de sério e sorrindo, com 
 
 Mas a melhor parte foi a adição dos links das categorias para ajudar no momento da exploração dos artigos do lado direito
 
-![Lista de artigos com barra no topo com links e uma foto grande dentro de um triângulo](/figures/layout_new_list.png "Lista nova de artigos")
+![Lista de artigos com barra no topo com links e uma foto grande dentro de um triângulo](/figures/layout_new_list.jpg "Lista nova de artigos")
 
 Para mim na página de tirinhas, não fazia sentido usar uma imagen minha juntos com os personagens, então criei uma versão minha dentro do mesmo modelo deles
 
@@ -132,7 +132,7 @@ Para mim na página de tirinhas, não fazia sentido usar uma imagen minha juntos
 
 Na versão antiga havia duas barras laterais, que na versão mobile se convertiam em cabeçalho e rodapé, elas eram bem simples com os links das páginas e redes sociais, para a nova versão aproveitei as lições aprendidas, sobre GIMP, efeito neon e alguns filtros para criar essa imagem linda, usar uma jaqueta de couro faria mais sentido para a imagem...
 
-![Foto de alguém em semi perfil com gola levantada com óculos escuros](/figures/layout_rodape.png "Imagem do rodapé")
+![Foto de alguém em semi perfil com gola levantada com óculos escuros](/figures/layout_rodape.jpg "Imagem do rodapé")
 
 Para completar adicionei os links das redes sociais e os links dos RSS
 
