@@ -9,7 +9,7 @@ tags:
   - HTML
   - Cheatsheet
 published: true
-cheatsheet: false
+cheatsheet: true
 ---
 
 Um modelo simples para copiar e começar uma página HTML, cansei de ter de lembrar toda vez :)
@@ -59,52 +59,52 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     <meta name="twitter:title" content="Page Title" />
     <meta name="twitter:description" content="Page Description" />
     <meta name="twitter:image" content="/path/to/thumbnail" />
+
+    <style>
+      /* Reset CSS */
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        --14px: 0.875rem;
+        --16px: 1rem;
+        --18px: 1.125rem;
+        --21px: 1.3125rem;
+        --24px: 1.5rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      a,
+      a:hover,
+      a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Content CSS */
+      :root {
+        --color-background: #282c35;
+        --color-text: #e0138c;
+      }
+
+      body {
+        background: var(--color-background);
+        color: var(--color-text);
+      }
+    </style>
   </head>
-
-  <style>
-    /* Reset CSS */
-    *,
-    *:before,
-    *:after {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      --14px: 0.875rem;
-      --16px: 1rem;
-      --18px: 1.125rem;
-      --21px: 1.3125rem;
-      --24px: 1.5rem;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    }
-
-    ol,
-    ul {
-      list-style: none;
-    }
-
-    a,
-    a:hover,
-    a:visited {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Content CSS */
-    :root {
-      --color-background: #282c35;
-      --color-text: #e0138c;
-    }
-
-    body {
-      background: var(--color-background);
-      color: var(--color-text);
-    }
-  </style>
 
   <body></body>
 
