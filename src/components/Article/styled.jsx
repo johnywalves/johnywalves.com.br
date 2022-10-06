@@ -79,13 +79,22 @@ export const PostDate = styled.time`
   align-items: center;
   color: var(--texts);
 
-  span {
+  & span:nth-of-type(2) {
     font-size: 0.5rem;
     margin: 0 0.4rem;
   }
 
   ${media.lessThan("large")`
     padding: 0 1rem;
+  `}
+
+  ${media.lessThan("medium")`
+    font-weight: 400;
+    flex-direction: column;
+
+    & span:nth-of-type(2) {
+      display: none;
+    }
   `}
 `
 

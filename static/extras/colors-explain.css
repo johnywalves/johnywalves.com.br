@@ -56,6 +56,15 @@
   grid-template-columns: repeat(5, 1fr);
 }
 
+@media (max-width: 980px) {
+  .two-colors,
+  .three-colors,
+  .four-colors,
+  .five-colors {
+    grid-template-columns: 1fr;
+  }
+}
+
 .two-colors span,
 .three-colors span,
 .four-colors span,

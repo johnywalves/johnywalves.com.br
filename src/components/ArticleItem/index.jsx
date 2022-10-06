@@ -49,7 +49,7 @@ const ArticleItem = ({
       )}
       <ArticleItemInfo>
         <ArticleItemDate>
-          {date} ● {timeToRead} min de leitura
+          {date} <span>●</span> {timeToRead} min de leitura
         </ArticleItemDate>
         <ArticleItemTitle>
           {category && <ArticleItemCategory>{category}</ArticleItemCategory>}

@@ -91,6 +91,14 @@ export const ArticleItemInfo = styled.div`
 
 export const ArticleItemDate = styled.time`
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  & span {
+    font-size: 0.5rem;
+    margin: 0 0.25rem;
+  }
 `
 
 export const ArticleItemTitle = styled.h1`

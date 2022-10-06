@@ -76,6 +76,9 @@ export const MainContentWrapper = styled.section`
       width: 1em;
       margin-left: -1em;
     }
+    ${media.lessThan("medium")`
+      font-size: 1rem;
+    `}
   }
   img {
     display: block;
@@ -221,6 +224,75 @@ export const MainContentWrapper = styled.section`
 
     &.light {
       color: #333;
+    }
+  }
+  #d3_wrapper {
+    color: var(--texts);
+    width: 100%;
+    min-height: 15rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & #loading_graphic {
+      border: 0.75rem solid var(--background);
+      border-left-color: var(--highlight);
+      border-bottom-color: var(--highlight-semi);
+      height: 7rem;
+      width: 7rem;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    & svg {
+      & text {
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      & .domains {
+        & path,
+        & line {
+          fill: none;
+          opacity: 0.5;
+        }
+
+        & path {
+          stroke-width: 2px;
+        }
+
+        & line {
+          stroke-width: 1px;
+        }
+      }
+
+      & .line {
+        fill: none;
+        stroke-width: 4px;
+      }
+
+      & .grid {
+        & path {
+          display: none;
+        }
+
+        & line {
+          fill: none;
+          stroke-width: 1px;
+          stroke: var(--shadow-colors);
+          opacity: 0.5;
+        }
+      }
+
+      & .legend {
+        font-size: 1rem;
+      }
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
     }
   }
 `

@@ -47,8 +47,9 @@ const Article = ({ data, pageContext }) => {
               itemProp="datePublished"
               datetime={post.frontmatter.created}
             >
-              {post.frontmatter.date} <span>●</span> {post.timeToRead} min de
-              leitura
+              <span>{post.frontmatter.date}</span>
+              <span>●</span>
+              <span>{post.timeToRead} min de leitura</span>
             </PostDate>
             <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
             <meta itemProp="name" content={post.frontmatter.title} />

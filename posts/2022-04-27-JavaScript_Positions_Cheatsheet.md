@@ -12,6 +12,12 @@ published: true
 cheatsheet: true
 ---
 
+Informações sobre tamanho e posicionamento da tela
+
+```javascript
+element.getBoundingClientRect()
+```
+
 Posicionamento de objeto com relação ao scroll da página
 
 ```javascript

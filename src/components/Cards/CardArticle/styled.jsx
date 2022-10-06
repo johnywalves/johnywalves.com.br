@@ -16,7 +16,7 @@ export const CardArticleContent = styled.div`
   box-shadow: 0 -2px 8px var(--shadow-colors);
 
   ${media.lessThan("medium")`
-    min-height: 425px;
+    min-height: 450px;
   `}
 `
 
