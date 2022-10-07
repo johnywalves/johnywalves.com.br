@@ -1,5 +1,5 @@
 ---
-title: Input estilizado
+title: Input estilizado com HTML e CSS puro
 description: Input para texto estilizado com mudanças no foco
 date: "2020-08-09 18:50:32"
 featuredImage: ./featured/planner-1.jpg

@@ -1,5 +1,5 @@
 ---
-title: Começando com Jekyll
+title: Instalação e Primeiros passos com Jekyll
 description: Geração de páginas estáticas com Jekyll e Markdown
 date: 2019-05-24 19:52:13 -0300
 featuredImage: ./featured/medicine-1.jpg

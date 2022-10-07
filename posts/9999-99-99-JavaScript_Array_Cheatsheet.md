@@ -14,10 +14,16 @@ published: false
 
 ## Elemneto único
 
-Remover elementos
+Remover eleemento repetidos
 
 ```javascript
 lista.filter((v, i, a) => a.indexOf(v) === i)
 ```
 
-### Explicação
+## Gerar lista com n elementos
+
+Retorna uma lista com a `<quantidade de elementos>` de `undefined`
+
+```javascript
+Array.from({ length: "<quantidade de elementos>" })
+```
