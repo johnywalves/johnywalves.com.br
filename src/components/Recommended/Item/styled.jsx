@@ -14,6 +14,7 @@ export const RecommendedCover = styled(GatsbyImage)`
   height: 100%;
   z-index: 1;
   transition: opacity 0.25s;
+  border-radius: 4px;
 `
 
 export const RecommendedLink = styled(Anilink)`

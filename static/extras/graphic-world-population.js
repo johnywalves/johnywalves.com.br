@@ -1,7 +1,7 @@
-window.addEventListener("load", function () {
-    var datas = [
+window.addEventListener("load", () => {
+    const data = [
         {
-            "continent": "Africa",
+            "continent": "África",
             "growth": [
                 { "year": 2022, "pop": 1426730932 },
                 { "year": 2020, "pop": 1360671810 },
@@ -68,86 +68,100 @@ window.addEventListener("load", function () {
     ]
 
     // Selecionar a escala de cores
-    var color = d3.scaleOrdinal(d3.schemeSet1);
+    const color = d3.scaleOrdinal(d3.schemeSet1);
 
-    // Selecionar Div para colocar o relatório gráfico dentro
-    var wrapper = d3.select("#d3_wrapper")
+    // Selecionar div para colocar o relatório gráfico dentro
+    const wrapper = d3.select("#d3_wrapper")
 
-    // Definição de dimensões
-    var factor = 1000 * 1000 * 1000,
-        legendHeight = 60,
+    // Definição de escala dos números
+    const factor = 1000 * 1000 * 1000,
+        // Altura da legenda
+        legendHeight = 40,
+        // Raio do círculo da legenda
         legendRadius = 12,
-        margin = { top: 20, right: 20, bottom: 30 + legendHeight, left: 90 },
+        // Margens do gráfico
+        margin = { top: 20, right: 20, bottom: 40 + legendHeight, left: 40 },
+        // Dimensão do gráfico (largura e altura)
         width = wrapper.node().getBoundingClientRect().width - margin.left - margin.right,
         height = 650 - margin.top - margin.bottom,
-        legendSpace = width / datas.length;
-
-    // Definição da escala das linhas
-    var x = d3.scaleLinear().range([0, width])
-    var y = d3.scaleLinear().range([height, 0])
+        // Dimensão do gráfico (largura e altura)
+        widthWrapper = width + margin.left + margin.right,
+        heightWrapper = height + margin.top + margin.bottom,
+        // Distribuição das legendas  
+        legendSpace = width / data.length
 
     // Criação da caixa do gráfico
-    var svg = wrapper
+    const svg = wrapper
         .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")")
+        .attr("width", widthWrapper)
+        .attr("height", heightWrapper)
 
-    //  Gerar agrupamento de legendas
-    var legends = svg.append("g")
+    // Criação e posicionamento do gráfico
+    const graphics = svg.append("g")
+        .attr("class", "graphics")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+    // Criação e posicionamento das legendas
+    const legends = svg.append("g")
         .attr("class", "legends")
-        .attr("transform", "translate(0, " + height + ")")
+        .attr("transform", "translate(" + margin.left + ", " + (heightWrapper - legendHeight - 20) + ")")
 
-    // Escala da variação dos dados
-    x.domain([1970, 2022]);
-    y.domain([0, 5000000000 / factor]);
+    // Definição da escala das linhas
+    const x = d3.scaleLinear().range([0, width])
+    const y = d3.scaleLinear().range([height, 0])
 
-    // No eixo X Adicionar linhas de grade 
-    svg.append("g")
+    // Escala da variação dos dados (menor e maior número)
+    const years = data[0].growth.map(({ year }) => year)
+    x.domain([Math.min(...years), Math.max(...years)]);
+    y.domain([0, 5])
+
+    // No eixo X, adicionar linhas de grade 
+    graphics.append("g")
         .attr("class", "grid")
         .attr("transform", "translate(0," + height + ")")
         .call(
-            d3.axisBottom(x).ticks(9)
+            d3.axisBottom(x).ticks()
                 .tickSize(-height)
                 .tickFormat("")
         )
 
-    // No eixo Y adicionar linhas de grade 
-    svg.append("g")
+    // No eixo Y, adicionar linhas de grade 
+    graphics.append("g")
         .attr("class", "grid")
         .call(
-            d3.axisLeft(y).ticks(8)
+            d3.axisLeft(y).ticks()
                 .tickSize(-width)
                 .tickFormat("")
         )
 
     // Adicionar o eixo X
-    svg.append("g")
+    graphics.append("g")
         .attr("class", "domains")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickFormat(function (d) { return d }));
+        .call(d3.axisBottom(x).tickFormat(d => d))
 
     // Adicionar o eixo Y
-    svg.append("g")
+    graphics.append("g")
         .attr("class", "domains")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y))
 
     // Geração das linhas
-    datas.forEach(function ({ continent, growth }, index) {
+    data.forEach(({ continent, growth }, index) => {
         // Gerar o caminho das linhas
-        svg.append("path")
+        graphics.append("path")
             .data([growth])
             .style("stroke", color(index))
             .attr("class", "line")
             .attr("d",
                 // Gerar caminho para a linha 
                 d3.line()
-                    .x(function (d) { return x(d.year); })
-                    .y(function (d) { return y(d.pop / factor); })
-            );
+                    .x(d => x(d.year))
+                    .y(d => y(d.pop / factor))
+            )
+    });
 
+    // Geração da legenda
+    data.forEach(({ continent, growth }, index) => {
         // Gerar círculo com a indicação das cores
         legends.append("circle")
             .attr("cx", index * legendSpace + legendRadius)
@@ -162,8 +176,8 @@ window.addEventListener("load", function () {
             .attr("x", index * legendSpace + legendRadius + 20)
             .attr("y", legendHeight - legendRadius / 2)
             .attr("fill", "currentColor")
-            .text(continent);
-    });
+            .text(continent)
+    })
 
-    document.getElementById("loading_graphic").style.display = 'none';
+    document.getElementById("loading_graphic").style.display = 'none'
 });
