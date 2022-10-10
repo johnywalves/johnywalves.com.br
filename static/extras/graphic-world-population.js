@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+function drawGraphic() {
     const data = [
         {
             "continent": "África",
@@ -180,4 +180,6 @@ window.addEventListener("load", () => {
     })
 
     document.getElementById("loading_graphic").style.display = 'none'
-});
+}
+
+window.addEventListener("load", drawGraphic);

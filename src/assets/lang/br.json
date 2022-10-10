@@ -378,6 +378,11 @@
         "title": "Profiles",
         "description": "Coleção de perfis online",
         "link": "/web/profiles.html"
+      },
+      {
+        "title": "A história de Johny",
+        "description": "Álbum de fotos com uma pequena parte da minha história",
+        "link": "https://johnywalves.github.io/johnys-story/"
       }
     ]
   },

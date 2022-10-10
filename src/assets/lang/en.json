@@ -378,6 +378,11 @@
         "title": "Profiles",
         "description": "Online profile collection",
         "link": "/web/profiles.html"
+      },
+      {
+        "title": "Johny's story",
+        "description": "Scrapbook of litte part my story",
+        "link": "https://johnywalves.github.io/johnys-story/"
       }
     ]
   },
