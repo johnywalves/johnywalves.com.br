@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 const limitText = (number, text) =>
-  text.length < number ? text : text.slice(number - 3) + "..."
+  text.length < number ? text : text.slice(0, number - 3) + "..."
 
 function SEO({
   location,
