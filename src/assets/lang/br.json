@@ -128,13 +128,6 @@
         "icon": "language"
       },
       {
-        "date": "2020-04-30 00:00:00-0300",
-        "name": "Pós-Graduação em Big Data",
-        "institute": "Centro Universitário Senac",
-        "img": "/cert/senac_bigdata.jpg",
-        "icon": "school"
-      },
-      {
         "date": "2020-04-19 00:00:00-0300",
         "name": "Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS",
         "institute": "Udemy",
@@ -177,13 +170,6 @@
         "icon": "chartpie"
       },
       {
-        "date": "2018-03-10 00:00:00-0300",
-        "name": "Graduação em Tecnologia em Informática para Negócios",
-        "institute": "Fatec Rio Preto",
-        "img": "/cert/fatec_graduacao.jpg",
-        "icon": "school"
-      },
-      {
         "date": "2018-03-13 00:00:00-0300",
         "name": "Fundamentos da Ciência de Dados",
         "institute": "Igor Alcantara",
@@ -196,20 +182,6 @@
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_rna_dp.jpg",
         "icon": "chartpie"
-      },
-      {
-        "date": "2018-03-10 00:00:00-0300",
-        "name": "Melhor TCC",
-        "institute": "Fatec Rio Preto",
-        "img": "/cert/fatec_melhor_tcc.jpg",
-        "icon": "award"
-      },
-      {
-        "date": "2018-03-10 00:00:00-0300",
-        "name": "Maior Média",
-        "institute": "Fatec Rio Preto",
-        "img": "/cert/fatec_maior_media.jpg",
-        "icon": "award"
       },
       {
         "date": "2017-09-24 00:00:00-0300",
@@ -317,6 +289,13 @@
         "cover": "githubio",
         "view": "https://johnywalves.github.io/",
         "description": "Cartão de visitas Github.io"
+      },
+      {
+        "title": "Card Game em React",
+        "sourceCode": "https://github.com/johnywalves/card-game-react",
+        "cover": "githubio",
+        "view": "card-game-in-react.vercel.app",
+        "description": "Desenvolvendo um jogo tipo Magic: The Gathering, Hearthstone e Yu-Gi-Oh! do conceito até a entrega com React"
       }
     ]
   },

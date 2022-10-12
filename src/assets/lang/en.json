@@ -128,13 +128,6 @@
         "icon": "language"
       },
       {
-        "date": "2020-04-30 00:00:00-0300",
-        "name": "Specialization in Big Data",
-        "institute": "Centro Universitário Senac",
-        "img": "/cert/senac_bigdata.jpg",
-        "icon": "school"
-      },
-      {
         "date": "2020-04-19 00:00:00-0300",
         "name": "Gatsby: Create a site PWA with React, GraphQL and Netlify CMS",
         "institute": "Udemy",
@@ -177,13 +170,6 @@
         "icon": "chartpie"
       },
       {
-        "date": "2018-03-10 00:00:00-0300",
-        "name": "University graduate in Business Informatics",
-        "institute": "Fatec Rio Preto",
-        "img": "/cert/fatec_graduacao.jpg",
-        "icon": "school"
-      },
-      {
         "date": "2018-03-13 00:00:00-0300",
         "name": "Fundamentals of Data Science",
         "institute": "Igor Alcantara",
@@ -196,20 +182,6 @@
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_rna_dp.jpg",
         "icon": "chartpie"
-      },
-      {
-        "date": "2018-03-10 00:00:00-0300",
-        "name": "Best Undergraduate Project Award",
-        "institute": "Fatec Rio Preto",
-        "img": "/cert/fatec_melhor_tcc.jpg",
-        "icon": "award"
-      },
-      {
-        "date": "2018-03-10 00:00:00-0300",
-        "name": "Highest Score Award",
-        "institute": "Fatec Rio Preto",
-        "img": "/cert/fatec_maior_media.jpg",
-        "icon": "award"
       },
       {
         "date": "2017-09-24 00:00:00-0300",
@@ -317,6 +289,13 @@
         "cover": "githubio",
         "view": "https://johnywalves.github.io/",
         "description": "Business card in Github.io"
+      },
+      {
+        "title": "Card Game in React",
+        "sourceCode": "https://github.com/johnywalves/card-game-react",
+        "cover": "githubio",
+        "view": "card-game-in-react.vercel.app",
+        "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
       }
     ]
   },

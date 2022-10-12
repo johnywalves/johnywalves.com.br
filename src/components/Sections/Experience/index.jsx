@@ -267,9 +267,6 @@ const SectionExperience = () => {
         </Area>
         <Area selected={selectedCourses}>
           {Strings.certification.list
-            .filter((cert) =>
-              ["chartpie", "toolbox", "language"].includes(cert.icon)
-            )
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map(({ date, name, institute, icon, img }, index) => (
               <Accomplishment

@@ -82,6 +82,7 @@ const pluginsConfig = [
             withWebp: true,
             linkImagesToOriginal: false,
             disableBgImageOnAlpha: true,
+            backgroundColor: "#f6f6f6",
           },
         },
         "gatsby-remark-static-images",
