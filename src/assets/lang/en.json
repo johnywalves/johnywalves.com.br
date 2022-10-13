@@ -294,7 +294,7 @@
         "title": "Card Game in React",
         "sourceCode": "https://github.com/johnywalves/card-game-react",
         "cover": "githubio",
-        "view": "card-game-in-react.vercel.app",
+        "view": "https://card-game-in-react.vercel.app",
         "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
       }
     ]
