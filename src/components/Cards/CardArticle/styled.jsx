@@ -41,7 +41,7 @@ export const CardArticleCategory = styled.p`
 `
 
 export const CardArticleSubtitle = styled.small`
-  width: 100%;
+  width: fit-content;
   margin: 0 0 5px;
   font-size: 1.5rem;
   font-weight: 700;
