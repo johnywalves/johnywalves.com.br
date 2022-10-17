@@ -221,7 +221,7 @@
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
       },
       {
-        "title": "CSS Animatic",
+        "title": "Animações com CSS",
         "sourceCode": "https://github.com/johnywalves/cssanimatic",
         "cover": "cssanimatic",
         "view": "https://johnywalves.github.io/cssanimatic",
@@ -243,7 +243,7 @@
         "description": "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã"
       },
       {
-        "title": "Register Switch",
+        "title": "Registro de tempo",
         "sourceCode": "https://github.com/johnywalves/register-switch",
         "cover": "registerSwitch",
         "view": "https://register-switch.vercel.app",
@@ -257,7 +257,7 @@
         "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
       },
       {
-        "title": "Comics Creator",
+        "title": "Criador de Tirinhas",
         "view": "https://comics.johnywalves.com.br",
         "cover": "comicscreator",
         "description": "Ferramenta para geração e visualização de tirinhas em SVG"
