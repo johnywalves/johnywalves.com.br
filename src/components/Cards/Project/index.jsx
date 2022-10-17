@@ -23,14 +23,16 @@ const Project = ({ title, sourceCode, view, cover }) => {
           >
             <ExternalLink />
           </SourceCode>
-          <SourceCode
-            href={sourceCode}
-            target="_target"
-            rel="noreferrer noopener"
-            aria-label={`source code of the ${title}`}
-          >
-            <Github />
-          </SourceCode>
+          {sourceCode && (
+            <SourceCode
+              href={sourceCode}
+              target="_target"
+              rel="noreferrer noopener"
+              aria-label={`source code of the ${title}`}
+            >
+              <Github />
+            </SourceCode>
+          )}
         </Links>
       </Banner>
     </CardWrapper>

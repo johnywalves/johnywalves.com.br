@@ -104,16 +104,18 @@ const Highlight = ({
             <ExternalLink /> {Strings.visite}
           </Button>
         </Link>
-        <Link
-          href={sourceCode}
-          aria-label={cover}
-          target="_blank"
-          rel="nofollow noreferrer"
-        >
-          <Button light>
-            <Github /> {Strings.sourceCode}
-          </Button>
-        </Link>
+        {sourceCode && (
+          <Link
+            href={sourceCode}
+            aria-label={cover}
+            target="_blank"
+            rel="nofollow noreferrer"
+          >
+            <Button light>
+              <Github /> {Strings.sourceCode}
+            </Button>
+          </Link>
+        )}
       </Links>
     </Content>
   )

@@ -22,6 +22,8 @@ Iniciei vários cursos com afinco e participava de todas as imersões da Alura, 
 
 ![Live com 6 pessoas apresentando uma página com o título Devflix](/figures/saindo_devflix.jpg)
 
+<p style="text-align:center">Esse é o momento que me excluiram da premiação<p>
+
 Morando com minha namorada em uma república, rodeado de amigos, tinha tudo para levar a pandemia sem problemas
 
 ## Queda

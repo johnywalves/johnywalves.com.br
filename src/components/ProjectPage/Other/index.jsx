@@ -27,14 +27,16 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
       >
         <ExternalLink />
       </OtherProjectLink>
-      <OtherProjectLink
-        href={sourceCode}
-        aria-label={`${Strings.souceCode} ${title}`}
-        target="_blank"
-        rel="nofollow noreferrer"
-      >
-        <Github />
-      </OtherProjectLink>
+      {sourceCode && (
+        <OtherProjectLink
+          href={sourceCode}
+          aria-label={`${Strings.souceCode} ${title}`}
+          target="_blank"
+          rel="nofollow noreferrer"
+        >
+          <Github />
+        </OtherProjectLink>
+      )}
     </OtherProjectLinks>
   </OtherProjectWrapper>
 )

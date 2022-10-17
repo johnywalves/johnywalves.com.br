@@ -4,7 +4,7 @@ description: Documentando o processo e descobertas na reconstrução o layout de
 date: 2022-09-28 21:07:54 -0300
 featuredImage: ./featured/coffee-1.jpg
 coverImage: /figures/coffee-1.jpg
-category: CSS
+category: Web
 tags:
   - Designer
   - Cores

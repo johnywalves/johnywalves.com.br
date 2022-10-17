@@ -46,14 +46,16 @@ const Project = ({
       >
         <ExternalLink />
       </Link>
-      <Link
-        href={sourceCode}
-        aria-label={`${Strings.souceCode} ${title}`}
-        target="_blank"
-        rel="nofollow noreferrer"
-      >
-        <Github />
-      </Link>
+      {sourceCode && (
+        <Link
+          href={sourceCode}
+          aria-label={`${Strings.souceCode} ${title}`}
+          target="_blank"
+          rel="nofollow noreferrer"
+        >
+          <Github />
+        </Link>
+      )}
     </Links>
   </Wrapper>
 )
