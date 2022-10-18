@@ -16,15 +16,15 @@ A dois anos atrás escrevi um texto sobre como estava lidando com o início da p
 
 ## Início da pandemia
 
-Estava encarando com otimismo, fazia três meses que estava trabalhando em home-office e praticava corrida de rua três vezes por semana, sendo duas dessas acompanhado de uma equipe de assessoria esportiva
+Estava encarando com otimismo, fazia três meses a migração para trabalho em home-office e praticava corrida de rua três vezes por semana, sendo duas dessas acompanhado de uma equipe de assessoria esportiva
 
 Iniciei vários cursos com afinco e participava de todas as imersões da Alura, incluindo tendo bastante destaque pelo projeto do [Devflix](https://devflix.johnywalves.com.br/)
 
 ![Live com 6 pessoas apresentando uma página com o título Devflix](/figures/saindo_devflix.jpg)
 
-<p style="text-align:center">Esse é o momento que me excluiram da premiação<p>
+<p style="text-align:center">Esse é o momento que me excluiram da premiação, qualidade em excesso :D<p>
 
-Morando com minha namorada em uma república, rodeado de amigos, tinha tudo para levar a pandemia sem problemas
+Morando com minha namorada em uma república e rodeado de amigos, tinha tudo para levar a pandemia sem problemas
 
 ## Queda
 
