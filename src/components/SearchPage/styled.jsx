@@ -1,21 +1,10 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-export const SearchWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  min-height: var(--min-height);
-  width: 100%;
-  transition: opacity 0.4s;
-  padding: var(--padding-content);
-  padding-bottom: var(--96px);
+import PageWrapper from "styles/PageWrapper"
 
-  background: url("/vectors/triangle-wall-top.svg"),
-    url("/vectors/triangle-wall-bottom.svg");
-  background-color: var(--background);
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: top left, bottom right;
+export const SearchWrapper = styled.main`
+  ${PageWrapper}
 
   & a {
     transition: color 0.25s ease-in-out;

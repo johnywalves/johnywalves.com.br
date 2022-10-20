@@ -216,6 +216,11 @@ export const MainContentWrapper = styled.section`
       color: var(--background);
     }
   }
+  .title-asset {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+  }
   .text-color {
     color: var(--white);
     font-weight: 700;

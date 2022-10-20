@@ -1,4 +1,8 @@
 function drawGraphic() {
+    if (document.querySelector("#d3_wrapper svg")) {
+        return true
+    }
+
     const data = [
         {
             "continent": "África",
@@ -146,7 +150,7 @@ function drawGraphic() {
         .call(d3.axisLeft(y))
 
     // Geração das linhas
-    data.forEach(({ continent, growth }, index) => {
+    data.forEach(({ growth }, index) => {
         // Gerar o caminho das linhas
         graphics.append("path")
             .data([growth])
@@ -161,7 +165,7 @@ function drawGraphic() {
     });
 
     // Geração da legenda
-    data.forEach(({ continent, growth }, index) => {
+    data.forEach(({ continent }, index) => {
         // Gerar círculo com a indicação das cores
         legends.append("circle")
             .attr("cx", index * legendSpace + legendRadius)
@@ -183,3 +187,4 @@ function drawGraphic() {
 }
 
 window.addEventListener("load", drawGraphic);
+setTimeout(drawGraphic, 2000);

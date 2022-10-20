@@ -30,16 +30,19 @@ const Highlight = ({
 }) => {
   const images = useStaticQuery(graphql`
     query {
-      machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
+      machadoalves: file(relativePath: { eq: "machadoalves.jpg" }) {
         ...extractFieldsHighlight
       }
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
         ...extractFieldsHighlight
       }
-      devflix: file(relativePath: { eq: "devflix.png" }) {
+      devflix: file(relativePath: { eq: "devflix.jpg" }) {
         ...extractFieldsHighlight
       }
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
+        ...extractFieldsHighlight
+      }
+      boilerplate: file(relativePath: { eq: "boilerplate.png" }) {
         ...extractFieldsHighlight
       }
       bomdia: file(relativePath: { eq: "bomdia.png" }) {

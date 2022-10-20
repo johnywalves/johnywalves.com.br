@@ -3,6 +3,7 @@
 
 <head>
   <title>Listagem de Profiles</title>
+  <link rel="icon" href="/figures/favicon.png" type="image/png" />
   <style>
     /* Reset CSS */
     *,
@@ -51,16 +52,29 @@
     }
 
     ul {
-      padding: 36px 0;
+      margin: 30px 0 0;
+      padding: 36px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     li {
-      margin: 0.75rem 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      border: 2px solid var(--color-text);
+      border-radius: 15px;
+      transition: background-color 0.2s ease-in, color, border-color 0.1s ease-in;
+    }
+
+    li:hover {
+      background-color: var(--color-text);
+      border-color: transparent;
+      color: #ffffff;
+      font-weight: 900;
     }
 
     div.top-margin {
@@ -93,15 +107,16 @@
       text-shadow: 4px 4px 2px #e0138c80;
     }
 
-    a {
-      transition: 0.25s ease-in;
-      font-size: 1.5rem;
-      border-bottom: 2px dotted transparent;
+    h2 {
+      color: #FFFFFF;
+      font-weight: 400;
+      text-align: center;
     }
 
-    a:hover {
-      font-weight: 900;
-      border-bottom: 2px dotted var(--color-text);
+    a {
+      padding: 20px 30px;
+      font-size: 1.5rem;
+      border-bottom: 2px dotted transparent;
     }
   </style>
 </head>
@@ -112,6 +127,7 @@
     <img src="/figures/johnywalves.png" alt="" />
   </header>
   <h1>Johny W. Alves</h1>
+  <h2>Web Developer, Data Scientist, Biker and Gamer</h2>
   <ul>
     <li><a href="https://dev.to/johnywalves" target="_blank">Dev.to</a></li>
     <li><a href="https://disqus.com/by/johnywalves/" target="_blank">Disqus</a></li>
@@ -128,6 +144,7 @@
     <li><a href="https://twitter.com/johnywalves" target="_blank">Twitter</a></li>
     <li><a href="https://www.udemy.com/user/johny-william-de-oliveira-alves/" target="_blank">Udemy</a></li>
     <li><a href="https://unsplash.com/@johnywalves" target="_blank">Unsplash</a></li>
+    <li><a href="https://www.youtube.com/c/johnywalves" target="_blank">Youtube</a></li>
     <li><a href="#" target="_blank">Whatsapp</a></li>
   </ul>
 </body>

@@ -9,16 +9,19 @@ import { Wrapper, ImageCover } from "./styled"
 const SectionProjects = () => {
   const images = useStaticQuery(graphql`
     query {
-      machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
+      machadoalves: file(relativePath: { eq: "machadoalves.jpg" }) {
         ...extractFieldsHome
       }
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
         ...extractFieldsHome
       }
-      devflix: file(relativePath: { eq: "devflix.png" }) {
+      devflix: file(relativePath: { eq: "devflix.jpg" }) {
         ...extractFieldsHome
       }
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
+        ...extractFieldsHome
+      }
+      boilerplate: file(relativePath: { eq: "boilerplate.png" }) {
         ...extractFieldsHome
       }
       bomdia: file(relativePath: { eq: "bomdia.png" }) {

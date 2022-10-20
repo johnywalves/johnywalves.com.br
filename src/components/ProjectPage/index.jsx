@@ -29,16 +29,19 @@ import TriangleNeon from "../../vectors/TriangleNeon"
 const ProjectPage = () => {
   const images = useStaticQuery(graphql`
     query {
-      machadoalves: file(relativePath: { eq: "machadoalves.png" }) {
+      machadoalves: file(relativePath: { eq: "machadoalves.jpg" }) {
         ...extractFieldsPage
       }
       registerSwitch: file(relativePath: { eq: "register-switch.png" }) {
         ...extractFieldsPage
       }
-      devflix: file(relativePath: { eq: "devflix.png" }) {
+      devflix: file(relativePath: { eq: "devflix.jpg" }) {
         ...extractFieldsPage
       }
       cssanimatic: file(relativePath: { eq: "cssanimatic.png" }) {
+        ...extractFieldsPage
+      }
+      boilerplate: file(relativePath: { eq: "boilerplate.png" }) {
         ...extractFieldsPage
       }
       bomdia: file(relativePath: { eq: "bomdia.png" }) {

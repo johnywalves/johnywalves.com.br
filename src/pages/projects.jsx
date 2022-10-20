@@ -6,16 +6,17 @@ import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 
 const title = "Projetos e Desenvolvimento",
-  description = "Apresentação de projetos desenvolvidos ou em desenvolvimento"
+  description = "Apresentação de projetos desenvolvidos ou em desenvolvimento",
+  thumbnail = "/figures/thumbnail_projects.jpg"
 
 const Projects = () => {
   return (
     <ParallaxProvider>
       <Blueprint
         content
-        openGraphImage="/figures/thumbnail_project.png"
         title={title}
         description={description}
+        openGraphImage={thumbnail}
       >
         <ProjectPage />
       </Blueprint>
@@ -30,6 +31,6 @@ export const Head = ({ location }) => (
     location={location}
     title={title}
     description={description}
-    image="/figures/thumbnail_projects.jpg"
+    image={thumbnail}
   />
 )

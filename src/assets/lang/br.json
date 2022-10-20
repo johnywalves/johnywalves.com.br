@@ -214,6 +214,13 @@
         "description": "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar"
       },
       {
+        "title": "Boilerplate para React, NextJS e TypeScript",
+        "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
+        "cover": "boilerplate",
+        "view": "https://boilerplate-react-next.vercel.app/",
+        "description": "Boilerplate com React, NextJS, Typescript, Storybook e Styled Components para começar rapidamente e com configuração mínima"
+      },
+      {
         "title": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "cover": "devflix",
@@ -221,18 +228,18 @@
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
       },
       {
-        "title": "Animações com CSS",
-        "sourceCode": "https://github.com/johnywalves/cssanimatic",
-        "cover": "cssanimatic",
-        "view": "https://johnywalves.github.io/cssanimatic",
-        "description": "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS"
-      },
-      {
         "title": "Johny W. Alves",
         "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
         "cover": "thumbnail",
         "view": "https://johnywalves.com.br",
         "description": "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiêncas"
+      },
+      {
+        "title": "Animações com CSS",
+        "sourceCode": "https://github.com/johnywalves/cssanimatic",
+        "cover": "cssanimatic",
+        "view": "https://johnywalves.github.io/cssanimatic",
+        "description": "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS"
       },
       {
         "title": "Bom dia, equipes dev!",

@@ -214,6 +214,13 @@
         "description": "Collection of short stories by various writers, written for the platform or public domain, to read and share"
       },
       {
+        "title": "Boilerplate to React, NextJS and TypeScript",
+        "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
+        "cover": "boilerplate",
+        "view": "https://boilerplate-react-next.vercel.app/",
+        "description": "Boilerplate with React, NextJS, Typescript, Storybook and Styled Components to get started fast and with minimal configuration"
+      },
+      {
         "title": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "cover": "devflix",
@@ -221,18 +228,18 @@
         "description": "Platform for sharing knowledge about software development in Brazilian language"
       },
       {
-        "title": "CSS Animatic",
-        "sourceCode": "https://github.com/johnywalves/cssanimatic",
-        "cover": "cssanimatic",
-        "view": "https://johnywalves.github.io/cssanimatic",
-        "description": "CSS Animation easy, how should be: tool to help create aminations purely with CSS"
-      },
-      {
         "title": "Johny W. Alves",
         "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
         "cover": "thumbnail",
         "view": "https://johnywalves.com.br",
         "description": "This pretty page, a small portfolio and area to experiment and share experiences"
+      },
+      {
+        "title": "CSS Animatic",
+        "sourceCode": "https://github.com/johnywalves/cssanimatic",
+        "cover": "cssanimatic",
+        "view": "https://johnywalves.github.io/cssanimatic",
+        "description": "CSS Animation easy, how should be: tool to help create aminations purely with CSS"
       },
       {
         "title": "Bom dia, equipes dev!",
