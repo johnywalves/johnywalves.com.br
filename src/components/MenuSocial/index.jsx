@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Rss } from "@styled-icons/fluentui-system-filled/Rss"
 
 import Strings from "components/strings"
-import Icons from "icons"
+import Icons from "assets/icons"
 
 import {
   MenuSocialWrapper,

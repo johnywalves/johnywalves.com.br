@@ -5,8 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Strings from "components/strings"
 import { CardArticle, CardList } from "components/Cards"
 
-import Arrow from "vectors/Arrow"
-import ArrowOutline from "vectors/ArrowOutline"
+import Arrow from "assets/vectors/Arrow"
+import ArrowOutline from "assets/vectors/ArrowOutline"
 
 import {
   SectionArticlesWrapper,

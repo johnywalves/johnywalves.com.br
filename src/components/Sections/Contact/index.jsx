@@ -6,9 +6,9 @@ import Strings from "components/strings"
 import MenuSocial from "components/MenuSocial"
 import { Header } from "components/Cards"
 
-import Arrow from "vectors/Arrow"
-import ArrowOutline from "vectors/ArrowOutline"
-import TriangleNeon from "vectors/TriangleNeon"
+import Arrow from "assets/vectors/Arrow"
+import ArrowOutline from "assets/vectors/ArrowOutline"
+import TriangleNeon from "assets/vectors/TriangleNeon"
 
 import {
   Wrapper,

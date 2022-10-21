@@ -5,9 +5,9 @@ import Strings from "components/strings"
 import Button from "components/Button"
 import MenuSocial from "components/MenuSocial"
 
-import Triangle from "vectors/Triangle"
-import Arrow from "vectors/Arrow"
-import ArrowOutline from "vectors/ArrowOutline"
+import Triangle from "assets/vectors/Triangle"
+import Arrow from "assets/vectors/Arrow"
+import ArrowOutline from "assets/vectors/ArrowOutline"
 
 import {
   NotFoundWrapper,

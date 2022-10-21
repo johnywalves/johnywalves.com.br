@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
+import PageWrapper from "styles/PageWrapper"
+
 const hasNavigator = css`
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -12,23 +14,9 @@ const hasNavigator = css`
   `}
 `
 
-export const ListsPagesWrapper = styled.section`
-  background: var(--background);
-  display: flex;
-  flex-direction: column;
-  min-height: var(--min-height);
-  width: 100%;
-  transition: opacity 0.4s;
-  padding: var(--padding-content);
+export const ListsPagesWrapper = styled.main`
+  ${PageWrapper}
   padding-top: var(--48px);
-  padding-bottom: var(--96px);
-
-  background: url("/vectors/triangle-wall-top.svg"),
-    url("/vectors/triangle-wall-bottom.svg");
-  background-color: var(--background);
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: top left, bottom right;
 
   ${({ navigator }) => navigator && hasNavigator}
 

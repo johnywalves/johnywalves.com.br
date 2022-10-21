@@ -17,7 +17,7 @@ import Button from "components/Button"
 import Strings from "components/strings"
 import { Header } from "components/Cards"
 
-import Triangle from "vectors/Triangle"
+import Triangle from "assets/vectors/Triangle"
 
 import Icons from "./icons"
 

@@ -5,6 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Strings from "components/strings"
 import { Header } from "components/Cards"
 
+import TriangleNeon from "assets/vectors/TriangleNeon"
+
 import OnePage from "./OnePage"
 import Highlight from "./Highlight"
 import Project from "./Project"
@@ -23,8 +25,6 @@ import {
   ListOther,
   ListOnePage,
 } from "./styled"
-
-import TriangleNeon from "../../vectors/TriangleNeon"
 
 const ProjectPage = () => {
   const images = useStaticQuery(graphql`

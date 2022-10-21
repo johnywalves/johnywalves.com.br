@@ -6,7 +6,7 @@ import { MoreVerticalOutline } from "@styled-icons/evaicons-outline/MoreVertical
 
 import Button from "components/Button"
 
-import { ArrowLeft, ArrowsLeft } from "icons"
+import { ArrowLeft, ArrowsLeft } from "assets/icons"
 
 import { NavigationWrapper, Navigation, Icon, Pagination } from "./styled"
 

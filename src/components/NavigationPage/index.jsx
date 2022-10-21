@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { ArrowLeft } from "icons"
+import { ArrowLeft } from "assets/icons"
 
 import { NavigationWrapper, LinkNavigation } from "./styled"
 

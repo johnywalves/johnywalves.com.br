@@ -2,7 +2,7 @@ import React from "react"
 import { Rss } from "@styled-icons/fluentui-system-filled/Rss"
 
 import Strings from "components/strings"
-import ProfileComics from "vectors/ProfileComics"
+import ProfileComics from "assets/vectors/ProfileComics"
 
 import {
   ArticleComicNavigatiorWrapper,
