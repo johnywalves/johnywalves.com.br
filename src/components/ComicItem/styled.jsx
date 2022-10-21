@@ -25,7 +25,6 @@ export const PostItemWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 0 var(--80px);
   margin: 0 auto;
   width: minmax(100%, 800px);
 

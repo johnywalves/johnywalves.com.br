@@ -6,7 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 export const ArticleItemLink = styled(Anilink)`
   display: flex;
   text-decoration: none;
-  border-bottom: 1px solid var(--shadow-colors);
+  border-bottom: 2px solid var(--shadow-colors);
 `
 
 export const ArticleItemWrapper = styled.article`

@@ -16,6 +16,8 @@ async function getImage(servingUrl, page, slug) {
 
 // Gerar os Open Graphics Images 
 async function navigateOpenGraphic() {
+    console.log('OpenGraph Generator generating...')
+
     // Gerar pastas de origem
     !fs.existsSync('./public/ogimages') && fs.mkdirSync('./public/ogimages')
 
@@ -46,6 +48,8 @@ async function navigateOpenGraphic() {
         console.log('OpenGraph server closed')
         process.exit(err ? 1 : 0)
     })
+
+    console.log('OpenGraph Generator done')
 }
 
 navigateOpenGraphic()

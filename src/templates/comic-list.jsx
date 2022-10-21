@@ -1,12 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Hamster from "assets/vectors/Hamster"
+
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import ComicItem from "components/ComicItem"
 import NavigationPage from "components/NavigationPage"
-
-import ListsPages, { ArticleComicNavigator } from "components/ListsPages"
+import ListsPages, {
+  ArticleComicNavigator,
+  SeparatorList,
+} from "components/ListsPages"
 
 const titlePage = "Tirinhas",
   descriptionPage = "Listagens tirinhas geradas e publicacas"
@@ -37,15 +41,20 @@ const ComicList = (props) => {
             },
             index
           ) => (
-            <ComicItem
-              key={index}
-              slug={slug}
-              number={number}
-              date={date}
-              title={title}
-              transcription={transcription}
-              featuredImage={featuredImage || comicImage}
-            />
+            <>
+              <ComicItem
+                key={index}
+                slug={slug}
+                number={number}
+                date={date}
+                title={title}
+                transcription={transcription}
+                featuredImage={featuredImage || comicImage}
+              />
+              <SeparatorList>
+                <Hamster />
+              </SeparatorList>
+            </>
           )
         )}
         <NavigationPage

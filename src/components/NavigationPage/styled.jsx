@@ -5,7 +5,6 @@ import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 export const NavigationWrapper = styled.section`
   align-items: center;
-  border-top: 1px solid var(--shadow-colors);
   color: var(--texts);
   font-weight: 700;
   display: flex;
