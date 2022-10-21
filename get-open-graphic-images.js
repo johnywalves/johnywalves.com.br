@@ -8,10 +8,10 @@ async function getImage(servingUrl, page, slug) {
 
     const elementThumbnail = await page.$('#ogimage')
     await elementThumbnail.screenshot({
-        path: `./public/ogimages/${slug}.jpg`
+        path: `./public/ogimages/${slug}.jpg`,
+        type: 'jpeg',
+        quality: 100
     })
-
-    console.log(`get OpenGraph ${slug}`)
 }
 
 // Gerar os Open Graphics Images 
