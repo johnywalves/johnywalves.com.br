@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { MoreVerticalOutline } from "@styled-icons/evaicons-outline/MoreVerticalOutline"
+import { MoreVerticalOutline } from "assets/icons"
 
 import Button from "components/Button"
 import ComicNavigation from "components/ComicNavigation"
