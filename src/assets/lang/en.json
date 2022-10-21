@@ -228,11 +228,12 @@
         "description": "Platform for sharing knowledge about software development in Brazilian language"
       },
       {
-        "title": "Johny W. Alves",
-        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
-        "cover": "thumbnail",
-        "view": "https://johnywalves.com.br",
-        "description": "This pretty page, a small portfolio and area to experiment and share experiences"
+        "title": "Bom dia, equipes dev!",
+        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
+        "cover": "bomdia",
+        "coverPosition": "center",
+        "view": "https://bomdiaequipesdev.com.br/",
+        "description": "A creative way to greet your fellow developers every morning"
       },
       {
         "title": "CSS Animatic",
@@ -242,12 +243,11 @@
         "description": "CSS Animation easy, how should be: tool to help create aminations purely with CSS"
       },
       {
-        "title": "Bom dia, equipes dev!",
-        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
-        "cover": "bomdia",
-        "coverPosition": "center",
-        "view": "https://bomdiaequipesdev.com.br/",
-        "description": "A creative way to greet your fellow developers every morning"
+        "title": "Johny W. Alves",
+        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
+        "cover": "thumbnail",
+        "view": "https://johnywalves.com.br",
+        "description": "This pretty page, a small portfolio and area to experiment and share experiences"
       },
       {
         "title": "Register Switch",
@@ -384,7 +384,7 @@
           "Specialization in the IT field to work on the design, development and implementation of network infrastructure projects, developing and managing information security, managing IT projects. service provision, hardware acquisition and software configuration in companies of different sizes and branches of activities, governance and software development."
         ],
         "production": {
-          "title": "Essay: Analizo - Textual analysis for corporate communication validation (Brazilian)",
+          "title": "Essay: Analizo - Textual analysis for corporate communication validation (brazilian portuguese)",
           "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
         }
       },
@@ -397,7 +397,7 @@
           "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
         ],
         "production": {
-          "title": "Essay: Proposal for the application of Rules of Association for online retailers (Brazilian)",
+          "title": "Essay: Proposal for the application of Rules of Association for online retailers (brazilian portuguese)",
           "file": "/docs/associacao_varejo_online.pdf"
         }
       },
@@ -420,7 +420,7 @@
           }
         ],
         "production": {
-          "title": "Essay: ForeSeries - Uma abordagem para predição de valores em séries temporais (Portuguese)",
+          "title": "Essay: ForeSeries - An approach to predicting values ​​in time series (brazilian portuguese)",
           "file": "/docs/fore_series_johnywalves_pt.pdf"
         }
       },

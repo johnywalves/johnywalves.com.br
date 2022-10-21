@@ -17,7 +17,10 @@ cheatsheet: false
 ---
 
 <p class="title-asset">Controle de peso de "outubro de 2022" a "dezembro de 2023"</p>
+<p class="title-asset">Evolução da perda em dias</p>
 
 <div id="d3_wrapper">
   <div id="loading_graphic"></div>
 </div>
+
+<p style="text-align:center">Coisa positiva é para cima</p>

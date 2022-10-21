@@ -1,6 +1,6 @@
 ---
-date: 2022-10-16 17:08:53 -0300
-title: Saindo da pandemia com saúde
+date: 2022-10-22 17:08:53 -0300
+title: Criando partituras
 description: Pensamentos sobre saúde mental com efeitos e aprendizados na pandemia de Covid-19
 featuredImage: ./featured/mountains_1.jpg
 coverImage: /figures/mountains_1.jpg
@@ -12,7 +12,7 @@ published: false
 cheatsheet: false
 ---
 
-https://github.com/johnywalves/react-avancado-boilerplate
+Usnado o [React Next Boilerplace](https://github.com/johnywalves/react-next-boilerplate)
 
 ```bash
 npx create-next-app -e https://github.com/johnywalves/react-avancado-boilerplate

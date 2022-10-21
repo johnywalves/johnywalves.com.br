@@ -12,7 +12,7 @@ export const OpenGraphicCover = styled.img`
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0.15;
+  opacity: 0.1;
 `
 
 export const OpenGraphicContent = styled.div`
@@ -49,7 +49,6 @@ export const OpenGraphicTitle = styled.h1`
   font-size: 3rem;
   margin-top: 4px;
   margin-bottom: 16px;
-  text-shadow: 1px 1px 1px #ffffff;
   transform: translateX(-2px);
 `
 
@@ -61,10 +60,9 @@ export const OpenGraphicDescription = styled.p`
 export const OpenGraphicCategory = styled.p`
   color: #222;
   background-color: #e0138c;
-  box-shadow: 1px 1px 1px #ffffff;
   font-size: 1.5rem;
-  font-weight: 700;
-  padding: 4px 8px;
+  font-weight: 900;
+  padding: 4px 12px;
   width: fit-content;
   border-radius: 12px;
   margin-bottom: 16px;

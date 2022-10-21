@@ -17,7 +17,7 @@ No momento de estruturar os artigos costumo usar uma imagem para ilustrar, com d
 
 ![Café cremoso em uma xícara com o nome "Construindo Layout 2.0" do artigo abaixo](/figures/og_gastby_before.jpg "Compartilhamento de postagem no Twitter")
 
-Podemos fazer melhor a imagem não é o objetivo, diferente do instagram ou outras redes sociais, temos de dar mais destaque o título, descrição e entre outras que fazem mais sentido
+Podemos fazer melhor a imagem não é o objetivo, diferente do Instagram ou outras redes sociais, temos de dar mais destaque o título, descrição e entre outras que fazem mais sentido
 
 Gerei essa imagem para substituir a anterior
 
@@ -31,7 +31,7 @@ Nesse meio tempo resolvi criar minha própria solução me baseando no plugin, a
 
 ## Gerando a página
 
-Crei um template com o nome `open-graph-image`, onde o elemento com o conteúdo adicionei atributo `div="ogimage"`, dentro do `gatsby-node.js` gerei as páginas dentro do caminho do `/__generated` com o `slug` da página
+Criei um template com o nome `open-graph-image`, onde o elemento com o conteúdo adicionei atributo `div="ogimage"`, dentro do `gatsby-node.js` gerei as páginas dentro do caminho do `/__generated` com o `slug` da página
 
 ```javascript
 createPage({
@@ -45,7 +45,7 @@ createPage({
 
 Juntamente as outras páginas deve ser acessível quando gerada para produção ou em modelo de desenvolvimento pelo endereço `/__generated/<slug do artigo>/index.html`
 
-## Tranformando em imagem
+## Transformando em imagem
 
 Depois de pronto, criei uma automação para tirar uma screenshot, para isso também precisei fazer o serviço funcionar dentro com as bibliotecas `puppeteer` e `express`
 

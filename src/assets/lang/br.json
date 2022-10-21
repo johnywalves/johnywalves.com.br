@@ -228,11 +228,12 @@
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
       },
       {
-        "title": "Johny W. Alves",
-        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
-        "cover": "thumbnail",
-        "view": "https://johnywalves.com.br",
-        "description": "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiêncas"
+        "title": "Bom dia, equipes dev!",
+        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
+        "cover": "bomdia",
+        "coverPosition": "center",
+        "view": "https://bomdiaequipesdev.com.br/",
+        "description": "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã"
       },
       {
         "title": "Animações com CSS",
@@ -242,12 +243,11 @@
         "description": "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS"
       },
       {
-        "title": "Bom dia, equipes dev!",
-        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
-        "cover": "bomdia",
-        "coverPosition": "center",
-        "view": "https://bomdiaequipesdev.com.br/",
-        "description": "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã"
+        "title": "Johny W. Alves",
+        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
+        "cover": "thumbnail",
+        "view": "https://johnywalves.com.br",
+        "description": "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiêncas"
       },
       {
         "title": "Registro de tempo",

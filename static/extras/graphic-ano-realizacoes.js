@@ -7,7 +7,8 @@ function drawGraphic() {
         { "day": 1, "date": "2022-10-17", "weight": 111.0 },
         { "day": 2, "date": "2022-10-18", "weight": 110.7 },
         { "day": 3, "date": "2022-10-19", "weight": 110.7 },
-        { "day": 4, "date": "2022-10-20", "weight": 110.2 }
+        { "day": 4, "date": "2022-10-20", "weight": 110.2 },
+        { "day": 5, "date": "2022-10-21", "weight": 110.1 }
     ]
 
     // Selecionar div para colocar o relatório gráfico dentro
