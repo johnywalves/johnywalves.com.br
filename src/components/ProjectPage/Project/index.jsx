@@ -2,8 +2,7 @@ import React from "react"
 
 import Strings from "components/strings"
 
-import { Github } from "@styled-icons/fa-brands/Github"
-import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
+import { Github, ExternalLink } from "assets/icons"
 
 import {
   Wrapper,

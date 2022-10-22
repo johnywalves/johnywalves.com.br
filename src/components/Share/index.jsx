@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Twitter } from "@styled-icons/fa-brands/Twitter"
-import { Linkedin } from "@styled-icons/fa-brands/Linkedin"
+import { Twitter, Linkedin } from "assets/icons"
 
 import { ShareWrapper, ShareTitle, ShareLinks } from "./styled"
 

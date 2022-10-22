@@ -1,25 +1,23 @@
 import React, { useState, useMemo, useCallback } from "react"
 import { Parallax } from "react-scroll-parallax"
 
-import { Award } from "@styled-icons/fa-solid/Award"
-import { Toolbox } from "@styled-icons/fa-solid/Toolbox"
-import { School } from "@styled-icons/ionicons-sharp/School"
-import { ChartPie } from "@styled-icons/fa-solid/ChartPie"
-import { Language } from "@styled-icons/ionicons-solid/Language"
-
-import { Code } from "@styled-icons/entypo/Code"
-import { CodeCurly } from "@styled-icons/boxicons-regular/CodeCurly"
-import { AcademicCap } from "@styled-icons/heroicons-outline/AcademicCap"
-import { ExpandLess } from "@styled-icons/material-outlined/ExpandLess"
-import { ExpandMore } from "@styled-icons/material-rounded/ExpandMore"
-
 import Button from "components/Button"
 import Strings from "components/strings"
 import { Header } from "components/Cards"
 
+import Icons, {
+  Award,
+  Toolbox,
+  School,
+  ChartPie,
+  LanguageIcon,
+  Code,
+  CodeCurly,
+  AcademicCap,
+  ExpandLess,
+  ExpandMore,
+} from "assets/icons"
 import Triangle from "assets/vectors/Triangle"
-
-import Icons from "./icons"
 
 import {
   ExperienceWrapper,
@@ -280,7 +278,7 @@ const SectionExperience = () => {
                   <Icon href={img}>
                     {icon === "toolbox" && <Toolbox />}
                     {icon === "chartpie" && <ChartPie />}
-                    {icon === "language" && <Language />}
+                    {icon === "language" && <LanguageIcon />}
                   </Icon>
                 }
               >

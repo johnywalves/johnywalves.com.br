@@ -1,12 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Download } from "@styled-icons/evaicons-solid/Download"
-import { Language as LanguageIcon } from "@styled-icons/ionicons-solid/Language"
-
 import { Header } from "components/Cards"
 import Button from "components/Button"
 import Strings from "components/strings"
+
+import { Download, LanguageIcon } from "assets/icons"
 
 import {
   Wrapper,

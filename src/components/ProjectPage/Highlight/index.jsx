@@ -5,8 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Strings from "components/strings"
 import Button from "components/Button"
 
-import { Github } from "@styled-icons/fa-brands/Github"
-import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
+import { Github, ExternalLink } from "assets/icons"
 
 import {
   Wrapper,

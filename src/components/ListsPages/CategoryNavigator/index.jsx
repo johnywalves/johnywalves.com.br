@@ -2,9 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Anilink from "gatsby-plugin-transition-link/AniLink"
 
-import { Rss } from "@styled-icons/fluentui-system-filled/Rss"
-
 import Strings from "components/strings"
+
+import { Rss } from "assets/icons"
 
 import {
   ArticleCategoryNavigatiorWrapper,
