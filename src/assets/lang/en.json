@@ -21,21 +21,18 @@
   "live": "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
   "contact": {
     "title": "Contacts",
-    "description": "You can find me on social networks",
     "about": "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
   },
   "posts": {
     "title": "Articles",
     "category": "Category",
     "categories": "Categories",
-    "description": "Latest published articles on life and development",
     "allArticles": "All articles",
     "viewAll": "View all artciles",
     "feed": "http://feeds.feedburner.com/johnywalves-posts"
   },
   "comics": {
     "title": "Comics",
-    "description": "Doing humor about living in the development world",
     "first": "First",
     "prev": "Previous",
     "next": "Next",
@@ -45,7 +42,6 @@
   },
   "languages": {
     "title": "Languages",
-    "description": "My ability to communicate, written or speak, in diferents languages",
     "list": [
       {
         "name": "English",
@@ -59,7 +55,6 @@
   },
   "skills": {
     "title": "Skills",
-    "description": "Things that I believe possess the capacity to be productive and I like to work",
     "list": [
       {
         "type": "Languages",
@@ -214,18 +209,18 @@
         "description": "Collection of short stories by various writers, written for the platform or public domain, to read and share"
       },
       {
-        "title": "Boilerplate to React, NextJS and TypeScript",
-        "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
-        "cover": "boilerplate",
-        "view": "https://boilerplate-react-next.vercel.app/",
-        "description": "Boilerplate with React, NextJS, Typescript, Storybook and Styled Components to get started fast and with minimal configuration"
-      },
-      {
         "title": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "cover": "devflix",
         "view": "https://devflix.johnywalves.com.br",
         "description": "Platform for sharing knowledge about software development in Brazilian language"
+      },
+      {
+        "title": "Daisy Bell",
+        "sourceCode": "https://github.com/johnywalves/daisy-bell",
+        "cover": "daisybell",
+        "view": "https://daisy.johnywalves.com.br",
+        "description": "Project template for sharing images with text in context"
       },
       {
         "title": "Bom dia, equipes dev!",
@@ -234,6 +229,13 @@
         "coverPosition": "center",
         "view": "https://bomdiaequipesdev.com.br/",
         "description": "A creative way to greet your fellow developers every morning"
+      },
+      {
+        "title": "Boilerplate to React, NextJS and TypeScript",
+        "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
+        "cover": "boilerplate",
+        "view": "https://boilerplate-react-next.vercel.app/",
+        "description": "Boilerplate with React, NextJS, Typescript, Storybook and Styled Components to get started fast and with minimal configuration"
       },
       {
         "title": "CSS Animatic",
@@ -255,13 +257,6 @@
         "cover": "registerSwitch",
         "view": "https://register-switch.vercel.app",
         "description": "Time spent executing tasks in a simple way to enable and disable"
-      },
-      {
-        "title": "Daisy Bell",
-        "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "cover": "daisybell",
-        "view": "https://daisy.johnywalves.com.br",
-        "description": "Project template for sharing images with text in context"
       },
       {
         "title": "Comics Creator",
@@ -308,7 +303,6 @@
   },
   "samples": {
     "title": "One page projects",
-    "description": "One page designs to test some concepts",
     "list": [
       {
         "title": "Menu Hamburger",
@@ -374,7 +368,6 @@
   },
   "education": {
     "title": "Academic Education",
-    "description": "Minha história em experiências profissionais e formação acadêmica",
     "list": [
       {
         "date": "Out 2020 - Current",
@@ -436,7 +429,6 @@
   },
   "experience": {
     "title": "Professional Experience",
-    "description": "My history in education and work experience",
     "list": [
       {
         "date": "Set 2021 - Current",

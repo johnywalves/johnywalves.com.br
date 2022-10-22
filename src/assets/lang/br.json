@@ -21,21 +21,18 @@
   "live": "São José do Rio Preto, São Paulo, Brasil",
   "contact": {
     "title": "Contatos",
-    "description": "Você pode me encontrar nas redes sociais",
     "about": "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
   },
   "posts": {
     "title": "Artigos",
     "category": "Categoria",
     "categories": "Categorias",
-    "description": "Últimos artigos publicados sobre vida e desenvolvimento",
     "allArticles": "Todos os artigos",
     "viewAll": "Ver todos os artigos",
     "feed": "http://feeds.feedburner.com/johnywalves-posts"
   },
   "comics": {
     "title": "Tirinhas",
-    "description": "Fazendo humor sobre a vivência no mundo de desenvolvimento",
     "first": "Primeiro",
     "prev": "Anterior",
     "next": "Próximo",
@@ -45,7 +42,6 @@
   },
   "languages": {
     "title": "Idiomas",
-    "description": "Minha capacidade de comunicação, escrita ou oral, em diferentes idiomas",
     "list": [
       {
         "name": "Português",
@@ -59,7 +55,6 @@
   },
   "skills": {
     "title": "Conhecimentos",
-    "description": "Coisas que acredito possuir capacidade de ser produtivo e gosto de trabalhar",
     "list": [
       {
         "type": "Linguagens",
@@ -214,18 +209,18 @@
         "description": "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar"
       },
       {
-        "title": "Boilerplate para React, NextJS e TypeScript",
-        "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
-        "cover": "boilerplate",
-        "view": "https://boilerplate-react-next.vercel.app/",
-        "description": "Boilerplate com React, NextJS, Typescript, Storybook e Styled Components para começar rapidamente e com configuração mínima"
-      },
-      {
         "title": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "cover": "devflix",
         "view": "https://devflix.johnywalves.com.br",
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
+      },
+      {
+        "title": "Daisy Bell",
+        "sourceCode": "https://github.com/johnywalves/daisy-bell",
+        "cover": "daisybell",
+        "view": "https://daisy.johnywalves.com.br",
+        "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
       },
       {
         "title": "Bom dia, equipes dev!",
@@ -234,6 +229,13 @@
         "coverPosition": "center",
         "view": "https://bomdiaequipesdev.com.br/",
         "description": "Uma maneira criativa para saudar seus colegas devenvolvedores toda manhã"
+      },
+      {
+        "title": "Boilerplate para React, NextJS e TypeScript",
+        "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
+        "cover": "boilerplate",
+        "view": "https://boilerplate-react-next.vercel.app/",
+        "description": "Boilerplate com React, NextJS, Typescript, Storybook e Styled Components para começar rapidamente e com configuração mínima"
       },
       {
         "title": "Animações com CSS",
@@ -255,13 +257,6 @@
         "cover": "registerSwitch",
         "view": "https://register-switch.vercel.app",
         "description": "Tempo gasto executando tarefas de forma simples para habilitar e desabilitar"
-      },
-      {
-        "title": "Daisy Bell",
-        "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "cover": "daisybell",
-        "view": "https://daisy.johnywalves.com.br",
-        "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
       },
       {
         "title": "Criador de Tirinhas",
@@ -308,7 +303,6 @@
   },
   "samples": {
     "title": "Projetos de uma página",
-    "description": "Projetos de uma página para testar alguns conceitos",
     "list": [
       {
         "title": "Menu Hamburger",
@@ -374,7 +368,6 @@
   },
   "education": {
     "title": "Formação Acadêmica",
-    "description": "Minha história em experiências profissionais e formação acadêmica",
     "list": [
       {
         "date": "Out 2020 - Cursando",
@@ -436,7 +429,6 @@
   },
   "experience": {
     "title": "Experiência Profissional",
-    "description": "Minha história em experiências profissionais e formação acadêmica",
     "list": [
       {
         "date": "Set 2021 - Atual",
