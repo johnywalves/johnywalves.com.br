@@ -73,7 +73,7 @@ const BlogCategory = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query PostLCaterory($skip: Int!, $limit: Int!, $category: String!) {
+  query PostsCaterory($skip: Int!, $limit: Int!, $category: String!) {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {

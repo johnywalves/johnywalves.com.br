@@ -8,6 +8,8 @@ category: Windows
 tags:
   - PowerShell
   - Arquivos
+published: true
+cheatsheet: false
 ---
 
 Lidar com arquivos de texto extensos pode ser um pouco dificil ou demorado, mas podemos facilitar com algumas funções em PowerShell

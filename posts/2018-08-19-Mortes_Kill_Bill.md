@@ -9,8 +9,8 @@ tags:
   - Visualização
   - tidyverse
   - ggplot
-cheatsheet: false
 published: true
+cheatsheet: false
 ---
 
 Quando estava aprendendo o básico da **Linguagem R** e o **R Studio** em uma workshop do Igor Alcantara, ele disponibilizou algumas bases de dados dentre eles com ofecenças e mortes em filmes do Quentin Tarantino.  

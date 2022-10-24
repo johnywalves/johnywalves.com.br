@@ -8,6 +8,8 @@ category: Python
 tags:
   - Ambiente
   - Dependências
+published: true
+cheatsheet: false
 ---
 
 Para facilitar o controle de dependências de uma projeto Python podemos isolar um ambiente para executar com um versão controlada do Python e dos seus pacotes  

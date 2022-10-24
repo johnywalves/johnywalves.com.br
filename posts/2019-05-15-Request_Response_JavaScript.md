@@ -12,6 +12,8 @@ tags:
   - Request
   - Response
   - Tutorial
+published: true
+cheatsheet: false
 ---
 
 Usar a mesma linguagem na ponta-a-ponta em um ambiente favorece a troca de conhecimento entre equipes e atualmente JavaScript é uma ótima opção, pois tem suporte nativo nos navegadores e facilidade desenvolvimento com o Node

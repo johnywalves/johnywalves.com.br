@@ -8,6 +8,8 @@ category: Python
 tags:
   - Machine Learning
   - Regressor
+published: true
+cheatsheet: false
 ---
 
 Vamos usar **houses_to_rent_v2.csv** da página [Kaggle - Dataset houses to rent in diferents cities in Brazil](https://www.kaggle.com/rubenssjr/brasilian-houses-to-rent)

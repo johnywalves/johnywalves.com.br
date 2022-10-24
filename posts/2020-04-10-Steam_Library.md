@@ -8,6 +8,8 @@ category: JavaScript
 tags:
   - HTML
   - CSS
+published: true
+cheatsheet: false
 ---
 
 Gosto muito do conceito da Steam que não criou o modelo, mas popularizou o serviço de venda de jogos digitais, hoje eles possuem vários concorrentes

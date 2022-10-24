@@ -9,6 +9,8 @@ tags:
   - Flask
   - Web
   - API
+published: true
+cheatsheet: false
 ---
 
 A vantagem de utilizar uma Web API para garantir o acesso e manipulação de dados de uma aplicação possibilita controlar a disponibilidade, segurança e formato dos dados  

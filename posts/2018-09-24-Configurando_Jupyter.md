@@ -8,6 +8,8 @@ category: Python
 tags:
   - Jupyter
   - Ambiente
+published: true
+cheatsheet: false
 ---
 
 Para usar o notebook em um servidor é necessário alterar o arquivo de configuração, que pode ser gerado pelo comando

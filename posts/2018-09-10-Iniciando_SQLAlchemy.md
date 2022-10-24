@@ -9,6 +9,8 @@ tags:
   - SQLAlchemy
   - Ambiente
   - Serialização
+published: true
+cheatsheet: false
 ---
 
 Instalar o pacote do SQLAlchemy pelo repositório PiPy

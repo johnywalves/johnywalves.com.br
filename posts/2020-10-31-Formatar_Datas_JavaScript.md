@@ -8,6 +8,8 @@ category: JavaScript
 tags:
   - Datas
   - Formatação
+published: true
+cheatsheet: false
 ---
 
 Recentemente estava pensando qual snippet utilizo no JavaScript, acredito que seja a formatação de datas

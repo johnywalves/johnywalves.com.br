@@ -8,6 +8,8 @@ category: Python
 tags:
   - Requests
   - HTTP
+published: true
+cheatsheet: false
 ---
 
 Podemos realizações de requisições HTTP para automatiza processos de testes

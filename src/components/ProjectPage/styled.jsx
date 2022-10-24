@@ -8,13 +8,6 @@ export const neonHighlight = css`
     0 0 102px var(--highlight-light), 0 0 151px var(--highlight-light);
 `
 
-export const neonThird = css`
-  text-shadow: 0 0 7px var(--third), 0 0 10px var(--third),
-    0 0 21px var(--third), 0 0 42px var(--third-light),
-    0 0 82px var(--third-light), 0 0 92px var(--third-light),
-    0 0 102px var(--third-light), 0 0 151px var(--third-light);
-`
-
 export const lightHighlight = css`
   box-shadow: 0 0 16px 4px var(--highlight-light);
 `

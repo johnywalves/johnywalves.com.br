@@ -8,6 +8,8 @@ category: Web
 tags:
   - Python
   - JavaScript
+published: true
+cheatsheet: false
 ---
 
 Disponilizar arquivos estáticos para projetos em desenvolvimento, não usar em produção, ou somente para disponilizar arquivos de forma simples, quando o index.html não estiver disponível

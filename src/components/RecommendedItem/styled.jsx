@@ -14,12 +14,12 @@ export const RecommendedCover = styled(GatsbyImage)`
   height: 100%;
   z-index: 1;
   transition: opacity 0.25s;
-  border-radius: 4px;
 `
 
 export const RecommendedLink = styled(Anilink)`
   position: relative;
   background: var(--background-card);
+  border-radius: var(--4px);
 
   & ${RecommendedCover} {
     opacity: 0.15;
@@ -38,7 +38,6 @@ export const RecommendedContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-radius: var(--8px);
   text-decoration: none;
   transition: background-color 0.5s;
   padding: var(--24px);
@@ -69,6 +68,7 @@ export const RecommendedContent = styled.div`
     color: var(--texts);
     text-align: center;
     font-size: 1rem;
+    max-width: 350px;
   }
 
   ${media.lessThan("medium")`

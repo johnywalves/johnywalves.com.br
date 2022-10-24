@@ -1,6 +1,7 @@
 import React from "react"
 
-import Item from "./Item"
+import RecommendedItem from "components/RecommendedItem"
+
 import {
   RecommendedWrapper,
   RecommendedTitle,
@@ -16,8 +17,10 @@ const Recommended = ({ recommendedLast, recommendedCategory }) => {
     <RecommendedWrapper>
       <RecommendedTitle>Algumas recomendações</RecommendedTitle>
       <RecommendedLinks>
-        {recommendedLast && <Item recommended={recommendedLast} />}
-        {recommendedCategory && <Item recommended={recommendedCategory} />}
+        {recommendedLast && <RecommendedItem recommended={recommendedLast} />}
+        {recommendedCategory && (
+          <RecommendedItem recommended={recommendedCategory} />
+        )}
       </RecommendedLinks>
     </RecommendedWrapper>
   )

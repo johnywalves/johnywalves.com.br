@@ -8,6 +8,8 @@ category: Jekyll
 tags:
   - Web
   - CMS
+published: true
+cheatsheet: false
 ---
 
 Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos poderar CMS, Sistema de gerenciamento de conteúdo,

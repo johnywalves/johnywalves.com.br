@@ -8,6 +8,8 @@ category: CSS
 tags:
   - Web
   - Animação
+published: true
+cheatsheet: false
 ---
 
 Placeholder é coisa do passado, a moda agora é título integrado

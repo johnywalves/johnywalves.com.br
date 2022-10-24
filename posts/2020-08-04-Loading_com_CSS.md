@@ -8,6 +8,8 @@ category: CSS
 tags:
   - Web
   - Animação
+published: true
+cheatsheet: false
 ---
 
 Pode não parecer, mas essa é uma div simples girando com CSS

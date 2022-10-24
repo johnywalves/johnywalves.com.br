@@ -9,6 +9,8 @@ tags:
   - HTML
   - CSS
   - Automação
+published: true
+cheatsheet: false
 ---
 
 Desenvolvimento Web é simples de começar, HTML + CSS são de fácil compressão para iniciar e pode escalar como se fosso eterno, para facilitar esse proceso existe várias ferramentas um das mais fáceis de iniciar é o Gulp
