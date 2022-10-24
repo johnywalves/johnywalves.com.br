@@ -24,7 +24,7 @@ export const UtilsTitle = styled.h1`
 `
 
 export const ImageCover = styled(GatsbyImage)`
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   z-index: 1;
 `
