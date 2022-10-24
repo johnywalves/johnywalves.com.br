@@ -7,6 +7,9 @@ coverImage: /figures/python-2.jpg
 category: Python
 tags:
   - Ambiente
+  - Dependências
+cheatsheet: false
+published: true
 ---
 
 Python é uma linguagem de programação simples e elegante, vem junto com muito amor e facilidade de desenvolvimento, tem até um poema para ensinar o jeito Python de programar

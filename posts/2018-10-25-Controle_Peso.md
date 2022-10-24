@@ -7,6 +7,10 @@ coverImage: /figures/balance-1.jpg
 category: Python
 tags:
   - Visualização
+  - Pandas
+  - Matplotlib
+cheatsheet: false
+published: true
 ---
 
 Sempre tive um barriguinha redonda, na minha guerra constante resolvi usar um pouco de ciência de dados para ajudar em mais uma batalha, me desafiando por 100 dias para alcançar 85Kg  

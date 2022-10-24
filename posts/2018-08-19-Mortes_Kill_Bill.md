@@ -7,6 +7,10 @@ coverImage: /figures/kill-bill-1.jpg
 category: R
 tags:
   - Visualização
+  - tidyverse
+  - ggplot
+cheatsheet: false
+published: true
 ---
 
 Quando estava aprendendo o básico da **Linguagem R** e o **R Studio** em uma workshop do Igor Alcantara, ele disponibilizou algumas bases de dados dentre eles com ofecenças e mortes em filmes do Quentin Tarantino.  
@@ -21,7 +25,7 @@ setwd(".")
 rm(list = ls())
 ```
 
-Carreguei a bilbioteca do _tidyverse_ pois contém a _ggplot2_, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
+Carreguei a bilbioteca do `tidyverse` pois contém a `ggplot2`, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
 
 ```r
 # Instalar caso necessário com o comando: install.packages('tidyverse')

@@ -2,8 +2,8 @@
 date: 2022-10-22 17:08:53 -0300
 title: Criando partituras
 description: Pensamentos sobre saúde mental com efeitos e aprendizados na pandemia de Covid-19
-featuredImage: ./featured/mountains_1.jpg
-coverImage: /figures/mountains_1.jpg
+featuredImage: ./featured/drum-1.jpg
+coverImage: /figures/drum-1.jpg
 category: JavaScript
 tags:
   - Pensamentos

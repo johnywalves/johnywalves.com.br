@@ -1,9 +1,9 @@
 ---
 date: 2023-12-01 18:50:23 -0300
 title: 2023 - Ano de realizações
-description: Resultados
-featuredImage: ./featured/mountains_1.jpg
-coverImage: /figures/mountains_1.jpg
+description: Resultados da dedicação e foco nos objetivos, algumas falhas e muitos acertos
+featuredImage: ./featured/way-1.jpg
+coverImage: /figures/way-1.jpg
 category: Bem-estar
 tags:
   - Pensamentos
@@ -16,6 +16,22 @@ published: false
 cheatsheet: false
 ---
 
+Donec erat metus, suscipit et feugiat a, pharetra eget risus. Nullam fringilla vitae ligula non congue. Maecenas a dui vestibulum, imperdiet elit ac, faucibus nibh
+
+## Construir um corpo saudável
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta sollicitudin nisi sit amet sagittis. Donec risus nisl, dignissim eget quam sed, congue ullamcorper urna. Donec vitae neque malesuada, aliquam nulla ut, ultrices urna. Etiam consequat turpis et ullamcorper malesuada
+
+Pellentesque tempor tellus sit amet felis venenatis, lacinia dapibus dolor pellentesque.
+
+<p class="title-asset">Atividade de 29,1Km em 1:44:41, com velocidade média de 16,7Km/h</p>
+
+![Tela do Strava apresentando com uma atividade de ciclismo de 29km](/figures/realizacoes_strava_23.10.jpg)
+
+<p style="text-align:center">A ida foi complicada, a volta só descida</p>
+
+Morbi suscipit sagittis quam. Cras eu velit in ligula efficitur facilisis. Proin vel erat et augue condimentum mollis quis et augue. Fusce nibh felis, commodo non sagittis vel, rutrum et elit. Vivamus vehicula risus vel erat feugiat, quis consectetur nibh accumsan. Nam ac vestibulum orci. Cras faucibus, quam quis commodo posuere, arcu lacus euismod mi, non consequat purus augue eu arcu
+
 <p class="title-asset">Controle de peso de "outubro de 2022" a "dezembro de 2023"</p>
 <p class="title-asset">Evolução da perda em dias</p>
 
@@ -23,4 +39,6 @@ cheatsheet: false
   <div id="loading_graphic"></div>
 </div>
 
-<p style="text-align:center">Coisa positiva é para cima</p>
+## Conclusão
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta sollicitudin nisi sit amet sagittis. Donec risus nisl, dignissim eget quam sed, congue ullamcorper urna. Donec vitae neque malesuada, aliquam nulla ut, ultrices urna. Etiam consequat turpis et ullamcorper malesuada

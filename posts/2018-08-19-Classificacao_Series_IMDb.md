@@ -7,6 +7,9 @@ coverImage: /figures/theater-1.jpg
 category: R
 tags:
   - Visualização
+  - ggplot
+cheatsheet: false
+published: true
 ---
 
 IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematografica apartir de _Passage de Venus_ de 1874 por _Pierre Jules César Janssen_ até os não lançados em pré-produção.  
