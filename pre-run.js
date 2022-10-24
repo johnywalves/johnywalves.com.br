@@ -11,7 +11,7 @@ fs.readdir('./posts/featured', (_, files) => {
 
 fs.readdir('./posts/featured', (_, files) => {
     files.forEach(file =>
-        fs.copyFile(`./posts/comics/${file}`, `./public/figures/${file}`, () => true)
+        fs.copyFile(`./posts/comics/${file}`, `./public/comics/${file}`, () => true)
     );
 });
 

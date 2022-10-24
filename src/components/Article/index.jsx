@@ -1,4 +1,5 @@
 import React from "react"
+import Anilink from "gatsby-plugin-transition-link/AniLink"
 
 import Blueprint from "components/Blueprint"
 import Comments from "components/Comments"
@@ -16,6 +17,9 @@ import {
   PostDate,
   PostTitle,
   PostDescription,
+  PostLabels,
+  PostCategory,
+  PostTag,
 } from "./styled"
 
 const Article = ({ data, pageContext }) => {
@@ -68,6 +72,18 @@ const Article = ({ data, pageContext }) => {
         </ArticleForehead>
 
         <MainContent>
+          <PostLabels>
+            <Anilink
+              fade
+              to={`/category/${post.frontmatter.category.toLowerCase()}/`}
+              duration={0.75}
+            >
+              <PostCategory>{post.frontmatter.category}</PostCategory>
+            </Anilink>
+            {post.frontmatter.tags.map((tag) => (
+              <PostTag>{tag}</PostTag>
+            ))}
+          </PostLabels>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </MainContent>
 

@@ -8,7 +8,10 @@ function drawGraphic() {
         { "day": 2, "date": "2022-10-18", "weight": 110.7 },
         { "day": 3, "date": "2022-10-19", "weight": 110.7 },
         { "day": 4, "date": "2022-10-20", "weight": 110.2 },
-        { "day": 5, "date": "2022-10-21", "weight": 110.1 }
+        { "day": 5, "date": "2022-10-21", "weight": 110.1 },
+        { "day": 6, "date": "2022-10-22", "weight": 110.4 },
+        { "day": 7, "date": "2022-10-23", "weight": 110.8 },
+        { "day": 8, "date": "2022-10-24", "weight": 111.8 }
     ]
 
     // Selecionar div para colocar o relatório gráfico dentro
@@ -39,7 +42,8 @@ function drawGraphic() {
     const y = d3.scaleLinear().range([height, 0])
 
     // Separação dos valores para escala
-    const weights = data.map(({ weight }) => 111 - weight),
+    const maxWeight = 111.8,
+        weights = data.map(({ weight }) => maxWeight - weight),
         days = data.map(({ day }) => day)
 
     // Escala da variação dos dados (menor e maior número)
@@ -51,7 +55,7 @@ function drawGraphic() {
         .attr("class", "grid")
         .attr("transform", "translate(0," + height + ")")
         .call(
-            d3.axisBottom(x).ticks()
+            d3.axisBottom(x).ticks(days.length)
                 .tickSize(-height)
                 .tickFormat("")
         )
@@ -69,7 +73,7 @@ function drawGraphic() {
     graphics.append("g")
         .attr("class", "domains")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickFormat(d => d))
+        .call(d3.axisBottom(x).ticks(days.length).tickFormat(d => d))
 
     // Adicionar o eixo Y
     graphics.append("g")
@@ -85,7 +89,7 @@ function drawGraphic() {
             // Gerar caminho para a linha 
             d3.line()
                 .x(d => x(d.day))
-                .y(d => y(111 - d.weight))
+                .y(d => y(maxWeight - d.weight))
         )
 
     document.getElementById("loading_graphic").style.display = 'none'

@@ -135,3 +135,45 @@ export const PostDescription = styled.h2`
     font-size: 1rem;
   `}
 `
+
+export const PostLabels = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 var(--16px) var(--16px);
+
+  a {
+    border: none;
+  }
+`
+
+export const PostCategory = styled.p`
+  background-color: var(--highlight);
+  color: var(--background) !important;
+  padding: var(--4px) var(--8px);
+  margin: 0 !important;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 900 !important;
+  cursor: pointer;
+
+  a:hover & {
+    opacity: 0.5;
+  }
+`
+
+export const PostTag = styled.p`
+  color: var(--highlight) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: 900 !important;
+
+  &:before {
+    content: "|";
+    margin: 0 var(--8px);
+    color: var(--shadow-colors) !important;
+    font-size: 80%;
+    font-weight: 300 !important;
+  }
+`

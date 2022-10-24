@@ -22,12 +22,12 @@ export const RecommendedLink = styled(Anilink)`
   background: var(--background-card);
 
   & ${RecommendedCover} {
-    opacity: 0.3;
+    opacity: 0.15;
   }
 
   &:hover {
     & ${RecommendedCover} {
-      opacity: 0.1;
+      opacity: 0.05;
     }
   }
 `
