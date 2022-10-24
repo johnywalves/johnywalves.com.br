@@ -16,6 +16,58 @@ export const ColorSection = styled.section`
 
 export const ColorsTitle = styled.h1`
   color: var(--highlight);
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 0 var(--16px);
+  text-shadow: 1px 1px 2px var(--shadow-colors);
+`
+
+export const ColorsDescriptions = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const ColorsDescriptionsDetails = styled.div`
+  display: flex;
+  flex-direction: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+
+  & p {
+    flex-grow: 1;
+  }
+
+  & strong {
+    margin-right: 0.4rem;
+  }
+
+  & p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.25rem;
+
+    & span {
+      font-size: 0.75rem;
+      margin: 0 0.5rem 0 0;
+    }
+  }
+`
+
+export const ColorReferenceTitle = styled.h2`
+  margin: var(--32px) 0 var(--8px);
+  color: var(--texts);
+  font-weight: 400;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--shadow-colors);
+
+  & strong {
+    color: var(--highlight);
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
 `
 
 export const ColorSectionTitle = styled.h2`

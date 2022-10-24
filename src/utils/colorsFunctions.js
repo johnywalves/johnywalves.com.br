@@ -124,7 +124,7 @@ export const getContrastColor = (hex) => {
         g = parseInt(hex.slice(2, 4), 16),
         b = parseInt(hex.slice(4, 6), 16);
 
-    return (r * 0.299 + g * 0.587 + b * 0.114) > 94 //186
+    return (r * 0.299 + g * 0.587 + b * 0.114) > 150 //186
         ? '#333'
         : '#f8f8f8';
 

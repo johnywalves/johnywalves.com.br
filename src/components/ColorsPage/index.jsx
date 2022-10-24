@@ -14,7 +14,10 @@ import {
   ColorsWrapper,
   ColorSection,
   ColorsTitle,
+  ColorsDescriptions,
+  ColorsDescriptionsDetails,
   ColorSectionTitle,
+  ColorReferenceTitle,
   ColorSectionSubtitle,
   ColorSectionDescription,
   ColorGrid,
@@ -28,6 +31,7 @@ const ColorsPage = () => {
 
   const {
     colorRgb,
+    colorHsl,
     colorCymk,
     additional,
     analogousPrev,
@@ -90,8 +94,25 @@ const ColorsPage = () => {
       gradeDark = currentLight / 9
 
     return {
-      colorRgb: `rgb(${+red}, ${+green}, ${+blue})`,
-      colorCymk: `cymk(${cyan}, ${magenta}, ${yellow}, ${black})`,
+      colorRgb: {
+        title: `rgb(${+red}, ${+green}, ${+blue})`,
+        red: `${+red}`,
+        green: `${+green}`,
+        blue: `${+blue}`,
+      },
+      colorHsl: {
+        title: `hsl(${currentHue}, ${currentSaturation}, ${currentLight})`,
+        hue: currentHue,
+        saturation: currentSaturation,
+        light: currentLight,
+      },
+      colorCymk: {
+        title: `cymk(${cyan}, ${magenta}, ${yellow}, ${black})`,
+        cyan,
+        magenta,
+        yellow,
+        black,
+      },
       additional: calcColor(180, 0, 0),
       analogousPrev: calcColor(-30, 0, 0),
       analogousPrevPrev: calcColor(-60, 0, 0),
@@ -128,10 +149,68 @@ const ColorsPage = () => {
 
   return (
     <ColorsWrapper>
-      <ColorsTitle>Magenta</ColorsTitle>
-      <h2>{currentHex}</h2>
-      <h2>{colorRgb}</h2>
-      <h2>{colorCymk}</h2>
+      <ColorsTitle>Explorador de Cores</ColorsTitle>
+
+      <ColorSection>
+        <ColorSectionTitle>Composição da cor</ColorSectionTitle>
+
+        <ColorsDescriptions>
+          <ColorReferenceTitle>
+            <strong>Hex</strong> Porcentagens de cores (Vermelho, Verde e Azul)
+            em hexadecimal (números na base 16)
+          </ColorReferenceTitle>
+          <ColorsDescriptionsDetails>
+            <p>{currentHex}</p>
+          </ColorsDescriptionsDetails>
+
+          <ColorReferenceTitle>
+            <strong>RGB</strong> Porcentagens de cores (Vermelho, Verde e Azul)
+            em decimal (calculado na referência 0 a 255)
+          </ColorReferenceTitle>
+          <ColorsDescriptionsDetails>
+            <p>{colorRgb.title}</p>
+            <p>
+              <strong>{colorRgb.red}</strong> <span>●</span>{" "}
+              {Math.round(colorRgb.red / 2.55)}% vermelho
+            </p>
+            <p>
+              <strong>{colorRgb.green}</strong> <span>●</span>
+              {Math.round(colorRgb.green / 2.55)}% verde
+            </p>
+            <p>
+              <strong>{colorRgb.blue}</strong> <span>●</span>
+              {Math.round(colorRgb.blue / 2.55)}% azul
+            </p>
+          </ColorsDescriptionsDetails>
+
+          <ColorReferenceTitle>
+            <strong>HSL</strong> Matiz, Saturação e Luz para geração das cores
+          </ColorReferenceTitle>
+          <ColorsDescriptionsDetails>
+            <p>{colorHsl.title}</p>
+            <p>
+              <strong>{colorHsl.hue}º</strong> roda cores
+            </p>
+            <p>
+              <strong>{colorHsl.saturation}%</strong> saturação
+            </p>
+            <p>
+              <strong>{colorHsl.light}%</strong> luz
+            </p>
+          </ColorsDescriptionsDetails>
+
+          <ColorReferenceTitle>
+            <strong>CYMK</strong> Configuração para impressão da cor
+          </ColorReferenceTitle>
+          <ColorsDescriptionsDetails>
+            <p>{colorCymk.title}</p>
+            <p>{colorCymk.cyan}% ciano</p>
+            <p>{colorCymk.magenta}% magenta</p>
+            <p>{colorCymk.yellow}% amarelo</p>
+            <p>{colorCymk.black}% preto</p>
+          </ColorsDescriptionsDetails>
+        </ColorsDescriptions>
+      </ColorSection>
 
       <ColorSection>
         <ColorSectionTitle>Complementação de cores</ColorSectionTitle>
