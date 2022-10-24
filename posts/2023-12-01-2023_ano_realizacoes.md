@@ -24,7 +24,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta sollicitudin
 
 Pellentesque tempor tellus sit amet felis venenatis, lacinia dapibus dolor pellentesque.
 
-<p class="title-asset">Atividade de 29,1Km em 1:44:41, com velocidade média de 16,7Km/h</p>
+<p class="title-asset">Atividade de 29,1Km em 1:44:41, com velocidade média de 16,7Km/h em "23 de outubro de 2022"</p>
 
 ![Tela do Strava apresentando com uma atividade de ciclismo de 29km](/figures/realizacoes_strava_23.10.jpg)
 

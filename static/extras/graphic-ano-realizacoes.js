@@ -42,7 +42,7 @@ function drawGraphic() {
     const y = d3.scaleLinear().range([height, 0])
 
     // Separação dos valores para escala
-    const maxWeight = 111.8,
+    const maxWeight = Math.max(...data.map(({ weight }) => weight)),
         weights = data.map(({ weight }) => maxWeight - weight),
         days = data.map(({ day }) => day)
 
@@ -83,7 +83,7 @@ function drawGraphic() {
     // Gerar o caminho das linhas
     graphics.append("path")
         .data([data])
-        .style("stroke", "var(--highlight)")
+        .style("stroke", "var(--third)")
         .attr("class", "line")
         .attr("d",
             // Gerar caminho para a linha 
