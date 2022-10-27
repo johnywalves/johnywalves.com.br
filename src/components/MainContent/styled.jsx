@@ -231,7 +231,7 @@ export const MainContentWrapper = styled.section`
       color: #333;
     }
   }
-  #d3_wrapper {
+  .d3_graph {
     color: var(--texts);
     width: 100%;
     min-height: 15rem;

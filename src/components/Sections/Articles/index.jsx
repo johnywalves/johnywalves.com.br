@@ -39,7 +39,7 @@ const SectionArticles = () => {
                 childImageSharp {
                   gatsbyImageData(
                     height: 256
-                    width: 640
+                    width: 512
                     layout: FIXED
                     placeholder: DOMINANT_COLOR
                     formats: [AUTO, WEBP]

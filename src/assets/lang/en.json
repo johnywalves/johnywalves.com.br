@@ -542,6 +542,14 @@
       }
     ]
   },
+  "utils": {
+    "title": "Utilities and Tools",
+    "titleCheatsheets": "Cheatsheets",
+    "titleTools": "Tools",
+    "colorExplorer": {
+      "title": "Color`s Explorer"
+    }
+  },
   "menuLinks": [
     {
       "label": "johny",

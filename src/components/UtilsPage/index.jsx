@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "components/Cards/Header"
+import Strings from "components/strings"
 import RecommendedItem from "components/RecommendedItem"
 
 import { ColorPalette } from "assets/icons"
@@ -67,12 +68,12 @@ const UtilsPage = () => {
   return (
     <>
       <UtilsSection light center>
-        <UtilsTitle>Utilidades & Ferramentas</UtilsTitle>
+        <UtilsTitle>{Strings.utils.title}</UtilsTitle>
         <ImageCover image={tool.childImageSharp.gatsbyImageData} alt="" />
       </UtilsSection>
 
       <UtilsSection>
-        <Header title="Cheatsheets" />
+        <Header title={Strings.utils.titleCheatsheets} />
         <CheatsheetsList>
           {edges.map(({ node }) => (
             <RecommendedItem key={node.fields.slug} recommended={node} />
@@ -81,10 +82,10 @@ const UtilsPage = () => {
       </UtilsSection>
 
       <UtilsSection light>
-        <Header title="Ferramentas" light />
+        <Header title={Strings.utils.titleTools} light />
         <UtilsToolList>
           <UtilsToolItem to={"/utils/e0138c"}>
-            <ColorPalette /> <p>Explorador das Cores</p>
+            <ColorPalette /> <p>{Strings.utils.colorExplorer.title}</p>
           </UtilsToolItem>
         </UtilsToolList>
       </UtilsSection>

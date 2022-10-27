@@ -100,11 +100,11 @@ export const UtilsToolItem = styled(Anilink)`
     4px 4px 4px 1px var(--shadow-colors);
 
   & p {
-    color: var(--texts);
+    color: var(--white);
   }
 
   & svg {
-    color: var(--texts);
+    color: var(--white);
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.5rem;

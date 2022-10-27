@@ -542,6 +542,14 @@
       }
     ]
   },
+  "utils": {
+    "title": "Utilidades e Ferramentas",
+    "titleCheatsheets": "Dicas de código",
+    "titleTools": "Ferramentas",
+    "colorExplorer": {
+      "title": "Explorador de cores"
+    }
+  },
   "menuLinks": [
     {
       "label": "johny",

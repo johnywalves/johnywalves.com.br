@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from "react"
 
+import Strings from "components/strings"
+
 import { ColorPalette } from "assets/icons"
 
 import {
@@ -149,7 +151,7 @@ const ColorsPage = () => {
 
   return (
     <ColorsWrapper>
-      <ColorsTitle>Explorador de Cores</ColorsTitle>
+      <ColorsTitle>{Strings.utils.colorExplorer.title}</ColorsTitle>
 
       <ColorSection>
         <ColorSectionTitle>Composição da cor</ColorSectionTitle>
