@@ -62,7 +62,7 @@ Segue alguns pontos
 
 - **Construir um corpo saudável**: Sempre quis ter um corpo musculoso e fui insatisfeito com meu peso, com o uso de uma **alimentação saudável**, uma rotina de três horas de **musculação** e cinco horas de **ciclismo** semanais espero chegar nesse objetivo para garantir uma boa vida até os 80 anos:
   - Chegar aos 90Kg, atualmente estou com 110Kg;
-  - Alcançar os 40 centímetros de bíceps, hoje medindo 38cm;m
+  - Alcançar os 40 centímetros de bíceps, hoje medindo 38cm;
   - Completar a [Rota Caipira de Cicloturismo](https://www.diariodaregiao.com.br/economia/riopretoeregiao/projeto-de-rota-caipira-fortalece-o-turismo-sobre-duas-rodas-na-regi-o-1.793640) de 270 Km.
 - **Profisssional**: Executar meu trabalho da melhor maneira possível, mantendo uma rotina de estudos em desenvolvimento com ênfase em **font-end**, incluso escrevendo para esse site, tecnologia em nuvem como **AWS** e melhorar a capacidade de comunicação em **inglês**:
   - Certificado de AWS Associate Developer;

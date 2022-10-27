@@ -29,3 +29,7 @@ Array.from({ length: "<quantidade de elementos>" })
 ```
 
 **N elementos**: Geração de uam lista com n elementos
+
+const sorted = data.sort((a, b) => a.count - b.count)
+
+const sorted = data.sort((a, b) => b.count - a.count)
