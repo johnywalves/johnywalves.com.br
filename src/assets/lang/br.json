@@ -547,7 +547,7 @@
     "titleCheatsheets": "Dicas de código",
     "titleTools": "Ferramentas",
     "colorExplorer": {
-      "title": "Explorador de cores"
+      "title": "#e0138c - Explorador de cores"
     }
   },
   "menuLinks": [
@@ -566,6 +566,10 @@
     {
       "label": "projetos",
       "url": "/projects/"
+    },
+    {
+      "label": "utilidades",
+      "url": "/utils/"
     },
     {
       "label": "pesquisa",

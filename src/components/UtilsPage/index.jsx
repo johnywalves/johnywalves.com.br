@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "components/Cards/Header"
@@ -6,6 +7,7 @@ import Strings from "components/strings"
 import RecommendedItem from "components/RecommendedItem"
 
 import { ColorPalette } from "assets/icons"
+import TriangleNeon from "assets/vectors/TriangleNeon"
 
 import {
   UtilsTitle,
@@ -14,7 +16,19 @@ import {
   CheatsheetsList,
   UtilsToolList,
   UtilsToolItem,
+  BoxTopItem,
+  BoxBottomItem,
 } from "./styled"
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show")
+    } else {
+      entry.target.classList.remove("show")
+    }
+  })
+})
 
 const UtilsPage = () => {
   const {
@@ -65,6 +79,10 @@ const UtilsPage = () => {
     }
   `)
 
+  useEffect(() => {
+    document.querySelectorAll("section").forEach((el) => observer.observe(el))
+  }, [])
+
   return (
     <>
       <UtilsSection light center>
@@ -73,6 +91,15 @@ const UtilsPage = () => {
       </UtilsSection>
 
       <UtilsSection>
+        <BoxTopItem>
+          <Parallax translateY={[-50, 0]}>
+            <TriangleNeon height="400" width="400" />
+          </Parallax>
+          <Parallax translateY={[-220, 30]}>
+            <TriangleNeon height="250" width="250" />
+          </Parallax>
+        </BoxTopItem>
+
         <Header title={Strings.utils.titleCheatsheets} />
         <CheatsheetsList>
           {edges.map(({ node }) => (
@@ -82,6 +109,15 @@ const UtilsPage = () => {
       </UtilsSection>
 
       <UtilsSection light>
+        <BoxBottomItem>
+          <Parallax translateY={[-30, 100]}>
+            <TriangleNeon height="250" width="250" />
+          </Parallax>
+          <Parallax translateY={[-30, 30]}>
+            <TriangleNeon height="400" width="400" />
+          </Parallax>
+        </BoxBottomItem>
+
         <Header title={Strings.utils.titleTools} light />
         <UtilsToolList>
           <UtilsToolItem to={"/utils/e0138c"}>

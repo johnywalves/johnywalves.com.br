@@ -62,6 +62,72 @@ export const UtilsSection = styled.section`
 
   ${({ light }) => (light ? lightSection : nonlightSection)}
   ${({ center }) => center && centerContent}
+
+  & a {
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.5);
+    transition: all 1s;
+  }
+
+  &.show a {
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+  }
+
+  a:nth-of-type(2) {
+    transition-delay: 0.5s;
+  }
+
+  a:nth-of-type(3) {
+    transition-delay: 1s;
+  }
+
+  a:nth-of-type(4) {
+    transition-delay: 1.5s;
+  }
+
+  a:nth-of-type(5) {
+    transition-delay: 2s;
+  }
+
+  a:nth-of-type(6) {
+    transition-delay: 2.5s;
+  }
+`
+
+export const BoxTopItem = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+
+  & div:nth-child(1) > svg {
+    filter: blur(1px);
+    transform: rotate(120deg);
+  }
+
+  & div:nth-child(2) > svg {
+    filter: blur(2px);
+    transform: translateX(-60px) rotate(-45deg);
+  }
+`
+
+export const BoxBottomItem = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+
+  & div:nth-child(1) > svg {
+    filter: blur(2px);
+    transform: rotate(-15deg);
+  }
+
+  & div:nth-child(2) > svg {
+    transform: rotate(15deg);
+  }
 `
 
 export const CheatsheetsList = styled.div`
@@ -88,19 +154,25 @@ export const UtilsToolItem = styled(Anilink)`
   justify-content: center;
   align-items: center;
 
-  padding: var(--24px) var(--32px);
-  width: fit-content;
+  min-width: 500px;
+  height: 80px;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: 400;
   background-color: var(--highlight);
   cursor: pointer;
-  transition: all 0.25s;
   border-radius: 4px;
   box-shadow: 0 0 4px 1px var(--shadow-colors),
     4px 4px 4px 1px var(--shadow-colors);
 
   & p {
     color: var(--white);
+    vertical-align: middle;
+    transition: all 0.5s;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   & svg {
@@ -110,9 +182,7 @@ export const UtilsToolItem = styled(Anilink)`
     margin-right: 0.5rem;
   }
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 8px 2px var(--shadow-colors),
-      8px 8px 16px 4px var(--shadow-colors);
+  &:hover p {
+    font-weight: 900;
   }
 `

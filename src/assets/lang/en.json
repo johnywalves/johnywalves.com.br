@@ -547,7 +547,7 @@
     "titleCheatsheets": "Cheatsheets",
     "titleTools": "Tools",
     "colorExplorer": {
-      "title": "Color`s Explorer"
+      "title": "#e0138c - Color`s Explorer"
     }
   },
   "menuLinks": [
@@ -566,6 +566,10 @@
     {
       "label": "projects",
       "url": "/projects/"
+    },
+    {
+      "label": "utilities",
+      "url": "/utils/"
     },
     {
       "label": "search",
