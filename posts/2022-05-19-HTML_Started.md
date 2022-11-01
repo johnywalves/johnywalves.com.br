@@ -20,7 +20,7 @@ Substituir as informações nas tags:
 **Page Name**: Nome do site com o tamanho máximo de 65 caracteres;  
 **Page Description**: Descrição com o tamanho máximo de 160 caracteres, recomendável superior a 100 caracteres;  
 **url.page**: Endereço permanente para o conteúdo;  
-**/path/to/thumbnail**: caminho da imagem do thumbnail com tamanho máximo de 300KB e um link com HTTPS.
+**/path/to/thumbnail**: Caminho absoluto, com url, da imagem do thumbnail com tamanho máximo de 300KB, dimensão de 1200px por 628px e com link com HTTPS.
 
 Na variável `og:type` informar o tipo de conteúdo como `website`, `article`, `book`, `profile` ou os tipos de arquivos no [OGP Type](https://ogp.me/#types)
 
@@ -118,9 +118,11 @@ Algumas meta tags que podem ser incluidas
 
 ### Autor do conteúdo
 
+Usado para indicar quem produziu o conteúdo, muito usado por artigos
+
 ```html
 <meta name="author" content="Author Name" />
-<meta name="twitter:creator" content="Author Name" />
+<meta name="twitter:creator" content="Author Twitter" />
 ```
 
 ### As palavras chaves do conteúdo
@@ -156,13 +158,50 @@ Podemos referências arquivos externos como
 <script src="/path/to/scripts.js"></script>
 ```
 
+### Manifest
+
+Linkar o manifesto com a apresentação formado do site para as ferramentas
+
+```html
+<link rel="manifest" href="manifest.json" />
+```
+
+Modelo do manifesto para arquivo `manifest.json`
+
+```javascript
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Johny W. Alves | Web Developer",
+  "short_name": "Johny W. Alves",
+  "description": "Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem",
+  "display": "fullscreen",
+  "background_color": "#0e4266",
+  "theme_color": "#e0138c",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
+```
+
 ### Sitemap
+
+Apresentação dos diretório e caminhos disponíveis no site
 
 ```html
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 ```
 
-com o modelo de sitemap
+Modelo de sitemap
 
 ```xml
 <urlset
