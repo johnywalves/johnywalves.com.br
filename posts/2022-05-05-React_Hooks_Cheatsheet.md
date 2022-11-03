@@ -17,21 +17,29 @@ cheatsheet: true
 Assistir atividades da janela com um atraso para evitar atualizações em excesso
 
 ```javascript
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 const useListener = (type, callback, delay) => {
-  useEffect(() => {
-    let timeoutId = null
-    const resizeListener = () => {
-      clearTimeout(timeoutId)
-      timeoutId = setTimeout(() => callback(), delay)
-    }
-    window.addEventListener(type, resizeListener)
+  const savedTimer = useRef(null)
+  const savedCallback = useRef(callback)
 
-    return () => {
-      window.removeEventListener(type, resizeListener)
+  useEffect(() => {
+    savedCallback.current = callback
+  })
+
+  useEffect(() => {
+    if (delay >= 0) {
+      const resizeListener = () => {
+        if (savedTimer.current) {
+          clearTimeout(savedTimer.current)
+        }
+        savedTimer.current = setTimeout(() => savedCallback.current(), delay)
+      }
+      window.addEventListener(type, resizeListener)
+
+      return () => window.removeEventListener(type, resizeListener)
     }
-  }, [type, callback, delay])
+  }, [type, delay])
 }
 
 export default useListener
