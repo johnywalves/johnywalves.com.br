@@ -1,5 +1,8 @@
 require("dotenv").config()
 
+const siteName = "Johny W. Alves",
+  siteDescription = "Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem"
+
 const queries = require("./src/utils/algolia_queries")
 
 const pluginsConfig = [
@@ -54,12 +57,14 @@ const pluginsConfig = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Johny W. Alves`,
-      short_name: `Johny W. Alves`,
+      name: siteName,
+      short_name: siteName,
+      description: siteDescription,
       start_url: `/`,
-      background_color: `#f6f6f6`,
-      theme_color: `#e0138c`,
-      display: `minimal-ui`,
+      background_color: '#f6f6f6',
+      theme_color: '#e0138c',
+      display: 'minimal-ui',
+      orientation: 'landscape-primary',
       icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
     },
   },
@@ -217,9 +222,9 @@ if (process.env.CONTEXT === "production") {
 
 module.exports = {
   siteMetadata: {
-    title: `Johny W. Alves`,
+    title: siteName,
     subtitle: `Sempre desenvolvendo, aprendendo e fazendo humor sobre isso, espero que gostem`,
-    description: `Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem`,
+    description: siteDescription,
     author: `johnywalves`,
     twitter: `@johnywalves`,
     siteUrl: `https://johnywalves.com.br`,

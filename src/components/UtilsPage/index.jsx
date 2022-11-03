@@ -20,16 +20,6 @@ import {
   BoxBottomItem,
 } from "./styled"
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show")
-    } else {
-      entry.target.classList.remove("show")
-    }
-  })
-})
-
 const UtilsPage = () => {
   const {
     allMarkdownRemark: { edges },
@@ -80,7 +70,17 @@ const UtilsPage = () => {
   `)
 
   useEffect(() => {
-    document.querySelectorAll("section").forEach((el) => observer.observe(el))
+    const callbackFunction = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+          }
+        })
+      },
+      observer = new IntersectionObserver(callbackFunction),
+      sections = document.querySelectorAll("section a")
+
+    sections.forEach((el) => observer.observe(el))
   }, [])
 
   return (
@@ -120,7 +120,7 @@ const UtilsPage = () => {
 
         <Header title={Strings.utils.titleTools} light />
         <UtilsToolList>
-          <UtilsToolItem to={"/utils/e0138c"}>
+          <UtilsToolItem to="/utils/e0138c">
             <ColorPalette /> <p>{Strings.utils.colorExplorer.title}</p>
           </UtilsToolItem>
         </UtilsToolList>

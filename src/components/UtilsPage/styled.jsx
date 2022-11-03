@@ -16,7 +16,6 @@ export const UtilsTitle = styled.h1`
   font-size: min(12vw, 10rem);
   text-align: center;
   font-style: italic;
-  transform: rotate(-4deg);
   z-index: 2;
   opacity: 0.9;
 
@@ -70,7 +69,7 @@ export const UtilsSection = styled.section`
     transition: all 1s;
   }
 
-  &.show a {
+  & a.show {
     opacity: 1;
     filter: none;
     transform: scale(1);
