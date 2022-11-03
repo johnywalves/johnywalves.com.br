@@ -105,7 +105,6 @@ export const PostTitle = styled.h1`
   margin: 1rem auto;
   color: var(--highlight);
   text-align: center;
-  text-shadow: 1px 1px 2px var(--shadow-colors);
 
   ${media.lessThan("large")`
     font-size: 2.8rem;

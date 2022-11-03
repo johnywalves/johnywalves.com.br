@@ -19,7 +19,7 @@ export const OpenGraphicContent = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 90px 60px;
+  padding: 60px 50px;
 
   display: flex;
   flex-direction: column;
@@ -29,6 +29,29 @@ export const OpenGraphicContent = styled.div`
 
 export const OpenGraphicHeader = styled.header`
   width: 100%;
+`
+
+export const OpenGraphicData = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+
+  p {
+    margin: 0;
+  }
+`
+
+export const OpenGraphicCategory = styled.p`
+  color: #f8f8f8;
+  background-color: #e0138c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  width: fit-content;
+  border-radius: 16px;
+  margin-bottom: 16px;
 `
 
 export const OpenGraphicTime = styled.time`
@@ -46,32 +69,25 @@ export const OpenGraphicTime = styled.time`
 
 export const OpenGraphicTitle = styled.h1`
   color: #e0138c;
-  font-size: 3rem;
-  margin-top: 4px;
-  margin-bottom: 16px;
-  transform: translateX(-2px);
-`
+  font-size: 5rem;
+  margin: 16px 0;
+  width: 100%;
+  height: 18rem;
+  text-align: left;
 
-export const OpenGraphicDescription = styled.p`
-  color: #f8f8f8;
-  font-size: 1.25rem;
-`
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 
-export const OpenGraphicCategory = styled.p`
-  color: #222;
-  background-color: #e0138c;
-  font-size: 1.5rem;
-  font-weight: 900;
-  padding: 4px 12px;
-  width: fit-content;
-  border-radius: 12px;
-  margin-bottom: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
 export const OpenGraphicFooter = styled.footer`
   width: 100%;
   display: grid;
-  grid-template-columns: calc(128px + 16px) 1fr;
+  align-items: center;
+  grid-template-columns: calc(128px + 32px) 1fr;
 `
 
 export const OpenGraphicAvatar = styled.img`
@@ -79,7 +95,8 @@ export const OpenGraphicAvatar = styled.img`
   height: 128px;
   border-radius: 50%;
   margin-right: 16px;
-  border: 4px solid #f8f8f8;
+  border: 2px solid transparent;
+  background-color: #f8f8f8;
 `
 
 export const OpenGraphicFooterContent = styled.div`

@@ -8,9 +8,9 @@ import {
   OpenGraphicCover,
   OpenGraphicContent,
   OpenGraphicHeader,
+  OpenGraphicData,
   OpenGraphicTime,
   OpenGraphicTitle,
-  OpenGraphicDescription,
   OpenGraphicCategory,
   OpenGraphicFooter,
   OpenGraphicAvatar,
@@ -23,7 +23,7 @@ import {
 const openGraphImage = ({ data, pageContext }) => {
   const {
       markdownRemark: {
-        frontmatter: { date, category, title, description, openGraphImage },
+        frontmatter: { date, category, title, openGraphImage },
         timeToRead,
       },
       site: {
@@ -45,13 +45,16 @@ const openGraphImage = ({ data, pageContext }) => {
         />
         <OpenGraphicContent>
           <OpenGraphicHeader>
-            <OpenGraphicCategory>{category}</OpenGraphicCategory>
-            <OpenGraphicTime>
-              {date} <span>●</span> {timeToRead} min de leitura
-            </OpenGraphicTime>
-            <OpenGraphicTitle>{title}</OpenGraphicTitle>
-            <OpenGraphicDescription>{description}</OpenGraphicDescription>
+            <OpenGraphicData>
+              <OpenGraphicCategory>{category}</OpenGraphicCategory>
+              <OpenGraphicTime>
+                {date} <span>●</span> {timeToRead} min de leitura
+              </OpenGraphicTime>
+            </OpenGraphicData>
           </OpenGraphicHeader>
+
+          <OpenGraphicTitle>{title}</OpenGraphicTitle>
+
           <OpenGraphicFooter>
             <OpenGraphicAvatar
               src={

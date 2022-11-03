@@ -1,5 +1,5 @@
 ---
-title: Como trapacear Term.ooo, ou jogar com um conselheiro
+title: Como trapacear Term.ooo, ou ter um conselheiro
 description: Análise de uma partida do Term.ooo com Python e Pandas para recomendar melhores possibilidades
 date: 2022-01-26 12:34:26 -0300
 featuredImage: ./featured/termooo_slice-1.png
