@@ -14,13 +14,17 @@ cheatsheet: true
 
 Uma pequena coleção que vou adicionando com o tempo de utilidades para lidar com Array em JavaScript
 
-**Elemento único**: Remover elementos repetidos de uma lista
+## Elemento único
+
+Remover elementos repetidos de uma lista
 
 ```javascript
-lista.filter((v, i, a) => a.indexOf(v) === i)
+const filtered = list.filter((v, i, a) => a.indexOf(v) === i)
 ```
 
-**N elementos**: Geração de uam lista com n elementos
+## N elementos
+
+Geração de uam lista com n elementos
 
 Retorna uma lista com a `<quantidade de elementos>` de `undefined`
 
@@ -28,8 +32,18 @@ Retorna uma lista com a `<quantidade de elementos>` de `undefined`
 Array.from({ length: "<quantidade de elementos>" })
 ```
 
-**N elementos**: Geração de uam lista com n elementos
+## Ordenar elementos
 
-const sorted = data.sort((a, b) => a.count - b.count)
+```javascript
+const sorted = list.sort((a, b) => a - b)
+```
 
-const sorted = data.sort((a, b) => b.count - a.count)
+```javascript
+const sorted = list.sort((a, b) => b - a)
+```
+
+## Totalizar valores
+
+```javascript
+const sum = list.reduce((p, c) => p + c, 0)
+```
