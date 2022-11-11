@@ -1,7 +1,7 @@
 ---
 title: Automação de screenshot com Selenium
 description: Gerar telas de páginas Web para testes Web com Selenium e Python
-date: "2020-06-20 17:50:32"
+date: 2020-06-20 17:50:32
 featuredImage: ./featured/robot-1.jpg
 coverImage: /figures/robot-1.jpg
 category: Python
@@ -10,14 +10,14 @@ tags:
   - Selenium
   - Tests
 published: true
+highlight: false
 cheatsheet: false
 ---
-
-Fazer trabalhos repetivos é muito chato e um desperdício de tempo, felizmente robôs existem para facilitar nessas tarefas e para automatizar interfaces Web o Selenium é quase um padrão do mercado
+Fazer trabalhos repetitivos é muito chato e um desperdício de tempo, felizmente robôs existem para facilitar nessas tarefas e para automatizar interfaces Web o Selenium é quase um padrão do mercado
 
 ## Instalação
 
-Para fazer a automatização precisamos escolher o navegador e o webdrive para a versão do navegador por exemplo do [Chrome Driver](https://chromedriver.chromium.org/downloads) e [Firefox Driver](https://github.com/mozilla/geckodriver/releases) colocando eles em um dos caminhos dependendo do sistema
+Para fazer a automatização precisamos escolher o navegador e o WebDrive para a versão do navegador por exemplo do [Chrome Driver](https://chromedriver.chromium.org/downloads) e [Firefox Driver](https://github.com/mozilla/geckodriver/releases) colocando eles em um dos caminhos dependendo do sistema
 
 ```bash
 # Windows
@@ -32,7 +32,11 @@ Instalar o pacote no pelo pip
 pip install selenium
 ```
 
-## Abrir o navegador
+## Realizar o passo a passo
+
+
+
+### Abrir o navegador
 
 Importação do WebDrive da biblioteca do Selenium
 
@@ -63,14 +67,14 @@ ou com Firefox
   driver = webdriver.Firefox(firefox_options = options)
 ```
 
-## Navegar e esperar construção da página
+### Navegar e esperar construção da página
 
 ```python
   url = "https://www.google.com/"
   driver.get(url)
 ```
 
-Usnado as opções disponíveis em [Query By](https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.by.html) com o Query Selector para encontrar o campo de busca na página do Google
+Usando as opções disponíveis em [Query By](https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.by.html) com o Query Selector para encontrar o campo de busca na página do Google
 
 ```python
   from selenium.webdriver.common.by import By
@@ -82,26 +86,26 @@ Usnado as opções disponíveis em [Query By](https://www.selenium.dev/selenium/
   )
 ```
 
-## Tirando uma foto
-
-```python
-  driver.save_screenshot("open.png")
-```
-
-## Redimensionar janela do navegador
+### Redimensionar janela do navegador
 
 ```python
   driver.set_window_size(1800, 1200)
 ```
 
-## Digitando texto na caixa
+### Tirando uma foto
+
+```python
+  driver.save_screenshot("open.png")
+```
+
+### Digitando texto na caixa
 
 ```python
   searchField.send_keys("orange")
   searchField.send_keys(Keys.ENTER)
 ```
 
-## Clicando no elemento
+### Clicando no elemento
 
 ```python
   imageTab = driver.find_element_by_css_selector("a.q.qs")
@@ -137,11 +141,13 @@ def main():
   searchField = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.CSS_SELECTOR, "[name=q]"))
   )
-  # Tirar um screenshot
-  driver.save_screenshot("open.png")
 
   # Alterar o tamanho da tela
   driver.set_window_size(1800, 1200)
+
+  # Tirar um screenshot
+  driver.save_screenshot("open.png")
+
   # Tirar um screenshot da tela ampliada
   driver.save_screenshot("max.png")
 
