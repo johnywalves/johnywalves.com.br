@@ -15,11 +15,20 @@ import {
   Navigation,
 } from "./styled"
 
-const CardList = ({ children, title, action, url, light, number }) => {
+const CardList = ({
+  children,
+  title,
+  action,
+  url,
+  light,
+  number,
+  ExtraLine,
+}) => {
   return (
     <CardListWrapper>
       <Header title={title} light={light} />
       <Content>{children}</Content>
+      {ExtraLine && <ExtraLine />}
       <NavigationWrapper>
         {!number && url && (
           <Navigation to={url}>

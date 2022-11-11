@@ -27,6 +27,7 @@
     "title": "Articles",
     "category": "Category",
     "categories": "Categories",
+    "someHighlights": "Highlights",
     "allArticles": "All articles",
     "viewAll": "View all artciles",
     "feed": "http://feeds.feedburner.com/johnywalves-posts"
