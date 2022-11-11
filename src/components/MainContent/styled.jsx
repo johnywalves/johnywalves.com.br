@@ -98,12 +98,12 @@ export const MainContentWrapper = styled.section`
     color: var(--texts);
     background-color: var(--background-card);
     border-left: 0.3rem solid var(--highlight);
-    padding: 1.5rem 1.25rem 1rem;
-    margin: 3rem auto;
+    padding: 1.5rem 1rem 0.25rem;
+    margin: 2rem 1rem;
   }
   hr {
     border: 1px solid var(--shadow-colors);
-    margin: 3rem auto;
+    margin: 2rem 1rem 2rem;
   }
   #twitter-widget-0,
   .instagram-media,
@@ -195,26 +195,23 @@ export const MainContentWrapper = styled.section`
   }
   table {
     color: var(--texts);
-    border-spacing: 0.25rem;
-    width: 100%;
-    margin-bottom: 1.6rem;
-    border: 1px solid var(--shadow-colors);
+    width: calc(100% - 2rem);
+    margin: 1.5rem auto 1rem;
   }
   table thead {
-    height: 2rem;
+    height: 2.25rem;
+  }
+  table thead tr th {
+    border-bottom: 2px solid var(--shadow-colors);
   }
   table th,
   table td {
-    padding: 0.25rem;
+    padding: 0.5rem;
   }
   table th,
   table tr:nth-child(even) {
     color: var(--texts);
-    background-color: var(--shadow-colors);
-
-    body.dark & {
-      color: var(--background);
-    }
+    background-color: var(--color-line);
   }
   .title-asset {
     width: 100%;
