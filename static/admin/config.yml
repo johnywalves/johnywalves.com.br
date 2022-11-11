@@ -1,10 +1,9 @@
 backend:
   name: github
-  repo: johnywalves/gatsby-site
+  repo: johnywalves/johnywalves.com.br
   branch: master
   site_domain: johnywalves.com.br
 
-publish_mode: editorial_workflow
 media_folder: "static/figures"
 public_folder: "/figures"
 
@@ -45,5 +44,6 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Extras", name: "extras", widget: "list" }
       - { label: "Published", name: "published", widget: "boolean" }
+      - { label: "Highlight", name: "highlight", widget: "boolean" }
       - { label: "Cheatsheet", name: "cheatsheet", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }
