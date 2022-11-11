@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const RecommendedCover = styled(GatsbyImage)`
@@ -16,7 +16,7 @@ export const RecommendedCover = styled(GatsbyImage)`
   transition: opacity 0.25s;
 `
 
-export const RecommendedLink = styled(Anilink)`
+export const RecommendedLink = styled(Link)`
   position: relative;
   background: var(--background-card);
   border-radius: var(--4px);

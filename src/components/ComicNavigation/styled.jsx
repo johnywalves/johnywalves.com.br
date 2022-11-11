@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 export const NavigationWrapper = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const NavigationWrapper = styled.div`
   padding: 35px 0 15px;
 `
 
-export const Navigation = styled(Anilink)`
+export const Navigation = styled(Link)`
   z-index: 3;
 `
 
@@ -36,7 +36,7 @@ const colorWhite = css`
   color: var(--white) !important;
 `
 
-export const Icon = styled(Anilink)`
+export const Icon = styled(Link)`
   width: 2rem;
   height: 2rem;
   transition: 0.25s ease-in-out;

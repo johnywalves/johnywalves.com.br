@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 export const NavigationWrapper = styled.section`
   align-items: center;
@@ -41,7 +41,7 @@ const disabledLinkNavigation = css`
   }
 `
 
-export const LinkNavigation = styled(Anilink)`
+export const LinkNavigation = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 const whiteLogoColor = css`
   &,
@@ -9,7 +9,7 @@ const whiteLogoColor = css`
   }
 `
 
-export const LogoWrapper = styled(Anilink)`
+export const LogoWrapper = styled(Link)`
   font-size: var(--36px);
   font-weight: 900;
   transition: 0.5s ease-in-out;

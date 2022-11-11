@@ -22,7 +22,7 @@ const CardList = ({ children, title, action, url, light, number }) => {
       <Content>{children}</Content>
       <NavigationWrapper>
         {!number && url && (
-          <Navigation fade to={url} duration={0.75}>
+          <Navigation to={url}>
             <Button light={light}>
               <MoreVerticalOutline /> {action}
             </Button>

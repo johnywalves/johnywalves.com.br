@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import { CardWrapperWrapper, CardWrapperCover } from "./styled"
 
@@ -8,10 +8,10 @@ const CardWrapper = ({ cover, children, article, to }) => {
   if (to) {
     return (
       <CardWrapperWrapper article={article}>
-        <Anilink fade to={to} duration={0.75}>
+        <Link to={to}>
           <CardWrapperCover>{cover}</CardWrapperCover>
           {children}
-        </Anilink>
+        </Link>
       </CardWrapperWrapper>
     )
   }

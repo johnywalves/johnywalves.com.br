@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 export const CardListWrapper = styled.div``
 
@@ -32,6 +32,6 @@ export const NavigationWrapper = styled.div`
   `}
 `
 
-export const Navigation = styled(Anilink)`
+export const Navigation = styled(Link)`
   z-index: 3;
 `

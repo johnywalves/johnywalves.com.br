@@ -18,7 +18,7 @@ const ComicItem = ({
   transcription,
   featuredImage,
 }) => (
-  <PostItemLink fade to={slug} duration={0.75}>
+  <PostItemLink to={slug}>
     <PostItemWrapper>
       <PostItemHeader>
         <PostItemTitle>

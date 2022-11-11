@@ -1,5 +1,5 @@
 import React from "react"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import Blueprint from "components/Blueprint"
 import Comments from "components/Comments"
@@ -73,13 +73,9 @@ const Article = ({ data, pageContext }) => {
 
         <MainContent>
           <PostLabels>
-            <Anilink
-              fade
-              to={`/category/${post.frontmatter.category.toLowerCase()}/`}
-              duration={0.75}
-            >
+            <Link to={`/category/${post.frontmatter.category.toLowerCase()}/`}>
               <PostCategory>{post.frontmatter.category}</PostCategory>
-            </Anilink>
+            </Link>
             {post.frontmatter.tags.map((tag) => (
               <PostTag>{tag}</PostTag>
             ))}

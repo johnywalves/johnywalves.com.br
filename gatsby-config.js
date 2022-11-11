@@ -6,7 +6,6 @@ const siteName = "Johny W. Alves",
 const queries = require("./src/utils/algolia_queries")
 
 const pluginsConfig = [
-  `gatsby-plugin-transition-link`,
   `gatsby-plugin-styled-components`,
   {
     resolve: `gatsby-plugin-root-import`,

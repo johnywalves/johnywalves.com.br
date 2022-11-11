@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import { GatsbyImage } from "gatsby-plugin-image"
 
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const HomeComicsWrapper = styled.section`
   position: relative;
@@ -21,7 +21,7 @@ export const HomeComicsWrapper = styled.section`
   `}
 `
 
-export const HomeComicsLink = styled(Anilink)`
+export const HomeComicsLink = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;

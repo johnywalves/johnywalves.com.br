@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components"
 import media from "styled-media-query"
 
 import { GatsbyImage } from "gatsby-plugin-image"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 export const HeaderWrapper = styled.header`
   z-index: 10;
@@ -64,7 +64,7 @@ export const MenuTop = styled.ul`
   `}
 `
 
-export const MenuTopLink = styled(Anilink)`
+export const MenuTopLink = styled(Link)`
   font-size: var(--16px);
   font-weight: 900;
 
@@ -234,7 +234,7 @@ export const MenuLinks = styled.ul`
   `}
 `
 
-export const MenuLinksLink = styled(Anilink)`
+export const MenuLinksLink = styled(Link)`
   text-decoration: none;
   transition: 0.25s ease-in-out;
   opacity: 0.75;

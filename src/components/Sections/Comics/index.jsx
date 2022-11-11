@@ -72,12 +72,7 @@ const SectionComics = () => {
           light
         >
           <li>
-            <HomeComicsLink
-              fade
-              to={node.fields.slug}
-              duration={0.75}
-              aria-label="Last Comics"
-            >
+            <HomeComicsLink to={node.fields.slug} aria-label="Last Comics">
               <HomeComicsHeader>
                 <h3>
                   #{node.frontmatter.number.toString().padStart(3, "0")}

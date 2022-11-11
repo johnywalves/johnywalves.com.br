@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const ArticleItemLink = styled(Anilink)`
+export const ArticleItemLink = styled(Link)`
   display: flex;
   text-decoration: none;
   border-bottom: 2px solid var(--shadow-colors);

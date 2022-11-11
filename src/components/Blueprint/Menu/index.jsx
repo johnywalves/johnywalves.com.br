@@ -80,12 +80,7 @@ const Menu = ({ hero, whiteLogo }) => {
           <MenuTop>
             {Strings.menuLinks.map(({ label, url }) => (
               <li key={label}>
-                <MenuTopLink
-                  fade
-                  to={url}
-                  duration={0.75}
-                  activeClassName="active"
-                >
+                <MenuTopLink to={url} activeClassName="active">
                   <span>{label}</span>.
                 </MenuTopLink>
               </li>
@@ -115,12 +110,7 @@ const Menu = ({ hero, whiteLogo }) => {
         <MenuLinks>
           {Strings.menuLinks.map(({ label, url }) => (
             <li key={label}>
-              <MenuLinksLink
-                fade
-                to={url}
-                duration={0.75}
-                activeClassName="active"
-              >
+              <MenuLinksLink to={url} activeClassName="active">
                 {label}
                 <span>.</span>
               </MenuLinksLink>

@@ -28,6 +28,7 @@ const GeneralStyles = createGlobalStyle`
     --72px: 4.5rem;
     --80px: 5rem;
     --96px: 6rem;
+    --256px: 16rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 

@@ -1,5 +1,5 @@
 import { GatsbyImage } from "gatsby-plugin-image"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import styled, { css } from "styled-components"
 import PageWrapper from "styles/PageWrapper"
@@ -147,7 +147,7 @@ export const UtilsToolList = styled.div`
   gap: var(--24px);
 `
 
-export const UtilsToolItem = styled(Anilink)`
+export const UtilsToolItem = styled(Link)`
   display: flex;
   flex-direction: row;
   justify-content: center;

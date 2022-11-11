@@ -40,9 +40,7 @@ const ComicNavigation = ({ light, action, url, number, showCount }) => {
     <>
       <NavigationWrapper>
         <Icon
-          fade
           to="/comic-1"
-          duration={0.75}
           disabled={firstOne}
           light={light ? 1 : 0}
           aria-label={Strings.first}
@@ -50,24 +48,20 @@ const ComicNavigation = ({ light, action, url, number, showCount }) => {
           <ArrowsLeft />
         </Icon>
         <Icon
-          fade
           to={`/comic-${number - 1}`}
-          duration={0.75}
           disabled={firstOne}
           light={light ? 1 : 0}
           aria-label={Strings.prev}
         >
           <ArrowLeft />
         </Icon>
-        <Navigation fade to={url} duration={0.75}>
+        <Navigation to={url}>
           <Button light={light}>
             <MoreVerticalOutline /> {action}
           </Button>
         </Navigation>
         <Icon
-          fade
           to={`/comic-${number + 1}`}
-          duration={0.75}
           disabled={lastOne}
           light={light ? 1 : 0}
           aria-label={Strings.next}
@@ -75,9 +69,7 @@ const ComicNavigation = ({ light, action, url, number, showCount }) => {
           <ArrowLeft rotate />
         </Icon>
         <Icon
-          fade
           to={`/comic-${lastNumber}`}
-          duration={0.75}
           disabled={lastOne}
           light={light ? 1 : 0}
           aria-label={Strings.last}

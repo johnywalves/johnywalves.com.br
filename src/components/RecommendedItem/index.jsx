@@ -10,7 +10,7 @@ const Item = ({ recommended }) => {
   } = recommended
 
   return (
-    <RecommendedLink fade to={slug} duration={0.75}>
+    <RecommendedLink to={slug}>
       <RecommendedCover
         image={featuredImage.childImageSharp.gatsbyImageData}
         alt=""

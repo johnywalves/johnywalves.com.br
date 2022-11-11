@@ -6,6 +6,7 @@ const contentWrapper = css`
 
 export const BlueprintWrapper = styled.main`
   min-height: 100vh;
+  overflow: hidden;
 
   ${({ content }) => content && contentWrapper};
 `

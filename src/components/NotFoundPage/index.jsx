@@ -1,5 +1,5 @@
 import React from "react"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import Strings from "components/strings"
 import Button from "components/Button"
@@ -36,9 +36,9 @@ const NotFoundPage = () => (
 
     <NotFoundTitle>404</NotFoundTitle>
     <NotFoundDescription>{Strings.notfound}</NotFoundDescription>
-    <Anilink fade to="/" duration={0.75}>
+    <Link to="/">
       <Button>{Strings.backToHome}</Button>
-    </Anilink>
+    </Link>
   </NotFoundWrapper>
 )
 

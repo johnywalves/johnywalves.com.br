@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Anilink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import Strings from "components/strings"
 
@@ -62,14 +62,12 @@ const ArticleCategoryNavigatior = ({ categories }) => {
       <ul>
         {categories.map((category) => (
           <li key={category}>
-            <Anilink
-              fade
+            <Link
               to={`/category/${category.toLowerCase()}/`}
-              duration={0.75}
               activeClassName="active"
             >
               <p>{category}</p>
-            </Anilink>
+            </Link>
           </li>
         ))}
       </ul>
