@@ -29,7 +29,18 @@ function drawGraphic() {
         { "day": 23, "date": "2022-11-08", "weight": 112.8 },
         { "day": 24, "date": "2022-11-09", "weight": 114.7 },
         { "day": 25, "date": "2022-11-10", "weight": 114.3 },
-        { "day": 26, "date": "2022-11-11", "weight": 113.5 }
+        { "day": 26, "date": "2022-11-11", "weight": 113.5 },
+        { "day": 27, "date": "2022-11-12", "weight": 112.2 },
+        { "day": 28, "date": "2022-11-13", "weight": 112.5 },
+        { "day": 29, "date": "2022-11-14", "weight": 113.9 },
+        { "day": 30, "date": "2022-11-15", "weight": 115.8 },
+        { "day": 31, "date": "2022-11-16", "weight": 113.8 },
+        { "day": 32, "date": "2022-11-17", "weight": 113.2 },
+        { "day": 33, "date": "2022-11-18", "weight": 112.5 },
+        { "day": 34, "date": "2022-11-19", "weight": 112.8 },
+        { "day": 35, "date": "2022-11-20", "weight": 113.1 },
+        { "day": 36, "date": "2022-11-21", "weight": 113.4 },
+        { "day": 37, "date": "2022-11-22", "weight": 112.8 }
     ]
 
     // Selecionar div para colocar o relatório gráfico dentro
