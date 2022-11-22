@@ -23,7 +23,7 @@ export const CardWrapperWrapper = styled.li`
 
   ${CardWrapperCover} {
     transform: rotate(11.25deg) translate(3%, 4%) scale(1.5);
-    filter: grayscale(1);
+    filter: saturate(0) brightness(1.25);
   }
 
   &:hover {
@@ -33,7 +33,7 @@ export const CardWrapperWrapper = styled.li`
 
     ${CardWrapperCover} {
       transform: none;
-      filter: none;
+      filter: saturate(1.25);
     }
 
     ${media.lessThan("medium")`
