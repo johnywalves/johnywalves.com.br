@@ -1,5 +1,5 @@
 ---
-date: 2022-11-01 12:48:58 -0300
+date: 2022-12-01 12:48:58 -0300
 title: JavaScript Array - Cheatsheet
 description: Cheatsheet para lidar arrays com JavaScript
 featuredImage: ./featured/sheets-1.jpg
@@ -9,6 +9,7 @@ tags:
   - Array
   - Cheatsheet
 published: false
+highlight: false
 cheatsheet: true
 ---
 

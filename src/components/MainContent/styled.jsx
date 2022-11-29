@@ -24,6 +24,7 @@ export const MainContentWrapper = styled.section`
   ol,
   .tags,
   iframe,
+  summary,
   .button-post {
     color: var(--texts);
     font-size: 1.25rem;
@@ -46,6 +47,26 @@ export const MainContentWrapper = styled.section`
       font-size: 1rem;
       margin: 0 auto var(--8px);
     `}
+  }
+  details {
+    margin: 0 0 2rem 1rem;
+    padding-top: 1rem;
+    border-left: 2px solid var(--highlight-semi);
+
+    & summary {
+      color: var(--highlight);
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 1rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &::marker {
+        margin-right: 1rem;
+      }
+    }
   }
   h1,
   h2,

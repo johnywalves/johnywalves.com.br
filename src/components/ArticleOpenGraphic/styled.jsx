@@ -44,7 +44,7 @@ export const OpenGraphicData = styled.div`
 `
 
 export const OpenGraphicCategory = styled.p`
-  color: #f8f8f8;
+  color: #222;
   background-color: #e0138c;
   font-size: 1.5rem;
   font-weight: 700;
@@ -68,7 +68,7 @@ export const OpenGraphicTime = styled.time`
 `
 
 export const OpenGraphicTitle = styled.h1`
-  color: #e0138c;
+  color: #f8f8f8;
   font-size: 4.5rem;
   line-height: 125%;
   margin: 16px 0;
@@ -82,6 +82,10 @@ export const OpenGraphicTitle = styled.h1`
 
   text-overflow: ellipsis;
   overflow: hidden;
+
+  & span {
+    color: #e0138c;
+  }
 `
 
 export const OpenGraphicFooter = styled.footer`

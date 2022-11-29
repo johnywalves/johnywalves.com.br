@@ -53,7 +53,10 @@ const openGraphImage = ({ data, pageContext }) => {
             </OpenGraphicData>
           </OpenGraphicHeader>
 
-          <OpenGraphicTitle>{title}</OpenGraphicTitle>
+          <OpenGraphicTitle>
+            <span>{title.split(" ")[0]}</span>{" "}
+            {title.split(" ").slice(1).join("  ")}
+          </OpenGraphicTitle>
 
           <OpenGraphicFooter>
             <OpenGraphicAvatar
