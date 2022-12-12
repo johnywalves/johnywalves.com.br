@@ -80,19 +80,23 @@ export const UtilsSection = styled.section`
   }
 
   a:nth-of-type(3) {
-    transition-delay: 1s;
+    transition-delay: 0.75s;
   }
 
   a:nth-of-type(4) {
-    transition-delay: 1.5s;
+    transition-delay: 0.5s;
   }
 
   a:nth-of-type(5) {
-    transition-delay: 2s;
+    transition-delay: 0.75s;
   }
 
   a:nth-of-type(6) {
-    transition-delay: 2.5s;
+    transition-delay: 1s;
+  }
+
+  a:nth-of-type(7) {
+    transition-delay: 0.5s;
   }
 `
 

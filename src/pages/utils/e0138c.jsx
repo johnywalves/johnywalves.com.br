@@ -3,7 +3,7 @@ import React from "react"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 
-import ColorsPage from "components/ColorsPage"
+import ColorsPage from "views/ColorsPage"
 
 const title = "Exploração de Cores (#e0138c)",
   description = "Apresentação de cores #e0138c",

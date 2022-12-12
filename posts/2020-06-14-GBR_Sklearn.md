@@ -162,6 +162,29 @@ resultado_gp = gp_minimize(fitness, space, random_state=42, n_calls=20, n_random
 
 print(resultado_gp.x)
 print(resultado_gp.fun)
+
+
+
+#from sklearn.model_selection import GridSearchCV
+#from sklearn.multioutput import MultiOutputRegressor
+#from sklearn.ensemble import GradientBoostingRegressor
+
+#param_distributions = {
+#    "classifier__estimator__n_estimators": [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000],
+#    "classifier__estimator__max_leaf_nodes": [2, 5, 10, 20, 50, 100],
+#    "classifier__estimator__learning_rate": [0.01, 0.1, 1],
+#  }
+
+#pipe_gbr = Pipeline(steps=[
+#    ("preprocessor", preprocessor),
+#    ("classifier", MultiOutputRegressor(GradientBoostingRegressor(random_state=42)))
+#  ])
+
+#gs_gbr = (GridSearchCV(estimator=pipe_gbr, param_grid=param_distributions))
+
+#gs_gbr = gs_gbr.fit(train_x, train_y)
+#gs_gbr.best_estimator_
+
 ```
 
 ## Referências

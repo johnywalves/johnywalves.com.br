@@ -2,7 +2,8 @@ import React from "react"
 
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import SearchPage from "components/SearchPage"
+
+import SearchPage from "views/SearchPage"
 
 const title = "Pesquisa",
   description = "Busca por texto de conteúdos"

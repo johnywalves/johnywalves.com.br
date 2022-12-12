@@ -1,8 +1,9 @@
 import React from "react"
 
 import Blueprint from "components/Blueprint"
-import NotFoundPage from "components/NotFoundPage"
 import Seo from "components/seo"
+
+import NotFoundPage from "views/NotFoundPage"
 
 const title = "404: Não encontrada",
   description = "A página que você procura não existe"

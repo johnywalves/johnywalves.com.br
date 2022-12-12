@@ -12,7 +12,7 @@ import {
   Comics,
   Projects,
   Contact,
-} from "components/Sections"
+} from "views/Sections"
 
 const Home = () => {
   return (

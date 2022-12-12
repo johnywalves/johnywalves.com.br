@@ -4,7 +4,7 @@ import { ParallaxProvider } from "react-scroll-parallax"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 
-import UtilsPage from "components/UtilsPage"
+import UtilsPage from "views/UtilsPage"
 
 const title = "Utilidades e Ferramentas",
   description =

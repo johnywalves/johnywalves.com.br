@@ -1,9 +1,10 @@
 import React from "react"
 import { ParallaxProvider } from "react-scroll-parallax"
 
-import ProjectPage from "components/ProjectPage"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
+
+import ProjectPage from "views/ProjectPage"
 
 const title = "Projetos e Desenvolvimento",
   description = "Apresentação de projetos desenvolvidos ou em desenvolvimento",
