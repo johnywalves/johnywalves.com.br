@@ -22,7 +22,7 @@ Iniciei vários cursos com afinco e participava de todas as imersões da Alura, 
 
 ![Live com 6 pessoas apresentando uma página com o título Devflix](/figures/saindo_devflix.jpg)
 
-<p style="text-align:center">Esse é o momento que me excluiram da premiação, qualidade em excesso :D<p>
+<p class="center">Esse é o momento que me excluiram da premiação, qualidade em excesso :D<p>
 
 Morando com minha namorada em uma república e rodeado de amigos, tinha tudo para levar a pandemia sem problemas
 
@@ -32,7 +32,7 @@ Minha mãe que estava em tratamento de câncer, os piores momentos que me lembro
 
 ![Um homem de uns 30 anos acompanhado de uma mulher por volta de 50 anos](/figures/saindo_mae.jpg)
 
-<p style="text-align:center">Saudades!<p>
+<p class="center">Saudades!<p>
 
 Logo as corridas de rua foram proibidas e o único lugar que saia de casa era para ir até a padaria para comprar comida de baixo valor nutricional, engordei 15 quilos
 
@@ -42,7 +42,7 @@ Quando as corridas de rua foram liberadas novamente cai de cabeça no treinament
 
 ![Estátistica de treino com o trajeto e 21 quilomêntros em 2 horas](/figures/saindo_corrida.jpg)
 
-<p style="text-align:center">Era isso todos os sábados<p>
+<p class="center">Era isso todos os sábados<p>
 
 ## Renovando ou caindo novamente
 

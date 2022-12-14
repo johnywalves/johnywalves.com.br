@@ -24,16 +24,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta sollicitudin
 
 Pellentesque tempor tellus sit amet felis venenatis, lacinia dapibus dolor pellentesque.
 
-<p class="title-asset">Atividade de 29,1Km em 1:44:41, com velocidade média de 16,7Km/h em "23 de outubro de 2022"</p>
+<p class="center bold">Atividade de 29,1Km em 1:44:41, com velocidade média de 16,7Km/h em "23 de outubro de 2022"</p>
 
 ![Tela do Strava apresentando com uma atividade de ciclismo de 29km](/figures/realizacoes_strava_23.10.jpg)
 
-<p style="text-align:center">A ida foi complicada, a volta só descida</p>
+<p class="center">A ida foi complicada, a volta só descida</p>
 
 Morbi suscipit sagittis quam. Cras eu velit in ligula efficitur facilisis. Proin vel erat et augue condimentum mollis quis et augue. Fusce nibh felis, commodo non sagittis vel, rutrum et elit. Vivamus vehicula risus vel erat feugiat, quis consectetur nibh accumsan. Nam ac vestibulum orci. Cras faucibus, quam quis commodo posuere, arcu lacus euismod mi, non consequat purus augue eu arcu
 
-<p class="title-asset">Controle de peso de "outubro de 2022" a "dezembro de 2023"</p>
-<p class="title-asset">Evolução da perda em dias</p>
+<p class="center bold">Controle de peso de "outubro de 2022" a "dezembro de 2023"</p>
+<p class="center bold">Evolução da perda em dias</p>
 
 <div id="d3_wrapper" class="d3_graph">
   <div id="loading_graphic"></div>

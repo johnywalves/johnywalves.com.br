@@ -28,7 +28,7 @@ A bilioteca [D3.js - Data-Driven Documents](https://d3js.org/) é uma ferramenta
 
 Abaixo um exemplo de gráfico gerado com D3, no caso um gráfico de linhas
 
-<p class="title-asset">Crescimento da população mundial de 1975 a 2022 por continente (escala de bilhões)</p>
+<p class="center bold">Crescimento da população mundial de 1975 a 2022 por continente (escala de bilhões)</p>
 
 <div id="d3_wrapper" class="d3_graph">
   <div id="loading_graphic"></div>

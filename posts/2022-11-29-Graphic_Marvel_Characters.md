@@ -220,7 +220,7 @@ drawPie(data_eye, "#d3_wrapper_eye")
 
 Podemos observar que alguns não possuem olhos, como outros uma cor uniforme para todo o globo ocular, como o Remy LeBeau (Gambit) com o globo todo preto
 
-<p class="title-asset">Proporção da cor dos olhos</p>
+<p class="center bold">Proporção da cor dos olhos</p>
 
 <div id="d3_wrapper_eye" class="d3_graph">
   <div id="loading_graphic"></div>
@@ -268,7 +268,7 @@ drawPie(data_hair, "#d3_wrapper_hair")
 
 No gráfico podemos ver a proporção
 
-<p class="title-asset">Proporção da cor dos cabelos</p>
+<p class="center bold">Proporção da cor dos cabelos</p>
 
 <div id="d3_wrapper_hair" class="d3_graph">
   <div id="loading_graphic"></div>
@@ -292,6 +292,8 @@ drawPie(data_sex, "#d3_wrapper_sex")
 ```
 
 Como podemos ver tem dois personagens de gênero fluído, [Xavin](https://pt.wikipedia.org/wiki/Xavin) (da raça dos Skulls) e [Loki](<https://pt.wikipedia.org/wiki/Loki_(Marvel_Comics)>), ambos personagens ligados a capacidade de mudar de forma, que acredito não ser coincidência
+
+<p class="center bold">Proporção dos gêneros</p>
 
 <div id="d3_wrapper_sex" class="d3_graph">
   <div id="loading_graphic"></div>
@@ -577,6 +579,8 @@ drawLines(data_yearsex, "#d3_wrapper_yearsex")
 
 As primeiras aparições de mulheres sempre é uma visualização inferior a quantidade de homens
 
+<p class="center bold">Primeiras aparições por gênero e ano</p>
+
 <div id="d3_wrapper_yearsex" class="d3_graph">
   <div id="loading_graphic"></div>
 </div>
@@ -598,6 +602,8 @@ drawPie(data_id, "#d3_wrapper_id")
 
 Essa história faz sentido para todos os persogens?
 
+<p class="center bold">Proporção do tipo de identidades</p>
+
 <div id="d3_wrapper_id" class="d3_graph">
   <div id="loading_graphic"></div>
 </div>
@@ -618,6 +624,8 @@ drawPie(data_alive, "#d3_wrapper_alive")
 ```
 
 Com a geração dos gráficos podemos ver que uma parte das figuras não voltagem
+
+<p class="center bold">Proporção de personagens vivo</p>
 
 <div id="d3_wrapper_alive" class="d3_graph">
   <div id="loading_graphic"></div>

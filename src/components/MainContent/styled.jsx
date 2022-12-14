@@ -234,9 +234,11 @@ export const MainContentWrapper = styled.section`
     color: var(--texts);
     background-color: var(--color-line);
   }
-  .title-asset {
+  .center {
     width: 100%;
     text-align: center;
+  }
+  .bold {
     font-weight: 900;
   }
   .text-color {
