@@ -8,14 +8,10 @@ export const CardListWrapper = styled.div``
 export const Content = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  gap: 25px;
+  justify-content: center;
+  gap: var(--8px);
   list-style: none;
   flex-wrap: wrap;
-
-  ${media.lessThan("medium")`
-    gap: var(--8px);
-  `}
 `
 
 export const NavigationWrapper = styled.div`

@@ -1,14 +1,14 @@
 ---
-date: 2022-12-01 12:48:58 -0300
+date: 2022-10-01 12:48:58 -0300
 title: JavaScript Array - Cheatsheet
 description: Cheatsheet para lidar arrays com JavaScript
-featuredImage: ./featured/sheets-1.jpg
-coverImage: /figures/sheets-1.jpg
+featuredImage: ./featured/chain-1.jpg
+coverImage: /figures/chain-1.jpg
 category: JavaScript
 tags:
   - Array
   - Cheatsheet
-published: false
+published: true
 highlight: false
 cheatsheet: true
 ---
@@ -35,15 +35,23 @@ Array.from({ length: "<quantidade de elementos>" })
 
 ## Ordenar elementos
 
+Ascendente
+
 ```javascript
 const sorted = list.sort((a, b) => a - b)
 ```
+
+Descendente
 
 ```javascript
 const sorted = list.sort((a, b) => b - a)
 ```
 
 ## Totalizar valores
+
+`0`: valor inicial;
+`p`: valor anterior;
+`c`: valor atual.
 
 ```javascript
 const sum = list.reduce((p, c) => p + c, 0)

@@ -65,7 +65,7 @@ const GeneralStyles = createGlobalStyle`
   }
 
   body.dark {
-    --texts: #f8f8f8;
+    --texts: #fcfcfc;
     --background: #222;
     --background-semi: #222222c0;
     --background-card: #303030;
@@ -76,9 +76,9 @@ const GeneralStyles = createGlobalStyle`
 
   body.light {
     --texts: #333;
-    --background: #f6f6f6;
+    --background: #fcfcfc;
     --background-semi: #f6f6f6c0;
-    --background-card: #fafafa;
+    --background-card: #f8f8f8;
     --shadow-colors: #33333380;
     --color-line: #33333340;
   }

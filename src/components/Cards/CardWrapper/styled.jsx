@@ -12,7 +12,7 @@ export const CardWrapperWrapper = styled.li`
   position: relative;
   border-radius: 25px;
   overflow: hidden;
-  width: 512px;
+  width: 460px;
   min-height: ${({ article }) => (article ? "400px" : "312px")};
   z-index: 2;
 

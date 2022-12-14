@@ -70,7 +70,11 @@ export const SectionArticlesHighlightCover = styled(GatsbyImage)``
 
 export const SectionArticlesHighlightShadow = styled.div``
 
-export const SectionArticlesHighlightContent = styled.div``
+export const SectionArticlesHighlightContent = styled.div`
+  p {
+    font-weight: 500;
+  }
+`
 
 export const SectionArticlesHighlightLink = styled(Link)`
   & article {

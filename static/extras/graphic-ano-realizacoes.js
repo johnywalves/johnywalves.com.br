@@ -49,18 +49,20 @@ function drawGraphic() {
         { "day": 43, "date": "2022-11-28", "weight": 116.3 },
         { "day": 44, "date": "2022-11-29", "weight": 115.1 },
         { "day": 45, "date": "2022-11-30", "weight": 115.5 },
-        { "day": 46, "date": "2022-11-01", "weight": 116.0 },
-        { "day": 47, "date": "2022-11-02", "weight": 116.4 },
-        { "day": 48, "date": "2022-11-03", "weight": 115.1 },
-        { "day": 49, "date": "2022-11-04", "weight": 115.5 },
-        { "day": 50, "date": "2022-11-05", "weight": 115.6 },
-        { "day": 51, "date": "2022-11-06", "weight": 114.2 },
-        { "day": 52, "date": "2022-11-07", "weight": 114.7 },
-        { "day": 53, "date": "2022-11-08", "weight": 115.5 },
-        { "day": 54, "date": "2022-11-09", "weight": 115.4 },
-        { "day": 55, "date": "2022-11-10", "weight": 115.6 },
-        { "day": 56, "date": "2022-11-11", "weight": 116.1 },
-        { "day": 57, "date": "2022-11-12", "weight": 115.4 }
+        { "day": 46, "date": "2022-12-01", "weight": 116.0 },
+        { "day": 47, "date": "2022-12-02", "weight": 116.4 },
+        { "day": 48, "date": "2022-12-03", "weight": 115.1 },
+        { "day": 49, "date": "2022-12-04", "weight": 115.5 },
+        { "day": 50, "date": "2022-12-05", "weight": 115.6 },
+        { "day": 51, "date": "2022-12-06", "weight": 114.2 },
+        { "day": 52, "date": "2022-12-07", "weight": 114.7 },
+        { "day": 53, "date": "2022-12-08", "weight": 115.5 },
+        { "day": 54, "date": "2022-12-09", "weight": 115.4 },
+        { "day": 55, "date": "2022-12-10", "weight": 115.6 },
+        { "day": 56, "date": "2022-12-11", "weight": 116.1 },
+        { "day": 57, "date": "2022-12-12", "weight": 115.4 },
+        { "day": 58, "date": "2022-12-13", "weight": 114.6 }, 
+        { "day": 59, "date": "2022-12-14", "weight": 114.2 }
     ]
 
     // Selecionar div para colocar o relatório gráfico dentro
