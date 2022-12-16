@@ -71,9 +71,7 @@ export const SectionArticlesHighlightCover = styled(GatsbyImage)``
 export const SectionArticlesHighlightShadow = styled.div``
 
 export const SectionArticlesHighlightContent = styled.div`
-  p {
-    font-weight: 500;
-  }
+
 `
 
 export const SectionArticlesHighlightLink = styled(Link)`
@@ -155,10 +153,13 @@ export const SectionArticlesHighlightLink = styled(Link)`
       color: var(--texts);
       max-width: var(--512px);
       line-height: 125%;
+      font-weight: 500;
     }
   }
 
-  &:hover ${SectionArticlesHighlightContent} {
-    margin-left: var(--72px);
-  }
+  ${media.greaterThan("medium")`
+    &:hover ${SectionArticlesHighlightContent} {
+      margin-left: var(--72px);
+    }
+  `}
 `
