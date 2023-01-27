@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react"
+import React, { useState, useCallback, useMemo, useRef } from "react"
 
 import Strings from "components/strings"
 
@@ -24,12 +24,29 @@ import {
   ColorSectionDescription,
   ColorGrid,
   ColorElementWrapper,
+  ColorsSelect,
 } from "./styled"
 
 const convertHue = (hue) => hue - Math.floor(hue / 360) * 360
 
 const ColorsPage = () => {
   const [currentHex, setCurrentHex] = useState("#e0138c")
+
+  const [valueHex, setValueHex] = useState("#e0138c")
+
+  const savedTimer = useRef(null)
+
+  const changeValueHex = useCallback(
+    (e) => {
+      if (savedTimer.current) {
+        clearTimeout(savedTimer.current)
+      }
+
+      setValueHex(e.target.value)
+      savedTimer.current = setTimeout(() => setCurrentHex(e.target.value), 500)
+    },
+    [setCurrentHex]
+  )
 
   const {
     colorRgb,
@@ -86,7 +103,14 @@ const ColorsPage = () => {
         >
           {color}
           {color !== currentHex && (
-            <ColorPalette onClick={() => setCurrentHex(color)}>●</ColorPalette>
+            <ColorPalette
+              onClick={() => {
+                setValueHex(color)
+                setCurrentHex(color)
+              }}
+            >
+              ●
+            </ColorPalette>
           )}
         </ColorElementWrapper>
       ),
@@ -151,7 +175,12 @@ const ColorsPage = () => {
 
   return (
     <ColorsWrapper>
-      <ColorsTitle>{Strings.utils.colorExplorer.title}</ColorsTitle>
+      <ColorsTitle>{currentHex} - {Strings.utils.colorExplorer.title}</ColorsTitle>
+
+      <ColorsSelect>
+        <label htmlFor="selectColor">Selecione a cor desejada: </label>
+        <input type="color" id="selectColor" onChange={changeValueHex} value={valueHex} />
+      </ColorsSelect>
 
       <ColorSection>
         <ColorSectionTitle>Composição da cor</ColorSectionTitle>

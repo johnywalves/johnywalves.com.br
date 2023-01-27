@@ -22,6 +22,45 @@ export const ColorsTitle = styled.h1`
   text-shadow: 1px 1px 2px var(--shadow-colors);
 `
 
+export const ColorsSelect = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--16px);
+
+  margin: var(--24px) 0 var(--16px);
+
+  & label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 1.75rem;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  & input {
+    appearance: none;
+    border: none;
+    outline: none;
+
+    width: var(--128px);
+    height: var(--48px);
+    background-color: transparent;
+    cursor: pointer;
+
+    &::-webkit-color-swatch,
+    &::-moz-color-swatch {
+      border: none;
+      border-radius: var(--8px);
+    }
+  }
+`
+
 export const ColorsDescriptions = styled.div`
   display: flex;
   flex-direction: column;
