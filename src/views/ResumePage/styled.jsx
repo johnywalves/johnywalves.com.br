@@ -56,7 +56,7 @@ export const ResumeNavigation = styled.nav`
 export const ResumeContent = styled.div`
   height: 100%;
   background-color: var(--background);
-  padding: var(--16px) var(--32px) 0 0;
+  padding: var(--16px) var(--16px) 0 0;
 `
 
 export const ResumeSection = styled.section`

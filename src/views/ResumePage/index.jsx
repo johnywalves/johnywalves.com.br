@@ -135,7 +135,7 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.certification.list
             .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))
-            .slice(0, 7)
+            .slice(0, 5)
             .map(({ date, name, institute }) => (
               <ResumeCourse>
                 <div>
