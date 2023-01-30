@@ -63,7 +63,7 @@ export const ResumeSection = styled.section`
   display: flex;
   flex-direction: column;
 
-  margin: var(--16px) 0 0;
+  margin: var(--8px) 0 0;
 
   & h1 {
     margin: 0;
@@ -149,27 +149,21 @@ export const ResumeSubSection = styled.article`
 
 export const ResumeSubTitle = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   gap: var(--4px);
 
   margin: var(--16px) 0 0;
 
   & h3 {
-    line-height: 100%;
-  }
-
-  & small {
     display: flex;
     flex-direction: row;
-    gap: var(--4px);
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
 
-    font-size: 0.8rem;
-    line-height: 0.5rem;
-    margin-bottom: var(--4px);
-
-    & > * {
-      line-height: 0.5rem;
-    }
+    font-size: var(--15px);
+    line-height: 80%;
   }
 `
