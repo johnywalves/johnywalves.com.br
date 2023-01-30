@@ -13,8 +13,7 @@
   "resume": {
     "title": "Currículo",
     "files": [
-      { "name": "VERSÃO COLORIDA", "file": "/docs/cv_johnywalves_pt_c.pdf" },
-      { "name": "VERSÃO IMPRESSÃO", "file": "/docs/cv_johnywalves_pt_g.pdf" }
+      { "name": "DOWNLOAD", "file": "/docs/johnywalves_br.pdf" }
     ]
   },
   "status": "Brasileiro, Solteiro, 36 anos",
@@ -55,7 +54,7 @@
     ]
   },
   "skills": {
-    "title": "Conhecimentos",
+    "title": "Tecnologias",
     "list": [
       {
         "type": "Linguagens",
@@ -82,7 +81,6 @@
           { "title": "React", "icon": "Gear" },
           { "title": "Redux", "icon": "Gear" },
           { "title": "Spring Boot", "icon": "Gear" },
-          { "title": "SQLAlchemy", "icon": "Gear" },
           { "title": "Styled Components", "icon": "Gear" }
         ]
       },
@@ -93,7 +91,6 @@
           { "title": "MySQL", "icon": "Database" },
           { "title": "PostgreSQL", "icon": "Database" },
           { "title": "Python", "icon": "Database" },
-          { "title": "PL/SQL", "icon": "Database" },
           { "title": "Qlik Sense", "icon": "Database" },
           { "title": "R", "icon": "Database" }
         ]
@@ -436,8 +433,8 @@
         "title": "Desenvolvedor Frontend Senior",
         "institution": "CI&T",
         "description": [
-          "<strong>ANBIMA</strong>: Desenvolvimento de ferramenta para instituições financeiras coletar operaçẽos de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
-          "<strong>Coca-Cola</strong>: Atualização e manutenção nas ferramentas de marketing em coleta de leads e acompanhamento das métricas de usuários (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
+          "<strong>Coca-Cola</strong>: Atualização e manutenção de ferramentas para promoções, coleta de leads e acompanhamento das métricas de consumidores (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services e GitHub Actions)",
+          "<strong>ANBIMA</strong>: Criação de sistema para instituições financeiras informarem operações de carteiras administradas, e reestruturação da plataforma de publicação de dados sobre produtos financeiros, focado no SEO e performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)"
         ]
       },
       {
@@ -454,8 +451,8 @@
         "title": "Analista Desenvolvedor",
         "institution": "Invillia",
         "description": [
-          "Parte do time de desenvolvimento e manutenção da suíte de aplicativos da <strong>Invillia Apps</strong>, interfaces ricas para visualização de dados com treinamento e destaque dos colaboradores",
-          "Desenvolvimento Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)"
+          "Desenvolvimento e otimização da suíte de aplicativos da <strong>Invillia Apps</strong>, interfaces ricas para controle do ambiente de trabalho, visualização de dados com treinamento e destaque dos colaboradores",
+          "Aplicacação com Web Frontend (JavaScript, TypeScript, React, HTML e CSS) e Backend (Node, Express e NextJS)"
         ]
       },
       {

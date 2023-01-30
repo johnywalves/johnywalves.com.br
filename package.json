@@ -57,7 +57,8 @@
   "license": "MIT",
   "scripts": {
     "pre-run": "node pre-run.js",
-    "build": "npm run pre-run && gatsby build && node get-open-graphic-images.js",
+    "pos-run": "node pos-run.js",
+    "build": "npm run pre-run && gatsby build && npm run pos-run",
     "dev": "npm run pre-run && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "start": "gatsby develop",

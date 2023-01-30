@@ -13,8 +13,7 @@
   "resume": {
     "title": "Resume",
     "files": [
-      { "name": "COLORFUL VERSION", "file": "/docs/cv_johnywalves_en_c.pdf" },
-      { "name": "PRINT VERSION", "file": "/docs/cv_johnywalves_en_g.pdf" }
+      { "name": "DOWNLOAD", "file": "/docs/johnywalves_en.pdf" }
     ]
   },
   "status": "Brazilian, Single, 36 years old",
@@ -42,20 +41,20 @@
     "feed": "http://feeds.feedburner.com/johnywalves-comics"
   },
   "languages": {
-    "title": "Languages",
+    "title": "Language",
     "list": [
       {
         "name": "English",
         "proficiency": "Intermediate"
       },
       {
-        "name": "Portuguese",
+        "name": "Brazilian Portuguese",
         "proficiency": "Native"
       }
     ]
   },
   "skills": {
-    "title": "Skills",
+    "title": "Tech Stack",
     "list": [
       {
         "type": "Languages",
@@ -82,7 +81,6 @@
           { "title": "React", "icon": "Gear" },
           { "title": "Redux", "icon": "Gear" },
           { "title": "Spring Boot", "icon": "Gear" },
-          { "title": "SQLAlchemy", "icon": "Gear" },
           { "title": "Styled Components", "icon": "Gear" }
         ]
       },
@@ -93,7 +91,6 @@
           { "title": "MySQL", "icon": "Database" },
           { "title": "PostgreSQL", "icon": "Database" },
           { "title": "Python", "icon": "Database" },
-          { "title": "PL/SQL", "icon": "Database" },
           { "title": "Qlik Sense", "icon": "Database" },
           { "title": "R", "icon": "Database" }
         ]
@@ -368,7 +365,7 @@
     ]
   },
   "education": {
-    "title": "Academic Education",
+    "title": "Education",
     "list": [
       {
         "date": "Out 2020 - Dec 2022",
@@ -429,15 +426,15 @@
     ]
   },
   "experience": {
-    "title": "Professional Experience",
+    "title": "Experience",
     "list": [
       {
         "date": "Set 2021 - Current",
         "title": "Senior Developer Frontend",
         "institution": "CI&T",
         "description": [
-          "<strong>ANBIMA</strong>: Development of a tool for financial institutions to collect operations from managed portfolios, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)",
-          "<strong>Coca-Cola</strong>: Updating and maintaining marketing tools in collecting leads and tracking user metrics (HTML, CSS, Vanilla JavaScript, Adobe Forms, AWS Lambda e GitHub)"
+          "<strong>Coca-Cola</strong>: Updating and maintaining tools for promotions, lead collection and monitoring consumer metrics (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services and GitHub Actions)",
+          "<strong>ANBIMA</strong>: Creation of a system for financial institutions to inform operations of stock managed, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)"
         ]
       },
       {
@@ -454,7 +451,7 @@
         "title": "Developer",
         "institution": "Invillia",
         "description": [
-          "Part of the development and maintenance team for the <strong>Invillia Apps</strong> application suite, rich interfaces for data visualization and employee training",
+          "Development and optimization for the <strong>Invillia Apps</strong> application suite, rich interfaces for monitoring of the work environment, data visualization and employee training",
           "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, NextJS)"
         ]
       },
