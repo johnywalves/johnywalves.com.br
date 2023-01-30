@@ -122,14 +122,21 @@ export const ResumePerson = styled.section`
 
 export const ResumeCourse = styled.section`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
   gap: var(--4px);
 
   margin: var(--8px) var(--16px) 0;
 
   &:first-of-type {
     margin-top: var(--16px);
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--4px);
   }
 `
 

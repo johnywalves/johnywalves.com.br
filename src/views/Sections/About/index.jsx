@@ -51,7 +51,7 @@ const SectionAbout = () => {
           {languages.list.map((language, index) => (
             <Language key={index}>
               <LanguageName>
-                <LanguageIcon /> {language.name} {language.proficiency}
+                <LanguageIcon /> {language.name} ({language.proficiency})
               </LanguageName>
             </Language>
           ))}

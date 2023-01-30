@@ -95,8 +95,8 @@ const ResumePage = ({ language }) => {
                 <ResumeSubTitle>
                   <h3>{title}</h3>
                   <small>
-                    <time>{date}</time> | <p>{institution}</p>
-                  </small>                  
+                    <time>{date}.</time> <p>{institution}</p>
+                  </small>
                 </ResumeSubTitle>
 
                 <ul>
@@ -117,10 +117,15 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.education.list
             .slice(0, 3)
-            .map(({ date, title, institution }) => (
+            .map(({ date, title, institution, production }) => (
               <ResumeCourse>
-                <time>{getLast(date)}.</time> <h3>{title}</h3> |{" "}
-                <p>{institution}</p>
+                <div>
+                  <time>{getLast(date)}.</time> <strong>{title}</strong> |{" "}
+                  <p>{institution}</p>
+                </div>
+                <div>
+                  <p>{production.title}</p>
+                </div>
               </ResumeCourse>
             ))}
         </ResumeSection>
@@ -130,11 +135,13 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.certification.list
             .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))
-            .slice(0, 5)
+            .slice(0, 7)
             .map(({ date, name, institute }) => (
               <ResumeCourse>
-                <time>{getYear(date)}.</time> <h3>{name}</h3> |{" "}
-                <p>{institute}</p>
+                <div>
+                  <time>{getYear(date)}.</time> <strong>{name}</strong> |{" "}
+                  <p>{institute}</p>
+                </div>
               </ResumeCourse>
             ))}
         </ResumeSection>

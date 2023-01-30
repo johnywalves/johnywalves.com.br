@@ -54,9 +54,9 @@ async function navigateOpenGraphic() {
   const page = await browser.newPage()
 
   // Getting - Images
-  /*for (const slug of slugs) {
+  for (const slug of slugs) {
     await getImage(servingUrl, page, slug)
-  }*/
+  }
 
   // Getting - Curriculum Vitae
   await getResume(servingUrl, page, "br")
