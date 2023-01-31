@@ -13,7 +13,8 @@
   "resume": {
     "title": "Currículo",
     "files": [
-      { "name": "DOWNLOAD", "file": "/docs/johnywalves_br.pdf" }
+      { "name": "PORTUGUÊS", "file": "/docs/johnywalves_br.pdf" },
+      { "name": "INGLÊS", "file": "/docs/johnywalves_en.pdf" }
     ]
   },
   "status": "Brasileiro, Solteiro, 36 anos",

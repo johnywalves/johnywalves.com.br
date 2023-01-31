@@ -13,7 +13,8 @@
   "resume": {
     "title": "Resume",
     "files": [
-      { "name": "DOWNLOAD", "file": "/docs/johnywalves_en.pdf" }
+      { "name": "ENGLISH", "file": "/docs/johnywalves_en.pdf" },
+      { "name": "PORTUGUESE", "file": "/docs/johnywalves_br.pdf" }
     ]
   },
   "status": "Brazilian, Single, 36 years old",
