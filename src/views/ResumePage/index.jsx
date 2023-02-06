@@ -119,15 +119,10 @@ const ResumePage = ({ language }) => {
             .slice(0, 3)
             .map(({ date, title, institution, production }) => (
               <ResumeCourse>
-                <div>
-                  <time>{getLast(date)}.</time>
-                  <strong>{title}</strong>
-                  <p>|</p>
-                  <p>{institution}</p>
-                </div>
-                <div>
-                  <p>{production.title}</p>
-                </div>
+                <p>
+                  {getLast(date)}. <strong>{title}</strong> | {institution}
+                </p>
+                <p>{production.title}</p>
               </ResumeCourse>
             ))}
         </ResumeSection>
@@ -140,11 +135,9 @@ const ResumePage = ({ language }) => {
             .slice(0, 5)
             .map(({ date, name, institute }) => (
               <ResumeCourse>
-                <div>
-                  <time>{getYear(date)}.</time> <strong>{name}</strong>
-                  <p>|</p>
-                  <p>{institute}</p>
-                </div>
+                <p>
+                  {getYear(date)}. <strong>{name}</strong> | {institute}
+                </p>
               </ResumeCourse>
             ))}
         </ResumeSection>

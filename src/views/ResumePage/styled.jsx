@@ -8,7 +8,7 @@ export const ResumeWrapper = styled.main`
   grid-template-columns: 30% 70%;
 
   color: var(--texts);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 
   & h1 {
     font-size: 1.5rem;
@@ -21,6 +21,10 @@ export const ResumeWrapper = styled.main`
     font-weight: 500;
     text-transform: uppercase;
     color: var(--highlight);
+  }
+
+  & h3 {
+    font-size: 0.875rem;
   }
 
   label {
@@ -131,13 +135,6 @@ export const ResumeCourse = styled.section`
   &:first-of-type {
     margin-top: var(--16px);
   }
-
-  & div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--4px);
-  }
 `
 
 export const ResumeSubSection = styled.article`
@@ -162,8 +159,5 @@ export const ResumeSubTitle = styled.div`
     justify-content: flex-start;
     align-items: center;
     vertical-align: middle;
-
-    font-size: var(--15px);
-    line-height: 80%;
   }
 `
