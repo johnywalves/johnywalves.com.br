@@ -93,7 +93,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection>
                 <ResumeSubTitle>
-                  <time>{date}.</time>
+                  <time>{date}</time>.
                   <h3>{title}</h3>
                   <p>|</p>
                   <p>{institution}</p>
@@ -120,7 +120,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, production }) => (
               <ResumeCourse>
                 <p>
-                  {getLast(date)}. <strong>{title}</strong> | {institution}
+                <time>{getLast(date)}</time>. <strong>{title}</strong> | {institution}
                 </p>
                 <p>{production.title}</p>
               </ResumeCourse>
@@ -136,7 +136,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, name, institute }) => (
               <ResumeCourse>
                 <p>
-                  {getYear(date)}. <strong>{name}</strong> | {institute}
+                  <time>{getYear(date)}</time>. <strong>{name}</strong> | {institute}
                 </p>
               </ResumeCourse>
             ))}

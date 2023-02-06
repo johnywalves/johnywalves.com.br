@@ -8,23 +8,27 @@ export const ResumeWrapper = styled.main`
   grid-template-columns: 30% 70%;
 
   color: var(--texts);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 
   & h1 {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 600;
     text-align: center;
   }
 
   & h2 {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--highlight);
   }
 
   & h3 {
-    font-size: 0.875rem;
+  font-size: 0.8125rem;
+  }
+
+  & time {
+    font-weight: 400;
   }
 
   label {
@@ -108,7 +112,8 @@ export const ResumeSection = styled.section`
   }
 
   & > p {
-    margin: var(--16px) var(--16px) 0;
+    margin: var(--4px) var(--16px) 0;
+    line-height: 120%;
   }
 
   & > article {
