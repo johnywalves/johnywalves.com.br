@@ -74,15 +74,15 @@
           { "title": "Bootstrap", "icon": "Gear" },
           { "title": "D3", "icon": "Gear" },
           { "title": "Express", "icon": "Gear" },
-          { "title": "Flask", "icon": "Gear" },
           { "title": "Gatsby", "icon": "Gear" },
           { "title": "Jekyll", "icon": "Gear" },
-          { "title": "NextJS", "icon": "Gear" },
+          { "title": "Next.js", "icon": "Gear" },
           { "title": "Node", "icon": "Gear" },
           { "title": "React", "icon": "Gear" },
           { "title": "Redux", "icon": "Gear" },
           { "title": "Spring Boot", "icon": "Gear" },
-          { "title": "Styled Components", "icon": "Gear" }
+          { "title": "Styled Components", "icon": "Gear" },
+          { "title": "Tailwind CSS", "icon": "Gear" }          
         ]
       },
       {
@@ -230,11 +230,11 @@
         "description": "A creative way to greet your fellow developers every morning"
       },
       {
-        "title": "Boilerplate to React, NextJS and TypeScript",
+        "title": "Boilerplate to React, Next.js and TypeScript",
         "sourceCode": "https://github.com/johnywalves/react-next-boilerplate",
         "cover": "boilerplate",
         "view": "https://boilerplate-react-next.vercel.app/",
-        "description": "Boilerplate with React, NextJS, Typescript, Storybook and Styled Components to get started fast and with minimal configuration"
+        "description": "Boilerplate with React, Next.js, Typescript, Storybook and Styled Components to get started fast and with minimal configuration"
       },
       {
         "title": "CSS Animatic",
@@ -430,12 +430,12 @@
     "title": "Experience",
     "list": [
       {
-        "date": "Set 2021 - Current",
+        "date": "Set 2021 - Feb 2023",
         "title": "Senior Developer Frontend",
         "institution": "CI&T",
         "description": [
           "<strong>Coca-Cola</strong>: Updating and maintaining tools for promotions, lead collection and monitoring consumer metrics (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services and GitHub Actions)",
-          "<strong>ANBIMA</strong>: Creation of a system for financial institutions to inform operations of stock managed, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, NextJS e Gitlab)"
+          "<strong>ANBIMA</strong>: Creation of a system for financial institutions to inform operations of stock managed, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, Next.js e Gitlab)"
         ]
       },
       {
@@ -444,7 +444,7 @@
         "institution": "Meta",
         "description": [
           "Service provision for Localiza in the maintenance and evolution of the <strong>Zarp Localiza</strong> tool, for vehicle rental and other services, aimed at capturing and retaining customers",
-          "Restructuring of <strong>Zarp Localiza</strong> focused on user experience, value delivery and search engine optimization (SEO) with NextJS"
+          "Restructuring of <strong>Zarp Localiza</strong> focused on user experience, value delivery and search engine optimization (SEO) with Next.js"
         ]
       },
       {
@@ -453,7 +453,7 @@
         "institution": "Invillia",
         "description": [
           "Development and optimization for the <strong>Invillia Apps</strong> application suite, rich interfaces for monitoring of the work environment, data visualization and employee training",
-          "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, NextJS)"
+          "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, Next.js)"
         ]
       },
       {
@@ -461,7 +461,7 @@
         "title": "Full Web Developer",
         "institution": "Unimed Rio Preto",
         "description": [
-          "Web development of the service portal for beneficiaries for financial control, exams, appointment scheduling, among others (JavaScript, TypeScript, React, NextJS, HTML e CSS)",
+          "Web development of the service portal for beneficiaries for financial control, exams, appointment scheduling, among others (JavaScript, TypeScript, React, Next.js, HTML e CSS)",
           "API planning and development for authentication and delivery of beneficiary data (PL/SQL, Java, Spring Boot e RESTFul)",
           "Test Automation and DevOps for in-house and third-party development (Apache Tomcat, Jenkins, Jest and Python)"
         ]
