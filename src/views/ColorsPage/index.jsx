@@ -23,6 +23,7 @@ import {
   ColorSectionSubtitle,
   ColorSectionDescription,
   ColorGrid,
+  ColorElementContent,
   ColorElementWrapper,
   ColorsSelect,
 } from "./styled"
@@ -48,6 +49,18 @@ const ColorsPage = () => {
     [setCurrentHex]
   )
 
+  const scale = {
+    100: 96,
+    200: 90,
+    300: 83,
+    400: 64,
+    500: 45,
+    600: 32,
+    700: 25,
+    800: 15,
+    900: 9,
+  }
+
   const {
     colorRgb,
     colorHsl,
@@ -64,6 +77,10 @@ const ColorsPage = () => {
     tetradTwo,
     tetradThree,
     tetradFour,
+    pentaTwo,
+    pentaThree,
+    pentaFour,
+    pentaFive,
     light2,
     light3,
     light4,
@@ -82,21 +99,88 @@ const ColorsPage = () => {
     dark8,
     dark9,
     dark10,
+    hex100,
+    hex200,
+    hex300,
+    hex400,
+    hex500,
+    hex600,
+    hex700,
+    hex800,
+    hex900,
+    neutral100,
+    neutral200,
+    neutral300,
+    neutral400,
+    neutral500,
+    neutral600,
+    neutral700,
+    neutral800,
+    neutral900,
+    paletteOne100,
+    paletteOne200,
+    paletteOne300,
+    paletteOne400,
+    paletteOne500,
+    paletteOne600,
+    paletteOne700,
+    paletteOne800,
+    paletteOne900,
+    paletteTwo100,
+    paletteTwo200,
+    paletteTwo300,
+    paletteTwo400,
+    paletteTwo500,
+    paletteTwo600,
+    paletteTwo700,
+    paletteTwo800,
+    paletteTwo900,
+    paletteThree100,
+    paletteThree200,
+    paletteThree300,
+    paletteThree400,
+    paletteThree500,
+    paletteThree600,
+    paletteThree700,
+    paletteThree800,
+    paletteThree900,
+    paletteFour100,
+    paletteFour200,
+    paletteFour300,
+    paletteFour400,
+    paletteFour500,
+    paletteFour600,
+    paletteFour700,
+    paletteFour800,
+    paletteFour900,
     ColorElement,
   } = useMemo(() => {
     const [currentHue, currentSaturation, currentLight] = hexToHSL(
-        currentHex,
-        true
-      ),
-      calcColor = (hueDiff, saturationDiff, lightDiff) => {
-        const hue = convertHue(currentHue + hueDiff),
-          saturation = currentSaturation + saturationDiff,
-          light = currentLight + lightDiff
+      currentHex,
+      true
+    )
 
-        return hslToHex(hue, saturation, light)
-      }
-    const ColorElement = ({ color, small }) => (
-        <ColorElementWrapper
+    const calcColor = (hueDiff, saturationDiff, lightDiff) => {
+      const hue = convertHue(currentHue + hueDiff),
+        saturation = Math.min(currentSaturation + saturationDiff, 100),
+        light = Math.min(currentLight + lightDiff, 100)
+      return hslToHex(hue, saturation, light)
+    }
+
+    const neutralScale = (light) => {
+      const calculedLight = scale[light]
+      return hslToHex(currentHue, currentSaturation, calculedLight)
+    }
+
+    const getScaleLight = (color, scaleLight) => {
+      const [hue] = hexToHSL(color, true)
+      const calculedLight = scale[scaleLight]
+      return hslToHex(hue, 100, calculedLight)
+    }
+
+    const ColorElement = ({ color, small, label }) => (
+      <ColorElementWrapper>
+        <ColorElementContent
           small={small ? 1 : 0}
           color={color}
           text={getContrastColor(color)}
@@ -112,12 +196,27 @@ const ColorsPage = () => {
               ●
             </ColorPalette>
           )}
-        </ColorElementWrapper>
-      ),
-      [red, green, blue] = hexToRGB(currentHex, true),
-      [cyan, magenta, yellow, black] = rgbToCmyk(red, green, blue),
-      gradeLight = (100 - currentLight) / 9,
-      gradeDark = currentLight / 9
+        </ColorElementContent>
+        {label && <label>{label}</label>}
+      </ColorElementWrapper>
+    )
+
+    const neutralCalc = (percent) =>
+      "#" +
+      Math.ceil((255 * scale[percent]) / 100)
+        .toString(16)
+        .padStart(2, "0")
+        .repeat(3)
+
+    const [red, green, blue] = hexToRGB(currentHex, true)
+    const [cyan, magenta, yellow, black] = rgbToCmyk(red, green, blue)
+    const gradeLight = (100 - currentLight) / 9
+    const gradeDark = currentLight / 9
+
+    const pentaTwo = calcColor(72, 100, 0)
+    const pentaThree = calcColor(144, 100, 0)
+    const pentaFour = calcColor(216, 100, 0)
+    const pentaFive = calcColor(288, 100, 0)
 
     return {
       colorRgb: {
@@ -151,6 +250,10 @@ const ColorsPage = () => {
       tetradTwo: calcColor(120, 0, 0),
       tetradThree: calcColor(180, 0, 0),
       tetradFour: calcColor(240, 0, 0),
+      pentaTwo,
+      pentaThree,
+      pentaFour,
+      pentaFive,
       light2: calcColor(0, 0, gradeLight),
       light3: calcColor(0, 0, gradeLight * 2),
       light4: calcColor(0, 0, gradeLight * 3),
@@ -169,17 +272,78 @@ const ColorsPage = () => {
       dark8: calcColor(0, 0, gradeDark * -7),
       dark9: calcColor(0, 0, gradeDark * -8),
       dark10: calcColor(0, 0, gradeDark * -9),
+      hex100: neutralScale(100),
+      hex200: neutralScale(200),
+      hex300: neutralScale(300),
+      hex400: neutralScale(400),
+      hex500: neutralScale(500),
+      hex600: neutralScale(600),
+      hex700: neutralScale(700),
+      hex800: neutralScale(800),
+      hex900: neutralScale(900),
+      neutral100: neutralCalc(100),
+      neutral200: neutralCalc(200),
+      neutral300: neutralCalc(300),
+      neutral400: neutralCalc(400),
+      neutral500: neutralCalc(500),
+      neutral600: neutralCalc(600),
+      neutral700: neutralCalc(700),
+      neutral800: neutralCalc(800),
+      neutral900: neutralCalc(900),
+      paletteOne100: getScaleLight(pentaTwo, 100),
+      paletteOne200: getScaleLight(pentaTwo, 200),
+      paletteOne300: getScaleLight(pentaTwo, 300),
+      paletteOne400: getScaleLight(pentaTwo, 400),
+      paletteOne500: getScaleLight(pentaTwo, 500),
+      paletteOne600: getScaleLight(pentaTwo, 600),
+      paletteOne700: getScaleLight(pentaTwo, 700),
+      paletteOne800: getScaleLight(pentaTwo, 800),
+      paletteOne900: getScaleLight(pentaTwo, 900),
+      paletteTwo100: getScaleLight(pentaThree, 100),
+      paletteTwo200: getScaleLight(pentaThree, 200),
+      paletteTwo300: getScaleLight(pentaThree, 300),
+      paletteTwo400: getScaleLight(pentaThree, 400),
+      paletteTwo500: getScaleLight(pentaThree, 500),
+      paletteTwo600: getScaleLight(pentaThree, 600),
+      paletteTwo700: getScaleLight(pentaThree, 700),
+      paletteTwo800: getScaleLight(pentaThree, 800),
+      paletteTwo900: getScaleLight(pentaThree, 900),
+      paletteThree100: getScaleLight(pentaFour, 100),
+      paletteThree200: getScaleLight(pentaFour, 200),
+      paletteThree300: getScaleLight(pentaFour, 300),
+      paletteThree400: getScaleLight(pentaFour, 400),
+      paletteThree500: getScaleLight(pentaFour, 500),
+      paletteThree600: getScaleLight(pentaFour, 600),
+      paletteThree700: getScaleLight(pentaFour, 700),
+      paletteThree800: getScaleLight(pentaFour, 800),
+      paletteThree900: getScaleLight(pentaFour, 900),
+      paletteFour100: getScaleLight(pentaFive, 100),
+      paletteFour200: getScaleLight(pentaFive, 200),
+      paletteFour300: getScaleLight(pentaFive, 300),
+      paletteFour400: getScaleLight(pentaFive, 400),
+      paletteFour500: getScaleLight(pentaFive, 500),
+      paletteFour600: getScaleLight(pentaFive, 600),
+      paletteFour700: getScaleLight(pentaFive, 700),
+      paletteFour800: getScaleLight(pentaFive, 800),
+      paletteFour900: getScaleLight(pentaFive, 900),
       ColorElement,
     }
   }, [currentHex])
 
   return (
     <ColorsWrapper>
-      <ColorsTitle>{currentHex} - {Strings.utils.colorExplorer.title}</ColorsTitle>
+      <ColorsTitle>
+        {Strings.utils.colorExplorer.title.replace('#e0138c', currentHex)}
+      </ColorsTitle>
 
       <ColorsSelect>
         <label htmlFor="selectColor">Selecione a cor desejada: </label>
-        <input type="color" id="selectColor" onChange={changeValueHex} value={valueHex} />
+        <input
+          type="color"
+          id="selectColor"
+          onChange={changeValueHex}
+          value={valueHex}
+        />
       </ColorsSelect>
 
       <ColorSection>
@@ -355,6 +519,95 @@ const ColorsPage = () => {
           <ColorElement small color={dark8} />
           <ColorElement small color={dark9} />
           <ColorElement small color={dark10} />
+        </ColorGrid>
+      </ColorSection>
+
+      <ColorSection>
+        <ColorSectionTitle>Paleta de cores</ColorSectionTitle>
+
+        <ColorSectionSubtitle>
+          <strong>Pentagrama de cores:</strong> Variação de 72º com saturação de 100%
+        </ColorSectionSubtitle>
+        <ColorGrid number="5">
+          <ColorElement color={currentHex} />
+          <ColorElement color={pentaTwo} />
+          <ColorElement color={pentaThree} />
+          <ColorElement color={pentaFour} />
+          <ColorElement color={pentaFive} />
+        </ColorGrid>
+
+        <hr />
+
+        <ColorSectionSubtitle>Primária</ColorSectionSubtitle>
+        <ColorGrid number="8">
+          <ColorElement color={hex100} label="100" />
+          <ColorElement color={hex200} label="200" />
+          <ColorElement color={hex300} label="300" />
+          <ColorElement color={hex400} label="400" />
+          <ColorElement color={hex500} label="500" />
+          <ColorElement color={hex600} label="600" />
+          <ColorElement color={hex700} label="700" />
+          <ColorElement color={hex800} label="800" />
+          <ColorElement color={hex900} label="900" />
+        </ColorGrid>
+
+        <ColorSectionSubtitle>Neutra</ColorSectionSubtitle>
+        <ColorGrid number="8">
+          <ColorElement color={neutral100} label="100" />
+          <ColorElement color={neutral200} label="200" />
+          <ColorElement color={neutral300} label="300" />
+          <ColorElement color={neutral400} label="400" />
+          <ColorElement color={neutral500} label="500" />
+          <ColorElement color={neutral600} label="600" />
+          <ColorElement color={neutral700} label="700" />
+          <ColorElement color={neutral800} label="800" />
+          <ColorElement color={neutral900} label="900" />
+        </ColorGrid>
+
+        <ColorSectionSubtitle>Secundárias</ColorSectionSubtitle>
+        <ColorGrid number="8">
+          <ColorElement color={paletteOne100} label="100" />
+          <ColorElement color={paletteOne200} label="200" />
+          <ColorElement color={paletteOne300} label="300" />
+          <ColorElement color={paletteOne400} label="400" />
+          <ColorElement color={paletteOne500} label="500" />
+          <ColorElement color={paletteOne600} label="600" />
+          <ColorElement color={paletteOne700} label="700" />
+          <ColorElement color={paletteOne800} label="800" />
+          <ColorElement color={paletteOne900} label="900" />
+        </ColorGrid>
+        <ColorGrid number="8">
+          <ColorElement color={paletteTwo100} label="100" />
+          <ColorElement color={paletteTwo200} label="200" />
+          <ColorElement color={paletteTwo300} label="300" />
+          <ColorElement color={paletteTwo400} label="400" />
+          <ColorElement color={paletteTwo500} label="500" />
+          <ColorElement color={paletteTwo600} label="600" />
+          <ColorElement color={paletteTwo700} label="700" />
+          <ColorElement color={paletteTwo800} label="800" />
+          <ColorElement color={paletteTwo900} label="900" />
+        </ColorGrid>
+        <ColorGrid number="8">
+          <ColorElement color={paletteThree100} label="100" />
+          <ColorElement color={paletteThree200} label="200" />
+          <ColorElement color={paletteThree300} label="300" />
+          <ColorElement color={paletteThree400} label="400" />
+          <ColorElement color={paletteThree500} label="500" />
+          <ColorElement color={paletteThree600} label="600" />
+          <ColorElement color={paletteThree700} label="700" />
+          <ColorElement color={paletteThree800} label="800" />
+          <ColorElement color={paletteThree900} label="900" />
+        </ColorGrid>
+        <ColorGrid number="8">
+          <ColorElement color={paletteFour100} label="100" />
+          <ColorElement color={paletteFour200} label="200" />
+          <ColorElement color={paletteFour300} label="300" />
+          <ColorElement color={paletteFour400} label="400" />
+          <ColorElement color={paletteFour500} label="500" />
+          <ColorElement color={paletteFour600} label="600" />
+          <ColorElement color={paletteFour700} label="700" />
+          <ColorElement color={paletteFour800} label="800" />
+          <ColorElement color={paletteFour900} label="900" />
         </ColorGrid>
       </ColorSection>
     </ColorsWrapper>

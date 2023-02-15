@@ -121,6 +121,10 @@ export const ColorSectionSubtitle = styled.h3`
   & strong {
     font-weight: 900;
   }
+
+  & a {
+    color: var(--highlight);
+  }
 `
 
 export const ColorSectionDescription = styled.p`
@@ -134,6 +138,20 @@ export const ColorGrid = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--16px);
+`
+
+
+export const ColorElementWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: var(--8px);
+
+  & label {
+    font-weight: 700;
+    text-align: center;
+  }
 `
 
 const normalText = css`
@@ -154,7 +172,7 @@ const smallText = css`
   }
 `
 
-export const ColorElementWrapper = styled.div`
+export const ColorElementContent = styled.div`
   min-height: 50px;
   padding: 0 var(--8px);
   flex-grow: 1;
