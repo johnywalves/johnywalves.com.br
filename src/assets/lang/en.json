@@ -1,5 +1,5 @@
 {
-  "description": "My name is Johny William de Oliveira Alves, fullstack web developer, with +15 years of experience, data science student, passionate with machine learning, automate processes and deliver metrics",
+  "description": "My name is Johny William de Oliveira Alves, I've been working as a web developer for over 15 years, I'm a student of data science, machine learning, process automation and metrics delivery. I have experience with modern technologies such as JavaScript with React and Next.js, TypeScript, Python, Node, among others",
   "position": "Web Developer",
   "aboutMe": "About me",
   "seeMore": "See more",
@@ -546,7 +546,7 @@
     "titleCheatsheets": "Cheatsheets",
     "titleTools": "Tools",
     "colorExplorer": {
-      "title": "Color`s Explorer"
+      "title": "#e0138c - Color`s Explorer"
     }
   },
   "menuLinks": [
@@ -594,7 +594,7 @@
     {
       "label": "CNPq",
       "icon": "School",
-      "url": "http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K2547980J8&idiomaExibicao=2"
+      "url": "http://lattes.cnpq.br/0468996619713052"
     },
     {
       "label": "E-mail",

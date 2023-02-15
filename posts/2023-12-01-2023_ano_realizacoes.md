@@ -33,11 +33,15 @@ Pellentesque tempor tellus sit amet felis venenatis, lacinia dapibus dolor pelle
 Morbi suscipit sagittis quam. Cras eu velit in ligula efficitur facilisis. Proin vel erat et augue condimentum mollis quis et augue. Fusce nibh felis, commodo non sagittis vel, rutrum et elit. Vivamus vehicula risus vel erat feugiat, quis consectetur nibh accumsan. Nam ac vestibulum orci. Cras faucibus, quam quis commodo posuere, arcu lacus euismod mi, non consequat purus augue eu arcu
 
 <p class="center bold">Controle de peso de "outubro de 2022" a "dezembro de 2023"</p>
-<p class="center bold">Evolução da perda em dias</p>
+<p class="center bold">Evolução de emagrecimento em dias</p>
 
 <div id="d3_wrapper" class="d3_graph">
   <div id="loading_graphic"></div>
 </div>
+
+No início estava estressado e desmotivado, em janeiro tirei um dez dias de férias, indo para Poço de Caldas e na liberdade de em São Paulo onde aproveitei para experimentar vários tipos de alimentos
+
+No começo de fevereiro decidi que iria pensar no resultado, depois de terminar com namorada e ser demitido, focando o tempo extra para estudar e me exercitar
 
 ## Conclusão
 

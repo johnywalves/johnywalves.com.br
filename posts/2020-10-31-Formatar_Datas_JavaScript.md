@@ -9,7 +9,7 @@ tags:
   - Datas
   - Formatação
 published: true
-cheatsheet: false
+cheatsheet: true
 ---
 
 Recentemente estava pensando qual snippet utilizo no JavaScript, acredito que seja a formatação de datas

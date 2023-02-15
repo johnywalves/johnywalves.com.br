@@ -1,5 +1,5 @@
 {
-  "description": "Meu nome é Johny William de Oliveira Alves, atuando como desenvolvedor web, com mais de 15 anos de experiência, estudante de ciência de dados e apaixonado por machine learning, automação de processos e entrega de métricas",
+  "description": "Meu nome é Johny William de Oliveira Alves, atuo como desenvolvedor web, há mais de 15 anos, sou estudante de ciência de dados, machine learning, automação de processos e entrega de métricas. Tenho experiência com tecnologias modernas sendo elas JavaScript com React e Next.js, TypeScript, Python, Node, entre outras",
   "position": "Desenvolvedor Web",
   "aboutMe": "Sobre mim",
   "seeMore": "Ver mais",
@@ -370,7 +370,7 @@
     "list": [
       {
         "date": "Out 2020 - Dez 2022",
-        "title": "Pós-Graduação em Gestão de Projetos em TI",
+        "title": "Especialista em Gestão de Projetos em TI",
         "institution": "Fatec Rio Preto",
         "description": [
           "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software."
@@ -382,7 +382,7 @@
       },
       {
         "date": "Mar 2018 - Mar 2020",
-        "title": "Pós-Graduação em Big Data",
+        "title": "Especialista em Big Data",
         "institution": "Centro Universitário Senac",
         "certification": "/cert/senac_bigdata.jpg",
         "description": [
@@ -546,7 +546,7 @@
     "titleCheatsheets": "Dicas de código",
     "titleTools": "Ferramentas",
     "colorExplorer": {
-      "title": "Explorador de cores"
+      "title": "#e0138c - Explorador de cores"
     }
   },
   "menuLinks": [
