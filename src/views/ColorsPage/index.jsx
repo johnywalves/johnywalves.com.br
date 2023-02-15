@@ -30,6 +30,18 @@ import {
 
 const convertHue = (hue) => hue - Math.floor(hue / 360) * 360
 
+const scale = {
+  100: 96,
+  200: 90,
+  300: 83,
+  400: 64,
+  500: 45,
+  600: 32,
+  700: 25,
+  800: 15,
+  900: 9,
+}
+
 const ColorsPage = () => {
   const [currentHex, setCurrentHex] = useState("#e0138c")
 
@@ -48,18 +60,6 @@ const ColorsPage = () => {
     },
     [setCurrentHex]
   )
-
-  const scale = {
-    100: 96,
-    200: 90,
-    300: 83,
-    400: 64,
-    500: 45,
-    600: 32,
-    700: 25,
-    800: 15,
-    900: 9,
-  }
 
   const {
     colorRgb,
@@ -333,7 +333,7 @@ const ColorsPage = () => {
   return (
     <ColorsWrapper>
       <ColorsTitle>
-        {Strings.utils.colorExplorer.title.replace('#e0138c', currentHex)}
+        {Strings.utils.colorExplorer.title.replace("#e0138c", currentHex)}
       </ColorsTitle>
 
       <ColorsSelect>
@@ -526,7 +526,8 @@ const ColorsPage = () => {
         <ColorSectionTitle>Paleta de cores</ColorSectionTitle>
 
         <ColorSectionSubtitle>
-          <strong>Pentagrama de cores:</strong> Variação de 72º com saturação de 100%
+          <strong>Pentagrama de cores:</strong> Variação de 72º com saturação de
+          100%
         </ColorSectionSubtitle>
         <ColorGrid number="5">
           <ColorElement color={currentHex} />
