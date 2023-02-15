@@ -114,6 +114,10 @@ export const ResumeSection = styled.section`
   & > p {
     margin: var(--4px) var(--16px) 0;
     line-height: 120%;
+
+    &.description {
+      margin-top: var(--16px);
+    }
   }
 
   & > article {

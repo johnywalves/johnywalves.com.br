@@ -15,6 +15,12 @@ const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 
 const getYear = (text) => new Date(text).getFullYear()
 
+const getDescription = (text) => {
+  const withoutFirstBreak = text.split(", ").slice(1).join(", ")
+  const capitulation = withoutFirstBreak[0].toUpperCase() + withoutFirstBreak.slice(1)
+  return capitulation
+}
+
 const ResumePage = ({ language }) => {
   return (
     <ResumeWrapper>
@@ -82,7 +88,7 @@ const ResumePage = ({ language }) => {
         <ResumeSection>
           <h2>{language.aboutMe}</h2>
           <hr />
-          <p>{language.description}</p>
+          <p className="description">{getDescription(language.description)}</p>
         </ResumeSection>
 
         <ResumeSection>
@@ -93,8 +99,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection>
                 <ResumeSubTitle>
-                  <time>{date}</time>.
-                  <h3>{title}</h3>
+                  <time>{date}</time>.<h3>{title}</h3>
                   <p>|</p>
                   <p>{institution}</p>
                 </ResumeSubTitle>
@@ -120,7 +125,8 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, production }) => (
               <ResumeCourse>
                 <p>
-                <time>{getLast(date)}</time>. <strong>{title}</strong> | {institution}
+                  <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
+                  {institution}
                 </p>
                 <p>{production.title}</p>
               </ResumeCourse>
@@ -136,7 +142,8 @@ const ResumePage = ({ language }) => {
             .map(({ date, name, institute }) => (
               <ResumeCourse>
                 <p>
-                  <time>{getYear(date)}</time>. <strong>{name}</strong> | {institute}
+                  <time>{getYear(date)}</time>. <strong>{name}</strong> |{" "}
+                  {institute}
                 </p>
               </ResumeCourse>
             ))}
