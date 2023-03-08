@@ -11,7 +11,7 @@ const whiteLogoColor = css`
 
 export const LogoWrapper = styled(Link)`
   font-size: var(--36px);
-  font-weight: 900;
+  font-weight: 700;
   transition: 0.5s ease-in-out;
   text-shadow: 1px 1px var(--shadow-colors);
 

@@ -66,7 +66,7 @@ export const MenuTop = styled.ul`
 
 export const MenuTopLink = styled(Link)`
   font-size: var(--16px);
-  font-weight: 900;
+  font-weight: 700;
 
   &,
   &:hover,
