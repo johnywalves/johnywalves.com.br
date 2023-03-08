@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="330" height="419" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="TriangleOutS" overflow="visible" orient="auto">
+   <path transform="scale(.2)" d="m5.77 0-8.65 5v-10z" fill-rule="evenodd" stroke="#888" fill="#888" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <g transform="translate(-212.14 -322.45)">
+  <g transform="translate(197.51 334.13)">
+   <path transform="translate(177.88 90.628)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#ab10d2"/>
+   <path d="m190.28 343.53 85.306-94.784" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="8"/>
+   <path transform="translate(64.551 218.28)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#047391"/>
+   <path d="m180.8 185.84 85.306 31.882" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="10"/>
+   <path d="m69.641 299.58 84.444 43.945" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="10"/>
+   <path transform="translate(64.551 48.485)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#047391"/>
+   <path d="m70.503 297.86 87.891-93.923" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="5"/>
+   <path d="m187.69 265.98 80.998-30.159" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="5"/>
+   <path transform="translate(64.551 133.38)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#047391"/>
+   <path d="m71.364 300.44 79.274-23.265" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="8"/>
+   <path transform="translate(-49.083 162.22)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#00a33d"/>
+   <path d="m73.088 163.44 85.306 83.583" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="8"/>
+   <path d="m185.11 103.98 90.476 100.82" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="5"/>
+   <path transform="translate(64.551 -36.41)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#047391"/>
+   <path d="m69.641 154.82 84.444-45.669" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="10"/>
+   <path d="m71.364 157.41 81.859 21.542" fill="none" marker-end="url(#TriangleOutS)" stroke="#888" stroke-width="10"/>
+   <path transform="translate(-49.083 19.95)" d="m143.96 136.45c5e-3 15.872-12.86 28.742-28.733 28.742-15.872 0-28.738-12.87-28.733-28.742-0.0051-15.872 12.86-28.742 28.733-28.742 15.872 0 28.738 12.87 28.733 28.742z" fill="#00a33d"/>
+  </g>
+  <g fill="#888" font-family="'Helvetica LT Std'" font-size="24px" stroke-linecap="square" stroke-linejoin="round" stroke-width="4" text-anchor="middle">
+   <text x="259.43243" y="364.73257" text-align="center" style="line-height:0%" xml:space="preserve"><tspan x="259.43243" y="364.73257" style="line-height:1.25"><tspan font-family="Arial">input</tspan></tspan><tspan x="259.43243" y="395.1163" style="line-height:1.25"><tspan font-family="Arial">layer</tspan></tspan></text>
+   <text x="375.34995" y="364.73257" text-align="center" style="line-height:0%" xml:space="preserve"><tspan x="375.34995" y="364.73257" style="line-height:1.25"><tspan font-family="Arial">hidden</tspan></tspan><tspan x="375.34995" y="395.1163" style="line-height:1.25"><tspan font-family="Arial">layer</tspan></tspan></text>
+   <text x="489.9491" y="364.73257" text-align="center" style="line-height:0%" xml:space="preserve"><tspan x="489.9491" y="364.73257" style="line-height:1.25"><tspan font-family="Arial">output</tspan></tspan><tspan x="489.9491" y="395.1163" style="line-height:1.25"><tspan font-family="Arial">layer</tspan></tspan></text>
+  </g>
+ </g>
+</svg>
