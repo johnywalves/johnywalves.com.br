@@ -39,9 +39,11 @@ Morbi suscipit sagittis quam. Cras eu velit in ligula efficitur facilisis. Proin
   <div id="loading_graphic"></div>
 </div>
 
-No início estava estressado e desmotivado, em janeiro tirei um dez dias de férias, indo para Poço de Caldas e na liberdade de em São Paulo onde aproveitei para experimentar vários tipos de alimentos
+No início estava estressado e desmotivado, em janeiro tirei um dez dias de férias, indo para Poço de Caldas - MG e na liberdade de em São Paulo - SP onde aproveitei para experimentar vários tipos de alimentos, acabei por engordar um pouco
 
-No começo de fevereiro decidi que iria pensar no resultado, depois de terminar com namorada e ser demitido, focando o tempo extra para estudar e me exercitar
+No começo de fevereiro decidi que iria pensar no resultado, depois de terminar com namorada e ser demitido, focando o tempo extra para estudar e me exercitar, aproveitei para ir de bicicleta para Brotas - SP com 270Km de distância dividido em 3 dias
+
+Com o tempo para preparar as refeições sem o estresse do trabalho, consegui a organizar minha alimentação, que acabou por resultado em melhor nas medidas e voltando a perder peso
 
 ## Conclusão
 
