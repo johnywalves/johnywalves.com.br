@@ -28,7 +28,7 @@ export const MainContentWrapper = styled.section`
   .button-post {
     color: var(--texts);
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.069rem;
     padding: 0 1.4rem;
@@ -237,6 +237,10 @@ export const MainContentWrapper = styled.section`
   .center {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .bold {
     font-weight: 900;

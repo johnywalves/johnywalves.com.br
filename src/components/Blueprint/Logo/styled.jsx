@@ -15,11 +15,16 @@ export const LogoWrapper = styled(Link)`
   transition: 0.5s ease-in-out;
   text-shadow: 1px 1px var(--shadow-colors);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+
   &,
   &:hover,
   &:visited {
     color: var(--highlight);
   }
 
-  ${({ whiteLogo }) => whiteLogoColor}
+  ${({ whiteLogo }) => whiteLogo && whiteLogoColor}
 `
