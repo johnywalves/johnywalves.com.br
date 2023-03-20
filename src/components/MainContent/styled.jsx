@@ -241,6 +241,7 @@ export const MainContentWrapper = styled.section`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .bold {
     font-weight: 900;

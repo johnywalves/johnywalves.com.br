@@ -140,9 +140,10 @@ export const PostLabels = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 0 var(--16px) var(--16px);
 
-  a {
+  & a {
     border: none;
   }
 `
@@ -167,6 +168,7 @@ export const PostTag = styled.p`
   padding: 0 !important;
   margin: 0 !important;
   font-weight: 900 !important;
+  word-break: keep-all !important;
 
   &:before {
     content: "|";
