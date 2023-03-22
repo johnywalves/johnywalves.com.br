@@ -1,5 +1,5 @@
 ---
-date: 2023-03-20 11:58:13 -0300
+date: 2023-03-22 11:58:13 -0300
 title: Construindo uma rede neural
 description: Criação de uma estrutura de rede neural do zero com Python
 featuredImage: ./featured/network-1.jpg
@@ -9,20 +9,20 @@ tags:
   - Rede Neural
   - Aprendizado de máquina
   - Machine Learning
-published: false
+published: true
 highlight: false
 cheatsheet: false
 ---
 
-Estou planejando uma série de artigos com aplicação de redes neurais, antes melhor explicar os conceitos básicos e suas aplicações, para isso vamos criar nossa redes neural para facilitar na compreensão dos procedimentos e resultados
+Estou planejando alguns artigos com aplicação de redes neurais, antes melhor explicar os conceitos básicos e suas aplicações, para isso, vamos criar nossa rede neural
 
 ## Conceitos
 
-Para começar vamos entender o modelo de neurônio que vamos utilizar, e como ele se organiza em estrutura para formar uma rede
+Primeiro os conceito do modelo de neurônio que vamos utilizar, e como ele se organiza em estrutura para formar uma rede
 
 ### Modelo Perceptron
 
-Modelo matemático que recebe vários valores com os pesos correspondentes, somsando os resultados e ajustando o resultado para 1 ou 0, como na imagem a seguir
+Modelo matemático que recebe valores, multiplicados pelos pesos correspondentes, com os resultados somados e ajustados na saída para 1 ou 0, representado na imagem a seguir:
 
 <p class="center bold">A estrutura de um neurônio artificial do tipo&nbsp;<em>Perceptron</em>&nbsp;(ou neurônio McCulloch-Pitts)</p>
 
@@ -30,15 +30,15 @@ Modelo matemático que recebe vários valores com os pesos correspondentes, soms
 
 <p class="center">Fonte: adaptado de Silva et al. (2016)<p>
 
-A figura ilustra uma simulação de funcionamento de um neurônio no modelo *Perceptron* com valores de entrada **{x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>}** sendo multiplicados por pesos sinápticos **{w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>}**, respectivamente. 
+A figura ilustra uma simulação de funcionamento de um neurônio no modelo *Perceptron* com valores de entrada **{x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>}** sendo multiplicados por pesos sinápticos **{w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>}**, respectivamente
 
 Esses valores são somados e acrescidos por um valor externo **b<sub>0</sub>**, também um peso, gerando o somatório **v<sub>0</sub>**, aplicado na função **f(.)** para gerar o valor de saída **y<sub>0</sub>**
 
-Sendo **x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>**, **w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>**, **b<sub>0</sub>** e **v<sub>0</sub>** valores entre 0 e 1 e **y<sub>0</sub>** com valor de 0 ou 1
+Sendo **x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>**, **w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>**, **b<sub>0</sub>** e **v<sub>0</sub>** valores entre 0 e 1, e **y<sub>0</sub>** com valor de 0 ou 1
 
 A função **f(.)** é determinada por um valor limiar, dependendo da aplicação, retornando 0 ou 1 
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="center" width="420" height="120" viewBox="0 0 280 80">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="center" width="350" height="100" viewBox="0 0 280 80">
     <g fill="var(--texts)" font-size="1rem" font-weight="700">
         <text x="0" y="44"><tspan>y<tspan font-size="0.5rem">0</tspan></tspan></text>
         <text x="25" y="60" font-size="64px"><tspan font-weight="300">{</tspan></text>
@@ -53,9 +53,9 @@ A função **f(.)** é determinada por um valor limiar, dependendo da aplicaçã
 
 ### Multicamadas
 
-Com aplicação do modelo de neurônio com os valores **v<sub>0</sub>** sendo usando para a valor de entrada para outro neurônio
+Com aplicação do modelo de neurônio em sequência, com os valores **v<sub>0</sub>** (somatória) sendo usando para a valor de entrada para outros neurônios
 
-<p class="center bold">Rede Neural com multicamadas de neurônios</p>
+<p class="center bold">Rede neural com multicamadas de neurônios</p>
 
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="center" width="330" height="419" viewBox="0 0 330 419">
  <defs>
@@ -105,19 +105,19 @@ Cada camada tem uma identificação:
 
 ## Implementação
 
-Agora com os conceitos em mão para para aplicação, vamos usar somente uma camada oculta, primeiro vamos entender como vamos usar a matemática
+Agora com os conceitos em mão vamos para aplicação, com somente uma camada oculta
 
 ### Matemática 
 
-No exemplo vamos usar uma rede com três (3) na camada de entrada, cinco (5) na camada oculta e dois (2) na camada de saída:
+No exemplo vamos usar uma rede com três (3) neurônios na camada de entrada, cinco (5) na camada oculta e somente dois (2) na camada de saída
 
-Na **camada de entrada** (*layer_input*) como parâmetro uma matriz com a quantidade de entradas (3), exemplo:
+Na **camada de entrada** (*layer_input*) como parâmetro criamos uma matriz com a quantidade de entradas (3) contendo os valores desejados, exemplo:
 
 ```python
 A = [0.1, 0.2, 0.3]
 ```
 
-Como **pesos da camada de entrada** (*weight_input*) deve ser uma matriz de dimensão de quantidade de entradas (3) e quantidade de ocultas (5), exemplo: 
+Como **pesos da camada de entrada** (*weight_input*) devemos ter uma matriz com a quantidade de entradas (3) e quantidade de ocultas (5), exemplo: 
 
 ```python
 B = [
@@ -127,7 +127,7 @@ B = [
 ]
 ```
 
-Para calcular a saída **pesos da camada oculta** (*weight_hidden*) com uma matriz com dimensão de com quantidade de ocultas (5) e quantidade de saída (2), exemplo:
+Para calcular a saída **pesos da camada oculta** (*weight_hidden*) precisamos de uma matriz com dimensões de com quantidade de ocultas (5) e quantidade de saída (2), exemplo:
 
 ```python
 C = [
@@ -139,11 +139,11 @@ C = [
 ]
 ```
 
-Calculando a primeira passagem, da entrada para oculta temos, fazendo isso com **multiplcação de matrizes** temos
+Para calcular a primeira passagem, da camada de entrada para camada oculta, podemos calcular com **multiplicação de matrizes** dos valores e pesos de entrada
 
 > Lembrando do índice na maioria das linguagens de programação começa com 0, ou seja **A[0][1]** é igual a **a<sub>1, 2<sub>**
 
-Aplicando a multicação sobre o `A * B` temos estruturado
+Aplicando a multiplicação entre `A` e `B` temos:
 
 ```python
 X = [
@@ -155,9 +155,9 @@ X = [
 ]
 ```
 
-Para aplicar essa fórmula, vamos usar a biblioteca NumPy, para saber como instalar temos [um artigo sobre pacotes em Python](/ambiente-python/)  
+Para aplicar essa fórmula, vamos usar o pacote do Python chamada NumPy, temos um artigo para explicar a [instalação de pacotes no Python](/ambiente-python/)  
 
-A função `.dot` realiza um produto de duas matrizes 
+A função `dot` realiza um produto de duas matrizes, fazendo uso dela temos 
 
 ```python
 import numpy as np
@@ -165,15 +165,15 @@ import numpy as np
 X = np.dot(A, B)
 ```
 
-Assim temos o resultado `[0.146, 0.152, 0.158, 0.164, 0.17]` em X com os valores da camada oculta 
+Assim temos o resultado `[0.146, 0.152, 0.158, 0.164, 0.17]` na variável X com os valores para camada oculta 
 
-Para apurar os resultados finais temos X valores da camada oculta seguindo a sequência lógica
+Para apurar os resultados finais temos os valores em `X` que multiplicamos com os pesos em `C`, com seguinte código
 
 ```python
 Y = np.dot(X, C)
 ```
 
-Para nosso resultado final temos `[0.2509, 0.2588]` que dependendo do nosso valor de limiar para cada saída, podemos resultar cada um como 0 ou 1 
+Assim temos `[0.2509, 0.2588]` que dependendo do nosso valor de limiar para cada saída, pode resultar cada um como 0 ou 1 
 
 ### Finalmente 
 
@@ -183,7 +183,7 @@ Aplicando a função de classificação com os valores limiares
 classifier = lambda idx, item: 0 if item <= thresholds[idx] else 1
 ```
 
-Organizando o que temos agora
+Organizando o que temos
 
 ```python
 import numpy as np
