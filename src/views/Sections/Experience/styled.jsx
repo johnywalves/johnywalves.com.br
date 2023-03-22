@@ -207,7 +207,7 @@ export const AreaButton = styled.li`
 
 export const DateText = styled.p`
   padding: 0 0 var(--8px);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--highlight);
 `
 
@@ -217,11 +217,12 @@ export const Title = styled.h3`
 `
 
 export const Institution = styled.span`
-  font-weight: 400;
+  font-weight: 500;
 `
 
 const listDescriptions = css`
-  list-style: disc inside;
+  list-style-type: disc; 
+  list-style-position: inside;
 `
 
 export const Descriptions = styled.ul`
@@ -235,9 +236,9 @@ export const Description = styled.li`
   line-height: 140%;
   vertical-align: middle;
   font-weight: 400;
-
+  
   & span {
-    margin-left: -10px;
+    margin-left: -4px;
   }
 `
 
