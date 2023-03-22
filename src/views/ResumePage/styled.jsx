@@ -5,7 +5,7 @@ export const ResumeWrapper = styled.main`
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 32% 68%;
 
   color: var(--texts);
   font-size: 0.8125rem;
@@ -64,7 +64,7 @@ export const ResumeNavigation = styled.nav`
 export const ResumeContent = styled.div`
   height: 100%;
   background-color: var(--background);
-  padding: var(--16px) var(--16px) 0 0;
+  padding: 0 var(--16px) 0 0;
 `
 
 export const ResumeSection = styled.section`
