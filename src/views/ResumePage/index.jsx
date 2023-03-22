@@ -99,7 +99,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection>
                 <ResumeSubTitle>
-                  <time>{date}</time>.<h3>{title}</h3>
+                  <time>{date}.</time><h3>{title}</h3>
                   <p>|</p>
                   <p>{institution}</p>
                 </ResumeSubTitle>
