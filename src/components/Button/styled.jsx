@@ -71,7 +71,7 @@ export const ButtonWrapper = styled.div`
   border-radius: 30px;
   cursor: pointer;
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
   vertical-align: middle;
   transition: 0.25s ease-out;

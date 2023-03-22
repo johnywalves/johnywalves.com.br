@@ -186,6 +186,6 @@ export const UtilsToolItem = styled(Link)`
   }
 
   &:hover p {
-    font-weight: 900;
+    font-weight: 700;
   }
 `

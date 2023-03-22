@@ -1,7 +1,7 @@
 ---
 date: 2022-10-16 17:08:53 -0300
 title: Saindo da pandemia com saúde
-description: Pensamentos sobre saúde mental com efeitos e aprendizados na pandemia de Covid-19
+description: Pensamentos sobre saúde mental e aprendizados na pandemia de Covid-19
 featuredImage: ./featured/mountains-1.jpg
 coverImage: /figures/mountains-1.jpg
 category: Bem-estar

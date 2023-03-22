@@ -41,7 +41,7 @@ export const SectionArticlesBoxShapeOutline = styled.div`
 export const SectionArticlesImageCover = styled(GatsbyImage)``
 
 export const SectionArticlesHighlightTitle = styled.h2`
-  color: var(--texts);
+  color: var(--white);
   text-align: center;
   width: 100%;
 `
@@ -70,9 +70,7 @@ export const SectionArticlesHighlightCover = styled(GatsbyImage)``
 
 export const SectionArticlesHighlightShadow = styled.div``
 
-export const SectionArticlesHighlightContent = styled.div`
-
-`
+export const SectionArticlesHighlightContent = styled.div``
 
 export const SectionArticlesHighlightLink = styled(Link)`
   & article {
@@ -98,6 +96,7 @@ export const SectionArticlesHighlightLink = styled(Link)`
   & ${SectionArticlesHighlightCover} {
     ${coverSizePosition}
     z-index: 1;
+    opacity: 0.5;
 
     border-top-left-radius: var(--8px);
     border-bottom-left-radius: var(--8px);

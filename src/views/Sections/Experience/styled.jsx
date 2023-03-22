@@ -280,6 +280,7 @@ export const Icon = styled(LinkIcon)`
 
 export const Production = styled.a`
   color: var(--highlight);
+  font-weight: 500;
 
   &:visited {
     color: var(--highlight);

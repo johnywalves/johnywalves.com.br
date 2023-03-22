@@ -92,7 +92,7 @@ export const MainContentWrapper = styled.section`
     &::before {
       content: "•";
       color: var(--highlight);
-      font-weight: 900;
+      font-weight: 700;
       display: inline-block;
       width: 1em;
       margin-left: -1em;
@@ -244,7 +244,7 @@ export const MainContentWrapper = styled.section`
     flex-wrap: wrap;
   }
   .bold {
-    font-weight: 900;
+    font-weight: 700;
   }
   .text-color {
     color: var(--white);

@@ -29,7 +29,7 @@ export const CardArticleHeader = styled.div`
 export const CardArticleCategory = styled.p`
   padding: 4px 8px;
   font-size: 1.25rem;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--background);
   background-color: var(--highlight);
   border-radius: 15px;

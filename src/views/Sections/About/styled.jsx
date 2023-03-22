@@ -126,7 +126,7 @@ export const Language = styled.li`
 
 export const LanguageName = styled.p`
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 125%;
   text-align: right;
   text-transform: uppercase;

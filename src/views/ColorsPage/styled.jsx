@@ -103,7 +103,7 @@ export const ColorReferenceTitle = styled.h2`
 
   & strong {
     color: var(--highlight);
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-right: 0.5rem;
   }
@@ -119,7 +119,7 @@ export const ColorSectionSubtitle = styled.h3`
   margin: var(--32px) 0 0;
 
   & strong {
-    font-weight: 900;
+    font-weight: 700;
   }
 
   & a {
@@ -177,7 +177,7 @@ export const ColorElementContent = styled.div`
   padding: 0 var(--8px);
   flex-grow: 1;
 
-  font-weight: 900;
+  font-weight: 700;
   ${({ small }) => (small ? smallText : normalText)};
 
   color: ${({ text }) => text};

@@ -26,7 +26,7 @@ export const OtherProjectWrapper = styled.li`
 `
 
 export const OtherProjectTitle = styled.h3`
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.2rem;
   color: var(--texts);

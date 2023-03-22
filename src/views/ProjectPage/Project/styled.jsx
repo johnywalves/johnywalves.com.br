@@ -55,7 +55,7 @@ export const Label = styled.div`
 `
 
 export const Title = styled.h3`
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1rem;
   line-height: 1.2rem;
   height: 2.4rem;

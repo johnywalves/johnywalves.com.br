@@ -123,7 +123,7 @@ export const ArticleItemCategory = styled.span`
   margin: 0 var(--8px) 0 0;
   padding: var(--4px) var(--8px);
   font-size: 0.75rem;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--background);
   background-color: var(--highlight);
   border-radius: 15px;
