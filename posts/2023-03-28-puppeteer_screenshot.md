@@ -1,13 +1,13 @@
 ---
-title: Automação de screenshot com Puppeter
-description: Armazenar telas de páginas Web com Puppeter, JavaScript e NodeJS
+title: Automação de screenshot com Puppeteer
+description: Armazenar telas de páginas Web com Puppeteer, JavaScript e NodeJS
 date: 2023-03-28 17:50:32
 featuredImage: ./featured/robot-1.jpg
 coverImage: /figures/robot-1.jpg
 category: JavaScript
 tags:
   - Automação
-  - Puppeter
+  - Puppeteer
   - Tests
 published: true
 highlight: false
