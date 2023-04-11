@@ -121,14 +121,14 @@ const ResumePage = ({ language }) => {
           <h2>{language.education.title}</h2>
           <hr />
           {language.education.list
-            .slice(0, 3)
+            .slice(0, 4)
             .map(({ date, title, institution, production }) => (
               <ResumeCourse>
                 <p>
                   <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
                   {institution}
                 </p>
-                <p>{production.title}</p>
+                {production && <p>{production.title}</p>}
               </ResumeCourse>
             ))}
         </ResumeSection>

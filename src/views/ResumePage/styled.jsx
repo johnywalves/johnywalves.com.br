@@ -5,7 +5,7 @@ export const ResumeWrapper = styled.main`
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 32% 68%;
+  grid-template-columns: 30.5% 69.5%;
 
   color: var(--texts);
   font-size: 0.8125rem;
