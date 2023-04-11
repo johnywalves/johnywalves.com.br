@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gráfico com Mapa Mundial em D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <svg width="960" height="600"></svg>
+    <script>
+      const svg = d3.select("svg");
+      const width = +svg.attr("width");
+      const height = +svg.attr("height");
+
+      const projection = d3.geoMercator()
+        .scale(130)
+        .translate([width / 2, height / 1.5]);
+
+      const path = d3.geoPath().projection(projection);
+
+      d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson").then(function(data) {
+        svg.append("g")
+          .selectAll("path")
+          .data(data.features)
+          .enter().append("path")
+            .attr("fill", "#ccc")
+            .attr("d", path);
+      });
+    </script>
+  </body>
+</html>
