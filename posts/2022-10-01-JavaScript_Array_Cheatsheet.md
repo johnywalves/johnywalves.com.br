@@ -20,7 +20,13 @@ Uma pequena coleção que vou adicionando com o tempo de utilidades para lidar c
 Remover elementos repetidos de uma lista
 
 ```javascript
-const filtered = list.filter((v, i, a) => a.indexOf(v) === i)
+const filtered = list.filter((value, index, array) => array.indexOf(value) === index)
+```
+
+or 
+
+```javascript
+const filtered = [... new Set([...list])]
 ```
 
 ## N elementos
@@ -55,4 +61,23 @@ const sorted = list.sort((a, b) => b - a)
 
 ```javascript
 const sum = list.reduce((p, c) => p + c, 0)
+```
+
+## Agrupar por propriedade
+
+```javascript
+const items = [
+  { nome: 'Item 1', grupo: 'A' },
+  { nome: 'Item 2', grupo: 'B' },
+  { nome: 'Item 3', grupo: 'A' },
+  { nome: 'Item 4', grupo: 'B' },
+  { nome: 'Item 5', grupo: 'C' }
+];
+
+const groupedItems = items.reduce((grupos, item) => {
+  (grupos[item.grupo] = grupos[item.grupo] || []).push(item);
+  return grupos;
+}, {});
+
+console.log(groupedItems);
 ```
