@@ -369,6 +369,14 @@
     "title": "Formação Acadêmica",
     "list": [
       {
+        "date": "Fev 2023 - Atualmente",
+        "title": "Mestrado em Ciência da Computação",
+        "institution": "Unesp - Universidade Estadual Paulista",
+        "description": [
+          "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
+        ]
+      },
+      {
         "date": "Out 2020 - Dez 2022",
         "title": "Especialista em Gestão de Projetos em TI",
         "institution": "Fatec Rio Preto",
