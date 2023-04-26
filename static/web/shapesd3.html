@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#e0138c" />
+
+    <title>Apresentação de Formatos em D3</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <style>
+        /* Reset */
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        /* Root definition CSS */
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        /* Content CSS */
+        body {
+            background: #f7f9fb;
+            color: #111;
+
+            height: 100vh;
+            padding: 1rem;
+            gap: 2rem;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        svg {
+            background-color: #eee;
+            box-shadow: -5px 5px 12px 5px rgba(0, 0, 0, 0.03);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="250" height="250"></svg>
+    <svg width="250" height="250"></svg>
+    <svg width="250" height="250"></svg>
+    <svg width="250" height="250"></svg>
+    <svg width="250" height="250"></svg>
+    <svg width="250" height="250"></svg>
+</body>
+
+<script type="text/javascript">
+    d3
+        // Seleção do elemento para manipulação - CSS Selector
+        .select('svg:nth-child(1)')
+        // Adicionar retângulo no elemento
+        .append('rect')
+        // Definição da posição do retângulo
+        .attr('x', 40)
+        .attr('y', 40)
+        // Definição das dimensões do retângulo
+        .attr('width', 180)
+        .attr('height', 180)
+        // Preencher o conteúdo
+        .attr('fill', '#e0138c')
+
+    d3
+        // Seleção do elemento para manipulação - CSS Selector
+        .select('svg:nth-child(2)')
+        // Adicionar círculo no elemento
+        .append('circle')
+        // Posicionamento centro do desenho
+        .attr('transform', 'translate(125, 125)')
+        // Definição do raio 
+        .attr('r', 100)
+        // Preencher o conteúdo
+        .attr('fill', '#13e0cf')
+
+    d3
+        // Seleção do elemento para manipulação - CSS Selector
+        .select('svg:nth-child(3)')
+        // Adicionar círculo no elemento
+        .append('ellipse')
+        // Posicionamento centro do desenho
+        .attr('cx', 125)
+        .attr('cy', 125)
+        // Definição do raio do 
+        .attr('rx', 110)
+        .attr('ry', 80)
+        // Preencher o conteúdo
+        .attr('fill', '#24e013')
+
+    d3
+        // Seleção do elemento para manipulação - CSS Selector
+        .select('svg:nth-child(4)')
+        // Adicionar linha no elemento
+        .append('line')
+        // Posicionamento inicial
+        .attr('x1', 25)
+        .attr('y1', 25)
+        // Posicionamento final
+        .attr('x2', 225)
+        .attr('y2', 225)
+        // Definição da cor de linha
+        .attr('stroke', '#e0138c')
+        // Definição grossura da linha
+        .attr('stroke-width', 3)
+
+    d3
+        // Seleção do elemento para manipulação - CSS Selector
+        .select('svg:nth-child(5)')
+        // Adicionar caminho no elemento
+        .append('polyline')
+        // Definição do caminho por pontos
+        .attr('points', '25,25 40,25 60,40 80,120 120,140 200,180 225,225')
+        // Preencher o conteúdo - limpar
+        .attr('fill', 'none')
+        // Definição da cor de linha
+        .attr('stroke', '#13e0cf')
+        // Definição grossura da linha
+        .attr('stroke-width', 5)
+
+    d3
+        // Seleção do elemento para manipulação - CSS Selector
+        .select('svg:nth-child(6)')
+        // Definição da caixa de visualização
+        .attr('viewBox', '0 0 51 48')
+        // Adicionar linha no elemento
+        .append('path')
+        // Definição do caminho por pontos
+        .attr('d', 'm25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z')
+        // Preencher o conteúdo
+        .attr('fill', 'none')
+        // Definição da cor de linha
+        .attr('stroke', '#24e013')
+        // Definição grossura da linha
+        .attr('stroke-width', 1)        
+</script>
+
+</html>
