@@ -18,7 +18,7 @@ cheatsheet: false
 
 Dando sequência na pesquisa e documentação na versão 7 da biblioteca D3
 
-> A bilioteca [D3.js - Data-Driven Documents](https://d3js.org/) é uma ferramenta para manipulação de documentos baseada em dados, com uso de HTML, CSS e SVG
+> A biblioteca [D3.js - Data-Driven Documents](https://d3js.org/) é uma ferramenta para manipulação de documentos baseada em dados, com uso de HTML, CSS e SVG
 
 Buscando no Kaggle uma base de dados interessante encontrei um pequeno resumo da apresentação dos personagens da Marvel nos quadrinhos [Kaggle - Marvel Chracters](https://www.kaggle.com/datasets/syedasimalishah/marvel-chracters)
 
@@ -29,7 +29,7 @@ O arquivo se encontra em Comma Separated Value (CSV), D3 possui ferramentas para
 Para realizar a agregação de dados usamos um trecho de código de Python
 
 ```python
-# Importação das bilbiotecas
+# Importação das bibliotecas
 import json
 import pandas as pd
 
@@ -309,7 +309,7 @@ Para entender melhor essa distribuição geramos uma visualização com as prime
 Geração da fonte de dados por agrupamento com Python
 
 ```python
-# Importação das bilbiotecas
+# Importação das bibliotecas
 import json
 import pandas as pd
 

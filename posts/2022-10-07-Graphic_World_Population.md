@@ -22,7 +22,7 @@ O formato de imagem gráfico de vetor escalável, _Scalable Vector Graphics_, pa
 
 A parte do nome escalável, demostra que em qualquer dimensão não haverá perda de qualidade
 
-A bilioteca [D3.js - Data-Driven Documents](https://d3js.org/) é uma ferramenta para manipulação de documentos baseada em dados, com uso de HTML, CSS e SVG, é ótima para geração de gráficos
+A biblioteca [D3.js - Data-Driven Documents](https://d3js.org/) é uma ferramenta para manipulação de documentos baseada em dados, com uso de HTML, CSS e SVG, é ótima para geração de gráficos
 
 ## Gráfico
 

@@ -25,7 +25,7 @@ setwd(".")
 rm(list = ls())
 ```
 
-Carreguei a bilbioteca do `tidyverse` pois contém a `ggplot2`, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
+Carreguei a biblioteca  do `tidyverse` pois contém a `ggplot2`, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
 
 ```r
 # Instalar caso necessário com o comando: install.packages('tidyverse')

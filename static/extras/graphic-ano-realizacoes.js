@@ -77,7 +77,7 @@ function drawGraphic() {
     { date: "2022-12-25", weight: 116.1 },
     { date: "2022-12-26", weight: 114.1 },
     { date: "2022-12-27", weight: 113.5 },
-    { date: "2022-12-27", weight: 115.2 },
+    { date: "2022-12-28", weight: 115.2 },
     { date: "2022-12-29", weight: 114.0 },
     { date: "2022-12-30", weight: 113.5 },
     { date: "2022-12-31", weight: 114.2 },
@@ -181,7 +181,22 @@ function drawGraphic() {
     { date: "2023-04-08", weight: 104.1 },
     { date: "2023-04-09", weight: 104.4 },
     { date: "2023-04-10", weight: 105.5 },
-    { date: "2023-04-11", weight: 104.8 }
+    { date: "2023-04-11", weight: 104.8 },
+    { date: "2023-04-12", weight: 103.5 },
+    { date: "2023-04-13", weight: 104.8 },
+    { date: "2023-04-14", weight: 104.3 },
+    { date: "2023-04-15", weight: 103.8 },
+    { date: "2023-04-16", weight: 103.6 },
+    { date: "2023-04-17", weight: 104.5 },
+    { date: "2023-04-18", weight: 103.9 },
+    { date: "2023-04-19", weight: 103.1 },
+    { date: "2023-04-20", weight: 103.8 },
+    { date: "2023-04-21", weight: 103.5 },
+    { date: "2023-04-22", weight: 103.9 },
+    { date: "2023-04-23", weight: 104.5 },
+    { date: "2023-04-24", weight: 105.5 },
+    { date: "2023-04-25", weight: 104.7 },
+    { date: "2023-04-26", weight: 104.5 }
   ]
 
   const data = raw.map((elem, index) => ({ day: index + 1, ...elem }))
