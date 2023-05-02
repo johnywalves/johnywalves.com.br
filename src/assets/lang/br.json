@@ -106,8 +106,7 @@
           { "title": "Docker", "icon": "Toolbox" },
           { "title": "Git", "icon": "Toolbox" },
           { "title": "Scrum", "icon": "Toolbox" },
-          { "title": "Jenkins", "icon": "Toolbox" },
-          { "title": "VS Code", "icon": "Toolbox" }
+          { "title": "Jenkins", "icon": "Toolbox" }
         ]
       }
     ]
