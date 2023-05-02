@@ -92,7 +92,7 @@ const ResumePage = ({ language }) => {
         </ResumeSection>
 
         <ResumeSection>
-          <h2>{language.experience.title} ({language.mostRecent})</h2>
+          <h2>{language.experience.title} <small>({language.mostRecent})</small></h2>
           <hr />
           {language.experience.list
             .slice(0, 3)
@@ -132,7 +132,7 @@ const ResumePage = ({ language }) => {
         </ResumeSection>
 
         <ResumeSection>
-          <h2>{language.certification.courses} ({language.mostRecent})</h2>
+          <h2>{language.certification.courses} <small>({language.mostRecent})</small></h2>
           <hr />
           {language.certification.list
             .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))

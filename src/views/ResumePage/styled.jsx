@@ -21,6 +21,10 @@ export const ResumeWrapper = styled.main`
     font-weight: 500;
     text-transform: uppercase;
     color: var(--highlight);
+
+    & small {
+      font-size: 0.75rem;
+    }
   }
 
   & h3 {
@@ -123,9 +127,12 @@ export const ResumeSection = styled.section`
       font-size: 1.125rem;
       font-weight: 400;
       text-align: justify;
+      line-height: 140%;
       margin-top: var(--16px);
 
-      &:nth-child(1) {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-last-child(2) {
         margin-top: var(--48px);
       }
     }
