@@ -77,7 +77,7 @@
 
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 60px 2fr 3fr 30px;
+            grid-template-rows: 60px calc((100vh - 90px - 1rem) / 5 * 2) calc((100vh - 90px - 1rem) / 5 * 3) 30px;
         }
 
         .row {
@@ -87,6 +87,15 @@
         #filtros {
             background: var(--color-background-card);
             margin: 0 1rem 1rem 0;
+            padding: 0.5rem;
+
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #filtros button {
+            padding: 4px;
         }
 
         #a {
@@ -166,575 +175,623 @@
 </body>
 
 <script type="text/javascript">
-    // Definição do esquema de cores
-    // https://github.com/d3/d3-scale-chromatic/blob/v3.0.0/README.md#schemeCategory10
-    const cores = d3.scaleOrdinal(d3.schemeTableau10)
+    (async function () {
+        // Definição do esquema de cores
+        // https://github.com/d3/d3-scale-chromatic/blob/v3.0.0/README.md#schemeCategory10
+        const cores = d3.scaleOrdinal(d3.schemeTableau10)
 
-    // Agrupar continentes com quantidade por ano
-    function agrupar_continentes(data) {
-        const anos = [1970, 1980, 1990, 2000, 2010, 2020]
-        const continentes_agrupados = []
+        // Buscar dados das coordenadas de centroides dos territórios
+        const dados_centroides = await d3.csv("./coordinates.csv")
 
-        data.forEach(function (item) {
-            const continente = continentes_agrupados
-                .find(function (elemento) { return elemento.continente === item.continente })
+        // Formatar o CSV para facilitar lidar com os dados
+        function formatar_arquivo(data) {
+            const local = data["Country/Territory"]
+            const coord = dados_centroides.find(terr => terr.name === local)
 
-            if (!continente) {
-                continentes_agrupados.push({
-                    continente: item.continente,
-                    anos: anos.map(function (ano) { return { ano, populacao: +item['ano_' + ano] } })
-                })
-
-                return
+            return {
+                local: data["Country/Territory"],
+                continente: data["Continent"],
+                tamanho: data["Area (km²)"],
+                ano_1970: data["1970 Population"],
+                ano_1980: data["1980 Population"],
+                ano_1990: data["1990 Population"],
+                ano_2000: data["2000 Population"],
+                ano_2010: data["2010 Population"],
+                ano_2020: data["2020 Population"],
+                populacao: data["2022 Population"],
+                latitude: coord ? coord.latitude : 0,
+                longitude: coord ? coord.longitude : 0
             }
-
-            anos.forEach(function (ano) {
-                continente.anos.find(function (elemento) {
-                    return elemento.ano === ano
-                }).populacao += +item['ano_' + ano]
-            })
-        })
-
-        return continentes_agrupados
-    }
-
-    // Agrupar continentes por total em 2020
-    function agrupar_continentes_total(data) {
-        const continentes_agrupados = []
-
-        data.forEach(function (item) {
-            const continente = continentes_agrupados
-                .find(function (elemento) { return elemento.continente === item.continente })
-
-            if (!continente) {
-                continentes_agrupados.push({
-                    continente: item.continente,
-                    populacao_total: +item.ano_2020
-                })
-
-                return
-            }
-
-            continente.populacao_total += +item.ano_2020
-        })
-
-        return continentes_agrupados
-    }
-
-    // Formatar o CSV para facilitar lidar com os dados
-    function formatar_arquivo(data) {
-        return {
-            local: data["Country/Territory"],
-            continente: data["Continent"],
-            ano_1970: data["1970 Population"],
-            ano_1980: data["1980 Population"],
-            ano_1990: data["1990 Population"],
-            ano_2000: data["2000 Population"],
-            ano_2010: data["2010 Population"],
-            ano_2020: data["2020 Population"]
         }
-    }
-
-    function desenhar_linhas() {
-        // Selecionar div para colocar o relatório gráfico dentro
-        const caixa = d3.select('#caixa_linhas')
-
-        // Margens do gráfico
-        const margens = { topo: 30, direita: 20, baixo: 20, esquerda: 40 }
-
-        // Espaçamento de legendas
-        const legenda_medidas = { altura: 20, espaco: 7, raio: 5 }
-
-        // Dimensão do gráfico (largura e altura)
-        const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
-        const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo - legenda_medidas.altura
-
-        // Criação da caixa do gráfico
-        const svg = caixa
-            .append("svg")
-            .attr("width", largura + margens.esquerda + margens.direita)
-            .attr("height", altura + margens.topo + margens.baixo + legenda_medidas.altura)
-
-        // Posicionamento do gráfico
-        const grafico = svg
-            .append("g")
-            .attr("transform", "translate(" + margens.esquerda + "," + margens.topo + ")")
-
-        // Definição da escala das linhas
-        const x = d3.scaleLinear().range([0, largura])
-        const y = d3.scaleLinear().range([altura, 0])
 
         // Buscar e lidar com os dados
-        d3.csv("./world_population.csv", formatar_arquivo)
-            .then(function (data) {
-                // Agrupar os dados em continentes com dados de anos
-                const continentes = agrupar_continentes(data)
+        const bruto_populacao_mundial = await d3.csv("./world_population.csv", formatar_arquivo)
+        let dados_populacao_mundial = bruto_populacao_mundial
 
-                // Escala da variação dos dados (menor e maior número)
-                // Sem os domínios o intervalo é 0 a 1
-                x.domain([1970, 2020])
-                y.domain([
-                    d3.min(continentes, function ({ anos }) {
-                        return d3.min(anos,
-                            function ({ populacao }) { return populacao }
-                        )
-                    }),
-                    d3.max(continentes, function ({ anos }) {
-                        return d3.max(anos,
-                            function ({ populacao }) { return populacao }
-                        )
+        // Buscar dados dos formatos dos territórios
+        const dados_formato_territorios = await d3.json("./world.geojson")
+
+        // Agrupamentos de nome de continentes únicos e valor total de população
+        const bruto_continentes = agrupar_continentes_total(dados_populacao_mundial)
+        const nomes_continentes = bruto_continentes.map((d) => d.continente)
+        let continentes = bruto_continentes
+
+        // Agrupar continentes com quantidade por ano
+        function agrupar_continentes(data) {
+            const anos = [1970, 1980, 1990, 2000, 2010, 2020]
+            const continentes_agrupados = []
+
+            data.forEach(function (item) {
+                const continente = continentes_agrupados
+                    .find(function (elemento) { return elemento.continente === item.continente })
+
+                if (!continente) {
+                    continentes_agrupados.push({
+                        continente: item.continente,
+                        anos: anos.map(function (ano) { return { ano, populacao: +item['ano_' + ano] } })
                     })
-                ])
 
-                // Adicionar o eixo X com base no domínio
-                grafico
-                    .append("g")
-                    .style("stroke", "var(--color-text)")
-                    .style("stroke-width", 0.5)
-                    .attr("transform", "translate(0," + altura + ")")
-                    .call(d3.axisBottom(x).tickFormat((d) => d))
-
-                // Adicionar o eixo Y com base no domínio
-                grafico
-                    .append("g")
-                    .style("stroke", "var(--color-text)")
-                    .style("stroke-width", 0.5)
-                    .call(d3.axisLeft(y).tickFormat((d) => d / 1000000)) // Em milhões
-
-                // Função de geração para o caminho das linhas
-                const gerador_linha = d3
-                    .line()
-                    .x((d) => x(d.ano))
-                    .y((d) => y(d.populacao))
-
-                // Gerar os caminhos das linhas
-                continentes.forEach(function (data, index) {
-                    grafico
-                        .append("path")
-                        .data([data.anos])
-                        .style("stroke", cores(index))
-                        .style("stroke-width", 2)
-                        .attr("fill", "none")
-                        .attr("d", gerador_linha)
-                })
-
-                // Criação e posicionamento das legendas
-                const legendas = svg
-                    .append("g")
-                    .attr(
-                        "transform",
-                        "translate(" + margens.esquerda + "," + (altura + margens.topo + margens.baixo) + ")"
-                    )
-
-                // Gerar das informações da legenda - pode ser usado o .data().join()
-                continentes.forEach(function (data, index) {
-                    // Gerar a orientação das cores
-                    legendas
-                        .append("circle")
-                        .attr("cx", index * (largura / continentes.length))
-                        .attr("cy", legenda_medidas.altura - legenda_medidas.raio)
-                        .attr("r", legenda_medidas.raio)
-                        .style("fill", cores(index))
-
-                    // Gerar texto da legenda
-                    legendas
-                        .append("text")
-                        .attr("x", index * (largura / continentes.length) + legenda_medidas.espaco)
-                        .attr("y", legenda_medidas.altura)
-                        .attr("fill", "var(--color-text)")
-                        .attr("font-size", "0.75rem")
-                        .text(data.continente)
-                })
-            })
-    }
-
-    function desenhar_setores() {
-        // Selecionar div para colocar o relatório gráfico dentro
-        const caixa = d3.select('#caixa_setores')
-
-        // Margens do gráfico
-        const margens = { topo: 40, direita: 40, baixo: 20, esquerda: 20 }
-
-        // Espaçamento de legendas
-        const legenda_medidas = { altura: 20, espaco: 7, raio: 5 }
-
-        // Dimensão do gráfico (largura e altura)
-        const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
-        const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo - legenda_medidas.altura
-
-        // Criação da caixa do gráfico
-        const svg = caixa
-            .append("svg")
-            .attr("width", largura + margens.esquerda + margens.direita)
-            .attr("height", altura + margens.topo + margens.baixo + legenda_medidas.altura)
-
-        // Cálculo do raio do gráfico
-        const raio_setores = d3.min([largura, altura]) / 2
-
-        // Posicionar o gráfico no meio da caixa
-        const grafico = svg
-            .append("g")
-            .attr(
-                "transform",
-                "translate(" +
-                (largura / 2 + margens.esquerda) +
-                "," +
-                (altura / 2 + margens.topo) +
-                ")"
-            )
-
-        // Calcular ângulos e porcentagens dos arcos
-        // outra maneira:
-        // data = [3765, 12608]
-        // const pie = d3.pie().data(data)
-        const pie = d3.pie().value((d) => d.populacao_total)
-
-        // Geração dos arcos do gráfico
-        // Mudar o ângulo interno para remover o meio
-        const arc = d3.arc()
-            .innerRadius(raio_setores / 3)
-            .outerRadius(raio_setores)
-
-        // Buscar e lidar com os dados
-        d3.csv("./world_population.csv", formatar_arquivo)
-            .then(function (data) {
-                const continentes = agrupar_continentes_total(data)
-
-                // Desenha os arcos do gráfico
-                const arcs = grafico
-                    .selectAll("arc")
-                    .data(pie(continentes))
-                    .join("path")
-                    .attr("fill", (_, i) => cores(i))
-                    .attr("d", arc)
-
-                // Criação e posicionamento das legendas
-                const legendas = svg
-                    .append("g")
-                    .attr(
-                        "transform",
-                        "translate(" + margens.esquerda + "," + (altura + margens.topo + margens.baixo) + ")"
-                    )
-
-                // Gerar das informações da legenda - pode ser usado o .data().join()
-                continentes.forEach(function (data, index) {
-                    // Gerar a orientação das cores
-                    legendas
-                        .append("circle")
-                        .attr("cx", index * (largura / continentes.length))
-                        .attr("cy", legenda_medidas.altura - legenda_medidas.raio)
-                        .attr("r", legenda_medidas.raio)
-                        .style("fill", cores(index))
-
-                    // Gerar texto da legenda
-                    legendas
-                        .append("text")
-                        .attr("x", index * (largura / continentes.length) + legenda_medidas.espaco)
-                        .attr("y", legenda_medidas.altura)
-                        .attr("fill", "var(--color-text)")
-                        .attr("font-size", "0.75rem")
-                        .text(data.continente)
-                })
-            })
-    }
-
-    function desenhar_histograma() {
-        // Selecionar div para colocar o relatório gráfico dentro
-        const caixa = d3.select('#caixa_histograma')
-
-        // Margens do gráfico
-        const margens = { topo: 30, direita: 20, baixo: 20, esquerda: 40 }
-
-        // Espaçamento de legendas
-        const legenda_medidas = { altura: 25, espaco: 7, raio: 5 }
-
-        // Dimensão do gráfico (largura e altura)
-        const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
-        const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo
-
-        // Criação da caixa do gráfico
-        const svg = caixa
-            .append("svg")
-            .attr("width", largura + margens.esquerda + margens.direita)
-            .attr("height", altura + margens.topo + margens.baixo)
-
-        // Posicionamento do gráfico
-        const grafico = svg
-            .append("g")
-            .attr("transform", "translate(" + margens.esquerda + "," + margens.topo + ")")
-
-        // Definição da escala das linhas
-        const x = d3.scaleLinear().range([0, largura])
-        const y = d3.scaleLinear().range([0, altura])
-
-        // Valores para a geração do histograma
-        const values = [1, 2, 3, 8, 7, 4, 9, 8, 7, 3, 4, 5, 2, 1, 9, 7, 8, 4, 0, 2, 3, 8, 7, 6]
-
-        // Escala da variação dos dados (menor e maior número)
-        x.domain([d3.min(values), d3.max(values)])
-
-        // Definir quantidade de elementos na contagem
-        const quantidade_contagem = 10
-
-        // Gerar função de contagens
-        const histograma = d3.bin()
-            .domain(x.domain()) // Buscar a referência do domínio
-            .thresholds(x.ticks(quantidade_contagem)) // Definir a quantidade da contagem
-
-        // Definição dos intervalos do começo e fim da barra
-        const caixas = histograma(values)
-
-        // Escala da variação dos dados (menor e maior número)
-        y.domain([d3.max(caixas, function (d) { return d.length }), 0])
-
-        // Adicionar o eixo X com base no domínio
-        grafico
-            .append("g")
-            .style("stroke", "var(--color-text)")
-            .style("stroke-width", 0.5)
-            .attr("transform", "translate(0," + altura + ")")
-            .call(d3.axisBottom(x))
-
-        // Adicionar o eixo Y com base no domínio
-        grafico
-            .append("g")
-            .style("stroke", "var(--color-text)")
-            .style("stroke-width", 0.5)
-            .call(d3.axisLeft(y))
-
-        
-        // Desenhar as barras - cima para baixo
-        /*grafico
-            .selectAll("rect")
-            .data(caixas)
-            .join("rect")
-            // Definir a margem da esquerda da barra
-            .attr("x", 2)
-            // Definição da cor das barras
-            .style("fill", cores(0))            
-            // Posicionamento da barra
-            .attr("transform", function (d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")" })
-            // Largura da barra
-            .attr("width", function (d) { return d.x0 === d.x1 ? 0 : x(d.x1) - x(d.x0) - 2 })
-            // Altura da barra
-            .attr("height", function (d) { return altura - y(d.length) })*/
-
-        // Desenhar as barras - baixo para cima
-        grafico
-            .selectAll("rect")
-            .data(caixas)
-            .join("rect")
-            .style("fill", cores(0))
-            // Largura da barra
-            .attr("width", function (d) { return d.x0 === d.x1 ? 0 : x(d.x1) - x(d.x0) - 2 })            
-            // Posicionamento da barra
-            .attr("transform", function (d) { return "translate(" + x(d.x0) + ", 0)" })
-            .attr("x", 2)
-            .attr("y", y(0))
-            // Altura da barra
-            .attr("height", 0)
-            // Adicionar animação na barra
-            // https://github.com/d3/d3-transition/blob/v3.0.0/README.md#selection_transition
-            .transition()
-            // Função de timing da animação 
-            // https://github.com/d3/d3/blob/main/API.md#easings-d3-ease
-            .ease(d3.easePoly.exponent(5))
-            // Duração da animação
-            .duration(1000)
-            // Posicionamento da barra
-            .attr("y", function (d) { return y(d.length) })
-            // Altura da barra
-            .attr("height", function (d) { return altura - y(d.length) })
-    }
-
-    function desenhar_dispersao() {
-        // Selecionar div para colocar o relatório gráfico dentro
-        const caixa = d3.select('#caixa_dispersao')
-
-        // Margens do gráfico
-        const margens = { topo: 40, direita: 40, baixo: 40, esquerda: 40 }
-
-        // Dimensão do gráfico (largura e altura)
-        const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
-        const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo
-
-        // Criação da caixa do gráfico
-        const svg = caixa
-            .append("svg")
-            .attr("width", largura + margens.esquerda + margens.direita)
-            .attr("height", altura + margens.topo + margens.baixo)
-
-        // Posicionamento do gráfico
-        const grafico = svg
-            .append("g")
-            .attr("transform", "translate(" + margens.esquerda + "," + margens.topo + ")")
-
-        // Definição da escala das linhas
-        const x = d3.scaleLinear().range([0, largura])
-        const y = d3.scaleLinear().range([altura, 0])
-
-        // Criação da caixa de texto para o menu suspenso
-        const tooltip = grafico
-            .append("text")
-            .style("z-index", "10")
-            .style("visibility", "hidden")
-
-        // Buscar e lidar com os dados
-        d3.csv("./world_population.csv",
-            function (data) {
-                return {
-                    local: data["Country/Territory"],
-                    continente: data["Continent"],
-                    tamanho: data["Area (km²)"],
-                    populacao: data["2022 Population"]
+                    return
                 }
+
+                anos.forEach(function (ano) {
+                    continente.anos.find(function (elemento) {
+                        return elemento.ano === ano
+                    }).populacao += +item['ano_' + ano]
+                })
             })
-            .then(function (data) {
-                const continentes = [... new Set(data.map(function (item) { return item.continente }))]
 
-                // Escala da variação dos dados (menor e maior número)
-                // Sem os domínios o intervalo é 0 a 1
-                x.domain([0, d3.max(data, function (d) { return +d.populacao })])
-                y.domain([0, d3.max(data, function (d) { return +d.tamanho })])
+            return continentes_agrupados
+        }
 
-                // Adicionar o eixo X com base no domínio
-                grafico
-                    .append("g")
-                    .style("stroke", "var(--color-text)")
-                    .style("stroke-width", 0.5)
-                    .attr("transform", "translate(0," + altura + ")")
-                    .call(d3.axisBottom(x).tickFormat((d) => +d / 1000000))
+        // Definição da função para filtragem de continenetes
+        function realizar_filtro_continente(continente) {
+            if (continentes.length !== 1 || continente !== continentes[0].continente) {
+                dados_populacao_mundial = bruto_populacao_mundial.filter(territorio => territorio.continente === continente)
+                continentes = bruto_continentes.filter(territorio => territorio.continente === continente)
+            } else {
+                dados_populacao_mundial = bruto_populacao_mundial
+                continentes = bruto_continentes
+            }
+            redesenhar_graficos()
+        }
 
-                // Adicionar o eixo Y com base no domínio
-                grafico
-                    .append("g")
-                    .style("stroke", "var(--color-text)")
-                    .style("stroke-width", 0.5)
-                    .call(d3.axisLeft(y).tickFormat((d) => +d / 1000000))
+        // Agrupar continentes por total em 2020
+        function agrupar_continentes_total(data) {
+            const continentes_agrupados = []
 
-                // Desenhar os círculos da dispersão
-                grafico
-                    .selectAll("circle")
-                    .data(data)
-                    .join("circle")
-                    .attr("cx", d => x(d.populacao))
-                    .attr("cy", d => y(d.tamanho))
-                    .attr("r", 5)
-                    .attr("fill", d => cores(continentes.indexOf(d.continente)))
+            data.forEach(function (item) {
+                const continente = continentes_agrupados
+                    .find(function (elemento) { return elemento.continente === item.continente })
 
-                // Apresentar informações no passar do mouse em cada círculo
-                grafico
-                    .selectAll("circle")
-                    .on("mouseover", (e, d) => {
-                        tooltip.text(d.local)
-                        return tooltip.style("visibility", "visible")
+                if (!continente) {
+                    continentes_agrupados.push({
+                        continente: item.continente,
+                        populacao_total: +item.ano_2020
                     })
-                    .on("mousemove", (e, d) => {
-                        xPos = x(d.populacao) + 5
-                        yPos = y(d.tamanho) - 5
-                        tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")")
-                    })
-                    .on("mouseout", () => tooltip.style("visibility", "hidden"))
+
+                    return
+                }
+
+                continente.populacao_total += +item.ano_2020
             })
-    }
 
-    function desenhar_mapa() {
-        // Selecionar div para colocar o relatório gráfico dentro
-        const caixa = d3.select('#caixa_mapa')
+            return continentes_agrupados
+        }
 
-        // Dimensão do gráfico (largura e altura)
-        const largura = caixa.node().getBoundingClientRect().width
-        const altura = caixa.node().getBoundingClientRect().height
+        function gerar_legendas(svg, altura, largura, margens, legenda_medidas) {
+            // Criação e posicionamento das legendas
+            const legendas = svg
+                .append("g")
+                .style("display", "flex")
+                .style("justify-content", "space-between")
+                .attr("width", largura)
+                .attr("height", legenda_medidas.altura)
+                .attr(
+                    "transform",
+                    "translate(" + margens.esquerda + "," + (altura + margens.topo + margens.baixo) + ")"
+                )
 
-        // Criação da caixa do gráfico
-        const svg = caixa
-            .append("svg")
-            .attr("width", largura)
-            .attr("height", altura)
+            // Gerar das informações da legenda - pode ser usado o .data().join()
+            bruto_continentes.forEach(function (data, index) {
+                // 
+                const legenda = legendas
+                    .append('g')
+                    .attr("transform", "translate(" + index * (largura / bruto_continentes.length) + "," + 2 + ")")
 
-        // Gerar a Projeção de Mercator (preservação de ângulos)
-        // https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projections
-        const projecao = d3.geoMercator()
-            .scale(125)
-            .translate([largura / 2, altura / 1.50])
+                // Gerar a orientação das cores
+                legenda
+                    .append("circle")
+                    .attr("cx", legenda_medidas.raio)
+                    .attr("cy", legenda_medidas.raio + 5)
+                    .attr("r", legenda_medidas.raio)
+                    .attr("fill", cores(nomes_continentes.indexOf(data.continente)))
 
-        // Definição da geração de caminhos pela projeção 
-        const caminho_projecao = d3.geoPath().projection(projecao)
+                // Gerar texto da legenda
+                legenda
+                    .append("text")
+                    .attr("x", legenda_medidas.raio + legenda_medidas.espaco)
+                    .attr("y", 14)
+                    .attr("fill", "var(--color-text)")
+                    .attr("font-size", "0.75rem")
+                    .text(data.continente)
+            })
+        }
 
-        // Carregar as coordenadas dos territórios
-        d3.csv("./coordinates.csv").then(function (coods) {
 
-            // Carregar as informações de países
-            d3.json("./world.geojson").then(function (data) {
-                // Desenhar caminho dos países
-                svg
-                    .append("g")
-                    .selectAll("path")
-                    .data(data.features)
-                    .join("path")
-                    .attr("fill", "#ccc")
-                    .attr("stroke", "#fff")
-                    .attr("stroke-width", 1)
-                    .attr("d", caminho_projecao)
+        function desenhar_linhas() {
+            // Selecionar div para colocar o relatório gráfico dentro
+            const caixa = d3.select('#caixa_linhas')
 
-                // Adicionar os pontos dos países
-                svg
-                    .append("g")
-                    .selectAll("circle")
-                    .data(coods.map(cood => ({
-                        name: cood.name,
+            // Limpar a caixa dos selecionados
+            caixa.select('svg').remove()
+
+            // Margens do gráfico
+            const margens = { topo: 30, direita: 20, baixo: 20, esquerda: 40 }
+
+            // Espaçamento de legendas
+            const legenda_medidas = { altura: 25, espaco: 7, raio: 5 }
+
+            // Dimensão do gráfico (largura e altura)
+            const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
+            const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo - legenda_medidas.altura
+
+            // Criação da caixa do gráfico
+            const svg = caixa
+                .append("svg")
+                .attr("width", largura + margens.esquerda + margens.direita)
+                .attr("height", altura + margens.topo + margens.baixo + legenda_medidas.altura)
+
+            // Posicionamento do gráfico
+            const grafico = svg
+                .append("g")
+                .attr("transform", "translate(" + margens.esquerda + "," + margens.topo + ")")
+
+            // Definição da escala das linhas
+            const x = d3.scaleLinear().range([0, largura])
+            const y = d3.scaleLinear().range([altura, 0])
+
+            // Agrupar os dados em continentes com dados de anos
+            const continentes_agrupados = agrupar_continentes(dados_populacao_mundial)
+
+            // Escala da variação dos dados (menor e maior número)
+            // Sem os domínios o intervalo é 0 a 1
+            x.domain([1970, 2020])
+            y.domain([
+                d3.min(continentes_agrupados, function ({ anos }) {
+                    return d3.min(anos,
+                        function ({ populacao }) { return populacao }
+                    )
+                }),
+                d3.max(continentes_agrupados, function ({ anos }) {
+                    return d3.max(anos,
+                        function ({ populacao }) { return populacao }
+                    )
+                })
+            ])
+
+            // Adicionar o eixo X com base no domínio
+            grafico
+                .append("g")
+                .style("stroke", "var(--color-text)")
+                .style("stroke-width", 0.5)
+                .attr("transform", "translate(0," + altura + ")")
+                .call(d3.axisBottom(x).tickFormat((d) => d))
+
+            // Adicionar o eixo Y com base no domínio
+            grafico
+                .append("g")
+                .style("stroke", "var(--color-text)")
+                .style("stroke-width", 0.5)
+                .call(d3.axisLeft(y).tickFormat((d) => d / 1000000)) // Em milhões
+
+            // Função de geração para o caminho das linhas
+            const gerador_linha = d3
+                .line()
+                .x((d) => x(d.ano))
+                .y((d) => y(d.populacao))
+
+            // Gerar os caminhos das linhas
+            continentes_agrupados.forEach(function (dados_populacao_mundial, index) {
+                grafico
+                    .append("path")
+                    .data([dados_populacao_mundial.anos])
+                    .style("stroke", cores(nomes_continentes.indexOf(dados_populacao_mundial.continente)))
+                    .style("stroke-width", 2)
+                    .attr("fill", "none")
+                    .attr("d", gerador_linha)
+            })
+
+            // Geração de legendas para os continentes
+            gerar_legendas(svg, altura, largura, margens, legenda_medidas)
+        }
+
+        function desenhar_setores() {
+            // Selecionar div para colocar o relatório gráfico dentro
+            const caixa = d3.select('#caixa_setores')
+
+            // Limpar a caixa dos selecionados
+            caixa.select('svg').remove()
+
+            // Margens do gráfico
+            const margens = { topo: 40, direita: 40, baixo: 20, esquerda: 20 }
+
+            // Espaçamento de legendas
+            const legenda_medidas = { altura: 25, espaco: 7, raio: 5 }
+
+            // Dimensão do gráfico (largura e altura)
+            const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
+            const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo - legenda_medidas.altura
+
+            // Criação da caixa do gráfico
+            const svg = caixa
+                .append("svg")
+                .attr("width", largura + margens.esquerda + margens.direita)
+                .attr("height", altura + margens.topo + margens.baixo + legenda_medidas.altura)
+
+            // Cálculo do raio do gráfico
+            const raio_setores = d3.min([largura, altura]) / 2
+
+            // Posicionar o gráfico no meio da caixa
+            const grafico = svg
+                .append("g")
+                .attr(
+                    "transform",
+                    "translate(" +
+                    (largura / 2 + margens.esquerda) +
+                    "," +
+                    (altura / 2 + margens.topo) +
+                    ")"
+                )
+
+            // Calcular ângulos e porcentagens dos arcos
+            // outra maneira:
+            // data = [3765, 12608]
+            // const pie = d3.pie().data(data)
+            const pie = d3.pie().value((d) => d.populacao_total)
+
+            // Geração dos arcos do gráfico
+            // Mudar o ângulo interno para remover o meio
+            const arc = d3.arc()
+                .innerRadius(raio_setores / 3)
+                .outerRadius(raio_setores)
+
+            // Desenha os arcos do gráfico
+            const arcs = grafico
+                .selectAll("arc")
+                .data(pie(bruto_continentes))
+                .join("path")
+                .attr("opacity", d => continentes.map((d) => d.continente).indexOf(d.data.continente) != -1 ? "1" : "0.5")
+                .attr("fill", d => cores(nomes_continentes.indexOf(d.data.continente)))
+                .attr("d", arc)
+                .attr("cursor", "pointer")
+                .on("click", (_, d) => realizar_filtro_continente(d.data.continente))
+
+            // Geração de legendas para os continentes
+            gerar_legendas(svg, altura, largura, margens, legenda_medidas)
+        }
+
+        function desenhar_histograma() {
+            // Selecionar div para colocar o relatório gráfico dentro
+            const caixa = d3.select('#caixa_histograma')
+
+            // Limpar a caixa dos selecionados
+            caixa.select('svg').remove()
+
+            // Margens do gráfico
+            const margens = { topo: 30, direita: 20, baixo: 20, esquerda: 40 }
+
+            // Dimensão do gráfico (largura e altura)
+            const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
+            const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo
+
+            // Criação da caixa do gráfico
+            const svg = caixa
+                .append("svg")
+                .attr("width", largura + margens.esquerda + margens.direita)
+                .attr("height", altura + margens.topo + margens.baixo)
+
+            // Posicionamento do gráfico
+            const grafico = svg
+                .append("g")
+                .attr("transform", "translate(" + margens.esquerda + "," + margens.topo + ")")
+
+            // Definição da escala das linhas
+            const x = d3.scaleLinear().range([0, largura])
+            const y = d3.scaleLinear().range([0, altura])
+
+            // Valores para a geração do histograma
+            const values = [1, 2, 3, 8, 7, 4, 9, 8, 7, 3, 4, 5, 2, 1, 9, 7, 8, 4, 0, 2, 3, 8, 7, 6]
+
+            // Escala da variação dos dados (menor e maior número)
+            x.domain([d3.min(values), d3.max(values)])
+
+            // Definir quantidade de elementos na contagem
+            const quantidade_contagem = 10
+
+            // Gerar função de contagens
+            const histograma = d3.bin()
+                // Buscar a referência do domínio
+                .domain(x.domain())
+                // Definir a quantidade da contagem
+                .thresholds(x.ticks(quantidade_contagem))
+
+            // Definição dos intervalos do começo e fim da barra
+            const caixas = histograma(values)
+
+            // Escala da variação dos dados (menor e maior número)
+            y.domain([d3.max(caixas, d => d.length), 0])
+
+            // Adicionar o eixo X com base no domínio
+            grafico
+                .append("g")
+                .style("stroke", "var(--color-text)")
+                .style("stroke-width", 0.5)
+                .attr("transform", "translate(0," + altura + ")")
+                .call(d3.axisBottom(x))
+
+            // Adicionar o eixo Y com base no domínio
+            grafico
+                .append("g")
+                .style("stroke", "var(--color-text)")
+                .style("stroke-width", 0.5)
+                .call(d3.axisLeft(y))
+
+            // Desenhar as barras - cima para baixo
+            /*grafico
+                .selectAll("rect")
+                .data(caixas)
+                .join("rect")
+                // Definir a margem da esquerda da barra
+                .attr("x", 2)
+                // Definição da cor das barras
+                .style("fill", cores(0))            
+                // Posicionamento da barra
+                .attr("transform", function (d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")" })
+                // Largura da barra
+                .attr("width", function (d) { return d.x0 === d.x1 ? 0 : x(d.x1) - x(d.x0) - 2 })
+                // Altura da barra
+                .attr("height", function (d) { return altura - y(d.length) })*/
+
+            // Desenhar as barras - baixo para cima
+            grafico
+                .selectAll("rect")
+                .data(caixas)
+                .join("rect")
+                .style("fill", cores(1))
+                // Posicionamento da barra
+                .attr("transform", function (d) { return "translate(" + x(d.x0) + ", 0)" })
+                .attr("x", 4)
+                .attr("y", y(0))
+                // Largura da barra
+                .attr("width", function (d) { return d.x0 === d.x1 ? 0 : x(d.x1) - x(d.x0) - 8 })
+                // Altura da barra
+                .attr("height", 0)
+                // Adicionar animação na barra
+                // https://github.com/d3/d3-transition/blob/v3.0.0/README.md#selection_transition
+                .transition()
+                // Função de timing da animação 
+                // https://github.com/d3/d3/blob/main/API.md#easings-d3-ease
+                .ease(d3.easePoly.exponent(5))
+                // Duração da animação
+                .duration(500)
+                // Posicionamento da barra
+                .attr("y", function (d) { return y(d.length) })
+                // Altura da barra
+                .attr("height", function (d) { return altura - y(d.length) })
+        }
+
+        function desenhar_dispersao() {
+            // Selecionar div para colocar o relatório gráfico dentro
+            const caixa = d3.select('#caixa_dispersao')
+
+            // Limpar a caixa dos selecionados
+            caixa.select('svg').remove()
+
+            // Margens do gráfico
+            const margens = { topo: 40, direita: 40, baixo: 40, esquerda: 40 }
+
+            // Dimensão do gráfico (largura e altura)
+            const largura = caixa.node().getBoundingClientRect().width - margens.esquerda - margens.direita
+            const altura = caixa.node().getBoundingClientRect().height - margens.topo - margens.baixo
+
+            // Criação da caixa do gráfico
+            const svg = caixa
+                .append("svg")
+                .attr("width", largura + margens.esquerda + margens.direita)
+                .attr("height", altura + margens.topo + margens.baixo)
+
+            // Posicionamento do gráfico
+            const grafico = svg
+                .append("g")
+                .attr("transform", "translate(" + margens.esquerda + "," + margens.topo + ")")
+
+            // Definição da escala das linhas
+            const x = d3.scaleLinear().range([0, largura])
+            const y = d3.scaleLinear().range([altura, 0])
+
+            // Criação da caixa de texto para o menu suspenso
+            const tooltip = grafico
+                .append("text")
+                .style("z-index", "10")
+                .style("visibility", "hidden")
+
+            // Escala da variação dos dados (menor e maior número)
+            // Sem os domínios o intervalo é 0 a 1
+            x.domain([0, d3.max(dados_populacao_mundial, d => +d.populacao)])
+            y.domain([0, d3.max(dados_populacao_mundial, d => +d.tamanho)])
+
+            // Adicionar o eixo X com base no domínio
+            grafico
+                .append("g")
+                .style("stroke", "var(--color-text)")
+                .style("stroke-width", 0.5)
+                .attr("transform", "translate(0," + altura + ")")
+                .call(d3.axisBottom(x).tickFormat((d) => +d / 1000000))
+
+            // Adicionar o eixo Y com base no domínio
+            grafico
+                .append("g")
+                .style("stroke", "var(--color-text)")
+                .style("stroke-width", 0.5)
+                .call(d3.axisLeft(y).tickFormat((d) => +d / 1000000))
+
+            // Desenhar os círculos da dispersão
+            grafico
+                .selectAll('circle')
+                .data(dados_populacao_mundial)
+                .join("circle")
+                .attr("cx", d => x(d.populacao))
+                .attr("cy", d => y(d.tamanho))
+                .attr("r", 5)
+                .attr("fill", d => cores(nomes_continentes.indexOf(d.continente)))
+
+            // Apresentar informações no passar do mouse em cada círculo
+            grafico
+                .selectAll("circle")
+                .on("mouseover", (_, d) => {
+                    tooltip.text(d.local)
+                    return tooltip.style("visibility", "visible")
+                })
+                .on("mousemove", (_, d) => {
+                    xPos = x(d.populacao) + 5
+                    yPos = y(d.tamanho) - 5
+                    tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")")
+                })
+                .on("mouseout", () => tooltip.style("visibility", "hidden"))
+        }
+
+        function desenhar_mapa() {
+            // Selecionar div para colocar o relatório gráfico dentro
+            const caixa = d3.select('#caixa_mapa')
+
+            // Limpar a caixa dos selecionados
+            caixa.select('svg').remove()
+
+            // Dimensão do gráfico (largura e altura)
+            const largura = caixa.node().getBoundingClientRect().width
+            const altura = caixa.node().getBoundingClientRect().height
+
+            // Definir o tamanho do svg
+            const svg = caixa
+                .append('svg')
+                .attr("width", largura)
+                .attr("height", altura)
+
+            // Gerar a Projeção de Mercator (preservação de ângulos)
+            // https://github.com/d3/d3-geo/blob/v3.1.0/README.md#projections
+            const projecao = d3.geoMercator()
+                .scale(125)
+                .translate([largura / 2, altura / 1.50])
+
+            // Definição da geração de caminhos pela projeção 
+            const caminho_projecao = d3.geoPath().projection(projecao)
+
+            // Desenhar caminho dos países
+            svg
+                .join("g")
+                .selectAll("path")
+                .data(dados_formato_territorios.features)
+                .join("path")
+                .attr("fill", "#ccc")
+                .attr("stroke", "#fff")
+                .attr("stroke-width", 1)
+                .attr("d", caminho_projecao)
+
+            // Definição da faixa dos valores para gerar o tamanho dos círculos
+            const max_pop = d3.max(dados_populacao_mundial, d => +d.populacao)
+            const min_pop = d3.min(dados_populacao_mundial, d => +d.populacao)
+            const faixa = (max_pop - min_pop) / 20
+
+            // Adicionar os pontos dos países
+            svg
+                .join("g")
+                .selectAll("circle")
+                .data(dados_populacao_mundial
+                    .filter(cood => cood.longitude !== 0 && cood.latitude !== 0)
+                    .map(cood => ({
+                        name: cood.local,
+                        populacao: cood.populacao,
+                        continente: cood.continente,
                         position: projecao([cood.longitude, cood.latitude])
                     })))
-                    .join("circle")
-                    .attr("fill", "var(--color-primary)")
-                    .attr("opacity", "0.5")
-                    .attr("cursor", "pointer")
-                    .attr("cx", d => d.position[0])
-                    .attr("cy", d => d.position[1])
-                    .on("click", (e, d) => alert(d.name))
-                    .attr("r", 0)
-                    .transition()
-                    .delay(100)
-                    .duration(900)
-                    .attr("r", 5)
+                .join(
+                    enter => {
+                        enter.append("circle")
+                            .on("click", (e, d) => alert(d.name))
+                            .attr("cursor", "pointer")
+                            .attr("fill", d => cores(nomes_continentes.indexOf(d.continente)))
+                            .attr("stroke", "#333")
+                            .attr("opacity", "0.75")
+                            .attr("cx", d => d.position[0])
+                            .attr("cy", d => d.position[1])
+                            .attr("r", 0)
+                            .transition()
+                            .delay(100)
+                            .duration(400)
+                            .attr("r", (d) => 3 + (+d.populacao / faixa))
+                    },
+                    update => update,
+                    exit => exit.remove()
+                )
+        }
+
+        function preparar_grafico(nome_caixa, funcao_desenhar) {
+            // Criar o botão de redimensionamento para a caixa
+            const redimensinar_botao = document.createElement("button")
+            redimensinar_botao.innerHTML = "X"
+            redimensinar_botao.addEventListener("click", function () {
+                this.parentElement.classList.toggle("max")
+                funcao_desenhar()
             })
-        })
-    }
 
-    function preparar_grafico(nome_caixa, funcao_desenhar) {
-        // Criar o botão de redimensionamento para a caixa
-        const redimensinar_botao = document.createElement("button")
-        redimensinar_botao.innerHTML = "X"
-        redimensinar_botao.addEventListener("click", function () {
-            this.parentElement.classList.toggle("max")
+            // Adicionar o botão de redimensionar
+            document.getElementById(nome_caixa).append(redimensinar_botao)
 
-            const svg_grafico = this.parentElement.querySelector('svg')
-            if (svg_grafico) {
-                svg_grafico.remove()
-            }
-
+            // Gerar a primeira versão do gráfico
             funcao_desenhar()
-        })
+        }
 
-        // Adicionar o botão de redimensionar
-        const grafico_caixa = document.getElementById(nome_caixa)
-        grafico_caixa.append(redimensinar_botao)
+        preparar_grafico("caixa_linhas", desenhar_linhas)
+        preparar_grafico("caixa_setores", desenhar_setores)
+        preparar_grafico("caixa_histograma", desenhar_histograma)
+        preparar_grafico("caixa_dispersao", desenhar_dispersao)
+        preparar_grafico("caixa_mapa", desenhar_mapa)
 
-        // Gerar a primeira versão do gráfico
-        funcao_desenhar()
+        function redesenhar_graficos() {
+            desenhar_linhas()
+            desenhar_setores()
+            desenhar_histograma()
+            desenhar_dispersao()
+            desenhar_mapa()
+        }
+
+        d3
+            .select("#filtros")
+            .append("button")
+            .text("Remover")
+            .on("click", () => {
+                dados_populacao_mundial.pop()
+                dados_populacao_mundial.pop()
+                dados_populacao_mundial.pop()
+                dados_populacao_mundial.pop()
+                dados_populacao_mundial.pop()
+                redesenhar_graficos()
+            })
+
+        d3
+            .select("#filtros")
+            .append("button")
+            .text("Resetar")
+            .on("click", () => {
+                dados_populacao_mundial = bruto_populacao_mundial
+                continentes = bruto_continentes
+                redesenhar_graficos()
+            })
 
         // Garantir o redesenho quando a tela muda de tamanho
-        window.addEventListener("resize", function () {
-            document.getElementById(nome_caixa).querySelector('svg').remove()
-            funcao_desenhar()
-        })
-    }
-
-    preparar_grafico("caixa_linhas", desenhar_linhas)
-    preparar_grafico("caixa_setores", desenhar_setores)
-    preparar_grafico("caixa_histograma", desenhar_histograma)
-    preparar_grafico("caixa_dispersao", desenhar_dispersao)
-    preparar_grafico("caixa_mapa", desenhar_mapa)
+        window.addEventListener("resize", redesenhar_graficos)
+    })()
 </script>
 
 </html>
