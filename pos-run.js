@@ -28,6 +28,18 @@ async function getResume(servingUrl, page, language) {
   })
 }
 
+async function getCoverLetter(servingUrl, page, language) {
+  await page.goto(`${servingUrl}/cover/${language}/index.html`, {
+    waitUntil: "networkidle0",
+  })
+
+  await page.pdf({
+    path: `./public/docs/johnywalves_${language}_cover.pdf`,
+    printBackground: true,
+    format: "A4",
+  })
+}
+
 // Gerar os Open Graphics Images
 async function navigateOpenGraphic() {
   console.log("Pos-run Generator generating...")
@@ -62,6 +74,10 @@ async function navigateOpenGraphic() {
   await getResume(servingUrl, page, "br")
   await getResume(servingUrl, page, "en")
 
+  // Getting - Cover Letter
+  await getCoverLetter(servingUrl, page, "br")
+  await getCoverLetter(servingUrl, page, "en")
+  
   // Closing
   await browser.close()
   await server.close((err) => {

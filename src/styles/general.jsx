@@ -77,7 +77,7 @@ const GeneralStyles = createGlobalStyle`
 
   body.light {
     --texts: #333;
-    --background: #fcfcfc;
+    --background: #fdfdfd;
     --background-semi: #f6f6f6c0;
     --background-card: #f8f8f8;
     --shadow-colors: #33333380;

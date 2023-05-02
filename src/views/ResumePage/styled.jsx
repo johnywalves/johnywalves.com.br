@@ -24,7 +24,7 @@ export const ResumeWrapper = styled.main`
   }
 
   & h3 {
-  font-size: 0.8125rem;
+    font-size: 0.8125rem;
   }
 
   & time {
@@ -118,6 +118,17 @@ export const ResumeSection = styled.section`
     &.description {
       margin-top: var(--16px);
     }
+
+    &.cover {
+      font-size: 1.125rem;
+      font-weight: 400;
+      text-align: justify;
+      margin-top: var(--16px);
+
+      &:nth-child(1) {
+        margin-top: var(--48px);
+      }
+    }
   }
 
   & > article {
@@ -157,6 +168,7 @@ export const ResumeSubTitle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--4px);
 

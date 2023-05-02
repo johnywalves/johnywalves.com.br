@@ -47,7 +47,7 @@ const ResumePage = ({ language }) => {
           <h2>{language.skills.title}</h2>
           <hr />
           <ul>
-            {language.skills.list.slice(0, 3).map(({ type, list }) => (
+            {language.skills.list.map(({ type, list }) => (
               <li>
                 <h3>{type}</h3>
                 <ul>
@@ -120,17 +120,15 @@ const ResumePage = ({ language }) => {
         <ResumeSection>
           <h2>{language.education.title}</h2>
           <hr />
-          {language.education.list
-            .slice(0, 4)
-            .map(({ date, title, institution, production }) => (
-              <ResumeCourse>
-                <p>
-                  <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
-                  {institution}
-                </p>
-                {production && <p>{production.title}</p>}
-              </ResumeCourse>
-            ))}
+          {language.education.list.map(({ date, title, institution, production }) => (
+            <ResumeCourse>
+              <p>
+                <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
+                {institution}
+              </p>
+              {production && <p>{production.title}</p>}
+            </ResumeCourse>
+          ))}
         </ResumeSection>
 
         <ResumeSection>
@@ -138,7 +136,6 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.certification.list
             .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))
-            .slice(0, 5)
             .map(({ date, name, institute }) => (
               <ResumeCourse>
                 <p>

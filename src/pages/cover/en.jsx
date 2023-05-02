@@ -1,20 +1,20 @@
 import React from "react"
 
 import Seo from "components/seo"
-import ResumePage from "views/ResumePage"
+import CoverLetterPage from "views/CoverLetterPage"
 import GeneralStyles from "styles/general"
 
 import language from "assets/lang/en.json"
 
-const ResumeEnglish = () => (
+const CoverLetterEnglish = () => (
   <>
     <GeneralStyles />
-    <ResumePage language={language} />
+    <CoverLetterPage language={language} />
   </>
 )
 
-export default ResumeEnglish
+export default CoverLetterEnglish
 
 export const Head = ({ location }) => (
-  <Seo location={location} title="Resume - English" />
+  <Seo location={location} title="Cover Letter - English" />
 )

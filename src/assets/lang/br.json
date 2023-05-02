@@ -99,9 +99,10 @@
       {
         "type": "Ferramentas",
         "list": [
+          { "title": "AWS", "icon": "Toolbox" },
+          { "title": "Azure DevOps", "icon": "Toolbox" },
           { "title": "BPM", "icon": "Toolbox" },
           { "title": "Docker", "icon": "Toolbox" },
-          { "title": "Firebase", "icon": "Toolbox" },
           { "title": "Git", "icon": "Toolbox" },
           { "title": "Scrum", "icon": "Toolbox" },
           { "title": "Jenkins", "icon": "Toolbox" },
@@ -535,7 +536,7 @@
         "institution": "Condor Informática",
         "description": [
           "Desenvolvimento de ERP para controle financeiro, estoque e geração de entregas para obrigações fiscais",
-          "Tecnologias: Delphi e Firebase"
+          "Tecnologias: Delphi e Firebird"
         ]
       },
       {
@@ -544,7 +545,7 @@
         "institution": "SOC Informática",
         "description": [
           "Consultória e prestação de serviços em contabilidade e informática para pessoas físicas e jurídicas",
-          "Tecnologias: Delphi e Firebase"
+          "Tecnologias: Delphi e Firebird"
         ]
       }
     ]
