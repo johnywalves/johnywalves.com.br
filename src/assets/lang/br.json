@@ -29,7 +29,7 @@
     "category": "Categoria",
     "categories": "Categorias",
     "someHighlights": "Destaques",
-    "allArticles": "Todos os artigos",
+    "allArticles": "Artigos sobre tecnologias, conceitos e alguns pensamentos",
     "viewAll": "Ver todos os artigos",
     "feed": "http://feeds.feedburner.com/johnywalves-posts"
   },
@@ -39,6 +39,7 @@
     "prev": "Anterior",
     "next": "Próximo",
     "last": "Último",
+    "allComics": "Tirinhas sobre a vida de trabalhadores de tecnologia",
     "viewAll": "Ver todas as tirinhas",
     "feed": "http://feeds.feedburner.com/johnywalves-comics"
   },

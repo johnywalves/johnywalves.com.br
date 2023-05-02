@@ -20,9 +20,13 @@ export const ListsPagesWrapper = styled.main`
 
   ${({ navigator }) => navigator && hasNavigator}
 
-  & h2 {
+  & h1 {
     font-weight: 400;
     color: var(--texts);
+
+    &.comics {
+      margin-bottom: var(--16px);
+    }
   }
 
   & a {

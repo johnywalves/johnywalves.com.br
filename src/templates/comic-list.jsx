@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Hamster from "assets/vectors/Hamster"
 
+import Strings from "components/strings"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
 import ComicItem from "components/ComicItem"
@@ -13,7 +14,7 @@ import ListsPages, {
 } from "components/ListsPages"
 
 const titlePage = "Tirinhas"
-const descriptionPage = "Quadrinhos sobre a vida de trabalhadores de tecnologia"
+const descriptionPage = "Tirinhas sobre a vida de trabalhadores de tecnologia"
 const thumbnailPage = "/figures/thumbnail_comics.jpg"
 
 const ComicList = (props) => {
@@ -25,6 +26,7 @@ const ComicList = (props) => {
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleComicNavigator}>
+        <h1 class="comics">{Strings.comics.allComics}</h1>
         {comicsList.map(
           (
             {
