@@ -30,21 +30,13 @@ function SEO({
     `
   )
 
-  const titleName = limitText(
-      65,
-      title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title
-    ),
-    metaDescription = limitText(
-      155,
-      description || site.siteMetadata.description
-    ),
-    pathImage = `${site.siteMetadata.siteUrl}${
-      image || "/figures/thumbnail.jpg"
-    }`,
-    pathIcon = `${site.siteMetadata.siteUrl}/figures/favicon.png`,
-    sizeImageWidth = imagenWidth || 900,
-    sizeImageHeight = imageHeight || 600,
-    urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
+  const titleName = limitText(65, title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title)
+  const metaDescription = limitText(155, description || site.siteMetadata.description)
+  const pathImage = `${site.siteMetadata.siteUrl}${image || "/figures/thumbnail.jpg"}`
+  const pathIcon = `${site.siteMetadata.siteUrl}/figures/favicon.png`
+  const sizeImageWidth = imagenWidth || 900
+  const sizeImageHeight = imageHeight || 600
+  const urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
 
   return (
     <>

@@ -12,8 +12,9 @@ import ListsPages, {
   SeparatorList,
 } from "components/ListsPages"
 
-const titlePage = "Tirinhas",
-  descriptionPage = "Listagens tirinhas geradas e publicacas"
+const titlePage = "Tirinhas"
+const descriptionPage = "Quadrinhos sobre a vida de trabalhadores de tecnologia"
+const thumbnailPage = "/figures/thumbnail_comics.jpg"
 
 const ComicList = (props) => {
   const comicsList = props.data.allMarkdownRemark.edges,
@@ -122,5 +123,13 @@ export const query = graphql`
 export default ComicList
 
 export const Head = ({ location }) => (
-  <Seo location={location} title={titlePage} description={descriptionPage} />
+  <Seo
+    location={location}
+    image={thumbnailPage}
+    imagenWidth={1200}
+    imageHeight={628}
+    title={titlePage}
+    description={descriptionPage}
+  />
 )
+

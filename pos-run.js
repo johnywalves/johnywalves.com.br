@@ -40,6 +40,18 @@ async function getCoverLetter(servingUrl, page, language) {
   })
 }
 
+async function getThumbnail(url, page, filename) {
+  await page.goto(url, { waitUntil: "networkidle0" })
+
+  await page.setViewport({ width: 1200, height: 628, deviceScaleFactor: 1 })
+
+  await page.screenshot({
+    path: `./public/figures/${filename}.jpg`,
+    type: "jpeg",
+    quality: 100,
+  })
+}
+
 // Gerar os Open Graphics Images
 async function navigateOpenGraphic() {
   console.log("Pos-run Generator generating...")
@@ -65,7 +77,7 @@ async function navigateOpenGraphic() {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
-  // Getting - Images
+  // Getting - OpenGraph Images
   for (const slug of slugs) {
     await getImage(servingUrl, page, slug)
   }
@@ -77,7 +89,16 @@ async function navigateOpenGraphic() {
   // Getting - Cover Letter
   await getCoverLetter(servingUrl, page, "br")
   await getCoverLetter(servingUrl, page, "en")
-  
+
+  // Change to dark theme
+  await page.goto(servingUrl, { waitUntil: "networkidle0" })
+  const changeThemeIcon = await page.$("#change-theme-icon")
+  await changeThemeIcon.click()
+
+  // Getting - ListPages (Posts and Comics)
+  await getThumbnail(`${servingUrl}/blog/index.html`, page, 'thumbnail_posts')
+  await getThumbnail(`${servingUrl}/comics/index.html`, page, 'thumbnail_comics')
+
   // Closing
   await browser.close()
   await server.close((err) => {

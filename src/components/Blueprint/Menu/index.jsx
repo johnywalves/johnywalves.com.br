@@ -86,7 +86,7 @@ const Menu = ({ hero, whiteLogo }) => {
               </li>
             ))}
           </MenuTop>
-          <ThemeColorWrapper onClick={toggleTheme}>
+          <ThemeColorWrapper id="change-theme-icon" onClick={toggleTheme}>
             <span />
             <span />
             <span />

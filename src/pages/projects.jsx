@@ -6,9 +6,9 @@ import Seo from "components/seo"
 
 import ProjectPage from "views/ProjectPage"
 
-const title = "Projetos e Desenvolvimento",
-  description = "Apresentação de projetos desenvolvidos ou em desenvolvimento",
-  thumbnail = "/figures/thumbnail_projects.jpg"
+const title = "Projetos e Desenvolvimento"
+const description = "Portfólio de projetos desenvolvidos ou em desenvolvimento"
+const thumbnail = "/figures/thumbnail_projects.jpg"
 
 const Projects = () => {
   return (

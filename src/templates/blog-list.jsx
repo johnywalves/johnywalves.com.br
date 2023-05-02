@@ -9,8 +9,9 @@ import NavigationPage from "components/NavigationPage"
 
 import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
 
-const titlePage = "Artigos",
-  descriptionPage = "Listagem de todos artigos publicados"
+const titlePage = "Artigos"
+const descriptionPage = "Artigos sobre tecnologias, conceitos e alguns pensamentos"
+const thumbnailPage = "/figures/thumbnail_posts.jpg"
 
 const BlogList = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges,
@@ -112,5 +113,12 @@ export const query = graphql`
 export default BlogList
 
 export const Head = ({ location }) => (
-  <Seo location={location} title={titlePage} description={descriptionPage} />
+  <Seo
+    location={location}
+    image={thumbnailPage}
+    imagenWidth={1200}
+    imageHeight={628}
+    title={titlePage}
+    description={descriptionPage}
+  />
 )
