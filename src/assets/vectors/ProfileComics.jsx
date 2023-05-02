@@ -273,14 +273,6 @@ const ProfileComics = (props) => (
                 id="mouth-12ee431c-8604-4d7b-bbee-ee7b1c3595f1"
                 d="M -60 0 a 5 5 0 0 0 120 0 a 5 1 0 0 0 -120 0 Z"
               />
-              <path
-                d="M -6 0 0 a 5 5 0 0 0 120 0 a 5 1 0 0 0 -120 0 Z"
-                style={{
-                  fillOpacity: "0",
-                  stroke: "black",
-                  strokeWidth: "0.5rem",
-                }}
-              />
               <use
                 clipPath="url(#tongue-12ee431c-8604-4d7b-bbee-ee7b1c3595f1)"
                 xlinkHref="#mouth-12ee431c-8604-4d7b-bbee-ee7b1c3595f1"

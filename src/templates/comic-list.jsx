@@ -26,7 +26,7 @@ const ComicList = (props) => {
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleComicNavigator}>
-        <h1 class="comics">{Strings.comics.allComics}</h1>
+        <h1 className="comics">{Strings.comics.allComics}</h1>
         {comicsList.map(
           (
             {
@@ -44,9 +44,8 @@ const ComicList = (props) => {
             },
             index
           ) => (
-            <>
+            <span key={index}>
               <ComicItem
-                key={index}
                 slug={slug}
                 number={number}
                 date={date}
@@ -57,7 +56,7 @@ const ComicList = (props) => {
               <SeparatorList>
                 <Hamster />
               </SeparatorList>
-            </>
+            </span>
           )
         )}
         <NavigationPage

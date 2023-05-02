@@ -79,7 +79,7 @@ const Hamster = (props) => (
           rx="4.4052"
           ry="2.8293"
           fill="#e798d3"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           stroke="#995808"
           strokeLinejoin="round"
           strokeWidth=".87378"
@@ -87,7 +87,7 @@ const Hamster = (props) => (
         />
       </g>
     </g>
-    <g transform="translate(-7.2342 -1.0922)" fill-rule="evenodd">
+    <g transform="translate(-7.2342 -1.0922)" fillRule="evenodd">
       <ellipse
         cx="34.952"
         cy="18.756"
@@ -107,7 +107,7 @@ const Hamster = (props) => (
         style={{ paintOrder: "markers fill stroke" }}
       />
     </g>
-    <g transform="translate(-21.135 -2.9419)" fill-rule="evenodd">
+    <g transform="translate(-21.135 -2.9419)" fillRule="evenodd">
       <ellipse
         cx="34.952"
         cy="20.872"
