@@ -259,7 +259,7 @@
         "description": "Tempo gasto executando tarefas de forma simples para habilitar e desabilitar"
       },
       {
-        "title": "Criador de Tirinhas",
+        "title": "Criador de Personagens e Tirinhas",
         "view": "https://comics.johnywalves.com.br",
         "cover": "comicscreator",
         "description": "Ferramenta para geração e visualização de tirinhas em SVG"

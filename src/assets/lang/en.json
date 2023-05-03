@@ -259,7 +259,7 @@
         "description": "Time spent executing tasks in a simple way to enable and disable"
       },
       {
-        "title": "Comics Creator",
+        "title": "Characters and Comics Creator",
         "view": "https://comics.johnywalves.com.br",
         "cover": "comicscreator",
         "description": "Tool for generating and viewing SVG strips"
