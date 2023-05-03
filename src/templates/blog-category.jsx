@@ -9,26 +9,32 @@ import NavigationPage from "components/NavigationPage"
 
 import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
 
-const titlePage = "Artigos"
+const thumbnailPage = "/figures/thumbnail_posts.jpg"
 
 const BlogCategory = ({ data, pageContext }) => {
-  const postList = data.allMarkdownRemark.edges,
-    { currentPage, prevPage, nextPage, numPages, categories, category } =
-      pageContext,
-    isFirst = currentPage === 1,
-    isLast = currentPage === numPages,
-    descriptionPage = `Listagem de artigos de ${category}`
+  const postList = data.allMarkdownRemark.edges
+  const { currentPage, prevPage, nextPage, numPages, categories, category } =
+    pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const titlePage = `Artigos sobre ${category}`
+  const descriptionPage = `Artigos da categoria ${category}`
 
   const ArticleNavigatior = () => (
     <ArticleCategoryNavigatior categories={categories} />
   )
 
   return (
-    <Blueprint content title={titlePage} description={descriptionPage}>
+    <Blueprint
+      content
+      title={titlePage}
+      description={descriptionPage}
+      openGraphImage={thumbnailPage}
+    >
       <ListsPages Navigator={ArticleNavigatior}>
-        <h2>
+        <h1>
           {Strings.posts.category}: <strong>{category}</strong>
-        </h2>
+        </h1>
         {postList.map(
           ({
             node: {
@@ -115,10 +121,17 @@ export const query = graphql`
 export default BlogCategory
 
 export const Head = ({ location, pageContext }) => {
-  const { category } = pageContext,
-    descriptionPage = `Listagem de artigos de ${category}`
+  const { category } = pageContext
+  const titlePage = `Artigos sobre ${category}`
+  const descriptionPage = `Artigos da categoria ${category}`
 
   return (
-    <Seo location={location} title={titlePage} description={descriptionPage} />
+    <Seo location={location}
+      image={thumbnailPage}
+      imagenWidth={1200}
+      imageHeight={628}
+      title={titlePage}
+      description={descriptionPage}
+    />
   )
 }

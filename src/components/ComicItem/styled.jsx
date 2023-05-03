@@ -9,12 +9,6 @@ export const PostItemLink = styled(Link)`
   padding: 0 var(--48px);
   transition: all 0.25s;
 
-  &:hover {
-    & picture {
-      opacity: 0.75;
-    }
-  }
-
   ${media.lessThan("medium")`
     padding: 0;
   `}

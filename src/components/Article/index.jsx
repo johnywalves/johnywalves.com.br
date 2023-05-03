@@ -23,9 +23,9 @@ import {
 } from "./styled"
 
 const Article = ({ data, pageContext }) => {
-  const post = data.markdownRemark,
-    { slug, recommendedLast, recommendedCategory } = pageContext,
-    uriImage = `/ogimages/${slug.split("/").join("")}.jpg`
+  const post = data.markdownRemark
+  const { slug, recommendedLast, recommendedCategory } = pageContext
+  const uriImage = `/ogimages/${slug.split("/").join("")}.jpg`
 
   return (
     <Blueprint
@@ -98,10 +98,10 @@ const Article = ({ data, pageContext }) => {
 
 export const ArticleHead = ({ location, data, pageContext }) => {
   const {
-      html,
-      excerpt,
-      frontmatter: { title, description, created, extras },
-    } = data.markdownRemark,
+    html,
+    excerpt,
+    frontmatter: { title, description, created, extras },
+  } = data.markdownRemark,
     { title: titleSite, author, siteUrl } = data.site.siteMetadata,
     { slug } = pageContext
 

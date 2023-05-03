@@ -6,18 +6,18 @@ import Seo from "components/seo"
 
 import ProjectPage from "views/ProjectPage"
 
-const title = "Projetos e Desenvolvimento"
-const description = "Portfólio de projetos desenvolvidos ou em desenvolvimento"
-const thumbnail = "/figures/thumbnail_projects.jpg"
+const titlePage = "Projetos e Desenvolvimento"
+const descriptionPage = "Portfólio de projetos desenvolvidos ou em desenvolvimento"
+const thumbnailPage = "/figures/thumbnail_projects.jpg"
 
 const Projects = () => {
   return (
     <ParallaxProvider>
       <Blueprint
         content
-        title={title}
-        description={description}
-        openGraphImage={thumbnail}
+        title={titlePage}
+        description={descriptionPage}
+        openGraphImage={thumbnailPage}
       >
         <ProjectPage />
       </Blueprint>
@@ -30,8 +30,8 @@ export default Projects
 export const Head = ({ location }) => (
   <Seo
     location={location}
-    title={title}
-    description={description}
-    image={thumbnail}
+    title={titlePage}
+    description={descriptionPage}
+    image={thumbnailPage}
   />
 )

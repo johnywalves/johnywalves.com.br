@@ -6,19 +6,18 @@ import Seo from "components/seo"
 
 import UtilsPage from "views/UtilsPage"
 
-const title = "Utilidades e Ferramentas",
-  description =
-    "Coleção de artigos para consulta, ferramentas e outras utilidades",
-  thumbnail = "/figures/thumbnail_projects.jpg"
+const titlePage = "Utilidades e Ferramentas"
+const descriptionPage = "Coleção de artigos para consulta, ferramentas e outras utilidades"
+const thumbnailPage = "/figures/thumbnail_utils.jpg"
 
 const Utils = () => {
   return (
     <ParallaxProvider>
       <Blueprint
         content
-        title={title}
-        description={description}
-        openGraphImage={thumbnail}
+        title={titlePage}
+        description={descriptionPage}
+        openGraphImage={thumbnailPage}
       >
         <UtilsPage />
       </Blueprint>
@@ -31,8 +30,10 @@ export default Utils
 export const Head = ({ location }) => (
   <Seo
     location={location}
-    title={title}
-    description={description}
-    image={thumbnail}
+    title={titlePage}
+    imagenWidth={1200}
+    imageHeight={628}
+    description={descriptionPage}
+    image={thumbnailPage}
   />
 )
