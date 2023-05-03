@@ -121,6 +121,7 @@ export const ResumeSection = styled.section`
 
     &.description {
       margin-top: var(--16px);
+      line-height: 130%;
     }
 
     &.cover {
@@ -162,12 +163,17 @@ export const ResumeCourse = styled.section`
   &:first-of-type {
     margin-top: var(--16px);
   }
+
+  & p {
+    line-height: 140%;
+  }
 `
 
 export const ResumeSubSection = styled.article`
   & li {
     margin: var(--4px) 0 0;
     line-height: 130%;
+    text-align: justify;
   }
 `
 
@@ -179,7 +185,7 @@ export const ResumeSubTitle = styled.div`
   align-items: center;
   gap: var(--4px);
 
-  margin: var(--16px) 0 0;
+  margin: var(--16px) 0 var(--4px);
 
   & h3 {
     display: flex;

@@ -225,21 +225,17 @@ const listDescriptions = css`
   list-style-position: inside;
 `
 
-export const Descriptions = styled.ul`
+export const Descriptions = styled.div`
   padding: 5px 0;
 
   ${({ list }) => list && listDescriptions}
 `
 
-export const Description = styled.li`
-  padding: 0.125rem 0;
+export const ExperienceDescription = styled.p`
+  padding: 0.125rem 0 0.5rem;
   line-height: 140%;
   vertical-align: middle;
   font-weight: 400;
-  
-  & span {
-    margin-left: -4px;
-  }
 `
 
 const WrapperIcon = styled.a`

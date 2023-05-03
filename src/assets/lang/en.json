@@ -106,7 +106,6 @@
           { "title": "BPM", "icon": "Toolbox" },
           { "title": "Docker", "icon": "Toolbox" },
           { "title": "Git", "icon": "Toolbox" },
-          { "title": "Scrum", "icon": "Toolbox" },
           { "title": "Jenkins", "icon": "Toolbox" }
         ]
       }
@@ -444,8 +443,8 @@
         "title": "Senior Developer Frontend",
         "institution": "CI&T",
         "description": [
-          "<strong>Coca-Cola</strong>: Updating and maintaining tools for promotions, lead collection and monitoring consumer metrics (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services and GitHub Actions)",
-          "<strong>ANBIMA</strong>: Creation of a system for financial institutions to inform operations of stock managed, and restructuring of the platform for publishing data on financial products, focused on SEO and performance (HTML, CSS, JavaScript, React, Next.js e Gitlab)"
+          "At <strong>Coca-Cola</strong> working on platforms for promoting products, promotions, collecting leads and monitoring consumer metrics in Latin America and the Caribbean (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services and GitHub Actions)",
+          "With ANBIMA in the creation of the system for collecting information from managed portfolios, and restructuring the publication of financial product data, focused on performance and results in search engines (SEO, HTML, CSS, JavaScript, React, Next.js and Gitlab)"
         ]
       },
       {
@@ -453,8 +452,8 @@
         "title": "Frontend Developer",
         "institution": "Meta",
         "description": [
-          "Service provision for Localiza in the maintenance and evolution of the <strong>Zarp Localiza</strong> tool, for vehicle rental and other services, aimed at capturing and retaining customers",
-          "Restructuring of <strong>Zarp Localiza</strong> focused on user experience, value delivery and search engine optimization (SEO) with Next.js"
+          "Maintenance and evolution of the Zarp Localiza platform, with technology and infrastructure restructuring, focused on user experience, performance and optimization for search results (SEO) with Next.js, reaching the first result in organic searches",
+          "Leadership in CI/CD processes (Azure DevOps), definition of frontend technologies and monitoring of metrics (Sales funnel, Hotjar and Datadog)"
         ]
       },
       {
@@ -462,8 +461,7 @@
         "title": "Developer",
         "institution": "Invillia",
         "description": [
-          "Development and optimization for the <strong>Invillia Apps</strong> application suite, rich interfaces for monitoring of the work environment, data visualization and employee training",
-          "Web developer Frontend (JavaScript, TypeScript, React, HTML, CSS) and Backend (Node, Express, Next.js)"
+          "Development of Invillia Apps suite of applications, optimization for memory usage in integration with Microsoft Teams and data visualization (D3), acting as frontend (JavaScript, TypeScript, HTML, CSS, React and D3) and backend (Node, Express and MySQL)"
         ]
       },
       {
@@ -471,9 +469,9 @@
         "title": "Full Web Developer",
         "institution": "Unimed Rio Preto",
         "description": [
-          "Web development of the service portal for beneficiaries for financial control, exams, appointment scheduling, among others (JavaScript, TypeScript, React, Next.js, HTML e CSS)",
-          "API planning and development for authentication and delivery of beneficiary data (PL/SQL, Java, Spring Boot e RESTFul)",
-          "Test Automation and DevOps for in-house and third-party development (Apache Tomcat, Jenkins, Jest and Python)"
+          "Development and coordination with third parties of the beneficiary portal (UI/UX) with financial management, exams and appointment scheduling (HTML, CSS, JavaScript, TypeScript, React and Next.js)",
+          "Planning and development of an API for user authentication and doctors' guide (Java, Spring Boot, PL/SQL, Oracle Database and RESTFul)",
+          "Creation of an environment for test automation (Jest and Python), monitoring (Grafana) and CI/CD (Apache Tomcat and Jenkins) of management and service delivery systems"
         ]
       },
       {
@@ -481,9 +479,9 @@
         "title": "Full Developer",
         "institution": "Bnex",
         "description": [
-          "Web management and development with mobile integration for tracking promoters at points of sale (Asp.NET MVC and React Native)",
-          "Dashboards for visual management to monitor <strong>JBS</strong> supply (JavaScript with NodeJS)",
-          "Maintenance of the loading and transformation process of <strong>JBS</strong> partner butchers (Pentaho)"
+          "Management and development of a web (Asp.NET MVC and .Net C#) and mobile (JavaScript and React Native) backoffice platform to monitor promoters at retail outlets",
+          "Development of data visualization, with dashboards, in the monitoring of results for JBS (JavaScript, NodeJS, HTML and CSS)",
+          "Load maintenance and data transformation (ETL) from JBS partners (Pentaho, Java and SQL)"
         ]
       },
       {
@@ -491,8 +489,8 @@
         "title": "Process Automation Consultant",
         "institution": "WDG Automation",
         "description": [
-          "Automation of processes and chatbots (WDG Automation) and structuring of projects with BPMN for calls to Recalls for <strong>Toyota Rodobens</strong> (Bizagi BPMN Modeler)",
-          "Extension development for Google Chrome of telemarketing tool from <strong>Claro</strong> (JavaScript)"
+          "Automation of processes and chatbots (WDG Automation) and structuring of service projects for recalls at Toyota Rodobens (Bizagi BPMN Modeler)",
+          "Development of an extension for Google Chrome for Claro's telemarketing (JavaScript)"
         ]
       },
       {
@@ -500,8 +498,7 @@
         "title": "Senior Software Developer",
         "institution": "Emais Urbanismo",
         "description": [
-          "Maintenance, support and development of internal ERP and CRM for fiscal, accounting, financial and real estate portfolio control",
-          "Technologies: Delphi and Microsoft SQL Server"
+          "Maintenance, support and development of ERP and CRM (Delphi and Microsoft SQL Server) for fiscal, accounting, financial control and real estate portfolio"
         ]
       },
       {
@@ -509,8 +506,7 @@
         "title": "Full Developer",
         "institution": "Freelancer",
         "description": [
-          "Provision of services for adjustments and automation of tax obligation deliveries",
-          "Technology: .Net C# and Microsoft SQL Server"
+          "Provision of services and automation of tax obligations for several clients (Windows Forms, .Net C# and Microsoft SQL Server)."
         ]
       },
       {
@@ -518,8 +514,7 @@
         "title": "Software Developer",
         "institution": "Dual Consultoria e Sistemas",
         "description": [
-          "Development of management software for distributors with a focus on financial transactions and tax obligations",
-          "Technology: Progress"
+          "Maintenance, and customer service, management for distributors in the financial area and tax obligations (Progress 4GL)"
         ]
       },
       {
@@ -527,8 +522,7 @@
         "title": "Software Developer",
         "institution": "Hexa Informática",
         "description": [
-          "Engineering, development and implementation of a management and sales system for an optical network",
-          "Technologies: Delphi and Microsoft SQL Server"
+          "System development, implementation and maintenance (Delphi and Microsoft SQL Server) for optical network management"
         ]
       },
       {
@@ -536,8 +530,8 @@
         "title": "Software Developer",
         "institution": "Condor Informática",
         "description": [
-          "ERP development for financial control, inventory and generation of deliveries for tax obligations",
-          "Technologies: Delphi and Firebird"
+          "Maintenance and implementation of ERPs for financial control, inventory and delivery of tax obligations (Delphi and Firebird)",
+          "Development of a tool (Delphi and Firebird) for the Delegacia de Investigações Gerais (DIG) for internal control of arrest data"
         ]
       },
       {
@@ -545,8 +539,8 @@
         "title": "Software Developer",
         "institution": "SOC Informática",
         "description": [
-          "Consulting and provision of services in accounting and information technology for individuals and companies",
-          "Technologies: Delphi and Firebird"
+          "Consultancy, and development, for file delivery for tax obligations (Delphi and Firebird)",
+          "Sale, assembly and maintenance of computers"
         ]
       }
     ]

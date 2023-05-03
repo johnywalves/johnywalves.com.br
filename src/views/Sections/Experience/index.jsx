@@ -36,7 +36,7 @@ import {
   Institution,
   DateText,
   Descriptions,
-  Description,
+  ExperienceDescription,
   Production,
   WrapperAward,
   BoxShape,
@@ -182,16 +182,14 @@ const SectionExperience = () => {
                 </Title>
                 <Descriptions list={1}>
                   {description.map((text, idx) => (
-                    <Description key={idx}>
-                      <span>
+                    <ExperienceDescription key={idx}>
                         {`${text
                           .split("</strong>")
                           .join("")
                           .split("<strong>")
                           .join("")}${description.length - 1 !== idx ? ";" : "."
                           }`}
-                      </span>
-                    </Description>
+                    </ExperienceDescription>
                   ))}
                 </Descriptions>
               </Accomplishment>
@@ -243,7 +241,7 @@ const SectionExperience = () => {
                 </Title>
                 <Descriptions>
                   {description.map((text, idx) => (
-                    <Description key={idx}>{text}</Description>
+                    <ExperienceDescription key={idx}>{text}</ExperienceDescription>
                   ))}
                 </Descriptions>
                 {production && (
