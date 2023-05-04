@@ -77,7 +77,7 @@ const Article = ({ data, pageContext }) => {
               <PostCategory>{post.frontmatter.category}</PostCategory>
             </Link>
             {post.frontmatter.tags.map((tag) => (
-              <PostTag>{tag}</PostTag>
+              <PostTag key={tag}>{tag}</PostTag>
             ))}
           </PostLabels>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
