@@ -10,7 +10,7 @@ tags:
   - Gráficos
   - SVG
 extras:
-  - d3.v7.6.1.min.js
+  - d3.v7.8.4.min.js
   - graphic-world-population.js
 published: true
 cheatsheet: false

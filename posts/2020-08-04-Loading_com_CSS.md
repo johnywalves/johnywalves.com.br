@@ -1,7 +1,7 @@
 ---
+date: 2020-08-04 18:50:32 -0300
 title: Loading com CSS
-description: Animação de loading com HTML e CSS
-date: "2020-08-04 18:50:32"
+description: Animação de carregando estilizado somente com HTML e CSS
 featuredImage: ./featured/hourglass-1.jpg
 coverImage: /figures/hourglass-1.jpg
 category: CSS
