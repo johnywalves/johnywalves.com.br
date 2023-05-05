@@ -1,5 +1,5 @@
 ---
-date: 2023-05-04 19:34:02 -0300
+date: 2023-05-05 14:29:02 -0300
 title: Relação de bilheterias em filmes de ação
 description: Visualização de dados com D3.js e gráfico de dispersão com filmes de grandes bilheterias
 featuredImage: ./featured/movie-1.jpg
@@ -50,15 +50,6 @@ Para executar o gráfico criamos uma caixa onde ele vai estar contido, com uma a
 </div>
 ```
 
-Com a declaração das duas variáveis:
-
-* `raw` dados importados do arquivo;
-* `data` dados usados para gerar o gráfico, com possíveis filtros aplicados.
-
-```javascript
-let raw, data
-```
-
 Fazendo uso da função `getElement` para buscar ou criar os elementos atualizando os valores sem recriar
 
 ```javascript
@@ -70,9 +61,12 @@ function getElement(parent, tag, selector = "") {
 Desenhar o gráfico com as movimentações de atualizações e remoção, comentários para cada parte
 
 ```javascript
-function drawGraphic() {
+function drawGraphic(data) {
     // Selecionar div para colocar o relatório gráfico dentro
     const wrapper = d3.select("#d3_wrapper")
+
+    // Caso a caixa não esteja disponível pular o desenho
+    if (!wrapper.node()) { return }
 
     // Margens do gráfico
     const margin = { top: 10, right: 10, bottom: 60, left: 60 }
@@ -244,11 +238,26 @@ Carregamos somente os 200 primeiros registro da fonte de dados original, com os 
 </div>
 ```
 
-Para cada botão selecionar uma parte dados brutos `raw`, atualizar os dados usados no gráfico em `data` e realizar o desenho novamente
+Para cada botão selecionar uma parte dados brutos `raw` e atualizar os dados usados no gráfico realizando o desenho novamente
 
 ```javascript
-// Chamada da função para desenhar gráfico
-window.addEventListener("load", async function () {
+async function onLoad() {
+    // Busca das informações dos filmes em CSV
+    const raw = await d3.csv("/extras/box_office_action_movies.csv",
+        // Converter os dados em números 
+        // e colocar o ano no nome do texto    
+        d => ({
+            name: `${d.Movie} (${d.Released})`,
+            domestic: +d["Domestic Box Office"]
+                .replace("$", "")
+                .split(",")
+                .join(""),
+            international: +d["International Box Office"]
+                .replace("$", "")
+                .split(",")
+                .join("")
+        }))
+
     function enable_button(element) {
         d3.select("#top_10").attr("class", "")
         d3.select("#top_50").attr("class", "")
@@ -264,8 +273,8 @@ window.addEventListener("load", async function () {
     function filterData(start, end) {
         return function () {
             enable_button(this)
-            data = raw.slice(start, end)
-            drawGraphic()
+            // Aplicar filtros das informações 
+            drawGraphic(raw.slice(start, end))
         }
     }
 
@@ -284,38 +293,33 @@ window.addEventListener("load", async function () {
     // Selecionar as 10 últimos
     d3.select("#bottom_10").on("click", filterData(190, 200))
 
-    // Busca das informações dos filmes em CSV
-    raw = await d3.csv("//extras/box_office_action_movies.csv",
-        // Converter os dados em números 
-        // e colocar o ano no nome do texto
-        d => ({
-            name: `${d.Movie} (${d.Released})`,
-            domestic: +d["Domestic Box Office"]
-                .replace("$", "")
-                .split(",")
-                .join(""),
-            international: +d["International Box Office"]
-                .replace("$", "")
-                .split(",")
-                .join("")
-        }))
-
-    // Aplicar filtros das informações 
-    data = raw
-
     // Desenhar o gráfico no momento do carregamento
-    // e 2 segundos depois para confirmar o desenho
-    drawGraphic()
-    setTimeout(drawGraphic, 2000)
-})
+    drawGraphic(raw)
+}
 ```
 
-Versões das bibliotecas utilizadas
+## Primeiro desenho
+
+Executar o primeiro desenho com o [load da página](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event), caso o documento não carregue completamente, garantimos o desenho depois de 2 segundos
+
+```javascript
+// Chamada da função para desenhar gráfico
+window.addEventListener("load", onLoad)
+// Caso o evento load não seja acionado rodar depois de 2 segundos
+setTimeout(() => document.querySelector("#d3_wrapper svg") || onLoad(), 2000)
+```
+
+Temos nosso gráfico de dispersão em tela
+
+## Referências
+
+[Kaggle - All Time Worldwide Box Office for Action Movies](https://www.kaggle.com/datasets/bilalwaseer/all-time-worldwide-box-office-for-action-movies)
+
+<details>
+  <summary>Versões das bibliotecas utilizadas</summary>
 
 ```text
 d3: "7.6.1"
 ```
 
-## Referências
-
-[Kaggle - All Time Worldwide Box Office for Action Movies](https://www.kaggle.com/datasets/bilalwaseer/all-time-worldwide-box-office-for-action-movies)
+</details>

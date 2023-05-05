@@ -1,12 +1,13 @@
-let raw, data
-
 function getElement(parent, tag, selector = "") {
     return parent.select(selector || tag).node() ? parent.select(selector || tag) : parent.append(tag)
 }
 
-function drawGraphic() {
+function drawGraphic(data) {
     // Selecionar div para colocar o relatório gráfico dentro
     const wrapper = d3.select("#d3_wrapper")
+
+    // Caso a caixa não esteja disponível pular o desenho
+    if (!wrapper.node()) { return }
 
     // Margens do gráfico
     const margin = { top: 10, right: 10, bottom: 60, left: 60 }
@@ -161,8 +162,23 @@ function drawGraphic() {
         .style("display", "none")
 }
 
-// Chamada da função para desenhar gráfico
-window.addEventListener("load", async function () {
+async function onLoad() {
+    // Busca das informações dos filmes em CSV
+    const raw = await d3.csv("/extras/box_office_action_movies.csv",
+        // Converter os dados em números 
+        // e colocar o ano no nome do texto    
+        d => ({
+            name: `${d.Movie} (${d.Released})`,
+            domestic: +d["Domestic Box Office"]
+                .replace("$", "")
+                .split(",")
+                .join(""),
+            international: +d["International Box Office"]
+                .replace("$", "")
+                .split(",")
+                .join("")
+        }))
+
     function enable_button(element) {
         d3.select("#top_10").attr("class", "")
         d3.select("#top_50").attr("class", "")
@@ -178,8 +194,8 @@ window.addEventListener("load", async function () {
     function filterData(start, end) {
         return function () {
             enable_button(this)
-            data = raw.slice(start, end)
-            drawGraphic()
+            // Aplicar filtros das informações 
+            drawGraphic(raw.slice(start, end))
         }
     }
 
@@ -198,29 +214,13 @@ window.addEventListener("load", async function () {
     // Selecionar as 10 últimos
     d3.select("#bottom_10").on("click", filterData(190, 200))
 
-    // Busca das informações dos filmes em CSV
-    raw = await d3.csv("/extras/box_office_action_movies.csv",
-        // Converter os dados em números 
-        // e colocar o ano no nome do texto    
-        d => ({
-            name: `${d.Movie} (${d.Released})`,
-            domestic: +d["Domestic Box Office"]
-                .replace("$", "")
-                .split(",")
-                .join(""),
-            international: +d["International Box Office"]
-                .replace("$", "")
-                .split(",")
-                .join("")
-        }))
-
-    // Aplicar filtros das informações 
-    data = raw
-
     // Desenhar o gráfico no momento do carregamento
-    // e 2 segundos depois para confirmar o desenho
-    drawGraphic()
-    setTimeout(drawGraphic, 2000)
-})
+    drawGraphic(raw)
+}
+
+// Chamada da função para desenhar gráfico
+window.addEventListener("load", onLoad)
+// Caso o evento load não seja acionado rodar depois de 2 segundos
+setTimeout(() => document.querySelector("#d3_wrapper svg") || onLoad(), 2000)
 
 
