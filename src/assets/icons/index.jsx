@@ -30,6 +30,30 @@ import { Typescript } from "@styled-icons/simple-icons/Typescript"
 import { Gear } from "@styled-icons/bootstrap/Gear"
 import { Database } from "@styled-icons/entypo/Database"
 import { ExternalLink } from "@styled-icons/heroicons-solid/ExternalLink"
+import { Postgresql } from "@styled-icons/simple-icons/Postgresql"
+import { Aws } from "@styled-icons/boxicons-logos/Aws"
+import { Azuredevops } from "@styled-icons/simple-icons/Azuredevops"
+import { Docker } from "@styled-icons/boxicons-logos/Docker"
+import { Git } from "@styled-icons/boxicons-logos/Git"
+import { Jenkins } from "@styled-icons/fa-brands/Jenkins"
+import { Mysql } from "@styled-icons/simple-icons/Mysql"
+import { Microsoftsqlserver } from "@styled-icons/simple-icons/Microsoftsqlserver"
+import { ReactLogo } from "@styled-icons/boxicons-logos/ReactLogo"
+import { Redux } from "@styled-icons/boxicons-logos/Redux"
+import { Gatsby } from "@styled-icons/remix-line/Gatsby"
+import { Nodejs } from "@styled-icons/boxicons-logos/Nodejs"
+import { Styledcomponents } from "@styled-icons/simple-icons/Styledcomponents"
+import { Jekyll } from "@styled-icons/simple-icons/Jekyll"
+import { Bootstrap } from "@styled-icons/boxicons-logos/Bootstrap"
+import { Nextdotjs } from "@styled-icons/simple-icons/Nextdotjs"
+import { SpringBoot } from "@styled-icons/boxicons-logos/SpringBoot"
+import { TailwindCss } from "@styled-icons/boxicons-logos/TailwindCss"
+import { RProject } from "@styled-icons/fa-brands/RProject"
+import { Express } from "@styled-icons/simple-icons/Express"
+
+import ArrowsLeft from "./ArrowsLeft"
+import ArrowLeft from "./ArrowLeft"
+import D3js from "./D3js"
 
 const Icons = {
   MailSend,
@@ -64,10 +88,32 @@ const Icons = {
   Gear,
   Database,
   ExternalLink,
+  Postgresql,
+  Aws,
+  Azuredevops,
+  Docker,
+  Git,
+  Jenkins,
+  Mysql,
+  Microsoftsqlserver,
+  ReactLogo,
+  Redux,
+  Gatsby,
+  Nodejs,
+  Styledcomponents,
+  Jekyll,
+  Bootstrap,
+  Nextdotjs,
+  SpringBoot,
+  TailwindCss,
+  RProject,
+  Express,
+  ArrowsLeft,
+  ArrowLeft,
+  D3js
 }
 
-export { default as ArrowsLeft } from "./ArrowsLeft"
-export { default as ArrowLeft } from "./ArrowLeft"
+
 
 export {
   MailSend,
@@ -102,6 +148,29 @@ export {
   Gear,
   Database,
   ExternalLink,
+  Postgresql,
+  Aws,
+  Azuredevops,
+  Docker,
+  Git,
+  Jenkins,
+  Mysql,
+  Microsoftsqlserver,
+  ReactLogo,
+  Redux,
+  Gatsby,
+  Nodejs,
+  Styledcomponents,
+  Jekyll,
+  Bootstrap,
+  Nextdotjs,
+  SpringBoot,
+  TailwindCss,
+  RProject,
+  Express,
+  ArrowsLeft,
+  ArrowLeft,
+  D3js
 }
 
 export default Icons

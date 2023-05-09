@@ -73,40 +73,39 @@
       {
         "type": "Frameworks e Bibliotecas",
         "list": [
-          { "title": "Bootstrap", "icon": "Gear" },
-          { "title": "D3", "icon": "Gear" },
-          { "title": "Express", "icon": "Gear" },
-          { "title": "Gatsby", "icon": "Gear" },
-          { "title": "Jekyll", "icon": "Gear" },
-          { "title": "Next.js", "icon": "Gear" },
-          { "title": "Node", "icon": "Gear" },
-          { "title": "React", "icon": "Gear" },
-          { "title": "Redux", "icon": "Gear" },
-          { "title": "Spring Boot", "icon": "Gear" },
-          { "title": "Styled Components", "icon": "Gear" },
-          { "title": "Tailwind CSS", "icon": "Gear" }
+          { "title": "Bootstrap", "icon": "Bootstrap" },
+          { "title": "D3.js", "icon": "D3js" },
+          { "title": "Express.js", "icon": "Express" },
+          { "title": "Gatsby", "icon": "Gatsby" },
+          { "title": "Jekyll", "icon": "Jekyll" },
+          { "title": "Next.js", "icon": "Nextdotjs" },
+          { "title": "Node", "icon": "Nodejs" },
+          { "title": "React", "icon": "ReactLogo" },
+          { "title": "Redux", "icon": "Redux" },
+          { "title": "Spring Boot", "icon": "SpringBoot" },
+          { "title": "Styled Components", "icon": "Styledcomponents" },
+          { "title": "Tailwind CSS", "icon": "TailwindCss" }
         ]
       },
       {
         "type": "Manipulação de Dados",
         "list": [
-          { "title": "SQL Server", "icon": "Database" },
-          { "title": "MySQL", "icon": "Database" },
-          { "title": "PostgreSQL", "icon": "Database" },
-          { "title": "Python", "icon": "Database" },
-          { "title": "Qlik Sense", "icon": "Database" },
-          { "title": "R", "icon": "Database" }
+          { "title": "SQL Server", "icon": "Microsoftsqlserver" },
+          { "title": "MySQL", "icon": "Mysql" },
+          { "title": "PostgreSQL", "icon": "Postgresql" },
+          { "title": "Python", "icon": "Python" },
+          { "title": "R", "icon": "RProject" }
         ]
       },
       {
         "type": "Ferramentas",
         "list": [
-          { "title": "AWS", "icon": "Toolbox" },
-          { "title": "Azure DevOps", "icon": "Toolbox" },
+          { "title": "AWS", "icon": "Aws" },
+          { "title": "Azure DevOps", "icon": "Azuredevops" },
           { "title": "BPM", "icon": "Toolbox" },
-          { "title": "Docker", "icon": "Toolbox" },
-          { "title": "Git", "icon": "Toolbox" },
-          { "title": "Jenkins", "icon": "Toolbox" }
+          { "title": "Docker", "icon": "Docker" },
+          { "title": "Git", "icon": "Git" },
+          { "title": "Jenkins", "icon": "Jenkins" }
         ]
       }
     ]
