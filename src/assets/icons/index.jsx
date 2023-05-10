@@ -50,6 +50,7 @@ import { SpringBoot } from "@styled-icons/boxicons-logos/SpringBoot"
 import { TailwindCss } from "@styled-icons/boxicons-logos/TailwindCss"
 import { RProject } from "@styled-icons/fa-brands/RProject"
 import { Express } from "@styled-icons/simple-icons/Express"
+import { Flowchart } from "@styled-icons/fluentui-system-filled/Flowchart"
 
 import ArrowsLeft from "./ArrowsLeft"
 import ArrowLeft from "./ArrowLeft"
@@ -108,12 +109,11 @@ const Icons = {
   TailwindCss,
   RProject,
   Express,
+  Flowchart,
   ArrowsLeft,
   ArrowLeft,
   D3js
 }
-
-
 
 export {
   MailSend,
@@ -168,6 +168,7 @@ export {
   TailwindCss,
   RProject,
   Express,
+  Flowchart,
   ArrowsLeft,
   ArrowLeft,
   D3js

@@ -102,7 +102,7 @@
         "list": [
           { "title": "AWS", "icon": "Aws" },
           { "title": "Azure DevOps", "icon": "Azuredevops" },
-          { "title": "BPM", "icon": "Toolbox" },
+          { "title": "BPM", "icon": "Flowchart" },
           { "title": "Docker", "icon": "Docker" },
           { "title": "Git", "icon": "Git" },
           { "title": "Jenkins", "icon": "Jenkins" }
