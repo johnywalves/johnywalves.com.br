@@ -62,7 +62,7 @@ export const ResumeWrapper = styled.main`
 export const ResumeNavigation = styled.nav`
   height: 100%;
   background-color: var(--background-card);
-  padding: 0 0 0 var(--16px);
+  padding: 0 0 0 var(--12px);
 `
 
 export const ResumeContent = styled.div`
@@ -82,7 +82,7 @@ export const ResumeSection = styled.section`
   }
 
   & h2 {
-    margin: var(--8px) var(--16px);
+    margin-left: var(--16px);
   }
 
   label {

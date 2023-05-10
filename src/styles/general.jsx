@@ -15,11 +15,10 @@ const GeneralStyles = createGlobalStyle`
     --2px: 0.125rem;
     --4px: 0.25rem;
     --8px: 0.5rem;
+    --12px: 0.75rem;
     --14px: 0.875rem;
-    --15px: 0.9375rem;
     --16px: 1rem;
     --18px: 1.125rem;
-    --21px: 1.3125rem;
     --24px: 1.5rem;
     --32px: 2rem;
     --36px: 2.25rem;
