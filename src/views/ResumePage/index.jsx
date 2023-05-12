@@ -66,15 +66,17 @@ const ResumePage = ({ language }) => {
         <ResumeSection>
           <h2>{language.education.title}</h2>
           <hr />
-          {language.education.list.map(({ date, title, institution, production }) => (
-            <ResumeCourse key={date}>
-              <p>
-                <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
-                {institution}
-              </p>
-              {production && <p>{production.title}</p>}
-            </ResumeCourse>
-          ))}
+          {language.education.list
+            .splice(0, 4)
+            .map(({ date, title, institution, production }) => (
+              <ResumeCourse key={date}>
+                <p>
+                  <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
+                  {institution}
+                </p>
+                {production && <p>{production.title}</p>}
+              </ResumeCourse>
+            ))}
         </ResumeSection>
 
         <ResumeSection>
