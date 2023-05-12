@@ -50,8 +50,6 @@ const ResumePage = ({ language }) => {
                   <p>{institution}</p>
                 </ResumeSubTitle>
 
-                <hr class="separator" />
-
                 <ul>
                   {description.map((text, index) => (
                     <li key={index}

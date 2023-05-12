@@ -97,14 +97,6 @@ export const ResumeSection = styled.section`
     border-color: var(--highlight);
     background-color: var(--highlight);
     width: 33%;
-
-    &.separator {
-      border: 1px var(--texts) solid;
-      border-color: var(--texts);
-      background-color: var(--texts);
-      width: 50%;
-      opacity: 0.5;
-    }
   }
 
   & > ul {
