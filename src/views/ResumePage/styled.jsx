@@ -11,9 +11,8 @@ export const ResumeWrapper = styled.main`
   font-size: 0.8125rem;
 
   & h1 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 
   & h2 {
@@ -33,10 +32,6 @@ export const ResumeWrapper = styled.main`
 
   & time {
     font-weight: 400;
-  }
-
-  label {
-    text-align: center;
   }
 
   & img {
@@ -68,7 +63,7 @@ export const ResumeNavigation = styled.nav`
 export const ResumeContent = styled.div`
   height: 100%;
   background-color: var(--background);
-  padding: 0 var(--16px) 0 0;
+  padding: var(--16px) var(--16px) 0 0;
 `
 
 export const ResumeSection = styled.section`
@@ -78,15 +73,16 @@ export const ResumeSection = styled.section`
   margin: var(--8px) 0 0;
 
   & h1 {
-    margin: 0;
+    margin: var(--16px) 0 0 var(--16px);
   }
 
   & h2 {
-    margin-left: var(--16px);
+    margin: var(--8px) var(--16px) var(--2px);
   }
 
   label {
     margin-bottom: var(--4px);
+    margin-left: var(--16px);
   }
 
   & img {
@@ -101,6 +97,14 @@ export const ResumeSection = styled.section`
     border-color: var(--highlight);
     background-color: var(--highlight);
     width: 33%;
+
+    &.separator {
+      border: 1px var(--texts) solid;
+      border-color: var(--texts);
+      background-color: var(--texts);
+      width: 50%;
+      opacity: 0.5;
+    }
   }
 
   & > ul {
@@ -131,7 +135,6 @@ export const ResumeSection = styled.section`
       line-height: 140%;
       margin-top: var(--16px);
 
-      &:nth-child(1),
       &:nth-child(2),
       &:nth-last-child(2) {
         margin-top: var(--48px);

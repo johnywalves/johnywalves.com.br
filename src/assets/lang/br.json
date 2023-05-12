@@ -14,8 +14,14 @@
   "resume": {
     "title": "Currículo",
     "files": [
-      { "name": "INGLÊS", "file": "/docs/johnywalves_en.pdf" },
-      { "name": "PORTUGUÊS", "file": "/docs/johnywalves_br.pdf" }
+      {
+        "name": "INGLÊS",
+        "file": "/docs/johnywalves_en.pdf"
+      },
+      {
+        "name": "PORTUGUÊS",
+        "file": "/docs/johnywalves_br.pdf"
+      }
     ]
   },
   "status": "Brasileiro, Solteiro, 36 anos",
@@ -24,6 +30,15 @@
     "title": "Contatos",
     "about": "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
   },
+  "coverLetter": [
+    "Prezado(a) contratante",
+    "Gostaria de me apresentar como um desenvolvedor frontend sênior com mais de 15 anos de experiência na criação de interfaces de usuário e utilização de diversas tecnologias. Estou atualmente buscando uma nova alocação e adoraria trabalhar com uma equipe de pessoas engajadas e colaborativas.",
+    "Ao longo de minha carreira, tenho tido a oportunidade de trabalhar com uma ampla variedade de tecnologias, incluindo HTML, CSS, JavaScript, React, Next.js e muitas outras. Isso me permitiu desenvolver uma compreensão profunda das melhores práticas de desenvolvimento frontend, bem como a capacidade de aprender novas tecnologias rapidamente.",
+    "Uma das coisas que mais me motiva como desenvolvedor é produzir conhecimento e compartilhar o que aprendi com colegas de equipe e a comunidade em geral. Acredito firmemente que o compartilhamento de conhecimento é essencial para um ambiente de trabalho saudável e colaborativo.",
+    "Se você estiver procurando por um desenvolvedor frontend sênior com uma paixão por aprender, crescer e trabalhar em equipe, eu seria um ótimo candidato para sua empresa. Agradeço antecipadamente a oportunidade de discutir mais sobre como posso contribuir para o sucesso da sua empresa.",
+    "Atenciosamente",
+    "Johny W. Alves"
+  ],
   "posts": {
     "title": "Artigos",
     "category": "Artigos da categoria",
@@ -62,50 +77,137 @@
       {
         "type": "Linguagens",
         "list": [
-          { "title": "HTML", "icon": "Html5" },
-          { "title": "CSS", "icon": "Css3" },
-          { "title": "Java", "icon": "Java" },
-          { "title": "JavaScript", "icon": "Javascript" },
-          { "title": "Python", "icon": "Python" },
-          { "title": "TypeScript", "icon": "Typescript" }
+          {
+            "title": "HTML / HTML5",
+            "icon": "Html5"
+          },
+          {
+            "title": "CSS / CSS3",
+            "icon": "Css3"
+          },
+          {
+            "title": "Java",
+            "icon": "Java"
+          },
+          {
+            "title": "JavaScript",
+            "icon": "Javascript"
+          },
+          {
+            "title": "Python",
+            "icon": "Python"
+          },
+          {
+            "title": "TypeScript",
+            "icon": "Typescript"
+          }
         ]
       },
       {
         "type": "Frameworks e Bibliotecas",
         "list": [
-          { "title": "Bootstrap", "icon": "Bootstrap" },
-          { "title": "D3.js", "icon": "D3js" },
-          { "title": "Express.js", "icon": "Express" },
-          { "title": "Gatsby", "icon": "Gatsby" },
-          { "title": "Jekyll", "icon": "Jekyll" },
-          { "title": "Next.js", "icon": "Nextdotjs" },
-          { "title": "Node", "icon": "Nodejs" },
-          { "title": "React", "icon": "ReactLogo" },
-          { "title": "Redux", "icon": "Redux" },
-          { "title": "Spring Boot", "icon": "SpringBoot" },
-          { "title": "Styled Components", "icon": "Styledcomponents" },
-          { "title": "Tailwind CSS", "icon": "TailwindCss" }
+          {
+            "title": "Bootstrap",
+            "icon": "Bootstrap"
+          },
+          {
+            "title": "D3.js",
+            "icon": "D3js"
+          },
+          {
+            "title": "Express.js",
+            "icon": "Express"
+          },
+          {
+            "title": "Gatsby",
+            "icon": "Gatsby"
+          },
+          {
+            "title": "Jekyll",
+            "icon": "Jekyll"
+          },
+          {
+            "title": "Next.js",
+            "icon": "Nextdotjs"
+          },
+          {
+            "title": "Node",
+            "icon": "Nodejs"
+          },
+          {
+            "title": "React",
+            "icon": "ReactLogo"
+          },
+          {
+            "title": "Redux",
+            "icon": "Redux"
+          },
+          {
+            "title": "Spring Boot",
+            "icon": "SpringBoot"
+          },
+          {
+            "title": "Styled Components",
+            "icon": "Styledcomponents"
+          },
+          {
+            "title": "Tailwind CSS",
+            "icon": "TailwindCss"
+          }
         ]
       },
       {
         "type": "Manipulação de Dados",
         "list": [
-          { "title": "SQL Server", "icon": "Microsoftsqlserver" },
-          { "title": "MySQL", "icon": "Mysql" },
-          { "title": "PostgreSQL", "icon": "Postgresql" },
-          { "title": "Python", "icon": "Python" },
-          { "title": "R", "icon": "RProject" }
+          {
+            "title": "SQL Server",
+            "icon": "Microsoftsqlserver"
+          },
+          {
+            "title": "MySQL",
+            "icon": "Mysql"
+          },
+          {
+            "title": "PostgreSQL",
+            "icon": "Postgresql"
+          },
+          {
+            "title": "Python",
+            "icon": "Python"
+          },
+          {
+            "title": "R",
+            "icon": "RProject"
+          }
         ]
       },
       {
         "type": "Ferramentas",
         "list": [
-          { "title": "AWS", "icon": "Aws" },
-          { "title": "Azure DevOps", "icon": "Azuredevops" },
-          { "title": "BPM", "icon": "Flowchart" },
-          { "title": "Docker", "icon": "Docker" },
-          { "title": "Git", "icon": "Git" },
-          { "title": "Jenkins", "icon": "Jenkins" }
+          {
+            "title": "AWS",
+            "icon": "Aws"
+          },
+          {
+            "title": "Azure DevOps",
+            "icon": "Azuredevops"
+          },
+          {
+            "title": "BPM",
+            "icon": "Flowchart"
+          },
+          {
+            "title": "Docker",
+            "icon": "Docker"
+          },
+          {
+            "title": "Git",
+            "icon": "Git"
+          },
+          {
+            "title": "Jenkins",
+            "icon": "Jenkins"
+          }
         ]
       }
     ]
@@ -398,7 +500,7 @@
         ],
         "production": {
           "title": "Título: Proposta para aplicação de Regras de Associação para varejos online",
-          "file": "/docs/associacao_varejo_online.pdf"
+          "file": "/docs/associacao_varejo_online_pt.pdf"
         }
       },
       {
@@ -421,7 +523,7 @@
         ],
         "production": {
           "title": "Título: ForeSeries - Uma abordagem para predição de valores em séries temporais",
-          "file": "/docs/fore_series_johnywalves_pt.pdf"
+          "file": "/docs/fore_series_pt.pdf"
         }
       },
       {

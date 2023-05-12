@@ -1,8 +1,8 @@
 import React from "react"
 
+import ResumePageNavigation from "./navigation"
 import {
   ResumeWrapper,
-  ResumeNavigation,
   ResumeContent,
   ResumeSection,
   ResumePerson,
@@ -24,61 +24,7 @@ const getDescription = (text) => {
 const ResumePage = ({ language }) => {
   return (
     <ResumeWrapper>
-      <ResumeNavigation>
-        <ResumeSection>
-          <img src="/figures/johnywalves.png" alt="" />
-          <h1>Johny W. Alves</h1>
-          <label>{language.position}</label>
-        </ResumeSection>
-
-        <ResumeSection>
-          <h2>{language.languages.title}</h2>
-          <hr />
-          <ul>
-            {language.languages.list.map(({ name, proficiency }) => (
-              <li>
-                <strong>{name}</strong> ({proficiency})
-              </li>
-            ))}
-          </ul>
-        </ResumeSection>
-
-        <ResumeSection>
-          <h2>{language.skills.title}</h2>
-          <hr />
-          <ul>
-            {language.skills.list.map(({ type, list }) => (
-              <li>
-                <h3>{type}</h3>
-                <ul>
-                  {list.map(({ title }) => (
-                    <li>{title}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </ResumeSection>
-
-        <ResumeSection>
-          <h2>{language.contact.title}</h2>
-          <hr />
-          <ul>
-            <li>
-              <strong>contato</strong>@johnywalves.com.br
-            </li>
-            <li>
-              <strong>www</strong>.johnywalves.com.br
-            </li>
-            <li>
-              <strong>github</strong>.com/johnywalves
-            </li>
-            <li>
-              <strong>linkedin</strong>.com/in/johnywalves
-            </li>
-          </ul>
-        </ResumeSection>
-      </ResumeNavigation>
+      <ResumePageNavigation language={language} />
       <ResumeContent>
         <ResumePerson>
           <p>{language.status}</p>
@@ -97,18 +43,20 @@ const ResumePage = ({ language }) => {
           {language.experience.list
             .slice(0, 3)
             .map(({ date, title, institution, description }) => (
-              <ResumeSubSection>
+              <ResumeSubSection key={date}>
                 <ResumeSubTitle>
                   <time>{date}.</time><h3>{title}</h3>
                   <p>|</p>
                   <p>{institution}</p>
                 </ResumeSubTitle>
 
+                <hr class="separator" />
+
                 <ul>
-                  {description.map((descript) => (
-                    <li
+                  {description.map((text, index) => (
+                    <li key={index}
                       dangerouslySetInnerHTML={{
-                        __html: descript,
+                        __html: text,
                       }}
                     />
                   ))}
@@ -121,7 +69,7 @@ const ResumePage = ({ language }) => {
           <h2>{language.education.title}</h2>
           <hr />
           {language.education.list.map(({ date, title, institution, production }) => (
-            <ResumeCourse>
+            <ResumeCourse key={date}>
               <p>
                 <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
                 {institution}
@@ -138,7 +86,7 @@ const ResumePage = ({ language }) => {
             .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))
             .splice(0, 3)
             .map(({ date, name, institute }) => (
-              <ResumeCourse>
+              <ResumeCourse key={date}>
                 <p>
                   <time>{getYear(date)}</time>. <strong>{name}</strong> |{" "}
                   {institute}

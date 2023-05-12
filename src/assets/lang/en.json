@@ -14,8 +14,14 @@
   "resume": {
     "title": "Resume",
     "files": [
-      { "name": "ENGLISH", "file": "/docs/johnywalves_en.pdf" },
-      { "name": "PORTUGUESE", "file": "/docs/johnywalves_br.pdf" }
+      {
+        "name": "ENGLISH",
+        "file": "/docs/johnywalves_en.pdf"
+      },
+      {
+        "name": "PORTUGUESE",
+        "file": "/docs/johnywalves_br.pdf"
+      }
     ]
   },
   "status": "Brazilian, Single, 36 years old",
@@ -24,6 +30,15 @@
     "title": "Contacts",
     "about": "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
   },
+  "coverLetter": [
+    "Prezado(a) contratante",
+    "Gostaria de me apresentar como um desenvolvedor frontend sênior com mais de 15 anos de experiência na criação de interfaces de usuário e utilização de diversas tecnologias. Estou atualmente buscando uma nova alocação e adoraria trabalhar com uma equipe de pessoas engajadas e colaborativas.",
+    "Ao longo de minha carreira, tenho tido a oportunidade de trabalhar com uma ampla variedade de tecnologias, incluindo HTML, CSS, JavaScript, React, Next.js e muitas outras. Isso me permitiu desenvolver uma compreensão profunda das melhores práticas de desenvolvimento frontend, bem como a capacidade de aprender novas tecnologias rapidamente.",
+    "Uma das coisas que mais me motiva como desenvolvedor é produzir conhecimento e compartilhar o que aprendi com colegas de equipe e a comunidade em geral. Acredito firmemente que o compartilhamento de conhecimento é essencial para um ambiente de trabalho saudável e colaborativo.",
+    "Se você estiver procurando por um desenvolvedor frontend sênior com uma paixão por aprender, crescer e trabalhar em equipe, eu seria um ótimo candidato para sua empresa. Agradeço antecipadamente a oportunidade de discutir mais sobre como posso contribuir para o sucesso da sua empresa.",
+    "Atenciosamente",
+    "Johny W. Alves"
+  ],
   "posts": {
     "title": "Articles",
     "category": "Category articles",
@@ -62,50 +77,137 @@
       {
         "type": "Languages",
         "list": [
-          { "title": "HTML", "icon": "Html5" },
-          { "title": "CSS", "icon": "Css3" },
-          { "title": "Java", "icon": "Java" },
-          { "title": "JavaScript", "icon": "Javascript" },
-          { "title": "Python", "icon": "Python" },
-          { "title": "TypeScript", "icon": "Typescript" }
+          {
+            "title": "HTML / HTML5",
+            "icon": "Html5"
+          },
+          {
+            "title": "CSS / CSS3",
+            "icon": "Css3"
+          },
+          {
+            "title": "Java",
+            "icon": "Java"
+          },
+          {
+            "title": "JavaScript",
+            "icon": "Javascript"
+          },
+          {
+            "title": "Python",
+            "icon": "Python"
+          },
+          {
+            "title": "TypeScript",
+            "icon": "Typescript"
+          }
         ]
       },
       {
         "type": "Frameworks and Libraries",
         "list": [
-          { "title": "Bootstrap", "icon": "Bootstrap" },
-          { "title": "D3.js", "icon": "D3js" },
-          { "title": "Express.js", "icon": "Express" },
-          { "title": "Gatsby", "icon": "Gatsby" },
-          { "title": "Jekyll", "icon": "Jekyll" },
-          { "title": "Next.js", "icon": "Nextdotjs" },
-          { "title": "Node", "icon": "Nodejs" },
-          { "title": "React", "icon": "ReactLogo" },
-          { "title": "Redux", "icon": "Redux" },
-          { "title": "Spring Boot", "icon": "SpringBoot" },
-          { "title": "Styled Components", "icon": "Styledcomponents" },
-          { "title": "Tailwind CSS", "icon": "TailwindCss" }
+          {
+            "title": "Bootstrap",
+            "icon": "Bootstrap"
+          },
+          {
+            "title": "D3.js",
+            "icon": "D3js"
+          },
+          {
+            "title": "Express.js",
+            "icon": "Express"
+          },
+          {
+            "title": "Gatsby",
+            "icon": "Gatsby"
+          },
+          {
+            "title": "Jekyll",
+            "icon": "Jekyll"
+          },
+          {
+            "title": "Next.js",
+            "icon": "Nextdotjs"
+          },
+          {
+            "title": "Node",
+            "icon": "Nodejs"
+          },
+          {
+            "title": "React",
+            "icon": "ReactLogo"
+          },
+          {
+            "title": "Redux",
+            "icon": "Redux"
+          },
+          {
+            "title": "Spring Boot",
+            "icon": "SpringBoot"
+          },
+          {
+            "title": "Styled Components",
+            "icon": "Styledcomponents"
+          },
+          {
+            "title": "Tailwind CSS",
+            "icon": "TailwindCss"
+          }
         ]
       },
       {
         "type": "Data manipulation",
         "list": [
-          { "title": "SQL Server", "icon": "Microsoftsqlserver" },
-          { "title": "MySQL", "icon": "Mysql" },
-          { "title": "PostgreSQL", "icon": "Postgresql" },
-          { "title": "Python", "icon": "Python" },
-          { "title": "R", "icon": "RProject" }
+          {
+            "title": "SQL Server",
+            "icon": "Microsoftsqlserver"
+          },
+          {
+            "title": "MySQL",
+            "icon": "Mysql"
+          },
+          {
+            "title": "PostgreSQL",
+            "icon": "Postgresql"
+          },
+          {
+            "title": "Python",
+            "icon": "Python"
+          },
+          {
+            "title": "R",
+            "icon": "RProject"
+          }
         ]
       },
       {
         "type": "Toolbox",
         "list": [
-          { "title": "AWS", "icon": "Aws" },
-          { "title": "Azure DevOps", "icon": "Azuredevops" },
-          { "title": "BPM", "icon": "Flowchart" },
-          { "title": "Docker", "icon": "Docker" },
-          { "title": "Git", "icon": "Git" },
-          { "title": "Jenkins", "icon": "Jenkins" }
+          {
+            "title": "AWS",
+            "icon": "Aws"
+          },
+          {
+            "title": "Azure DevOps",
+            "icon": "Azuredevops"
+          },
+          {
+            "title": "BPM",
+            "icon": "Flowchart"
+          },
+          {
+            "title": "Docker",
+            "icon": "Docker"
+          },
+          {
+            "title": "Git",
+            "icon": "Git"
+          },
+          {
+            "title": "Jenkins",
+            "icon": "Jenkins"
+          }
         ]
       }
     ]
@@ -384,7 +486,7 @@
           "Specialization in the IT field to work on the design, development and implementation of network infrastructure projects, developing and managing information security, managing IT projects. service provision, hardware acquisition and software configuration in companies of different sizes and branches of activities, governance and software development."
         ],
         "production": {
-          "title": "Essay: Analizo - Textual analysis for corporate communication validation (brazilian portuguese)",
+          "title": "Essay: Analizo - Textual analysis for corporate communication validation (portuguese)",
           "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
         }
       },
@@ -397,8 +499,8 @@
           "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
         ],
         "production": {
-          "title": "Essay: Proposal for the application of Rules of Association for online retailers (brazilian portuguese)",
-          "file": "/docs/associacao_varejo_online.pdf"
+          "title": "Essay: Proposal for the application of Rules of Association for online retailers (portuguese)",
+          "file": "/docs/associacao_varejo_online_pt.pdf"
         }
       },
       {
@@ -420,8 +522,8 @@
           }
         ],
         "production": {
-          "title": "Essay: ForeSeries - An approach to predicting values ​​in time series (brazilian portuguese)",
-          "file": "/docs/fore_series_johnywalves_pt.pdf"
+          "title": "Essay: ForeSeries - An approach to predicting values ​​in time series (portuguese)",
+          "file": "/docs/fore_series_pt.pdf"
         }
       },
       {

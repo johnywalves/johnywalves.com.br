@@ -16,7 +16,8 @@ async function getImage(servingUrl, page, slug) {
   })
 }
 
-async function getResume(servingUrl, page, language) {
+async function getResumeAndCoverLetter(servingUrl, page, language) {
+  // Resume
   await page.goto(`${servingUrl}/resume/${language}/index.html`, {
     waitUntil: "networkidle0",
   })
@@ -26,9 +27,8 @@ async function getResume(servingUrl, page, language) {
     printBackground: true,
     format: "A4",
   })
-}
 
-async function getCoverLetter(servingUrl, page, language) {
+  // Cover Letter
   await page.goto(`${servingUrl}/cover/${language}/index.html`, {
     waitUntil: "networkidle0",
   })
@@ -82,13 +82,9 @@ async function navigateOpenGraphic() {
     await getImage(servingUrl, page, slug)
   }
 
-  // Getting - Curriculum Vitae
-  await getResume(servingUrl, page, "br")
-  await getResume(servingUrl, page, "en")
-
-  // Getting - Cover Letter
-  await getCoverLetter(servingUrl, page, "br")
-  await getCoverLetter(servingUrl, page, "en")
+  // Getting - Curriculum Vitae and Cover Letter
+  await getResumeAndCoverLetter(servingUrl, page, "br")
+  await getResumeAndCoverLetter(servingUrl, page, "en")
 
   // Change to dark theme
   await page.goto(servingUrl, { waitUntil: "networkidle0" })
