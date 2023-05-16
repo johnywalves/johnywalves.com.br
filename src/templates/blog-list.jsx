@@ -95,7 +95,7 @@ export const query = graphql`
                   width: 120
                   height: 120
                   layout: CONSTRAINED
-                  placeholder: TRACED_SVG
+                  placeholder: BLURRED
                 )
               }
             }

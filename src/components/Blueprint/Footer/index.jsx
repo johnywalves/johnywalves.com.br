@@ -26,7 +26,7 @@ const Footer = () => {
           gatsbyImageData(
             height: 340
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }

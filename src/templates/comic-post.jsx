@@ -70,7 +70,7 @@ export const query = graphql`
             gatsbyImageData(
               width: 1200
               layout: CONSTRAINED
-              placeholder: TRACED_SVG
+              placeholder: BLURRED
             )
           }
         }
@@ -79,7 +79,7 @@ export const query = graphql`
             gatsbyImageData(
               width: 750
               layout: CONSTRAINED
-              placeholder: TRACED_SVG
+              placeholder: BLURRED
             )
           }
         }

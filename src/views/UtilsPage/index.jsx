@@ -45,7 +45,7 @@ const UtilsPage = () => {
                     width: 450
                     height: 90
                     layout: CONSTRAINED
-                    placeholder: TRACED_SVG
+                    placeholder: BLURRED
                   )
                 }
               }
@@ -62,7 +62,7 @@ const UtilsPage = () => {
           gatsbyImageData(
             height: 600
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }

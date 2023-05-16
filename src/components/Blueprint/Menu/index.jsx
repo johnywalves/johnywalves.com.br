@@ -33,7 +33,7 @@ const Menu = ({ hero, whiteLogo }) => {
           gatsbyImageData(
             height: 600
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }

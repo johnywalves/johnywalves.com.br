@@ -13,7 +13,7 @@ const Hero = () => {
           gatsbyImageData(
             height: 500
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }

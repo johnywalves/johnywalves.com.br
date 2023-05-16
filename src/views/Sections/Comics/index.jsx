@@ -46,7 +46,7 @@ const SectionComics = () => {
                   gatsbyImageData(
                     width: 750
                     layout: CONSTRAINED
-                    placeholder: TRACED_SVG
+                    placeholder: BLURRED
                   )
                 }
               }

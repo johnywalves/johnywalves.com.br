@@ -30,7 +30,7 @@ const SectionContact = () => {
           gatsbyImageData(
             width: 512
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }

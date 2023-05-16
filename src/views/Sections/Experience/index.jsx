@@ -56,7 +56,6 @@ const SectionExperience = () => {
   const [selectedType, setSelectedType] = useState(0)
   const [selectedArea, setSelectedArea] = useState(null)
   const [allExperiences, setAllExperiences] = useState(false)
-  const [allEducations, setAllEducations] = useState(false)
   const [allCourses, setAllCourses] = useState(false)
 
   const [selectedExperiences, selectedEducations, selectedCourses] = useMemo(
@@ -91,11 +90,6 @@ const SectionExperience = () => {
   const toggleAllExperiences = useCallback(
     () => setAllExperiences(!allExperiences),
     [allExperiences]
-  )
-
-  const toggleAllEducations = useCallback(
-    () => setAllEducations(!allEducations),
-    [allEducations]
   )
 
   const toggleAllCourses = useCallback(
@@ -183,12 +177,12 @@ const SectionExperience = () => {
                 <Descriptions list={1}>
                   {description.map((text, idx) => (
                     <ExperienceDescription key={idx}>
-                        {`${text
-                          .split("</strong>")
-                          .join("")
-                          .split("<strong>")
-                          .join("")}${description.length - 1 !== idx ? ";" : "."
-                          }`}
+                      {`${text
+                        .split("</strong>")
+                        .join("")
+                        .split("<strong>")
+                        .join("")}${description.length - 1 !== idx ? ";" : "."
+                        }`}
                     </ExperienceDescription>
                   ))}
                 </Descriptions>
@@ -225,7 +219,7 @@ const SectionExperience = () => {
             ) => (
               <Accomplishment
                 key={`edu_${index}`}
-                hidden={index > 2 && Strings.education.list.length > 4 && !allEducations}
+                hidden={false}
                 icon={
                   certification && (
                     <Icon href={certification}>
@@ -263,19 +257,6 @@ const SectionExperience = () => {
               </Accomplishment>
             )
           )}
-          <AreaButton>
-            <Button light onClick={toggleAllEducations}>
-              {allEducations ? (
-                <>
-                  <ExpandLess /> {Strings.seeLess}
-                </>
-              ) : (
-                <>
-                  <ExpandMore /> {Strings.seeMore}
-                </>
-              )}
-            </Button>
-          </AreaButton>
         </Area>
         <Area selected={selectedCourses}>
           {Strings.certification.list

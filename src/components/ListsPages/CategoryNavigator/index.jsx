@@ -30,7 +30,7 @@ const ArticleCategoryNavigatior = ({ categories }) => {
         gatsbyImageData(
           height: 400
           layout: CONSTRAINED
-          placeholder: TRACED_SVG
+          placeholder: BLURRED
         )
       }
     }

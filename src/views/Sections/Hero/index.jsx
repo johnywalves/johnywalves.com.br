@@ -33,7 +33,7 @@ const SectionHero = () => {
           gatsbyImageData(
             width: 400
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }
@@ -42,7 +42,7 @@ const SectionHero = () => {
           gatsbyImageData(
             width: 600
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }
@@ -51,7 +51,7 @@ const SectionHero = () => {
           gatsbyImageData(
             width: 700
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
           )
         }
       }
