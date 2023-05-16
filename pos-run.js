@@ -74,7 +74,7 @@ async function navigateOpenGraphic() {
   const servingUrl = `http://0.0.0.0:${server.address().port}`
 
   // Crawling
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ headless: "new" })
   const page = await browser.newPage()
 
   // Getting - OpenGraph Images
