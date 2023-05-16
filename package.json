@@ -65,6 +65,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "engines" : { 
+    "node" : ">=16.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/johnywalves/johnywalves.com.br"
