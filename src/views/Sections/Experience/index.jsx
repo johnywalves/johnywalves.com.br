@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from "react"
+import React, { useState, useMemo, useCallback, useEffect, useRef } from "react"
 import { Parallax } from "react-scroll-parallax"
 
 import Button from "components/Button"
@@ -58,10 +58,41 @@ const SectionExperience = () => {
   const [allExperiences, setAllExperiences] = useState(false)
   const [allCourses, setAllCourses] = useState(false)
 
+  const refExperiences = useRef()
+  const refEducations = useRef()
+  const refCourses = useRef()
+
   const [selectedExperiences, selectedEducations, selectedCourses] = useMemo(
     () => [selectedArea === 1, selectedArea === 2, selectedArea === 3],
     [selectedArea]
   )
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search)
+    if (searchParams.has("section")) {
+      const section = searchParams.get("section")
+      const experiencesStr = "experiences"
+      const educationStr = "educations"
+      const coursesStr = "courses"
+
+      const goto = (reference) => {
+        const rect = reference.current.getBoundingClientRect()
+        const top = rect.top + window.scrollY - 80
+        window.scroll({ top, left: 0 })
+      }
+
+      if (section.toLocaleLowerCase() === experiencesStr) {
+        setSelectedArea(1)
+        goto(refExperiences)
+      } else if (section.toLocaleLowerCase() === educationStr) {
+        setSelectedArea(2)
+        goto(refEducations)
+      } else if (section.toLocaleLowerCase() === coursesStr) {
+        setSelectedArea(3)
+        goto(refCourses)
+      }
+    }
+  }, [])
 
   const toggleExperiences = useCallback(() => {
     if (selectedArea === 1) {
@@ -158,7 +189,7 @@ const SectionExperience = () => {
           </Button>
         </Areas>
 
-        <Area selected={selectedExperiences}>
+        <Area ref={refExperiences} selected={selectedExperiences}>
           {Strings.experience.list.map(
             ({ title, date, institution, description }, index) => (
               <Accomplishment
@@ -203,7 +234,8 @@ const SectionExperience = () => {
             </Button>
           </AreaButton>
         </Area>
-        <Area selected={selectedEducations}>
+
+        <Area ref={refEducations} selected={selectedEducations}>
           {Strings.education.list.map(
             (
               {
@@ -259,7 +291,8 @@ const SectionExperience = () => {
           )}
           <span></span>
         </Area>
-        <Area selected={selectedCourses}>
+
+        <Area ref={refCourses} selected={selectedCourses}>
           {Strings.certification.list
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map(({ date, name, institute, icon, img }, index) => (
