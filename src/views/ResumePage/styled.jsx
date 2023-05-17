@@ -8,26 +8,26 @@ export const ResumeWrapper = styled.main`
   grid-template-columns: 30.5% 69.5%;
 
   color: var(--texts);
-  font-size: 0.8125rem;
+  font-size: 13px;
 
   & h1 {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
   }
 
   & h2 {
-    font-size: 0.9375rem;
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--highlight);
 
     & small {
-      font-size: 0.75rem;
+      font-size: 12px;
     }
   }
 
   & h3 {
-    font-size: 0.8125rem;
+    font-size: 13px;
   }
 
   & time {
@@ -57,39 +57,39 @@ export const ResumeWrapper = styled.main`
 export const ResumeNavigation = styled.nav`
   height: 100%;
   background-color: var(--background-card);
-  padding: 0 0 0 var(--12px);
+  padding: 0 0 0 12px;
 `
 
 export const ResumeContent = styled.div`
   height: 100%;
   background-color: var(--background);
-  padding: var(--16px) var(--16px) 0 0;
+  padding: 16px 16px 0 0;
 `
 
 export const ResumeSection = styled.section`
   display: flex;
   flex-direction: column;
 
-  margin: var(--8px) 0 0;
+  margin: 8px 0 0;
 
   & h1 {
-    margin: var(--16px) 0 0 var(--16px);
+    margin: 16px 0 0 16px;
   }
 
   & h2 {
-    margin: var(--8px) var(--16px) var(--2px);
+    margin: 8px 16px 2px;
   }
 
   label {
-    margin-bottom: var(--4px);
-    margin-left: var(--16px);
+    margin-bottom: 4px;
+    margin-left: 16px;
   }
 
   & img {
     width: 40%;
     height: auto;
 
-    margin: var(--16px) var(--16px);
+    margin: 16px 16px;
   }
 
   & hr {
@@ -100,42 +100,42 @@ export const ResumeSection = styled.section`
   }
 
   & > ul {
-    margin: var(--4px) 0;
+    margin: 4px 0;
 
     & > li {
-      margin: var(--8px) var(--16px) 0;
+      margin: 8px 16px 0;
 
       & > ul > li {
-        margin: var(--2px) 0;
+        margin: 2px 0;
       }
     }
   }
 
   & > p {
-    margin: var(--4px) var(--16px) 0;
+    margin: 4px 16px 0;
     line-height: 120%;
 
     &.description {
-      margin-top: var(--16px);
+      margin-top: 16px;
       line-height: 130%;
     }
 
     &.cover {
-      font-size: 1.125rem;
+      font-size: 18px;
       font-weight: 400;
       text-align: justify;
       line-height: 140%;
-      margin-top: var(--16px);
+      margin-top: 16px;
 
       &:nth-child(2),
       &:nth-last-child(2) {
-        margin-top: var(--48px);
+        margin-top: 48px;
       }
     }
   }
 
   & > article {
-    margin: 0 var(--16px);
+    margin: 0 16px;
   }
 `
 
@@ -144,19 +144,19 @@ export const ResumePerson = styled.section`
   flex-direction: column;
   justify-content: space-between;
 
-  margin: var(--16px) var(--16px) var(--8px);
+  margin: 16px 16px 8px;
 `
 
 export const ResumeCourse = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: var(--4px);
+  gap: 4px;
 
-  margin: var(--8px) var(--16px) 0;
+  margin: 8px 16px 0;
 
   &:first-of-type {
-    margin-top: var(--16px);
+    margin-top: 16px;
   }
 
   & p {
@@ -166,7 +166,7 @@ export const ResumeCourse = styled.section`
 
 export const ResumeSubSection = styled.article`
   & li {
-    margin: var(--4px) 0 0;
+    margin: 4px 0 0;
     line-height: 130%;
     text-align: justify;
   }
@@ -178,9 +178,9 @@ export const ResumeSubTitle = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--4px);
+  gap: 4px;
 
-  margin: var(--16px) 0 var(--4px);
+  margin: 16px 0 4px;
 
   & h3 {
     display: flex;
