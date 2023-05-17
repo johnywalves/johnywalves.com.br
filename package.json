@@ -58,7 +58,7 @@
   "scripts": {
     "pre-run": "node pre-run.js",
     "pos-run": "node pos-run.js",
-    "build": "npm run pre-run && gatsby build && echo run pos-run",
+    "build": "npm run pre-run && gatsby build && npm run pos-run",
     "dev": "npm run pre-run && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "start": "gatsby develop",
