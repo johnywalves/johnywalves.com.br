@@ -319,7 +319,7 @@ const WrapperAccomplishment = styled.li`
     top: 50%;
   }
 
-  &:nth-last-child(1)::before {
+  &:nth-last-child(2)::before {
     height: 50%;
   }
 

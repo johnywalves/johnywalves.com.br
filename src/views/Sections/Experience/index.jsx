@@ -257,6 +257,7 @@ const SectionExperience = () => {
               </Accomplishment>
             )
           )}
+          <span></span>
         </Area>
         <Area selected={selectedCourses}>
           {Strings.certification.list
