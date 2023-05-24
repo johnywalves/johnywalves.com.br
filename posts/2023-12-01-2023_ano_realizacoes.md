@@ -10,13 +10,18 @@ tags:
   - Rotina
   - Resultados
 extras:
-  - d3.v7.6.1.min.js
+  - d3.v7.8.4.min.js
   - graphic-ano-realizacoes.js
 published: false
 cheatsheet: false
 ---
 
 Donec erat metus, suscipit et feugiat a, pharetra eget risus. Nullam fringilla vitae ligula non congue. Maecenas a dui vestibulum, imperdiet elit ac, faucibus nibh
+
+## Profissional de qualidade
+
+Fevereiro foi atingindo por uma demissão em massa na CI&T, o que deu um tempo para estudar e dedicar a pensar 
+Maio consegui uma realocação
 
 ## Construir um corpo saudável
 
@@ -47,4 +52,13 @@ Com o tempo para preparar as refeições sem o estresse do trabalho, consegui a 
 
 ## Conclusão
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta sollicitudin nisi sit amet sagittis. Donec risus nisl, dignissim eget quam sed, congue ullamcorper urna. Donec vitae neque malesuada, aliquam nulla ut, ultrices urna. Etiam consequat turpis et ullamcorper malesuada
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta sollicitudin nisi sit amet sagittis. Donec risus nisl, dignissim eget quam sed, congue ullamcorper urna. Donec vitae neque malesuada, aliquam nulla ut, ultrices urna. Etiam consequat turpis et ullamcorper
+
+<details>
+  <summary>Versões das bibliotecas utilizadas</summary>
+
+```text
+d3: "7.8.4"
+```
+
+</details>

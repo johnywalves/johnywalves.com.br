@@ -5,10 +5,12 @@ export const ResumeWrapper = styled.main`
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 30.5% 69.5%;
+  grid-template-columns: 29% 71%;
 
   color: var(--texts);
   font-size: 13px;
+  font-weight: 400;
+  font-family: sans-serif;
 
   & h1 {
     font-size: 24px;
@@ -16,7 +18,7 @@ export const ResumeWrapper = styled.main`
   }
 
   & h2 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--highlight);
@@ -28,10 +30,6 @@ export const ResumeWrapper = styled.main`
 
   & h3 {
     font-size: 13px;
-  }
-
-  & time {
-    font-weight: 400;
   }
 
   & img {
@@ -116,7 +114,7 @@ export const ResumeSection = styled.section`
     line-height: 120%;
 
     &.description {
-      margin-top: 16px;
+      margin-top: 12px;
       line-height: 130%;
     }
 
@@ -137,6 +135,12 @@ export const ResumeSection = styled.section`
   & > article {
     margin: 0 16px;
   }
+
+  & time {
+    align-items: center;
+    vertical-align: middle;
+    font-weight: 700;
+  }
 `
 
 export const ResumePerson = styled.section`
@@ -156,11 +160,15 @@ export const ResumeCourse = styled.section`
   margin: 8px 16px 0;
 
   &:first-of-type {
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
   & p {
-    line-height: 140%;
+    line-height: 130%;
+  }
+
+  & p:nth-child(2) {
+    line-height: 75%;
   }
 `
 
@@ -174,13 +182,13 @@ export const ResumeSubSection = styled.article`
 
 export const ResumeSubTitle = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 4px;
 
-  margin: 16px 0 4px;
+  margin: 12px 0 6px;
 
   & h3 {
     display: flex;
@@ -188,5 +196,10 @@ export const ResumeSubTitle = styled.div`
     justify-content: flex-start;
     align-items: center;
     vertical-align: middle;
+    gap: 6px;
+  }
+
+  & h4 {
+    font-weight: 700;
   }
 `

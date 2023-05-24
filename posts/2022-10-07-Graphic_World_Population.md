@@ -273,3 +273,12 @@ O gráfico gerado é um SVG que pode ser exportado para ser usado em outros loca
 [World Population Dataset](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset)
 
 [Simple graph with grid lines in v7](https://bl.ocks.org/d3noob/28168079f22d7b5abf3a25d325874575)
+
+<details>
+  <summary>Versões das bibliotecas utilizadas</summary>
+
+```text
+d3: "7.8.4"
+```
+
+</details>

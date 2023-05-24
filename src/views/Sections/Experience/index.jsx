@@ -200,11 +200,8 @@ const SectionExperience = () => {
                   !allExperiences
                 }
               >
-                <DateText>{date}</DateText>
-                <Title>
-                  {title}
-                  <Institution> | {institution}</Institution>
-                </Title>
+                <DateText>{date} <Institution> | {institution}</Institution></DateText>
+                <Title>{title}</Title>
                 <Descriptions list={1}>
                   {description.map((text, idx) => (
                     <ExperienceDescription key={idx}>
@@ -260,11 +257,8 @@ const SectionExperience = () => {
                   )
                 }
               >
-                <DateText>{date}</DateText>
-                <Title>
-                  {title}
-                  <Institution> | {institution}</Institution>
-                </Title>
+                <DateText>{date} <Institution> | {institution}</Institution></DateText>
+                <Title>{title}</Title>
                 <Descriptions>
                   {description.map((text, idx) => (
                     <ExperienceDescription key={idx}>{text}</ExperienceDescription>
@@ -311,11 +305,8 @@ const SectionExperience = () => {
                   </Icon>
                 }
               >
-                <DateText>{FormatDate(date)}</DateText>
-                <Title>
-                  {name}
-                  <Institution> | {institute}</Institution>
-                </Title>
+                <DateText>{FormatDate(date)} <Institution> | {institute}</Institution></DateText>
+                <Title>{name}</Title>
               </Accomplishment>
             ))}
           <AreaButton>

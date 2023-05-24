@@ -45,9 +45,8 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
-                  <time>{date}.</time><h3>{title}</h3>
-                  <p>|</p>
-                  <p>{institution}</p>
+                  <h3><time>{date} | </time>{institution}</h3>
+                  <h4>{title}</h4>
                 </ResumeSubTitle>
 
                 <ul>
@@ -71,7 +70,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, production }) => (
               <ResumeCourse key={date}>
                 <p>
-                  <time>{getLast(date)}</time>. <strong>{title}</strong> |{" "}
+                  <time>{getLast(date)} | </time><strong>{title}</strong> |{" "}
                   {institution}
                 </p>
                 {production && <p>{production.title}</p>}
@@ -88,7 +87,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, name, institute }) => (
               <ResumeCourse key={date}>
                 <p>
-                  <time>{getYear(date)}</time>. <strong>{name}</strong> |{" "}
+                  <time>{getYear(date)} | </time><strong>{name}</strong> |{" "}
                   {institute}
                 </p>
               </ResumeCourse>

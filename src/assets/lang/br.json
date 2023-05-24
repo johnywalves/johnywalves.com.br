@@ -473,14 +473,14 @@
       {
         "date": "Fev 2023 - Atualmente",
         "title": "Mestrado em Ciência da Computação",
-        "institution": "Unesp - Universidade Estadual Paulista",
+        "institution": "UNESP",
         "description": [
           "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ]
       },
       {
         "date": "Out 2020 - Dez 2022",
-        "title": "Especialista em Gestão de Projetos em TI",
+        "title": "Especialização em Gestão de Projetos em TI",
         "institution": "Fatec Rio Preto",
         "description": [
           "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software"
@@ -492,7 +492,7 @@
       },
       {
         "date": "Mar 2018 - Mar 2020",
-        "title": "Especialista em Big Data",
+        "title": "Especialização em Big Data",
         "institution": "Centro Universitário Senac",
         "certification": "/cert/senac_bigdata.jpg",
         "description": [
@@ -507,7 +507,7 @@
         "date": "Jan 2015 - Dez 2017",
         "title": "Graduação em Informática para Negócios",
         "institution": "Fatec Rio Preto",
-        "certification": "/cert/fatec_graduacao.jpg",
+        "certification": "/cert/fatec_graduacao.pdf",
         "description": [
           "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas"
         ],
@@ -542,27 +542,31 @@
       {
         "date": "Set 2021 - Fev 2023",
         "title": "Desenvolvedor Frontend Sênior",
-        "institution": "CI&T",
+        "institution": "CI&T Software",
         "description": [
-          "Na <strong>Coca-Cola</strong> com atuação nas plataformas de divulgação de produtos, promoções, coleta de leads e acompanhamento das métricas de consumidores na América Latina e Caribe (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services e GitHub Actions)",
-          "Com a <strong>ANBIMA</strong> na criação do sistema para coleta de informações de carteiras administradas, e reestruturação na publicação dos dados de produtos financeiros, focado em performance e resultados nas ferramentas de busca (SEO, HTML, CSS, JavaScript, React, Next.js e Gitlab)"
+          "Projeto <strong>Coca-Cola</strong>: Atuação nas plataformas de divulgação de produtos, promoções, coleta de leads e acompanhamento das métricas de consumidores na América Latina e Caribe",
+          "<strong>Tecnologias</strong>: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
+          "Projeto <strong>ANBIMA</strong>: Criação do sistema para coleta de informações de carteiras administradas, e reestruturação na publicação dos dados de produtos financeiros, focado em performance e resultados nas ferramentas de busca",
+          "<strong>Tecnologias</strong>: SEO, HTML, CSS, JavaScript, React, Next.js e Gitlab"
         ]
       },
       {
         "date": "Out 2020 - Set 2021",
         "title": "Desenvolvedor Frontend",
-        "institution": "Meta",
+        "institution": "Meta Serviços em Informática",
         "description": [
-          "Manutenção e evolução da plataforma <strong>Zarp Localiza</strong>, com reestruturação de tecnologia e infraestrutura, focado na experiência do usuário, performance e otimização para resultados em buscas (SEO) com Next.js, atingindo o primeiro resultado nas buscas orgânicas",
-          "Liderança nos processos de CI/CD (Azure DevOps), definição de tecnologias para frontend e acompanhamento de métricas (Funil de vendas, Hotjar e Datadog)"
+          "Manutenção e evolução da plataforma <strong>Zarp Localiza</strong>, com reestruturação de tecnologia e infraestrutura, focado na experiência do usuário, performance e otimização para resultados em buscas (SEO), atingindo o primeiro resultado nas buscas orgânicas",
+          "Liderança nos processos de CI/CD, definição de tecnologias para frontend e acompanhamento de métricas (Funil de vendas)",
+          "<strong>Tecnologias</strong>: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar e Datadog"
         ]
       },
       {
         "date": "Nov 2019 - Out 2020",
         "title": "Analista Desenvolvedor",
-        "institution": "Invillia",
+        "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
-          "Desenvolvimento suíte de aplicativos da <strong>Invillia Apps</strong>, otimização para uso de memória na integração com o Microsoft Teams e visualização de dados (D3), atuando como frontend (JavaScript, TypeScript, HTML, CSS, React e D3) e backend (Node, Express e MySQL)"
+          "Desenvolvimento suíte de aplicativos da <strong>Invillia Apps</strong>, otimização para uso de memória na integração com o Microsoft Teams e visualização de dados, atuando como frontend e backend",
+          "<strong>Tecnologias</strong>: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
         ]
       },
       {
@@ -570,9 +574,10 @@
         "title": "Desenvolvedor Web Pleno",
         "institution": "Unimed Rio Preto",
         "description": [
-          "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas (HTML, CSS, JavaScript, TypeScript, React e Next.js)",
-          "Planejamento, e desenvolvimento, de API para autenticação de usuários e guia de médicos (Java, Spring Boot, PL/SQL, Oracle Database e RESTFul)",
-          "Criação de ambiente para automação de testes (Jest e Python), monitoramento (Grafana) e CI/CD (Apache Tomcat e Jenkins) dos sistemas de gestão e prestação de serviços"
+          "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas",
+          "Planejamento, e desenvolvimento, de API para autenticação de usuários e guia de médicos",
+          "Criação de ambiente para automação de testes, monitoramento e CI/CD dos sistemas de gestão e prestação de serviços",
+          "<strong>Tecnologias</strong>: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat e Jenkins"
         ]
       },
       {
@@ -580,9 +585,10 @@
         "title": "Desenvolvedor Pleno",
         "institution": "Bnex",
         "description": [
-          "Gestão, e desenvolvimento, de plataforma backoffice web (Asp.NET MVC e .Net C#) e mobile (JavaScript e React Native) para acompanhamento de promoters em pontos de revenda",
-          "Desenvolvimento de visualização de dados, com dashboards, no acompanhamento de resultados para <strong>JBS</strong> (JavaScript, NodeJS, HTML e CSS)",
-          "Manutenção na carga e transformação nos dados (ETL) de parceiros <strong>JBS</strong> (Pentaho, Java e SQL)"
+          "Gestão, e desenvolvimento, de plataforma backoffice web e mobile para acompanhamento de promoters em pontos de revenda",
+          "Desenvolvimento de visualização de dados, com dashboards, no acompanhamento de resultados para <strong>JBS</strong>",
+          "Manutenção na carga e transformação nos dados (ETL) de parceiros <strong>JBS</strong>",
+          "<strong>Tecnologias</strong>: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js e Pentaho"
         ]
       },
       {
@@ -590,16 +596,18 @@
         "title": "Consultor de Automação de Processos",
         "institution": "WDG Automation",
         "description": [
-          "Automação de processos e chatbots (WDG Automation) e estruturação de projetos de atendimentos para recalls na <strong>Toyota Rodobens</strong> (Bizagi BPMN Modeler)",
-          "Desenvolvimento de extensão para o Google Chrome para telemarketing da <strong>Claro</strong> (JavaScript)"
+          "Automação de processos e chatbots e estruturação de projetos de atendimentos para recalls na <strong>Toyota Rodobens</strong>",
+          "Desenvolvimento de extensão para o Google Chrome para telemarketing da <strong>Claro</strong> (JavaScript)",
+          "<strong>Tecnologias</strong>: WDG Automation, Bizagi BPMN Modeler e JavaScript"
         ]
       },
       {
         "date": "Out 2013 - Set 2017",
         "title": "Desenvolvedor de Software Sênior",
-        "institution": "Emais Urbanismo",
+        "institution": "Emais Urbanismo e Incorporações",
         "description": [
-          "Manutenção, suporte e desenvolvimento de ERP e CRM (Delphi e Microsoft SQL Server) para controle fiscal, contábil, financeiro e carteira de imóveis"
+          "Manutenção, suporte e desenvolvimento de ERP e CRM para controle fiscal, contábil, financeiro e carteira de imóveis",
+          "<strong>Tecnologias</strong>: Delphi e Microsoft SQL Server"
         ]
       },
       {
@@ -607,7 +615,8 @@
         "title": "Desenvolvedor e Consultor Contábil",
         "institution": "Autônomo",
         "description": [
-          "Prestação de serviços, e automação, de obrigações fiscais para vários clientes (Windows Forms, .Net C# e Microsoft SQL Server)"
+          "Prestação de serviços, e automação, de obrigações fiscais para vários clientes",
+          "<strong>Tecnologias</strong>: Windows Forms, .Net C# e Microsoft SQL Server"
         ]
       },
       {
@@ -615,7 +624,9 @@
         "title": "Desenvolvedor de Software",
         "institution": "Dual Consultoria e Sistemas",
         "description": [
-          "Manutenção, e atendimento a clientes, de gestão para distribuidoras na área financeira e obrigações fiscais (Progress 4GL)"
+          "Manutenção e atendimento a clientes para software de ERP especializado em gestão para distribuidoras",
+          "Desenvolvimento de sistema ERP focado na área financeira e obrigações fiscais",
+          "<strong>Tecnologias</strong>: Progress 4GL"
         ]
       },
       {
@@ -623,7 +634,8 @@
         "title": "Desenvolvedor de Software",
         "institution": "Hexa Informática",
         "description": [
-          "Desenvolvimento, implementação e manutenção de sistema (Delphi e Microsoft SQL Server) para gestão de redes óticas"
+          "Desenvolvimento, implementação e manutenção de sistema para gestão de redes óticas",
+          "<strong>Tecnologias</strong>: Delphi e Microsoft SQL Server"
         ]
       },
       {
@@ -632,16 +644,18 @@
         "institution": "Condor Informática",
         "description": [
           "Manutenção e implementação de ERPs para controle financeiro, estoque e entregas de obrigações fiscais (Delphi e Firebird)",
-          "Desenvolvimento de ferramenta (Delphi e Firebird) para Delegacia de Investigações Gerais (DIG) para controle interno de dados de detenções"
+          "Desenvolvimento de ferramenta para Delegacia de Investigações Gerais (DIG) para controle interno de dados de detenções",
+          "<strong>Tecnologias</strong>: Delphi e Firebird"
         ]
       },
       {
         "date": "Dez 2004 - Dez 2005",
         "title": "Desenvolvedor de Software",
-        "institution": "SOC Informática",
+        "institution": "SOC Comércio e Serviços em Informática",
         "description": [
-          "Consultória, e desenvolvimento, para entrega de arquivos para obrigações fiscais (Delphi e Firebird)",
-          "Venda, montagem e manutenção de computadores"
+          "Consultória, e desenvolvimento, para entrega de arquivos para obrigações fiscais",
+          "Venda, montagem e manutenção de computadores",
+          "<strong>Tecnologias</strong>: Delphi e Firebird"
         ]
       }
     ]

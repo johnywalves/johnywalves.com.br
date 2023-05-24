@@ -319,7 +319,7 @@ Temos nosso gráfico de dispersão em tela
   <summary>Versões das bibliotecas utilizadas</summary>
 
 ```text
-d3: "7.6.1"
+d3: "7.8.4"
 ```
 
 </details>

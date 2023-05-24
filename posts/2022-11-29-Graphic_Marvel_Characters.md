@@ -638,3 +638,12 @@ Como todo mundo que fez parte dos quadrinhos é relacionado como personagem, pes
 ## Referências
 
 [Kaggle - Marvel Chracters](https://www.kaggle.com/datasets/syedasimalishah/marvel-chracters)
+
+<details>
+  <summary>Versões das bibliotecas utilizadas</summary>
+
+```text
+d3: "7.8.4"
+```
+
+</details>

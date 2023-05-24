@@ -41,16 +41,22 @@ Array.from({ length: "<quantidade de elementos>" })
 
 ## Ordenar elementos
 
-Ascendente
+Por ordem ascendente
 
 ```javascript
 const sorted = list.sort((a, b) => a - b)
 ```
 
-Descendente
+Por ordem descendente
 
 ```javascript
 const sorted = list.sort((a, b) => b - a)
+```
+
+Reverter elementos da lista
+
+```javascript
+const sorted = list.reverse()
 ```
 
 ## Totalizar valores

@@ -473,7 +473,7 @@
       {
         "date": "Feb 2023 - Currently",
         "title": "Master's in Computer Science",
-        "institution": "Unesp - Universidade Estadual Paulista",
+        "institution": "UNESP",
         "description": [
           "Master's Course of the Interunit Graduate Program Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ]
@@ -486,7 +486,7 @@
           "Specialization in the IT field to work on the design, development and implementation of network infrastructure projects, developing and managing information security, managing IT projects. service provision, hardware acquisition and software configuration in companies of different sizes and branches of activities, governance and software development"
         ],
         "production": {
-          "title": "Essay: Analizo - Textual analysis for corporate communication validation (portuguese)",
+          "title": "Essay: Analizo - Textual analysis for corporate communication validation",
           "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
         }
       },
@@ -499,7 +499,7 @@
           "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
         ],
         "production": {
-          "title": "Essay: Proposal for the application of Rules of Association for online retailers (portuguese)",
+          "title": "Essay: Proposal for the application of Rules of Association for online retailers",
           "file": "/docs/associacao_varejo_online_pt.pdf"
         }
       },
@@ -522,7 +522,7 @@
           }
         ],
         "production": {
-          "title": "Essay: ForeSeries - An approach to predicting values ​​in time series (portuguese)",
+          "title": "Essay: ForeSeries - An approach to predicting values ​​in time series",
           "file": "/docs/fore_series_pt.pdf"
         }
       },
@@ -542,27 +542,31 @@
       {
         "date": "Set 2021 - Feb 2023",
         "title": "Senior Developer Frontend",
-        "institution": "CI&T",
+        "institution": "CI&T Software",
         "description": [
-          "At <strong>Coca-Cola</strong> working on platforms for promoting products, promotions, collecting leads and monitoring consumer metrics in Latin America and the Caribbean (HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services and GitHub Actions)",
-          "With ANBIMA in the creation of the system for collecting information from managed portfolios, and restructuring the publication of financial product data, focused on performance and results in search engines (SEO, HTML, CSS, JavaScript, React, Next.js and Gitlab)"
+          "At <strong>Coca-Cola</strong> working on platforms for promoting products, promotions, collecting leads and monitoring consumer metrics in Latin America and the Caribbean",
+          "<strong>Tech</strong>: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) and GitHub Actions",
+          "With ANBIMA in the creation of the system for collecting information from managed portfolios, and restructuring the publication of financial product data, focused on performance and results in search engines",
+          "<strong>Tech</strong>: SEO, HTML, CSS, JavaScript, React, Next.js and Gitlab"
         ]
       },
       {
         "date": "Out 2020 - Set 2021",
         "title": "Frontend Developer",
-        "institution": "Meta",
+        "institution": "Meta Serviços em Informática",
         "description": [
-          "Maintenance and evolution of the Zarp Localiza platform, with technology and infrastructure restructuring, focused on user experience, performance and optimization for search results (SEO) with Next.js, reaching the first result in organic searches",
-          "Leadership in CI/CD processes (Azure DevOps), definition of frontend technologies and monitoring of metrics (Sales funnel, Hotjar and Datadog)"
+          "Maintenance and evolution of the Zarp Localiza platform, with technology and infrastructure restructuring, focused on user experience, performance and optimization for search results (SEO), reaching the first result in organic searches",
+          "Leadership in CI/CD processes, definition of frontend technologies and monitoring of metrics (Sales funnel)",
+          "<strong>Tech</strong>: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar and Datadog"
         ]
       },
       {
         "date": "Nov 2019  - Out 2020",
         "title": "Developer",
-        "institution": "Invillia",
+        "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
-          "Development of Invillia Apps suite of applications, optimization for memory usage in integration with Microsoft Teams and data visualization (D3), acting as frontend (JavaScript, TypeScript, HTML, CSS, React and D3) and backend (Node, Express and MySQL)"
+          "Development of Invillia Apps suite of applications, optimization for memory usage in integration with Microsoft Teams and data visualization, acting as frontend and backend",
+          "<strong>Tech</strong>: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express and MySQL"
         ]
       },
       {
@@ -570,9 +574,10 @@
         "title": "Full Web Developer",
         "institution": "Unimed Rio Preto",
         "description": [
-          "Development and coordination with third parties of the beneficiary portal (UI/UX) with financial management, exams and appointment scheduling (HTML, CSS, JavaScript, TypeScript, React and Next.js)",
-          "Planning and development of an API for user authentication and doctors' guide (Java, Spring Boot, PL/SQL, Oracle Database and RESTFul)",
-          "Creation of an environment for test automation (Jest and Python), monitoring (Grafana) and CI/CD (Apache Tomcat and Jenkins) of management and service delivery systems"
+          "Development and coordination with third parties of the beneficiary portal (UI/UX) with financial management, exams and appointment scheduling",
+          "Planning and development of an API for user authentication and doctors' guide",
+          "Creation of an environment for test automation, monitoring and CI/CD of management and service delivery systems",
+          "<strong>Tech</strong>: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat and Jenkins"
         ]
       },
       {
@@ -580,9 +585,10 @@
         "title": "Full Developer",
         "institution": "Bnex",
         "description": [
-          "Management and development of a web (Asp.NET MVC and .Net C#) and mobile (JavaScript and React Native) backoffice platform to monitor promoters at retail outlets",
-          "Development of data visualization, with dashboards, in the monitoring of results for JBS (JavaScript, NodeJS, HTML and CSS)",
-          "Load maintenance and data transformation (ETL) from JBS partners (Pentaho, Java and SQL)"
+          "Management and development of a web and mobile backoffice platform to monitor promoters at retail outlets",
+          "Development of data visualization, with dashboards, in the monitoring of results for JBS",
+          "Load maintenance and data transformation (ETL) from JBS partners",
+          "<strong>Tech</strong>: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js and Pentaho"
         ]
       },
       {
@@ -590,16 +596,18 @@
         "title": "Process Automation Consultant",
         "institution": "WDG Automation",
         "description": [
-          "Automation of processes and chatbots (WDG Automation) and structuring of service projects for recalls at Toyota Rodobens (Bizagi BPMN Modeler)",
-          "Development of an extension for Google Chrome for Claro's telemarketing (JavaScript)"
+          "Automation of processes and chatbots and structuring of service projects for recalls at Toyota Rodobens",
+          "Development of an extension for Google Chrome for Claro's telemarketing",
+          "<strong>Tech</strong>: WDG Automation, Bizagi BPMN Modeler and JavaScript"
         ]
       },
       {
         "date": "Oct 2013 - Set 2017",
         "title": "Senior Software Developer",
-        "institution": "Emais Urbanismo",
+        "institution": "Emais Urbanismo e Incorporações",
         "description": [
-          "Maintenance, support and development of ERP and CRM (Delphi and Microsoft SQL Server) for fiscal, accounting, financial control and real estate portfolio"
+          "Maintenance, support and development of ERP and CRM for fiscal, accounting, financial control and real estate portfolio",
+          "<strong>Tech</strong>: Delphi and Microsoft SQL Server"
         ]
       },
       {
@@ -607,7 +615,8 @@
         "title": "Full Developer",
         "institution": "Freelancer",
         "description": [
-          "Provision of services and automation of tax obligations for several clients (Windows Forms, .Net C# and Microsoft SQL Server)."
+          "Provision of services and automation of tax obligations for several clients",
+          "<strong>Tech</strong>: Windows Forms, .Net C# and Microsoft SQL Server"
         ]
       },
       {
@@ -615,7 +624,9 @@
         "title": "Software Developer",
         "institution": "Dual Consultoria e Sistemas",
         "description": [
-          "Maintenance, and customer service, management for distributors in the financial area and tax obligations (Progress 4GL)"
+          "Maintenance and customer service for ERP software specialized in management for distributors",
+          "Development of an ERP system focused on the financial area and tax obligations",
+          "<strong>Tech</strong>: Progress 4GL"
         ]
       },
       {
@@ -623,7 +634,8 @@
         "title": "Software Developer",
         "institution": "Hexa Informática",
         "description": [
-          "System development, implementation and maintenance (Delphi and Microsoft SQL Server) for optical network management"
+          "System development, implementation and maintenance for optical network management",
+          "<strong>Tech</strong>: Delphi and Microsoft SQL Server"
         ]
       },
       {
@@ -631,8 +643,9 @@
         "title": "Software Developer",
         "institution": "Condor Informática",
         "description": [
-          "Maintenance and implementation of ERPs for financial control, inventory and delivery of tax obligations (Delphi and Firebird)",
-          "Development of a tool (Delphi and Firebird) for the Delegacia de Investigações Gerais (DIG) for internal control of arrest data"
+          "Maintenance and implementation of ERPs for financial control, inventory and delivery of tax obligations",
+          "Development of a tool for the Delegacia de Investigações Gerais (DIG) for internal control of arrest data",
+          "<strong>Tech</strong>: Delphi and Firebird"
         ]
       },
       {
@@ -640,8 +653,9 @@
         "title": "Software Developer",
         "institution": "SOC Informática",
         "description": [
-          "Consultancy, and development, for file delivery for tax obligations (Delphi and Firebird)",
-          "Sale, assembly and maintenance of computers"
+          "Consultancy, and development, for file delivery for tax obligations",
+          "Sale, assembly and maintenance of computers",
+          "<strong>Tech</strong>: Delphi and Firebird"
         ]
       }
     ]

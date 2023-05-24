@@ -229,3 +229,12 @@ Para adicionar libasound2  ```sudo apt install libasound2```
 ## Referências
 
 [Puppeteer - Docs](https://pptr.dev/)
+
+<details>
+  <summary>Versões das bibliotecas utilizadas</summary>
+
+```text
+puppeteer: "^19.8.0"
+```
+
+</details>
