@@ -9,12 +9,12 @@ export const ResumeWrapper = styled.main`
   font-family: sans-serif;
 
   & h1 {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
   }
 
   & h2 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
 
     & small {
@@ -23,7 +23,7 @@ export const ResumeWrapper = styled.main`
   }
 
   & h3 {
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     vertical-align: middle;
@@ -35,7 +35,7 @@ export const ResumeWrapper = styled.main`
   }
 
   & h4 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
   }
 

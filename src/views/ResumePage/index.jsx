@@ -45,7 +45,6 @@ const ResumePage = ({ language }) => {
         <Person language={language} />
 
         <ResumeSection>
-          <h2>{language.aboutMe}</h2>
           <hr />
           <p className="description">{getDescription(language.description)}</p>
         </ResumeSection>
