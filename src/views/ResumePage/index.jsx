@@ -1,19 +1,20 @@
 import React from "react"
 
-import ResumePageNavigation from "./navigation"
 import {
   ResumeWrapper,
-  ResumeContent,
   ResumeSection,
   ResumePerson,
   ResumeCourse,
   ResumeSubSection,
   ResumeSubTitle,
+  ResumeSheet,
 } from "./styled"
 
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 
 const getYear = (text) => new Date(text).getFullYear()
+
+const getCurrentYear = () => new Date().getFullYear()
 
 const getDescription = (text) => {
   const withoutFirstBreak = text.split(", ").slice(1).join(", ")
@@ -21,15 +22,27 @@ const getDescription = (text) => {
   return capitulation
 }
 
+const Person = ({ language }) => (
+  <ResumePerson>
+    <h1>Johny William de Oliveira Alves</h1>
+    <ul>
+      <li>{language.status}</li>
+      <li>{language.live}</li>
+      <li>
+        <strong>contato</strong>@johnywalves.com.br | <strong>www</strong>.johnywalves.com.br
+      </li>
+      <li>
+        <strong>github</strong>.com/johnywalves | <strong>linkedin</strong>.com/in/johnywalves
+      </li>
+    </ul>
+  </ResumePerson>
+)
+
 const ResumePage = ({ language }) => {
   return (
     <ResumeWrapper>
-      <ResumePageNavigation language={language} />
-      <ResumeContent>
-        <ResumePerson>
-          <p>{language.status}</p>
-          <p>{language.live}</p>
-        </ResumePerson>
+      <ResumeSheet>
+        <Person language={language} />
 
         <ResumeSection>
           <h2>{language.aboutMe}</h2>
@@ -45,7 +58,7 @@ const ResumePage = ({ language }) => {
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
-                  <h3><time>{date} | </time>{institution}</h3>
+                  <h3>{institution}<time> • {date}</time></h3>
                   <h4>{title}</h4>
                 </ResumeSubTitle>
 
@@ -61,7 +74,9 @@ const ResumePage = ({ language }) => {
               </ResumeSubSection>
             ))}
         </ResumeSection>
+      </ResumeSheet>
 
+      <ResumeSheet>
         <ResumeSection>
           <h2>{language.education.title}</h2>
           <hr />
@@ -69,13 +84,39 @@ const ResumePage = ({ language }) => {
             .splice(0, 4)
             .map(({ date, title, institution, production }) => (
               <ResumeCourse key={date}>
-                <p>
-                  <time>{getLast(date)} | </time><strong>{title}</strong> |{" "}
-                  {institution}
-                </p>
+                <h3>{title}<time> • {getLast(date) >= getCurrentYear() ? language.forecastOfCompletionIn : language.finishedIn} {getLast(date)}</time> </h3>
+                <p>{institution}</p>
                 {production && <p>{production.title}</p>}
               </ResumeCourse>
             ))}
+        </ResumeSection>
+
+        <ResumeSection>
+          <h2>{language.skills.title}</h2>
+          <hr />
+          <ul>
+            {language.skills.list.map(({ type, list }, index) => (
+              <li key={index}>
+                <strong>{type}</strong>:
+                {" "}
+                {list.map(({ title }) => title).slice(0, -1).join(", ")}
+                {` ${language.and} `}
+                {list.map(({ title }) => title).slice(-1)}
+              </li>
+            ))}
+          </ul>
+        </ResumeSection>
+
+        <ResumeSection>
+          <h2>{language.languages.title}</h2>
+          <hr />
+          <ul>
+            {language.languages.list.map(({ name, proficiency }, index) => (
+              <li key={index}>
+                <strong>{name}</strong> • {proficiency}
+              </li>
+            ))}
+          </ul>
         </ResumeSection>
 
         <ResumeSection>
@@ -83,17 +124,17 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.certification.list
             .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))
-            .splice(0, 3)
-            .map(({ date, name, institute }) => (
+            .splice(0, 5)
+            .map(({ date, name, institute, time }) => (
               <ResumeCourse key={date}>
                 <p>
-                  <time>{getYear(date)} | </time><strong>{name}</strong> |{" "}
-                  {institute}
+                  <time>{getYear(date)} • </time>
+                  <strong>{name}{time > 0 && ` (${time} ${language.hour})`}</strong> | {institute}
                 </p>
               </ResumeCourse>
             ))}
         </ResumeSection>
-      </ResumeContent>
+      </ResumeSheet>
     </ResumeWrapper>
   )
 }

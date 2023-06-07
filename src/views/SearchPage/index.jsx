@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, SearchBox, Hits, Stats } from "react-instantsearch-dom"
 
@@ -17,10 +17,18 @@ const algolia = {
 const searchClient = algoliasearch(algolia.appId, algolia.searchOnlyApiKey)
 
 const Search = () => {
+  const submitSearch = useCallback((e) => {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "searchTerm",
+      search_term: e.target.value,
+    })
+  }, [])
+
   return (
     <SearchWrapper>
       <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-        <SearchBox translations={{ placeholder: `${Strings.search}...` }} />
+        <SearchBox onSubmit={submitSearch} translations={{ placeholder: `${Strings.search}...` }} />
         <Stats
           translations={{
             stats(nHits, timeSpentMs) {

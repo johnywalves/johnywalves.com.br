@@ -1,7 +1,7 @@
 require("dotenv").config()
 
 const siteName = "Johny W. Alves",
-  siteDescription = "Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem"
+  siteDescription = "Desenvolvedor web, especialmente front-end, estudante de ciência de dados, com alguns conteúdos e um pouco de humor, espero que gostem"
 
 const queries = require("./src/utils/algolia_queries")
 

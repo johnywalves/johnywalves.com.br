@@ -1,6 +1,11 @@
 {
   "description": "My name is Johny William de Oliveira Alves, I've been working as a web developer for over 15 years, I'm a student of data science, machine learning, process automation and metrics delivery. I have experience with modern technologies such as JavaScript with React and Next.js, TypeScript, Python, Node, among others",
   "position": "Web Developer",
+  "headline": "Front-end Web Developer | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS",
+  "and": "and",
+  "hour": "hour",
+  "finishedIn": "Finished in",
+  "forecastOfCompletionIn": "Forecast of completion in",
   "aboutMe": "About me",
   "seeMore": "See more",
   "seeLess": "See less",
@@ -24,8 +29,8 @@
       }
     ]
   },
-  "status": "Brazilian, Single, 36 years old",
-  "live": "Live at Sao Jose do Rio Preto, Sao Paulo, Brazil",
+  "status": "Brazilian | Single | 36 years old",
+  "live": "Live at Sao Jose do Rio Preto - Sao Paulo - Brazil",
   "contact": {
     "title": "Contacts",
     "about": "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or for more traditional means, send an email, I'll be happy to answer."
@@ -221,77 +226,88 @@
         "name": "Voxy Proficiency Achievement Certificate - High Intermediate",
         "institute": "Voxy",
         "img": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
-        "icon": "language"
+        "icon": "language",
+        "time": 0
       },
       {
         "date": "2020-04-19 00:00:00-0300",
         "name": "Gatsby: Create a site PWA with React, GraphQL and Netlify CMS",
         "institute": "Udemy",
         "img": "/cert/udemy_gatsby.jpg",
-        "icon": "toolbox"
+        "icon": "toolbox",
+        "time": 9
       },
       {
         "date": "2018-07-27 00:00:00-0300",
         "name": "Games 2D: with Unity and C#",
         "institute": "Senac São José do Rio Preto",
         "img": "/cert/senac_games_2d.jpg",
-        "icon": "toolbox"
+        "icon": "toolbox",
+        "time": 40
       },
       {
         "date": "2018-09-16 00:00:00-0300",
         "name": "Data Science and Machine Learing in Python",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_ml_python.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2018-07-18 00:00:00-0300",
         "name": "Language R to Qlik Developers",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_r_qlik.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 3
       },
       {
         "date": "2018-07-10 00:00:00-0300",
         "name": "Introduction to Qlik Sense",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_qlik.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 3
       },
       {
         "date": "2018-07-22 00:00:00-0300",
         "name": "Statistic in Qlik",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_estatistica_qlik.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2018-03-13 00:00:00-0300",
         "name": "Fundamentals of Data Science",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_fundamentos_cd.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2018-03-10 00:00:00-0300",
         "name": "Artificial Neural Networks and Deep Learning",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_rna_dp.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 3.5
       },
       {
         "date": "2017-09-24 00:00:00-0300",
         "name": "Fundamentals of Machine Learning",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_ml.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2017-08-27 00:00:00-0300",
         "name": "Language R",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_r.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       }
     ]
   },
@@ -471,7 +487,7 @@
     "title": "Education",
     "list": [
       {
-        "date": "Feb 2023 - Currently",
+        "date": "Feb 2023 - Dec 2024",
         "title": "Master's in Computer Science",
         "institution": "UNESP",
         "description": [
@@ -545,9 +561,9 @@
         "institution": "CI&T Software",
         "description": [
           "At <strong>Coca-Cola</strong> working on platforms for promoting products, promotions, collecting leads and monitoring consumer metrics in Latin America and the Caribbean",
-          "<strong>Tech</strong>: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) and GitHub Actions",
-          "With ANBIMA in the creation of the system for collecting information from managed portfolios, and restructuring the publication of financial product data, focused on performance and results in search engines",
-          "<strong>Tech</strong>: SEO, HTML, CSS, JavaScript, React, Next.js and Gitlab"
+          "Tech: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) and GitHub Actions",
+          "With <strong>Anbima</strong> in the creation of the system for collecting information from managed portfolios, and restructuring the publication of financial product data, focused on performance and results in search engines",
+          "Tech: SEO, HTML, CSS, JavaScript, React, Next.js and Gitlab"
         ]
       },
       {
@@ -557,7 +573,7 @@
         "description": [
           "Maintenance and evolution of the Zarp Localiza platform, with technology and infrastructure restructuring, focused on user experience, performance and optimization for search results (SEO), reaching the first result in organic searches",
           "Leadership in CI/CD processes, definition of frontend technologies and monitoring of metrics (Sales funnel)",
-          "<strong>Tech</strong>: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar and Datadog"
+          "Tech: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar and Datadog"
         ]
       },
       {
@@ -566,7 +582,7 @@
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
           "Development of Invillia Apps suite of applications, optimization for memory usage in integration with Microsoft Teams and data visualization, acting as frontend and backend",
-          "<strong>Tech</strong>: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express and MySQL"
+          "Tech: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express and MySQL"
         ]
       },
       {
@@ -577,7 +593,7 @@
           "Development and coordination with third parties of the beneficiary portal (UI/UX) with financial management, exams and appointment scheduling",
           "Planning and development of an API for user authentication and doctors' guide",
           "Creation of an environment for test automation, monitoring and CI/CD of management and service delivery systems",
-          "<strong>Tech</strong>: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat and Jenkins"
+          "Tech: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat and Jenkins"
         ]
       },
       {
@@ -588,7 +604,7 @@
           "Management and development of a web and mobile backoffice platform to monitor promoters at retail outlets",
           "Development of data visualization, with dashboards, in the monitoring of results for JBS",
           "Load maintenance and data transformation (ETL) from JBS partners",
-          "<strong>Tech</strong>: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js and Pentaho"
+          "Tech: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js and Pentaho"
         ]
       },
       {
@@ -598,7 +614,7 @@
         "description": [
           "Automation of processes and chatbots and structuring of service projects for recalls at Toyota Rodobens",
           "Development of an extension for Google Chrome for Claro's telemarketing",
-          "<strong>Tech</strong>: WDG Automation, Bizagi BPMN Modeler and JavaScript"
+          "Tech: WDG Automation, Bizagi BPMN Modeler and JavaScript"
         ]
       },
       {
@@ -607,7 +623,7 @@
         "institution": "Emais Urbanismo e Incorporações",
         "description": [
           "Maintenance, support and development of ERP and CRM for fiscal, accounting, financial control and real estate portfolio",
-          "<strong>Tech</strong>: Delphi and Microsoft SQL Server"
+          "Tech: Delphi and Microsoft SQL Server"
         ]
       },
       {
@@ -616,7 +632,7 @@
         "institution": "Freelancer",
         "description": [
           "Provision of services and automation of tax obligations for several clients",
-          "<strong>Tech</strong>: Windows Forms, .Net C# and Microsoft SQL Server"
+          "Tech: Windows Forms, .Net C# and Microsoft SQL Server"
         ]
       },
       {
@@ -626,7 +642,7 @@
         "description": [
           "Maintenance and customer service for ERP software specialized in management for distributors",
           "Development of an ERP system focused on the financial area and tax obligations",
-          "<strong>Tech</strong>: Progress 4GL"
+          "Tech: Progress 4GL"
         ]
       },
       {
@@ -635,7 +651,7 @@
         "institution": "Hexa Informática",
         "description": [
           "System development, implementation and maintenance for optical network management",
-          "<strong>Tech</strong>: Delphi and Microsoft SQL Server"
+          "Tech: Delphi and Microsoft SQL Server"
         ]
       },
       {
@@ -645,7 +661,7 @@
         "description": [
           "Maintenance and implementation of ERPs for financial control, inventory and delivery of tax obligations",
           "Development of a tool for the Delegacia de Investigações Gerais (DIG) for internal control of arrest data",
-          "<strong>Tech</strong>: Delphi and Firebird"
+          "Tech: Delphi and Firebird"
         ]
       },
       {
@@ -655,7 +671,7 @@
         "description": [
           "Consultancy, and development, for file delivery for tax obligations",
           "Sale, assembly and maintenance of computers",
-          "<strong>Tech</strong>: Delphi and Firebird"
+          "Tech: Delphi and Firebird"
         ]
       }
     ]

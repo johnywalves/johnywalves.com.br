@@ -2,26 +2,20 @@ import styled from "styled-components"
 
 export const ResumeWrapper = styled.main`
   width: 100%;
-  height: 100vh;
-
-  display: grid;
-  grid-template-columns: 29% 71%;
 
   color: var(--texts);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   font-family: sans-serif;
 
   & h1 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
   }
 
   & h2 {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--highlight);
+    font-size: 20px;
+    font-weight: 700;
 
     & small {
       font-size: 12px;
@@ -29,7 +23,20 @@ export const ResumeWrapper = styled.main`
   }
 
   & h3 {
-    font-size: 13px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    & time {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  & h4 {
+    font-size: 16px;
+    font-weight: 700;
   }
 
   & img {
@@ -40,7 +47,8 @@ export const ResumeWrapper = styled.main`
 
   & p,
   & li {
-    font-weight: 300;
+    font-weight: 400;
+    line-height: 140%;
 
     & strong {
       font-weight: 700;
@@ -52,16 +60,10 @@ export const ResumeWrapper = styled.main`
   }
 `
 
-export const ResumeNavigation = styled.nav`
-  height: 100%;
-  background-color: var(--background-card);
-  padding: 0 0 0 12px;
-`
-
-export const ResumeContent = styled.div`
-  height: 100%;
+export const ResumeSheet = styled.div`
+  height: 100vh;
   background-color: var(--background);
-  padding: 16px 16px 0 0;
+  padding: 32px 48px 0;
 `
 
 export const ResumeSection = styled.section`
@@ -75,7 +77,11 @@ export const ResumeSection = styled.section`
   }
 
   & h2 {
-    margin: 8px 16px 2px;
+    margin: 8px 0 0;
+  }
+
+  & h4 {
+    margin: 4px 0 2px;
   }
 
   label {
@@ -83,25 +89,17 @@ export const ResumeSection = styled.section`
     margin-left: 16px;
   }
 
-  & img {
-    width: 40%;
-    height: auto;
-
-    margin: 16px 16px;
-  }
-
   & hr {
-    border: 1px var(--highlight) solid;
-    border-color: var(--highlight);
-    background-color: var(--highlight);
-    width: 33%;
+    background-color: var(--texts);
+    height: 1px;
+    width: 100%;
   }
 
   & > ul {
     margin: 4px 0;
 
     & > li {
-      margin: 8px 16px 0;
+      margin: 8px 0 0;
 
       & > ul > li {
         margin: 2px 0;
@@ -110,45 +108,51 @@ export const ResumeSection = styled.section`
   }
 
   & > p {
-    margin: 4px 16px 0;
-    line-height: 120%;
+    margin: 4px 0 0;
 
     &.description {
       margin-top: 12px;
-      line-height: 130%;
     }
 
     &.cover {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       text-align: justify;
-      line-height: 140%;
       margin-top: 16px;
 
       &:nth-child(2),
       &:nth-last-child(2) {
-        margin-top: 48px;
+        margin-top: 32px;
       }
     }
-  }
-
-  & > article {
-    margin: 0 16px;
   }
 
   & time {
     align-items: center;
     vertical-align: middle;
-    font-weight: 700;
   }
 `
 
 export const ResumePerson = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 
-  margin: 16px 16px 8px;
+  margin: 0 0 24px;
+
+  & h1 {
+    margin: 0 0 12px;
+  }
+
+  & ul  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & li {
+      margin-top: 2px;
+    }
+  }
 `
 
 export const ResumeCourse = styled.section`
@@ -157,25 +161,22 @@ export const ResumeCourse = styled.section`
   justify-content: flex-start;
   gap: 4px;
 
-  margin: 8px 16px 0;
+  margin: 8px 0 4px;
 
   &:first-of-type {
     margin-top: 12px;
   }
 
-  & p {
-    line-height: 130%;
-  }
-
-  & p:nth-child(2) {
-    line-height: 75%;
+  & time {
+    margin-left: 2px;
   }
 `
 
 export const ResumeSubSection = styled.article`
+  margin: 0 0 16px;
+
   & li {
     margin: 4px 0 0;
-    line-height: 130%;
     text-align: justify;
   }
 `
@@ -197,9 +198,5 @@ export const ResumeSubTitle = styled.div`
     align-items: center;
     vertical-align: middle;
     gap: 6px;
-  }
-
-  & h4 {
-    font-weight: 700;
   }
 `

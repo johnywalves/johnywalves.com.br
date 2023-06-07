@@ -289,7 +289,7 @@ const SectionExperience = () => {
         <Area ref={refCourses} selected={selectedCourses}>
           {Strings.certification.list
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .map(({ date, name, institute, icon, img }, index) => (
+            .map(({ date, name, institute, icon, img, time }, index) => (
               <Accomplishment
                 key={`course_${index}`}
                 hidden={
@@ -306,7 +306,7 @@ const SectionExperience = () => {
                 }
               >
                 <DateText>{FormatDate(date)} <Institution> | {institute}</Institution></DateText>
-                <Title>{name}</Title>
+                <Title>{name}{time > 0 && ` (${time} ${Strings.hour})`}</Title>
               </Accomplishment>
             ))}
           <AreaButton>

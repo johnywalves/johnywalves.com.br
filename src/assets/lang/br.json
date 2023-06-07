@@ -1,6 +1,11 @@
 {
   "description": "Meu nome é Johny William de Oliveira Alves, atuo como desenvolvedor web, há mais de 15 anos, sou estudante de ciência de dados, machine learning, automação de processos e entrega de métricas. Tenho experiência com tecnologias modernas sendo elas JavaScript com React e Next.js, TypeScript, Python, Node, entre outras",
   "position": "Desenvolvedor Web",
+  "headline": "Desenvolvedor Front-end Web | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS",
+  "and": "e",
+  "hour": "horas",
+  "finishedIn": "Concluído em",
+  "forecastOfCompletionIn": "Previsão de conclusão em",
   "aboutMe": "Sobre mim",
   "seeMore": "Ver mais",
   "seeLess": "Ver menos",
@@ -24,8 +29,8 @@
       }
     ]
   },
-  "status": "Brasileiro, Solteiro, 36 anos",
-  "live": "Residente em São José do Rio Preto, São Paulo, Brasil",
+  "status": "Brasileiro | Solteiro | 36 anos",
+  "live": "Residente em São José do Rio Preto - São Paulo - Brasil",
   "contact": {
     "title": "Contatos",
     "about": "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
@@ -221,77 +226,88 @@
         "name": "Voxy Proficiency Achievement Certificate - High Intermediate",
         "institute": "Voxy",
         "img": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
-        "icon": "language"
+        "icon": "language",
+        "time": 0
       },
       {
         "date": "2020-04-19 00:00:00-0300",
         "name": "Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS",
         "institute": "Udemy",
         "img": "/cert/udemy_gatsby.jpg",
-        "icon": "toolbox"
+        "icon": "toolbox",
+        "time": 9
       },
       {
         "date": "2018-07-27 00:00:00-0300",
         "name": "Games 2D: com Unity e C#",
         "institute": "Senac São José do Rio Preto",
         "img": "/cert/senac_games_2d.jpg",
-        "icon": "toolbox"
+        "icon": "toolbox",
+        "time": 40
       },
       {
         "date": "2018-09-16 00:00:00-0300",
         "name": "Ciência de Dados e Machine Learing em Python",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_ml_python.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2018-07-18 00:00:00-0300",
         "name": "Linguagem R para Desenvolvedores Qlik",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_r_qlik.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 3
       },
       {
         "date": "2018-07-10 00:00:00-0300",
         "name": "Introdução ao Qlik Sense",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_qlik.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 3
       },
       {
         "date": "2018-07-22 00:00:00-0300",
         "name": "Estatística em Qlik",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_estatistica_qlik.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2018-03-13 00:00:00-0300",
         "name": "Fundamentos da Ciência de Dados",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_fundamentos_cd.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2018-03-10 00:00:00-0300",
         "name": "Redes Neurais Artificiais e Deep Learning",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_rna_dp.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 3.5
       },
       {
         "date": "2017-09-24 00:00:00-0300",
         "name": "Introdução à Machine Learning",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_ml.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       },
       {
         "date": "2017-08-27 00:00:00-0300",
         "name": "Linguagem R",
         "institute": "Igor Alcantara",
         "img": "/cert/igoralcantara_r.jpg",
-        "icon": "chartpie"
+        "icon": "chartpie",
+        "time": 8
       }
     ]
   },
@@ -471,7 +487,7 @@
     "title": "Formação Acadêmica",
     "list": [
       {
-        "date": "Fev 2023 - Atualmente",
+        "date": "Fev 2023 - Dez 2024",
         "title": "Mestrado em Ciência da Computação",
         "institution": "UNESP",
         "description": [
@@ -545,9 +561,9 @@
         "institution": "CI&T Software",
         "description": [
           "Projeto <strong>Coca-Cola</strong>: Atuação nas plataformas de divulgação de produtos, promoções, coleta de leads e acompanhamento das métricas de consumidores na América Latina e Caribe",
-          "<strong>Tecnologias</strong>: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
-          "Projeto <strong>ANBIMA</strong>: Criação do sistema para coleta de informações de carteiras administradas, e reestruturação na publicação dos dados de produtos financeiros, focado em performance e resultados nas ferramentas de busca",
-          "<strong>Tecnologias</strong>: SEO, HTML, CSS, JavaScript, React, Next.js e Gitlab"
+          "Tecnologias: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
+          "Projeto <strong>Anbima</strong>: Criação do sistema para coleta de informações de carteiras administradas, e reestruturação na publicação dos dados de produtos financeiros, focado em performance e resultados nas ferramentas de busca",
+          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js e Gitlab"
         ]
       },
       {
@@ -557,7 +573,7 @@
         "description": [
           "Manutenção e evolução da plataforma <strong>Zarp Localiza</strong>, com reestruturação de tecnologia e infraestrutura, focado na experiência do usuário, performance e otimização para resultados em buscas (SEO), atingindo o primeiro resultado nas buscas orgânicas",
           "Liderança nos processos de CI/CD, definição de tecnologias para frontend e acompanhamento de métricas (Funil de vendas)",
-          "<strong>Tecnologias</strong>: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar e Datadog"
+          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar e Datadog"
         ]
       },
       {
@@ -566,7 +582,7 @@
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
           "Desenvolvimento suíte de aplicativos da <strong>Invillia Apps</strong>, otimização para uso de memória na integração com o Microsoft Teams e visualização de dados, atuando como frontend e backend",
-          "<strong>Tecnologias</strong>: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
         ]
       },
       {
@@ -577,7 +593,7 @@
           "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas",
           "Planejamento, e desenvolvimento, de API para autenticação de usuários e guia de médicos",
           "Criação de ambiente para automação de testes, monitoramento e CI/CD dos sistemas de gestão e prestação de serviços",
-          "<strong>Tecnologias</strong>: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat e Jenkins"
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat e Jenkins"
         ]
       },
       {
@@ -588,7 +604,7 @@
           "Gestão, e desenvolvimento, de plataforma backoffice web e mobile para acompanhamento de promoters em pontos de revenda",
           "Desenvolvimento de visualização de dados, com dashboards, no acompanhamento de resultados para <strong>JBS</strong>",
           "Manutenção na carga e transformação nos dados (ETL) de parceiros <strong>JBS</strong>",
-          "<strong>Tecnologias</strong>: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js e Pentaho"
+          "Tecnologias: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js e Pentaho"
         ]
       },
       {
@@ -597,8 +613,8 @@
         "institution": "WDG Automation",
         "description": [
           "Automação de processos e chatbots e estruturação de projetos de atendimentos para recalls na <strong>Toyota Rodobens</strong>",
-          "Desenvolvimento de extensão para o Google Chrome para telemarketing da <strong>Claro</strong> (JavaScript)",
-          "<strong>Tecnologias</strong>: WDG Automation, Bizagi BPMN Modeler e JavaScript"
+          "Desenvolvimento de extensão para o Google Chrome para telemarketing da <strong>Claro</strong>",
+          "Tecnologias: WDG Automation, Bizagi BPMN Modeler e JavaScript"
         ]
       },
       {
@@ -607,7 +623,7 @@
         "institution": "Emais Urbanismo e Incorporações",
         "description": [
           "Manutenção, suporte e desenvolvimento de ERP e CRM para controle fiscal, contábil, financeiro e carteira de imóveis",
-          "<strong>Tecnologias</strong>: Delphi e Microsoft SQL Server"
+          "Tecnologias: Delphi e Microsoft SQL Server"
         ]
       },
       {
@@ -616,7 +632,7 @@
         "institution": "Autônomo",
         "description": [
           "Prestação de serviços, e automação, de obrigações fiscais para vários clientes",
-          "<strong>Tecnologias</strong>: Windows Forms, .Net C# e Microsoft SQL Server"
+          "Tecnologias: Windows Forms, .Net C# e Microsoft SQL Server"
         ]
       },
       {
@@ -626,7 +642,7 @@
         "description": [
           "Manutenção e atendimento a clientes para software de ERP especializado em gestão para distribuidoras",
           "Desenvolvimento de sistema ERP focado na área financeira e obrigações fiscais",
-          "<strong>Tecnologias</strong>: Progress 4GL"
+          "Tecnologias: Progress 4GL"
         ]
       },
       {
@@ -635,7 +651,7 @@
         "institution": "Hexa Informática",
         "description": [
           "Desenvolvimento, implementação e manutenção de sistema para gestão de redes óticas",
-          "<strong>Tecnologias</strong>: Delphi e Microsoft SQL Server"
+          "Tecnologias: Delphi e Microsoft SQL Server"
         ]
       },
       {
@@ -645,7 +661,7 @@
         "description": [
           "Manutenção e implementação de ERPs para controle financeiro, estoque e entregas de obrigações fiscais (Delphi e Firebird)",
           "Desenvolvimento de ferramenta para Delegacia de Investigações Gerais (DIG) para controle interno de dados de detenções",
-          "<strong>Tecnologias</strong>: Delphi e Firebird"
+          "Tecnologias: Delphi e Firebird"
         ]
       },
       {
@@ -655,7 +671,7 @@
         "description": [
           "Consultória, e desenvolvimento, para entrega de arquivos para obrigações fiscais",
           "Venda, montagem e manutenção de computadores",
-          "<strong>Tecnologias</strong>: Delphi e Firebird"
+          "Tecnologias: Delphi e Firebird"
         ]
       }
     ]
