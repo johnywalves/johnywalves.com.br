@@ -4,21 +4,21 @@ export const ResumeWrapper = styled.main`
   width: 100%;
 
   color: var(--texts);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   font-family: sans-serif;
 
   & h1 {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 700;
   }
 
   & h2 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
 
     & small {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
@@ -29,13 +29,13 @@ export const ResumeWrapper = styled.main`
     vertical-align: middle;
 
     & time {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
     }
   }
 
   & h4 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
   }
 
@@ -73,15 +73,15 @@ export const ResumeSection = styled.section`
   margin: 8px 0 0;
 
   & h1 {
-    margin: 16px 0 0 16px;
+    margin: 16px 0 0 8px;
   }
 
   & h2 {
-    margin: 8px 0 0;
+    margin: 4px 0 0;
   }
 
   & h4 {
-    margin: 4px 0 2px;
+    margin: 2px 0 0;
   }
 
   label {
@@ -99,7 +99,7 @@ export const ResumeSection = styled.section`
     margin: 4px 0;
 
     & > li {
-      margin: 8px 0 0;
+      margin: 4px 0 0;
 
       & > ul > li {
         margin: 2px 0;
@@ -108,14 +108,15 @@ export const ResumeSection = styled.section`
   }
 
   & > p {
-    margin: 4px 0 0;
+    margin: 0;
 
     &.description {
       margin-top: 12px;
+      text-align: justify;
     }
 
     &.cover {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       text-align: justify;
       margin-top: 16px;
@@ -138,7 +139,7 @@ export const ResumePerson = styled.section`
   flex-direction: column;
   align-items: center;
 
-  margin: 0 0 24px;
+  margin: 0 0 12px;
 
   & h1 {
     margin: 0 0 12px;
@@ -161,7 +162,7 @@ export const ResumeCourse = styled.section`
   justify-content: flex-start;
   gap: 4px;
 
-  margin: 8px 0 4px;
+  margin: 8px 0 0;
 
   &:first-of-type {
     margin-top: 12px;
@@ -173,7 +174,7 @@ export const ResumeCourse = styled.section`
 `
 
 export const ResumeSubSection = styled.article`
-  margin: 0 0 16px;
+  margin: 0 0 8px;
 
   & li {
     margin: 4px 0 0;

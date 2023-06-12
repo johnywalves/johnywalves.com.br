@@ -53,11 +53,11 @@ const ResumePage = ({ language }) => {
           <h2>{language.experience.title} <small>({language.mostRecent})</small></h2>
           <hr />
           {language.experience.list
-            .slice(0, 3)
+            .slice(0, 4)
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
-                  <h3>{institution}<time> • {date}</time></h3>
+                  <h3>{institution}<time>• {date}</time></h3>
                   <h4>{title}</h4>
                 </ResumeSubTitle>
 
@@ -96,11 +96,12 @@ const ResumePage = ({ language }) => {
           <ul>
             {language.skills.list.map(({ type, list }, index) => (
               <li key={index}>
-                <strong>{type}</strong>:
-                {" "}
+                <h3>{type}</h3>
+                <p>
                 {list.map(({ title }) => title).slice(0, -1).join(", ")}
-                {` ${language.and} `}
+                {`, ${language.and} `}
                 {list.map(({ title }) => title).slice(-1)}
+                </p>
               </li>
             ))}
           </ul>
