@@ -51,6 +51,8 @@ import { TailwindCss } from "@styled-icons/boxicons-logos/TailwindCss"
 import { RProject } from "@styled-icons/fa-brands/RProject"
 import { Express } from "@styled-icons/simple-icons/Express"
 import { Flowchart } from "@styled-icons/fluentui-system-filled/Flowchart"
+import { MoveUp } from "@styled-icons/icomoon/MoveUp"
+import { LightningChargeFill } from "@styled-icons/bootstrap/LightningChargeFill"
 
 import ArrowsLeft from "./ArrowsLeft"
 import ArrowLeft from "./ArrowLeft"
@@ -112,7 +114,9 @@ const Icons = {
   Flowchart,
   ArrowsLeft,
   ArrowLeft,
-  D3js
+  D3js,
+  MoveUp,
+  LightningChargeFill
 }
 
 export {
@@ -171,7 +175,9 @@ export {
   Flowchart,
   ArrowsLeft,
   ArrowLeft,
-  D3js
+  D3js,
+  MoveUp,
+  LightningChargeFill
 }
 
 export default Icons

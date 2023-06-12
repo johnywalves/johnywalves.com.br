@@ -6,7 +6,7 @@ import Header from "components/Cards/Header"
 import Strings from "components/strings"
 import RecommendedItem from "components/RecommendedItem"
 
-import { ColorPalette } from "assets/icons"
+import { ColorPalette, MoveUp } from "assets/icons"
 import TriangleNeon from "assets/vectors/TriangleNeon"
 
 import {
@@ -122,6 +122,9 @@ const UtilsPage = () => {
         <UtilsToolList>
           <UtilsToolItem to="/utils/e0138c">
             <ColorPalette /> <p>{Strings.utils.colorExplorer.title}</p>
+          </UtilsToolItem>
+          <UtilsToolItem to="https://johnywalves.github.io/cssanimatic/">
+            <MoveUp /> <p>CSS Animatic</p>
           </UtilsToolItem>
         </UtilsToolList>
       </UtilsSection>
