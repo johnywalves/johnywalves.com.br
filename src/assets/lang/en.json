@@ -3,7 +3,7 @@
   "position": "Web Developer",
   "headline": "Front-end Web Developer | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS",
   "and": "and",
-  "hour": "hour",
+  "hour": "hours",
   "finishedIn": "Finished in",
   "forecastOfCompletionIn": "Forecast of completion in",
   "aboutMe": "About me",
@@ -114,6 +114,10 @@
           {
             "title": "Bootstrap",
             "icon": "Bootstrap"
+          },
+          {
+            "title": "Chakra UI",
+            "icon": "LightningChargeFill"
           },
           {
             "title": "D3.js",
@@ -491,7 +495,8 @@
         "title": "Master's in Computer Science",
         "institution": "UNESP",
         "description": [
-          "Master's Course of the Interunit Graduate Program Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
+          "Master's Course of the Interunit Graduate Program Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
+          "Activities: Digital Image Processing"
         ]
       },
       {
@@ -556,14 +561,23 @@
     "title": "Experience",
     "list": [
       {
+        "date": "May 2023 - Currently",
+        "title": "Front-end Developer",
+        "institution": "Hepta Tecnologia e Informática",
+        "description": [
+          "Project <strong>CREA-SP</strong>: Front-end development of the platform for the application of ART (Technical Responsibility Note) in Works and Services",
+          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation, Chakra UI, and Azure DevOps"
+        ]
+      },
+      {
         "date": "Set 2021 - Feb 2023",
         "title": "Senior Developer Frontend",
         "institution": "CI&T Software",
         "description": [
-          "At <strong>Coca-Cola</strong> working on platforms for promoting products, promotions, collecting leads and monitoring consumer metrics in Latin America and the Caribbean",
-          "Tech: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) and GitHub Actions",
-          "With <strong>Anbima</strong> in the creation of the system for collecting information from managed portfolios, and restructuring the publication of financial product data, focused on performance and results in search engines",
-          "Tech: SEO, HTML, CSS, JavaScript, React, Next.js and Gitlab"
+          "Project <strong>Coca-Cola</strong>: Experience in product promotion, marketing campaigns, and lead generation on platforms in Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring",
+          "Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
+          "Project <strong>Anbima</strong>: Development of a portfolio information collection system and restructuring of financial product data publication, with a focus on improving performance and search engine results",
+          "Technologies: SEO, HTML, CSS, JavaScript, React, Next.js, and Gitlab"
         ]
       },
       {
@@ -571,9 +585,10 @@
         "title": "Frontend Developer",
         "institution": "Meta Serviços em Informática",
         "description": [
-          "Maintenance and evolution of the Zarp Localiza platform, with technology and infrastructure restructuring, focused on user experience, performance and optimization for search results (SEO), reaching the first result in organic searches",
-          "Leadership in CI/CD processes, definition of frontend technologies and monitoring of metrics (Sales funnel)",
-          "Tech: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar and Datadog"
+          "Responsible for the maintenance and continuous improvement of the <strong>Zarp Localiza</strong> platform, including technology and infrastructure restructuring",
+          "Focused on improving user experience, website performance, and search engine optimization (SEO) to achieve the top position in organic search results",
+          "Leadership in establishing CI/CD processes, selecting front-end technologies, and tracking metrics, including the sales funnel",
+          "Technologies: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar, and Datadog"
         ]
       },
       {
@@ -581,8 +596,9 @@
         "title": "Developer",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
-          "Development of Invillia Apps suite of applications, optimization for memory usage in integration with Microsoft Teams and data visualization, acting as frontend and backend",
-          "Tech: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express and MySQL"
+          "Responsible for the development of the <strong>Invillia Apps</strong> suite of applications, with a focus on optimizing memory usage during integration with Microsoft Teams and data visualization",
+          "Engagement covering both front-end and back-end aspects",
+          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express, and MySQL"
         ]
       },
       {
@@ -590,10 +606,10 @@
         "title": "Full Web Developer",
         "institution": "Unimed Rio Preto",
         "description": [
-          "Development and coordination with third parties of the beneficiary portal (UI/UX) with financial management, exams and appointment scheduling",
-          "Planning and development of an API for user authentication and doctors' guide",
-          "Creation of an environment for test automation, monitoring and CI/CD of management and service delivery systems",
-          "Tech: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat and Jenkins"
+          "Development and coordination with third parties of the beneficiaries portal (UI/UX) with financial management, exams, and appointment scheduling",
+          "Planning and development of an API for user authentication and a medical guide",
+          "Creation of an environment for test automation, monitoring, and CI/CD of management systems and service delivery",
+          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat, and Jenkins"
         ]
       },
       {
@@ -601,10 +617,10 @@
         "title": "Full Developer",
         "institution": "Bnex",
         "description": [
-          "Management and development of a web and mobile backoffice platform to monitor promoters at retail outlets",
-          "Development of data visualization, with dashboards, in the monitoring of results for JBS",
-          "Load maintenance and data transformation (ETL) from JBS partners",
-          "Tech: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js and Pentaho"
+          "Responsible for the management and development of a web and mobile back-office platform, focused on tracking promoters at retail locations",
+          "Performed the development of data visualization using dashboards to track results at <strong>JBS</strong>",
+          "Executed maintenance of data loading and transformation (ETL) for partner data at <strong>JBS</strong>",
+          "Technologies: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js, and Pentaho"
         ]
       },
       {
@@ -612,9 +628,9 @@
         "title": "Process Automation Consultant",
         "institution": "WDG Automation",
         "description": [
-          "Automation of processes and chatbots and structuring of service projects for recalls at Toyota Rodobens",
-          "Development of an extension for Google Chrome for Claro's telemarketing",
-          "Tech: WDG Automation, Bizagi BPMN Modeler and JavaScript"
+          "Responsible for process automation and chatbot development, as well as structuring customer service projects for recalls at <strong>Toyota Rodobens</strong>",
+          "Development of a Google Chrome extension focused on telemarketing for <strong>Claro</strong>",
+          "Technologies: WDG Automation, Bizagi BPMN Modeler, and JavaScript"
         ]
       },
       {
@@ -622,8 +638,8 @@
         "title": "Senior Software Developer",
         "institution": "Emais Urbanismo e Incorporações",
         "description": [
-          "Maintenance, support and development of ERP and CRM for fiscal, accounting, financial control and real estate portfolio",
-          "Tech: Delphi and Microsoft SQL Server"
+          "Responsible for the maintenance, support, and ongoing development of an ERP and CRM system for fiscal control, accounting, financial management, and real estate portfolio management",
+          "Technologies: Delphi and Microsoft SQL Server"
         ]
       },
       {
@@ -631,8 +647,8 @@
         "title": "Full Developer",
         "institution": "Freelancer",
         "description": [
-          "Provision of services and automation of tax obligations for several clients",
-          "Tech: Windows Forms, .Net C# and Microsoft SQL Server"
+          "Providing services for automation of tax obligations for multiple clients",
+          "Technologies: Windows Forms, .Net C#, and Microsoft SQL Server"
         ]
       },
       {
@@ -640,9 +656,9 @@
         "title": "Software Developer",
         "institution": "Dual Consultoria e Sistemas",
         "description": [
-          "Maintenance and customer service for ERP software specialized in management for distributors",
-          "Development of an ERP system focused on the financial area and tax obligations",
-          "Tech: Progress 4GL"
+          "Responsible for the maintenance, support, and customer service of an ERP software specialized in management for distributors",
+          "Development of an ERP system specialized in the financial area and compliance with tax obligations",
+          "Technologies: Progress 4GL."
         ]
       },
       {
@@ -650,8 +666,8 @@
         "title": "Software Developer",
         "institution": "Hexa Informática",
         "description": [
-          "System development, implementation and maintenance for optical network management",
-          "Tech: Delphi and Microsoft SQL Server"
+          "Responsible for the development, implementation, and maintenance of an optical network management system",
+          "Technologies: Delphi and Microsoft SQL Server"
         ]
       },
       {
@@ -659,9 +675,9 @@
         "title": "Software Developer",
         "institution": "Condor Informática",
         "description": [
-          "Maintenance and implementation of ERPs for financial control, inventory and delivery of tax obligations",
-          "Development of a tool for the Delegacia de Investigações Gerais (DIG) for internal control of arrest data",
-          "Tech: Delphi and Firebird"
+          "Maintenance and implementation of ERPs for financial control, inventory management, and compliance with tax obligations",
+          "Development of a tool for the General Investigations Police Department (DIG) for internal data management of detentions",
+          "Technologies: Delphi and Firebird"
         ]
       },
       {
@@ -669,9 +685,9 @@
         "title": "Software Developer",
         "institution": "SOC Informática",
         "description": [
-          "Consultancy, and development, for file delivery for tax obligations",
-          "Sale, assembly and maintenance of computers",
-          "Tech: Delphi and Firebird"
+          "Providing consultancy and developing solutions for the delivery of files related to tax obligations",
+          "Offering sales, assembly, and maintenance services for computers",
+          "Technologies: Delphi and Firebird"
         ]
       }
     ]
