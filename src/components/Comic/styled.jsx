@@ -3,6 +3,8 @@ import media from "styled-media-query"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 export const ComicPostWrapper = styled.article`
+  padding: 0 0 var(--80px);
+
   background: url("/vectors/triangle-wall-top.svg"),
     url("/vectors/triangle-wall-bottom.svg");
   background-color: var(--background);

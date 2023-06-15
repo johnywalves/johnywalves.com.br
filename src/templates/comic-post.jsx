@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Strings from "components/strings"
 import Blueprint from "components/Blueprint"
 import Seo from "components/seo"
-import Comments from "components/Comments"
 import Share from "components/Share"
 import ComicNavigation from "components/ComicNavigation"
 import MainContent from "components/MainContent"
@@ -49,8 +48,6 @@ const ComicPost = ({ data, pageContext }) => {
         </MainContent>
 
         <Share slug={slug} title={post.frontmatter.title} />
-
-        <Comments title={post.frontmatter.title} url={slug} />
       </ComicPostWrapper>
     </Blueprint>
   )

@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Blueprint from "components/Blueprint"
-import Comments from "components/Comments"
 import Recommended from "components/Recommended"
 import Seo from "components/seo"
 import Share from "components/Share"
@@ -89,8 +88,6 @@ const Article = ({ data, pageContext }) => {
           recommendedLast={recommendedLast}
           recommendedCategory={recommendedCategory}
         />
-
-        <Comments title={post.frontmatter.title} url={slug} />
       </ArticleWrapper>
     </Blueprint>
   )
