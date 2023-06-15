@@ -53,6 +53,7 @@ import { Express } from "@styled-icons/simple-icons/Express"
 import { Flowchart } from "@styled-icons/fluentui-system-filled/Flowchart"
 import { MoveUp } from "@styled-icons/icomoon/MoveUp"
 import { LightningChargeFill } from "@styled-icons/bootstrap/LightningChargeFill"
+import { Webpack } from "@styled-icons/simple-icons/Webpack"
 
 import ArrowsLeft from "./ArrowsLeft"
 import ArrowLeft from "./ArrowLeft"
@@ -116,7 +117,8 @@ const Icons = {
   ArrowLeft,
   D3js,
   MoveUp,
-  LightningChargeFill
+  LightningChargeFill,
+  Webpack
 }
 
 export {
@@ -177,7 +179,8 @@ export {
   ArrowLeft,
   D3js,
   MoveUp,
-  LightningChargeFill
+  LightningChargeFill,
+  Webpack
 }
 
 export default Icons

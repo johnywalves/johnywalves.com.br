@@ -794,9 +794,6 @@
         "title": {
           "type": "string"
         },
-        "courses": {
-          "type": "string"
-        },
         "list": {
           "type": "array",
           "items": [
@@ -1146,7 +1143,6 @@
       },
       "required": [
         "title",
-        "courses",
         "list"
       ]
     },

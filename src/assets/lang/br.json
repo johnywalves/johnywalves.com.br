@@ -118,7 +118,7 @@
           {
             "title": "Chakra UI",
             "icon": "LightningChargeFill"
-          },          
+          },
           {
             "title": "D3.js",
             "icon": "D3js"
@@ -134,6 +134,10 @@
           {
             "title": "Jekyll",
             "icon": "Jekyll"
+          },
+          {
+            "title": "Module Federation",
+            "icon": "Webpack"
           },
           {
             "title": "Next.js",
@@ -222,12 +226,11 @@
     ]
   },
   "certification": {
-    "title": "Certificados",
-    "courses": "Cursos Complementares",
+    "title": "Cursos e Certificados",
     "list": [
       {
         "date": "2022-07-08 00:00:00-0300",
-        "name": "Voxy Proficiency Achievement Certificate - High Intermediate (B2)",
+        "name": "Voxy Proficiency Achievement Certificate - High Intermediate English (B2)",
         "institute": "Voxy",
         "img": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
         "icon": "language",
@@ -562,16 +565,16 @@
     "list": [
       {
         "date": "Mai 2023 - Atualmente",
-        "title": "Analista de Desenvolvimento",
+        "title": "Desenvolvedor Front-end",
         "institution": "Hepta Tecnologia e Informática",
         "description": [
           "Projeto <strong>CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation, Chakra UI e Azure DevOps"
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro frontend), Chakra UI e Azure DevOps"
         ]
       },
       {
         "date": "Set 2021 - Fev 2023",
-        "title": "Desenvolvedor Frontend Sênior",
+        "title": "Desenvolvedor Front-end Sênior",
         "institution": "CI&T Software",
         "description": [
           "Projeto <strong>Coca-Cola</strong>: Experiência em divulgação de produtos, promoções e coleta de leads nas plataformas da América Latina e Caribe, além de habilidades de análise e acompanhamento de métricas de consumidores",
@@ -593,7 +596,7 @@
       },
       {
         "date": "Nov 2019 - Out 2020",
-        "title": "Analista Desenvolvedor",
+        "title": "Desenvolvedor FullStack",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
           "Responsável pelo desenvolvimento da suíte de aplicativos da <strong>Invillia Apps</strong>, com foco na otimização do uso de memória durante a integração com o Microsoft Teams e na visualização de dados",
@@ -603,7 +606,7 @@
       },
       {
         "date": "Abr 2019 - Nov 2019",
-        "title": "Desenvolvedor Web Pleno",
+        "title": "Desenvolvedor FullStack",
         "institution": "Unimed Rio Preto",
         "description": [
           "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas",
@@ -614,7 +617,7 @@
       },
       {
         "date": "Jul 2018 - Abr 2019",
-        "title": "Desenvolvedor Pleno",
+        "title": "Desenvolvedor de Software",
         "institution": "Bnex",
         "description": [
           "Responsável pela gestão e desenvolvimento de uma plataforma backoffice web e mobile, voltada para o acompanhamento de promoters em pontos de revenda",
@@ -625,7 +628,7 @@
       },
       {
         "date": "Set 2017 - Jul 2018",
-        "title": "Consultor de Automação de Processos",
+        "title": "Consultor de Automação de Processos (RPA)",
         "institution": "WDG Automation",
         "description": [
           "Responsável pela automação de processos e desenvolvimento de chatbots, além da estruturação de projetos de atendimento para recalls na <strong>Toyota Rodobens</strong>",

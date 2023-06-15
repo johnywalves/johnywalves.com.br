@@ -120,10 +120,9 @@ const ResumePage = ({ language }) => {
         </ResumeSection>
 
         <ResumeSection>
-          <h2>{language.certification.courses} <small>({language.mostRecent})</small></h2>
+          <h2>{language.certification.title} <small>({language.mostRecent})</small></h2>
           <hr />
           {language.certification.list
-            .filter(({ icon }) => ["toolbox", "chartpie"].includes(icon))
             .splice(0, 5)
             .map(({ date, name, institute, time }) => (
               <ResumeCourse key={date}>

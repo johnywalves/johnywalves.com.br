@@ -136,6 +136,10 @@
             "icon": "Jekyll"
           },
           {
+            "title": "Module Federation",
+            "icon": "Webpack"
+          },
+          {
             "title": "Next.js",
             "icon": "Nextdotjs"
           },
@@ -222,12 +226,11 @@
     ]
   },
   "certification": {
-    "title": "Certifications",
-    "courses": "Complementary courses",
+    "title": "Courses and Certifications",
     "list": [
       {
         "date": "2022-07-08 00:00:00-0300",
-        "name": "Voxy Proficiency Achievement Certificate - High Intermediate (B2)",
+        "name": "Voxy Proficiency Achievement Certificate - High Intermediate English (B2)",
         "institute": "Voxy",
         "img": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
         "icon": "language",
@@ -566,12 +569,12 @@
         "institution": "Hepta Tecnologia e Informática",
         "description": [
           "Project <strong>CREA-SP</strong>: Front-end development of the platform for the application of ART (Technical Responsibility Note) in Works and Services",
-          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation, Chakra UI, and Azure DevOps"
+          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro frontend), Chakra UI, and Azure DevOps"
         ]
       },
       {
         "date": "Set 2021 - Feb 2023",
-        "title": "Senior Developer Frontend",
+        "title": "Senior Front-end Developer",
         "institution": "CI&T Software",
         "description": [
           "Project <strong>Coca-Cola</strong>: Experience in product promotion, marketing campaigns, and lead generation on platforms in Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring",
@@ -582,7 +585,7 @@
       },
       {
         "date": "Out 2020 - Set 2021",
-        "title": "Frontend Developer",
+        "title": "Front-end Developer",
         "institution": "Meta Serviços em Informática",
         "description": [
           "Responsible for the maintenance and continuous improvement of the <strong>Zarp Localiza</strong> platform, including technology and infrastructure restructuring",
@@ -593,7 +596,7 @@
       },
       {
         "date": "Nov 2019  - Out 2020",
-        "title": "Developer",
+        "title": "FullStack Developer",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
           "Responsible for the development of the <strong>Invillia Apps</strong> suite of applications, with a focus on optimizing memory usage during integration with Microsoft Teams and data visualization",
@@ -603,7 +606,7 @@
       },
       {
         "date": "Apr 2019 - Nov 2019",
-        "title": "Full Web Developer",
+        "title": "FullStack Developer",
         "institution": "Unimed Rio Preto",
         "description": [
           "Development and coordination with third parties of the beneficiaries portal (UI/UX) with financial management, exams, and appointment scheduling",
@@ -614,7 +617,7 @@
       },
       {
         "date": "Jul 2018 - Apr 2019",
-        "title": "Full Developer",
+        "title": "Software Developer",
         "institution": "Bnex",
         "description": [
           "Responsible for the management and development of a web and mobile back-office platform, focused on tracking promoters at retail locations",
@@ -625,7 +628,7 @@
       },
       {
         "date": "Set 2017 - Jul 2018",
-        "title": "Process Automation Consultant",
+        "title": "Process Automation Consultant (RPA)",
         "institution": "WDG Automation",
         "description": [
           "Responsible for process automation and chatbot development, as well as structuring customer service projects for recalls at <strong>Toyota Rodobens</strong>",
@@ -644,7 +647,7 @@
       },
       {
         "date": "Nov 2011 - Jun 2013",
-        "title": "Full Developer",
+        "title": "Developer and Accounting Consultant",
         "institution": "Freelancer",
         "description": [
           "Providing services for automation of tax obligations for multiple clients",

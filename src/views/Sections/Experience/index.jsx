@@ -131,6 +131,7 @@ const SectionExperience = () => {
   return (
     <ExperienceWrapper>
       <Header title={Strings.skills.title} light />
+
       <ExperienceContent>
         <Types>
           {Strings.skills.list.map(({ type }, index) => (
@@ -143,6 +144,7 @@ const SectionExperience = () => {
             </Type>
           ))}
         </Types>
+
         <SkillsWrapper>
           {Strings.skills.list.map(({ list }, index) => (
             <Skills key={`skill_${index}`} selected={selectedType === index}>
@@ -185,7 +187,7 @@ const SectionExperience = () => {
             <AcademicCap /> {Strings.education.title}
           </Button>
           <Button selected={selectedCourses} onClick={toggleCourses} light>
-            <Code /> {Strings.certification.courses}
+            <Code /> {Strings.certification.title}
           </Button>
         </Areas>
 
