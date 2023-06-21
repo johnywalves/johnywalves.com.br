@@ -96,12 +96,14 @@ const ResumePage = ({ language }) => {
           <ul>
             {language.skills.list.map(({ type, list }, index) => (
               <li key={index}>
-                <h3>{type}</h3>
-                <p>
-                {list.map(({ title }) => title).slice(0, -1).join(", ")}
-                {`, ${language.and} `}
-                {list.map(({ title }) => title).slice(-1)}
-                </p>
+                <ResumeCourse>
+                  <h3>{type}</h3>
+                  <p>
+                    {list.map(({ title }) => title).slice(0, -1).join(", ")}
+                    {`, ${language.and} `}
+                    {list.map(({ title }) => title).slice(-1)}
+                  </p>
+                </ResumeCourse>
               </li>
             ))}
           </ul>
