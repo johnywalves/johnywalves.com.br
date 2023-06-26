@@ -38,9 +38,8 @@ const Blueprint = ({
       155,
       description || site.siteMetadata.description
     ),
-    pathImage = `${site.siteMetadata.siteUrl}/${
-      openGraphImage || "/figures/thumbnail.jpg"
-    }`,
+    pathImage = `${site.siteMetadata.siteUrl}/${openGraphImage || "/figures/thumbnail.jpg"
+      }`,
     sizeImageWidth = 900,
     sizeImageHeight = 600
 

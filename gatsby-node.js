@@ -2,6 +2,9 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // To add the slug field to each post
+/**
+ * @type {import('gatsby').GatsbyNode['onCreateNode']}
+ */
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
@@ -26,13 +29,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+/**
+ * @type {import('gatsby').GatsbyNode['createPages']}
+ */
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(`
     query {
       AllPosts: allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: { category: { ne: "Comic" } }
         }
@@ -64,7 +70,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
       AllComics: allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: { published: { ne: false }, category: { eq: "Comic" } }
         }

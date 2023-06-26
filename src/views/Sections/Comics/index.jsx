@@ -17,7 +17,7 @@ const SectionComics = () => {
   } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: { published: { ne: false }, category: { eq: "Comic" } }
         }

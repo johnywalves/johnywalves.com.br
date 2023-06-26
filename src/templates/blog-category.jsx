@@ -81,7 +81,7 @@ const BlogCategory = ({ data, pageContext }) => {
 export const query = graphql`
   query PostsCaterory($skip: Int!, $limit: Int!, $category: String!) {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { published: { ne: false }, category: { eq: $category } }
       }

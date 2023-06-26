@@ -27,7 +27,7 @@ const UtilsPage = () => {
   } = useStaticQuery(graphql`
     query PostCheatsheets {
       allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: { published: { ne: false }, cheatsheet: { eq: true } }
         }
@@ -71,12 +71,12 @@ const UtilsPage = () => {
 
   useEffect(() => {
     const callbackFunction = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show")
-          }
-        })
-      },
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show")
+        }
+      })
+    },
       observer = new IntersectionObserver(callbackFunction),
       sections = document.querySelectorAll("section a")
 

@@ -28,7 +28,7 @@ const SectionArticles = () => {
   } = useStaticQuery(graphql`
     query {
       lastestPosts: allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: {
             published: { ne: false }
@@ -64,7 +64,7 @@ const SectionArticles = () => {
         }
       }
       highlightPosts: allMarkdownRemark(
-        sort: { fields: frontmatter___date, order: DESC }
+        sort: { frontmatter: { date: DESC } }
         filter: {
           frontmatter: {
             published: { ne: false }

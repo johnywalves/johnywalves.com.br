@@ -126,7 +126,7 @@ const pluginsConfig = [
           query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: { date: DESC } }
                   filter: {
                     frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
                   }
@@ -171,7 +171,7 @@ const pluginsConfig = [
           query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: { date: DESC } },
                   filter: {
                     frontmatter: { published: { ne: false }, category: { eq: "Comic" } }
                   }
@@ -230,7 +230,4 @@ module.exports = {
     siteUrlWithoutProtocol: `johnywalves.com.br`,
   },
   plugins: pluginsConfig,
-  flags: {
-    DEV_SSR: false,
-  },
 }

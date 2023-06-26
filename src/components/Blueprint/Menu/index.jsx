@@ -62,7 +62,9 @@ const Menu = ({ hero, whiteLogo }) => {
 
   const [classMenuBar, setClassMenuBar] = useState("")
 
-  useEffect(() => !hero && setClassMenuBar("nohero"), [hero])
+  useEffect(() => {
+    !hero && setClassMenuBar("nohero")
+  }, [hero])
 
   const scrollMove = useCallback(() => {
     const percent = getPercentHero()

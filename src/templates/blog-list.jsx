@@ -73,7 +73,7 @@ const BlogList = ({ data, pageContext }) => {
 export const query = graphql`
   query PostListNew($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: {
         frontmatter: { published: { ne: false }, category: { ne: "Comic" } }
       }
