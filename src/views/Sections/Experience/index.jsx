@@ -242,6 +242,7 @@ const SectionExperience = () => {
                 date,
                 institution,
                 description,
+                details,
                 kudos,
                 certification,
                 production,
@@ -263,6 +264,9 @@ const SectionExperience = () => {
                 <Title>{title}</Title>
                 <Descriptions>
                   {description.map((text, idx) => (
+                    <ExperienceDescription key={idx}>{text}</ExperienceDescription>
+                  ))}
+                  {details && details.map((text, idx) => (
                     <ExperienceDescription key={idx}>{text}</ExperienceDescription>
                   ))}
                 </Descriptions>

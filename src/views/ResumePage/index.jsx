@@ -81,10 +81,11 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.education.list
             .splice(0, 4)
-            .map(({ date, title, institution, production }) => (
+            .map(({ date, title, institution, details, production }) => (
               <ResumeCourse key={date}>
                 <h3>{title}<time> • {getLast(date) >= getCurrentYear() ? language.forecastOfCompletionIn : language.finishedIn} {getLast(date)}</time> </h3>
                 <p>{institution}</p>
+                {details && details.map((text) => <p>{text}</p>)}
                 {production && <p>{production.title}</p>}
               </ResumeCourse>
             ))}

@@ -268,7 +268,7 @@ const LinkIcon = (props) => (
 )
 
 export const WrapperAward = styled(LinkIcon)`
-  margin: 1rem 0;
+  margin: 1rem 0 !important;
 `
 
 export const Icon = styled(LinkIcon)`

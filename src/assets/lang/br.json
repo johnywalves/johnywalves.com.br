@@ -498,7 +498,9 @@
         "title": "Mestrado em Ciência da Computação",
         "institution": "UNESP - Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
         "description": [
-          "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
+          "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
+        ],
+        "details": [
           "Atividades: Processamento de Imagens Digitais"
         ]
       },
@@ -506,6 +508,7 @@
         "date": "Out 2020 - Dez 2022",
         "title": "Especialização em Gestão de Projetos em TI",
         "institution": "Fatec Rio Preto - Faculdade de Tecnologia",
+        "certification": "/cert/fatec_gpti.pdf",
         "description": [
           "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software"
         ],
@@ -518,7 +521,7 @@
         "date": "Mar 2018 - Mar 2020",
         "title": "Especialização em Big Data",
         "institution": "Centro Universitário Senac",
-        "certification": "/cert/senac_bigdata.jpg",
+        "certification": "/cert/senac_bigdata.pdf",
         "description": [
           "Especialização no campo de Big Data, visando ao correto entendimento, à definição de uso, implementação, além de fornecer ferramentas e subsídios para a gestão das tecnologias e processos envolvidos."
         ],

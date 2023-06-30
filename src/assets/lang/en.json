@@ -498,7 +498,9 @@
         "title": "Master's in Computer Science",
         "institution": "UNESP",
         "description": [
-          "Master's Course of the Interunit Graduate Program Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
+          "Master's Course of the Interunit Graduate Program Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
+        ],
+        "details": [
           "Activities: Digital Image Processing"
         ]
       },
@@ -506,6 +508,7 @@
         "date": "Out 2020 - Dec 2022",
         "title": "Specialization in IT Project Management  ",
         "institution": "Fatec Rio Preto",
+        "certification": "/cert/fatec_gpti.pdf",
         "description": [
           "Specialization in the IT field to work on the design, development and implementation of network infrastructure projects, developing and managing information security, managing IT projects. service provision, hardware acquisition and software configuration in companies of different sizes and branches of activities, governance and software development"
         ],
@@ -518,7 +521,7 @@
         "date": "Mar 2018 - Mar 2020",
         "title": "Specialization in Big Data",
         "institution": "Senac Sao Paulo",
-        "certification": "/cert/senac_bigdata.jpg",
+        "certification": "/cert/senac_bigdata.pdf",
         "description": [
           "Distributed processing and storage, visualization and data loading projects, introduction to statistics and business intelligence"
         ],
@@ -531,7 +534,7 @@
         "date": "Jan 2015 - Dec 2017",
         "title": "Professional in Business Informatics",
         "institution": "Fatec Rio Preto",
-        "certification": "/cert/fatec_graduacao.jpg",
+        "certification": "/cert/fatec_graduacao.pdf",
         "description": [
           "Informatics for Business, Software Development and Manager Business"
         ],
