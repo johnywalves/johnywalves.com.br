@@ -67,12 +67,12 @@
     "title": "Idiomas",
     "list": [
       {
-        "name": "Português",
-        "proficiency": "Nativo"
-      },
-      {
         "name": "Inglês",
         "proficiency": "Intermediário (B2)"
+      },
+      {
+        "name": "Português",
+        "proficiency": "Nativo"
       }
     ]
   },
