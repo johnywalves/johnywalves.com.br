@@ -229,6 +229,14 @@
     "title": "Courses and Certifications",
     "list": [
       {
+        "date": "2023-07-07 00:00:00-0300",
+        "name": "Professional Scrum Developer I",
+        "institute": "Scrum.org",
+        "img": "/cert/professional_scrum_developer_I.pdf",
+        "icon": "toolbox",
+        "time": 0
+      },
+      {
         "date": "2022-07-08 00:00:00-0300",
         "name": "Voxy Proficiency Achievement Certificate - High Intermediate English (B2)",
         "institute": "Voxy",
