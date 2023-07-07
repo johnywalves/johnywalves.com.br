@@ -101,11 +101,18 @@ Ou com o usado no `then` e `catch`
 ```javascript
 fetch("http://localhost:8080/mirror", config)
   .then(function (response) {
-    return response.json()
+    if (response.status === 200) {
+      return response.json()
+    }
   })
   .then(function (content) {
-    console.log(content)
+    // Lidar com os dados recebidos
+    console.log('content', content)
   })
+  .catch(function (error) {
+    // Tratar exceções: erros e outras situações
+    console.log('error', error);
+  });
 ```
 
 ### Requisição pelo Node
