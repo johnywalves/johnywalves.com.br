@@ -8,6 +8,7 @@ import {
   ResumeSubSection,
   ResumeSubTitle,
   ResumeSheet,
+  ResumeFooter
 } from "./styled"
 
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
@@ -73,6 +74,11 @@ const ResumePage = ({ language }) => {
               </ResumeSubSection>
             ))}
         </ResumeSection>
+
+        <ResumeFooter>
+          <p>johnywalves.com.br</p>
+          <p>1/2</p>
+        </ResumeFooter>
       </ResumeSheet>
 
       <ResumeSheet>
@@ -136,6 +142,11 @@ const ResumePage = ({ language }) => {
               </ResumeCourse>
             ))}
         </ResumeSection>
+
+        <ResumeFooter>
+          <p>johnywalves.com.br</p>
+          <p>2/2</p>
+        </ResumeFooter>
       </ResumeSheet>
     </ResumeWrapper>
   )

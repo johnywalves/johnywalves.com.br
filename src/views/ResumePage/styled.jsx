@@ -16,9 +16,11 @@ export const ResumeWrapper = styled.main`
   & h2 {
     font-size: 14px;
     font-weight: 700;
+    color: var(--highlight);
 
     & small {
       font-size: 10px;
+      color: var(--shadow-colors);
     }
   }
 
@@ -64,6 +66,19 @@ export const ResumeSheet = styled.div`
   height: 100vh;
   background-color: var(--background);
   padding: 32px 48px 0;
+  position: relative;
+`
+
+export const ResumeFooter = styled.footer`
+  position: absolute;
+  padding: 0.5rem 0 1rem;
+  bottom: 0;
+  width: calc(100% - 96px);
+
+  border-top: 1px solid var(--highlight);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
 
 export const ResumeSection = styled.section`
@@ -90,7 +105,8 @@ export const ResumeSection = styled.section`
   }
 
   & hr {
-    background-color: var(--texts);
+    border: none;
+    border-bottom: 1px solid var(--highlight);
     height: 1px;
     width: 100%;
   }
