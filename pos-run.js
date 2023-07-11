@@ -43,7 +43,7 @@ async function getResumeAndCoverLetter(servingUrl, page, language) {
 async function getThumbnail(url, page, filename) {
   await page.goto(url, { waitUntil: "networkidle0" })
 
-  await page.setViewport({ width: 1200, height: 628, deviceScaleFactor: 1 })
+  await page.setViewport({ width: 1200, height: 627, deviceScaleFactor: 1 })
 
   await page.screenshot({
     path: `./public/figures/${filename}.jpg`,

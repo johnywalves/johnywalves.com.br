@@ -28,8 +28,6 @@ export const Head = ({ location }) => (
   <Seo
     location={location}
     title={titlePage}
-    imagenWidth={1200}
-    imageHeight={628}
     description={descriptionPage}
     image={thumbnailPage}
   />

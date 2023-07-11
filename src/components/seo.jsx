@@ -34,8 +34,8 @@ function SEO({
   const metaDescription = limitText(155, description || site.siteMetadata.description)
   const pathImage = `${site.siteMetadata.siteUrl}${image || "/figures/thumbnail.jpg"}`
   const pathIcon = `${site.siteMetadata.siteUrl}/figures/favicon.png`
-  const sizeImageWidth = imagenWidth || 900
-  const sizeImageHeight = imageHeight || 600
+  const sizeImageWidth = imagenWidth || 1200
+  const sizeImageHeight = imageHeight || 627
   const urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
 
   return (
