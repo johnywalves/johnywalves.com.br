@@ -55,7 +55,9 @@ const FormatDate = (text) => {
 const SectionExperience = () => {
   const [selectedType, setSelectedType] = useState(0)
   const [selectedArea, setSelectedArea] = useState(null)
+
   const [allExperiences, setAllExperiences] = useState(false)
+  const [allEducations, setAllEducations] = useState(false)
   const [allCourses, setAllCourses] = useState(false)
 
   const refExperiences = useRef()
@@ -121,6 +123,11 @@ const SectionExperience = () => {
   const toggleAllExperiences = useCallback(
     () => setAllExperiences(!allExperiences),
     [allExperiences]
+  )
+
+  const toggleAllEducations = useCallback(
+    () => setAllEducations(!allEducations),
+    [allEducations]
   )
 
   const toggleAllCourses = useCallback(
@@ -251,7 +258,11 @@ const SectionExperience = () => {
             ) => (
               <Accomplishment
                 key={`edu_${index}`}
-                hidden={false}
+                hidden={    
+                  index > 2 &&
+                  Strings.education.list.length > 4 &&
+                  !allEducations
+                }
                 icon={
                   certification && (
                     <Icon href={certification}>
@@ -289,7 +300,19 @@ const SectionExperience = () => {
               </Accomplishment>
             )
           )}
-          <span></span>
+          <AreaButton>
+            <Button light onClick={toggleAllEducations}>
+              {allExperiences ? (
+                <>
+                  <ExpandLess /> {Strings.seeLess}
+                </>
+              ) : (
+                <>
+                  <ExpandMore /> {Strings.seeMore}
+                </>
+              )}
+            </Button>
+          </AreaButton>
         </Area>
 
         <Area ref={refCourses} selected={selectedCourses}>
