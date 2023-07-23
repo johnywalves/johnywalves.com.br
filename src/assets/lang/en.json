@@ -487,6 +487,11 @@
         "link": "/web/neonletters.html"
       },
       {
+        "title": "Elements Skeleton",
+        "description": "Skeleton Effect for loading elements",
+        "link": "/web/skeleton.html"
+      },
+      {
         "title": "Profiles",
         "description": "Online profile collection",
         "link": "/web/profiles.html"

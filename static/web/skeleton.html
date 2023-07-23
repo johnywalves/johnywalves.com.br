@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#e0138c" />
+
+    <title>Skeleton</title>
+    <meta name="title" property="og:title" content="Page Title" />
+    <meta
+      name="description"
+      property="og:description"
+      content="Page Description"
+    />
+    <meta
+      name="image"
+      property="og:image"
+      itemprop="image"
+      content="/path/to/thumbnail"
+    />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="url" property="og:url" content="https://url.page" />
+    <meta name="site_name" property="og:site_name" content="Page Name" />
+    <meta name="locale" property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://url.page" />
+    <meta name="twitter:title" content="Page Title" />
+    <meta name="twitter:description" content="Page Description" />
+    <meta name="twitter:image" content="/path/to/thumbnail" />
+
+    <style>
+      /* Reset CSS */
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        --14px: 0.875rem;
+        --16px: 1rem;
+        --18px: 1.125rem;
+        --21px: 1.3125rem;
+        --24px: 1.5rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      a,
+      a:hover,
+      a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Content CSS */
+      :root {
+        --color-background: #282c35;
+        --color-text: #e0138c;
+        --color-card: #fdfdfd;
+      }
+
+      body {
+        background: var(--color-background);
+        color: var(--color-text);
+
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      button {
+        font-size: 1.5rem;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 1rem;
+
+        background-color: var(--color-text);
+        color: var(--color-card);
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.75;
+      }
+
+      .skeletable {
+        background-color: var(--color-text);
+        border-radius: 0.25rem;
+      }
+
+      .column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 1rem;
+      }
+
+      .card {
+        background-color: var(--color-card);
+        box-shadow: 0 0 4px 2px #dfdfdf80, 4px 4px 8px 4px #dfdfdf80;
+
+        justify-content: space-between;
+
+        width: 20rem;
+        height: 22rem;
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .image_profile {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+      }
+
+      .name {
+        line-height: 2.5rem;
+        flex-grow: 1;
+      }
+
+      .description {
+        align-items: normal;
+      }
+
+      p {
+        line-height: 1.5rem;
+        flex-grow: 1;
+      }
+
+      .detail {
+        width: 100%;
+        align-self: flex-end;
+        justify-self: flex-end;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 1rem;
+      }
+
+      .bagde {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .skeleton {
+        background: linear-gradient(
+          110deg,
+          #dcdcdc 20%,
+          #f4f4f4 60%,
+          #dcdcdc 80%
+        );
+        background-size: 200% 100%;
+        animation: 1.5s shine linear infinite;
+        pointer-events: none;
+      }
+
+      @keyframes shine {
+        to {
+          background-position-x: -200%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card column">
+      <div class="column">
+        <div class="row">
+          <picture class="image_profile skeletable skeleton">
+            <img />
+          </picture>
+          <h1 class="name skeletable skeleton">&nbsp;</h1>
+        </div>
+        <div class="column description">
+          <p class="skeletable skeleton">&nbsp;</p>
+          <p class="skeletable skeleton">&nbsp;</p>
+          <p class="skeletable skeleton">&nbsp;</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="bagde skeletable skeleton"></div>
+        <div class="bagde skeletable skeleton"></div>
+      </div>
+    </div>
+    <button onclick="toggleSkeleton()">Toggle Skeleton</button>
+  </body>
+
+  <script type="text/javascript">
+    function toggleSkeleton() {
+      document.querySelectorAll(".skeletable").forEach(function (element) {
+        element.classList.toggle("skeleton")
+      })
+    }
+  </script>
+</html>

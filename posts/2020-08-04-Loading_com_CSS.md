@@ -1,24 +1,25 @@
 ---
 date: 2020-08-04 18:50:32 -0300
-title: Loading com CSS
-description: Animação de carregando estilizado somente com HTML e CSS
+title: Animação de carregando (loading) com CSS puro
+description: Estilização de carregando com girando estilizado somente com HTML e CSS
 featuredImage: ./featured/hourglass-1.jpg
 coverImage: /figures/hourglass-1.jpg
 category: CSS
 tags:
-  - Web
   - Animação
+  - Interface
+  - Carregando
 published: true
 cheatsheet: false
 ---
 
 Pode não parecer, mas essa é uma div simples girando com CSS
 
-<video width="480" height="320" muted autoplay loop style="display: block; margin: 1rem auto;" >
-  <source src="/videos/spinnerloader.mp4" type="video/mp4">
-</video>
+<div class="content-box">
+  <div class="spinner"></div>
+</div>
 
-Pode ser vista em funcionamento em [Loading Spinner](/web/loadingspinner.html)
+Também pode ser observada funcionando em [Loading Spinner](/web/loadingspinner.html)
 
 ## Como fazer
 
@@ -53,3 +54,27 @@ body {
   }
 }
 ```
+
+<style>
+  .content-box {
+    display: block;
+    width: 100%;
+    padding: 3rem 0 4rem;
+  }
+
+  .spinner {
+    border: 0.75rem solid var(--color-line);
+    border-left-color: var(--highlight);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

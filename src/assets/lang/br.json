@@ -487,7 +487,12 @@
         "link": "/web/neonletters.html"
       },
       {
-        "title": "Profiles",
+        "title": "Esqueleto de elementos",
+        "description": "Efeito de Esqueleto para elementos carregando",
+        "link": "/web/skeleton.html"
+      },
+      {
+        "title": "Perfis",
         "description": "Coleção de perfis online",
         "link": "/web/profiles.html"
       },

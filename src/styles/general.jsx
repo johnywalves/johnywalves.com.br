@@ -70,7 +70,6 @@ const GeneralStyles = createGlobalStyle`
     --background-semi: #222222c0;
     --background-card: #303030;
     --shadow-colors: #f6f6f680;
-    --shadow-colors: #f6f6f680;
     --color-line: #f6f6f640;
   }
 
