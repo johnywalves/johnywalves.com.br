@@ -287,6 +287,15 @@ function drawGraphic() {
     { date: "2023-07-23", weight: 107.0 },
     { date: "2023-07-24", weight: 106.3 },
     { date: "2023-07-25", weight: 104.2 },
+    { date: "2023-07-26", weight: 104.6 },
+    { date: "2023-07-27", weight: 103.9 },
+    { date: "2023-07-28", weight: 105.0 },
+    { date: "2023-07-29", weight: 104.3 },
+    { date: "2023-07-30", weight: 105.0 },
+    { date: "2023-07-31", weight: 105.3 },
+    { date: "2023-08-01", weight: 103.9 },
+    { date: "2023-08-02", weight: 103.1 },
+    { date: "2023-08-03", weight: 101.9 },
   ]
 
   const data = raw.map((elem, index) => ({ day: index + 1, ...elem }))
