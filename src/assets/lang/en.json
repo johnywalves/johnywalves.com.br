@@ -514,7 +514,7 @@
           "Master's Course of the Interunit Graduate Program Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ],
         "details": [
-          "Activities: Digital Image Processing"
+          "Activities: Digital Image Processing, Advanced Topics in Visualization"
         ]
       },
       {
@@ -580,7 +580,16 @@
     "title": "Experience",
     "list": [
       {
-        "date": "May 2023 - Currently",
+        "date": "Jul 2023 - Currently",
+        "title": "Senior Front-end Developer",
+        "institution": "Seguralta",
+        "description": [
+          "Development of the Franchise Portal with component versioning",
+          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, bit.dev, bit.cloud, Styled Components, Testing Library, Jest e Cypress"
+        ]
+      },
+      {
+        "date": "May 2023 - Jul 2023",
         "title": "Front-end Developer",
         "institution": "Hepta Tecnologia e Informática",
         "description": [

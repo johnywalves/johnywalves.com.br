@@ -514,7 +514,7 @@
           "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ],
         "details": [
-          "Atividades: Processamento de Imagens Digitais"
+          "Atividades: Processamento de Imagens Digitais, Tópicos Avançados em Visualização"
         ]
       },
       {
@@ -580,7 +580,16 @@
     "title": "Experiência Profissional",
     "list": [
       {
-        "date": "Mai 2023 - Atualmente",
+        "date": "Jul 2023 - Atualmente",
+        "title": "Desenvolvedor Front-end Sênior",
+        "institution": "Seguralta",
+        "description": [
+          "Desenvolvimento do Portal de Franqueados com versionamento de componentes",
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, bit.dev, bit.cloud, Styled Components, Testing Library, Jest e Cypress"
+        ]
+      },
+      {
+        "date": "Mai 2023 - Jul 2023",
         "title": "Desenvolvedor Front-end",
         "institution": "Hepta Tecnologia e Informática",
         "description": [
