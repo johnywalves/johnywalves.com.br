@@ -72,10 +72,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "name",
-                "file"
-              ]
+              "required": ["name", "file"]
             },
             {
               "type": "object",
@@ -87,18 +84,12 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "name",
-                "file"
-              ]
+              "required": ["name", "file"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "files"
-      ]
+      "required": ["title", "files"]
     },
     "status": {
       "type": "string"
@@ -116,10 +107,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "about"
-      ]
+      "required": ["title", "about"]
     },
     "coverLetter": {
       "type": "array",
@@ -240,10 +228,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "name",
-                "proficiency"
-              ]
+              "required": ["name", "proficiency"]
             },
             {
               "type": "object",
@@ -255,18 +240,12 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "name",
-                "proficiency"
-              ]
+              "required": ["name", "proficiency"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "list"
-      ]
+      "required": ["title", "list"]
     },
     "skills": {
       "type": "object",
@@ -296,10 +275,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -311,10 +287,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -326,10 +299,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -341,10 +311,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -356,10 +323,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -371,18 +335,12 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     }
                   ]
                 }
               },
-              "required": [
-                "type",
-                "list"
-              ]
+              "required": ["type", "list"]
             },
             {
               "type": "object",
@@ -403,10 +361,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -418,10 +373,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -433,10 +385,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -448,10 +397,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -463,10 +409,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -478,10 +421,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -493,10 +433,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -508,10 +445,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -523,10 +457,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -538,10 +469,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -553,10 +481,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -568,18 +493,36 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "icon": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["title", "icon"]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "icon": {
+                          "type": "string"
+                        }
+                      },
+                      "required": ["title", "icon"]
                     }
                   ]
                 }
               },
-              "required": [
-                "type",
-                "list"
-              ]
+              "required": ["type", "list"]
             },
             {
               "type": "object",
@@ -600,10 +543,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -615,10 +555,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -630,10 +567,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -645,10 +579,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -660,18 +591,12 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     }
                   ]
                 }
               },
-              "required": [
-                "type",
-                "list"
-              ]
+              "required": ["type", "list"]
             },
             {
               "type": "object",
@@ -692,10 +617,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -707,10 +629,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -722,10 +641,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -737,10 +653,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -752,10 +665,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     },
                     {
                       "type": "object",
@@ -767,26 +677,17 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "title",
-                        "icon"
-                      ]
+                      "required": ["title", "icon"]
                     }
                   ]
                 }
               },
-              "required": [
-                "type",
-                "list"
-              ]
+              "required": ["type", "list"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "list"
-      ]
+      "required": ["title", "list"]
     },
     "certification": {
       "type": "object",
@@ -819,14 +720,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -850,14 +744,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -881,14 +768,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -912,14 +792,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -943,14 +816,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -974,14 +840,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -1005,14 +864,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -1036,14 +888,31 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "institute": {
+                  "type": "string"
+                },
+                "img": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "integer"
+                }
+              },
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -1067,14 +936,7 @@
                   "type": "number"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -1098,14 +960,7 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             },
             {
               "type": "object",
@@ -1129,22 +984,12 @@
                   "type": "integer"
                 }
               },
-              "required": [
-                "date",
-                "name",
-                "institute",
-                "img",
-                "icon",
-                "time"
-              ]
+              "required": ["date", "name", "institute", "img", "icon", "time"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "list"
-      ]
+      "required": ["title", "list"]
     },
     "projects": {
       "type": "object",
@@ -1403,12 +1248,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "view",
-                "cover",
-                "description"
-              ]
+              "required": ["title", "view", "cover", "description"]
             },
             {
               "type": "object",
@@ -1548,14 +1388,7 @@
           ]
         }
       },
-      "required": [
-        "title",
-        "top",
-        "others",
-        "viewAll",
-        "viewHighlight",
-        "list"
-      ]
+      "required": ["title", "top", "others", "viewAll", "viewHighlight", "list"]
     },
     "samples": {
       "type": "object",
@@ -1579,11 +1412,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1598,11 +1427,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1617,11 +1442,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1636,11 +1457,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1655,11 +1472,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1674,11 +1487,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1693,11 +1502,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1712,11 +1517,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1731,11 +1532,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1750,11 +1547,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1769,11 +1562,7 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
             },
             {
               "type": "object",
@@ -1788,19 +1577,27 @@
                   "type": "string"
                 }
               },
-              "required": [
-                "title",
-                "description",
-                "link"
-              ]
+              "required": ["title", "description", "link"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                }
+              },
+              "required": ["title", "description", "link"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "list"
-      ]
+      "required": ["title", "list"]
     },
     "education": {
       "type": "object",
@@ -1830,13 +1627,22 @@
                       "type": "string"
                     }
                   ]
+                },
+                "details": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
                 }
               },
               "required": [
                 "date",
                 "title",
                 "institution",
-                "description"
+                "description",
+                "details"
               ]
             },
             {
@@ -1849,6 +1655,9 @@
                   "type": "string"
                 },
                 "institution": {
+                  "type": "string"
+                },
+                "certification": {
                   "type": "string"
                 },
                 "description": {
@@ -1869,16 +1678,14 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "title",
-                    "file"
-                  ]
+                  "required": ["title", "file"]
                 }
               },
               "required": [
                 "date",
                 "title",
                 "institution",
+                "certification",
                 "description",
                 "production"
               ]
@@ -1916,10 +1723,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "title",
-                    "file"
-                  ]
+                  "required": ["title", "file"]
                 }
               },
               "required": [
@@ -1967,10 +1771,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "name",
-                        "file"
-                      ]
+                      "required": ["name", "file"]
                     },
                     {
                       "type": "object",
@@ -1982,10 +1783,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "name",
-                        "file"
-                      ]
+                      "required": ["name", "file"]
                     }
                   ]
                 },
@@ -1999,10 +1797,7 @@
                       "type": "string"
                     }
                   },
-                  "required": [
-                    "title",
-                    "file"
-                  ]
+                  "required": ["title", "file"]
                 }
               },
               "required": [
@@ -2036,20 +1831,12 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "list"
-      ]
+      "required": ["title", "list"]
     },
     "experience": {
       "type": "object",
@@ -2080,56 +1867,11 @@
                     },
                     {
                       "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
                     }
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "date": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "array",
-                  "items": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    }
-                  ]
-                }
-              },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2155,12 +1897,7 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2192,12 +1929,7 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2229,12 +1961,7 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2263,74 +1990,7 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "date": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "array",
-                  "items": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    }
-                  ]
-                }
-              },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
-            },
-            {
-              "type": "object",
-              "properties": {
-                "date": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "institution": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "array",
-                  "items": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    }
-                  ]
-                }
-              },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2355,16 +2015,14 @@
                     },
                     {
                       "type": "string"
+                    },
+                    {
+                      "type": "string"
                     }
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2386,16 +2044,17 @@
                     },
                     {
                       "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
                     }
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2424,12 +2083,59 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "institution": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": ["date", "title", "institution", "description"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "institution": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": ["date", "title", "institution", "description"]
             },
             {
               "type": "object",
@@ -2458,20 +2164,96 @@
                   ]
                 }
               },
-              "required": [
-                "date",
-                "title",
-                "institution",
-                "description"
-              ]
+              "required": ["date", "title", "institution", "description"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "institution": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": ["date", "title", "institution", "description"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "institution": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": ["date", "title", "institution", "description"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "institution": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": ["date", "title", "institution", "description"]
             }
           ]
         }
       },
-      "required": [
-        "title",
-        "list"
-      ]
+      "required": ["title", "list"]
     },
     "utils": {
       "type": "object",
@@ -2492,17 +2274,10 @@
               "type": "string"
             }
           },
-          "required": [
-            "title"
-          ]
+          "required": ["title"]
         }
       },
-      "required": [
-        "title",
-        "titleCheatsheets",
-        "titleTools",
-        "colorExplorer"
-      ]
+      "required": ["title", "titleCheatsheets", "titleTools", "colorExplorer"]
     },
     "menuLinks": {
       "type": "array",
@@ -2517,10 +2292,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "url"
-          ]
+          "required": ["label", "url"]
         },
         {
           "type": "object",
@@ -2532,10 +2304,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "url"
-          ]
+          "required": ["label", "url"]
         },
         {
           "type": "object",
@@ -2547,10 +2316,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "url"
-          ]
+          "required": ["label", "url"]
         },
         {
           "type": "object",
@@ -2562,10 +2328,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "url"
-          ]
+          "required": ["label", "url"]
         },
         {
           "type": "object",
@@ -2577,10 +2340,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "url"
-          ]
+          "required": ["label", "url"]
         },
         {
           "type": "object",
@@ -2592,10 +2352,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "url"
-          ]
+          "required": ["label", "url"]
         }
       ]
     },
@@ -2615,11 +2372,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "icon",
-            "url"
-          ]
+          "required": ["label", "icon", "url"]
         },
         {
           "type": "object",
@@ -2634,11 +2387,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "icon",
-            "url"
-          ]
+          "required": ["label", "icon", "url"]
         },
         {
           "type": "object",
@@ -2653,11 +2402,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "icon",
-            "url"
-          ]
+          "required": ["label", "icon", "url"]
         },
         {
           "type": "object",
@@ -2672,11 +2417,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "label",
-            "icon",
-            "url"
-          ]
+          "required": ["label", "icon", "url"]
         }
       ]
     }
