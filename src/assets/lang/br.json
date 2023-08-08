@@ -593,8 +593,8 @@
         "title": "Desenvolvedor Front-end",
         "institution": "Hepta Tecnologia e Informática",
         "description": [
-          "Projeto <strong>CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro frontend), Chakra UI e Azure DevOps"
+          "Projeto <strong>CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços, com uso de micro-frontend e monorepo",
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
         ]
       },
       {

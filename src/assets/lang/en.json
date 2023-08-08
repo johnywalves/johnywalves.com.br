@@ -593,8 +593,8 @@
         "title": "Front-end Developer",
         "institution": "Hepta Tecnologia e Informática",
         "description": [
-          "Project <strong>CREA-SP</strong>: Front-end development of the platform for the application of ART (Technical Responsibility Note) in Works and Services",
-          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro frontend), Chakra UI, and Azure DevOps"
+          "Project <strong>CREA-SP</strong>: Front-end development of the platform for the application of ART (Technical Responsibility Note) in Works and Services, using micro-frontend and monorepo",
+          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI, and Azure DevOps"
         ]
       },
       {
