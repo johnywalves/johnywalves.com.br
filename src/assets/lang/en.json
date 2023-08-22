@@ -584,7 +584,7 @@
         "title": "Senior Front-end Developer",
         "institution": "Seguralta",
         "description": [
-          "Development of the Franchise Portal with component versioning",
+          "Development of the <strong>Seguralta</strong> Franchisees Portal, with component versioning, continuous integration and delivery, unit and end-to-end tests",
           "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, bit.dev, bit.cloud, Styled Components, Testing Library, Jest e Cypress"
         ]
       },
