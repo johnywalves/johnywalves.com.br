@@ -69,19 +69,19 @@ pip uninstall <nome_do_pacote>
 ```
 
 Para atualizar as dependências no ambiente do Python, devemos usar instalador com a diretiva --update indicando o download da versão mais nova  
-Sendo assim podemos as biliotecas de gestão de pacotes, os **pip**, download do repositório, e o **setuptools**, instalador de bibliotecas, desta maneira
+Sendo assim podemos as bibliotecas de gestão de pacotes, os **pip**, download do repositório, e o **setuptools**, instalador de bibliotecas, desta maneira
 
 ```bash
 pip install --upgrade setuptools pip
 ```
 
-Para facilitar a portalidade e replicação de ambientes podemos exportar a lista dos pacotes instalados e suas respectivas versões
+Para tornar a portabilidade e replicação de ambientes mais simples, é possível exportar a lista de pacotes instalados juntamente com suas versões correspondentes
 
 ```bash
 pip freeze > requirements.txt
 ```
 
-E posteriormente instalar a lista completa somente com um comando
+E, posteriormente, você pode instalar a lista completa com um único comando:
 
 ```bash
 pip install -r requirements.txt
@@ -110,13 +110,13 @@ Em uma tradução:
 > Ainda que praticidade vença a pureza.  
 > Erros nunca devem passar silenciosamente.  
 > A menos que sejam explicitamente silenciados.  
-> Diante da ambigüidade, recuse a tentação de adivinhar.  
+> Diante da ambiguidade, recuse a tentação de adivinhar.  
 > Deveria haver um — e preferencialmente só um — modo óbvio para fazer algo.  
 > Embora esse modo possa não ser óbvio a princípio a menos que você seja holandês.  
 > Agora é melhor que nunca.  
-> Embora nunca freqüentemente seja melhor que já.  
-> Se a implementação é difícil de explicar, é uma má idéia.  
-> Se a implementação é fácil de explicar, pode ser uma boa idéia.  
-> Namespaces são uma grande idéia — vamos ter mais dessas!
+> Embora nunca frequentemente seja melhor que já.  
+> Se a implementação é difícil de explicar, é uma má ideia.  
+> Se a implementação é fácil de explicar, pode ser uma boa ideia.  
+> Namespaces são uma grande ideia — vamos ter mais dessas!
 
 Eu disse que tem muito amor no Python

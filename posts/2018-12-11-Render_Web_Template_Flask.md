@@ -12,11 +12,11 @@ published: true
 cheatsheet: false
 ---
 
-Entregar páginas Web intepretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponiveis somente neste ambiente
+Entregar páginas Web interpretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponíveis somente neste ambiente
 
 ## Montagem do Modelo
 
-Fazendo uso do [Jinja](http://jinja.pocoo.org/docs/2.10/templates/), um modelo de sintaxe e semantica, montamos um documento HTML, fazendo uso de delimitadores para expressões `{{` e `}}` e controles de fluxo `{%` e `%}`  
+Fazendo uso do [Jinja](http://jinja.pocoo.org/docs/2.10/templates/), um modelo de sintaxe e semântica, montamos um documento HTML, fazendo uso de delimitadores para expressões `{{` e `}}` e controles de fluxo `{%` e `%}`  
 Inserir um valor direto no corpo do arquivo
 
 ```html
@@ -100,7 +100,7 @@ app = Flask(__name__)
 
 ## Interpretação
 
-Adicionando no arquivo **app.py** a opção de rotas para ouvir o caminho **/hello/** com e sem parametros
+Adicionando no arquivo **app.py** a opção de rotas para ouvir o caminho **/hello/** com e sem parâmetros
 
 ```python
 from flask import render_template
@@ -127,7 +127,7 @@ def lista():
 
 ## Arquivos Estáticos
 
-Folhas de estilo não costumam sofre variação na execução do sistema, não sendo necessária a intepreção da mesma
+Folhas de estilo não costumam sofre variação na execução do sistema, não sendo necessária a interpretação da mesma
 Para entregar devemos adicionar na pasta **static** na raiz do projeto
 
 ```html

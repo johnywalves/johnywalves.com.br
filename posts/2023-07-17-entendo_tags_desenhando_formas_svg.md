@@ -24,8 +24,8 @@ Permita-me compartilhar um pouco mais sobre essa paixão pela aplicação de con
 
 A tag do `svg` tem três atributos importantes para controlar o tamanho e escala:
 
-* `viewBox` é a posição e dimensão da tela de desenho representando os valores mínimos `x` e `y` e as dimensões de `largura` e `altura`, formando o modelo `min-x min-y largura altura`
-* `width` e `height`: respectivamente largura e altura, ambas usadas para representar a dimensões da imagem na página, a escala é controlada pela relação entre as dimensões da **viewBox** e do elemento na página
+- `viewBox` é a posição e dimensão da tela de desenho representando os valores mínimos `x` e `y` e as dimensões de `largura` e `altura`, formando o modelo `min-x min-y largura altura`
+- `width` e `height`: respectivamente largura e altura, ambas usadas para representar a dimensões da imagem na página, a escala é controlada pela relação entre as dimensões da **viewBox** e do elemento na página
 
 SVG de exemplo com escala de 4 vezes com início (0, 0), tela (100, 100) e dimensão do elemento (400, 400):
 
@@ -50,18 +50,18 @@ Detalhe para a posição final também é definida pelo tamanho do **viewBox**
 
 ## Preenchimento e Contorno
 
-As formas de retângulo, círculo e elipse possuem área interna e a polinha e caminho dependendo da forma podem incluir uma área interna, essa área é preenchidos pela cor definida no `fill`, com o valor `none` podemos forçar transparência
+As formas de retângulo, círculo e elipse possuem área interna e a polilinha e caminho dependendo da forma podem incluir uma área interna, essa área é preenchidos pela cor definida no `fill`, com o valor `none` podemos forçar transparência
 
 No desenho os contornos são definidos pelo:
 
-* **stoke**: Cor do contorno;  
-* **stoke-width**: Medida da "grossura" do contorno, detalhe que o centro do contorno sempre será a margem do desenho;  
+- **stoke**: Cor do contorno;
+- **stoke-width**: Medida da "grossura" do contorno, detalhe que o centro do contorno sempre será a margem do desenho;
 
 <div id="d3_fill_stroke" class="d3_graph" style="margin:0 auto 2rem;">
   <div id="loading_graphic"></div>
 </div>
 
-A primeira imagem com preenchimento sem contorno, segunda com conforno e sem preenchimento e o terceiro com ambos configurados
+A primeira imagem com preenchimento sem contorno, segunda com contorno e sem preenchimento e o terceiro com ambos configurados
 
 ## Formas
 
@@ -111,7 +111,7 @@ Diferente do círculo a tag `ellipse` possuem dois raio, além do centro `cx` e 
 
 ### Linha
 
-Como diz o segundo axioma da geometria euclidiana plana "dois pontos distintos determinam uma única reta", na tag `line` informamos as cordenadas destes dois pontos o primeiro como `x1` e `y1` e segundo como `x2` e `y2`, uma reta não possue um preenchimento então suas características são definidas pelo contorno
+Como diz o segundo axioma da geometria euclidiana plana "dois pontos distintos determinam uma única reta", na tag `line` informamos as coordenadas destes dois pontos o primeiro como `x1` e `y1` e segundo como `x2` e `y2`, uma reta não possuem um preenchimento então suas características são definidas pelo contorno
 
 ```xml
 <line x1="5" y1="5" x2="90" y2="90" stroke="#e0138c" stroke-width="3" />
@@ -144,8 +144,8 @@ Ah! Por último a tag `path` que no seu atribulo `d` de definição de conjunto 
 Os comandos funcionam por uma letra e um conjunto de números, por exemplo com o comando `M 50,0` estamos solicitando que o pincel "mova para" a posição (50, 0) e o comando `L 62,40` damos a instrução de "linha para" a posição (62, 40) dando sequência podemos gerar o código
 
 ```xml
-<path 
-  d="M 50,0 
+<path
+  d="M 50,0
     L 62,40
     L 100,40
     L 66,62
@@ -155,8 +155,8 @@ Os comandos funcionam por uma letra e um conjunto de números, por exemplo com o
     L 32,62
     L 0,40
     L 40,40
-    Z" 
-  fill="f6f6f640" 
+    Z"
+  fill="f6f6f640"
 />
 ```
 

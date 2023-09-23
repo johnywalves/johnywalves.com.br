@@ -18,7 +18,7 @@ Fazer trabalhos repetitivos é desperdício de tempo, felizmente robôs existem 
 
 ## Instalação de pacotes
 
-Instalar os pacotes `selenium` e `webdriver-manager` no pelo pip 
+Instalar os pacotes `selenium` e `webdriver-manager` no pelo pip
 
 ```bash
 pip install selenium webdriver-manager
@@ -45,7 +45,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager  
+from webdriver_manager.chrome import ChromeDriverManager
 
 options = Options()
 options.add_argument("--headless")
@@ -108,7 +108,7 @@ searchField.send_keys(Keys.ENTER)
 Localizando o link para as imagens pelo seletor de CSS
 
 ```python
-imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")   
+imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")
 imageTab.click()
 ```
 
@@ -146,7 +146,7 @@ def main():
   )
 
   # Tirar um screenshot
-  driver.save_screenshot("open.png")  
+  driver.save_screenshot("open.png")
 
   # Alterar o tamanho da tela
   driver.set_window_size(1800, 1200)
@@ -163,7 +163,7 @@ def main():
   driver.save_screenshot("search.png")
 
   # Clicar para a aba de Imagens
-  imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")   
+  imageTab = driver.find_element(By.CSS_SELECTOR, "#top_nav a")
   imageTab.click()
   # Tirar um screenshot das imagens
   driver.save_screenshot("imagens.png")
@@ -194,19 +194,18 @@ driver = webdriver.Chrome(options = options)
 
 ## Possíveis problemas
 
-No sistema Linux é necessário alguns pacotes para a execução do Chrome Driver 
+No sistema Linux é necessário alguns pacotes para a execução do Chrome Driver
 
-Se for necessário executar ```sudo apt install libnss```
+Se for necessário executar `sudo apt install libnss`
 
-Se a continuar com problemas de execução tentar ```sudo apt install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev```
+Se a continuar com problemas de execução tentar `sudo apt install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev`
 
-Se necessário adicionar ```sudo apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev```
+Se necessário adicionar `sudo apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev`
 
-Para adicionar libasound2  ```sudo apt install libasound2```
+Para adicionar libasound2 `sudo apt install libasound2`
 
 ## Referências
 
 [Python Selenium](https://www.selenium.dev/selenium/docs/api/py/)
 
 [PyPi - Webdriver Manager](https://pypi.org/project/webdriver-manager/)
-

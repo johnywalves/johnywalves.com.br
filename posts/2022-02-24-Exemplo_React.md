@@ -665,7 +665,7 @@ const Header = () => {
       <Wrapper>
         <Content>
           <Logo src="https://olympics.com/en/images/static/beijing-images/header/b2022-logo.svg" />
-          <Title>Medalhas Olimpiadas de Inverno 2022</Title>
+          <Title>Medalhas Olimpíadas de Inverno 2022</Title>
         </Content>
         <Back src="https://olympics.com/images/static/beijing-images/header/b2022-mountains-right-v2.svg" />
       </Wrapper>

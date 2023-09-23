@@ -13,7 +13,7 @@ published: true
 cheatsheet: false
 ---
 
-No momento de estruturar os artigos costumo usar uma imagem para ilustrar, com direitos de uso permitido encontradas no Google Imagens ou WikiCommons, quando compartilhada nas redes socias ela aparece juntamente com o título e descrição, como neste exemplo do twitter
+No momento de estruturar os artigos costumo usar uma imagem para ilustrar, com direitos de uso permitido encontradas no Google Imagens ou WikiCommons, quando compartilhada nas redes sociais ela aparece juntamente com o título e descrição, como neste exemplo do twitter
 
 ![Café cremoso em uma xícara com o nome "Construindo Layout 2.0" do artigo abaixo](/figures/og_gastby_before.jpg "Compartilhamento de postagem no Twitter")
 

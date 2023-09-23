@@ -9,6 +9,9 @@ import { Wrapper, ImageCover } from "./styled"
 const SectionProjects = () => {
   const images = useStaticQuery(graphql`
     query {
+      usepython: file(relativePath: { eq: "usepython.jpg" }) {
+        ...extractFieldsHome
+      }
       machadoalves: file(relativePath: { eq: "machadoalves.jpg" }) {
         ...extractFieldsHome
       }

@@ -29,6 +29,9 @@ import {
 const ProjectPage = () => {
   const images = useStaticQuery(graphql`
     query {
+      usepython: file(relativePath: { eq: "usepython.jpg" }) {
+        ...extractFieldsPage
+      }
       machadoalves: file(relativePath: { eq: "machadoalves.jpg" }) {
         ...extractFieldsPage
       }

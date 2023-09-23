@@ -40,7 +40,7 @@ pipenv install flask flask-restful flask-jwt-extended passlib
 ## Flask
 
 O pacote do **Flask** possibilita escutar uma porta para garantir uma aplicação _Web_  
-Criar um arquivo **app.py** com o conteúdo abaixo, esse nome é um dos padrões do Flask, aconselhavél seu uso
+Criar um arquivo **app.py** com o conteúdo abaixo, esse nome é um dos padrões do Flask, aconselhável seu uso
 
 ```python
 import os
@@ -167,7 +167,7 @@ class readJSON(Resource):
 api.add_resource(readJSON, '/readjson')
 ```
 
-Realizando um teste pela biblioteca _request_, fazendo um post informando o conteúdo através do parametro _json_ e visualizando a impressão na parte do servidor
+Realizando um teste pela biblioteca _request_, fazendo um post informando o conteúdo através do parâmetro _json_ e visualizando a impressão na parte do servidor
 
 ```python
 post('http://localhost:5000/readjson', json={'name':'cake', 'categories':[{'name':'sweet'}, {'name':'wheat'}], 'steps':[{'ingredient':'sugar'}, {'ingredient':'flour'}]}).json()
@@ -258,7 +258,7 @@ Claro que este trecho funciona melhor com uma base de dados consultando o nome d
 ## Compilando
 
 Para facilitar o código completo gerado nas etapas anteriores que devem conter no _app.py_ para rodar com o \'flask run\'  
-Não esquencendo de alterar a `<Chave Secreta JWT>` para sua chave particular
+Não esquecendo de alterar a `<Chave Secreta JWT>` para sua chave particular
 
 ```python
 import os

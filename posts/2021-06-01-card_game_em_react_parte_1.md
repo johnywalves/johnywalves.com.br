@@ -48,7 +48,7 @@ No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, joga
 
 Em resumo:
 
-- **Pré-prepado**: O jogador deve pegar 1 (uma) carta da pilha de cartas e receber 3 (três) pontos de comando;
+- **Pré-preparo**: O jogador deve pegar 1 (uma) carta da pilha de cartas e receber 3 (três) pontos de comando;
 - **Fase de preparo**: Invocações de artefatos e criaturas com o gasto de pontos de comando definidos pelo nível da carta e movimentações por custo de um ponto de comando, e ativação de feitiços;
 - **Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de realizar um ataque;
 - **Fase de feitiços**: Reservada para invocação de feitiços, com o custo em pontos de comando igual seu nível;
@@ -84,7 +84,7 @@ As possibilidades de alvo para os efeitos são:
 A duração é definida como:
 
 - **Instantânea**: As cartas com essa duração são descartadas no momento que seus efeitos são efetivados;
-- **Duradora**: Após a ativação ela mantem seu efeito até destruída, ou quando seu alvo for destruído.
+- **Duradora**: Após a ativação ela mantém seu efeito até destruída, ou quando seu alvo for destruído.
 
 ## Condições de vitória
 

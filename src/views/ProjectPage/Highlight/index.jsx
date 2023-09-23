@@ -29,6 +29,9 @@ const Highlight = ({
 }) => {
   const images = useStaticQuery(graphql`
     query {
+      usepython: file(relativePath: { eq: "usepython.jpg" }) {
+        ...extractFieldsHighlight
+      }
       machadoalves: file(relativePath: { eq: "machadoalves.jpg" }) {
         ...extractFieldsHighlight
       }

@@ -1,6 +1,6 @@
 ---
 title: Controle da evolução corporal
-description: Em processo de emagrecer regitrando as medides de "sucesso"
+description: Em processo de emagrecer registrando as medidas de "sucesso"
 date: 2018-10-25 20:33:15 -0300
 featuredImage: ./featured/balance-1.jpg
 coverImage: /figures/balance-1.jpg

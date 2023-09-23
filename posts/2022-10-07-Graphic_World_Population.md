@@ -16,7 +16,7 @@ published: true
 cheatsheet: false
 ---
 
-O formato de imagem gráfico de vetor escalável, _Scalable Vector Graphics_, para os íntimpos **SVG**, é muito usada para gráficos, logos e outras imagens onde se espera disponibilização e visualização em diferentes dimensões
+O formato de imagem gráfico de vetor escalável, _Scalable Vector Graphics_, para os íntimos **SVG**, é muito usada para gráficos, logos e outras imagens onde se espera disponibilização e visualização em diferentes dimensões
 
 > **Vetor** é um segmento de reta orientado, em outras palavras a linha que liga dois pontos com uma indicação de começo e fim
 

@@ -30,13 +30,13 @@ Modelo matemático que recebe valores, multiplicados pelos pesos correspondentes
 
 <p class="center">Fonte: adaptado de Silva et al. (2016)<p>
 
-A figura ilustra uma simulação de funcionamento de um neurônio no modelo *Perceptron* com valores de entrada **{x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>}** sendo multiplicados por pesos sinápticos **{w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>}**, respectivamente
+A figura ilustra uma simulação de funcionamento de um neurônio no modelo _Perceptron_ com valores de entrada **{x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>}** sendo multiplicados por pesos sinápticos **{w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>}**, respectivamente
 
 Esses valores são somados e acrescidos por um valor externo **b<sub>0</sub>**, também um peso, gerando o somatório **v<sub>0</sub>**, aplicado na função **f(.)** para gerar o valor de saída **y<sub>0</sub>**
 
 Sendo **x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ... x<sub>d</sub>**, **w<sub>01</sub>, w<sub>02</sub>, w<sub>03</sub> ... w<sub>0d</sub>**, **b<sub>0</sub>** e **v<sub>0</sub>** valores entre 0 e 1, e **y<sub>0</sub>** com valor de 0 ou 1
 
-A função **f(.)** é determinada por um valor limiar, dependendo da aplicação, retornando 0 ou 1 
+A função **f(.)** é determinada por um valor limiar, dependendo da aplicação, retornando 0 ou 1
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="center" width="350" height="100" viewBox="0 0 280 80">
     <g fill="var(--texts)" font-size="1rem" font-weight="700">
@@ -97,42 +97,42 @@ Com aplicação do modelo de neurônio em sequência, com os valores **v<sub>0</
 
 <p class="center">Fonte: adaptado de Wikipédia<p>
 
-Cada camada tem uma identificação: 
+Cada camada tem uma identificação:
 
-* **camada de entrada** (*input layer*): Valores iniciais, vindo pela entrada de dados, pode ser coordenadas, estrutura de uma imagem entre outros;
-* **camada oculta** (*hidden layer*): As camadas com os neurônios que não são os de entrada e saída;
-* **camada de saída** (*output layer*): Saída de valores, que podem ter um ou mais saídas todas sendo 0 ou 1.
+- **camada de entrada** (_input layer_): Valores iniciais, vindo pela entrada de dados, pode ser coordenadas, estrutura de uma imagem entre outros;
+- **camada oculta** (_hidden layer_): As camadas com os neurônios que não são os de entrada e saída;
+- **camada de saída** (_output layer_): Saída de valores, que podem ter um ou mais saídas todas sendo 0 ou 1.
 
 ## Implementação
 
 Agora com os conceitos em mão vamos para aplicação, com somente uma camada oculta
 
-### Matemática 
+### Matemática
 
 No exemplo vamos usar uma rede com três (3) neurônios na camada de entrada, cinco (5) na camada oculta e somente dois (2) na camada de saída
 
-Na **camada de entrada** (*layer_input*) como parâmetro criamos uma matriz com a quantidade de entradas (3) contendo os valores desejados, exemplo:
+Na **camada de entrada** (_layer_input_) como parâmetro criamos uma matriz com a quantidade de entradas (3) contendo os valores desejados, exemplo:
 
 ```python
 A = [0.1, 0.2, 0.3]
 ```
 
-Como **pesos da camada de entrada** (*weight_input*) devemos ter uma matriz com a quantidade de entradas (3) e quantidade de ocultas (5), exemplo: 
+Como **pesos da camada de entrada** (_weight_input_) devemos ter uma matriz com a quantidade de entradas (3) e quantidade de ocultas (5), exemplo:
 
 ```python
 B = [
         [0.11, 0.12, 0.13, 0.14, 0.15],
-        [0.21, 0.22, 0.23, 0.24, 0.25], 
+        [0.21, 0.22, 0.23, 0.24, 0.25],
         [0.31, 0.32, 0.33, 0.34, 0.35]
 ]
 ```
 
-Para calcular a saída **pesos da camada oculta** (*weight_hidden*) precisamos de uma matriz com dimensões de com quantidade de ocultas (5) e quantidade de saída (2), exemplo:
+Para calcular a saída **pesos da camada oculta** (_weight_hidden_) precisamos de uma matriz com dimensões de com quantidade de ocultas (5) e quantidade de saída (2), exemplo:
 
 ```python
 C = [
         [0.11, 0.12],
-        [0.21, 0.22], 
+        [0.21, 0.22],
         [0.31, 0.32],
         [0.41, 0.42],
         [0.51, 0.52]
@@ -155,9 +155,9 @@ X = [
 ]
 ```
 
-Para aplicar essa fórmula, vamos usar o pacote do Python chamada NumPy, temos um artigo para explicar a [instalação de pacotes no Python](/ambiente-python/)  
+Para aplicar essa fórmula, vamos usar o pacote do Python chamada NumPy, temos um artigo para explicar a [instalação de pacotes no Python](/ambiente-python/)
 
-A função `dot` realiza um produto de duas matrizes, fazendo uso dela temos 
+A função `dot` realiza um produto de duas matrizes, fazendo uso dela temos
 
 ```python
 import numpy as np
@@ -165,7 +165,7 @@ import numpy as np
 X = np.dot(A, B)
 ```
 
-Assim temos o resultado `[0.146, 0.152, 0.158, 0.164, 0.17]` na variável X com os valores para camada oculta 
+Assim temos o resultado `[0.146, 0.152, 0.158, 0.164, 0.17]` na variável X com os valores para camada oculta
 
 Para apurar os resultados finais temos os valores em `X` que multiplicamos com os pesos em `C`, com seguinte código
 
@@ -173,9 +173,9 @@ Para apurar os resultados finais temos os valores em `X` que multiplicamos com o
 Y = np.dot(X, C)
 ```
 
-Assim temos `[0.2509, 0.2588]` que dependendo do nosso valor de limiar para cada saída, pode resultar cada um como 0 ou 1 
+Assim temos `[0.2509, 0.2588]` que dependendo do nosso valor de limiar para cada saída, pode resultar cada um como 0 ou 1
 
-### Finalmente 
+### Finalmente
 
 Aplicando a função de classificação com os valores limiares
 
@@ -198,7 +198,7 @@ def neural_network(layer_input, weight_input, weight_hidden, thresholds):
     return [classifier(i, e) for i, e in enumerated]
 ```
 
-Só isso? É... só isso! 
+Só isso? É... só isso!
 
 ## Referências
 

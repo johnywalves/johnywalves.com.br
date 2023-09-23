@@ -334,6 +334,13 @@
     "viewHighlight": "Visualizar somente destaques",
     "list": [
       {
+        "title": "Use Python",
+        "sourceCode": "https://github.com/johnywalves/use-python",
+        "cover": "usepython",
+        "view": "https://usepython.com.br/",
+        "description": "Curso introdutório em Python abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados"
+      },
+      {
         "title": "Machado Alves",
         "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
         "cover": "machadoalves",
@@ -346,13 +353,6 @@
         "cover": "devflix",
         "view": "https://devflix.johnywalves.com.br",
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
-      },
-      {
-        "title": "Daisy Bell",
-        "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "cover": "daisybell",
-        "view": "https://daisy.johnywalves.com.br",
-        "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
       },
       {
         "title": "Bom dia, equipes dev!",
@@ -368,6 +368,13 @@
         "cover": "boilerplate",
         "view": "https://boilerplate-react-next.vercel.app/",
         "description": "Boilerplate com React, Next.js, Typescript, Storybook e Styled Components para começar rapidamente e com configuração mínima"
+      },
+      {
+        "title": "Daisy Bell",
+        "sourceCode": "https://github.com/johnywalves/daisy-bell",
+        "cover": "daisybell",
+        "view": "https://daisy.johnywalves.com.br",
+        "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
       },
       {
         "title": "Animações com CSS",
@@ -500,6 +507,11 @@
         "title": "A história de Johny",
         "description": "Álbum de fotos com uma pequena parte da minha história",
         "link": "https://johnywalves.github.io/johnys-story/"
+      },
+      {
+        "title": "População Mundial | Dashboard",
+        "description": "Coleção de gráficos para apresentação da população mundial",
+        "link": "https://johnywalves.com.br/web/world_d3/"
       }
     ]
   },
@@ -584,7 +596,7 @@
         "title": "Desenvolvedor Front-end Sênior",
         "institution": "Seguralta",
         "description": [
-          "Desenvolvimento do Portal de Franqueados <strong>Seguralta</strong>, com versionamento de componentes, integração e entrega contínuas, testes unitários e end-to-end",
+          "Desenvolvimento do Portal de Franqueados <strong>Seguralta</strong>, plataforma para controle financeiro, gestão de leads e comunicação com parceiros, com versionamento de componentes, integração e entrega contínuas, testes unitários e end-to-end",
           "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, bit.dev, bit.cloud, BitBucket, Styled Components, Testing Library, Jest e Cypress"
         ]
       },

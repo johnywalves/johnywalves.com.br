@@ -12,7 +12,7 @@ published: true
 cheatsheet: false
 ---
 
-A dois anos atrás escrevi um texto sobre como estava lidando com o início da pandemia usando [disciplina sobre motivação](/seja-disciplicado/), aqueles pensamentons ainda estão válidos e neste vou escrever algo mais pessoal
+A dois anos atrás escrevi um texto sobre como estava lidando com o início da pandemia usando [disciplina sobre motivação](/seja-disciplicado/), aqueles pensamentos ainda estão válidos e neste vou escrever algo mais pessoal
 
 ## Início da pandemia
 
@@ -40,7 +40,7 @@ Minha saúde mental e física estava em péssimo estado, comecei a brigar muito 
 
 Quando as corridas de rua foram liberadas novamente cai de cabeça no treinamento, para aliviar o estresse e frustrações, fazendo todas as semanas 7km nas terças-feira e na quintas-feira e 21Km nos sábados, totalizando 35km todas as semanas, em três meses lesionei os dois joelhos e mal conseguia andar
 
-![Estátistica de treino com o trajeto e 21 quilomêntros em 2 horas](/figures/saindo_corrida.jpg)
+![Estatística de treino com o trajeto e 21 quilômetros em 2 horas](/figures/saindo_corrida.jpg)
 
 <p class="center">Era isso todos os sábados<p>
 
@@ -48,7 +48,7 @@ Quando as corridas de rua foram liberadas novamente cai de cabeça no treinament
 
 Iniciei um acompanhamento com uma psicóloga, para tentar curar a minha cabeça, comprei um apartamento, reformei e me mudei, entrei para uma escola de samba, praticava ciclismo semanalmente, emagreci 8Kg, estava indo bem, embora me sentisse sozinho
 
-Um pouco depois comecei a namorar, cheguei a noivar, com uma mulher 4 anos mais velha, que possuia um modo de vida bem diferente, no começo fazia sentido a minha dedicação para esse relacionamento, o problema foi quanto por conta de ciúmes me afastei de amigos, deixei de frequentar a psicóloga e o parei de passear com meu afilhado
+Um pouco depois comecei a namorar, cheguei a noivar, com uma mulher 4 anos mais velha, que possuía um modo de vida bem diferente, no começo fazia sentido a minha dedicação para esse relacionamento, o problema foi quanto por conta de ciúmes me afastei de amigos, deixei de frequentar a psicóloga e o parei de passear com meu afilhado
 
 Abri mão da minha vida sozinho, do ciclismo, estudo e projetos, cheguei a abrir mão de ofertas de trabalho e possibilidades de estudo, até me mudei para Marília por um tempo para acompanhar ela no trabalho, cheguei a recorrer a tratamento psiquiátrico, pensando que o problema era eu
 
@@ -56,7 +56,7 @@ Pouco depois não podia e não queria mais continuar com alguém que pedia tanto
 
 ## Hoje
 
-Nesta semana ao terminiar de assisti a quinta temporada do Cobra Kai, uma série sobre superar o passado aprendendo com ele para construir um futuro, juntamente com uma nova psicóloga, me fez pensar muito no que focar para minha vida e no que gostaria de ter alcançado no final de 2023
+Nesta semana ao terminar de assisti a quinta temporada do Cobra Kai, uma série sobre superar o passado aprendendo com ele para construir um futuro, juntamente com uma nova psicóloga, me fez pensar muito no que focar para minha vida e no que gostaria de ter alcançado no final de 2023
 
 Segue alguns pontos
 

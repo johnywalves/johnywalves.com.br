@@ -13,7 +13,7 @@ published: true
 cheatsheet: false
 ---
 
-Quando estava aprendendo o básico da **Linguagem R** e o **R Studio** em uma workshop do Igor Alcantara, ele disponibilizou algumas bases de dados dentre eles com ofecenças e mortes em filmes do Quentin Tarantino.  
+Quando estava aprendendo o básico da **Linguagem R** e o **R Studio** em uma workshop do Igor Alcântara, ele disponibilizou algumas bases de dados dentre eles com ofereças e mortes em filmes do Quentin Tarantino.  
 Brincando um pouco a base encontrei uma lista de mortes em ambos volumes de Kill Bill e ocorre alguns montes
 
 ### Ambiente e Dados
@@ -25,7 +25,7 @@ setwd(".")
 rm(list = ls())
 ```
 
-Carreguei a biblioteca  do `tidyverse` pois contém a `ggplot2`, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
+Carreguei a biblioteca do `tidyverse` pois contém a `ggplot2`, geração de gráfico, e a _dplyr_, consulta para manipulação de dados
 
 ```r
 # Instalar caso necessário com o comando: install.packages('tidyverse')
@@ -54,7 +54,7 @@ Os dados estão organizados com os nomes dos filmes, acontecimento de tempo em m
 
 ### Organização
 
-Somente me interessa os dados de mortes dos volumes 1 e 2 de Kill Bill, um consulta um filtro usuando a bibliote _dplyr_ que faz parte da _tidyverse_, apliquei um filtro pelo nome do Filme e tipo de evento
+Somente me interessa os dados de mortes dos volumes 1 e 2 de Kill Bill, um consulta um filtro usando a bibliote _dplyr_ que faz parte da _tidyverse_, apliquei um filtro pelo nome do Filme e tipo de evento
 
 ```r
 mortes <-
@@ -79,7 +79,7 @@ mortes[(mortes$movie == 'Kill Bill: Vol. 2'),]$minutes_in <-
 
 ### Visualização
 
-Com os dados organaizados, o uso do _ggplot2_ com os comandos:
+Com os dados organizados, o uso do _ggplot2_ com os comandos:
 
 - **labs** Legendas do gráfico
 - **geom_point** Visualização dos dados por pontos

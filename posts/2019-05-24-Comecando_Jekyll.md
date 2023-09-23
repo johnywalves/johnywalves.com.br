@@ -12,7 +12,7 @@ published: true
 cheatsheet: false
 ---
 
-Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos poderar CMS, Sistema de gerenciamento de conteúdo,
+Internet, como Isaac Asimov descreveu antes da sua criação, uma grande biblioteca onde todos acessar e contribuir com CMS (Sistema de gerenciamento de Conteúdo)
 
 ## Instalação
 

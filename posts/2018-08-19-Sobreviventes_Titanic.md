@@ -156,7 +156,7 @@ test <- combi[is.na(combi$Survived),]
 rm(combi)
 ```
 
-### Floresta Aletória
+### Floresta Aleatória
 
 Aplicando Floresta Aletória (_Random Florest_)
 

@@ -14,11 +14,11 @@ highlight: false
 cheatsheet: false
 ---
 
-Automatizar é criar um robô para realizar tarefas repetitividas, do dicionário:
+Automatizar é criar um robô para realizar tarefas repetitivas, do dicionário:
 
 > **Robô**
 >
-> de 1923, "pessoa mecânica", "pessoa que trabalha ou realizar atividades inteiramente mecânicamente" da tradução em inglês de 1920 da peça "R.U.R." ("Rossum's Universal Robots") por Karel Capek (1890-1938), do tcheco *robotnik* "trabalhor forçado,", de *robota* "trabalho forçado, serviço compusório, labuta," ...
+> de 1923, "pessoa mecânica", "pessoa que trabalha ou realizar atividades inteiramente mecanicamente" da tradução em inglês de 1920 da peça "R.U.R." ("Rossum's Universal Robots") por Karel Capek (1890-1938), do tcheco _robotnik_ "trabalhador forçado,", de _robota_ "trabalho forçado, serviço compusório, labuta," ...
 >
 > Fonte: [Tradução livre de Etymology Online](https://www.etymonline.com/search?q=robot)
 
@@ -30,7 +30,7 @@ Podemos instalar o `puppeteer` como global ou iniciar um projeto com o, responde
 
 ```bash
 npm init
-# or 
+# or
 yarn init
 ```
 
@@ -38,7 +38,7 @@ E instalar o próprio `puppeteer`
 
 ```bash
 npm install puppeteer
-# or 
+# or
 yarn add puppeteer
 ```
 
@@ -66,7 +66,7 @@ const page = await browser.newPage()
 Navegando para `https://google.com` e esperar o navegador informar o fim do carregamento
 
 ```javascript
-await page.goto('https://google.com', { waitUntil: "networkidle0" })
+await page.goto("https://google.com", { waitUntil: "networkidle0" })
 ```
 
 ### Redimensionar janela do navegador
@@ -102,7 +102,7 @@ Informar o termo de busca e iniciar a pesquisa com `Enter`
 
 ```javascript
 await page.keyboard.type("orange")
-await page.keyboard.press('Enter')
+await page.keyboard.press("Enter")
 ```
 
 ### Clicando no elemento
@@ -112,13 +112,13 @@ const imageTab = await page.$("#top_nav a")
 await imageTab.click()
 ```
 
-### Esperando página carregar 
+### Esperando página carregar
 
-Não é ideial no processo de carregamento ter um esperar com tempo definido, mas algumas vezes é necessário
+Não é ideal no processo de carregamento ter um esperar com tempo definido, mas algumas vezes é necessário
 
 ```javascript
 function delay(time) {
-  return new Promise(function(resolve) { 
+  return new Promise(function (resolve) {
     setTimeout(resolve, time)
   })
 }
@@ -130,7 +130,7 @@ await delay(10000)
 Sempre que possível solicite para esperar a página carregar com resposta da rede finalizada
 
 ```javascript
-await page.waitForNavigation({waitUntil: 'networkidle2'})
+await page.waitForNavigation({ waitUntil: "networkidle2" })
 ```
 
 ## Compilado
@@ -141,74 +141,74 @@ Compilado para executar de forma invisível (headless) no Google Chrome
 const puppeteer = require("puppeteer")
 
 function delay(time) {
-    return new Promise(function(resolve) { 
-        setTimeout(resolve, time)
-    })
- }
+  return new Promise(function (resolve) {
+    setTimeout(resolve, time)
+  })
+}
 
 async function main() {
-    // Iniciar Puppeteer, navegador e nova página
-    const browser = await puppeteer.launch()
-    const page = await browser.newPage()
+  // Iniciar Puppeteer, navegador e nova página
+  const browser = await puppeteer.launch()
+  const page = await browser.newPage()
 
-    // Acessar endereço, esperando página carregar
-    await page.goto('https://google.com', { waitUntil: "networkidle0" })
+  // Acessar endereço, esperando página carregar
+  await page.goto("https://google.com", { waitUntil: "networkidle0" })
 
-    // Tirar um screenshot
-    await page.screenshot({
-        path: `./open.jpg`,
-        type: "jpeg",
-        quality: 100,
-    })
+  // Tirar um screenshot
+  await page.screenshot({
+    path: `./open.jpg`,
+    type: "jpeg",
+    quality: 100,
+  })
 
-    // Alterar o tamanho da tela
-    await page.setViewport({
-        width: 1800,
-        height: 1200,
-        deviceScaleFactor: 1,
-    })
+  // Alterar o tamanho da tela
+  await page.setViewport({
+    width: 1800,
+    height: 1200,
+    deviceScaleFactor: 1,
+  })
 
-    // Tirar um screenshot da tela ampliada
-    await page.screenshot({
-        path: `./max.jpg`,
-        type: "jpeg",
-        quality: 100,
-    })
+  // Tirar um screenshot da tela ampliada
+  await page.screenshot({
+    path: `./max.jpg`,
+    type: "jpeg",
+    quality: 100,
+  })
 
-    // Encontrar e focar no campo de busca
-    const searchField = await page.$("[name=q]")
-    searchField.focus()
+  // Encontrar e focar no campo de busca
+  const searchField = await page.$("[name=q]")
+  searchField.focus()
 
-    // Digitar a palavra "orange" na caixa de busca e digitar <Enter>
-    await page.keyboard.type("orange")
-    await page.keyboard.press('Enter')
+  // Digitar a palavra "orange" na caixa de busca e digitar <Enter>
+  await page.keyboard.type("orange")
+  await page.keyboard.press("Enter")
 
-    // Esperar por 10 segundos
-    await delay(10000)
+  // Esperar por 10 segundos
+  await delay(10000)
 
-    // Tirar um screenshot do resultado da busca
-    await page.screenshot({
-        path: `./search.jpg`,
-        type: "jpeg",
-        quality: 100,
-    })
+  // Tirar um screenshot do resultado da busca
+  await page.screenshot({
+    path: `./search.jpg`,
+    type: "jpeg",
+    quality: 100,
+  })
 
-    // Clicar para a aba de Imagens
-    const imageTab = await page.$("#top_nav a")
-    await imageTab.click()
+  // Clicar para a aba de Imagens
+  const imageTab = await page.$("#top_nav a")
+  await imageTab.click()
 
-    // Esperar página carregar após o clique
-    await page.waitForNavigation({waitUntil: 'networkidle2'})
+  // Esperar página carregar após o clique
+  await page.waitForNavigation({ waitUntil: "networkidle2" })
 
-    // Tirar um screenshot das imagens
-    await page.screenshot({
-        path: `./imagens.jpg`,
-        type: "jpeg",
-        quality: 100,
-    })    
+  // Tirar um screenshot das imagens
+  await page.screenshot({
+    path: `./imagens.jpg`,
+    type: "jpeg",
+    quality: 100,
+  })
 
-    // Fechar o navegador
-    await browser.close()
+  // Fechar o navegador
+  await browser.close()
 }
 
 main()
@@ -216,15 +216,15 @@ main()
 
 ## Possíveis problemas
 
-No sistema Linux é necessário alguns pacotes para a execução do Chrome Driver 
+No sistema Linux é necessário alguns pacotes para a execução do Chrome Driver
 
-Se for necessário executar ```sudo apt install libnss```
+Se for necessário executar `sudo apt install libnss`
 
-Se a continuar com problemas de execução tentar ```sudo apt install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev```
+Se a continuar com problemas de execução tentar `sudo apt install libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev`
 
-Se necessário adicionar ```sudo apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev```
+Se necessário adicionar `sudo apt install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev`
 
-Para adicionar libasound2  ```sudo apt install libasound2```
+Para adicionar libasound2 `sudo apt install libasound2`
 
 ## Referências
 

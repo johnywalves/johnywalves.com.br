@@ -274,7 +274,7 @@ No gráfico podemos ver a proporção
   <div id="loading_graphic"></div>
 </div>
 
-Sem grandes supresas que quase a metade possui cabelos entre o preto (Black) e o marrom (Brown), com 13% loiros (Blond) e 6% de carecas (No)
+Sem grandes surpresas que quase a metade possui cabelos entre o preto (Black) e o marrom (Brown), com 13% loiros (Blond) e 6% de carecas (No)
 
 ## Gênero dos personagens
 

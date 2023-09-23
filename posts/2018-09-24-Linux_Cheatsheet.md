@@ -66,7 +66,7 @@ Visualizar IP próprio, normalmente **127.0.0.1**
 hostname -i
 ```
 
-Informações sobre conexão de redes (Wifi, nome, senha...)
+Informações sobre conexão de redes (Wi-fi, nome, senha...)
 
 ```bash
 # Listagem dos arquivos de conexão

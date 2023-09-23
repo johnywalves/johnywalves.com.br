@@ -18,7 +18,7 @@ Com um [Ambiente Python](../Ambiente_Python) preparado podemos instalar o pacote
 - Controlar os pacotes
 - Isolar para execução
 - Saber as dependências do projeto
-- Faciliitar a duplicação do ambiente para produção e desenvolvimento
+- Facilitar a duplicação do ambiente para produção e desenvolvimento
 
 Instalando pelo **pip** do repositório do [PyPi](https://pypi.org/)
 
@@ -52,7 +52,7 @@ Assim podemos instalar um pacote de maneira muito semelhante ao **pip**
 pipenv install <nome do pacote>
 ```
 
-Com o comando anterior o sistema cria no arquvio **Pipfile** na pasta atual, o arquivo contém todas as configurações do ambiente como versão do Pyhton e pacotes instalados nele  
+Com o comando anterior o sistema cria no arquivo **Pipfile** na pasta atual, o arquivo contém todas as configurações do ambiente como versão do Python e pacotes instalados nele  
 Podemos "congelar" as versões dos pacotes
 
 ```bash

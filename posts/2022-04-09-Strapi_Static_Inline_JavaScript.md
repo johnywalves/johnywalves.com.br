@@ -12,7 +12,7 @@ published: true
 cheatsheet: false
 ---
 
-Strapi é um headless CMS, em NodeJS com Koa, com grande facilidade de personalização, facilitando subir uma ferramenta e adequando para seu uso no decorer o projeto
+Strapi é um headless CMS, em NodeJS com Koa, com grande facilidade de personalização, facilitando subir uma ferramenta e adequando para seu uso no decorrer do projeto
 
 Embora não seja recomendando fazer uso da pasta **public** para disponibilizar conteúdo, no início do projeto pode ser de grande ajuda
 

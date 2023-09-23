@@ -12,8 +12,8 @@ published: true
 cheatsheet: false
 ---
 
-IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematografica apartir de _Passage de Venus_ de 1874 por _Pierre Jules César Janssen_ até os não lançados em pré-produção.  
-Atualizada diáriamente [Base de dados](https://datasets.imdbws.com/) possuem uma [Estrutura fácil de entender](https://www.imdb.com/interfaces/)
+IMDb é uma maior referência para filmes, série, atores, diretores... podemos entender e visualizar na sua base toda a história de sua indústria cinematográfica a partir de _Passage de Venus_ de 1874 por _Pierre Jules César Janssen_ até os não lançados em pré-produção.  
+Atualizada diariamente [Base de dados](https://datasets.imdbws.com/) possuem uma [Estrutura fácil de entender](https://www.imdb.com/interfaces/)
 
 Esse artigo foi utilizado os arquivos
 
@@ -30,9 +30,9 @@ setwd('.')
 rm(list=ls())
 ```
 
-### Classifição de Episódios
+### Classificação de Episódios
 
-Carregar a fonte de dados de classificações e epísodios
+Carregar a fonte de dados de classificações e episódios
 
 ```r
 ratings = read.table(gzfile("title.ratings.tsv.gz"), header = TRUE)

@@ -334,6 +334,13 @@
     "viewHighlight": "View only highlights",
     "list": [
       {
+        "title": "Use Python",
+        "sourceCode": "https://github.com/johnywalves/use-python",
+        "cover": "usepythonusepythonusepython",
+        "view": "https://usepython.com.br/",
+        "description": "Introductory course in Python covering development environment configuration, process automation, data manipulation, analysis and visualization"
+      },
+      {
         "title": "Machado Alves",
         "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
         "cover": "machadoalves",
@@ -346,13 +353,6 @@
         "cover": "devflix",
         "view": "https://devflix.johnywalves.com.br",
         "description": "Platform for sharing knowledge about software development in Brazilian language"
-      },
-      {
-        "title": "Daisy Bell",
-        "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "cover": "daisybell",
-        "view": "https://daisy.johnywalves.com.br",
-        "description": "Project template for sharing images with text in context"
       },
       {
         "title": "Bom dia, equipes dev!",
@@ -368,6 +368,13 @@
         "cover": "boilerplate",
         "view": "https://boilerplate-react-next.vercel.app/",
         "description": "Boilerplate with React, Next.js, Typescript, Storybook and Styled Components to get started fast and with minimal configuration"
+      },
+      {
+        "title": "Daisy Bell",
+        "sourceCode": "https://github.com/johnywalves/daisy-bell",
+        "cover": "daisybell",
+        "view": "https://daisy.johnywalves.com.br",
+        "description": "Project template for sharing images with text in context"
       },
       {
         "title": "CSS Animatic",
@@ -500,6 +507,11 @@
         "title": "Johny's story",
         "description": "Scrapbook of litte part my story",
         "link": "https://johnywalves.github.io/johnys-story/"
+      },
+      {
+        "title": "World Population | Dashboard",
+        "description": "Collection of graphs for presenting the world population",
+        "link": "https://johnywalves.com.br/web/world_d3/"
       }
     ]
   },
@@ -584,7 +596,7 @@
         "title": "Senior Front-end Developer",
         "institution": "Seguralta",
         "description": [
-          "Development of the <strong>Seguralta</strong> Franchisees Portal, with component versioning, continuous integration and delivery, unit and end-to-end tests",
+          "Development of the <strong>Seguralta</strong> Franchisees Portal, platform for financial control, lead management and communication with partners, with component versioning, continuous integration and delivery, unit and end-to-end tests",
           "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, bit.dev, bit.cloud, Styled Components, Testing Library, Jest e Cypress"
         ]
       },
