@@ -1,161 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Listagem de Profiles</title>
+    <link rel="icon" href="/figures/favicon.png" type="image/png" />
+    <style>
+      /* Reset CSS */
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
 
-<head>
-  <title>Listagem de Profiles</title>
-  <link rel="icon" href="/figures/favicon.png" type="image/png" />
-  <style>
-    /* Reset CSS */
-    *,
-    *:before,
-    *:after {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      box-sizing: border-box;
-    }
+      html {
+        --14px: 0.875rem;
+        --16px: 1rem;
+        --18px: 1.125rem;
+        --21px: 1.3125rem;
+        --24px: 1.5rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
 
-    html {
-      --14px: 0.875rem;
-      --16px: 1rem;
-      --18px: 1.125rem;
-      --21px: 1.3125rem;
-      --24px: 1.5rem;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    }
+      ol,
+      ul {
+        list-style: none;
+      }
 
-    ol,
-    ul {
-      list-style: none;
-    }
+      a,
+      a:hover,
+      a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
 
-    a,
-    a:hover,
-    a:visited {
-      text-decoration: none;
-      color: inherit;
-    }
+      /* Content CSS */
+      :root {
+        --color-background: #282c35;
+        --color-text: #e0138c;
+        --color-border: #ffffff;
+        --color-border-dark: #ec2499;
+        --color-border-light: #f376bf;
+      }
 
-    /* Content CSS */
-    :root {
-      --color-background: #282c35;
-      --color-text: #e0138c;
-    }
+      body {
+        background: var(--color-background);
+        color: var(--color-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    body {
-      background: var(--color-background);
-      color: var(--color-text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+      header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 25px;
+        background: var(--color-text);
+        background: linear-gradient(
+          180deg,
+          var(--color-border-light) 0%,
+          var(--color-border-dark) 50%,
+          transparent 50%
+        );
+      }
 
-    ul {
-      margin: 30px 0 0;
-      padding: 36px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+      img {
+        border-radius: 50%;
+        width: 208px;
+        height: 208px;
+        border: 4px solid var(--color-border);
+        box-shadow: 0 0 5px var(--color-border-dark),
+          0 0 10px var(--color-border-light), 0 0 15px var(--color-border-light),
+          0 0 20px var(--color-border-light), 0 0 30px var(--color-border-light);
+      }
 
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid var(--color-text);
-      border-radius: 15px;
-      transition: background-color 0.2s ease-in, color, border-color 0.1s ease-in;
-    }
+      h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin: 2.5rem 0 2rem;
+        color: #ffffff;
+        text-shadow: 0 0 5px var(--color-border-dark),
+          0 0 10px var(--color-border-light), 0 0 20px var(--color-border-light);
+      }
 
-    li:hover {
-      background-color: var(--color-text);
-      border-color: transparent;
-      color: #ffffff;
-      font-weight: 900;
-    }
+      h2 {
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        width: calc(100% - 4rem);
+      }
 
-    div.top-margin {
-      width: 100%;
-      height: 25px;
-      background: var(--color-text);
-    }
+      a {
+        padding: 20px 30px;
+        font-size: 1.5rem;
+        border-bottom: 2px dotted transparent;
+      }
 
-    header {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--color-text);
-      background: linear-gradient(180deg, var(--color-text) 50%, transparent 50%);
-    }
+      ul {
+        margin: 2rem 0 0;
+        padding: 2rem 2.5rem 5rem;
 
-    img {
-      border-radius: 50%;
-      width: 208px;
-      height: 208px;
-      border: 8px solid var(--color-text);
-    }
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+      }
 
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      margin: 1rem 0 0;
-      color: #FFFFFF;
-      text-shadow: 4px 4px 2px #e0138c80;
-    }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    h2 {
-      color: #FFFFFF;
-      font-weight: 400;
-      text-align: center;
-    }
+        font-size: 2rem;
+        font-weight: 500;
 
-    a {
-      padding: 20px 30px;
-      font-size: 1.5rem;
-      border-bottom: 2px dotted transparent;
-    }
-  </style>
-</head>
+        border: 4px solid var(--color-text);
+        border-radius: 1rem;
+        transition: background-color 0.2s ease-in, color,
+          border-color 0.1s ease-in;
+      }
 
-<body>
-  <div class="top-margin"></div>
-  <header>
-    <img src="/figures/johnywalves.png" alt="" />
-  </header>
-  <h1>Johny W. Alves</h1>
-  <h2>Desenvolvedor Front-end Web | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS</h2>
-  <ul>
-    <li><a href="https://www.catarse.me/pt/users/570541" target="_blank">Catarse</a></li>
-    <li><a href="https://dev.to/johnywalves" target="_blank">Dev.to</a></li>
-    <li><a href="https://web.dio.me/users/johnywalves" target="_blank">Digital Inovation One</a></li>
-    <li><a href="https://disqus.com/by/johnywalves/" target="_blank">Disqus</a></li>
-    <li><a href="https://gdg.community.dev/u/mnck7k/#/about" target="_blank">Google Developer Group</a></li>
-    <li><a href="https://github.com/johnywalves" target="_blank">GitHub</a></li>
-    <li><a href="https://pt.gravatar.com/johnywalves" target="_blank">Gravatar</a></li>
-    <li><a href="https://www.hackerrank.com/johnywalves" target="_blank">HackerRank</a></li>
-    <li><a href="https://instagram.com/johnywalves" target="_blank">Instagram</a></li>
-    <li><a href="https://www.kaggle.com/johnywalves" target="_blank">Kaggle</a></li>
-    <li><a href="https://www.kooapp.com/profile/johnywalves" target="_blank">Koo</a></li>
-    <li><a href="https://www.linkedin.com/in/johnywalves" target="_blank">LinkedIn</a></li>
-    <li><a href="https://medium.com/@johnywalves" target="_blank">Medium</a></li>
-    <li><a href="https://www.scrum.org/user/1256526" target="_blank">Scrum.org</a></li>
-    <li><a href="https://open.spotify.com/user/johnywalves" target="_blank">Spotify</a></li>
-    <li><a href="https://steamcommunity.com/id/mougevit" target="_blank">Steam</a></li>
-    <li><a href="https://www.strava.com/athletes/johnywalves" target="_blank">Strava</a></li>
-    <li><a href="https://t.me/johnywalves" target="_blank">Telegram</a></li>
-    <li><a href="https://www.threads.net/@johnywalves" target="_blank">Threads</a></li>
-    <li><a href="https://twitter.com/johnywalves" target="_blank">Twitter</a></li>
-    <li><a href="https://trello.com/u/johnywalves" target="_blank">Trello</a></li>
-    <li><a href="https://www.udemy.com/user/johny-william-de-oliveira-alves/" target="_blank">Udemy</a></li>
-    <li><a href="https://unsplash.com/@johnywalves" target="_blank">Unsplash</a></li>
-    <li><a href="https://www.workana.com/freelancer/afe2ffd5a76379496ded9df76e513061" target="_blank">Workana</a></li>
-    <li><a href="https://www.youtube.com/@johnywalves" target="_blank">Youtube</a></li>
-    <li><a href="#" target="_blank">Whatsapp</a></li>
-  </ul>
-</body>
+      li:hover {
+        background-color: var(--color-text);
+        border-color: transparent;
+        color: #ffffff;
+      }
+    </style>
+  </head>
 
+  <body>
+    <header>
+      <img src="/figures/johnywalves.png" alt="" />
+    </header>
+
+    <h1>Johny W. Alves</h1>
+
+    <h2>
+      Desenvolvedor Front-end Web | HTML | CSS | JavaScript | TypeScript | React
+      | Next.js | NodeJS
+    </h2>
+
+    <ul>
+      <li>
+        <a href="https://www.catarse.me/pt/users/570541" target="_blank">
+          Catarse
+        </a>
+      </li>
+      <li><a href="https://dev.to/johnywalves" target="_blank">Dev.to</a></li>
+      <li>
+        <a href="https://web.dio.me/users/johnywalves" target="_blank">
+          Digital Innovation One
+        </a>
+      </li>
+      <li>
+        <a href="https://disqus.com/by/johnywalves/" target="_blank">Disqus</a>
+      </li>
+      <li>
+        <a href="https://gdg.community.dev/u/mnck7k/#/about" target="_blank">
+          Google Developer Group
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/johnywalves" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <a href="https://pt.gravatar.com/johnywalves" target="_blank">
+          Gravatar
+        </a>
+      </li>
+      <li>
+        <a href="https://www.hackerrank.com/johnywalves" target="_blank">
+          HackerRank
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/johnywalves" target="_blank">
+          Instagram
+        </a>
+      </li>
+      <li>
+        <a href="https://www.kaggle.com/johnywalves" target="_blank">Kaggle</a>
+      </li>
+      <li>
+        <a href="https://www.kooapp.com/profile/johnywalves" target="_blank">
+          Koo
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/johnywalves" target="_blank">
+          LinkedIn
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/@johnywalves" target="_blank">Medium</a>
+      </li>
+      <li>
+        <a href="https://www.scrum.org/user/1256526" target="_blank">
+          Scrum.org
+        </a>
+      </li>
+      <li>
+        <a href="https://open.spotify.com/user/johnywalves" target="_blank">
+          Spotify
+        </a>
+      </li>
+      <li>
+        <a href="https://steamcommunity.com/id/mougevit" target="_blank">
+          Steam
+        </a>
+      </li>
+      <li>
+        <a href="https://www.strava.com/athletes/johnywalves" target="_blank">
+          Strava
+        </a>
+      </li>
+      <li><a href="https://t.me/johnywalves" target="_blank">Telegram</a></li>
+      <li>
+        <a href="https://www.threads.net/@johnywalves" target="_blank">
+          Threads
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/johnywalves" target="_blank">Twitter</a>
+      </li>
+      <li>
+        <a href="https://trello.com/u/johnywalves" target="_blank">Trello</a>
+      </li>
+      <li>
+        <a
+          href="https://www.udemy.com/user/johny-william-de-oliveira-alves/"
+          target="_blank"
+        >
+          Udemy
+        </a>
+      </li>
+      <li>
+        <a href="https://unsplash.com/@johnywalves" target="_blank">Unsplash</a>
+      </li>
+      <li>
+        <a
+          href="https://www.workana.com/freelancer/afe2ffd5a76379496ded9df76e513061"
+          target="_blank"
+        >
+          Workana
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@johnywalves" target="_blank">
+          Youtube
+        </a>
+      </li>
+      <li><a href="#" target="_blank">Whatsapp</a></li>
+    </ul>
+  </body>
 </html>

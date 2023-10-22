@@ -52,7 +52,7 @@ export default function HTML(props) {
           }}
         />
         <div
-          key={`body`}
+          key="body"
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />

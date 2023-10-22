@@ -1,5 +1,5 @@
 ---
-date: 2023-07-20 20:35:08 -0300
+date: 2023-11-01 20:35:08 -0300
 title: Boas práticas em Visualização de dados
 description: Considerações para geração de interface e gráficos ao apresentar dados
 featuredImage: ./featured/charts-1.jpg
@@ -28,12 +28,12 @@ Pessoas se conectam a coisas por vários motivos, o mais simples de entender é 
 
 Como descrito por **Knafic** em seu livro [Storytelling com dados](https://amzn.to/410Xm0e) para contar uma boa história com dados temos 6 lições:
 
-* **Entenda o contexto**: Qual público que irá consumir a informação, com que objetivo e qual ação de deseja extrair dele;
-* **Escolha um apresentação visual adequada**:
-* Elimine a saturação
-* Foque a atenção onde você deseja
-* Pense como um designer
-* Conte um história
+- **Entenda o contexto**: Qual público que irá consumir a informação, com que objetivo e qual ação de deseja extrair dele;
+- **Escolha um apresentação visual adequada**:
+- Elimine a saturação
+- Foque a atenção onde você deseja
+- Pense como um designer
+- Conte um história
 
 Recomendo a leitura do livro "Storytelling com dados" da Cole Nussbaunmer Knaflic para entender melhor esses pontos ele é pequeno, objetivo e com uma escrita clara (li em português brasileiro)
 
@@ -95,9 +95,9 @@ A visualização de dados é importante porque os dados brutos geralmente não s
 
 **Entenda o público e objetivo**
 
-* Público: quem vai receber a mensagem, qual o nível de conhecimento no assunto, evitar quando possível "a quem possa interessar", quais dados e entendimentos prévios;
-* Objetivo: o que se quer informar, quais dados são úteis para passar essa mensagem;
-* Ação: Qual ação deve ocorrer do público, quais perguntas podemos fazer como "Quais os próximos passos".
+- Público: quem vai receber a mensagem, qual o nível de conhecimento no assunto, evitar quando possível "a quem possa interessar", quais dados e entendimentos prévios;
+- Objetivo: o que se quer informar, quais dados são úteis para passar essa mensagem;
+- Ação: Qual ação deve ocorrer do público, quais perguntas podemos fazer como "Quais os próximos passos".
 
 **Escolha a visualização correta**
 O tipo de visualização que você escolhe depende do que você está tentando comunicar e dos dados que você está usando. Gráficos de barras, linhas e pizza são opções populares, mas também existem muitos outros tipos de visualizações disponíveis.
@@ -115,6 +115,6 @@ As cores podem ser usadas para enfatizar certos pontos ou para diferenciar infor
 
 **Pense na experiência**
 
-* O esforço necessário para entender os dados denotando o qual óbvio é a mensagem dos dados
-* Pensando nos alinhamentos, espaçamentos, tamanhos, peso da fontes, cores e contraste das cores,
-* O gráfico é "bonito"? As informações apresentadas belas são mais fáceis de serem recebidas
+- O esforço necessário para entender os dados denotando o qual óbvio é a mensagem dos dados
+- Pensando nos alinhamentos, espaçamentos, tamanhos, peso da fontes, cores e contraste das cores,
+- O gráfico é "bonito"? As informações apresentadas belas são mais fáceis de serem recebidas
