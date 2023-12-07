@@ -21,6 +21,7 @@ export const ListsPagesWrapper = styled.main`
   ${({ navigator }) => navigator && hasNavigator}
 
   & h1 {
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--texts);
 

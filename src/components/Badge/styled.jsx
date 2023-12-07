@@ -12,7 +12,7 @@ export const Text = styled.p`
   font-weight: 700;
   color: var(--background);
   background-color: ${({ skill }) =>
-    skill ? "var(--bagdeSkill)" : "var(--highlight)"};
+    skill ? "var(--badgeSkill)" : "var(--highlight)"};
 
   span {
     font-weight: 500;

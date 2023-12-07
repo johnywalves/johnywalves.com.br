@@ -2,6 +2,6 @@ import React from "react"
 
 import { Text } from "./styled"
 
-const Bagde = ({ children, ...rest }) => <Text {...rest}>{children}</Text>
+const Badge = ({ children, ...rest }) => <Text {...rest}>{children}</Text>
 
-export default Bagde
+export default Badge

@@ -1,5 +1,5 @@
 ---
-date: 2023-12-01 18:50:23 -0300
+date: 2023-12-15 18:50:23 -0300
 title: 2023 - Ano de realizações
 description: Resultados da dedicação e foco nos objetivos, algumas falhas e muitos acertos
 featuredImage: ./featured/way-1.jpg
@@ -20,7 +20,7 @@ Donec erat metus, suscipit et feugiat a, pharetra eget risus. Nullam fringilla v
 
 ## Profissional de qualidade
 
-Fevereiro foi atingindo por uma demissão em massa na CI&T, o que deu um tempo para estudar e dedicar a pensar 
+Fevereiro foi atingindo por uma demissão em massa na CI&T, o que deu um tempo para estudar e dedicar a pensar
 Maio consegui uma realocação
 
 ## Construir um corpo saudável

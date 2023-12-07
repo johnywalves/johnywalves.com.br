@@ -121,7 +121,7 @@ function setTasks(list) {
       conteudo.innerHTML = task.description.substring(0, 50)
       div.appendChild(conteudo)
 
-      // Criaçãos das Bagdes
+      // Criação das Badges
       if (task.tags && task.tags.length > 0) {
         var tagsDiv = document.createElement("div")
         tagsDiv.classList.add("tags")

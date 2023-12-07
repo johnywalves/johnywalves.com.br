@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -148,7 +148,9 @@
 
       .card {
         background-color: var(--color-card);
-        box-shadow: 0 0 4px 2px #dfdfdf80, 4px 4px 8px 4px #dfdfdf80;
+        box-shadow:
+          0 0 4px 2px #dfdfdf80,
+          4px 4px 8px 4px #dfdfdf80;
 
         justify-content: space-between;
 
@@ -190,7 +192,7 @@
         gap: 1rem;
       }
 
-      .bagde {
+      .badge {
         width: 5rem;
         height: 5rem;
       }
@@ -231,8 +233,8 @@
         </div>
       </div>
       <div class="detail">
-        <div class="bagde skeletable skeleton"></div>
-        <div class="bagde skeletable skeleton"></div>
+        <div class="badge skeletable skeleton"></div>
+        <div class="badge skeletable skeleton"></div>
       </div>
     </div>
     <button onclick="toggleSkeleton()">Toggle Skeleton</button>

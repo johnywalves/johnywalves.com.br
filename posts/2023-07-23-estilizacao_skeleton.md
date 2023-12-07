@@ -41,8 +41,8 @@ O uso de esqueletos transmite a ideia de uma estrutura organizada, proporcionand
       </div>
     </div>
     <div class="detail">
-      <div class="bagde skeletable skeleton"></div>
-      <div class="bagde skeletable skeleton"></div>
+      <div class="badge skeletable skeleton"></div>
+      <div class="badge skeletable skeleton"></div>
     </div>
   </div>
 </div>
@@ -141,7 +141,7 @@ Para implementar esse comportamento, basta adicionar a classe `skeleton`, que co
     gap: 1rem;
   }
 
-  .bagde {
+  .badge {
     width: 5rem;
     height: 5rem;
   }
