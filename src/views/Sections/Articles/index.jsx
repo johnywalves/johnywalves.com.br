@@ -41,7 +41,7 @@ const SectionArticles = () => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+              date(locale: "pt_br", formatString: "DD MMMM YYYY")
               title
               category
               description
@@ -76,7 +76,7 @@ const SectionArticles = () => {
         edges {
           node {
             frontmatter {
-              date(locale: "pt_br", formatString: "DD [de] MMMM [de] YYYY")
+              date(locale: "pt_br", formatString: "DD MMMM YYYY")
               title
               category
               description
