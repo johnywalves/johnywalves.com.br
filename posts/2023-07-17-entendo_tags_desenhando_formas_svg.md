@@ -1,6 +1,6 @@
 ---
 date: 2023-07-17 10:39:02 -0300
-title: Entendo tags e gerando formas em SVG
+title: Entendendo tags e gerando formas em SVG
 description: Geração de desenhos e formas simples em SVG (Gráficos Vetoriais)
 featuredImage: ./featured/blocks-1.jpg
 coverImage: /figures/blocks-1.jpg
