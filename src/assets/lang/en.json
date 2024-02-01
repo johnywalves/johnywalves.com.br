@@ -1,5 +1,5 @@
 {
-  "description": "My name is Johny William de Oliveira Alves, I work as a web developer with over 15 years of experience. I am currently a student of data science, focusing on machine learning and computer vision, process automation, and metrics delivery. I have extensive experience with modern technologies such as JavaScript with React and Next.js, TypeScript, Python, Node, among others.",
+  "description": "My name is Johny William de Oliveira Alves, I am a Web developer with over 15 years of experience. Additionally, I am a data science student, focusing on machine learning and computer vision. With experience in project management, process automation and metrics analysis. I have solid skills in several modern technologies, including JavaScript with React and Next.js, TypeScript, Python, Node, among others.",
   "position": "Web Developer",
   "headline": "Front-end Web Developer | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS",
   "and": "and",
@@ -594,8 +594,9 @@
         "title": "Senior Front-end Developer",
         "institution": "Seguralta",
         "description": [
-          "Development of the <strong>Seguralta</strong> Franchisees Portal, platform for financial control, lead management and communication with partners, with component versioning, continuous integration and delivery, unit and end-to-end tests",
-          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, bit.dev, bit.cloud, Styled Components, Testing Library, Jest e Cypress"
+          "Development of <strong>Seguralta Core</strong>, a platform to facilitate the operation of insurance brokers, allowing franchisees to quickly access a series of facilities, including details of commissions, renewals and policies due to expire, pending proposals, lead management and notification to customers about overdue installments, in addition to integrating data and access from forty insurance companies",
+          "Collaborative flow application (Git flow), component versioning, robust documentation, process automation, continuous integration and continuous delivery (CI/CD), unit testing and end-to-end testing",
+          "Technologies: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, Styled Components, Storybook, useQuery, Testing Library, Jest and Cypress"
         ]
       },
       {
