@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: johnywalves/johnywalves.com.br
-  branch: master
+  branch: main
   site_domain: johnywalves.com.br
 
 media_folder: "static/figures"
