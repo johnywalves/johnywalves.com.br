@@ -510,6 +510,11 @@
         "title": "População Mundial | Dashboard",
         "description": "Coleção de gráficos para apresentação da população mundial",
         "link": "https://johnywalves.com.br/web/world_d3/"
+      },
+      {
+        "title": "Números por Extenso",
+        "description": "Apresentação de números aleatórios e conversão para texto em inglês para treino",
+        "link": "/web/numberinwords.html"
       }
     ]
   },

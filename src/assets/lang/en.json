@@ -435,6 +435,11 @@
         "cover": "githubio",
         "view": "https://card-game-in-react.vercel.app",
         "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
+      },
+      {
+        "title": "Numbers in Words",
+        "description": "Random numbers and conversion to works for training",
+        "link": "/web/numberinwords.html"
       }
     ]
   },

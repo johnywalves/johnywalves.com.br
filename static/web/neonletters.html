@@ -1,238 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#e0138c" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="theme-color" content="#e0138c" />
+    <title>Neon Letter | Johny W. Alves</title>
+    <meta name="title" content="Neon Letter | Johny W. Alves" />
+    <meta
+      name=" description"
+      content="Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem"
+    />
 
-  <title>Neon Letter | Johny W. Alves</title>
-  <meta name="title" content="Neon Letter | Johny W. Alves" />
-  <meta name=" description"
-    content="Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="http://johnywalves.com.br/web/neonletters.html"
+    />
+    <meta property="og:site_name" content="Neon Letter | Johny W. Alves" />
+    <meta property="og:title" content="Neon Letter | Johny W. Alves" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem"
+    />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="http://johnywalves.com.br/figures/thumbnail.jpg"
+    />
+    <meta property="og:locale" content="pt_BR" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://johnywalves.com.br/web/neonletters.html" />
-  <meta property="og:site_name" content="Neon Letter | Johny W. Alves" />
-  <meta property="og:title" content="Neon Letter | Johny W. Alves" />
-  <meta property="og:description"
-    content="Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem" />
-  <meta property="og:image" itemprop="image" content="http://johnywalves.com.br/figures/thumbnail.jpg" />
-  <meta property="og:locale" content="pt_BR" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="http://johnywalves.com.br/web/neonletters.html"
+    />
+    <meta property="twitter:title" content="Neon Letter | Johny W. Alves" />
+    <meta
+      property="twitter:description"
+      content="Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem"
+    />
+    <meta
+      property="twitter:image"
+      content="http://johnywalves.com.br/figures/thumbnail.jpg"
+    />
 
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://url.page" />
-  <meta property="twitter:title" content="Neon Letter | Johny W. Alves" />
-  <meta property="twitter:description"
-    content="Desenvolvedor Web, estudante de ciência de dados e quadrinista amador com vários projetos, alguns conteúdos e um pouco de humor, espero que gostem" />
-  <meta property="twitter:image" content="http://johnywalves.com.br/figures/thumbnail.jpg" />
+    <link rel="icon" href="/figures/favicon.png" type="image/png" />
+  </head>
 
-  <link rel="icon" href="/figures/favicon.png" type="image/png" />
-</head>
+  <style>
+    /* Reset CSS */
+    *,
+    *:before,
+    *:after {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-  /* Reset CSS */
-  *,
-  *:before,
-  *:after {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-  }
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
 
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
+    a,
+    a:hover,
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  a,
-  a:hover,
-  a:visited {
-    text-decoration: none;
-    color: inherit;
-  }
+    /* Content CSS */
+    :root {
+      --big-letter: 14rem;
+      --small-letter: 8rem;
+      --big-letter-mobile: 7rem;
+      --small-letter-mobile: 4rem;
+      --color-background: #282c35;
+      --color-text: #fff;
+      --color-text-lighting: #761a51;
+      --color-text-light: #e0138c;
+      --color-border: #fff;
+      --color-border-lighting: #1a5176;
+      --color-border-light: #34a2ed;
+    }
 
-  /* Content CSS */
-  :root {
-    --big-letter: 14rem;
-    --small-letter: 8rem;
-    --big-letter-mobile: 7rem;
-    --small-letter-mobile: 4rem;
-    --color-background: #282c35;
-    --color-text: #fff;
-    --color-text-lighting: #761a51;
-    --color-text-light: #e0138c;
-    --color-border: #fff;
-    --color-border-lighting: #1a5176;
-    --color-border-light: #34a2ed;
-  }
+    body {
+      background: var(--color-background);
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+    }
 
-  body {
-    background: var(--color-background);
-    color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
-  h1 {
-    font-size: var(--big-letter);
-  }
-
-  h2 {
-    font-size: var(--small-letter);
-  }
-
-  @media (max-width: 980px) {
     h1 {
-      font-size: var(--big-letter-mobile);
+      font-size: var(--big-letter);
     }
 
     h2 {
-      font-size: var(--small-letter-mobile);
-    }
-  }
-
-  h1,
-  h2 {
-    font-weight: 300;
-    text-align: center;
-    line-height: 90%;
-    transform: rotate(-2deg);
-    font-style: italic;
-  }
-
-  .box {
-    color: var(--color-text-lighting);
-    border: 1px var(--color-border-lighting) solid;
-    border-radius: 15px;
-    padding: 10vh 10vw;
-    animation: lightingUp 10s forwards, flicker 1.5s 10s infinite alternate;
-  }
-
-  @keyframes lightingUp {
-    2% {
-      text-shadow: 0 0 7px var(--color-text), 0 0 10px var(--color-text),
-        0 0 21px var(--color-text), 0 0 42px var(--color-text-light),
-        0 0 82px var(--color-text-light), 0 0 92px var(--color-text-light),
-        0 0 102px var(--color-text-light), 0 0 151px var(--color-text-light);
-      box-shadow: 0 0 1px var(--color-border),
-        inset 0 0 1px var(--color-border), 0 0 2px var(--color-border),
-        inset 0 0 2px var(--color-border), 0 0 5px var(--color-border),
-        inset 0 0 5px var(--color-border), 0 0 10px var(--color-border-light),
-        inset 0 0 10px var(--color-border-light),
-        0 0 20px var(--color-border-light),
-        inset 0 0 20px var(--color-border-light),
-        0 0 22px var(--color-border-light),
-        inset 0 0 22px var(--color-border-light),
-        0 0 25px var(--color-border-light),
-        inset 0 0 25px var(--color-border-light),
-        0 0 37px var(--color-border-light),
-        inset 0 0 37px var(--color-border-light);
+      font-size: var(--small-letter);
     }
 
-    4% {
-      text-shadow: none;
-      box-shadow: none;
+    @media (max-width: 980px) {
+      h1 {
+        font-size: var(--big-letter-mobile);
+      }
+
+      h2 {
+        font-size: var(--small-letter-mobile);
+      }
     }
 
-    5% {
-      text-shadow: 0 0 7px var(--color-text), 0 0 10px var(--color-text),
-        0 0 21px var(--color-text), 0 0 42px var(--color-text-light),
-        0 0 82px var(--color-text-light), 0 0 92px var(--color-text-light),
-        0 0 102px var(--color-text-light), 0 0 151px var(--color-text-light);
-      box-shadow: 0 0 1px var(--color-border),
-        inset 0 0 1px var(--color-border), 0 0 2px var(--color-border),
-        inset 0 0 2px var(--color-border), 0 0 5px var(--color-border),
-        inset 0 0 5px var(--color-border), 0 0 10px var(--color-border-light),
-        inset 0 0 10px var(--color-border-light),
-        0 0 20px var(--color-border-light),
-        inset 0 0 20px var(--color-border-light),
-        0 0 22px var(--color-border-light),
-        inset 0 0 22px var(--color-border-light),
-        0 0 25px var(--color-border-light),
-        inset 0 0 25px var(--color-border-light),
-        0 0 37px var(--color-border-light),
-        inset 0 0 37px var(--color-border-light);
+    h1,
+    h2 {
+      font-weight: 300;
+      text-align: center;
+      line-height: 90%;
+      transform: rotate(-2deg);
+      font-style: italic;
     }
 
-    6% {
+    .box {
       color: var(--color-text-lighting);
       border: 1px var(--color-border-lighting) solid;
-      text-shadow: none;
-      box-shadow: none;
+      border-radius: 15px;
+      padding: 10vh 10vw;
+      animation:
+        lightingUp 10s forwards,
+        flicker 1.5s 10s infinite alternate;
     }
 
-    100% {
-      color: var(--color-text);
-      border: 2px var(--color-border) solid;
-      text-shadow: 0 0 7px var(--color-text), 0 0 10px var(--color-text),
-        0 0 21px var(--color-text), 0 0 42px var(--color-text-light),
-        0 0 82px var(--color-text-light), 0 0 92px var(--color-text-light),
-        0 0 102px var(--color-text-light), 0 0 151px var(--color-text-light);
-      box-shadow: 0 0 1px var(--color-border),
-        inset 0 0 1px var(--color-border), 0 0 2px var(--color-border),
-        inset 0 0 2px var(--color-border), 0 0 5px var(--color-border),
-        inset 0 0 5px var(--color-border), 0 0 10px var(--color-border-light),
-        inset 0 0 10px var(--color-border-light),
-        0 0 20px var(--color-border-light),
-        inset 0 0 20px var(--color-border-light),
-        0 0 22px var(--color-border-light),
-        inset 0 0 22px var(--color-border-light),
-        0 0 25px var(--color-border-light),
-        inset 0 0 25px var(--color-border-light),
-        0 0 37px var(--color-border-light),
-        inset 0 0 37px var(--color-border-light);
+    @keyframes lightingUp {
+      2% {
+        text-shadow:
+          0 0 7px var(--color-text),
+          0 0 10px var(--color-text),
+          0 0 21px var(--color-text),
+          0 0 42px var(--color-text-light),
+          0 0 82px var(--color-text-light),
+          0 0 92px var(--color-text-light),
+          0 0 102px var(--color-text-light),
+          0 0 151px var(--color-text-light);
+        box-shadow:
+          0 0 1px var(--color-border),
+          inset 0 0 1px var(--color-border),
+          0 0 2px var(--color-border),
+          inset 0 0 2px var(--color-border),
+          0 0 5px var(--color-border),
+          inset 0 0 5px var(--color-border),
+          0 0 10px var(--color-border-light),
+          inset 0 0 10px var(--color-border-light),
+          0 0 20px var(--color-border-light),
+          inset 0 0 20px var(--color-border-light),
+          0 0 22px var(--color-border-light),
+          inset 0 0 22px var(--color-border-light),
+          0 0 25px var(--color-border-light),
+          inset 0 0 25px var(--color-border-light),
+          0 0 37px var(--color-border-light),
+          inset 0 0 37px var(--color-border-light);
+      }
+
+      4% {
+        text-shadow: none;
+        box-shadow: none;
+      }
+
+      5% {
+        text-shadow:
+          0 0 7px var(--color-text),
+          0 0 10px var(--color-text),
+          0 0 21px var(--color-text),
+          0 0 42px var(--color-text-light),
+          0 0 82px var(--color-text-light),
+          0 0 92px var(--color-text-light),
+          0 0 102px var(--color-text-light),
+          0 0 151px var(--color-text-light);
+        box-shadow:
+          0 0 1px var(--color-border),
+          inset 0 0 1px var(--color-border),
+          0 0 2px var(--color-border),
+          inset 0 0 2px var(--color-border),
+          0 0 5px var(--color-border),
+          inset 0 0 5px var(--color-border),
+          0 0 10px var(--color-border-light),
+          inset 0 0 10px var(--color-border-light),
+          0 0 20px var(--color-border-light),
+          inset 0 0 20px var(--color-border-light),
+          0 0 22px var(--color-border-light),
+          inset 0 0 22px var(--color-border-light),
+          0 0 25px var(--color-border-light),
+          inset 0 0 25px var(--color-border-light),
+          0 0 37px var(--color-border-light),
+          inset 0 0 37px var(--color-border-light);
+      }
+
+      6% {
+        color: var(--color-text-lighting);
+        border: 1px var(--color-border-lighting) solid;
+        text-shadow: none;
+        box-shadow: none;
+      }
+
+      100% {
+        color: var(--color-text);
+        border: 2px var(--color-border) solid;
+        text-shadow:
+          0 0 7px var(--color-text),
+          0 0 10px var(--color-text),
+          0 0 21px var(--color-text),
+          0 0 42px var(--color-text-light),
+          0 0 82px var(--color-text-light),
+          0 0 92px var(--color-text-light),
+          0 0 102px var(--color-text-light),
+          0 0 151px var(--color-text-light);
+        box-shadow:
+          0 0 1px var(--color-border),
+          inset 0 0 1px var(--color-border),
+          0 0 2px var(--color-border),
+          inset 0 0 2px var(--color-border),
+          0 0 5px var(--color-border),
+          inset 0 0 5px var(--color-border),
+          0 0 10px var(--color-border-light),
+          inset 0 0 10px var(--color-border-light),
+          0 0 20px var(--color-border-light),
+          inset 0 0 20px var(--color-border-light),
+          0 0 22px var(--color-border-light),
+          inset 0 0 22px var(--color-border-light),
+          0 0 25px var(--color-border-light),
+          inset 0 0 25px var(--color-border-light),
+          0 0 37px var(--color-border-light),
+          inset 0 0 37px var(--color-border-light);
+      }
     }
-  }
 
-  @keyframes flicker {
+    @keyframes flicker {
+      0%,
+      18%,
+      22%,
+      25%,
+      53%,
+      57%,
+      100% {
+        text-shadow:
+          0 0 4px var(--color-text),
+          0 0 11px var(--color-text),
+          0 0 19px var(--color-text),
+          0 0 40px var(--color-text-light),
+          0 0 80px var(--color-text-light),
+          0 0 90px var(--color-text-light),
+          0 0 100px var(--color-text-light),
+          0 0 150px var(--color-text-light);
+        box-shadow:
+          0 0 1px var(--color-border),
+          inset 0 0 1px var(--color-border),
+          0 0 2px var(--color-border),
+          inset 0 0 2px var(--color-border),
+          0 0 5px var(--color-border),
+          inset 0 0 5px var(--color-border),
+          0 0 10px var(--color-border-light),
+          inset 0 0 10px var(--color-border-light),
+          0 0 20px var(--color-border-light),
+          inset 0 0 20px var(--color-border-light),
+          0 0 22px var(--color-border-light),
+          inset 0 0 22px var(--color-border-light),
+          0 0 25px var(--color-border-light),
+          inset 0 0 25px var(--color-border-light),
+          0 0 37px var(--color-border-light),
+          inset 0 0 37px var(--color-border-light);
+      }
 
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-      text-shadow: 0 0 4px var(--color-text), 0 0 11px var(--color-text),
-        0 0 19px var(--color-text), 0 0 40px var(--color-text-light),
-        0 0 80px var(--color-text-light), 0 0 90px var(--color-text-light),
-        0 0 100px var(--color-text-light), 0 0 150px var(--color-text-light);
-      box-shadow: 0 0 1px var(--color-border),
-        inset 0 0 1px var(--color-border), 0 0 2px var(--color-border),
-        inset 0 0 2px var(--color-border), 0 0 5px var(--color-border),
-        inset 0 0 5px var(--color-border), 0 0 10px var(--color-border-light),
-        inset 0 0 10px var(--color-border-light),
-        0 0 20px var(--color-border-light),
-        inset 0 0 20px var(--color-border-light),
-        0 0 22px var(--color-border-light),
-        inset 0 0 22px var(--color-border-light),
-        0 0 25px var(--color-border-light),
-        inset 0 0 25px var(--color-border-light),
-        0 0 37px var(--color-border-light),
-        inset 0 0 37px var(--color-border-light);
+      20%,
+      24%,
+      55% {
+        text-shadow: none;
+        box-shadow: none;
+      }
     }
+  </style>
 
-    20%,
-    24%,
-    55% {
-      text-shadow: none;
-      box-shadow: none;
-    }
-  }
-</style>
-
-<body>
-  <div class="box">
-    <h1>Neon</h1>
-    <h2>Letters</h2>
-  </div>
-</body>
-
+  <body>
+    <div class="box">
+      <h1>Neon</h1>
+      <h2>Letters</h2>
+    </div>
+  </body>
 </html>
