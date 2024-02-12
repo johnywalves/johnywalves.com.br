@@ -12,13 +12,13 @@
     <meta
       name="description"
       property="og:description"
-      content="Random numbers and conversion to works for training"
+      content="Random numbers and conversion to works"
     />
     <meta
       name="image"
       property="og:image"
       itemprop="image"
-      content="http://johnywalves.com.br/figures/thumbnail.jpg"
+      content="http://johnywalves.com.br/figures/thumbnail_projects.jpg"
     />
     <meta name="type" property="og:type" content="website" />
     <meta
@@ -41,7 +41,7 @@
     />
     <meta
       property="twitter:image"
-      content="http://johnywalves.com.br/figures/thumbnail.jpg"
+      content="http://johnywalves.com.br/figures/thumbnail_projects.jpg"
     />
 
     <style>
@@ -90,6 +90,8 @@
         width: 100%;
         min-height: 100vh;
         min-height: 100dvh;
+        padding: 1.5rem;
+        cursor: pointer;
 
         display: flex;
         flex-direction: column;
@@ -98,24 +100,39 @@
       }
 
       p {
-        min-height: 64px;
+        color: var(--color-background);
+        text-align: center;
+
+        text-rendering: optimizeLegibility;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+      }
+
+      p.show {
+        color: var(--color-text);
+        transition: color 0.5s;
       }
 
       #number {
-        font-size: 5rem;
+        font-size: 6.5rem;
         font-weight: 700;
       }
 
       #words {
-        font-size: 3rem;
-        font-weight: 400;
+        font-size: 4rem;
+        font-weight: 500;
+        min-height: 10.625rem;
       }
     </style>
   </head>
 
   <body>
-    <p id="number">42</p>
-    <p id="words"></p>
+    <p id="number" class="show">42</p>
+    <p id="words" class="show">forty two</p>
   </body>
 
   <script type="text/javascript">
@@ -192,26 +209,23 @@
       return str.replace(/\s+/g, " ")
     }
 
-    let number = 42
-    let words = "forty two"
+    let wordStage = true
 
     const elementInNumbers = document.getElementById("number")
-    elementInNumbers.innerText = "" + number
-
     const elementInWords = document.getElementById("words")
-    words = numberToWords("" + number)
-    elementInWords.innerText = words
+
+    elementInNumbers.innerText = "42"
+    elementInWords.innerText = "forty two"
 
     function clickOnBody() {
-      if (words !== "") {
-        number = Math.floor(Math.random() * 15000)
-        words = ""
-      } else {
-        words = numberToWords("" + number)
+      if (wordStage) {
+        const number = "" + Math.floor(Math.random() * 15000)
+        elementInNumbers.innerText = number
+        elementInWords.innerText = numberToWords("" + number)
       }
 
-      elementInNumbers.innerText = "" + number
-      elementInWords.innerText = words
+      elementInWords.classList.toggle("show")
+      wordStage = !wordStage
     }
 
     document.body.addEventListener("click", clickOnBody, true)
