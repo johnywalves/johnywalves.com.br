@@ -71,12 +71,12 @@ const UtilsPage = () => {
 
   useEffect(() => {
     const callbackFunction = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show")
-        }
-      })
-    },
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+          }
+        })
+      },
       observer = new IntersectionObserver(callbackFunction),
       sections = document.querySelectorAll("section a")
 

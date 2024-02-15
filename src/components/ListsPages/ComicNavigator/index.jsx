@@ -6,17 +6,17 @@ import ProfileComics from "assets/vectors/ProfileComics"
 import { Rss } from "assets/icons"
 
 import {
-  ArticleComicNavigatiorWrapper,
-  ArticleCategoryNavigatiorCover,
+  ArticleComicNavigatorWrapper,
+  ArticleCategoryNavigatorCover,
   ArticleCategoryRss,
 } from "./styled"
 
-const ArticleComicNavigatior = () => {
+const ArticleComicNavigator = () => {
   return (
-    <ArticleComicNavigatiorWrapper>
-      <ArticleCategoryNavigatiorCover>
+    <ArticleComicNavigatorWrapper>
+      <ArticleCategoryNavigatorCover>
         <ProfileComics />
-      </ArticleCategoryNavigatiorCover>
+      </ArticleCategoryNavigatorCover>
       <ArticleCategoryRss
         href={Strings.comics.feed}
         target="_target"
@@ -24,8 +24,8 @@ const ArticleComicNavigatior = () => {
       >
         <Rss /> RSS {Strings.comics.title}
       </ArticleCategoryRss>
-    </ArticleComicNavigatiorWrapper>
+    </ArticleComicNavigatorWrapper>
   )
 }
 
-export default ArticleComicNavigatior
+export default ArticleComicNavigator

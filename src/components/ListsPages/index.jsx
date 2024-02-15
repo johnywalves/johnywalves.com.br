@@ -17,7 +17,7 @@ const ListsPages = ({ Navigator, children }) => (
   </ListsPagesWrapper>
 )
 
-export { default as ArticleCategoryNavigatior } from "./CategoryNavigator"
+export { default as ArticleCategoryNavigator } from "./CategoryNavigator"
 export { default as ArticleComicNavigator } from "./ComicNavigator"
 export { default as SeparatorList } from "./SeparatorList"
 

@@ -7,25 +7,28 @@ import Seo from "components/seo"
 import ArticleItem from "components/ArticleItem"
 import NavigationPage from "components/NavigationPage"
 
-import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
+import ListsPages, { ArticleCategoryNavigator } from "components/ListsPages"
 
 const titlePage = "Artigos"
-const descriptionPage = "Artigos sobre tecnologias, conceitos e alguns pensamentos"
+const descriptionPage =
+  "Artigos sobre tecnologias, conceitos e alguns pensamentos"
 const thumbnailPage = "/figures/thumbnail_posts.jpg"
 
-const BlogList = ({ data, pageContext }) => {
+const BlogList = ({
+  data,
+  pageContext: { currentPage, prevPage, nextPage, numPages, categories },
+}) => {
   const postList = data.allMarkdownRemark.edges
-  const { currentPage, prevPage, nextPage, numPages, categories } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
 
-  const ArticleNavigatior = () => (
-    <ArticleCategoryNavigatior categories={categories} />
+  const ArticleNavigator = () => (
+    <ArticleCategoryNavigator categories={categories} />
   )
 
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>
-      <ListsPages Navigator={ArticleNavigatior}>
+      <ListsPages Navigator={ArticleNavigator}>
         <h1>{Strings.posts.allArticles}</h1>
         {postList.map(
           ({
@@ -116,7 +119,7 @@ export const Head = ({ location }) => (
   <Seo
     location={location}
     image={thumbnailPage}
-    imagenWidth={1200}
+    imageWidth={1200}
     imageHeight={628}
     title={titlePage}
     description={descriptionPage}

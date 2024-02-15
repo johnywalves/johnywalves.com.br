@@ -599,9 +599,9 @@
         "title": "Desenvolvedor Front-end Sênior",
         "institution": "Seguralta",
         "description": [
-          "Desenvolvimento do <strong>Seguralta Core</strong>, plataforma para facilitar a operação de corretoras de seguros, permitindo aos franqueados acesso de forma ágil a uma série de facilidades, incluindo detalhamento das comissões, renovações e apólices a vencer, pendências de propostas, gestão de leads e notificação aos clientes sobre as parcelas vencidas, além de integrar os dados e acessos de quarenta seguradoras",
-          "Aplicação de fluxo colaborativo (Git flow), versionamento de componentes, documentação robusta, automação de processos, integração e entrega contínuas (CI/CD), testes unitários e testes end-to-end",
-          "Tecnologias: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, Styled Components, Storybook, useQuery, Testing Library, Jest e Cypress"
+          "Desenvolvimento do <strong>Seguralta Core</strong>, plataforma para facilitar a operação de corretoras de seguros, permitindo aos franqueados acesso de detalhamento das comissões, renovações e apólices a vencer, pendências de propostas, gestão de leads e notificação aos clientes sobre as parcelas vencidas, além de integrar os dados e acessos de quarenta seguradoras",
+          "Aplicação de fluxo colaborativo (GitFlow), versionamento de componentes, documentação robusta, automação de processos, monitoramento de ambiente (métricas de acesso, erros no front-end, Core Web Vitals entre outros), integração e entrega contínuas (CI/CD), testes unitários e testes end-to-end",
+          "Tecnologias: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, useQuery, Testing Library, Jest e Cypress"
         ]
       },
       {
@@ -610,7 +610,7 @@
         "institution": "Hepta Tecnologia e Informática",
         "description": [
           "Projeto <strong>CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços, com uso de micro-frontend e monorepo",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
+          "Tecnologias: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
         ]
       },
       {
@@ -621,7 +621,7 @@
           "Projeto <strong>Coca-Cola</strong>: Experiência em divulgação de produtos, promoções e coleta de leads nas plataformas da América Latina e Caribe, além de habilidades de análise e acompanhamento de métricas de consumidores",
           "Tecnologias: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
           "Projeto <strong>Anbima</strong>: Desenvolvimento de um sistema de coleta de informações de carteiras administradas e reestruturação na publicação de dados de produtos financeiros, com foco na melhoria de desempenho e resultados nas ferramentas de busca",
-          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js, e Gitlab"
+          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js e Gitlab"
         ]
       },
       {
@@ -632,7 +632,7 @@
           "Responsável pela manutenção e aprimoramento contínuo da plataforma <strong>Zarp Localiza</strong>, incluindo a reestruturação de tecnologia e infraestrutura",
           "Foco na melhoria da experiência do usuário, desempenho do site e otimização para resultados de busca (SEO), visando alcançar a primeira posição nos resultados orgânicos de pesquisa",
           "Liderança no estabelecimento de processos de CI/CD, seleção de tecnologias para o front-end e acompanhamento de métricas, incluindo o funil de vendas",
-          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar, e Datadog"
+          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar e Datadog"
         ]
       },
       {
@@ -642,7 +642,7 @@
         "description": [
           "Responsável pelo desenvolvimento da suíte de aplicativos da <strong>Invillia Apps</strong>, com foco na otimização do uso de memória durante a integração com o Microsoft Teams e na visualização de dados",
           "Atuação abrangendo tanto o front-end quanto o back-end",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express, e MySQL"
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
         ]
       },
       {
@@ -653,7 +653,7 @@
           "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas",
           "Realização do planejamento e desenvolvimento de uma API para autenticação de usuários e um guia médico",
           "Criação de um ambiente para automação de testes, monitoramento e CI/CD dos sistemas de gestão e prestação de serviços",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat, e Jenkins"
+          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat e Jenkins"
         ]
       },
       {
@@ -661,10 +661,10 @@
         "title": "Desenvolvedor de Software",
         "institution": "Bnex",
         "description": [
-          "Responsável pela gestão e desenvolvimento de uma plataforma backoffice web e mobile, voltada para o acompanhamento de promoters em pontos de revenda",
+          "Responsável pela gestão e desenvolvimento de uma plataforma back-office web e mobile, voltada para o acompanhamento de promoters em pontos de revenda",
           "Realização do desenvolvimento de visualização de dados, utilizando dashboards, para o acompanhamento de resultados na empresa <strong>JBS</strong>",
           "Execução da manutenção na carga e transformação dos dados (ETL) dos parceiros da empresa <strong>JBS</strong>",
-          "Tecnologias: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js, e Pentaho"
+          "Tecnologias: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js e Pentaho"
         ]
       },
       {
@@ -674,7 +674,7 @@
         "description": [
           "Responsável pela automação de processos e desenvolvimento de chatbots, além da estruturação de projetos de atendimento para recalls na <strong>Toyota Rodobens</strong>",
           "Desenvolvimento de uma extensão para o Google Chrome voltada para telemarketing da <strong>Claro</strong>",
-          "Tecnologias: WDG Automation, Bizagi BPMN Modeler, e JavaScript"
+          "Tecnologias: WDG Automation, Bizagi BPMN Modeler e JavaScript"
         ]
       },
       {
@@ -692,7 +692,7 @@
         "institution": "Autônomo",
         "description": [
           "Oferecimento de serviços de automação de obrigações fiscais para diversos clientes",
-          "Tecnologias: Windows Forms, .Net C#, e Microsoft SQL Server"
+          "Tecnologias: Windows Forms, .Net C# e Microsoft SQL Server"
         ]
       },
       {

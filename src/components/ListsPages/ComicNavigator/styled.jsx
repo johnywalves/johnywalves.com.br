@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import media from "styled-media-query"
 
-export const ArticleComicNavigatiorWrapper = styled.nav`
+export const ArticleComicNavigatorWrapper = styled.nav`
   width: 100%;
   margin: var(--24px) 0 0;
   display: flex;
@@ -40,7 +40,7 @@ export const bounce = keyframes`
   }
 `
 
-export const ArticleCategoryNavigatiorCover = styled.div`
+export const ArticleCategoryNavigatorCover = styled.div`
   position: relative;
   height: 300px;
   width: 300px;

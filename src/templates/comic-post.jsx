@@ -17,9 +17,8 @@ import {
   PostComic,
 } from "components/Comic/styled"
 
-const ComicPost = ({ data, pageContext }) => {
+const ComicPost = ({ data, pageContext: { number, slug } }) => {
   const post = data.markdownRemark
-  const { number, slug } = pageContext
 
   return (
     <Blueprint content title={post.frontmatter.title}>

@@ -11,30 +11,36 @@ function SEO({
   lang,
   title,
   image,
-  imagenWidth,
+  imageWidth,
   imageHeight,
   children,
 }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
         }
       }
-    `
-  )
+    }
+  `)
 
-  const titleName = limitText(65, title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title)
-  const metaDescription = limitText(155, description || site.siteMetadata.description)
-  const pathImage = `${site.siteMetadata.siteUrl}${image || "/figures/thumbnail.jpg"}`
+  const titleName = limitText(
+    65,
+    title ? `${title} | ${site.siteMetadata.title}` : site.siteMetadata.title
+  )
+  const metaDescription = limitText(
+    155,
+    description || site.siteMetadata.description
+  )
+  const pathImage = `${site.siteMetadata.siteUrl}${
+    image || "/figures/thumbnail.jpg"
+  }`
   const pathIcon = `${site.siteMetadata.siteUrl}/figures/favicon.png`
-  const sizeImageWidth = imagenWidth || 1200
+  const sizeImageWidth = imageWidth || 1200
   const sizeImageHeight = imageHeight || 627
   const urlContent = `${site.siteMetadata.siteUrl}${location.pathname}`
 

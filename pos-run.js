@@ -70,7 +70,7 @@ async function navigateOpenGraphic() {
   app.use(express.static("public"))
 
   const server = http.createServer(app)
-  await server.listen(0)
+  server.listen(0)
   const servingUrl = `http://0.0.0.0:${server.address().port}`
 
   // Crawling
@@ -92,12 +92,16 @@ async function navigateOpenGraphic() {
   await changeThemeIcon.click()
 
   // Getting - ListPages (Posts and Comics)
-  await getThumbnail(`${servingUrl}/blog/index.html`, page, 'thumbnail_posts')
-  await getThumbnail(`${servingUrl}/comics/index.html`, page, 'thumbnail_comics')
+  await getThumbnail(`${servingUrl}/blog/index.html`, page, "thumbnail_posts")
+  await getThumbnail(
+    `${servingUrl}/comics/index.html`,
+    page,
+    "thumbnail_comics"
+  )
 
   // Closing
   await browser.close()
-  await server.close((err) => {
+  server.close((err) => {
     console.log("Pos-run server closed")
     process.exit(err ? 1 : 0)
   })

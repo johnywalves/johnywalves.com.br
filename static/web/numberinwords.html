@@ -18,7 +18,7 @@
       name="image"
       property="og:image"
       itemprop="image"
-      content="http://johnywalves.com.br/figures/thumbnail_projects.jpg"
+      content="http://johnywalves.com.br/figures/thumbnail_numberinwords.jpg"
     />
     <meta name="type" property="og:type" content="website" />
     <meta
@@ -41,7 +41,7 @@
     />
     <meta
       property="twitter:image"
-      content="http://johnywalves.com.br/figures/thumbnail_projects.jpg"
+      content="http://johnywalves.com.br/figures/thumbnail_numberinwords.jpg"
     />
 
     <style>
@@ -70,17 +70,24 @@
         list-style: none;
       }
 
-      a,
-      a:hover,
-      a:visited {
-        text-decoration: none;
-        color: inherit;
-      }
-
       /* Content CSS */
       :root {
         --color-background: #282c35;
         --color-text: #e0138c;
+        --color-heart: #e01324;
+        --neutral-100: #f5f5f5;
+        --neutral-200: #e6e6e6;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+        color: var(--color-text);
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: var(--color-text);
       }
 
       body {
@@ -95,15 +102,20 @@
 
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
 
-      p {
+      main p {
         color: var(--color-background);
         text-align: center;
-
-        text-rendering: optimizeLegibility;
 
         user-select: none;
         -webkit-user-select: none;
@@ -112,7 +124,7 @@
         -khtml-user-select: none;
       }
 
-      p.show {
+      main p.show {
         color: var(--color-text);
         transition: color 0.5s;
       }
@@ -127,12 +139,42 @@
         font-weight: 500;
         min-height: 10.625rem;
       }
+
+      header p,
+      footer p {
+        color: var(--neutral-200);
+        text-align: center;
+      }
+
+      header p {
+        font-size: 1.5rem;
+      }
+
+      footer p span {
+        color: var(--color-heart);
+      }
     </style>
   </head>
 
   <body>
-    <p id="number" class="show">42</p>
-    <p id="words" class="show">forty two</p>
+    <header>
+      <p>
+        Click to generate a new number, and click again to reveal its
+        description
+      </p>
+    </header>
+    <main>
+      <p id="number" class="show">42</p>
+      <p id="words" class="show">forty two</p>
+    </main>
+    <footer>
+      <p>
+        ©2023 made with <span>♥</span> by
+        <a href="https://www.johnywalves.com.br" target="_blank">
+          Johny W. Alves
+        </a>
+      </p>
+    </footer>
   </body>
 
   <script type="text/javascript">

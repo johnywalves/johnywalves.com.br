@@ -5,10 +5,15 @@ import styled, { css } from "styled-components"
 import PageWrapper from "styles/PageWrapper"
 
 export const neonThird = css`
-  text-shadow: 0 0 7px var(--third), 0 0 10px var(--third),
-    0 0 21px var(--third), 0 0 42px var(--third-light),
-    0 0 82px var(--third-light), 0 0 92px var(--third-light),
-    0 0 102px var(--third-light), 0 0 151px var(--third-light);
+  text-shadow:
+    0 0 7px var(--third),
+    0 0 10px var(--third),
+    0 0 21px var(--third),
+    0 0 42px var(--third-light),
+    0 0 82px var(--third-light),
+    0 0 92px var(--third-light),
+    0 0 102px var(--third-light),
+    0 0 151px var(--third-light);
 `
 
 export const UtilsTitle = styled.h1`
@@ -33,10 +38,12 @@ const lightSection = css`
     url("/vectors/neon-particles-bottom.svg");
   background-color: var(--background);
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
 `
 
-const nonlightSection = css`
+const nonLightSection = css`
   background: url("/vectors/lowpoly-shadow.svg");
   background-color: var(--highlight);
   min-height: 0;
@@ -50,54 +57,23 @@ const centerContent = css`
   background: url("/vectors/triangle-wall-top.svg"),
     url("/vectors/triangle-wall-bottom.svg"), url("/vectors/waves.svg");
   background-color: var(--background);
-  background-size: 30%, 30%, 100% 150%;
+  background-size:
+    30%,
+    30%,
+    100% 150%;
   background-repeat: no-repeat;
-  background-position: top left, bottom right, right bottom;
+  background-position:
+    top left,
+    bottom right,
+    right bottom;
 `
 
 export const UtilsSection = styled.section`
   position: relative;
   ${PageWrapper}
 
-  ${({ light }) => (light ? lightSection : nonlightSection)}
+  ${({ light }) => (light ? lightSection : nonLightSection)}
   ${({ center }) => center && centerContent}
-
-  & a {
-    opacity: 0;
-    filter: blur(4px);
-    transform: scale(0.5);
-    transition: all 1s;
-  }
-
-  & a.show {
-    opacity: 1;
-    filter: none;
-    transform: scale(1);
-  }
-
-  a:nth-of-type(2) {
-    transition-delay: 0.5s;
-  }
-
-  a:nth-of-type(3) {
-    transition-delay: 0.75s;
-  }
-
-  a:nth-of-type(4) {
-    transition-delay: 0.5s;
-  }
-
-  a:nth-of-type(5) {
-    transition-delay: 0.75s;
-  }
-
-  a:nth-of-type(6) {
-    transition-delay: 1s;
-  }
-
-  a:nth-of-type(7) {
-    transition-delay: 0.5s;
-  }
 `
 
 export const BoxTopItem = styled.div`
@@ -139,8 +115,42 @@ export const CheatsheetsList = styled.div`
   flex-wrap: wrap;
   gap: var(--24px);
 
-  a {
+  & a {
     flex-grow: 1;
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.5);
+    transition: all 1s;
+  }
+
+  & a.show {
+    opacity: 1;
+    filter: none;
+    transform: scale(1);
+  }
+
+  & a:nth-of-type(2) {
+    transition-delay: 0.5s;
+  }
+
+  & a:nth-of-type(3) {
+    transition-delay: 0.75s;
+  }
+
+  & a:nth-of-type(4) {
+    transition-delay: 0.5s;
+  }
+
+  & a:nth-of-type(5) {
+    transition-delay: 0.75s;
+  }
+
+  & a:nth-of-type(6) {
+    transition-delay: 1s;
+  }
+
+  & a:nth-of-type(7) {
+    transition-delay: 0.5s;
   }
 `
 
@@ -164,13 +174,15 @@ export const UtilsToolItem = styled(Link)`
   background-color: var(--highlight);
   cursor: pointer;
   border-radius: 4px;
-  box-shadow: 0 0 4px 1px var(--shadow-colors),
+  box-shadow:
+    0 0 4px 1px var(--shadow-colors),
     4px 4px 4px 1px var(--shadow-colors);
+  transition: all 0.5s;
 
   & p {
     color: var(--white);
     vertical-align: middle;
-    transition: all 0.5s;
+    transition: all 0.25s;
 
     display: flex;
     flex-direction: row;
@@ -185,7 +197,9 @@ export const UtilsToolItem = styled(Link)`
     margin-right: 0.5rem;
   }
 
-  &:hover p {
-    font-weight: 700;
+  &:hover {
+    box-shadow:
+      0 0 8px 2px var(--shadow-colors),
+      8px 8px 8px 2px var(--shadow-colors);
   }
 `

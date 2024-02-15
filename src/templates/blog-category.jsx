@@ -7,21 +7,29 @@ import Seo from "components/seo"
 import ArticleItem from "components/ArticleItem"
 import NavigationPage from "components/NavigationPage"
 
-import ListsPages, { ArticleCategoryNavigatior } from "components/ListsPages"
+import ListsPages, { ArticleCategoryNavigator } from "components/ListsPages"
 
 const thumbnailPage = "/figures/thumbnail_posts.jpg"
 
-const BlogCategory = ({ data, pageContext }) => {
+const BlogCategory = ({
+  data,
+  pageContext: {
+    currentPage,
+    prevPage,
+    nextPage,
+    numPages,
+    categories,
+    category,
+  },
+}) => {
   const postList = data.allMarkdownRemark.edges
-  const { currentPage, prevPage, nextPage, numPages, categories, category } =
-    pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const titlePage = `Artigos sobre ${category}`
   const descriptionPage = `Artigos da categoria ${category}`
 
-  const ArticleNavigatior = () => (
-    <ArticleCategoryNavigatior categories={categories} />
+  const ArticleNavigator = () => (
+    <ArticleCategoryNavigator categories={categories} />
   )
 
   return (
@@ -31,7 +39,7 @@ const BlogCategory = ({ data, pageContext }) => {
       description={descriptionPage}
       openGraphImage={thumbnailPage}
     >
-      <ListsPages Navigator={ArticleNavigatior}>
+      <ListsPages Navigator={ArticleNavigator}>
         <h1>
           {Strings.posts.category}: <strong>{category}</strong>
         </h1>
@@ -79,7 +87,7 @@ const BlogCategory = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query PostsCaterory($skip: Int!, $limit: Int!, $category: String!) {
+  query PostsCategory($skip: Int!, $limit: Int!, $category: String!) {
     allMarkdownRemark(
       sort: { frontmatter: { date: DESC } }
       filter: {
@@ -120,15 +128,15 @@ export const query = graphql`
 
 export default BlogCategory
 
-export const Head = ({ location, pageContext }) => {
-  const { category } = pageContext
+export const Head = ({ location, pageContext: { category } }) => {
   const titlePage = `Artigos sobre ${category}`
   const descriptionPage = `Artigos da categoria ${category}`
 
   return (
-    <Seo location={location}
+    <Seo
+      location={location}
       image={thumbnailPage}
-      imagenWidth={1200}
+      imageWidth={1200}
       imageHeight={628}
       title={titlePage}
       description={descriptionPage}

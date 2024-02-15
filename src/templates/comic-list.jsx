@@ -17,11 +17,13 @@ const titlePage = "Tirinhas"
 const descriptionPage = "Tirinhas sobre a vida de trabalhadores de tecnologia"
 const thumbnailPage = "/figures/thumbnail_comics.jpg"
 
-const ComicList = (props) => {
-  const comicsList = props.data.allMarkdownRemark.edges,
-    { currentPage, prevPage, nextPage, numPages } = props.pageContext,
-    isFirst = currentPage === 1,
-    isLast = currentPage === numPages
+const ComicList = ({
+  data,
+  pageContext: { currentPage, prevPage, nextPage, numPages },
+}) => {
+  const comicsList = data.allMarkdownRemark.edges
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
 
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>
@@ -127,10 +129,9 @@ export const Head = ({ location }) => (
   <Seo
     location={location}
     image={thumbnailPage}
-    imagenWidth={1200}
+    imageWidth={1200}
     imageHeight={628}
     title={titlePage}
     description={descriptionPage}
   />
 )
-

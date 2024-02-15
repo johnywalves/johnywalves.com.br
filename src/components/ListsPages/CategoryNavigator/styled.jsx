@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from "styled-components"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export const ArticleCategoryNavigatiorWrapper = styled.nav`
+export const ArticleCategoryNavigatorWrapper = styled.nav`
   ul {
     display: flex;
     flex-direction: row;
@@ -39,7 +39,7 @@ export const ArticleCategoryNavigatiorWrapper = styled.nav`
   }
 `
 
-export const ArticleCategoryNavigatiorTitle = styled.h2`
+export const ArticleCategoryNavigatorTitle = styled.h2`
   color: var(--texts);
   margin: 0 0 var(--16px) 0;
   font-weight: 700;
@@ -59,7 +59,7 @@ export const ArticleCategoryRss = styled.a`
   }
 `
 
-export const ArticleCategoryNavigatiorCover = styled.div`
+export const ArticleCategoryNavigatorCover = styled.div`
   position: relative;
   height: 450px;
   margin: 0 0 var(--16px);
@@ -87,7 +87,7 @@ const alternateDirection = css`
   animation-direction: reverse;
 `
 
-export const ArticleCategoryNavigatiorImage = styled(GatsbyImage)`
+export const ArticleCategoryNavigatorImage = styled(GatsbyImage)`
   position: absolute !important;
   transition: none;
   opacity: 0;

@@ -7,14 +7,14 @@ import Strings from "components/strings"
 import { Rss } from "assets/icons"
 
 import {
-  ArticleCategoryNavigatiorWrapper,
-  ArticleCategoryNavigatiorTitle,
+  ArticleCategoryNavigatorWrapper,
+  ArticleCategoryNavigatorTitle,
   ArticleCategoryRss,
-  ArticleCategoryNavigatiorCover,
-  ArticleCategoryNavigatiorImage,
+  ArticleCategoryNavigatorCover,
+  ArticleCategoryNavigatorImage,
 } from "./styled"
 
-const ArticleCategoryNavigatior = ({ categories }) => {
+const ArticleCategoryNavigator = ({ categories }) => {
   const { serious, laugh } = useStaticQuery(graphql`
     query {
       serious: file(relativePath: { eq: "profile_serious.png" }) {
@@ -27,28 +27,24 @@ const ArticleCategoryNavigatior = ({ categories }) => {
 
     fragment extractFieldsCategory on File {
       childImageSharp {
-        gatsbyImageData(
-          height: 400
-          layout: CONSTRAINED
-          placeholder: BLURRED
-        )
+        gatsbyImageData(height: 400, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
   `)
 
   return (
-    <ArticleCategoryNavigatiorWrapper>
-      <ArticleCategoryNavigatiorCover>
-        <ArticleCategoryNavigatiorImage
+    <ArticleCategoryNavigatorWrapper>
+      <ArticleCategoryNavigatorCover>
+        <ArticleCategoryNavigatorImage
           image={serious.childImageSharp.gatsbyImageData}
           alt=""
         />
-        <ArticleCategoryNavigatiorImage
+        <ArticleCategoryNavigatorImage
           image={laugh.childImageSharp.gatsbyImageData}
           reverse={1}
           alt=""
         />
-      </ArticleCategoryNavigatiorCover>
+      </ArticleCategoryNavigatorCover>
       <ArticleCategoryRss
         href={Strings.posts.feed}
         target="_target"
@@ -56,9 +52,9 @@ const ArticleCategoryNavigatior = ({ categories }) => {
       >
         <Rss /> RSS {Strings.posts.title}
       </ArticleCategoryRss>
-      <ArticleCategoryNavigatiorTitle>
+      <ArticleCategoryNavigatorTitle>
         {Strings.posts.categories}
-      </ArticleCategoryNavigatiorTitle>
+      </ArticleCategoryNavigatorTitle>
       <ul>
         {categories.map((category) => (
           <li key={category}>
@@ -71,8 +67,8 @@ const ArticleCategoryNavigatior = ({ categories }) => {
           </li>
         ))}
       </ul>
-    </ArticleCategoryNavigatiorWrapper>
+    </ArticleCategoryNavigatorWrapper>
   )
 }
 
-export default ArticleCategoryNavigatior
+export default ArticleCategoryNavigator

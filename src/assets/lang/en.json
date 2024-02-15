@@ -599,9 +599,9 @@
         "title": "Senior Front-end Developer",
         "institution": "Seguralta",
         "description": [
-          "Development of <strong>Seguralta Core</strong>, a platform to facilitate the operation of insurance brokers, allowing franchisees to quickly access a series of facilities, including details of commissions, renewals and policies due to expire, pending proposals, lead management and notification to customers about overdue installments, in addition to integrating data and access from forty insurance companies",
-          "Collaborative flow application (Git flow), component versioning, robust documentation, process automation, continuous integration and continuous delivery (CI/CD), unit testing and end-to-end testing",
-          "Technologies: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, Styled Components, Storybook, useQuery, Testing Library, Jest and Cypress"
+          "Development of <strong>Seguralta Core</strong>, a platform to facilitate the operation of insurance brokers, allowing franchisees access to detailed commissions, renewals and policies due, pending proposals, lead management and notification to customers about overdue installments, in addition to integrating data and access from forty insurance companies",
+          "Collaborative flow application (GitFlow), component versioning, robust documentation, process automation, environment monitoring (access metrics, front-end errors, Core Web Vitals, among others), continuous integration and continuous delivery (CI/CD), unit testing and end-to-end testing",
+          "Technologies: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, useQuery, Testing Library, Jest and Cypress"
         ]
       },
       {

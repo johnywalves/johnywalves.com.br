@@ -21,15 +21,11 @@ This project uses:
 First, install packages:
 
 ```bash
-npm i
-# or
-yarn
+npm i --legacy-peer-deps
 ```
 
 Run the development server:
 
 ```bash
-npm dev
-# or
-yarn dev
+npm run dev
 ```

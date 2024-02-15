@@ -20,18 +20,17 @@ import {
   OpenGraphicAuthor,
 } from "components/ArticleOpenGraphic/styled"
 
-const openGraphImage = ({ data, pageContext }) => {
+const openGraphImage = ({ data, pageContext: { slug } }) => {
   const {
-      markdownRemark: {
-        frontmatter: { date, category, title, openGraphImage },
-        timeToRead,
-      },
-      site: {
-        siteMetadata: { siteUrlWithoutProtocol, author, title: titleSite },
-      },
-      avatarImage,
-    } = data,
-    { slug } = pageContext
+    markdownRemark: {
+      frontmatter: { date, category, title, openGraphImage },
+      timeToRead,
+    },
+    site: {
+      siteMetadata: { siteUrlWithoutProtocol, author, title: titleSite },
+    },
+    avatarImage,
+  } = data
 
   return (
     <>
