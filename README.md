@@ -14,7 +14,7 @@ This project uses:
 [Algolia](https://www.algolia.com/)  
 [PrismJS](https://prismjs.com/)  
 [TypeScript](https://www.typescriptlang.org/)  
-[Netlify CMS](https://www.netlifycms.org/)
+[Decap CMS](https://decapcms.org/)
 
 ## Getting Started
 

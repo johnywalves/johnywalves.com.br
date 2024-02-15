@@ -1,5 +1,11 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["cheatsheet", "frontmatter", "gatsby", "johnywalves"]
+  "cSpell.words": [
+    "cheatsheet",
+    "frontmatter",
+    "gatsby",
+    "johny",
+    "johnywalves"
+  ]
 }

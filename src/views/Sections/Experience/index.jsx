@@ -209,7 +209,9 @@ const SectionExperience = () => {
                   !allExperiences
                 }
               >
-                <DateText>{date} <Institution> | {institution}</Institution></DateText>
+                <DateText>
+                  {date} <Institution> | {institution}</Institution>
+                </DateText>
                 <Title>{title}</Title>
                 <Descriptions list={1}>
                   {description.map((text, idx) => (
@@ -218,8 +220,9 @@ const SectionExperience = () => {
                         .split("</strong>")
                         .join("")
                         .split("<strong>")
-                        .join("")}${description.length - 1 !== idx ? ";" : "."
-                        }`}
+                        .join("")}${
+                        description.length - 1 !== idx ? ";" : "."
+                      }`}
                     </ExperienceDescription>
                   ))}
                 </Descriptions>
@@ -258,7 +261,7 @@ const SectionExperience = () => {
             ) => (
               <Accomplishment
                 key={`edu_${index}`}
-                hidden={    
+                hidden={
                   index > 2 &&
                   Strings.education.list.length > 4 &&
                   !allEducations
@@ -271,14 +274,20 @@ const SectionExperience = () => {
                   )
                 }
               >
-                <DateText>{date} <Institution> | {institution}</Institution></DateText>
+                <DateText>
+                  {date} <Institution> | {institution}</Institution>
+                </DateText>
                 <Title>{title}</Title>
                 <Descriptions>
                   {description.map((text, idx) => (
-                    <ExperienceDescription key={idx}>{text}</ExperienceDescription>
+                    <ExperienceDescription key={idx}>
+                      {text}
+                    </ExperienceDescription>
                   ))}
-                  {details && details.map((text, idx) => (
-                    <ExperienceDescription key={idx}>{text}</ExperienceDescription>
+                  {details?.map((text, idx) => (
+                    <ExperienceDescription key={idx}>
+                      {text}
+                    </ExperienceDescription>
                   ))}
                 </Descriptions>
                 {production && (
@@ -290,13 +299,12 @@ const SectionExperience = () => {
                     {production.title}
                   </Production>
                 )}
-                {kudos &&
-                  kudos.map(({ name, file }, idx) => (
-                    <WrapperAward key={idx} href={file}>
-                      <Award />
-                      <p>{name}</p>
-                    </WrapperAward>
-                  ))}
+                {kudos?.map(({ name, file }, idx) => (
+                  <WrapperAward key={idx} href={file}>
+                    <Award />
+                    <p>{name}</p>
+                  </WrapperAward>
+                ))}
               </Accomplishment>
             )
           )}
@@ -334,8 +342,13 @@ const SectionExperience = () => {
                   </Icon>
                 }
               >
-                <DateText>{FormatDate(date)} <Institution> | {institute}</Institution></DateText>
-                <Title>{name}{time > 0 && ` (${time} ${Strings.hour})`}</Title>
+                <DateText>
+                  {FormatDate(date)} <Institution> | {institute}</Institution>
+                </DateText>
+                <Title>
+                  {name}
+                  {time > 0 && ` (${time} ${Strings.hour})`}
+                </Title>
               </Accomplishment>
             ))}
           <AreaButton>
