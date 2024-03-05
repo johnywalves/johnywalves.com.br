@@ -27,11 +27,7 @@ const SectionContact = () => {
     query {
       avatarImage: file(relativePath: { eq: "johnywalves.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 512
-            layout: CONSTRAINED
-            placeholder: BLURRED
-          )
+          gatsbyImageData(width: 400, layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }

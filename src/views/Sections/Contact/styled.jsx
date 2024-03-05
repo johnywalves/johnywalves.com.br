@@ -15,7 +15,9 @@ export const Wrapper = styled.section`
   background-color: var(--background);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
 
   ${media.lessThan("medium")`
     background-size: 50%;
@@ -131,11 +133,15 @@ export const Image = styled(GatsbyImage)`
   width: 400px;
   height: 400px;
   border-radius: 50%;
+  margin: var(--16px) 0;
+
+  display: flex;
   align-self: center;
   justify-self: center;
+
   mask-image: linear-gradient(45deg, black 45%, transparent);
   mask-mode: alpha;
-  margin: var(--16px) 0;
+  object-fit: cover;
 
   ${media.lessThan("medium")`
     margin: var(--16px);

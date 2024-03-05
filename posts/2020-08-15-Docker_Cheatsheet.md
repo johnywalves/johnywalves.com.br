@@ -13,15 +13,23 @@ published: true
 cheatsheet: true
 ---
 
+Docker é uma ferramenta ótima para garantir um ambiente uniforme para pendências de plataformas para desenvolvimento, ainda sem a necessidade de ter vários softwares instalados. No Docker Composer podemos reger vários containers sempre com as mesmas definições
+
 ## Docker
 
-Construir um Dockerfile que está na pasta
+Listar os containers em funcionamento
+
+```bash
+docker ps
+```
+
+Construir um container pelo arquivo `Dockerfile` que está na pasta
 
 ```bash
 docker build .
 ```
 
-Executar comando dentro do container, no caso o `ls` ou o `bash` para ter acesso direto
+Executar comando dentro do container, no caso o `ls` para listagem de arquivos ou o `bash` para ter acesso direto ao terminal do container
 
 ```bash
 docker exec -it <container_id_ou_nome> ls
@@ -47,20 +55,32 @@ ip addr show docker0
 
 ## Docker Compose
 
-Puxar as imagens da internet
+Puxar as imagens da internet, do arquivo padrão `docker-compose.yml`
 
 ```bash
 docker-compose pull
 ```
 
-Subir os serviços
+Subir/Ligar os containers, rodando os containers em background
 
 ```bash
 docker-compose up -d
 ```
 
-Descer/Desligar os serviços
+Descer/Desligar os containers
+
+```bash
+docker-compose stop
+```
+
+Remover os containers
 
 ```bash
 docker-compose down
+```
+
+Subir/Ligar os containers, do arquivo `name-file.yml` encontrado no diretório onde o comando é executado
+
+```bash
+docker-compose -f name-file.yml up -d
 ```
