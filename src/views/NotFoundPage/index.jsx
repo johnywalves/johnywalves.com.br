@@ -35,7 +35,7 @@ const NotFoundPage = () => (
     </BoxSocial>
 
     <NotFoundTitle>404</NotFoundTitle>
-    <NotFoundDescription>{Strings.notfound}</NotFoundDescription>
+    <NotFoundDescription>{Strings.notFound}</NotFoundDescription>
     <Link to="/">
       <Button>{Strings.backToHome}</Button>
     </Link>

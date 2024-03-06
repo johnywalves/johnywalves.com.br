@@ -8,7 +8,7 @@ import {
   ResumeSubSection,
   ResumeSubTitle,
   ResumeSheet,
-  ResumeFooter
+  ResumeFooter,
 } from "./styled"
 
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
@@ -19,7 +19,8 @@ const getCurrentYear = () => new Date().getFullYear()
 
 const getDescription = (text) => {
   const withoutFirstBreak = text.split(", ").slice(1).join(", ")
-  const capitulation = withoutFirstBreak[0].toUpperCase() + withoutFirstBreak.slice(1)
+  const capitulation =
+    withoutFirstBreak[0].toUpperCase() + withoutFirstBreak.slice(1)
   return capitulation
 }
 
@@ -30,10 +31,12 @@ const Person = ({ language }) => (
       <li>{language.status}</li>
       <li>{language.live}</li>
       <li>
-        <strong>contato</strong>@johnywalves.com.br | <strong>www</strong>.johnywalves.com.br
+        <strong>contato</strong>@johnywalves.com.br | <strong>www</strong>
+        .johnywalves.com.br
       </li>
       <li>
-        <strong>github</strong>.com/johnywalves | <strong>linkedin</strong>.com/in/johnywalves
+        <strong>github</strong>.com/johnywalves | <strong>linkedin</strong>
+        .com/in/johnywalves
       </li>
     </ul>
   </ResumePerson>
@@ -46,25 +49,32 @@ const ResumePage = ({ language }) => {
         <Person language={language} />
 
         <ResumeSection>
+          <h2>{language.aboutMe}</h2>
           <hr />
           <p className="description">{getDescription(language.description)}</p>
         </ResumeSection>
 
         <ResumeSection>
-          <h2>{language.experience.title} <small>({language.mostRecent})</small></h2>
+          <h2>
+            {language.experience.title} <small>({language.mostRecent})</small>
+          </h2>
           <hr />
           {language.experience.list
             .slice(0, 4)
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
-                  <h3>{institution}<time>• {date}</time></h3>
+                  <h3>
+                    {institution}
+                    <time>• {date}</time>
+                  </h3>
                   <h4>{title}</h4>
                 </ResumeSubTitle>
 
                 <ul>
                   {description.map((text, index) => (
-                    <li key={index}
+                    <li
+                      key={index}
                       dangerouslySetInnerHTML={{
                         __html: text,
                       }}
@@ -89,7 +99,17 @@ const ResumePage = ({ language }) => {
             .splice(0, 4)
             .map(({ date, title, institution, details, production }) => (
               <ResumeCourse key={date}>
-                <h3>{title}<time> • {getLast(date) >= getCurrentYear() ? language.forecastOfCompletionIn : language.finishedIn} {getLast(date)}</time> </h3>
+                <h3>
+                  {title}
+                  <time>
+                    {" "}
+                    •{" "}
+                    {getLast(date) >= getCurrentYear()
+                      ? language.forecastOfCompletionIn
+                      : language.finishedIn}{" "}
+                    {getLast(date)}
+                  </time>{" "}
+                </h3>
                 <p>{institution}</p>
                 {details && details.map((text) => <p>{text}</p>)}
                 {production && <p>{production.title}</p>}
@@ -106,7 +126,10 @@ const ResumePage = ({ language }) => {
                 <ResumeCourse>
                   <h3>{type}</h3>
                   <p>
-                    {list.map(({ title }) => title).slice(0, -1).join(", ")}
+                    {list
+                      .map(({ title }) => title)
+                      .slice(0, -1)
+                      .join(", ")}
                     {`, ${language.and} `}
                     {list.map(({ title }) => title).slice(-1)}
                   </p>
@@ -129,7 +152,10 @@ const ResumePage = ({ language }) => {
         </ResumeSection>
 
         <ResumeSection>
-          <h2>{language.certification.title} <small>({language.mostRecent})</small></h2>
+          <h2>
+            {language.certification.title}{" "}
+            <small>({language.mostRecent})</small>
+          </h2>
           <hr />
           {language.certification.list
             .splice(0, 5)
@@ -137,7 +163,11 @@ const ResumePage = ({ language }) => {
               <ResumeCourse key={date}>
                 <p>
                   <time>{getYear(date)} • </time>
-                  <strong>{name}{time > 0 && ` (${time} ${language.hour})`}</strong> | {institute}
+                  <strong>
+                    {name}
+                    {time > 0 && ` (${time} ${language.hour})`}
+                  </strong>{" "}
+                  | {institute}
                 </p>
               </ResumeCourse>
             ))}

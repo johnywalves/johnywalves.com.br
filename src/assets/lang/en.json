@@ -1,5 +1,5 @@
 {
-  "description": "My name is Johny William de Oliveira Alves, I am a Web developer with over 15 years of experience. Additionally, I am a data science student, focusing on machine learning and computer vision. With experience in project management, process automation and metrics analysis. I have solid skills in several modern technologies, including JavaScript with React and Next.js, TypeScript, Python, Node, among others.",
+  "description": "My name is Johny William de Oliveira Alves, I am a Web developer with over 20 years of experience. Additionally, I am a data science student, focusing on machine learning and computer vision. With experience in project management, process automation and metrics analysis. I have solid skills in several modern technologies, including JavaScript with React and Next.js, TypeScript, Python, Node, among others.",
   "position": "Web Developer",
   "headline": "Front-end Web Developer | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS",
   "and": "and",
@@ -9,12 +9,12 @@
   "aboutMe": "About me",
   "seeMore": "See more",
   "seeLess": "See less",
-  "mostRecent": "Most recents",
+  "mostRecent": "Most recent",
   "visite": "Visite",
   "sourceCode": "Source code",
   "search": "Search",
   "searchResult": "$1 results founds in $2ms",
-  "notfound": "The page you are looking for does not exist",
+  "notFound": "The page you are looking for does not exist",
   "backToHome": "back to home",
   "resume": {
     "title": "Resume",
