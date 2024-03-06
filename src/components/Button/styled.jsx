@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
-const colorBackground = ({ secondary }) =>
-  !secondary
+const colorBackground = ({ $secondary }) =>
+  !$secondary
     ? css`
         background-color: var(--highlight) !important;
       `
@@ -10,8 +10,8 @@ const colorBackground = ({ secondary }) =>
         background-color: var(--secondary) !important;
       `
 
-const colorOutline = ({ secondary }) =>
-  !secondary
+const colorOutline = ({ $secondary }) =>
+  !$secondary
     ? css`
         background-color: var(--background);
         border: 2px solid var(--highlight) !important;
@@ -50,9 +50,9 @@ const nonLightButton = css`
   }
 `
 
-const styleButton = ({ light, selected }) => {
+const styleButton = ({ $light, selected }) => {
   if (selected) {
-    return light
+    return $light
       ? css`
           ${whiteButton}
           ${colorBackground}
@@ -63,7 +63,7 @@ const styleButton = ({ light, selected }) => {
         `
   }
 
-  return light ? lightButton : nonLightButton
+  return $light ? lightButton : nonLightButton
 }
 
 export const ButtonWrapper = styled.div`

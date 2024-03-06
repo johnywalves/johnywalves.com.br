@@ -14,13 +14,15 @@ const alignRight = css`
   align-items: flex-end;
 `
 
-const alignText = ({ left, right }) => {
-  if (left) {
+const alignText = ({ $left, $right }) => {
+  if ($left) {
     return alignLeft
   }
-  if (right) {
+
+  if ($right) {
     return alignRight
   }
+
   return alignCenter
 }
 
@@ -37,12 +39,12 @@ export const HeaderWrapper = styled.div`
   flex-direction: column;
   margin-bottom: 30px;
 
-  ${({ fit }) => (fit ? widthFit : widthFull)};
+  ${({ $fit }) => ($fit ? widthFit : widthFull)};
   ${alignText}
 `
 
-const titleSize = ({ small }) =>
-  !small
+const titleSize = ({ $small }) =>
+  !$small
     ? css`
         font-size: 2.5rem;
         margin-bottom: 12px;
@@ -62,13 +64,15 @@ const titleSize = ({ small }) =>
         `}
       `
 
-const colorText = ({ light, dark }) => {
-  if (light) {
+const colorText = ({ $light, $dark }) => {
+  if ($light) {
     return "var(--highlight)"
   }
-  if (dark) {
+
+  if ($dark) {
     return "var(--texts)"
   }
+
   return "var(--white)"
 }
 
@@ -80,8 +84,8 @@ export const HeaderTitle = styled.h2`
   ${titleSize}
 `
 
-const lineSize = ({ small }) =>
-  !small
+const lineSize = ({ $small }) =>
+  !$small
     ? css`
         border-radius: 4px;
         border-width: 4px;

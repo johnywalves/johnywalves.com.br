@@ -13,10 +13,11 @@ export const CardWrapperWrapper = styled.li`
   border-radius: 25px;
   overflow: hidden;
   width: 460px;
-  min-height: ${({ article }) => (article ? "400px" : "312px")};
+  min-height: ${({ $article }) => ($article ? "400px" : "312px")};
   z-index: 2;
 
-  box-shadow: 0 0 8px 1px var(--shadow-colors),
+  box-shadow:
+    0 0 8px 1px var(--shadow-colors),
     4px 4px 8px 1px var(--shadow-colors);
   transform: scale(0.8);
   transition: all 0.5s ease-in-out;
@@ -27,7 +28,8 @@ export const CardWrapperWrapper = styled.li`
   }
 
   &:hover {
-    box-shadow: 0 0 16px 2px var(--shadow-colors),
+    box-shadow:
+      0 0 16px 2px var(--shadow-colors),
       16px 16px 32px 4px var(--shadow-colors);
     transform: scale(1);
 

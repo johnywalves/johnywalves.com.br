@@ -68,5 +68,5 @@ export const SourceCode = styled.a`
     border-width: 0;
   }
 
-  ${({ negative }) => negative && sourceCodeNegative}
+  ${({ $negative }) => $negative && sourceCodeNegative}
 `

@@ -30,29 +30,17 @@ const SectionHero = () => {
     query {
       show: file(relativePath: { eq: "profile_show.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 400
-            layout: CONSTRAINED
-            placeholder: BLURRED
-          )
+          gatsbyImageData(width: 400, layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
       react: file(relativePath: { eq: "profile_react.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 600
-            layout: CONSTRAINED
-            placeholder: BLURRED
-          )
+          gatsbyImageData(width: 600, layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
       down: file(relativePath: { eq: "profile_down.png" }) {
         childImageSharp {
-          gatsbyImageData(
-            width: 700
-            layout: CONSTRAINED
-            placeholder: BLURRED
-          )
+          gatsbyImageData(width: 700, layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }

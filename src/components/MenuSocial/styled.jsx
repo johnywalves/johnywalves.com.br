@@ -28,7 +28,7 @@ export const MenuSocialWrapper = styled.nav`
     fill: var(--white);
   }
 
-  ${({ vertical }) => vertical && verticalWrapper}
+  ${({ $vertical }) => $vertical && verticalWrapper}
 `
 
 const verticalList = css`
@@ -41,7 +41,7 @@ export const MenuSocialList = styled.ul`
   justify-content: flex-start;
   gap: var(--8px);
 
-  ${({ vertical }) => vertical && verticalList}
+  ${({ $vertical }) => $vertical && verticalList}
 `
 
 const itemContact = css`
@@ -80,7 +80,7 @@ export const Item = styled.li`
     }
   }
 
-  ${({ contact }) => contact && itemContact}
+  ${({ $contact }) => $contact && itemContact}
 `
 
 export const Link = styled.a`

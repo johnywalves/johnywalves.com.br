@@ -20,7 +20,7 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
       <OtherProjectLink
         href={view}
         aria-label={`${Strings.visite} ${title}`}
-        negative
+        $negative={1}
         target="_blank"
         rel="nofollow noreferrer"
       >
@@ -29,7 +29,7 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
       {sourceCode && (
         <OtherProjectLink
           href={sourceCode}
-          aria-label={`${Strings.souceCode} ${title}`}
+          aria-label={`${Strings.sourceCode} ${title}`}
           target="_blank"
           rel="nofollow noreferrer"
         >

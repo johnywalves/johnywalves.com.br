@@ -6,9 +6,12 @@ import { lightThird } from "../styled"
 export const Wrapper = styled.li`
   justify-self: center;
   position: relative;
-  display: flex;
-  flex-direction: column;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-content: space-between;
   align-items: center;
+
   width: 360px;
   border-radius: var(--8px);
   padding: 80px var(--16px) var(--16px);
@@ -46,7 +49,7 @@ export const Links = styled.div`
   flex-direction: row;
   align-self: flex-end;
   justify-content: flex-end;
-  margin: var(--16px) 0 0 0;
+  margin: var(--24px) 0 0 0;
   gap: var(--8px);
 `
 
@@ -58,7 +61,6 @@ export const Title = styled.h3`
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.2rem;
-  height: 2.4rem;
   text-transform: uppercase;
   margin: var(--24px) 0 var(--8px);
 `
@@ -95,5 +97,5 @@ export const Link = styled.a`
     border-width: 0;
   }
 
-  ${({ negative }) => negative && negativeLink}
+  ${({ $negative }) => $negative && negativeLink}
 `

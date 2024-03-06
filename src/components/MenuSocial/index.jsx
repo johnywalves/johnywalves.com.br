@@ -12,9 +12,9 @@ import {
   IconWrapper,
 } from "./styled"
 
-const MenuSocial = ({ vertical, contact }) => {
+const MenuSocial = ({ vertical = false, contact = false }) => {
   return (
-    <MenuSocialWrapper vertical={vertical}>
+    <MenuSocialWrapper $vertical={vertical ? 1 : 0}>
       {!vertical && !contact && (
         <MenuSocialList>
           <Item>
@@ -43,11 +43,11 @@ const MenuSocial = ({ vertical, contact }) => {
           </Item>
         </MenuSocialList>
       )}
-      <MenuSocialList vertical={vertical}>
+      <MenuSocialList $vertical={vertical ? 1 : 0}>
         {Strings.socialLinks.map(({ icon, url, label }) => {
           const Icon = Icons[icon]
           return (
-            <Item key={icon} contact={contact}>
+            <Item key={icon} $contact={contact ? 1 : 0}>
               <Link
                 href={url}
                 title={label}
@@ -69,11 +69,6 @@ const MenuSocial = ({ vertical, contact }) => {
 MenuSocial.propTypes = {
   vertical: PropTypes.bool,
   contact: PropTypes.bool,
-}
-
-MenuSocial.defaultProps = {
-  vertical: false,
-  contact: false,
 }
 
 export default MenuSocial

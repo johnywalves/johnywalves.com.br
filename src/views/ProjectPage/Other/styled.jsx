@@ -5,8 +5,9 @@ import { lightThird } from "../styled"
 export const OtherProjectWrapper = styled.li`
   justify-self: center;
   position: relative;
-  display: flex;
-  flex-direction: column;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -80,5 +81,5 @@ export const OtherProjectLink = styled.a`
     border-width: 0;
   }
 
-  ${({ negative }) => negative && negativeLink}
+  ${({ $negative }) => $negative && negativeLink}
 `

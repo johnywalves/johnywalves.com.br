@@ -7,7 +7,7 @@ import { CardWrapperWrapper, CardWrapperCover } from "./styled"
 const CardWrapper = ({ cover, children, article, to }) => {
   if (to) {
     return (
-      <CardWrapperWrapper article={article}>
+      <CardWrapperWrapper $article={article ? 1 : 0}>
         <Link to={to}>
           <CardWrapperCover>{cover}</CardWrapperCover>
           {children}
@@ -17,7 +17,7 @@ const CardWrapper = ({ cover, children, article, to }) => {
   }
 
   return (
-    <CardWrapperWrapper article={article}>
+    <CardWrapperWrapper $article={article ? 1 : 0}>
       <CardWrapperCover>{cover}</CardWrapperCover>
       {children}
     </CardWrapperWrapper>

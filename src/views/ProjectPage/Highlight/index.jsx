@@ -101,7 +101,7 @@ const Highlight = ({
         <Link
           href={view}
           aria-label={cover}
-          negative
+          negative={1}
           target="_blank"
           rel="nofollow noreferrer"
         >

@@ -18,7 +18,7 @@ const Project = ({ title, sourceCode, view, cover }) => {
             target="_target"
             rel="noreferrer noopener"
             aria-label={`go to ${title}`}
-            negative
+            $negative={1}
           >
             <ExternalLink />
           </SourceCode>
