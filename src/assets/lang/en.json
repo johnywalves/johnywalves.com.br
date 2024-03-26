@@ -112,10 +112,6 @@
         "type": "Frameworks and Libraries",
         "list": [
           {
-            "title": "Bootstrap",
-            "icon": "Bootstrap"
-          },
-          {
             "title": "Chakra UI",
             "icon": "LightningChargeFill"
           },
@@ -198,7 +194,7 @@
         "type": "Toolbox",
         "list": [
           {
-            "title": "AWS",
+            "title": "Amazon Web Services (AWS)",
             "icon": "Aws"
           },
           {
@@ -522,7 +518,7 @@
     "title": "Education",
     "list": [
       {
-        "date": "Feb 2023 - Dec 2024",
+        "date": "Feb 2023 - Jul 2025",
         "title": "Master's in Computer Science",
         "institution": "UNESP",
         "description": [
@@ -601,7 +597,7 @@
         "description": [
           "Development of <strong>Seguralta Core</strong>, a platform to facilitate the operation of insurance brokers, allowing franchisees access to detailed commissions, renewals and policies due, pending proposals, lead management and notification to customers about overdue installments, in addition to integrating data and access from forty insurance companies",
           "Collaborative flow application (GitFlow), component versioning, robust documentation, junior mentoring, process automation, environment monitoring (access metrics, front-end errors, Core Web Vitals, among others), continuous integration and continuous delivery (CI/CD), unit testing and end-to-end testing",
-          "Technologies: HTML, HTML5, CSS, CSS3, JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, Testing Library, Jest, and Cypress"
+          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, Testing Library, Jest, and Cypress"
         ]
       },
       {
@@ -610,7 +606,7 @@
         "institution": "Hepta Tecnologia e Informática",
         "description": [
           "Project <strong>CREA-SP</strong>: Front-end development of the platform for the application of ART (Technical Responsibility Note) in Works and Services, using micro-frontend and monorepo",
-          "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI, and Azure DevOps"
+          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
         ]
       },
       {
@@ -618,10 +614,8 @@
         "title": "Senior Front-end Developer",
         "institution": "CI&T Software",
         "description": [
-          "Project <strong>Coca-Cola</strong>: Experience in product promotion, marketing campaigns, and lead generation on platforms in Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring",
-          "Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
-          "Project <strong>Anbima</strong>: Development of a portfolio information collection system and restructuring of financial product data publication, with a focus on improving performance and search engine results",
-          "Technologies: SEO, HTML, CSS, JavaScript, React, Next.js, and Gitlab"
+          "Project <strong>Coca-Cola</strong>: Experience in product promotion, marketing campaigns, and lead generation on platforms in Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring. Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
+          "Project <strong>Anbima</strong>: Development of a portfolio information collection system and restructuring of financial product data publication, with a focus on improving performance and search engine results. Technologies: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js, and Gitlab"
         ]
       },
       {
@@ -640,8 +634,7 @@
         "title": "FullStack Developer",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
-          "Responsible for the development of the <strong>Invillia Apps</strong> suite of applications, with a focus on optimizing memory usage during integration with Microsoft Teams and data visualization",
-          "Engagement covering both front-end and back-end aspects",
+          "Responsible for developing the <strong>Invillia Apps</strong> application suite, for team management and remote work, with a focus on optimizing memory use during integration with Microsoft Teams and data visualization, working from the interface and integration with Microsoft Teams (front-end) and data processing with delivery via APIs (back-end)",
           "Technologies: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express, and MySQL"
         ]
       },
@@ -652,7 +645,7 @@
         "description": [
           "Development and coordination with third parties of the beneficiaries portal (UI/UX) with financial management, exams, and appointment scheduling",
           "Planning and development of an API for user authentication and a medical guide",
-          "Creation of an environment for test automation, monitoring, and CI/CD of management systems and service delivery",
+          "Creation of an environment with test automation, monitoring and CI/CD of management and service provision systems",
           "Technologies: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat, and Jenkins"
         ]
       },
