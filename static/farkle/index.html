@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#e0138c" />
+
+    <title>Farkle Poker</title>
+    <meta name="title" property="og:title" content="Farkle Poker" />
+    <meta
+      name="description"
+      property="og:description"
+      content="Page Description"
+    />
+    <meta
+      name="image"
+      property="og:image"
+      itemprop="image"
+      content="/path/to/thumbnail"
+    />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="url" property="og:url" content="https://url.page" />
+    <meta name="site_name" property="og:site_name" content="Page Name" />
+    <meta name="locale" property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://url.page" />
+    <meta name="twitter:title" content="Page Title" />
+    <meta name="twitter:description" content="Page Description" />
+    <meta name="twitter:image" content="/path/to/thumbnail" />
+
+    <style>
+      /* Reset CSS */
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      /* Content CSS */
+      :root {
+        /* Primary Colors */
+        --color-primary-light: #f6e4df;
+        --color-primary-pure: #880000;
+        --color-primary-dark: #250d01;
+        /* Secondary Colors */
+        --color-secondary-light: #c8d3d8;
+        --color-secondary-pure: #07485b;
+        --color-secondary-dark: #0b1519;
+        /* Neutral colors */
+        --color-neutral-100: #f5f5f5;
+        --color-neutral-400: #a4a4a4;
+        --color-neutral-shadow: #a4a4a480;
+        --color-neutral-900: #171717;
+      }
+
+      a,
+      a:hover,
+      a:visited {
+        text-decoration: none;
+        color: var(--color-primary-pure);
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      body {
+        background: var(--color-neutral-100);
+        color: var(--color-neutral-900);
+
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+      }
+
+      .dice {
+        width: 5rem;
+        height: 5rem;
+
+        background-color: var(--color-primary-light);
+        border: 2px solid var(--color-neutral-400);
+        border-radius: 0.5rem;
+        box-shadow: 5px 5px 2px 2px var(--color-neutral-shadow);
+        padding: 0.75rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .dice.secret {
+        justify-content: center;
+
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      .dice .flex-start {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+      .dice .flex-end {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .dice .spaced {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .dot {
+        width: 0.875rem;
+        height: 0.875rem;
+        background-color: var(--color-primary-dark);
+        border-radius: 50%;
+      }
+
+      .dice.one {
+        justify-content: center;
+      }
+
+      .dice.one .dot {
+        background-color: var(--color-primary-pure);
+      }
+
+      .row {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      button.disable {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.8;
+        color: var(--color-neutral-400);
+      }
+
+      #scores {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #scores p {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      #scores p span {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Farkle Poker</h1>
+    </header>
+
+    <main>
+      <div class="row">
+        <button id="btn_new_game" onclick="newGame()">Novo Jogo</button>
+        <button id="btn_next_phase" onclick="nextPhase()" class="disable">
+          Próxima Fase
+        </button>
+      </div>
+
+      <div id="dice_challenger" class="row hidden">
+        <div class="dice"></div>
+        <div class="dice"></div>
+        <div class="dice"></div>
+      </div>
+
+      <div id="dice_table" class="row hidden">
+        <div class="dice"></div>
+        <div class="dice"></div>
+        <div class="dice"></div>
+      </div>
+
+      <div id="dice_player" class="row hidden">
+        <div class="dice"></div>
+        <div class="dice"></div>
+        <div class="dice"></div>
+      </div>
+
+      <div id="scores">
+        <p class="score_player">Player Score: <span>0</span></p>
+        <p class="score_challenger">Challenger Score: <span>0</span></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="https://www.johnywalves.com.br" target="_blank">
+          Johny W. Alves
+        </a>
+      </p>
+    </footer>
+  </body>
+
+  <script type="text/javascript">
+    const dg = ["one", "two", "three", "four", "five", "six"]
+    const game_phases = {
+      FIRST_BET: 1,
+      FIRST_REVEAL: 2,
+      SECOND_BET: 3,
+      SECOND_REVEAL: 4,
+      THIRD_BET: 5,
+      THIRD_REVEAL: 6,
+      FINISHED: 7,
+    }
+
+    let game
+
+    function getDotDices(number) {
+      if (number === 1) {
+        return "<div class='dot'></div>"
+      } else if (number === 2) {
+        return "<div class='flex-start'><div class='dot'></div></div> <div class='flex-end'><div class='dot'></div></div>"
+      } else if (number === 3) {
+        return "<div class='flex-start'><div class='dot'></div></div> <div class='dot'></div> <div class='flex-end'><div class='dot'></div></div>"
+      } else if (number === 4) {
+        return "<div class='spaced'><div class='dot'></div><div class='dot'></div></div> <div class='spaced'><div class='dot'></div><div class='dot'></div></div>"
+      } else if (number === 5) {
+        return "<div class='spaced'><div class='dot'></div><div class='dot'></div></div> <div class='dot'></div> <div class='spaced'><div class='dot'></div><div class='dot'></div></div>"
+      } else if (number === 6) {
+        return "<div class='spaced'><div class='dot'></div><div class='dot'></div></div>  <div class='spaced'><div class='dot'></div><div class='dot'></div></div> <div class='spaced'><div class='dot'></div><div class='dot'></div></div>"
+      }
+    }
+
+    function getScoresDices(list) {
+      list.sort()
+
+      return 0
+    }
+
+    function rollDice() {
+      return Math.round(Math.random() * 5) + 1
+    }
+
+    function drawDices(id, numbers, shows) {
+      document.querySelectorAll(`#${id} .dice`).forEach((element, index) => {
+        const number = numbers[index]
+        const show = shows[index]
+
+        element.classList.remove("secret")
+        dg.forEach(function (text) {
+          element.classList.remove(text)
+        })
+
+        if (show) {
+          element.innerHTML = getDotDices(number)
+          element.classList.add(dg[number - 1])
+        } else {
+          element.innerHTML = "<p>?</p>"
+          element.classList.add("secret")
+        }
+      })
+    }
+
+    function draw() {
+      const { player, challenger, table, phase } = game
+
+      drawDices("dice_player", player, [true, true, true])
+
+      drawDices("dice_table", table, [
+        phase >= game_phases.FIRST_BET,
+        phase >= game_phases.SECOND_BET,
+        phase >= game_phases.THIRD_BET,
+      ])
+
+      drawDices("dice_challenger", challenger, [
+        phase >= game_phases.FIRST_REVEAL,
+        phase >= game_phases.SECOND_REVEAL,
+        phase >= game_phases.THIRD_REVEAL,
+      ])
+
+      if (phase === game_phases.THIRD_REVEAL) {
+        game.pointsPlayer = getScoresDices([...player, ...table])
+        game.challengerPlayer = getScoresDices([...player, ...challenger])
+
+        document.getElementById("btn_new_game").classList.remove("disable")
+        document.getElementById("btn_next_phase").classList.add("disable")
+      }
+    }
+
+    function newGame() {
+      game = {
+        player: [rollDice(), rollDice(), rollDice()].sort(),
+        pointsPlayer: 0,
+        challenger: [rollDice(), rollDice(), rollDice()].sort(),
+        challengerPlayer: 0,
+        table: [rollDice(), rollDice(), rollDice()].sort(),
+        phase: game_phases.FIRST_BET,
+      }
+
+      document.getElementById("btn_new_game").classList.add("disable")
+      document.getElementById("btn_next_phase").classList.remove("disable")
+
+      document.getElementById("dice_player").classList.remove("hidden")
+      document.getElementById("dice_table").classList.remove("hidden")
+      document.getElementById("dice_challenger").classList.remove("hidden")
+
+      draw()
+    }
+
+    function nextPhase() {
+      game.phase += 1
+      draw()
+    }
+  </script>
+</html>
