@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -218,28 +218,26 @@
     }
 
     footer {
-      margin: 1rem 0 3rem;
-    }
+      margin: 2rem 0;
 
-    footer h1 {
-      text-align: center;
-      font-size: 1.2rem;
-      font-weight: 400;
-      margin: 1rem 0;
-    }
-
-    footer .logos {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
-    footer img {
-      height: 7rem;
-      width: auto;
-      margin: 0 1rem;
+    footer p {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    footer a,
+    footer a:hover,
+    footer a:visited {
+      color: var(--cardSideEnd);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     .spinner {
@@ -284,7 +282,14 @@
       <div class="spinner"></div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="https://www.johnywalves.com.br" target="_blank">
+          Johny W. Alves
+        </a>
+      </p>
+    </footer>
   </body>
 
   <script type="text/javascript">
