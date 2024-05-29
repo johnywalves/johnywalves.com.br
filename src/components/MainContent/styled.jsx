@@ -330,17 +330,20 @@ export const MainContentWrapper = styled.section`
     & button {
       padding: 12px 24px;
       color: var(--texts);
-      background-color: var(--background-card); 
+      background-color: var(--background-card);
       font-size: 1rem;
       font-weight: 700;
       border: 2px solid var(--highlight);
       border-radius: 8px;
-      transition: opacity 0.2s, color 0.25s, background-color 0.25s;
+      transition:
+        opacity 0.2s,
+        color 0.25s,
+        background-color 0.25s;
 
       &:not(.disabled):hover {
         cursor: pointer;
         color: var(--background);
-        background-color: var(--highlight); 
+        background-color: var(--highlight);
       }
 
       &.disabled {

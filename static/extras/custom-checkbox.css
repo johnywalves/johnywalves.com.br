@@ -1,0 +1,62 @@
+.custom-checkout-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--8px);
+
+  width: 20rem;
+  margin: 0 auto var(--32px);
+}
+
+.custom-checkout-wrapper div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--16px);
+}
+
+.custom-checkout-wrapper label {
+  color: var(--texts);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.custom-checkout-wrapper label.disabled {
+  color: var(--color-line);
+}
+
+.custom-checkout {
+  appearance: none;
+  position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-color: var(--white);
+  border: 0.125rem solid var(--texts);
+  border-radius: 0.25rem;
+}
+
+.custom-checkout::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  transition: 0.125s transform ease-in-out;
+  box-shadow: inset 1rem 1rem var(--white);
+}
+
+.custom-checkout:checked {
+  background-color: var(--highlight);
+  border-color: var(--highlight);
+}
+
+.custom-checkout:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-checkout:disabled {
+  opacity: 0.25;
+}
