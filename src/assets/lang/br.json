@@ -1,12 +1,12 @@
 {
-  "description": "Meu nome é Johny William de Oliveira Alves, sou um desenvolvedor Web com mais de 20 anos de experiência. Além disso, sou estudante de ciência de dados, com foco em aprendizado de máquina (machine learning) e visão computacional. Com experiência em gestão de projetos, automação de processos e análise de métricas. Tenho habilidades sólidas em diversas tecnologias modernas, incluindo JavaScript com React e Next.js, TypeScript, Python, Node, entre outras.",
+  "description": "Meu nome é Johny William de Oliveira Alves, desenvolvedor Web com mais de 20 anos de experiência. Estudante de ciência de dados, com foco em aprendizado de máquina (machine learning) e visão computacional. Com experiência em gestão de projetos, automação de processos e análise de métricas. Tenho habilidades sólidas em diversas tecnologias modernas, incluindo JavaScript com React e Next.js, TypeScript, Python, Node, entre outras.",
   "position": "Desenvolvedor Web",
   "headline": "Desenvolvedor Front-end Web | HTML | CSS | JavaScript | TypeScript | React | Next.js | NodeJS",
   "and": "e",
   "hour": "horas",
   "finishedIn": "Concluído em",
   "forecastOfCompletionIn": "Previsão de conclusão em",
-  "aboutMe": "Sobre mim",
+  "aboutMe": "Sobre",
   "seeMore": "Ver mais",
   "seeLess": "Ver menos",
   "mostRecent": "Mais recentes",
@@ -29,7 +29,7 @@
       }
     ]
   },
-  "status": "Brasileiro | Solteiro | 36 anos",
+  "status": "Brasileiro | Solteiro | 37 anos",
   "live": "Residente em São José do Rio Preto - São Paulo - Brasil",
   "contact": {
     "title": "Contatos",
@@ -229,14 +229,16 @@
         "name": "Professional Scrum Developer I",
         "institute": "Scrum.org",
         "img": "/cert/professional_scrum_developer_I.pdf",
-        "icon": "toolbox"
+        "icon": "toolbox",
+        "time": 0
       },
       {
         "date": "2022-07-08 00:00:00-0300",
         "name": "Voxy Proficiency Achievement Certificate - High Intermediate English (B2)",
         "institute": "Voxy",
         "img": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
-        "icon": "language"
+        "icon": "language",
+        "time": 0
       },
       {
         "date": "2020-04-19 00:00:00-0300",

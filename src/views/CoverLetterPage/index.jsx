@@ -17,10 +17,12 @@ const CoverLetterPage = ({ language }) => {
             <li>{language.status}</li>
             <li>{language.live}</li>
             <li>
-              <strong>contato</strong>@johnywalves.com.br | <strong>www</strong>.johnywalves.com.br
+              <strong>E-mail:</strong> contato@johnywalves.com.br |{" "}
+              <strong>Web:</strong> www.johnywalves.com.br
             </li>
             <li>
-              <strong>github</strong>.com/johnywalves | <strong>linkedin</strong>.com/in/johnywalves
+              <strong>GitHub:</strong> www.github.com/johnywalves |{" "}
+              <strong>LinkedIn:</strong> www.linkedin.com/in/johnywalves
             </li>
           </ul>
         </ResumePerson>
@@ -30,7 +32,11 @@ const CoverLetterPage = ({ language }) => {
         </ResumeSection>
 
         <ResumeSection>
-          {language.coverLetter.map((text, index) => <p key={index} className="cover">{text}</p>)}
+          {language.coverLetter.map((text, index) => (
+            <p key={index} className="cover">
+              {text}
+            </p>
+          ))}
         </ResumeSection>
       </ResumeSheet>
     </ResumeWrapper>
