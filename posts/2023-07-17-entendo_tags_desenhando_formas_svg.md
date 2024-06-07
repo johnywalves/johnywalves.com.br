@@ -125,7 +125,7 @@ Como diz o segundo axioma da geometria euclidiana plana "dois pontos distintos d
 
 ### Polilinha
 
-Na tag `polyline` formamos uma série sequêncial de linhas, onde o preenchimento é a área interna formado pelas linhas e uma linha reta entre o primeiro e último ponto
+Na tag `polyline` formamos uma série sequencial de linhas, onde o preenchimento é a área interna formado pelas linhas e uma linha reta entre o primeiro e último ponto
 
 ```xml
 <polyline points="0,0 40,20 40,75 75,40 100,100" stroke="#e0138c" fill="f6f6f640"  stroke-width="3" />

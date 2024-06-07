@@ -22,7 +22,7 @@ Pode ser vista em funcionamento em [Jumping Letters](/web/jumpingletters.html)
 
 ## Como fazer
 
-Contruindo estrutura em HMTL para receber as configurações
+Construindo estrutura em HTML para receber as configurações
 
 ```html
 <h1>

@@ -39,9 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
     query {
       AllPosts: allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
-        filter: {
-          frontmatter: { category: { ne: "Comic" } }
-        }
+        filter: { frontmatter: { category: { ne: "Comic" } } }
       ) {
         edges {
           node {
@@ -95,18 +93,35 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const AllPostsEdges = result.data.AllPosts.edges.filter(({ node: { frontmatter: { published } } }) => published !== false)
+    const AllPostsEdges = result.data.AllPosts.edges.filter(
+      ({
+        node: {
+          frontmatter: { published },
+        },
+      }) => published !== false
+    )
 
-    const categories = Object.entries(AllPostsEdges
-      .reduce((acumulator, { node: { frontmatter: { category } } }) => {
-        const currCount = acumulator[category] ?? 0;
-        return {
-          ...acumulator,
-          [category]: currCount + 1,
-        }
-      }, {}))
+    const categories = Object.entries(
+      AllPostsEdges.reduce(
+        (
+          acumulator,
+          {
+            node: {
+              frontmatter: { category },
+            },
+          }
+        ) => {
+          const currCount = acumulator[category] ?? 0
+          return {
+            ...acumulator,
+            [category]: currCount + 1,
+          }
+        },
+        {}
+      )
+    )
       .sort(([, a], [, b]) => b - a)
-      .map(([category,]) => category)
+      .map(([category]) => category)
 
     // Páginas de artigos
     result.data.AllPosts.edges.forEach(({ node }) => {
@@ -115,18 +130,19 @@ exports.createPages = ({ graphql, actions }) => {
         path: `/__generated${node.fields.slug}`,
         component: path.resolve(`src/templates/open-graph-image.jsx`),
         context: {
-          slug: node.fields.slug
+          slug: node.fields.slug,
         },
       })
 
       // Página dos Artigos
-      const bylast = AllPostsEdges.find(({ node: nodeLast }) =>
-        node.fields.slug !== nodeLast.fields.slug
-      ),
-        byCategory = AllPostsEdges.find(({ node: nodeLast }) =>
-          node.fields.slug !== nodeLast.fields.slug
-          && node.frontmatter.category === nodeLast.frontmatter.category
-          && (!bylast || bylast.node.fields.slug !== nodeLast.fields.slug)
+      const bylast = AllPostsEdges.find(
+          ({ node: nodeLast }) => node.fields.slug !== nodeLast.fields.slug
+        ),
+        byCategory = AllPostsEdges.find(
+          ({ node: nodeLast }) =>
+            node.fields.slug !== nodeLast.fields.slug &&
+            node.frontmatter.category === nodeLast.frontmatter.category &&
+            (!bylast || bylast.node.fields.slug !== nodeLast.fields.slug)
         )
 
       createPage({
@@ -135,16 +151,14 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: node.fields.slug,
           recommendedLast: bylast?.node,
-          recommendedCategory: byCategory?.node
+          recommendedCategory: byCategory?.node,
         },
       })
     })
 
     // Listagem de artigos
     const postsPerPage = 12
-    const numPagesPosts = Math.ceil(
-      AllPostsEdges.length / postsPerPage
-    )
+    const numPagesPosts = Math.ceil(AllPostsEdges.length / postsPerPage)
 
     Array.from({ length: numPagesPosts }).forEach((_, index) => {
       createPage({
@@ -157,21 +171,30 @@ exports.createPages = ({ graphql, actions }) => {
           currentPage: index + 1,
           prevPage: index === 1 ? `/blog/` : `/page/${index}`,
           nextPage: `/page/${index + 2}`,
-          categories
+          categories,
         },
       })
     })
 
     // Listagem de artigos por categorias
-    categories.forEach(name => {
+    categories.forEach((name) => {
       const categoryName = name.toLowerCase()
       const numPagesCategory = Math.ceil(
-        AllPostsEdges.filter(({ node: { frontmatter: { category } } }) => category === name).length / postsPerPage
+        AllPostsEdges.filter(
+          ({
+            node: {
+              frontmatter: { category },
+            },
+          }) => category === name
+        ).length / postsPerPage
       )
 
       Array.from({ length: numPagesCategory }).forEach((_, index) => {
         createPage({
-          path: index === 0 ? `/category/${categoryName}/` : `/category/${categoryName}/${index + 1}`,
+          path:
+            index === 0
+              ? `/category/${categoryName}/`
+              : `/category/${categoryName}/${index + 1}`,
           component: path.resolve(`src/templates/blog-category.jsx`),
           context: {
             limit: postsPerPage,
@@ -179,9 +202,12 @@ exports.createPages = ({ graphql, actions }) => {
             category: name,
             numPages: numPagesCategory,
             currentPage: index + 1,
-            prevPage: index === 1 ? `/category/${categoryName}/` : `/category/${categoryName}/${index}`,
+            prevPage:
+              index === 1
+                ? `/category/${categoryName}/`
+                : `/category/${categoryName}/${index}`,
             nextPage: `/category/${categoryName}/${index + 2}`,
-            categories
+            categories,
           },
         })
       })

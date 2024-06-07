@@ -27,7 +27,7 @@ Na variável `og:type` informar o tipo de conteúdo como `website`, `article`, `
 Também alterar e informar as cores na lista dentro do `:root` completando com outras variáveis, não esquecendo de informar a cor do tema na tag `theme-color`
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -114,7 +114,7 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
 
 ## Metatags adicionais
 
-Algumas meta tags que podem ser incluidas
+Algumas meta tags que podem ser incluídas
 
 ### Autor do conteúdo
 
@@ -142,7 +142,7 @@ No exemplo está como PNG, substituir o tipo para outras extensões de arquivos
 <link rel="icon" href="/path/to/icon.png" type="image/png" />
 ```
 
-## Referênciar arquivos
+## Referenciar arquivos
 
 Podemos referências arquivos externos como
 

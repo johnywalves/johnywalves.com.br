@@ -20,7 +20,7 @@ Como passar uma boa mensagem?
 
 ## Por que importa
 
-Facilitar a compreenção das informações que se deseja transmitir, apresentando os pontos
+Facilitar a compreensão das informações que se deseja transmitir, apresentando os pontos
 
 ## Conte uma história
 
@@ -69,8 +69,6 @@ A visualização de dados é uma ferramenta importante para compreender e comuni
 
 "Os dados sozinhos não têm poder. O poder dos dados só é liberado quando esses dados são compartilhados com outras pessoas e usados para contar histórias" - Cole Nussbaumer Knaflic, Storytelling com Dados.
 
-## Citação
-
 ## Referências
 
 [Cole Nussbaunmer Knaflic - Storytelling com dados](https://amzn.to/410Xm0e)
@@ -79,7 +77,7 @@ A visualização de dados é uma ferramenta importante para compreender e comuni
 
 [Simple Data Visualization Techniques to Make Your Charts 110% Better](https://infogram.com/blog/simple-data-visualization-techniques/)
 
-# Notas de Aula
+## Notas de Aula
 
 A visualização de dados é uma ferramenta poderosa e eficaz para analisar e compreender grandes quantidades de informações. Com a crescente quantidade de dados disponíveis em todo o mundo, a visualização de dados tornou-se cada vez mais importante para as empresas e organizações em todos os setores.
 

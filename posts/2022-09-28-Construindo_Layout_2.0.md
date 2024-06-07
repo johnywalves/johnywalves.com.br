@@ -44,7 +44,7 @@ Para produzir os grafismos usei conhecimento prévio sobre o Inkscape, conquista
 
 Acabei me empolgando com os triângulos mudando as formas mais arredondas para composição de triângulos
 
-![Área de habilidades com background com vários triângulos](/figures/layout_triangles.jpg "Porfólio com decoração de triângulos")
+![Área de habilidades com background com vários triângulos](/figures/layout_triangles.jpg "Portfólio com decoração de triângulos")
 
 Apaixonado pelos triângulos e as cores recomendadas <span style="background-color: #e0138c;" class="text-color">#e0138c</span>, <span style="background-color: #8857c3;" class="text-color">#8857c3</span> e <span style="background-color: #44b5ef;" class="text-color light">#44b5ef</span>, no processo de experimentação apareceu o efeito neon, abrindo a possibilidade de aloprar um pouco mais na área de projetos
 
@@ -64,7 +64,7 @@ Levando em consideração que a página deve funcionar bem com o tema claro e o 
 
 ![Horizonte em neon com montanhas ao fundo](/figures/layout_horizont.jpg "Fundo da página no tema claro e escuro")
 
-Resgatando a experiência [Neon Letters](/web/neonletters.html), para criar um letreiro neon, com a composição de texto branco e várias sombras, criei o descrição da página. No fundo ficou um pouco vazio, voltando ao [Logos By Nick](https://www.youtube.com/c/LogosByNick) encontrei nos tutoriais como fazer uma séries de linhas para dar efeito de fluídos, com uso de lápis ondulado com alta suavição e interpolação de caminhos (_paths_), que harmonizou demais com o letreiro
+Resgatando a experiência [Neon Letters](/web/neonletters.html), para criar um letreiro neon, com a composição de texto branco e várias sombras, criei o descrição da página. No fundo ficou um pouco vazio, voltando ao [Logos By Nick](https://www.youtube.com/c/LogosByNick) encontrei nos tutoriais como fazer uma séries de linhas para dar efeito de fluídos, com uso de lápis ondulado com alta suavização e interpolação de caminhos (_paths_), que harmonizou demais com o letreiro
 
 ![Luminária com várias linhas no fundo com efeitos de fluidos](/figures/layout_letters.jpg "Letreiro neon com fundo de fluídos")
 
@@ -84,7 +84,7 @@ Incorporando as configurações de SEO orientado pela documentação [Adicionand
 
 ![Homem em tons de cinza abaixado olhando para frente](/figures/layout_thumbnail.jpg "Reagindo a barra descendo")
 
-Realizado com sucesso para todas as redes sociais testada, exceto no Whatsapp, futuramento resolvo essa situação ou se souber o que falta comente por favor ou entre em contato por alguma rede social
+Realizado com sucesso para todas as redes sociais testada, exceto no Whatsapp, futuramente resolvo essa situação ou se souber o que falta comente por favor ou entre em contato por alguma rede social
 
 ### React Version
 
@@ -125,7 +125,7 @@ Mas a melhor parte foi a adição dos links das categorias para ajudar no moment
 
 ![Lista de artigos com barra no topo com links e uma foto grande dentro de um triângulo](/figures/layout_new_list.jpg "Lista nova de artigos")
 
-Para mim na página de tirinhas, não fazia sentido usar uma imagen minha juntos com os personagens, então criei uma versão minha dentro do mesmo modelo deles
+Para mim na página de tirinhas, não fazia sentido usar uma imagem minha juntos com os personagens, então criei uma versão minha dentro do mesmo modelo deles
 
 ![Personagem de tirinha sorrindo com barba e camiseta cor vinho](/figures/layout_character.png "Personagem de tirinhas sorrindo")
 

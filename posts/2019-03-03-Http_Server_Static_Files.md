@@ -12,11 +12,11 @@ published: true
 cheatsheet: false
 ---
 
-Disponilizar arquivos estáticos para projetos em desenvolvimento, não usar em produção, ou somente para disponilizar arquivos de forma simples, quando o index.html não estiver disponível
+Disponibilizar arquivos estáticos para projetos em desenvolvimento, não usar em produção, ou somente para entregar arquivos de forma simples, quando o index.html não estiver disponível
 
 ## JavaScript
 
-Fazendo uso do Node, NPM e data biblioteca [Serve](https://www.npmjs.com/package/serve), instalando de forma simples com a diretiva `-g` para disponilizar para todo o sistema
+Fazendo uso do Node, NPM e data biblioteca [Serve](https://www.npmjs.com/package/serve), instalando de forma simples com a diretiva `-g` para disponibilizar para todo o sistema
 
 ```shell
 npm i serve -g
@@ -28,13 +28,13 @@ Com o shell localizado na pasta
 serve
 ```
 
-Ou em uma pasta pai, para disponilizar uma pasta filha com:
+Ou em uma pasta pai, para disponibilizar uma pasta filha com:
 
 ```shell
 serve -s <nome da pasta>
 ```
 
-Disponilizando o acesso em [127.0.0.1:5050](127.0.0.1:5050)
+Disponibilizando o acesso em [127.0.0.1:5050](127.0.0.1:5050)
 
 ## Python
 
@@ -44,4 +44,4 @@ Usando a biblioteca HTTP que faz parte do core do Python, com o ambiente configu
 python -m http.server
 ```
 
-Disponilizando o acesso em [127.0.0.1:8000](127.0.0.1:8000)
+Disponibilizando o acesso em [127.0.0.1:8000](127.0.0.1:8000)

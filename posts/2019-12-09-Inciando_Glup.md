@@ -2,7 +2,7 @@
 title: Iniciando com Gulp
 description: Automação de processo de desenvolvimento Web com hot reloading e minify
 date: 2019-12-09 11:03:00 -0300
-category: Web
+category: JavaScript
 featuredImage: ./featured/gulp-1.jpg
 coverImage: /figures/gulp-1.jpg
 tags:

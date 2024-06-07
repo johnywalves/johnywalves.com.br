@@ -30,15 +30,23 @@ collections:
           widget: "select",
           options:
             [
+              "Bem-estar",
+              "Boas práticas"
+              "Comic",
+              "CSS",
+              "D3.js",
+              "Docker",
+              "Gatsby",
+              "Git",
               "Python",
               "Java",
-              "JS",
-              "R",
-              "Web",
-              "Dev",
+              "JavaScript"
               "Jekyll",
-              "Windows",
               "Linux",
+              "R",
+              "React",
+              "Web",
+              "Windows"
             ],
         }
       - { label: "Tags", name: "tags", widget: "list" }

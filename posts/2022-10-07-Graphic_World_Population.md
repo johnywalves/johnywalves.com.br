@@ -4,7 +4,7 @@ title: Gráfico crescimento da População Mundial
 description: Aumento da população mundial por continentes com a biblioteca D3
 featuredImage: ./featured/planet_night-1.jpg
 coverImage: /figures/planet_night-1.jpg
-category: D3
+category: D3.js
 tags:
   - Visualização
   - Gráficos
@@ -173,7 +173,7 @@ const legends = svg
   )
 ```
 
-Definição dos dominio, a apresentação dos valores, dos eixos com definição de tamanho em pixels e o que cada pixel deve representar
+Definição dos domínios, a apresentação dos valores, dos eixos com definição de tamanho em pixels e o que cada pixel deve representar
 
 ```javascript
 // Definição da escala das linhas

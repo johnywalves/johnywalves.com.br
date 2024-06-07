@@ -4,7 +4,7 @@ title: Análise dos personagens Marvel
 description: Exploração de fonte de dados dos personagens nos quadrinhos Marvel
 featuredImage: ./featured/speech_bubble-1.jpg
 coverImage: /figures/speech_bubble-1.jpg
-category: D3
+category: D3.js
 tags:
   - Visualização
   - Gráficos
@@ -33,7 +33,7 @@ Para realizar a agregação de dados usamos um trecho de código de Python
 import json
 import pandas as pd
 
-# Declarar função para extrair e agregar a contagem por valor único da columa
+# Declarar função para extrair e agregar a contagem por valor único da coluna
 def get_data(field):
     # Agregar e contar
     counted = df_characters.groupby(field).name.nunique()
@@ -65,7 +65,7 @@ Salvando os valores agregados no arquivo `data.json` preparados para visualizaç
 
 Vamos gerar cinco gráficos da mesma maneira, gráficos de pizza com apresentação de proporcionalidade
 
-Criamos uma função para realizar a operação, no trecho a abaixo cada etapa está comentada para facilitar a compreenção
+Criamos uma função para realizar a operação, no trecho a abaixo cada etapa está comentada para facilitar a compreensão
 
 ```javascript
 function drawPie(data, selector_wrapper) {
@@ -612,7 +612,7 @@ Aparentemente não, nem a metade dos personagens possuem uma identidade secreta 
 
 ## Personagem de quadrinho não morre?
 
-Vamos verificar a realizadade dessa afirmação, podemos visualizar a relação entre heróis vivos e mortos
+Vamos verificar a realidade dessa afirmação, podemos visualizar a relação entre heróis vivos e mortos
 
 ```javascript
 const data_alive = [
@@ -633,7 +633,7 @@ Com a geração dos gráficos podemos ver que uma parte das figuras não voltage
 
 Aqui podemos mostrar como é mentira que personagem de quadrinho não morre, temos 22% de mortos
 
-Como todo mundo que fez parte dos quadrinhos é relacionado como personagem, pesosas históricas como Winston Churchill e o Adolf Hitler estão na lista, e ressusitar essas pessoas seria muuuito estranho
+Como todo mundo que fez parte dos quadrinhos é relacionado como personagem, pessoas históricas como Winston Churchill e o Adolf Hitler estão na lista, e ressuscitar essas pessoas seria muuuito estranho
 
 ## Referências
 

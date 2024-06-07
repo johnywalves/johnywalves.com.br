@@ -40,7 +40,7 @@ Mudar para uma branch local
 git checkout <nome da branch>
 ```
 
-Criar branch e mudar para ela apartir da atual
+Criar branch e mudar para ela a partir da atual
 
 ```bash
 git checkout <nome da branch> -b
@@ -52,7 +52,7 @@ Adicionar arquivos para futuro commit
 git add <nome do arquivo ou "." para todos>
 ```
 
-Commitar: concluir as alterações e regristrar na base de dados do git
+Commitar: concluir as alterações e registrar na base de dados do git
 
 ```bash
 git commit -m "<desrição do commit>"

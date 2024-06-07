@@ -4,7 +4,7 @@ title: Relação de bilheterias em filmes de ação
 description: Visualização de dados com D3.js e gráfico de dispersão com filmes de grandes bilheterias
 featuredImage: ./featured/movie-1.jpg
 coverImage: /figures/movie-1.jpg
-category: D3
+category: D3.js
 tags:
   - Visualização
   - Gráficos
@@ -199,7 +199,7 @@ function drawGraphic(data) {
     .selectAll("circle")
     .data(data)
     .join(
-      // Valores inciais para os circulos
+      // Valores inciais para os círculos
       (enter) =>
         enter
           .append("circle")
@@ -225,7 +225,7 @@ function drawGraphic(data) {
       (exit) => exit.transition().duration(500).attr("r", 0).remove()
     )
 
-  // Ocultar o icone de carregar
+  // Ocultar o ícone de carregar
   d3.select("#loading_graphic").style("display", "none")
 }
 ```

@@ -18,7 +18,7 @@ Automatizar é criar um robô para realizar tarefas repetitivas, do dicionário:
 
 > **Robô**
 >
-> de 1923, "pessoa mecânica", "pessoa que trabalha ou realizar atividades inteiramente mecanicamente" da tradução em inglês de 1920 da peça "R.U.R." ("Rossum's Universal Robots") por Karel Capek (1890-1938), do tcheco _robotnik_ "trabalhador forçado,", de _robota_ "trabalho forçado, serviço compusório, labuta," ...
+> de 1923, "pessoa mecânica", "pessoa que trabalha ou realizar atividades inteiramente mecanicamente" da tradução em inglês de 1920 da peça "R.U.R." ("Rossum's Universal Robots") por Karel Capek (1890-1938), do tcheco _robotnik_ "trabalhador forçado,", de _robota_ "trabalho forçado, serviço compulsório, labuta," ...
 >
 > Fonte: [Tradução livre de Etymology Online](https://www.etymonline.com/search?q=robot)
 
@@ -48,7 +48,7 @@ Geração do código para nosso pequeno robô
 
 ### Abrir o navegador
 
-Importação da biblioteca do Pupeeteer
+Importação da biblioteca do Puppeteer
 
 ```javascript
 const puppeteer = require("puppeteer")

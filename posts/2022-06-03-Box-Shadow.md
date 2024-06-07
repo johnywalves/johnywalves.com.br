@@ -30,9 +30,9 @@ Detalhamento dos atributos
 
 - **deslocamento horizontal**: Quando a sombra está projetada para **direita** quando positivo e esquerda para valores negativas;
 - **deslocamento vertical**: Quando a sombra está projetada para **baixa** quando positivo e cima para valores negativas;
-- **raio de desfoque**: Quando a sombra possui desfoque devido a difusão da luz, a irregularidade de inscidência dela;
-- **raio de espalhamento** (opcional): Tamanho adicional para a sombra, somando medida apartir do centro ou reduzindo da borda quando negativo, uma boa indicação de ângulo da luz sobre o objeto;
-- **cor**: Cor da sombra, lembrado a possiblidade de controlar opacidade pela cor.
+- **raio de desfoque**: Quando a sombra possui desfoque devido a difusão da luz, a irregularidade de incidência dela;
+- **raio de espalhamento** (opcional): Tamanho adicional para a sombra, somando medida a partir do centro ou reduzindo da borda quando negativo, uma boa indicação de ângulo da luz sobre o objeto;
+- **cor**: Cor da sombra, lembrado a possibilidade de controlar opacidade pela cor.
 
 ## Incidência de luz
 
@@ -104,7 +104,9 @@ Várias fontes de luzes
 Junção das luzes ambientes e luz chave, adicionando as duas sombras como uma lista separado por vírgula
 
 ```css
-box-shadow: 0 0 8px 1px #000003f, 4px 4px 8px 1px #000003f;
+box-shadow:
+  0 0 8px 1px #000003f,
+  4px 4px 8px 1px #000003f;
 ```
 
 ## Luz de fundo
@@ -150,7 +152,9 @@ As sombras podem ser usadas para desenhar novos objetos com o mesmo formato
 Podemos fazer o espalhamento um como positivo para aumentar e outro como negativo para reduzir o tamanho da sombra
 
 ```css
-box-shadow: -120px 0 0 10px #e0138c, 100px 0 0 -10px #e0138c;
+box-shadow:
+  -120px 0 0 10px #e0138c,
+  100px 0 0 -10px #e0138c;
 ```
 
 ## Efeito de elevação com mouse
@@ -175,12 +179,16 @@ Estilo com `transition` de 300ms `hover` para um efeito suave passando a impress
   width: 160px;
   height: 160px;
   border-radius: 8px;
-  box-shadow: 0 0 8px 1px #000003f, 8px 8px 16px 2px #000003f;
+  box-shadow:
+    0 0 8px 1px #000003f,
+    8px 8px 16px 2px #000003f;
   transition: box-shadow 0.3s;
 }
 
 .card-box-shadow:hover {
-  box-shadow: 0 0 16px 2px #000003f, 16px 16px 32px 4px #000003f;
+  box-shadow:
+    0 0 16px 2px #000003f,
+    16px 16px 32px 4px #000003f;
 }
 ```
 
@@ -201,7 +209,9 @@ Segue o CSS
   background: #ffb726;
   border-radius: 15% 75% 50% 75%;
   transform: rotate(45deg);
-  box-shadow: -10px -10px 0 15px #ff7d17, -20px -20px 0 30px #ff6236,
+  box-shadow:
+    -10px -10px 0 15px #ff7d17,
+    -20px -20px 0 30px #ff6236,
     -30px -30px 10px 45px #ff62343f;
 }
 ```
