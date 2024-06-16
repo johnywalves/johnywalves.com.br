@@ -598,8 +598,9 @@
         "institution": "Seguralta",
         "description": [
           "Development of <strong>Seguralta Core</strong>, a platform to facilitate the operation of insurance brokers, allowing franchisees access to detailed commissions, renewals and policies due, pending proposals, lead management and notification to customers about overdue installments, in addition to integrating data and access from forty insurance companies",
+          "Acting in technical leadership of the front-end and carrying out development and maintenance on the back-end",
           "Collaborative flow application (GitFlow), component versioning, robust documentation, junior mentoring, process automation, environment monitoring (access metrics, front-end errors, Core Web Vitals, among others), continuous integration and continuous delivery (CI/CD), unit testing and end-to-end testing",
-          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, Testing Library, Jest, and Cypress"
+          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest, and Cypress"
         ]
       },
       {
