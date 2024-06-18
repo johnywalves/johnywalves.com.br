@@ -598,7 +598,7 @@
         "institution": "Seguralta",
         "description": [
           "Desenvolvimento do <strong>Seguralta Core</strong>, plataforma para facilitar a operação de corretoras de seguros, permitindo aos franqueados acesso de detalhamento das comissões, renovações e apólices a vencer, pendências de propostas, gestão de leads e notificação aos clientes sobre as parcelas vencidas, além de integrar os dados e acessos de quarenta seguradoras",
-          "Atuando na liderança técnica do front-end e realizando desenvolvimento e manutenção no back-end",
+          "Exercendo liderança técnica no front-end e assegurando o desenvolvimento e a manutenção eficazes do back-end",
           "Aplicação de fluxo colaborativo (GitFlow), versionamento de componentes, documentação robusta, mentoria de júniores, automação de processos, monitoramento de ambiente (métricas de acesso, erros no front-end, Core Web Vitals entre outros), integração e entrega contínuas (CI/CD), testes unitários e testes end-to-end",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest e Cypress"
         ]
