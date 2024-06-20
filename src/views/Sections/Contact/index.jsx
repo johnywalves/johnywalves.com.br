@@ -25,7 +25,7 @@ import {
 const SectionContact = () => {
   const { avatarImage } = useStaticQuery(graphql`
     query {
-      avatarImage: file(relativePath: { eq: "johnywalves.png" }) {
+      avatarImage: file(relativePath: { eq: "profile_triangle.png" }) {
         childImageSharp {
           gatsbyImageData(width: 400, layout: CONSTRAINED, placeholder: BLURRED)
         }

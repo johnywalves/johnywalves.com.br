@@ -44,8 +44,13 @@ export default function HTML(props) {
                           localStorage.setItem('theme', newTheme);
                       } catch (err) {}
                   }
+
+                  let defaultTheme = 'light'
+                  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                      defaultTheme = 'dark'
+                  }
                   
-                  setTheme(preferredTheme || 'light');
+                  setTheme(preferredTheme || defaultTheme);
                 })();
               }
             `,

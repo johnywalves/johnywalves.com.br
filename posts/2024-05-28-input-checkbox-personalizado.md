@@ -18,20 +18,20 @@ A tag de `<input type="checkbox">`, ou caixa de seleção, original do HTML é m
 
 <div class="custom-checkout-wrapper">
   <div>
-    <input id="banana-org" type="checkbox"></input>
-    <label for="banana-org">Banana (desmarcado)<label>
+    <input id="banana-org" type="checkbox" />
+    <label for="banana-org">Banana (desmarcado)</label>
   </div>
   <div>
-    <input id="kiwi-org" type="checkbox" checked></input>
-    <label for="kiwi-org">Kiwi (marcado)<label>
+    <input id="kiwi-org" type="checkbox" checked />
+    <label for="kiwi-org">Kiwi (marcado)</label>
   </div>
   <div>
-    <input id="morango-org" type="checkbox" disabled></input>
-    <label for="morango-org" class="disabled">Morango (desativado)<label>
+    <input id="morango-org" type="checkbox" disabled />
+    <label for="morango-org" class="disabled">Morango (desativado)</label>
   </div>
   <div>
-    <input id="maca-org" type="checkbox" checked disabled></input>
-    <label for="maca-org" class="disabled">Maça (marcado e desativado)<label>
+    <input id="maca-org" type="checkbox" checked disabled />
+    <label for="maca-org" class="disabled">Maça (marcado e desativado)</label>
   </div>
 </div>
 
@@ -39,28 +39,27 @@ Podemos personalizar todos os checkboxes da nossa página para deixar com a est�
 
 <div class="custom-checkout-wrapper">
   <div>
-    <input id="banana" type="checkbox" class="custom-checkout"></input>
-    <label for="banana">Banana (desmarcado)<label>
+    <input id="banana" type="checkbox" class="custom-checkout" />
+    <label for="banana">Banana (desmarcado)</label>
   </div>
   <div>
-    <input id="kiwi" type="checkbox" class="custom-checkout" checked></input>
-    <label for="kiwi">Kiwi (marcado)<label>
+    <input id="kiwi" type="checkbox" class="custom-checkout" checked />
+    <label for="kiwi">Kiwi (marcado)</label>
   </div>
   <div>
-    <input id="morango" type="checkbox" class="custom-checkout" disabled></input>
-    <label for="morango" class="disabled">Morango (desativado)<label>
+    <input id="morango" type="checkbox" class="custom-checkout" disabled />
+    <label for="morango" class="disabled">Morango (desativado)</label>
   </div>
   <div>
-    <input id="maca" type="checkbox" class="custom-checkout" checked disabled></input>
-    <label for="maca" class="disabled">Maça (marcado e desativado)<label>
+    <input id="maca" type="checkbox" class="custom-checkout" checked disabled />
+    <label for="maca" class="disabled">Maça (marcado e desativado)</label>
   </div>
 </div>
 
 Lembrando que podemos indicar um rótulo `<label>` para o checkbox `<input type="checkbox">` para contextualizar o recebimento de dados, apenas informando
 
 ```html
-<input id="banana" type="checkbox"></input>
-<label for="banana">Banana<label>
+<input id="banana" type="checkbox" /><label for="banana">Banana</label>
 ```
 
 Aplicando seguinte estilo para todos os checkbox da página
@@ -114,6 +113,14 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]:disabled {
   opacity: 0.25;
 }
+
+input[type="checkbox"]:focus {
+  border-color: #e0138c;
+}
+
+input[type="checkbox"]:focus + label {
+  color: #e0138c;
+}
 ```
 
 Aplicando o [CSS Nest](https://caniuse.com/?search=css%20nest) que está com grande aceitação pelos navegadores
@@ -153,6 +160,14 @@ input[type="checkbox"] {
 
   &:disabled {
     opacity: 0.25;
+  }
+
+  &:focus {
+    border-color: #e0138c;
+
+    & + label {
+      color: #e0138c;
+    }
   }
 }
 ```
