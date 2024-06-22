@@ -24,19 +24,23 @@ export const Link = styled.a`
   &:visited {
     color: var(--highlight);
   }
-
-  &:hover {
-    text-decoration: underline;
-  }
 `
 
 export const Title = styled.h3`
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 140%;
+
+  ${Link}:hover & {
+    text-decoration: underline;
+  }
 `
 
 export const Description = styled.p`
   color: var(--texts);
-  text-decoration-color: var(--texts);
+
+  ${Link}:hover & {
+    text-decoration: underline;
+    text-decoration-color: var(--texts);
+  }
 `

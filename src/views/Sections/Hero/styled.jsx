@@ -6,11 +6,14 @@ export const Wrapper = styled.section`
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   background: url("/vectors/triangle-wall-top.svg"),
     linear-gradient(90deg, var(--background) 50%, var(--highlight) 50%);
   background-size: 50%, 100%;
   background-repeat: no-repeat;
-  background-position: top left, center;
+  background-position:
+    top left,
+    center;
 `
 
 const Container = styled.div`

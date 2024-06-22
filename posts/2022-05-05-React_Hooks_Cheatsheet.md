@@ -21,25 +21,23 @@ Observar as atividades da janela (_window_) com um pequeno atraso, a fim de evit
 ```javascript
 import { useEffect, useRef } from "react"
 
-const useListener = (type, callback, delay) => {
-  const savedTimer = useRef(null)
+const useListener = (type: string, callback: () => void, delay?: number) => {
+  const savedTimer = useRef<NodeJS.Timeout | null>(null)
   const savedCallback = useRef(callback)
 
   useEffect(() => {
     savedCallback.current = callback
-  })
+  }, [callback])
 
   useEffect(() => {
     if (delay >= 0) {
-      const resizeListener = () => {
-        if (savedTimer.current) {
-          clearTimeout(savedTimer.current)
-        }
-        savedTimer.current = setTimeout(() => savedCallback.current(), delay)
+      const actionListener = () => {
+        savedTimer.current && clearTimeout(savedTimer.current)
+        savedTimer.current = setTimeout(savedCallback.current, delay)
       }
-      window.addEventListener(type, resizeListener)
 
-      return () => window.removeEventListener(type, resizeListener)
+      window.addEventListener(type, actionListener)
+      return () => window.removeEventListener(type, actionListener)
     }
   }, [type, delay])
 }
@@ -60,17 +58,19 @@ _Hook_ para executar um função em intervalos definidos
 ```javascript
 import { useEffect, useRef } from "react"
 
-const useInterval = (callback, delay) => {
+const useInterval = (callback: () => void, delay?: number) => {
+  const savedTimer = useRef<NodeJS.Timeout | null>(null)
   const savedCallback = useRef(callback)
 
   useEffect(() => {
     savedCallback.current = callback
-  })
+  }, [callback])
 
   useEffect(() => {
-    const tick = () => savedCallback.current()
-    const id = setInterval(tick, delay)
-    return () => clearInterval(id)
+    savedTimer.current = setInterval(savedCallback.current, delay)
+    return () => {
+      savedTimer.current && clearTimeout(savedTimer.current)
+    }
   }, [])
 }
 
@@ -85,13 +85,17 @@ Em algumas situações, ao responder às ações do usuário, é aconselhável i
 import { useEffect, useState } from "react"
 
 const useDebounce = <T>(value: T, delay?: number): T => {
+  const savedTimer = useRef<NodeJS.Timeout | null>(null)
   const [debouncedValue, setDebouncedValue] = useState<T>(value)
 
   useEffect(() => {
-    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
+    savedTimer.current = setTimeout(
+      () => setDebouncedValue(value),
+      delay || 500
+    )
 
     return () => {
-      clearTimeout(timer)
+      savedTimer.current && clearTimeout(savedTimer.current)
     }
   }, [value, delay])
 

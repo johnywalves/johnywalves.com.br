@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import Strings from "components/strings"
 
@@ -39,5 +40,12 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
     </OtherProjectLinks>
   </OtherProjectWrapper>
 )
+
+OtherProjects.propTypes = {
+  view: PropTypes.string.isRequired,
+  sourceCode: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+}
 
 export default OtherProjects

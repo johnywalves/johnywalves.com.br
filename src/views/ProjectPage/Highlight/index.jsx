@@ -19,7 +19,7 @@ import {
 } from "./styled"
 
 const Highlight = ({
-  revert,
+  revert = false,
   view,
   sourceCode,
   cover,
@@ -135,10 +135,6 @@ const Highlight = ({
 
 Highlight.propTypes = {
   revert: PropTypes.bool,
-}
-
-Highlight.defaultTypes = {
-  revert: false,
 }
 
 export default Highlight

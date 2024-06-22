@@ -13,7 +13,9 @@ export const ExperienceWrapper = styled.section`
   background-color: var(--background);
   background-size: 20%, 30%;
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
 
   ${media.lessThan("medium")`
     background-size: 30%, 50%;
@@ -221,7 +223,7 @@ export const Institution = styled.span`
 `
 
 const listDescriptions = css`
-  list-style-type: disc; 
+  list-style-type: disc;
   list-style-position: inside;
 `
 
@@ -295,7 +297,7 @@ const hiddenWrapperAccomplishment = css`
 `
 
 const WrapperAccomplishment = styled.li`
-  max-height: 50rem;
+  max-height: 60rem;
   padding: 0 var(--36px) var(--36px) var(--48px);
   animation: ${fadeInInfo} 1s ease-out forwards;
 
@@ -357,12 +359,14 @@ const ContentAccomplishment = styled.div`
   border-radius: var(--14px);
 
   transition: 0.5s ease-in-out;
-  box-shadow: 0 0 8px 1px var(--shadow-colors),
+  box-shadow:
+    0 0 8px 1px var(--shadow-colors),
     4px 4px 8px 1px var(--shadow-colors);
 
   ${WrapperAccomplishment}:hover & {
     transform: translateY(-2px);
-    box-shadow: 0 0 16px 2px var(--shadow-colors),
+    box-shadow:
+      0 0 16px 2px var(--shadow-colors),
       8px 8px 16px 2px var(--shadow-colors);
   }
 `

@@ -31,7 +31,7 @@ collections:
           options:
             [
               "Bem-estar",
-              "Boas práticas"
+              "Boas práticas",
               "Comic",
               "CSS",
               "D3.js",

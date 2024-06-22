@@ -12,34 +12,33 @@ const limitText = (number, text) =>
   text.length < number ? text : text.slice(number - 3) + "..."
 
 const Blueprint = ({
-  content,
-  whiteLogo,
+  content = false,
+  whiteLogo = false,
   openGraphImage,
   title,
   description,
   children,
 }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            siteUrl
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          siteUrl
         }
       }
-    `
-  )
+    }
+  `)
 
   const titleName = limitText(65, title || site.siteMetadata.title),
     metaDescription = limitText(
       155,
       description || site.siteMetadata.description
     ),
-    pathImage = `${site.siteMetadata.siteUrl}/${openGraphImage || "/figures/thumbnail.jpg"
-      }`,
+    pathImage = `${site.siteMetadata.siteUrl}/${
+      openGraphImage || "/figures/thumbnail.jpg"
+    }`,
     sizeImageWidth = 900,
     sizeImageHeight = 600
 
@@ -72,15 +71,12 @@ const Blueprint = ({
 }
 
 Blueprint.propTypes = {
-  children: PropTypes.node.isRequired,
-  ogImage: PropTypes.object,
   content: PropTypes.bool,
   whiteLogo: PropTypes.bool,
-}
-
-Blueprint.defaultTypes = {
-  content: false,
-  whiteLogo: false,
+  openGraphImage: PropTypes.object,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  children: PropTypes.node.isRequired,
 }
 
 export { default as Container } from "./Container"

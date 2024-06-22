@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const ArrowsLeft = ({ rotate }) => (
+const ArrowsLeft = ({ rotate = false }) => (
   <svg
     version="1.1"
     viewBox="0 0 448 512"
@@ -17,10 +17,6 @@ const ArrowsLeft = ({ rotate }) => (
 
 ArrowsLeft.propTypes = {
   rotate: PropTypes.bool,
-}
-
-ArrowsLeft.defaultTypes = {
-  rotate: false,
 }
 
 export default ArrowsLeft

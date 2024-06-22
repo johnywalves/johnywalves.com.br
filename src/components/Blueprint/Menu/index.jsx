@@ -25,7 +25,7 @@ import {
   Hamburger,
 } from "./styled"
 
-const Menu = ({ hero, whiteLogo }) => {
+const Menu = ({ hero = false, whiteLogo = false }) => {
   const { jellyfish } = useStaticQuery(graphql`
     query {
       jellyfish: file(relativePath: { eq: "jellyfish.jpg" }) {
@@ -127,11 +127,6 @@ const Menu = ({ hero, whiteLogo }) => {
 Menu.propTypes = {
   hero: PropTypes.bool,
   whiteLogo: PropTypes.bool,
-}
-
-Menu.defaultTypes = {
-  hero: false,
-  whiteLogo: false,
 }
 
 export default Menu

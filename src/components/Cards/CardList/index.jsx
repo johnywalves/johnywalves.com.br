@@ -20,7 +20,7 @@ const CardList = ({
   title,
   action,
   url,
-  light,
+  light = false,
   number,
   ExtraLine,
 }) => {
@@ -57,10 +57,7 @@ CardList.propTypes = {
   light: PropTypes.bool,
   url: PropTypes.string,
   number: PropTypes.number,
-}
-
-CardList.defaultTypes = {
-  light: false,
+  ExtraLine: PropTypes.func,
 }
 
 export default CardList

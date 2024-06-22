@@ -30,10 +30,4 @@ Button.propTypes = {
   secondary: PropTypes.bool,
 }
 
-Button.defaultTypes = {
-  selected: false,
-  light: false,
-  secondary: false,
-}
-
 export default Button

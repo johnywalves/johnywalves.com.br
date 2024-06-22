@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import { Wrapper, Link, Title, Description } from "./styled"
 
@@ -10,5 +11,11 @@ const OnePage = ({ title, description, link }) => (
     </Link>
   </Wrapper>
 )
+
+OnePage.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+}
 
 export default OnePage

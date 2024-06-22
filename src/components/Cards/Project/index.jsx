@@ -40,6 +40,8 @@ const Project = ({ title, sourceCode, view, cover }) => {
 
 Project.propTypes = {
   cover: PropTypes.node.isRequired,
+  sourceCode: PropTypes.node.isRequired,
+  view: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
 }
 
