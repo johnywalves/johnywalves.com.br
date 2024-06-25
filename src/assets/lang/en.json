@@ -624,8 +624,10 @@
         "title": "Senior Front-end Developer",
         "institution": "CI&T Software",
         "description": [
-          "<strong>Coca-Cola Project</strong>: Experience in promoting products, running promotions, and collecting leads on platforms across Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring. Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
-          "<strong>Anbima Project</strong>: Development of a system for collecting managed portfolio information and restructuring the publication of financial product data, focusing on performance improvement and search engine results. Technologies: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js, and Gitlab"
+          "<strong>Coca-Cola Project</strong>: Experience in promoting products, running promotions, and collecting leads on platforms across Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring",
+          "Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
+          "<strong>Anbima Project</strong>: Development of a system for collecting managed portfolio information and restructuring the publication of financial product data, focusing on performance improvement and search engine results",
+          "Technologies: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js, and Gitlab"
         ]
       },
       {

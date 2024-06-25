@@ -12,9 +12,7 @@ import {
 } from "./styled"
 
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
-
 const getYear = (text) => new Date(text).getFullYear()
-
 const getCurrentYear = () => new Date().getFullYear()
 
 const getDescription = (text) => {
@@ -32,11 +30,11 @@ const Person = ({ language }) => (
       <li>{language.live}</li>
       <li>
         <strong>E-mail:</strong> contato@johnywalves.com.br |{" "}
-        <strong>Web:</strong> www.johnywalves.com.br
+        <strong>Web:</strong> johnywalves.com.br
       </li>
       <li>
-        <strong>GitHub:</strong> www.github.com/johnywalves |{" "}
-        <strong>LinkedIn:</strong> www.linkedin.com/in/johnywalves
+        <strong>GitHub:</strong> github.com/johnywalves |{" "}
+        <strong>LinkedIn:</strong> linkedin.com/in/johnywalves
       </li>
     </ul>
   </ResumePerson>
@@ -60,7 +58,7 @@ const ResumePage = ({ language }) => {
           </h2>
           <hr />
           {language.experience.list
-            .slice(0, 4)
+            .slice(0, 3)
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
