@@ -513,6 +513,11 @@
         "title": "Números por Extenso",
         "description": "Apresentação de números aleatórios e conversão para texto",
         "link": "/web/numberinwords.html"
+      },
+      {
+        "title": "Convite de aniversário",
+        "description": "Convite para festa ocorrida em 2023",
+        "link": "/niver"
       }
     ]
   },
@@ -597,9 +602,11 @@
         "title": "Desenvolvedor Front-end Sênior",
         "institution": "Seguralta",
         "description": [
-          "Desenvolvimento do <strong>Seguralta Core</strong>, plataforma para facilitar a operação de corretoras de seguros, permitindo aos franqueados acesso de detalhamento das comissões, renovações e apólices a vencer, pendências de propostas, gestão de leads e notificação aos clientes sobre as parcelas vencidas, além de integrar os dados e acessos de quarenta seguradoras",
-          "Exercendo liderança técnica no front-end e assegurando o desenvolvimento e a manutenção eficazes do back-end",
-          "Aplicação de fluxo colaborativo (GitFlow), versionamento de componentes, documentação robusta, mentoria de júniores, automação de processos, monitoramento de ambiente (métricas de acesso, erros no front-end, Core Web Vitals entre outros), integração e entrega contínuas (CI/CD), testes unitários e testes end-to-end",
+          "Desenvolvimento do <strong>Seguralta Core</strong>: Plataforma que facilita a operação de corretoras de seguros, oferecendo aos franqueados acesso detalhado a comissões, renovações e apólices a vencer, entre outros serviços",
+          "Manutenção e aprimoramento do Portal de Clientes, com foco na melhoria da experiência do usuário (UX) e na otimização de resultados orgânicos em motores de busca (SEO)",
+          "Liderança técnica em desenvolvimento de software, com foco no front-end e na garantia de um back-end robusto e eficiente",
+          "Responsável pela aplicação de metodologias ágeis (Scrum), práticas de desenvolvimento colaborativo (GitFlow) e versionamento de componentes. Conduzi uma documentação completa e atualizada, além de oferecer mentoria para desenvolvedores juniores",
+          "Minhas atribuições incluíram a automação de processos, monitoramento contínuo do ambiente com foco em métricas de acesso, detecção e resolução de erros no front-end, otimização de desempenho com Core Web Vitals, integração e a entrega contínuas (CI/CD) e adoção de práticas de qualidade como testes unitários e end-to-end ",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest e Cypress"
         ]
       },
@@ -608,7 +615,7 @@
         "title": "Desenvolvedor Front-end",
         "institution": "Hepta Tecnologia e Informática",
         "description": [
-          "Projeto <strong>CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços, com uso de micro-frontend e monorepo",
+          "<strong>Projeto CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços. Utilizando uma abordagem moderna com micro-frontend e monorepo, garanti uma arquitetura modular e escalável, que permite uma evolução contínua e eficiente da plataforma",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
         ]
       },
@@ -617,8 +624,8 @@
         "title": "Desenvolvedor Front-end Sênior",
         "institution": "CI&T Software",
         "description": [
-          "Projeto <strong>Coca-Cola</strong>: Experiência em divulgação de produtos, promoções e coleta de leads nas plataformas da América Latina e Caribe, além de habilidades de análise e acompanhamento de métricas de consumidores. Tecnologias: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
-          "Projeto <strong>Anbima</strong>: Desenvolvimento de um sistema de coleta de informações de carteiras administradas e reestruturação na publicação de dados de produtos financeiros, com foco na melhoria de desempenho e resultados nas ferramentas de busca. Tecnologias: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js e Gitlab"
+          "<strong>Projeto Coca-Cola</strong>: Experiência em divulgação de produtos, promoções e coleta de leads nas plataformas da América Latina e Caribe, além de habilidades de análise e acompanhamento de métricas de consumidores. Tecnologias: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
+          "<strong>Projeto Anbima</strong>: Desenvolvimento de um sistema de coleta de informações de carteiras administradas e reestruturação na publicação de dados de produtos financeiros, com foco na melhoria de desempenho e resultados nas ferramentas de busca. Tecnologias: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js e Gitlab"
         ]
       },
       {
@@ -626,9 +633,9 @@
         "title": "Desenvolvedor Front-end",
         "institution": "Meta Serviços em Informática",
         "description": [
-          "Responsável pela manutenção e aprimoramento contínuo da plataforma <strong>Zarp Localiza</strong>, incluindo a reestruturação de tecnologia e infraestrutura",
-          "Foco na melhoria da experiência do usuário, desempenho do site e otimização para resultados de busca (SEO), visando alcançar a primeira posição nos resultados orgânicos de pesquisa",
-          "Liderança no estabelecimento de processos de CI/CD, seleção de tecnologias para o front-end e acompanhamento de métricas, incluindo o funil de vendas",
+          "Manutenção e aprimoramento da plataforma <strong>Zarp Localiza</strong>, incluindo reestruturação de tecnologia e infraestrutura",
+          "Foco na melhoria da experiência do usuário, desempenho da plataforma e otimização para alcançar a primeira posição nos resultados orgânicos de busca (SEO)",
+          "Liderança na implantação de CI/CD, seleção de tecnologias front-end e monitoramento de métricas, incluindo o funil de venda",
           "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar e Datadog"
         ]
       },
@@ -637,7 +644,7 @@
         "title": "Desenvolvedor FullStack",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
-          "Responsável pelo desenvolvimento da suíte de aplicativos da <strong>Invillia Apps</strong>, para gestão dos times e trabalho remoto, com foco na otimização do uso de memória durante a integração com o Microsoft Teams e na visualização de dados, atuando da interface e integração com Microsoft Teams (front-end) e tratamento de dados com entrega por APIs (back-end)",
+          "Desenvolvimento da suíte de aplicativos <strong>Invillia Apps</strong> para gestão de equipes e trabalho remoto, com foco na otimização de memória e integração com Microsoft Teams. Atuação no front-end e back-end, incluindo visualização de dados e entrega por APIs",
           "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
         ]
       },

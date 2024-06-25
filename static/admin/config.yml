@@ -40,13 +40,13 @@ collections:
               "Git",
               "Python",
               "Java",
-              "JavaScript"
+              "JavaScript",
               "Jekyll",
               "Linux",
               "R",
               "React",
               "Web",
-              "Windows"
+              "Windows",
             ],
         }
       - { label: "Tags", name: "tags", widget: "list" }

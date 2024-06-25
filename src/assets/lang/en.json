@@ -438,6 +438,11 @@
         "title": "Numbers in Words",
         "description": "Random numbers and conversion to works",
         "link": "/web/numberinwords.html"
+      },
+      {
+        "title": "Birthday invitation",
+        "description": "Invitation to party held in 2023",
+        "link": "/niver"
       }
     ]
   },
@@ -597,9 +602,11 @@
         "title": "Senior Front-end Developer",
         "institution": "Seguralta",
         "description": [
-          "Development of <strong>Seguralta Core</strong>, a platform to facilitate the operation of insurance brokers, allowing franchisees access to detailed commissions, renewals and policies due, pending proposals, lead management and notification to customers about overdue installments, in addition to integrating data and access from forty insurance companies",
-          "Providing technical leadership in the front-end and ensuring effective development and maintenance of the back-end",
-          "Collaborative flow application (GitFlow), component versioning, robust documentation, junior mentoring, process automation, environment monitoring (access metrics, front-end errors, Core Web Vitals, among others), continuous integration and continuous delivery (CI/CD), unit testing and end-to-end testing",
+          "Development of <strong>Seguralta Core</strong>: Platform that facilitates the operation of insurance brokerages, offering franchisees detailed access to commissions, renewals, and upcoming policy expirations, among other services",
+          "Maintenance and enhancement of the Customer Portal, with a focus on improving user experience (UX) and optimizing organic results in search engines (SEO)",
+          "Technical leadership in software development, with a focus on the front-end and ensuring a robust and efficient back-end",
+          "Responsible for applying agile methodologies (Scrum), collaborative development practices (GitFlow), and component versioning. I conducted complete and up-to-date documentation and provided mentorship for junior developers",
+          "My responsibilities included process automation, continuous monitoring of the environment with a focus on access metrics, detection and resolution of front-end errors, performance optimization with Core Web Vitals, continuous integration and delivery (CI/CD), and the adoption of quality practices such as unit and end-to-end testing",
           "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest, and Cypress"
         ]
       },
@@ -608,7 +615,7 @@
         "title": "Front-end Developer",
         "institution": "Hepta Tecnologia e Informática",
         "description": [
-          "Project <strong>CREA-SP</strong>: Front-end development of the platform for the application of ART (Technical Responsibility Note) in Works and Services, using micro-frontend and monorepo",
+          "<strong>CREA-SP Project</strong>: Development of the front-end for the platform for applying Technical Responsibility Notes (ART) in Works and Services. Using a modern approach with micro-frontend and monorepo, I ensured a modular and scalable architecture that allows for continuous and efficient platform evolution",
           "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
         ]
       },
@@ -617,8 +624,8 @@
         "title": "Senior Front-end Developer",
         "institution": "CI&T Software",
         "description": [
-          "Project <strong>Coca-Cola</strong>: Experience in product promotion, marketing campaigns, and lead generation on platforms in Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring. Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
-          "Project <strong>Anbima</strong>: Development of a portfolio information collection system and restructuring of financial product data publication, with a focus on improving performance and search engine results. Technologies: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js, and Gitlab"
+          "<strong>Coca-Cola Project</strong>: Experience in promoting products, running promotions, and collecting leads on platforms across Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring. Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
+          "<strong>Anbima Project</strong>: Development of a system for collecting managed portfolio information and restructuring the publication of financial product data, focusing on performance improvement and search engine results. Technologies: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js, and Gitlab"
         ]
       },
       {
@@ -626,9 +633,9 @@
         "title": "Front-end Developer",
         "institution": "Meta Serviços em Informática",
         "description": [
-          "Responsible for the maintenance and continuous improvement of the <strong>Zarp Localiza</strong> platform, including technology and infrastructure restructuring",
-          "Focused on improving user experience, website performance, and search engine optimization (SEO) to achieve the top position in organic search results",
-          "Leadership in establishing CI/CD processes, selecting front-end technologies, and tracking metrics, including the sales funnel",
+          "Maintenance and enhancement of the Zarp Localiza platform, including technology and infrastructure restructuring",
+          "Focus on improving user experience, platform performance, and optimization to achieve the top position in organic search results (SEO)",
+          "Leadership in implementing CI/CD, selecting front-end technologies, and monitoring metrics, including the sales funnel",
           "Technologies: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar, and Datadog"
         ]
       },
@@ -637,7 +644,7 @@
         "title": "FullStack Developer",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
         "description": [
-          "Responsible for developing the <strong>Invillia Apps</strong> application suite, for team management and remote work, with a focus on optimizing memory use during integration with Microsoft Teams and data visualization, working from the interface and integration with Microsoft Teams (front-end) and data processing with delivery via APIs (back-end)",
+          "Development of the Invillia Apps suite for team management and remote work, focusing on memory optimization and integration with Microsoft Teams. Worked on both front-end and back-end, including data visualization and delivery through APIs",
           "Technologies: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express, and MySQL"
         ]
       },
