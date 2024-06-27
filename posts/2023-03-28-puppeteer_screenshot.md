@@ -57,7 +57,7 @@ const puppeteer = require("puppeteer")
 Iniciação do navegador do Google Chrome e abrir uma aba nova
 
 ```javascript
-const browser = await puppeteer.launch()
+const browser = await puppeteer.launch({ headless: "new" })
 const page = await browser.newPage()
 ```
 
@@ -148,7 +148,7 @@ function delay(time) {
 
 async function main() {
   // Iniciar Puppeteer, navegador e nova página
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ headless: "new" })
   const page = await browser.newPage()
 
   // Acessar endereço, esperando página carregar

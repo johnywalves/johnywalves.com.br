@@ -51,7 +51,7 @@
     "someHighlights": "Destaques",
     "allArticles": "Artigos sobre tecnologias, conceitos e alguns pensamentos",
     "viewAll": "Ver todos os artigos",
-    "feed": "http://feeds.feedburner.com/johnywalves-posts"
+    "feed": "https://johnywalves.com.br/feed-posts.xml"
   },
   "comics": {
     "title": "Tirinhas",
@@ -61,7 +61,7 @@
     "last": "Último",
     "allComics": "Tirinhas sobre a vida de trabalhadores de tecnologia",
     "viewAll": "Ver todas as tirinhas",
-    "feed": "http://feeds.feedburner.com/johnywalves-comics"
+    "feed": "https://johnywalves.com.br/feed-comics.xml"
   },
   "languages": {
     "title": "Idiomas",
@@ -603,7 +603,7 @@
         "institution": "Seguralta",
         "description": [
           "Desenvolvimento do <strong>Seguralta Core</strong>: Plataforma que facilita a operação de corretoras de seguros, oferecendo aos franqueados acesso detalhado a comissões, renovações e apólices a vencer, entre outros serviços",
-          "Manutenção e aprimoramento do Portal de Clientes, com foco na melhoria da experiência do usuário (UX) e na otimização de resultados orgânicos em motores de busca (SEO)",
+          "Manutenção e aprimoramento do <strong>Portal de Clientes</strong>, com foco na melhoria da experiência do usuário (UX) e na otimização de resultados orgânicos em motores de busca (SEO)",
           "Liderança técnica em desenvolvimento de software, com foco no front-end e na garantia de um back-end robusto e eficiente. Responsável pela aplicação de metodologias ágeis (Scrum), práticas de desenvolvimento colaborativo (GitFlow) e versionamento de componentes. Conduzi uma documentação completa e atualizada, além de oferecer mentoria para desenvolvedores juniores",
           "Minhas atribuições incluíram a automação de processos, monitoramento contínuo do ambiente com foco em métricas de acesso, detecção e resolução de erros no front-end, otimização de desempenho com Core Web Vitals, integração e a entrega contínuas (CI/CD) e adoção de práticas de qualidade como testes unitários e end-to-end",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest e Cypress"
