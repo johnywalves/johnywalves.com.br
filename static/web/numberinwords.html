@@ -129,12 +129,16 @@
       }
 
       #number {
-        font-size: 6.5rem;
+        font-size: 3rem;
         font-weight: 700;
       }
 
+      #number span {
+        font-size: 1.5rem;
+      }
+
       #words {
-        font-size: 4rem;
+        font-size: 2rem;
         font-weight: 500;
         min-height: 10.625rem;
       }
@@ -143,10 +147,29 @@
       footer p {
         color: var(--neutral-200);
         text-align: center;
+        font-size: 0.75rem;
       }
 
-      header p {
-        font-size: 1.5rem;
+      @media (min-width: 981px) {
+        #number {
+          font-size: 6.5rem;
+        }
+
+        #number span {
+          font-size: 2rem;
+        }
+
+        #words {
+          font-size: 4rem;
+        }
+
+        header p {
+          font-size: 1.5rem;
+        }
+
+        footer p {
+          font-size: 1rem;
+        }
       }
     </style>
   </head>
@@ -218,6 +241,7 @@
       var n = s.split("")
       var str = ""
       var sk = 0
+
       for (var i = 0; i < x; i++) {
         if ((x - i) % 3 == 2) {
           if (n[i] == "1") {
@@ -238,14 +262,17 @@
           sk = 0
         }
       }
+
       if (x != s.length) {
         var y = s.length
         str += "point "
         for (var i = x + 1; i < y; i++) str += dg[n[i]] + " "
       }
+
       return str.replace(/\s+/g, " ")
     }
 
+    const numberFormatter = new Intl.NumberFormat("en")
     let wordStage = true
 
     const elementInNumbers = document.getElementById("number")
@@ -256,9 +283,26 @@
 
     function clickOnBody() {
       if (wordStage) {
-        const number = "" + Math.floor(Math.random() * 15000)
-        elementInNumbers.innerText = number
-        elementInWords.innerText = numberToWords("" + number)
+        if (Math.floor(Math.random() * 2) === 1) {
+          const century = Math.floor(Math.random() * 9 + 11)
+          const decades = Math.floor(Math.random() * 99)
+          const centuryWords = numberToWords(century)
+
+          elementInNumbers.innerHTML =
+            century +
+            decades.toString().padStart(2, "0") +
+            "<span> (year)</span>"
+
+          if (decades === 0) {
+            elementInWords.innerText = centuryWords.trim() + "s"
+          } else {
+            elementInWords.innerText = centuryWords + numberToWords(decades)
+          }
+        } else {
+          const number = Math.floor(Math.random() * 20000).toString()
+          elementInNumbers.innerText = numberFormatter.format(number)
+          elementInWords.innerText = numberToWords(number).toString()
+        }
       }
 
       elementInWords.classList.toggle("show")
