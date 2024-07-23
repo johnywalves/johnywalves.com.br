@@ -55,14 +55,14 @@ export const Info = styled.div`
   flex-direction: column;
 
   ${media.lessThan("small")`
-    width: 275px;
+    max-width: 275px;
   `}
 `
 
 export const Description = styled.p`
   color: var(--texts);
   font-size: 1.125rem;
-  margin: 15px 0;
+  margin: 1rem 0;
   line-height: 150%;
   z-index: 2;
 `

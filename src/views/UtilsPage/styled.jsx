@@ -167,13 +167,18 @@ export const UtilsToolItem = styled(Link)`
   justify-content: center;
   align-items: center;
 
-  min-width: 500px;
-  height: 80px;
+  flex: 2 0 20rem;
+  padding: 1rem 2rem;
+  min-height: 5rem;
+  max-width: 30rem;
+  z-index: 1;
+
   font-size: 1.5rem;
   font-weight: 400;
+
   background-color: var(--highlight);
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   box-shadow:
     0 0 4px 1px var(--shadow-colors),
     4px 4px 4px 1px var(--shadow-colors);
@@ -183,6 +188,7 @@ export const UtilsToolItem = styled(Link)`
     color: var(--white);
     vertical-align: middle;
     transition: all 0.25s;
+    white-space: break-spaces;
 
     display: flex;
     flex-direction: row;

@@ -9,7 +9,13 @@ import { ArrowLeft, ArrowsLeft, MoreVerticalOutline } from "assets/icons"
 
 import { NavigationWrapper, Navigation, Icon, Pagination } from "./styled"
 
-const ComicNavigation = ({ light, action, url, number, showCount }) => {
+const ComicNavigation = ({
+  light = true,
+  action = "",
+  url = "/comics/",
+  number,
+  showCount = false,
+}) => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -95,13 +101,6 @@ ComicNavigation.propTypes = {
   url: PropTypes.string,
   number: PropTypes.number,
   showCount: PropTypes.bool,
-}
-
-ComicNavigation.defaultProps = {
-  light: true,
-  action: "",
-  url: "/comics/",
-  showCount: false,
 }
 
 export default ComicNavigation

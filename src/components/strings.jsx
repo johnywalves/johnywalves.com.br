@@ -1,11 +1,11 @@
 import LocalizedStrings from "react-localization"
 
-import brazilian from "assets/lang/br.json"
-import english from "assets/lang/en.json"
+import pt from "assets/lang/br.json"
+import en from "assets/lang/en.json"
 
 const Strings = new LocalizedStrings({
-  pt: brazilian,
-  en: english,
+  en,
+  pt,
 })
 
 export default Strings

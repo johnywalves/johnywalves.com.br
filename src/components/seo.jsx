@@ -7,8 +7,8 @@ const limitText = (number, text) =>
 
 function SEO({
   location,
-  description,
-  lang,
+  description = "",
+  lang = "pt_BR",
   title,
   image,
   imageWidth,
@@ -97,11 +97,6 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   title: PropTypes.string.isRequired,
-}
-
-SEO.defaultProps = {
-  lang: `pt_BR`,
-  description: ``,
 }
 
 export default SEO

@@ -51,12 +51,19 @@ export const FooterDescription = styled.p`
 `
 
 export const FooterImageCover = styled(GatsbyImage)`
-  object-fit: cover;
   margin: 0 0 -120px 0;
   transform: translateY(-120px);
+
+  & img {
+    object-fit: cover;
+  }
 
   ${media.lessThan("large")`
     margin: 0;
     transform: none;
+
+    & img {
+      object-fit: contain !important;
+    }
   `}
 `
