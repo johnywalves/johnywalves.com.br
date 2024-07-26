@@ -433,16 +433,6 @@
         "cover": "githubio",
         "view": "https://card-game-in-react.vercel.app",
         "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
-      },
-      {
-        "title": "Numbers in Words",
-        "description": "Random numbers and conversion to works",
-        "link": "/web/numberinwords.html"
-      },
-      {
-        "title": "Birthday invitation",
-        "description": "Invitation to party held in 2023",
-        "link": "/niver"
       }
     ]
   },
@@ -518,6 +508,16 @@
         "title": "World Population | Dashboard",
         "description": "Collection of graphs for presenting the world population",
         "link": "https://johnywalves.com.br/web/world_d3/"
+      },
+      {
+        "title": "Numbers in Words",
+        "description": "Random numbers and conversion to works",
+        "link": "/web/numberinwords.html"
+      },
+      {
+        "title": "Birthday invitation",
+        "description": "Invitation to party held in 2023",
+        "link": "/niver"
       }
     ]
   },
