@@ -4,8 +4,8 @@ import pt from "assets/lang/br.json"
 import en from "assets/lang/en.json"
 
 const Strings = new LocalizedStrings({
-  en,
   pt,
+  en,
 })
 
 export default Strings
