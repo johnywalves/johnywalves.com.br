@@ -13,22 +13,22 @@ published: true
 cheatsheet: false
 ---
 
-Entregar páginas Web intepretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponiveis somente neste ambiente
+Entregar páginas Web interpretando como se fossem estáticas, reduz a carga de processamento pelo cliente, executando pelo servidor onde pode estar a base de dados e outros recursos, podendo ser disponíveis somente neste ambiente
 
 ## Montagem do Modelo
 
-Fazendo uso do [Jinja](http://jinja.pocoo.org/docs/2.10/templates/), um modelo de sintaxe e semantica, montamos um documento HTML, fazendo uso de delimitadores para expressões `{{` e `}}` e controles de fluxo `{%` e `%}`  
+Fazendo uso do [Jinja](http://jinja.pocoo.org/docs/2.10/templates/), um modelo de sintaxe e semântica, montamos um documento HTML, fazendo uso de delimitadores para expressões `{{` e `}}` e controles de fluxo `{%` e `%}`  
 Assim inserimos um valor direto no corpo do arquivo, usando a extensão **twig** e salvando na pasta **view** para interpretação
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <h1>Hello {{ nome }}</h1>
 ```
 
-Com o uso de **if** mudamos o fluxo de treços de código
+Com o uso de **if** mudamos o fluxo de trechos de código
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 {% if nome %}
 <h1>Hello {{ nome }}!</h1>
 {% else %}
@@ -39,14 +39,14 @@ Com o uso de **if** mudamos o fluxo de treços de código
 ou por uso de if ternário, seguindo o padrão do **JavaScript**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <h1>Hello, {{ (nome ? nome : 'World') }}!</h1>
 ```
 
-Através da iteração de uma lista de objetos construimos uma sequência de tags com vários links, salvando na pasta de **view** com o nome de **lista.twig**
+Através da iteração de uma lista de objetos construímos uma sequência de tags com vários links, salvando na pasta de **view** com o nome de **lista.twig**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <ul id="navigation">
   {% for item in navigation %}
   <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
@@ -57,7 +57,7 @@ Através da iteração de uma lista de objetos construimos uma sequência de tag
 Com o uso um modelo padrão, salvando na pasta de **view** com o nome de **base.twig**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <h1>{% block titulo %}{% endblock %}</h1>
 
 <div class="wrapper">{% block corpo %}{% endblock %}</div>
@@ -100,7 +100,7 @@ var Twig = require("twig"),
 
 ## Interpretação
 
-Adicionando no arquivo **server.js** a opção de rotas para ouvir o caminho **/hello/** com e sem parametros
+Adicionando no arquivo **server.js** a opção de rotas para ouvir o caminho **/hello/** com e sem parâmetros
 
 ```javascript
 app.get("/hello/:param", function (req, res) {
@@ -122,7 +122,7 @@ app.get("/lista/", function (req, res) {
 
 ## Arquivos Estáticos
 
-Folhas de estilo não costumam sofre variação na execução do sistema, não sendo necessária a intepreção da mesma
+Folhas de estilo não costumam sofre variação na execução do sistema, não sendo necessária a interpretação da mesma
 Para entregar devemos adicionar na pasta **static** na raiz do projeto, esse nome pode ser mudado
 
 ```html

@@ -48,7 +48,7 @@ const Article = ({ data, pageContext }) => {
           <PostHeader>
             <PostDate
               itemProp="datePublished"
-              datetime={post.frontmatter.created}
+              dateTime={post.frontmatter.created}
             >
               <span>{post.frontmatter.date}</span>
               <span>●</span>
@@ -95,10 +95,10 @@ const Article = ({ data, pageContext }) => {
 
 export const ArticleHead = ({ location, data, pageContext }) => {
   const {
-    html,
-    excerpt,
-    frontmatter: { title, description, created, extras },
-  } = data.markdownRemark,
+      html,
+      excerpt,
+      frontmatter: { title, description, created, extras },
+    } = data.markdownRemark,
     { title: titleSite, author, siteUrl } = data.site.siteMetadata,
     { slug } = pageContext
 

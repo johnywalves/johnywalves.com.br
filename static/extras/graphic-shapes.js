@@ -304,7 +304,7 @@ function drawGraphic() {
     drawPosition(svg, 20, 100)
     drawPosition(svg, 0, 40)
 
-    // Ocultar o icone de carregar
+    // Ocultar o ícone de carregar
     d3.select("#d3_path #loading_graphic").style("display", "none")
   }
 }

@@ -12,7 +12,7 @@ published: true
 cheatsheet: false
 ---
 
-Lidar com arquivos de texto extensos pode ser um pouco dificil ou demorado, mas podemos facilitar com algumas funções em PowerShell
+Lidar com arquivos de texto extensos pode ser um pouco difícil ou demorado, mas podemos facilitar com algumas funções em PowerShell
 
 ## Contar linhas
 
@@ -62,7 +62,7 @@ $(Get-Content $headerfile; Get-Content $textfile) | Set-Content $textfile
 ## Dividir as linhas mantendo o cabeçalho
 
 Adicionando os controles de `$header = Get-Content $file -First 1` para capturar o cabeçalho na primeira linha e `$(If ($i -ne 1) {$header} Else {$null})` para adicionar nos arquivos além do primeiro o cabeçalho arquivo  
-Com o ódigo abaixo substituindo o `<caminho do arquivo>` e a `<quantidade de linhas>`
+Com o código abaixo substituindo o `<caminho do arquivo>` e a `<quantidade de linhas>`
 
 ```powershell
 $file = '<caminho do arquivo>'

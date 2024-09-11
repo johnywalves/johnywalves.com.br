@@ -1,5 +1,5 @@
 ---
-date: 2024-09-20 07:52:23 -0300
+date: 2024-09-02 07:52:23 -0300
 title: Rotas Apache - Como funciona o .htaccess
 description: Configuração Apache HTTP Server com .htaccess para regras de diretórios
 featuredImage: ./featured/way-2.jpg

@@ -73,7 +73,7 @@ const Blueprint = ({
 Blueprint.propTypes = {
   content: PropTypes.bool,
   whiteLogo: PropTypes.bool,
-  openGraphImage: PropTypes.object,
+  openGraphImage: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   children: PropTypes.node.isRequired,
