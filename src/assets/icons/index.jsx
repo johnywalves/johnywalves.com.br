@@ -57,6 +57,7 @@ import { Webpack } from "@styled-icons/simple-icons/Webpack"
 
 import ArrowsLeft from "./ArrowsLeft"
 import ArrowLeft from "./ArrowLeft"
+import Bluesky from "./Bluesky"
 import D3js from "./D3js"
 
 const Icons = {
@@ -118,7 +119,7 @@ const Icons = {
   D3js,
   MoveUp,
   LightningChargeFill,
-  Webpack
+  Webpack,
 }
 
 export {
@@ -177,10 +178,11 @@ export {
   Flowchart,
   ArrowsLeft,
   ArrowLeft,
+  Bluesky,
   D3js,
   MoveUp,
   LightningChargeFill,
-  Webpack
+  Webpack,
 }
 
 export default Icons

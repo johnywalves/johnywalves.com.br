@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Twitter, Linkedin } from "assets/icons"
+import { Bluesky, Linkedin } from "assets/icons"
 
 import { ShareWrapper, ShareTitle, ShareLinks } from "./styled"
 
@@ -10,18 +10,16 @@ const Share = ({ slug, title }) => {
     site: {
       siteMetadata: { title: siteTitle, siteUrl },
     },
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            siteUrl
-          }
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          siteUrl
         }
       }
-    `
-  )
+    }
+  `)
 
   const url = `${siteUrl}${slug}`,
     encoded = encodeURIComponent(url)
@@ -39,12 +37,12 @@ const Share = ({ slug, title }) => {
           <Linkedin />
         </a>
         <a
-          href={`https://twitter.com/intent/tweet?text=${title}%20%7C%20${siteTitle}%20${url}`}
+          href={`https://bsky.app/intent/compose?text=${title}%20%7C%20${siteTitle}%20${url}`}
           target="_blank"
           rel="nofollow noreferrer"
-          aria-label="Share TWitter"
+          aria-label="Share Bluesky"
         >
-          <Twitter />
+          <Bluesky />
         </a>
       </ShareLinks>
     </ShareWrapper>
