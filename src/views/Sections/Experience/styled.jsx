@@ -297,7 +297,7 @@ const hiddenWrapperAccomplishment = css`
 `
 
 const WrapperAccomplishment = styled.li`
-  max-height: 60rem;
+  max-height: 70rem;
   padding: 0 var(--36px) var(--36px) var(--48px);
   animation: ${fadeInInfo} 1s ease-out forwards;
 

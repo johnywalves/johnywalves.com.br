@@ -112,10 +112,6 @@
         "type": "Frameworks e Bibliotecas",
         "list": [
           {
-            "title": "Chakra UI",
-            "icon": "LightningChargeFill"
-          },
-          {
             "title": "D3.js",
             "icon": "D3js"
           },
@@ -194,7 +190,7 @@
         "type": "Ferramentas",
         "list": [
           {
-            "title": "Amazon Web Services (AWS)",
+            "title": "AWS",
             "icon": "Aws"
           },
           {
@@ -598,7 +594,16 @@
     "title": "Experiência Profissional",
     "list": [
       {
-        "date": "Jul 2023 - Atualmente",
+        "date": "Set 2024 - Atualmente",
+        "title": "Tech Designer",
+        "institution": "WeFit",
+        "description": [
+          "<strong>Projeto Porto Seguro</strong>: Desenvolvimento de uma plataforma de gestão para corretoras de seguros e outros serviços, com implementação de componentes para uso geral e específico. O projeto utilizou técnicas de renderização do lado do servidor (SSR) e do cliente (CSR) para garantir eficiência e flexibilidade.",
+          "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts e Tailwind CSS"
+        ]
+      },
+      {
+        "date": "Jul 2023 - Set 2024",
         "title": "Desenvolvedor Front-end Sênior",
         "institution": "Seguralta",
         "description": [

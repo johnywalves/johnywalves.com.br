@@ -112,10 +112,6 @@
         "type": "Frameworks and Libraries",
         "list": [
           {
-            "title": "Chakra UI",
-            "icon": "LightningChargeFill"
-          },
-          {
             "title": "D3.js",
             "icon": "D3js"
           },
@@ -194,7 +190,7 @@
         "type": "Toolbox",
         "list": [
           {
-            "title": "Amazon Web Services (AWS)",
+            "title": "AWS",
             "icon": "Aws"
           },
           {
@@ -598,7 +594,16 @@
     "title": "Experience",
     "list": [
       {
-        "date": "Jul 2023 - Currently",
+        "date": "Sep 2024 - Currently",
+        "title": "Tech Designer",
+        "institution": "WeFit",
+        "description": [
+          "<strong>Porto Seguro Project</strong>: Development of a management platform for insurance brokers and other services, featuring components for both general and specific use. The project leveraged server-side rendering (SSR) and client-side rendering (CSR) techniques to ensure efficiency and flexibility.",
+          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts, and Tailwind CSS"
+        ]
+      },
+      {
+        "date": "Jul 2023 - Sep 2024",
         "title": "Senior Front-end Developer",
         "institution": "Seguralta",
         "description": [
