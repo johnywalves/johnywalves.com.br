@@ -1,6 +1,6 @@
 ---
 title: Reflexões e Metas para 2025
-description: Ao longo deste ano, estou dedicando-me a desenvolver ideias claras e uma organização eficiente para alcançar minhas metas
+description: Ao longo deste ano, estou dedicando-me a desenvolver ideias claras e uma organização para alcançar minhas metas
 date: 2025-02-01 03:41:00 -0300
 featuredImage: ./featured/sunset-1.jpg
 coverImage: /figures/sunset-1.jpg
