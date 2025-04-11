@@ -28,7 +28,9 @@ Para um melhor entendimento, vamos detalhar alguns termos que serão utilizados 
 - **Artefatos**: Cartas de efeitos, que se efetivam no momento que invocadas;
 - **Feitiços**: Cartas de efeitos, que podem ser ativadas nos turnos seguintes a sua invocação;
 - **Condições**: Cartas de efeitos, com ação para todas as criaturas, artefatos ou ambos;
-- **Custo Invocação**: Cada carta possui um valor que determina quantos pontos de ação são necessários para coloca-la no campo de batalha.
+- **Custo Invocação**: Cada carta possui um valor que determina quantos pontos de ação são necessários para coloca-la no campo de batalha;
+- **Regras próprias**: ;
+- **Palavras chaves**: .
 
 ## Mecânicas de jogo
 
@@ -37,7 +39,7 @@ Como descrito pelo artigo da Wikipédia sobre o tema "Sistemas de interação en
 - **Turnos**: Cada jogador terão suas fases para escolher e realizar suas ações, intercalando para cada um, o primeiro a agir é sorteado com um cara ou coroa;
 - **Aleatório**: Ao começar cada jogador pega 5 (cinco) cartas e em cada turno 1 (uma) carta do topo da pilha de cartas, a ordem na pilha é aleatória fazendo o jogador a se adaptar para as cartas que tem a disposição;
 - **Pontos de Ação (PA)**: Também chamado de pontos de ação, o jogador recebe 3 (três) pontos de ação no início de seu turno para realizar as invocações e movimentação, cada ponto não gasto no seu turno é acumulado até o limite de 10 pontos;
-- **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques corpo-a-corpo podem atingir inimigos na linha de corpo-a-corpo e na linha de ataques a distância caso não exista na linha corpo-a-corpo e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, independente do alcance todas podem atacar o comandante, o jogador deve somente colocar as cartas no seu lado no campo de batalha;
+- **Posicionamento**: No campo de batalha a posição das cartas alteração suas capacidades e vulnerabilidades, as criaturas somente com capacidade de ataques curto alcance podem atingir inimigos na linha de vanguarda e na linha de ataques a distância caso não exista na linha vanguarda e as criaturas com capacidade de ataques a distância são capazes de ataques em qualquer linha, independente do alcance todas podem atacar o comandante, o jogador deve somente colocar as cartas no seu lado no campo de batalha;
 - **Movimentação**: Com o gasto de um ponto de ação o jogador pode trocar uma criatura da linha de corpo-a-corpo para a distância no seu lado do campo de batalha.
 
 As cartas podemos possuir descrições que alteração alguma mecânica, nesse caso a descrição da carta sempre deve prevalecer
@@ -58,13 +60,15 @@ Em resumo:
   - Descartar cartas: Se o jogador tiver mais de 8 (oito) cartas deve descartar o excedente;
   - Descartar pontos de ação: Se o jogador tiver mais de 10 (dez) pontos de ação deve descartar o excedente.
 
-## Cartas de criaturas, comandantes e resolvendo combate
+## Cartas
+
+### Cartas de criaturas, comandantes e resolvendo combate
 
 Cada criatura tem valores de **ataque, defesa**, **distância de ataque** e **nível**, alguns podem ter descrições de **efeitos**, esses efeitos podem ser acionados no momento do ataque, defesa, no início da fase de combate ou na invocação
 
 ![Uma carta formato de retrato com valores de nível, ataque e defesa e tipo de ataque](/figures/card_game_criaturas.png "Exemplo de carta de criatura")
 
-Destalhe para todos os valores estão no lado direito em cima, facilitando a visualização quando seguradas e sobrepostas
+Detalhes para todos os valores estão no lado direito em cima, facilitando a visualização quando seguradas e sobrepostas
 
 Cada comandante possuir **pontos de vida**, **pontos de defesa** e eventualmente alguma descrição de **efeitos** de do acionamento
 
@@ -72,7 +76,7 @@ Cada comandante possuir **pontos de vida**, **pontos de defesa** e eventualmente
 
 Na fase de combate cada criatura pode realizar um ataque contra outra criatura dentro do alcance ou contra um comandante caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o comandante ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
 
-## Cartas de efeitos: artefatos e feitiços
+### Cartas de efeitos: artefatos e feitiços
 
 As cartas de efeitos possuem um **nível**, uma **descrição de alvo** e **duração** e uma descrição de explicando suas capacidades, os **artefatos** devem ser invocados e ativados na fase de preparo e **feitiços** invocados na fase de feitiços e ativados na fase de preparo, no turno seguinte, ambos gastando seu nível em pontos de ação para invocação
 
@@ -87,6 +91,18 @@ A duração é definida como:
 
 - **Instantânea**: As cartas com essa duração são descartadas no momento que seus efeitos são efetivados;
 - **Duradora**: Após a ativação ela mantém seu efeito até destruída, ou quando seu alvo for destruído.
+
+### Regras próprias
+
+#### Palavras chaves:
+
+#### Posicionamento
+
+- **Brutamonte**: A criatura não pode mudar o posicionamento, ela deve permanecer na posição inicial;
+- **Ligeiro**
+- **Pesado**
+
+####
 
 ## Condições de vitória
 
