@@ -601,7 +601,8 @@
         "title": "Tech Designer",
         "institution": "WeFit",
         "description": [
-          "<strong>Projeto Porto Seguro</strong>: Desenvolvimento de uma plataforma de gestão para corretoras de seguros e outros serviços, com implementação de componentes para uso geral e específico. O projeto utilizou técnicas de renderização do lado do servidor (SSR) e do cliente (CSR) para garantir eficiência e flexibilidade.",
+          "<strong>Projeto Porto Seguro - Plataforma de Gestão para Corretoras</strong>: Desenvolvimento para plataforma modular utilizando uma arquitetura híbrida (SSR e CSR) com Next.js, garantindo desempenho e escalabilidade. Componentização reutilizáveis em React e TypeScript, dashboards analíticos com Recharts e interfaces responsivas com Tailwind CSS, assegurando consistência e eficiência no desenvolvimento.",
+          "Como contribuições-chave, promovi a qualidade do código através de revisões técnicas (Core Review) e padronização, além de atuar como mentor de desenvolvedores júnior. Automatizei processos críticos, reduzindo o tempo de desenvolvimento.",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts e Tailwind CSS"
         ]
       },

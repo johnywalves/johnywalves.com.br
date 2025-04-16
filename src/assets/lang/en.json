@@ -601,7 +601,8 @@
         "title": "Tech Designer",
         "institution": "WeFit",
         "description": [
-          "<strong>Porto Seguro Project</strong>: Development of a management platform for insurance brokers and other services, featuring components for both general and specific use. The project leveraged server-side rendering (SSR) and client-side rendering (CSR) techniques to ensure efficiency and flexibility.",
+          "<strong>Porto Seguro Project - Brokerage Management Platform</strong>: Development of a modular platform using a hybrid architecture (SSR and CSR) with Next.js, ensuring performance and scalability. Reusable componentization with React and TypeScript, analytical dashboards with Recharts, and responsive interfaces with Tailwind CSS, guaranteeing consistency and efficiency in development.",
+          "As key contributions, I improved code quality through technical reviews (Core Review) and standardization, as well as mentoring junior developers. I automated critical processes, reducing development time.",
           "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts, and Tailwind CSS"
         ]
       },

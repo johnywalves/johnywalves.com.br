@@ -58,7 +58,7 @@ const ResumePage = ({ language }) => {
           </h2>
           <hr />
           {language.experience.list
-            .slice(0, 4)
+            .slice(0, 3)
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
