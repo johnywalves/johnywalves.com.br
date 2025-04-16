@@ -148,6 +148,17 @@ export const ResumeSection = styled.section`
     align-items: center;
     vertical-align: middle;
   }
+
+  & a,
+  & a:hover,
+  & a:visited {
+    color: var(--highlight);
+    margin: 8px 0;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
 `
 
 export const ResumePerson = styled.section`
@@ -161,7 +172,7 @@ export const ResumePerson = styled.section`
     margin: 0 0 12px;
   }
 
-  & ul  {
+  & ul {
     display: flex;
     flex-direction: column;
     align-items: center;

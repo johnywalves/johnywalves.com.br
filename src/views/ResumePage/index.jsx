@@ -58,7 +58,7 @@ const ResumePage = ({ language }) => {
           </h2>
           <hr />
           {language.experience.list
-            .slice(0, 3)
+            .slice(0, 4)
             .map(({ date, title, institution, description }) => (
               <ResumeSubSection key={date}>
                 <ResumeSubTitle>
@@ -81,6 +81,15 @@ const ResumePage = ({ language }) => {
                 </ul>
               </ResumeSubSection>
             ))}
+
+          <a
+            href="https://johnywalves.com.br/?section=experiences"
+            target="_blank"
+            without
+            rel="noreferrer"
+          >
+            {language.experience.seeMore}
+          </a>
         </ResumeSection>
 
         <ResumeFooter>
@@ -156,7 +165,7 @@ const ResumePage = ({ language }) => {
           </h2>
           <hr />
           {language.certification.list
-            .splice(0, 5)
+            .splice(0, 10)
             .map(({ date, name, institute, time }) => (
               <ResumeCourse key={date}>
                 <p>
