@@ -8,6 +8,7 @@ import {
   HomeComicsWrapper,
   HomeComicsLink,
   HomeComicsHeader,
+  HomeComicsContainer,
   HomeComicsImage,
 } from "./styled"
 
@@ -81,16 +82,18 @@ const SectionComics = () => {
                 </h3>
                 <small>{node.frontmatter.date}</small>
               </HomeComicsHeader>
-              <HomeComicsImage
-                image={
-                  (
-                    node.frontmatter.featuredImage ||
-                    node.frontmatter.comicImage
-                  ).childImageSharp.gatsbyImageData
-                }
-                title={node.frontmatter.transcription}
-                alt=""
-              />
+              <HomeComicsContainer>
+                <HomeComicsImage
+                  image={
+                    (
+                      node.frontmatter.featuredImage ||
+                      node.frontmatter.comicImage
+                    ).childImageSharp.gatsbyImageData
+                  }
+                  title={node.frontmatter.transcription}
+                  alt=""
+                />
+              </HomeComicsContainer>
             </HomeComicsLink>
           </li>
         </CardList>

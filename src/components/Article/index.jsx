@@ -149,15 +149,12 @@ export const ArticleHead = ({ location, data, pageContext }) => {
           {JSON.stringify(richSnipppet)}
         </script>
       </Seo>
-      {extras &&
-        extras.map((extra, index) => {
-          if (extra.endsWith("css")) {
-            return (
-              <link key={index} rel="stylesheet" href={`/extras/${extra}`} />
-            )
-          }
-          return <script key={index} src={`/extras/${extra}`} />
-        })}
+      {extras?.map((extra, index) => {
+        if (extra.endsWith("css")) {
+          return <link key={index} rel="stylesheet" href={`/extras/${extra}`} />
+        }
+        return <script key={index} src={`/extras/${extra}`} />
+      })}
     </>
   )
 }

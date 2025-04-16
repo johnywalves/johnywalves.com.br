@@ -39,6 +39,13 @@ export const PostItemImageFeatured = styled(GatsbyImage)`
   justify-content: center;
   font-size: 1.3rem;
   font-weight: 700;
+
+  border-radius: 0.5rem;
+
+  & img {
+    outline: none;
+    appearance: none;
+  }
 `
 
 export const PostItemHeader = styled.div`

@@ -10,7 +10,9 @@ export const ArticleWrapper = styled.article`
   background-color: var(--background);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
 `
 
 export const ArticleForehead = styled.div`
@@ -60,14 +62,6 @@ export const PostHeader = styled.div`
     max-width: 100%;
   `}
 `
-
-export const ComicWrapper = styled.div`
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-`
-
-export const PostComic = styled(GatsbyImage)``
 
 export const PostDate = styled.time`
   font-size: 1.1rem;

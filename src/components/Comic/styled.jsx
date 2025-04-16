@@ -10,7 +10,9 @@ export const ComicPostWrapper = styled.article`
   background-color: var(--background);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: top left, bottom right;
+  background-position:
+    top left,
+    bottom right;
 
   ${media.lessThan("medium")`
     background-size: 50%;
@@ -27,7 +29,7 @@ export const ComicPostHeader = styled.header`
     ${(props) =>
       props.comics
         ? css`
-            padding: 0.5rem 0.5rem 0;
+            padding: 1.5rem 0.5rem 0;
           `
         : css`
             padding: 3rem 0 0;
@@ -43,23 +45,37 @@ export const ComicPostHeader = styled.header`
 export const PostFeaturedImage = styled(GatsbyImage)``
 
 export const ComicWrapper = styled.div`
-  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
+
+  ${media.lessThan("large")`
+    margin: 1rem;
+  `}
 `
 
-export const PostComic = styled(GatsbyImage)``
+export const PostComic = styled(GatsbyImage)`
+  border-radius: 0.5rem;
+
+  & img {
+    outline: none;
+    appearance: none;
+  }
+`
 
 export const PostDate = styled.time`
   font-size: 1rem;
   font-weight: 400;
+
+  ${media.lessThan("large")`
+    padding: 0 1rem;
+  `}
 `
 
 export const PostTitle = styled.h1`
   font-size: 4rem;
   font-weight: 700;
-  padding: var(--8px) 0 var(--16px);
-  margin: 1rem auto;
+  padding: 0 0 var(--16px);
+  margin: 0 auto 1rem;
   color: var(--highlight);
   text-shadow: 1px 1px 2px var(--shadow-colors);
 
@@ -71,7 +87,6 @@ export const PostTitle = styled.h1`
 
   ${media.lessThan("medium")`
     font-size: 2rem;
-    padding: 0;
   `}
 `
 
