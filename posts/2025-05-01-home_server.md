@@ -38,7 +38,8 @@ Optei pelo **Ubuntu Server 22.04 LTS** como sistema operacional, principalmente 
 - A vasta documentação disponível para suporte
 - Compatibilidade com os requisitos do meu hardware
 
-<blockquote>
+<details>
+  <summary>Detalhes da instalação e configuração</summary>
 
 **Processo de instalação**
 
@@ -52,7 +53,7 @@ Baixei a ISO diretamente do site oficial: ubuntu.com/download/alternative-downlo
 - IP fixo: Atribuí um endereço estático para facilitar o acesso permanente na rede local
 - Servidores DNS: Configurei manualmente para garantir a resolução adequada de nomes
 
-</blockquote>
+</details>
 
 ## JellyFin - Minha central de mídia
 
@@ -64,7 +65,8 @@ Após avaliar diversas ferramentas, escolhi o **Jellyfin** como solução de ser
 
 Após o processo de configuração e criação das bibliotecas basta adicionar um arquivo na pasta configurada para acessar em todo lugar
 
-<blockquote>
+<details>
+  <summary>Detalhes da instalação e configuração</summary>
 
 **Instalação Básica**
 
@@ -79,7 +81,7 @@ Para otimizar a experiência, adotei a seguinte estrutura:
 
 - **Filmes**: Basta colocar na pasta com o título original
 - **Séries**: Pastas com o nome da série e os arquivos com indicações dos episódios. Exemplo: `S<número temporada>E<número do episódio>`
-- **Músicas**: As pastas devem seguidor a estrutura `<Nome do artista>\<Nome do Album>\<Arquivos com o nome da música>`
+- **Músicas**: As pastas devem seguidor a estrutura `<Nome do artista>\<Nome do album>\<arquivos com o nome da música>`
 - **Outros Arquivos**: Organização livre (sem necessidade de metadados)
 
 **Compatibilidade com Dispositivos**
@@ -92,19 +94,20 @@ Testado e funcionando em:
 - ✅ LG SmartHub
 - ✅ Samsung Tizen ([requer instalação manual](https://github.com/Georift/install-jellyfin-tizen))
 
-</blockquote>
+</details>
 
 ## Minecraft Bedrock - Meu servidor Minecraft
 
-Minha filha é muito ativa, adora brincar e, quando estamos em casa, sempre pede para jogarmos Minecraft juntos. Costumamos criar um novo servidor a cada vez que jogamos
+Minha filha é muito ativa, adora brincar, nadar e correr, quando estamos em casa sempre pede para jogarmos Minecraft juntos. Costumávamos criar um novo servidor a cada vez que jogamos
 
-Decidi aproveitar um servidor local para essa atividade. Enquanto exploramos minas e florestas juntos, nos dividimos nas tarefas quando jogamos separadamente: eu cuido da fazenda, da expansão das estradas e da conexão com vilas e pontos interessantes, enquanto ela gerencia as vacas, galinhas e abelhas, criando salas especiais em nossa fortaleza
+Decidi aproveitar o servidor local para essa atividade. Quando jogamos juntos exploramos minas e florestas, enquanto separados focamos em algumas tarefas: eu cuido da fazenda, da expansão das estradas para conexão com vilas e pontos interessantes, enquanto ela gerencia as vacas, galinhas e abelhas, criando salas especiais em nossa fortaleza
 
 ![Fazenda com vacas, trigo e abobora](/figures/minecraft_farm.jpg "tela do jogo Minecraft apresentando uma plantação e algumas vacas")
 
 Uma situação marcante foi quando, ocupado com outras tarefas, fui ver o que minha filha estava fazendo no jogo e a encontrei com **36 galinhas** – o servidor ainda conseguiu suportar! Foi um momento divertido e memorável.
 
-<blockquote>
+<details>
+  <summary>Detalhes da instalação e configuração</summary>
 
 Os arquivos do servidor podem ser baixados em: https://www.minecraft.net/en-us/download/server/bedrock
 
@@ -147,7 +150,7 @@ sudo systemctl enable minecraft_server.service
    - **PC/Mobile**: Basta digitar o IP local.
    - **Consoles**: Siga os passos adicionais em [BedrockConnect](https://github.com/Pugmatt/BedrockConnect).
 
-</blockquote>
+</details>
 
 ## Samba - Meu armazenamento de arquivos
 
@@ -155,10 +158,8 @@ Com os servidores rodando, ficou chato ficar plugando e desplugando o HD externo
 
 Agora, basta jogar os arquivos na pasta compartilhada e, em **dois minutos**, eles já estão disponíveis em qualquer tela, com os metadados devidamente carregados. Sem cabos, sem espera, sem estresse.
 
-<blockquote>
-
-Como Configurar o Compartilhamento via Samba
-Se você também quer simplificar o processo, aqui está um resumo do que fiz:
+<details>
+  <summary>Detalhes da instalação e configuração</summary>
 
 1. Instale o Samba (se ainda não estiver instalado):
 
@@ -166,7 +167,7 @@ Se você também quer simplificar o processo, aqui está um resumo do que fiz:
 sudo apt install samba
 ```
 
-1. Configure o compartilhamento editando o arquivo /etc/samba/smb.conf:
+1. Configure o compartilhamento editando o arquivo `/etc/samba/smb.conf`:
 
 ```ini
 [JellyfinMedia]
@@ -183,7 +184,7 @@ sudo apt install samba
 sudo systemctl restart smbd
 ```
 
-1. Liberar Samba no filewall:
+1. Libere o Samba no filewall:
 
 ```bash
 ufw allow samba
@@ -199,9 +200,9 @@ Pronto! Agora você pode acessar a pasta de qualquer dispositivo na rede e adici
 
 **No Windows**
 
-No Windows 10 ou versões anterior é necessário habilitar o recurso do Windows "SMB 1.0/CIFS", depois facilmente acessível pelo Windows Explorer digital na barra de endereço `\\<ip do servidor>`
+No Windows 10 ou versões anterior é necessário habilitar o recurso do Windows de compartilhamento com "SMB 1.0/CIFS", depois facilmente acessível pelo Windows Explorer digital na barra de endereço `\\<ip do servidor>` e informar o usuário criado no Samba!
 
-</blockquote>
+</details>
 
 ## Futuro do Home Server: Próximos Passos
 
