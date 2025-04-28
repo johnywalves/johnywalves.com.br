@@ -31,6 +31,7 @@ const SectionComics = () => {
               title
               number
               description
+              horizontal
               transcription
               featuredImage {
                 childImageSharp {
@@ -82,7 +83,7 @@ const SectionComics = () => {
                 </h3>
                 <small>{node.frontmatter.date}</small>
               </HomeComicsHeader>
-              <HomeComicsContainer>
+              <HomeComicsContainer $horizontal={node.frontmatter.horizontal}>
                 <HomeComicsImage
                   image={
                     (

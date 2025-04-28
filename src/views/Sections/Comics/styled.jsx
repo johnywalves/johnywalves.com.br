@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
 import { Link } from "gatsby"
@@ -80,6 +80,13 @@ export const HomeComicsContainer = styled.div`
   padding: 2rem 2rem 0 2rem;
 
   position: relative;
+
+  ${({ $horizontal }) =>
+    $horizontal &&
+    css`
+      margin: 0 auto;
+      width: 70%;
+    `}
 
   &::after {
     content: "";
