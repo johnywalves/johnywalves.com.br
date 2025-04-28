@@ -1,14 +1,14 @@
 ---
-title: Card Game em React (1/?) - Conceito
-description: Desenvolvendo um jogo tipo Magic, Digimon e Yu-Gi-Oh! do conceito até a entrega com React (Parte 1 de ?)
-date: 2025-06-01 19:57:08 -0300
-featuredImage: ./featured/cards-1.jpg
-coverImage: figures/cards-1.jpg
-category: React
+title: Servidor Caseiro - Por que somente empresas?
+description: Descubra as aventuras e desafios de configurar um home server
+date: 2025-05-01 11:37:32 -0300
+featuredImage: ./featured/server-1.jpg
+coverImage: figures/server-1.jpg
+category: Linux
 tags:
-  - Games
-  - Design
-  - JavaScript
+  - Servidor
+  - Jogos
+  - Linux
 cheatsheet: false
 published: false
 ---
@@ -77,9 +77,10 @@ Acessível através do navegador em:
 
 Para otimizar a experiência, adotei a seguinte estrutura:
 
-- **Filmes**: Nomes padronizados (mantendo o título original)
-- **Séries**
-- Outros Arquivos: Organização livre (sem necessidade de metadados)
+- **Filmes**: Basta colocar na pasta com o título original
+- **Séries**: Pastas com o nome da série e os arquivos com indicações dos episódios. Exemplo: `S<número temporada>E<número do episódio>`
+- **Músicas**: As pastas devem seguidor a estrutura `<Nome do artista>\<Nome do Album>\<Arquivos com o nome da música>`
+- **Outros Arquivos**: Organização livre (sem necessidade de metadados)
 
 **Compatibilidade com Dispositivos**
 
@@ -143,8 +144,8 @@ sudo systemctl enable minecraft_server.service
 
 1. Para conectar ao servidor:
 
-- **PC/Mobile**: Basta digitar o IP local.
-- **Consoles**: Siga os passos adicionais em [BedrockConnect](https://github.com/Pugmatt/BedrockConnect).
+   - **PC/Mobile**: Basta digitar o IP local.
+   - **Consoles**: Siga os passos adicionais em [BedrockConnect](https://github.com/Pugmatt/BedrockConnect).
 
 </blockquote>
 
