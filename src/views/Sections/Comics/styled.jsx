@@ -81,11 +81,19 @@ export const HomeComicsContainer = styled.div`
 
   position: relative;
 
-  ${({ $horizontal }) =>
-    $horizontal &&
+  ${({ $vertical }) =>
+    $vertical &&
     css`
       margin: 0 auto;
-      width: 70%;
+      width: 60%;
+
+      ${media.lessThan("large")`
+        width: 80%;
+      `}
+
+      ${media.lessThan("medium")`
+        width: 100%;
+      `}
     `}
 
   &::after {

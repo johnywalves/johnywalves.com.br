@@ -7,7 +7,7 @@ coverImage: figures/server-1.jpg
 category: Linux
 tags:
   - Servidor
-  - Jogos
+  - Games
   - Linux
 cheatsheet: false
 published: false
