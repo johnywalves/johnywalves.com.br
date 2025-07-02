@@ -5,7 +5,7 @@ export const CardArticleContent = styled.div`
   position: relative;
   left: 0;
   top: 226px;
-  min-height: 490px;
+  min-height: 510px;
   padding: 20px 30px;
   border-top-left-radius: 30px;
   border-top-right-radius: 5px;

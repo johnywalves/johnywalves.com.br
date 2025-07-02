@@ -430,6 +430,13 @@
         "cover": "githubio",
         "view": "https://card-game-in-react.vercel.app",
         "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
+      },
+      {
+        "title": "Sangue Quente",
+        "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
+        "cover": "githubio",
+        "view": "https://sanguequente.art/",
+        "description": "A collection of Werewolf: The Apocalypse chronicles"
       }
     ]
   },
@@ -515,6 +522,11 @@
         "title": "Birthday invitation",
         "description": "Invitation to party held in 2023",
         "link": "/niver"
+      },
+      {
+        "title": "Kalyra",
+        "description": "Character Sheet for D&D 5th Edition - Half-Elf",
+        "link": "https://kalyra.jwalves.com/"
       }
     ]
   },
