@@ -9,7 +9,7 @@
     "babel-plugin-styled-components": "2.1.4",
     "decap-cms-app": "3.1.10",
     "dotenv": "16.4.5",
-    "gatsby": "5.13.6",
+    "gatsby": "5.14.6",
     "gatsby-plugin-algolia-search": "0.5.7",
     "gatsby-plugin-decap-cms": "4.0.4",
     "gatsby-plugin-feed": "5.13.1",
