@@ -1,5 +1,5 @@
 ---
-title: Servidor Caseiro - Por que somente empresas?
+title: Servidor em casa - Centralize dados e aplicações com facilidade
 description: Descubra as aventuras e desafios de configurar um home server
 date: 2025-05-01 11:37:32 -0300
 featuredImage: ./featured/server-1.jpg
@@ -7,10 +7,10 @@ coverImage: figures/server-1.jpg
 category: Linux
 tags:
   - Servidor
-  - Jogos
+  - Games
   - Linux
 cheatsheet: false
-published: false
+published: true
 ---
 
 Um dos meus filmes favoritos é O Feitiço do Tempo (_Groundhog Day_). Ao perceber que ele não estava disponível em nenhum dos serviços de streaming que assino, decidi buscar alternativas para assistir na televisão. Essa busca me levou a um mundo sem volta — repleto de liberdades e possibilidades

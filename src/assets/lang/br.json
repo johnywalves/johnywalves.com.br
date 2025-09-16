@@ -430,6 +430,13 @@
         "cover": "githubio",
         "view": "https://card-game-in-react.vercel.app",
         "description": "Desenvolvendo um jogo tipo Magic: The Gathering, Hearthstone e Yu-Gi-Oh! do conceito até a entrega com React"
+      },
+      {
+        "title": "Sangue Quente",
+        "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
+        "cover": "githubio",
+        "view": "https://sanguequente.art/",
+        "description": "Um acervo de crônicas de Lobisomem: O Apocalipse"
       }
     ]
   },
@@ -515,6 +522,11 @@
         "title": "Convite de aniversário",
         "description": "Convite para festa ocorrida em 2023",
         "link": "/niver"
+      },
+      {
+        "title": "Kalyra",
+        "description": "Ficha de Personagem para D&D 5ª Edição - Meio-Elfa",
+        "link": "https://kalyra.jwalves.com/"
       }
     ]
   },
