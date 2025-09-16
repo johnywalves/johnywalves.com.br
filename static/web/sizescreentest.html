@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#e0138c" />
+
+    <title>Screen Size Test</title>
+    <meta name="title" property="og:title" content="Screen Size Test" />
+    <meta
+      name="description"
+      property="og:description"
+      content="Page Description"
+    />
+    <meta
+      name="image"
+      property="og:image"
+      itemprop="image"
+      content="/path/to/thumbnail"
+    />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="url" property="og:url" content="https://url.page" />
+    <meta name="site_name" property="og:site_name" content="Page Name" />
+    <meta name="locale" property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://url.page" />
+    <meta name="twitter:title" content="Screen Size Test" />
+    <meta name="twitter:description" content="Page Description" />
+    <meta name="twitter:image" content="/path/to/thumbnail" />
+
+    <style>
+      /* Reset CSS */
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      a,
+      a:hover,
+      a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Content CSS */
+      :root {
+        --color-background: #282c35;
+        --color-text: #e0138c;
+      }
+
+      html,
+      body {
+        scroll-snap-type: y mandatory;
+      }
+
+      body {
+        background: var(--color-background);
+        color: var(--color-text);
+      }
+
+      p {
+        color: #282c35;
+        font-size: 5rem;
+        font-weight: 900;
+        text-align: center;
+        gap: 0.5rem;
+        line-height: 5rem;
+
+        & small {
+          font-size: 50%;
+          line-height: 5rem;
+        }
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        scroll-snap-align: start;
+      }
+
+      div.viewport {
+        height: 100vh;
+        background-color: #e0138c;
+      }
+
+      div.dynamic-viewport {
+        height: 100dvh;
+        background-color: #138ae0;
+      }
+
+      div.safe-area {
+        height: 100dvh;
+        background-color: #e0138c;
+
+        & span.content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: calc(
+            100% - env(safe-area-inset-left, 1rem) -
+              env(safe-area-inset-right, 1rem)
+          );
+          height: calc(
+            100% - env(safe-area-inset-left, 1rem) -
+              env(safe-area-inset-right, 1rem)
+          );
+          background-color: #8ae013;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="viewport"><p>100vh</p></div>
+    <div class="dynamic-viewport"><p>100dvh</p></div>
+    <div class="safe-area">
+      <span class="content">
+        <p>100dvh<br /><small>with safe-area-inset</small></p>
+      </span>
+    </div>
+  </body>
+
+  <script type="text/javascript"></script>
+</html>
