@@ -85,17 +85,28 @@
 
         & small {
           font-size: 50%;
-          line-height: 5rem;
+          line-height: 2rem;
         }
       }
 
-      div {
+      div,
+      span.content,
+      span.wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
 
+      div {
         width: 100%;
         scroll-snap-align: start;
+      }
+
+      & span.wrapper {
+        border: 0.25rem solid #282c35;
+        border-radius: 0.5rem;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
       }
 
       div.viewport {
@@ -113,17 +124,11 @@
         background-color: #e0138c;
 
         & span.content {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
           width: calc(
-            100% - env(safe-area-inset-left, 1rem) -
-              env(safe-area-inset-right, 1rem)
+            100% - env(safe-area-inset-left, 0) - env(safe-area-inset-right, 0)
           );
           height: calc(
-            100% - env(safe-area-inset-left, 1rem) -
-              env(safe-area-inset-right, 1rem)
+            100% - env(safe-area-inset-left, 0) - env(safe-area-inset-right, 0)
           );
           background-color: #8ae013;
         }
@@ -132,11 +137,17 @@
   </head>
 
   <body>
-    <div class="viewport"><p>100vh</p></div>
-    <div class="dynamic-viewport"><p>100dvh</p></div>
+    <div class="viewport">
+      <span class="wrapper"><p>100vh</p></span>
+    </div>
+    <div class="dynamic-viewport">
+      <span class="wrapper"><p>100dvh</p></span>
+    </div>
     <div class="safe-area">
       <span class="content">
-        <p>100dvh<br /><small>with safe-area-inset</small></p>
+        <span class="wrapper">
+          <p>100dvh<br /><small>with safe-area-inset</small></p>
+        </span>
       </span>
     </div>
   </body>
