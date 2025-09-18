@@ -527,6 +527,11 @@
         "title": "Kalyra",
         "description": "Character Sheet for D&D 5th Edition - Half-Elf",
         "link": "https://kalyra.jwalves.com/"
+      },
+      {
+        "title": "Sizes Screen Test",
+        "description": "Sizes Screen Test to Web devices",
+        "link": "/web/sizescreentest.html"
       }
     ]
   },

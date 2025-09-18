@@ -527,6 +527,11 @@
         "title": "Kalyra",
         "description": "Ficha de Personagem para D&D 5ª Edição - Meio-Elfa",
         "link": "https://kalyra.jwalves.com/"
+      },
+      {
+        "title": "Sizes Screen Test",
+        "description": "Teste de altura da tela para dispositivos Web",
+        "link": "/web/sizescreentest.html"
       }
     ]
   },
