@@ -147,8 +147,8 @@ sudo systemctl enable minecraft_server.service
 
 1. Para conectar ao servidor:
 
-   - **PC/Mobile**: Basta digitar o IP local.
-   - **Consoles**: Siga os passos adicionais em [BedrockConnect](https://github.com/Pugmatt/BedrockConnect).
+- **PC/Mobile**: Basta digitar o IP local.
+- **Consoles**: Siga os passos adicionais em [BedrockConnect](https://github.com/Pugmatt/BedrockConnect).
 
 </details>
 
