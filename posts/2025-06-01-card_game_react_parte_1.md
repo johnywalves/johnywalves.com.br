@@ -1,7 +1,7 @@
 ---
 title: Card Game em React (1/?) - Conceito
-description: Desenvolvendo um jogo tipo Magic, Digimon e Yu-Gi-Oh! do conceito até a entrega com React (Parte 1 de ?)
-date: 2025-06-01 19:57:08 -0300
+description: Desenvolvendo um jogo tipo Magic, Pokemon, One Piece e Yu-Gi-Oh! do conceito até a entrega com React (Parte 1 de ?)
+date: 2025-11-01 19:57:08 -0300
 featuredImage: ./featured/cards-1.jpg
 coverImage: figures/cards-1.jpg
 category: React
@@ -13,23 +13,29 @@ cheatsheet: false
 published: false
 ---
 
-Sou apaixonado por videogames, e essa paixão foi o que me inspirou a seguir na área de desenvolvimento. Agora, vamos usar esse amor para criar, nesta série, um card game do conceito inicial até a primeira versão jogável, com um modo single player (contra a CPU), artes e animações simples
+Minha paixão por videogames é o que me guiou até o desenvolvimento. Agora, vou canalizar essa energia para criar, do zero, um card game completo! Nesta série, vamos juntos da ideia inicial à primeira versão jogável, com modo single player (contra a CPU), arte e animações simples
 
 ## Termos no jogo
 
-Para um melhor entendimento, vamos detalhar alguns termos que serão utilizados ao longo destes artigos
+Antes de mergulharmos de cabeça, que tal alinharmos alguns conceitos? Vamos detalhar agora os termos que serão nossos melhores amigos nesta jornada!
 
-- **Campo de batalha**: Formada de 4 linhas, subdividida em 5 colunas e representadas no diagrama abaixo, onde cada carta deve ser posicionada nos espaços disponíveis entre elas, em cada lado a linha voltada para o adversários é a vanguarda (vermelho) e linhas do jogador a retaguarda (azul), e três retângulos em um dos lados, ;
+### Campo de batalha
+
+Vamos conhecer o campo de batalha! Nosso tabuleiro é uma grade de 4 linhas e 5 colunas, criando os espaços perfeitos para posicionar suas cartas
+
+Imagine assim: as linhas da frente, voltadas para o adversário, são a sua Vanguarda (em vermelho no diagrama)
+
+Já as linhas mais próximas de você formam a Retaguarda (em azul). E não podemos esquecer da área de comando, com três retângulos especiais na lateral, feitos para você colocar seus Comandantes e a Condição de Campo;
 
 ![Um desenho de processo com descrições de cada etapa](/figures/card_game_react_battlefield.svg "Game Loop")
 
 - **Comandante**: O comandante é o avatar no jogador, é uma carta especial com pontos de vida que deve ser protegida;
-- **Criaturas**: Cartas com valores de ataque e defesa, responsáveis pela defesa do comandante e ataque do comandante adversário;
-- **Artefatos**: Cartas de efeitos, que se efetivam no momento que invocadas;
-- **Feitiços**: Cartas de efeitos, que podem ser ativadas nos turnos seguintes a sua invocação;
-- **Condições**: Cartas de efeitos, com ação para todas as criaturas, artefatos ou ambos;
+- **Unidades**: Cartas com valores de ataque e defesa, responsáveis pela defesa do comandante e ataque do comandante adversário;
+- **Artefatos**: Cartas de efeitos permanentes, que podem ser ativadas nos turnos seguintes a sua invocação;
+- **Ordens**: Cartas de efeitos instantâneos, que se efetivam no momento que invocadas;
+- **Condições**: Cartas de efeitos permanentes únicos, com ação para todas as criaturas, artefatos ou ambos;
 - **Custo Invocação**: Cada carta possui um valor que determina quantos pontos de ação são necessários para coloca-la no campo de batalha;
-- **Regras próprias**: ;
+- **Regras próprias**: Na descrição da carta dela possui um ;
 - **Palavras chaves**: .
 
 ## Mecânicas de jogo
@@ -52,12 +58,12 @@ No início cada jogador deve pegar 5 (cinco) cartas de sua pilha de cartas, joga
 
 Em resumo:
 
-- **Pré-preparo**: O jogador deve pegar 1 (uma) carta da pilha de cartas e receber 3 (três) pontos de ação;
-- **Fase de preparo**: Invocações de artefatos e criaturas com o gasto de pontos de ação definidos pelo nível da carta e movimentações por custo de um ponto de ação, e ativação de feitiços;
+- **Começo do Turno**: O jogador deve pegar 1 (uma) carta da pilha de cartas e receber 3 (três) pontos de ação;
+- **Fase de ações**: Invocações de artefatos e criaturas com o gasto de pontos de ação definidos pelo nível da carta e movimentações por custo de um ponto de ação, e ativação de feitiços;
 - **Fase de combate**: As criaturas atacam e se defendem, cada criatura tem a possibilidade de realizar um ataque;
 - **Fase de feitiços**: Reservada para invocação de feitiços, com o custo em pontos de ação igual seu nível;
 - **Pós-turno**: Finalização das ações do jogador reservada para:
-  - Descartar cartas: Se o jogador tiver mais de 8 (oito) cartas deve descartar o excedente;
+  - Descartar cartas: Se o jogador tiver mais de 8 (oito) cartas na área de batalha deve descartar o excedente;
   - Descartar pontos de ação: Se o jogador tiver mais de 10 (dez) pontos de ação deve descartar o excedente.
 
 ## Cartas
@@ -76,7 +82,7 @@ Cada comandante possuir **pontos de vida**, **pontos de defesa** e eventualmente
 
 Na fase de combate cada criatura pode realizar um ataque contra outra criatura dentro do alcance ou contra um comandante caso não tenha criaturas dispostas para a defesa, ao receber um ataque se a criatura possuir pontos de defesa menores que o valor do ataque a carta deve ir para a pilha de descarte, o comandante ao receber um ataque debita os valores de defesa e debita a diferença dos pontos de vida
 
-### Cartas de efeitos: artefatos e feitiços
+### Cartas de efeitos: artefatos, feitiços e condições
 
 As cartas de efeitos possuem um **nível**, uma **descrição de alvo** e **duração** e uma descrição de explicando suas capacidades, os **artefatos** devem ser invocados e ativados na fase de preparo e **feitiços** invocados na fase de feitiços e ativados na fase de preparo, no turno seguinte, ambos gastando seu nível em pontos de ação para invocação
 
@@ -99,8 +105,9 @@ A duração é definida como:
 #### Posicionamento
 
 - **Brutamonte**: A criatura não pode mudar o posicionamento, ela deve permanecer na posição inicial;
-- **Ligeiro**
-- **Pesado**
+- **Leve**: A criatura não gasta pontos de ação para mudar posicionamento;
+- **Pesada**: A criatura gasta 2 (dois) pontos de ação para mudar posicionamento;
+- **Ligeira**: A criatura não se desativa
 
 ####
 

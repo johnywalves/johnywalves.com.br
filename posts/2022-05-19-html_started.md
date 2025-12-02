@@ -37,28 +37,22 @@ Também alterar e informar as cores na lista dentro do `:root` completando com o
     <meta name="theme-color" content="#e0138c" />
 
     <title>Page Title</title>
-    <meta name="title" property="og:title" content="Page Title" />
-    <meta
-      name="description"
-      property="og:description"
-      content="Page Description"
-    />
-    <meta
-      name="image"
-      property="og:image"
-      itemprop="image"
-      content="/path/to/thumbnail"
-    />
-    <meta name="type" property="og:type" content="website" />
-    <meta name="url" property="og:url" content="https://url.page" />
-    <meta name="site_name" property="og:site_name" content="Page Name" />
-    <meta name="locale" property="og:locale" content="pt_BR" />
+    <meta name="name" content="Page Title" />
+    <meta name="description" content="Page Description" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://url.page" />
+    <meta property="og:title" content="Page Title" />
+    <meta property="og:description" content="Page Description" />
+    <meta property="og:image" content="/path/to/thumbnail" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://url.page" />
     <meta name="twitter:title" content="Page Title" />
     <meta name="twitter:description" content="Page Description" />
     <meta name="twitter:image" content="/path/to/thumbnail" />
+
+    <meta name="locale" property="og:locale" content="pt_BR" />
 
     <style>
       /* Reset CSS */
