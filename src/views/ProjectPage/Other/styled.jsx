@@ -8,6 +8,7 @@ export const OtherProjectWrapper = styled.li`
 
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -25,6 +26,8 @@ export const OtherProjectWrapper = styled.li`
   background-repeat: no-repeat;
   background-position: top left;
 `
+
+export const OtherProjectData = styled.div``
 
 export const OtherProjectTitle = styled.h3`
   font-weight: 700;
