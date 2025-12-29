@@ -344,7 +344,7 @@
         "title": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "cover": "devflix",
-        "view": "https://devflix.johnywalves.com.br",
+        "view": "https://devflix.jwalves.com",
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
       },
       {
@@ -387,7 +387,7 @@
         "title": "Registro de tempo",
         "sourceCode": "https://github.com/johnywalves/register-switch",
         "cover": "registerSwitch",
-        "view": "https://register-switch.vercel.app",
+        "view": "https://switch.jwalves.com/",
         "description": "Tempo gasto executando tarefas de forma simples para habilitar e desabilitar"
       },
       {
@@ -540,7 +540,7 @@
     "seeMore": "Lista completa no site",
     "list": [
       {
-        "date": "Fev 2023 - Jul 2025",
+        "date": "Fev 2023 - Jul 2026",
         "title": "Mestrado em Ciência da Computação",
         "institution": "UNESP - Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
         "description": [

@@ -344,7 +344,7 @@
         "title": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "cover": "devflix",
-        "view": "https://devflix.johnywalves.com.br",
+        "view": "https://devflix.jwalves.com",
         "description": "Platform for sharing knowledge about software development in Brazilian language"
       },
       {
@@ -387,7 +387,7 @@
         "title": "Register Switch",
         "sourceCode": "https://github.com/johnywalves/register-switch",
         "cover": "registerSwitch",
-        "view": "https://register-switch.vercel.app",
+        "view": "https://switch.jwalves.com/",
         "description": "Time spent executing tasks in a simple way to enable and disable"
       },
       {
@@ -540,7 +540,7 @@
     "seeMore": "Full list on the website",
     "list": [
       {
-        "date": "Feb 2023 - Jul 2025",
+        "date": "Feb 2023 - Jul 2026",
         "title": "Master's in Computer Science",
         "institution": "UNESP",
         "description": [

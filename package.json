@@ -57,7 +57,7 @@
     "pre-run": "node pre-run.js",
     "pos-run": "node pos-run.js",
     "build": "npm run pre-run && gatsby build && npm run pos-run",
-    "dev": "npm run pre-run && gatsby develop",
+    "dev": "npm run pre-run && gatsby develop -p 5500",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
