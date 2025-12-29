@@ -8,6 +8,7 @@ export const OtherProjectWrapper = styled.li`
 
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   align-items: flex-start;
 
