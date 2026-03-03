@@ -27,8 +27,6 @@ export const OtherProjectWrapper = styled.li`
   background-position: top left;
 `
 
-export const OtherProjectData = styled.div``
-
 export const OtherProjectTitle = styled.h3`
   font-weight: 700;
   font-size: 1rem;
