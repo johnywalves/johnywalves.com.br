@@ -46,14 +46,14 @@ const ArticleCategoryNavigator = ({ categories }) => {
         />
       </ArticleCategoryNavigatorCover>
       <ArticleCategoryRss
-        href={Strings.posts.feed}
+        href={Strings.blog.feed}
         target="_target"
         rel="noreferrer noopener"
       >
-        <Rss /> RSS {Strings.posts.title}
+        <Rss /> RSS {Strings.blog.title}
       </ArticleCategoryRss>
       <ArticleCategoryNavigatorTitle>
-        {Strings.posts.categories}
+        {Strings.blog.categories}
       </ArticleCategoryNavigatorTitle>
       <ul>
         {categories.map((category) => (

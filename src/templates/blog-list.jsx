@@ -29,7 +29,7 @@ const BlogList = ({
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleNavigator}>
-        <h1>{Strings.posts.allArticles}</h1>
+        <h1>{Strings.blog.all}</h1>
         {postList.map(
           ({
             node: {

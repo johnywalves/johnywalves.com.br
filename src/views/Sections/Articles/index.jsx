@@ -109,7 +109,7 @@ const SectionArticles = () => {
     return (
       <>
         <SectionArticlesHighlightTitle>
-          {Strings.posts.someHighlights}
+          {Strings.blog.highlights}
         </SectionArticlesHighlightTitle>
         <SectionArticlesHighlightWrapper>
           {highlightEdges.map(({ node }) => (
@@ -145,8 +145,8 @@ const SectionArticles = () => {
   return (
     <SectionArticlesWrapper>
       <CardList
-        title={Strings.posts.title}
-        action={Strings.posts.viewAll}
+        title={Strings.blog.title}
+        action={Strings.blog.viewAll}
         ExtraLine={HighlightLine}
         url="/blog/"
       >

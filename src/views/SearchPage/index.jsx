@@ -28,11 +28,11 @@ const Search = () => {
   return (
     <SearchWrapper>
       <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-        <SearchBox onSubmit={submitSearch} translations={{ placeholder: `${Strings.search}...` }} />
+        <SearchBox onSubmit={submitSearch} translations={{ placeholder: `${Strings.ui.labels.search}...` }} />
         <Stats
           translations={{
             stats(nHits, timeSpentMs) {
-              return Strings.searchResult
+              return Strings.ui.searchResult
                 .replace("$1", nHits)
                 .replace("$2", timeSpentMs)
             },

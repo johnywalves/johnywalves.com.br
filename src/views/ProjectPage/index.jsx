@@ -103,14 +103,14 @@ const ProjectPage = () => {
       </ContainerHighlight>
 
       <ContainerProject>
-        <Header title={Strings.projects.top} />
+        <Header title={Strings.projects.sections.featured} />
         <List>
           {Strings.projects.list.slice(1, 4).map((project, index) => (
             <Project
               key={index}
-              image={getImage(project.cover).childImageSharp.gatsbyImageData}
-              alt=""
               {...project}
+              image={getImage(project.image).childImageSharp.gatsbyImageData}
+              alt=""
             />
           ))}
         </List>
@@ -129,7 +129,7 @@ const ProjectPage = () => {
       </ContainerSecondHighlight>
 
       <ContainerProject>
-        <Header title={Strings.projects.others} />
+        <Header title={Strings.projects.sections.others} />
         <ListOther>
           {Strings.projects.list.slice(5).map((project, index) => (
             <Other key={index} {...project} />
@@ -138,9 +138,9 @@ const ProjectPage = () => {
       </ContainerProject>
 
       <ContainerOpenPage>
-        <Header title={Strings.samples.title} dark />
+        <Header title={Strings.miniProjects.title} dark />
         <ListOnePage>
-          {Strings.samples.list.map((props, index) => (
+          {Strings.miniProjects.list.map((props, index) => (
             <OnePage key={index} {...props} />
           ))}
         </ListOnePage>

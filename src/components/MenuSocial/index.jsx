@@ -19,13 +19,13 @@ const MenuSocial = ({ vertical = false, contact = false }) => {
         <MenuSocialList>
           <Item>
             <Link
-              href={Strings.posts.feed}
-              title={Strings.posts.title}
+              href={Strings.blog.feed}
+              title={Strings.blog.title}
               target="_blank"
               rel="noopener noreferrer"
             >
               <IconWrapper>
-                <Rss /> <p>{Strings.posts.title}</p>
+                <Rss /> <p>{Strings.blog.title}</p>
               </IconWrapper>
             </Link>
           </Item>
@@ -44,13 +44,13 @@ const MenuSocial = ({ vertical = false, contact = false }) => {
         </MenuSocialList>
       )}
       <MenuSocialList $vertical={vertical ? 1 : 0}>
-        {Strings.socialLinks.map(({ icon, url, label }) => {
+        {Strings.navigation.social.map(({ icon, url, platform }) => {
           const Icon = Icons[icon]
           return (
             <Item key={icon} $contact={contact ? 1 : 0}>
               <Link
                 href={url}
-                title={label}
+                title={platform}
                 target="_blank"
                 rel="noopener noreferrer"
               >

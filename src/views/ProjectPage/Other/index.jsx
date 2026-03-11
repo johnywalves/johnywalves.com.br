@@ -13,14 +13,14 @@ import {
   OtherProjectLink,
 } from "./styled"
 
-const OtherProjects = ({ view, sourceCode, title, description }) => (
+const OtherProjects = ({ url, sourceCode, name, description }) => (
   <OtherProjectWrapper>
-    <OtherProjectTitle>{title}</OtherProjectTitle>
+    <OtherProjectTitle>{name}</OtherProjectTitle>
     <OtherProjectDescription>{description}</OtherProjectDescription>
     <OtherProjectLinks>
       <OtherProjectLink
-        href={view}
-        aria-label={`${Strings.visite} ${title}`}
+        href={url}
+        aria-label={`${Strings.ui.labels.visit} ${name}`}
         $negative={1}
         target="_blank"
         rel="nofollow noreferrer"
@@ -30,7 +30,7 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
       {sourceCode && (
         <OtherProjectLink
           href={sourceCode}
-          aria-label={`${Strings.sourceCode} ${title}`}
+          aria-label={`${Strings.ui.labels.sourceCode} ${name}`}
           target="_blank"
           rel="nofollow noreferrer"
         >
@@ -42,9 +42,9 @@ const OtherProjects = ({ view, sourceCode, title, description }) => (
 )
 
 OtherProjects.propTypes = {
-  view: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   sourceCode: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }
 

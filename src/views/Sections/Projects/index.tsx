@@ -1,13 +1,24 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 import Strings from "components/strings"
 import { CardList, Project } from "components/Cards"
 
 import { Wrapper, ImageCover } from "./styled"
 
+type ImageNode = {
+  childImageSharp: {
+    gatsbyImageData: IGatsbyImageData
+  }
+}
+
+type ImagesQuery = {
+  [key: string]: ImageNode
+}
+
 const SectionProjects = () => {
-  const images = useStaticQuery(graphql`
+  const images = useStaticQuery<ImagesQuery>(graphql`
     query {
       usepython: file(relativePath: { eq: "usepython.jpg" }) {
         ...extractFieldsHome
@@ -62,7 +73,8 @@ const SectionProjects = () => {
     }
   `)
 
-  const getImage = (name) => images[name] || images.firemakebetter
+  const getImage = (name: string): ImageNode =>
+    images[name] || images.firemakebetter
 
   return (
     <Wrapper>
@@ -75,19 +87,19 @@ const SectionProjects = () => {
           <Project
             key={index}
             {...project}
-            cover={
-              project.cover && (
+            image={
+              project.image && (
                 <a
-                  href={project.view}
-                  aria-label={project.cover}
+                  href={project.url}
+                  aria-label={project.image}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <ImageCover
                     image={
-                      getImage(project.cover).childImageSharp.gatsbyImageData
+                      getImage(project.image).childImageSharp.gatsbyImageData
                     }
-                    style={{ objectPosition: project.coverPosition || "top" }}
+                    style={{ objectPosition: project.imagePosition || "top" }}
                     alt=""
                   />
                 </a>

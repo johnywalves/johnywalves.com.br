@@ -39,7 +39,7 @@ const Footer = () => {
         <div>
           <Logo />
           <FooterDescription>
-            <strong>{site.siteMetadata.title}</strong> | {Strings.position}
+            <strong>{site.siteMetadata.title}</strong> | {Strings.seo.position}
           </FooterDescription>
         </div>
         <MenuSocial />

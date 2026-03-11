@@ -28,7 +28,7 @@ const ComicList = ({
   return (
     <Blueprint content title={titlePage} description={descriptionPage}>
       <ListsPages Navigator={ArticleComicNavigator}>
-        <h1 className="comics">{Strings.comics.allComics}</h1>
+        <h1 className="comics">{Strings.comics.all}</h1>
         {comicsList.map(
           (
             {

@@ -1,6 +1,14 @@
 import React from "react"
 
 import {
+  PinSVG,
+  ChainSVG,
+  CatSVG,
+  LinkedInSVG,
+  PhoneSVG,
+  EmailSVG,
+} from "../../assets/emoji"
+import {
   ResumeWrapper,
   ResumeSheet,
   ResumePerson,
@@ -12,17 +20,29 @@ const CoverLetterPage = ({ language }) => {
     <ResumeWrapper>
       <ResumeSheet>
         <ResumePerson>
-          <h1>Johny William de Oliveira Alves</h1>
+          <h1>Johny W. Alves</h1>
           <ul>
-            <li>{language.status}</li>
-            <li>{language.live}</li>
             <li>
-              <strong>E-mail:</strong> contato@johnywalves.com.br |{" "}
-              <strong>Web:</strong> www.johnywalves.com.br
+              <img src={PhoneSVG} alt="" width={12} height={12} />{" "}
+              {language.personal.phone}
+              <img src={PinSVG} alt="" width={12} height={12} />{" "}
+              {language.personal.location}
             </li>
             <li>
-              <strong>GitHub:</strong> www.github.com/johnywalves |{" "}
-              <strong>LinkedIn:</strong> www.linkedin.com/in/johnywalves
+              <img src={EmailSVG} alt="" width={12} height={12} />
+              <a href="mailto:contato@johnywalves.com.br">
+                contato@johnywalves.com.br
+              </a>
+              <img src={ChainSVG} alt="" width={12} height={12} />
+              <a href="https://johnywalves.com.br">johnywalves.com.br</a>
+              <img src={CatSVG} alt="" width={12} height={12} />
+              <a href="https://github.com/johnywalves">
+                github.com/johnywalves
+              </a>
+              <img src={LinkedInSVG} alt="" width={12} height={12} />
+              <a href="https://linkedin.com/in/johnywalves">
+                linkedin.com/in/johnywalves
+              </a>
             </li>
           </ul>
         </ResumePerson>

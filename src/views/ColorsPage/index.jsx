@@ -333,7 +333,7 @@ const ColorsPage = () => {
   return (
     <ColorsWrapper>
       <ColorsTitle>
-        {Strings.utils.colorExplorer.title.replace("#e0138c", currentHex)}
+        {Strings.utilities.colorExplorer.title.replace("#e0138c", currentHex)}
       </ColorsTitle>
 
       <ColorsSelect>

@@ -33,15 +33,15 @@ const SectionAbout = () => {
     }
   `)
 
-  const { aboutMe, description, languages, resume } = Strings
+  const { ui, seo, languages, resume } = Strings
 
   return (
     <Wrapper>
       <Content>
         <AboutMe>
-          <Header title={aboutMe} light left />
+          <Header title={ui.labels.about} light left />
           <Line />
-          <Description>{description}</Description>
+          <Description>{seo.description}</Description>
         </AboutMe>
 
         <Languages>
@@ -61,16 +61,16 @@ const SectionAbout = () => {
           <li>
             <Header title={resume.title} light left small fit />
           </li>
-          {resume.files.map(({ name, file }, index) => (
+          {resume.files.map(({ language, path }, index) => (
             <Resume key={index}>
               <a
-                href={`${siteMetadata.siteUrl}${file}`}
+                href={`${siteMetadata.siteUrl}${path}`}
                 target="_blank"
                 rel="nofollow noreferrer"
-                aria-label={`Download ${name.toLowerCase()} ${resume.title.toLowerCase()}`}
+                aria-label={`Download ${language.toLowerCase()} ${resume.title.toLowerCase()}`}
               >
                 <Button light secondary={index !== 0}>
-                  <Download /> {name}
+                  <Download /> {language}
                 </Button>
               </a>
             </Resume>

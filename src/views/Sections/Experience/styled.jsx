@@ -8,8 +8,8 @@ export const ExperienceWrapper = styled.section`
   padding: 45px var(--padding-horizontal);
   color: var(--texts);
 
-  background: url("/vectors/triangle-neon.svg"),
-    url("/vectors/triangle-wall-bottom.svg");
+  background:
+    url("/vectors/triangle-neon.svg"), url("/vectors/triangle-wall-bottom.svg");
   background-color: var(--background);
   background-size: 20%, 30%;
   background-repeat: no-repeat;
@@ -231,6 +231,10 @@ export const Descriptions = styled.div`
   padding: 5px 0;
 
   ${({ list }) => list && listDescriptions}
+
+  & h4 {
+    margin-bottom: 0.5rem;
+  }
 `
 
 export const ExperienceDescription = styled.p`
@@ -336,7 +340,8 @@ const WrapperAccomplishment = styled.li`
     left: 0;
     top: calc(50% - var(--36px));
     display: block;
-    background: linear-gradient(0, var(--highlight), var(--highlight)),
+    background:
+      linear-gradient(0, var(--highlight), var(--highlight)),
       linear-gradient(0, var(--background), var(--background));
     background-clip: padding-box, border-box;
   }

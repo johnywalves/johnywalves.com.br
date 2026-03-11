@@ -141,21 +141,21 @@ const SectionExperience = () => {
 
       <ExperienceContent>
         <Types>
-          {Strings.skills.list.map(({ type }, index) => (
+          {Strings.skills.categories.map(({ name }, index) => (
             <Type
               key={index}
               selected={selectedType === index}
               onClick={() => setSelectedType(index)}
             >
-              <p>{type}</p>
+              <p>{name}</p>
             </Type>
           ))}
         </Types>
 
         <SkillsWrapper>
-          {Strings.skills.list.map(({ list }, index) => (
+          {Strings.skills.categories.map(({ items }, index) => (
             <Skills key={`skill_${index}`} selected={selectedType === index}>
-              {list.map(({ title, icon }, idx) => {
+              {items.map(({ name, icon }, idx) => {
                 if (icon) {
                   const IconComponent = Icons[icon]
                   return (
@@ -163,13 +163,13 @@ const SectionExperience = () => {
                       <IconWrapper>
                         <IconComponent />
                       </IconWrapper>
-                      <p>{title}</p>
+                      <p>{name}</p>
                     </Skill>
                   )
                 } else {
                   return (
                     <Skill key={`${index}_${idx}`}>
-                      <p>{title}</p>
+                      <p>{name}</p>
                     </Skill>
                   )
                 }
@@ -194,13 +194,13 @@ const SectionExperience = () => {
             <AcademicCap /> {Strings.education.title}
           </Button>
           <Button selected={selectedCourses} onClick={toggleCourses} light>
-            <Code /> {Strings.certification.title}
+            <Code /> {Strings.certifications.title}
           </Button>
         </Areas>
 
         <Area ref={refExperiences} selected={selectedExperiences}>
           {Strings.experience.list.map(
-            ({ title, date, institution, description }, index) => (
+            ({ role, period, company, highlights, clients }, index) => (
               <Accomplishment
                 key={`exp_${index}`}
                 hidden={
@@ -210,19 +210,24 @@ const SectionExperience = () => {
                 }
               >
                 <DateText>
-                  {date} <Institution> | {institution}</Institution>
+                  {period} <Institution> | {company}</Institution>
                 </DateText>
-                <Title>{title}</Title>
+                <Title>{role}</Title>
                 <Descriptions list={1}>
-                  {description.map((text, idx) => (
+                  {clients?.map(({ name, highlights }, idx) => (
+                    <>
+                      <h4>{name}</h4>
+                      {highlights?.map((text, idx) => (
+                        <ExperienceDescription key={idx}>
+                          {text}
+                        </ExperienceDescription>
+                      ))}
+                    </>
+                  ))}
+
+                  {highlights?.map((text, idx) => (
                     <ExperienceDescription key={idx}>
-                      {`${text
-                        .split("</strong>")
-                        .join("")
-                        .split("<strong>")
-                        .join("")}${
-                        description.length - 1 !== idx ? ";" : "."
-                      }`}
+                      {text}
                     </ExperienceDescription>
                   ))}
                 </Descriptions>
@@ -233,11 +238,11 @@ const SectionExperience = () => {
             <Button light onClick={toggleAllExperiences}>
               {allExperiences ? (
                 <>
-                  <ExpandLess /> {Strings.seeLess}
+                  <ExpandLess /> {Strings.ui.labels.seeLess}
                 </>
               ) : (
                 <>
-                  <ExpandMore /> {Strings.seeMore}
+                  <ExpandMore /> {Strings.ui.labels.seeMore}
                 </>
               )}
             </Button>
@@ -248,14 +253,14 @@ const SectionExperience = () => {
           {Strings.education.list.map(
             (
               {
-                title,
-                date,
+                degree,
+                period,
                 institution,
                 description,
                 details,
-                kudos,
-                certification,
-                production,
+                honors,
+                certificate,
+                thesis,
               },
               index
             ) => (
@@ -267,17 +272,17 @@ const SectionExperience = () => {
                   !allEducations
                 }
                 icon={
-                  certification && (
-                    <Icon href={certification}>
+                  certificate && (
+                    <Icon href={certificate}>
                       <School />
                     </Icon>
                   )
                 }
               >
                 <DateText>
-                  {date} <Institution> | {institution}</Institution>
+                  {period} <Institution> | {institution}</Institution>
                 </DateText>
-                <Title>{title}</Title>
+                <Title>{degree}</Title>
                 <Descriptions>
                   {description.map((text, idx) => (
                     <ExperienceDescription key={idx}>
@@ -290,16 +295,16 @@ const SectionExperience = () => {
                     </ExperienceDescription>
                   ))}
                 </Descriptions>
-                {production && (
+                {thesis && (
                   <Production
-                    href={production.file}
+                    href={thesis.file}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    {production.title}
+                    {thesis.title}
                   </Production>
                 )}
-                {kudos?.map(({ name, file }, idx) => (
+                {honors?.map(({ name, file }, idx) => (
                   <WrapperAward key={idx} href={file}>
                     <Award />
                     <p>{name}</p>
@@ -312,11 +317,11 @@ const SectionExperience = () => {
             <Button light onClick={toggleAllEducations}>
               {allExperiences ? (
                 <>
-                  <ExpandLess /> {Strings.seeLess}
+                  <ExpandLess /> {Strings.ui.labels.seeLess}
                 </>
               ) : (
                 <>
-                  <ExpandMore /> {Strings.seeMore}
+                  <ExpandMore /> {Strings.ui.labels.seeMore}
                 </>
               )}
             </Button>
@@ -324,30 +329,30 @@ const SectionExperience = () => {
         </Area>
 
         <Area ref={refCourses} selected={selectedCourses}>
-          {Strings.certification.list
+          {Strings.certifications.list
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .map(({ date, name, institute, icon, img, time }, index) => (
+            .map(({ date, name, issuer, type, file, hours }, index) => (
               <Accomplishment
                 key={`course_${index}`}
                 hidden={
                   index > 4 &&
-                  Strings.certification.list.length > 4 &&
+                  Strings.certifications.list.length > 4 &&
                   !allCourses
                 }
                 icon={
-                  <Icon href={img}>
-                    {icon === "toolbox" && <Toolbox />}
-                    {icon === "chartpie" && <ChartPie />}
-                    {icon === "language" && <LanguageIcon />}
+                  <Icon href={file}>
+                    {type === "certification" && <Toolbox />}
+                    {type === "course" && <ChartPie />}
+                    {type === "language" && <LanguageIcon />}
                   </Icon>
                 }
               >
                 <DateText>
-                  {FormatDate(date)} <Institution> | {institute}</Institution>
+                  {FormatDate(date)} <Institution> | {issuer}</Institution>
                 </DateText>
                 <Title>
                   {name}
-                  {time > 0 && ` (${time} ${Strings.hour})`}
+                  {hours > 0 && ` (${hours} ${Strings.ui.labels.hour})`}
                 </Title>
               </Accomplishment>
             ))}
@@ -355,11 +360,11 @@ const SectionExperience = () => {
             <Button light onClick={toggleAllCourses}>
               {allCourses ? (
                 <>
-                  <ExpandLess /> {Strings.seeLess}
+                  <ExpandLess /> {Strings.ui.labels.seeLess}
                 </>
               ) : (
                 <>
-                  <ExpandMore /> {Strings.seeMore}
+                  <ExpandMore /> {Strings.ui.labels.seeMore}
                 </>
               )}
             </Button>

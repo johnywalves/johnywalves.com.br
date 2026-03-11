@@ -1,6 +1,14 @@
 import React from "react"
 
 import {
+  PinSVG,
+  ChainSVG,
+  CatSVG,
+  LinkedInSVG,
+  PhoneSVG,
+  EmailSVG,
+} from "../../assets/emoji"
+import {
   ResumeWrapper,
   ResumeSection,
   ResumePerson,
@@ -11,9 +19,9 @@ import {
   ResumeFooter,
 } from "./styled"
 
+const getFirst = (text) => text.split(" ")[text.split(" ").length - 1]
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 const getYear = (text) => new Date(text).getFullYear()
-const getCurrentYear = () => new Date().getFullYear()
 
 const getDescription = (text) => {
   const withoutFirstBreak = text.split(", ").slice(1).join(", ")
@@ -24,17 +32,27 @@ const getDescription = (text) => {
 
 const Person = ({ language }) => (
   <ResumePerson>
-    <h1>Johny William de Oliveira Alves</h1>
+    <h1>Johny W. Alves</h1>
     <ul>
-      <li>{language.status}</li>
-      <li>{language.live}</li>
       <li>
-        <strong>E-mail:</strong> contato@johnywalves.com.br |{" "}
-        <strong>Web:</strong> johnywalves.com.br
+        <img src={PhoneSVG} alt="" width={12} height={12} />{" "}
+        {language.personal.phone}
+        <img src={PinSVG} alt="" width={12} height={12} />{" "}
+        {language.personal.location}
       </li>
       <li>
-        <strong>GitHub:</strong> github.com/johnywalves |{" "}
-        <strong>LinkedIn:</strong> linkedin.com/in/johnywalves
+        <img src={EmailSVG} alt="" width={12} height={12} />
+        <a href="mailto:contato@johnywalves.com.br">
+          contato@johnywalves.com.br
+        </a>
+        <img src={ChainSVG} alt="" width={12} height={12} />
+        <a href="https://johnywalves.com.br">johnywalves.com.br</a>
+        <img src={CatSVG} alt="" width={12} height={12} />
+        <a href="https://github.com/johnywalves">github.com/johnywalves</a>
+        <img src={LinkedInSVG} alt="" width={12} height={12} />
+        <a href="https://linkedin.com/in/johnywalves">
+          linkedin.com/in/johnywalves
+        </a>
       </li>
     </ul>
   </ResumePerson>
@@ -47,30 +65,36 @@ const ResumePage = ({ language }) => {
         <Person language={language} />
 
         <ResumeSection>
-          <h2>{language.aboutMe}</h2>
+          <h2>{language.ui.labels.about}</h2>
           <hr />
-          <p className="description">{getDescription(language.description)}</p>
+          <p className="description">
+            {getDescription(language.seo.description)}
+          </p>
         </ResumeSection>
 
         <ResumeSection>
           <h2>
-            {language.experience.title} <small>({language.mostRecent})</small>
+            {language.experience.title}{" "}
+            <small>({language.ui.labels.mostRecent})</small>
           </h2>
           <hr />
           {language.experience.list
             .slice(0, 3)
-            .map(({ date, title, institution, description }) => (
-              <ResumeSubSection key={date}>
+            .map(({ period, role, company, location, highlights }) => (
+              <ResumeSubSection key={period}>
                 <ResumeSubTitle>
-                  <h3>
-                    {institution}
-                    <time>• {date}</time>
-                  </h3>
-                  <h4>{title}</h4>
+                  <h3>{role}</h3>
+                  <h4>
+                    <span>
+                      <strong>{company} | </strong>
+                      <em>{location}</em>
+                    </span>
+                    <time>{period}</time>
+                  </h4>
                 </ResumeSubTitle>
 
                 <ul>
-                  {description.map((text, index) => (
+                  {highlights.map((text, index) => (
                     <li
                       key={index}
                       dangerouslySetInnerHTML={{
@@ -104,22 +128,20 @@ const ResumePage = ({ language }) => {
           <hr />
           {language.education.list
             .splice(0, 4)
-            .map(({ date, title, institution, details, production }) => (
-              <ResumeCourse key={date}>
+            .map(({ period, degree, institution, details, thesis }) => (
+              <ResumeCourse key={period}>
                 <h3>
-                  {title}
+                  {degree}
                   <time>
                     {" "}
-                    •{" "}
-                    {getLast(date) >= getCurrentYear()
-                      ? language.forecastOfCompletionIn
-                      : language.finishedIn}{" "}
-                    {getLast(date)}
+                    • {institution}
+                    {", Brazil "}
+                    {`(${getFirst(period)} - ${getLast(period)})`}
                   </time>{" "}
                 </h3>
-                <p>{institution}</p>
+
                 {details && details.map((text) => <p>{text}</p>)}
-                {production && <p>{production.title}</p>}
+                {thesis && <p>{thesis.title}</p>}
               </ResumeCourse>
             ))}
         </ResumeSection>
@@ -128,17 +150,17 @@ const ResumePage = ({ language }) => {
           <h2>{language.skills.title}</h2>
           <hr />
           <ul>
-            {language.skills.list.map(({ type, list }, index) => (
+            {language.skills.categories.map(({ name, items }, index) => (
               <li key={index}>
                 <ResumeCourse>
-                  <h3>{type}</h3>
                   <p>
-                    {list
-                      .map(({ title }) => title)
+                    <span>{name}: </span>
+                    {items
+                      .map(({ name }) => name)
                       .slice(0, -1)
                       .join(", ")}
-                    {`, ${language.and} `}
-                    {list.map(({ title }) => title).slice(-1)}
+                    {`, ${language.ui.labels.and} `}
+                    {items.map(({ name }) => name).slice(-1)}
                   </p>
                 </ResumeCourse>
               </li>
@@ -152,7 +174,11 @@ const ResumePage = ({ language }) => {
           <ul>
             {language.languages.list.map(({ name, proficiency }, index) => (
               <li key={index}>
-                <strong>{name}</strong> • {proficiency}
+                <ResumeCourse>
+                  <p>
+                    <span>{name}: </span> {proficiency}
+                  </p>
+                </ResumeCourse>
               </li>
             ))}
           </ul>
@@ -160,21 +186,21 @@ const ResumePage = ({ language }) => {
 
         <ResumeSection>
           <h2>
-            {language.certification.title}{" "}
-            <small>({language.mostRecent})</small>
+            {language.certifications.title}{" "}
+            <small>({language.ui.labels.mostRecent})</small>
           </h2>
           <hr />
-          {language.certification.list
+          {language.certifications.list
             .splice(0, 10)
-            .map(({ date, name, institute, time }) => (
+            .map(({ date, name, issuer, hours }) => (
               <ResumeCourse key={date}>
                 <p>
                   <time>{getYear(date)} • </time>
                   <strong>
                     {name}
-                    {time > 0 && ` (${time} ${language.hour})`}
+                    {hours > 0 && ` (${hours} ${language.ui.labels.hour})`}
                   </strong>{" "}
-                  | {institute}
+                  | {issuer}
                 </p>
               </ResumeCourse>
             ))}

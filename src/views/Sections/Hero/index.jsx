@@ -83,7 +83,7 @@ const SectionHero = () => {
 
       <BoxText>
         <h1>JOHNY</h1>
-        <p>{Strings.position}</p>
+        <p>{Strings.seo.position}</p>
       </BoxText>
 
       <BoxBackground />

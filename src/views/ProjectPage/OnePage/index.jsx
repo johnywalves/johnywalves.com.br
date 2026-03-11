@@ -3,19 +3,19 @@ import PropTypes from "prop-types"
 
 import { Wrapper, Link, Title, Description } from "./styled"
 
-const OnePage = ({ title, description, link }) => (
+const OnePage = ({ name, description, url }) => (
   <Wrapper>
-    <Link href={link} target="_target" rel="noreferrer noopener">
-      <Title>{title}</Title>
+    <Link href={url} target="_target" rel="noreferrer noopener">
+      <Title>{name}</Title>
       <Description>{description}</Description>
     </Link>
   </Wrapper>
 )
 
 OnePage.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 }
 
 export default OnePage

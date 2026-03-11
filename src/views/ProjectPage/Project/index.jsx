@@ -16,29 +16,29 @@ import {
 } from "./styled"
 
 const Project = ({
-  view,
+  url,
   sourceCode,
   image,
-  coverPosition,
-  title,
+  imagePosition,
+  name,
   description,
 }) => (
   <Wrapper>
     <Cover>
       <ImageCover
         image={image}
-        style={{ objectPosition: coverPosition || "top" }}
+        style={{ objectPosition: imagePosition || "top" }}
         alt=""
       />
     </Cover>
     <Label>
-      <Title>{title}</Title>
+      <Title>{name}</Title>
       <Description>{description}</Description>
     </Label>
     <Links>
       <Link
-        href={view}
-        aria-label={`${Strings.visite} ${title}`}
+        href={url}
+        aria-label={`${Strings.ui.labels.visit} ${name}`}
         $negative={1}
         target="_blank"
         rel="nofollow noreferrer"
@@ -48,7 +48,7 @@ const Project = ({
       {sourceCode && (
         <Link
           href={sourceCode}
-          aria-label={`${Strings.sourceCode} ${title}`}
+          aria-label={`${Strings.ui.labels.sourceCode} ${name}`}
           target="_blank"
           rel="nofollow noreferrer"
         >

@@ -39,7 +39,7 @@ const SectionContact = () => {
         <Info>
           <Line />
           <Header title={Strings.contact.title} light left />
-          <Description>{Strings.contact.about}</Description>
+          <Description>{Strings.contact.message}</Description>
           <SocialWrapper>
             <MenuSocial contact />
           </SocialWrapper>

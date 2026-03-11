@@ -1,23 +1,28 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React, { ReactNode } from "react"
 
 import { Github, ExternalLink } from "assets/icons"
 
 import CardWrapper from "../CardWrapper"
 
 import { Banner, Title, Links, SourceCode } from "./styled"
+import { LangFile } from "../../../assets/lang/types"
 
-const Project = ({ title, sourceCode, view, cover }) => {
+const Project = ({
+  name,
+  sourceCode,
+  url,
+  image,
+}: LangFile["projects"]["list"][number]) => {
   return (
-    <CardWrapper cover={cover}>
+    <CardWrapper cover={image}>
       <Banner>
-        {title && <Title>{title}</Title>}
+        {name && <Title>{name}</Title>}
         <Links>
           <SourceCode
-            href={view}
+            href={url}
             target="_target"
             rel="noreferrer noopener"
-            aria-label={`go to ${title}`}
+            aria-label={`go to ${name}`}
             $negative={1}
           >
             <ExternalLink />
@@ -27,7 +32,7 @@ const Project = ({ title, sourceCode, view, cover }) => {
               href={sourceCode}
               target="_target"
               rel="noreferrer noopener"
-              aria-label={`source code of the ${title}`}
+              aria-label={`source code of the ${name}`}
             >
               <Github />
             </SourceCode>
@@ -36,13 +41,6 @@ const Project = ({ title, sourceCode, view, cover }) => {
       </Banner>
     </CardWrapper>
   )
-}
-
-Project.propTypes = {
-  cover: PropTypes.node.isRequired,
-  sourceCode: PropTypes.node.isRequired,
-  view: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
 }
 
 export default Project

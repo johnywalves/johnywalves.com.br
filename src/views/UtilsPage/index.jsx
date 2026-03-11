@@ -86,7 +86,7 @@ const UtilsPage = () => {
   return (
     <>
       <UtilsSection light center>
-        <UtilsTitle>{Strings.utils.title}</UtilsTitle>
+        <UtilsTitle>{Strings.utilities.title}</UtilsTitle>
         <ImageCover image={tool.childImageSharp.gatsbyImageData} alt="" />
       </UtilsSection>
 
@@ -100,7 +100,7 @@ const UtilsPage = () => {
           </Parallax>
         </BoxTopItem>
 
-        <Header title={Strings.utils.titleCheatsheets} />
+        <Header title={Strings.utilities.cheatsheets} />
         <CheatsheetsList>
           {edges.map(({ node }) => (
             <RecommendedItem key={node.fields.slug} recommended={node} />
@@ -118,10 +118,10 @@ const UtilsPage = () => {
           </Parallax>
         </BoxBottomItem>
 
-        <Header title={Strings.utils.titleTools} light />
+        <Header title={Strings.utilities.tools} light />
         <UtilsToolList>
           <UtilsToolItem to="/utils/e0138c">
-            <ColorPalette /> <p>{Strings.utils.colorExplorer.title}</p>
+            <ColorPalette /> <p>{Strings.utilities.colorExplorer.title}</p>
           </UtilsToolItem>
           <UtilsToolItem to="https://johnywalves.github.io/cssanimatic/">
             <MoveUp /> <p>CSS Animatic</p>

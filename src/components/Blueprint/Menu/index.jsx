@@ -80,7 +80,7 @@ const Menu = ({ hero = false, whiteLogo = false }) => {
         <Logo whiteLogo={whiteLogo ? 1 : 0} />
         <div>
           <MenuTop>
-            {Strings.menuLinks.map(({ label, url }) => (
+            {Strings.navigation.menu.map(({ label, url }) => (
               <li key={label}>
                 <MenuTopLink to={url} activeClassName="active">
                   <span>{label}</span>.
@@ -110,7 +110,7 @@ const Menu = ({ hero = false, whiteLogo = false }) => {
           alt=""
         />
         <MenuLinks>
-          {Strings.menuLinks.map(({ label, url }) => (
+          {Strings.navigation.menu.map(({ label, url }) => (
             <li key={label}>
               <MenuLinksLink to={url} activeClassName="active">
                 {label}

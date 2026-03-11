@@ -60,6 +60,13 @@ export const ResumeWrapper = styled.main`
       }
     }
   }
+
+  & a,
+  a:hover,
+  a:visited {
+    color: var(--highlight);
+    text-decoration: underline;
+  }
 `
 
 export const ResumeSheet = styled.div`
@@ -164,20 +171,25 @@ export const ResumeSection = styled.section`
 export const ResumePerson = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
-
   margin: 0 0 12px;
 
   & h1 {
-    margin: 0 0 12px;
+    font-size: 1.5rem;
+    margin: 0 0 8px;
   }
 
   & ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-items: flex-end;
 
     & li {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 0.25rem;
+
       margin-top: 2px;
     }
   }
@@ -190,6 +202,10 @@ export const ResumeCourse = styled.section`
   gap: 4px;
 
   margin: 8px 0 0;
+
+  & span {
+    font-weight: 900;
+  }
 
   &:first-of-type {
     margin-top: 12px;
@@ -226,5 +242,13 @@ export const ResumeSubTitle = styled.div`
     align-items: center;
     vertical-align: middle;
     gap: 6px;
+  }
+
+  & h4 {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `

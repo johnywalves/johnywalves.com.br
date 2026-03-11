@@ -41,7 +41,7 @@ const BlogCategory = ({
     >
       <ListsPages Navigator={ArticleNavigator}>
         <h1>
-          {Strings.posts.category}: <strong>{category}</strong>
+          {Strings.blog.category}: <strong>{category}</strong>
         </h1>
         {postList.map(
           ({

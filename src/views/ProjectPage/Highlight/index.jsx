@@ -20,11 +20,11 @@ import {
 
 const Highlight = ({
   revert = false,
-  view,
+  url,
   sourceCode,
-  cover,
-  coverPosition,
-  title,
+  image,
+  imagePosition,
+  name,
   description,
 }) => {
   const images = useStaticQuery(graphql`
@@ -81,13 +81,14 @@ const Highlight = ({
       }
     }
   `)
+
   const getImage = (name) => images[name] || images.firemakebetter
 
   const renderCover = (
     <Cover>
       <ImageCover
-        image={getImage(cover).childImageSharp.gatsbyImageData}
-        style={{ objectPosition: coverPosition || "top" }}
+        image={getImage(image).childImageSharp.gatsbyImageData}
+        style={{ objectPosition: imagePosition || "top" }}
         alt=""
       />
     </Cover>
@@ -95,29 +96,29 @@ const Highlight = ({
 
   const renderContent = (
     <Content revert={revert}>
-      <Title>{title}</Title>
+      <Title>{name}</Title>
       <Description>{description}</Description>
       <Links>
         <Link
-          href={view}
-          aria-label={cover}
+          href={url}
+          aria-label={image}
           negative={1}
           target="_blank"
           rel="nofollow noreferrer"
         >
           <Button light>
-            <ExternalLink /> {Strings.visite}
+            <ExternalLink /> {Strings.ui.labels.visit}
           </Button>
         </Link>
         {sourceCode && (
           <Link
             href={sourceCode}
-            aria-label={cover}
+            aria-label={image}
             target="_blank"
             rel="nofollow noreferrer"
           >
             <Button light>
-              <Github /> {Strings.sourceCode}
+              <Github /> {Strings.ui.labels.sourceCode}
             </Button>
           </Link>
         )}

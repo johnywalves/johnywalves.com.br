@@ -22,8 +22,11 @@ async function getResumeAndCoverLetter(servingUrl, page, language) {
     waitUntil: "networkidle0",
   })
 
+  const position =
+    language === "en" ? "frontend_engineer" : "engenheiro_frontend"
+
   await page.pdf({
-    path: `./public/docs/johnywalves_${language}.pdf`,
+    path: `./public/docs/johnywalves_${position}.pdf`,
     printBackground: false,
     format: "A4",
   })
@@ -34,7 +37,7 @@ async function getResumeAndCoverLetter(servingUrl, page, language) {
   })
 
   await page.pdf({
-    path: `./public/docs/johnywalves_${language}_cover.pdf`,
+    path: `./public/docs/johnywalves_${position}_lettercover.pdf`,
     printBackground: true,
     format: "A4",
   })

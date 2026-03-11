@@ -1,39 +1,47 @@
 {
-  "description": "Meu nome é Johny William de Oliveira Alves, desenvolvedor Web com mais de 20 anos de experiência. Estudante de ciência de dados, com foco em aprendizado de máquina (machine learning) e visão computacional. Com experiência em gestão de projetos, automação de processos e análise de métricas. Tenho habilidades sólidas em diversas tecnologias modernas, incluindo JavaScript com React e Next.js, TypeScript, Python, Node, entre outras.",
-  "position": "Engenheiro Front-end Sênior",
-  "headline": "Senior Front-End Engineer | React & Next.js Specialist | Tech Mentor | SaaS & Fintech Focus",
-  "and": "e",
-  "hour": "horas",
-  "finishedIn": "Concluído em",
-  "forecastOfCompletionIn": "Previsão de conclusão em",
-  "aboutMe": "Sobre",
-  "seeMore": "Ver mais",
-  "seeLess": "Ver menos",
-  "mostRecent": "Mais recentes",
-  "visite": "Visitar",
-  "sourceCode": "Código fonte",
-  "search": "Pesquisa",
-  "searchResult": "$1 resultados encontrados em $2ms",
-  "notFound": "A página que você procura não existe",
-  "backToHome": "voltar para a home",
+  "seo": {
+    "description": "Meu nome é Johny William de Oliveira Alves, desenvolvedor Web com mais de 20 anos de experiência. Estudante de ciência de dados, com foco em aprendizado de máquina (machine learning) e visão computacional. Com experiência em gestão de projetos, automação de processos e análise de métricas. Tenho habilidades sólidas em diversas tecnologias modernas, incluindo JavaScript com React e Next.js, TypeScript, Python, Node, entre outras.",
+    "position": "Engenheiro Front-end Sênior",
+    "headline": "Senior Front-End Engineer | React & Next.js Specialist | Tech Mentor | SaaS & Fintech Focus"
+  },
+  "personal": {
+    "name": "Johny W. Alves",
+    "phone": "+55 17 98160-9076",
+    "location": "São Paulo, Brasil"
+  },
+  "ui": {
+    "labels": {
+      "and": "e",
+      "hour": "horas",
+      "completionIn": "Previsão de conclusão em",
+      "about": "Sobre",
+      "seeMore": "Ver mais",
+      "seeLess": "Ver menos",
+      "mostRecent": "Mais recentes",
+      "visit": "Visitar",
+      "sourceCode": "Código fonte",
+      "search": "Pesquisa",
+      "notFound": "A página que você procura não existe",
+      "backToHome": "voltar para a home"
+    },
+    "searchResult": "$1 resultados encontrados em $2ms"
+  },
   "resume": {
     "title": "Currículo",
     "files": [
       {
-        "name": "INGLÊS",
-        "file": "/docs/johnywalves_en.pdf"
+        "language": "Inglês",
+        "path": "/docs/johnywalves_frontend_engineer.pdf"
       },
       {
-        "name": "PORTUGUÊS",
-        "file": "/docs/johnywalves_br.pdf"
+        "language": "Português",
+        "path": "/docs/johnywalves_engenheiro_frontend.pdf"
       }
     ]
   },
-  "status": "Brasileiro | Solteiro | 39 anos",
-  "live": "Residente em São José do Rio Preto - São Paulo - Brasil",
   "contact": {
     "title": "Contatos",
-    "about": "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
+    "message": "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
   },
   "coverLetter": [
     "Prezado(a) contratante",
@@ -44,22 +52,24 @@
     "Atenciosamente",
     "Johny W. Alves"
   ],
-  "posts": {
+  "blog": {
     "title": "Artigos",
-    "category": "Artigos da categoria",
+    "category": "Categoria",
     "categories": "Categorias",
-    "someHighlights": "Destaques",
-    "allArticles": "Artigos sobre tecnologias, conceitos e alguns pensamentos",
+    "highlights": "Destaques",
+    "all": "Artigos sobre tecnologias, conceitos e alguns pensamentos",
     "viewAll": "Ver todos os artigos",
     "feed": "https://johnywalves.com.br/feed-posts.xml"
   },
   "comics": {
     "title": "Tirinhas",
-    "first": "Primeiro",
-    "prev": "Anterior",
-    "next": "Próximo",
-    "last": "Último",
-    "allComics": "Tirinhas sobre a vida de trabalhadores de tecnologia",
+    "pagination": {
+      "first": "Primeiro",
+      "previous": "Anterior",
+      "next": "Próximo",
+      "last": "Último"
+    },
+    "all": "Tirinhas sobre a vida de trabalhadores de tecnologia",
     "viewAll": "Ver todas as tirinhas",
     "feed": "https://johnywalves.com.br/feed-comics.xml"
   },
@@ -78,460 +88,373 @@
   },
   "skills": {
     "title": "Tecnologias",
-    "list": [
+    "categories": [
       {
-        "type": "Linguagens",
-        "list": [
-          {
-            "title": "HTML / HTML5",
-            "icon": "Html5"
-          },
-          {
-            "title": "CSS / CSS3",
-            "icon": "Css3"
-          },
-          {
-            "title": "Java",
-            "icon": "Java"
-          },
-          {
-            "title": "JavaScript",
-            "icon": "Javascript"
-          },
-          {
-            "title": "Python",
-            "icon": "Python"
-          },
-          {
-            "title": "TypeScript",
-            "icon": "Typescript"
-          }
+        "name": "Linguagens",
+        "items": [
+          { "name": "HTML / HTML5", "icon": "Html5" },
+          { "name": "CSS / CSS3", "icon": "Css3" },
+          { "name": "Java", "icon": "Java" },
+          { "name": "JavaScript", "icon": "Javascript" },
+          { "name": "Python", "icon": "Python" },
+          { "name": "TypeScript", "icon": "Typescript" }
         ]
       },
       {
-        "type": "Frameworks e Bibliotecas",
-        "list": [
-          {
-            "title": "D3.js",
-            "icon": "D3js"
-          },
-          {
-            "title": "Express.js",
-            "icon": "Express"
-          },
-          {
-            "title": "Gatsby",
-            "icon": "Gatsby"
-          },
-          {
-            "title": "Jekyll",
-            "icon": "Jekyll"
-          },
-          {
-            "title": "Module Federation",
-            "icon": "Webpack"
-          },
-          {
-            "title": "Next.js",
-            "icon": "Nextdotjs"
-          },
-          {
-            "title": "Node",
-            "icon": "Nodejs"
-          },
-          {
-            "title": "React",
-            "icon": "ReactLogo"
-          },
-          {
-            "title": "Redux",
-            "icon": "Redux"
-          },
-          {
-            "title": "Spring Boot",
-            "icon": "SpringBoot"
-          },
-          {
-            "title": "Styled Components",
-            "icon": "Styledcomponents"
-          },
-          {
-            "title": "Tailwind CSS",
-            "icon": "TailwindCss"
-          }
+        "name": "Frameworks e Bibliotecas",
+        "items": [
+          { "name": "D3.js", "icon": "D3js" },
+          { "name": "Express.js", "icon": "Express" },
+          { "name": "Gatsby", "icon": "Gatsby" },
+          { "name": "Jekyll", "icon": "Jekyll" },
+          { "name": "Module Federation", "icon": "Webpack" },
+          { "name": "Next.js", "icon": "Nextdotjs" },
+          { "name": "Node", "icon": "Nodejs" },
+          { "name": "React", "icon": "ReactLogo" },
+          { "name": "Redux", "icon": "Redux" },
+          { "name": "Spring Boot", "icon": "SpringBoot" },
+          { "name": "Styled Components", "icon": "Styledcomponents" },
+          { "name": "Tailwind CSS", "icon": "TailwindCss" }
         ]
       },
       {
-        "type": "Manipulação de Dados",
-        "list": [
-          {
-            "title": "SQL Server",
-            "icon": "Microsoftsqlserver"
-          },
-          {
-            "title": "MySQL",
-            "icon": "Mysql"
-          },
-          {
-            "title": "PostgreSQL",
-            "icon": "Postgresql"
-          },
-          {
-            "title": "Python",
-            "icon": "Python"
-          },
-          {
-            "title": "R",
-            "icon": "RProject"
-          }
+        "name": "Manipulação de Dados",
+        "items": [
+          { "name": "SQL Server", "icon": "Microsoftsqlserver" },
+          { "name": "MySQL", "icon": "Mysql" },
+          { "name": "PostgreSQL", "icon": "Postgresql" },
+          { "name": "Python", "icon": "Python" },
+          { "name": "R", "icon": "RProject" }
         ]
       },
       {
-        "type": "Ferramentas",
-        "list": [
-          {
-            "title": "AWS",
-            "icon": "Aws"
-          },
-          {
-            "title": "Azure DevOps",
-            "icon": "Azuredevops"
-          },
-          {
-            "title": "BPM",
-            "icon": "Flowchart"
-          },
-          {
-            "title": "Docker",
-            "icon": "Docker"
-          },
-          {
-            "title": "Git",
-            "icon": "Git"
-          },
-          {
-            "title": "Jenkins",
-            "icon": "Jenkins"
-          }
+        "name": "Ferramentas",
+        "items": [
+          { "name": "AWS", "icon": "Aws" },
+          { "name": "Azure DevOps", "icon": "Azuredevops" },
+          { "name": "BPM", "icon": "Flowchart" },
+          { "name": "Docker", "icon": "Docker" },
+          { "name": "Git", "icon": "Git" },
+          { "name": "Jenkins", "icon": "Jenkins" }
         ]
       }
     ]
   },
-  "certification": {
+  "certifications": {
     "title": "Cursos e Certificados",
     "seeMore": "Lista completa no site",
     "list": [
       {
-        "date": "2023-07-07 00:00:00-0300",
+        "date": "2023-07-07",
         "name": "Professional Scrum Developer I",
-        "institute": "Scrum.org",
-        "img": "/cert/professional_scrum_developer_I.pdf",
-        "icon": "toolbox",
-        "time": 0
+        "issuer": "Scrum.org",
+        "file": "/cert/professional_scrum_developer_I.pdf",
+        "type": "certification"
       },
       {
-        "date": "2022-07-08 00:00:00-0300",
+        "date": "2022-07-08",
         "name": "Voxy Proficiency Achievement Certificate - High Intermediate English (B2)",
-        "institute": "Voxy",
-        "img": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
-        "icon": "language",
-        "time": 0
+        "issuer": "Voxy",
+        "file": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
+        "type": "language"
       },
       {
-        "date": "2020-04-19 00:00:00-0300",
+        "date": "2020-04-19",
         "name": "Gatsby: Crie um site PWA com React, GraphQL e Netlify CMS",
-        "institute": "Udemy",
-        "img": "/cert/udemy_gatsby.jpg",
-        "icon": "toolbox",
-        "time": 9
+        "issuer": "Udemy",
+        "file": "/cert/udemy_gatsby.jpg",
+        "type": "course",
+        "hours": 9
       },
       {
-        "date": "2018-07-27 00:00:00-0300",
+        "date": "2018-07-27",
         "name": "Games 2D: com Unity e C#",
-        "institute": "Senac São José do Rio Preto",
-        "img": "/cert/senac_games_2d.jpg",
-        "icon": "toolbox",
-        "time": 40
+        "issuer": "Senac São José do Rio Preto",
+        "file": "/cert/senac_games_2d.jpg",
+        "type": "course",
+        "hours": 40
       },
       {
-        "date": "2018-09-16 00:00:00-0300",
+        "date": "2018-09-16",
         "name": "Ciência de Dados e Machine Learing em Python",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_ml_python.jpg",
-        "icon": "chartpie",
-        "time": 8
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_ml_python.jpg",
+        "type": "course",
+        "hours": 8
       },
       {
-        "date": "2018-07-18 00:00:00-0300",
+        "date": "2018-07-18",
         "name": "Linguagem R para Desenvolvedores Qlik",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_r_qlik.jpg",
-        "icon": "chartpie",
-        "time": 3
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_r_qlik.jpg",
+        "type": "course",
+        "hours": 3
       },
       {
-        "date": "2018-07-10 00:00:00-0300",
+        "date": "2018-07-10",
         "name": "Introdução ao Qlik Sense",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_qlik.jpg",
-        "icon": "chartpie",
-        "time": 3
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_qlik.jpg",
+        "type": "course",
+        "hours": 3
       },
       {
-        "date": "2018-07-22 00:00:00-0300",
+        "date": "2018-07-22",
         "name": "Estatística em Qlik",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_estatistica_qlik.jpg",
-        "icon": "chartpie",
-        "time": 8
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_estatistica_qlik.jpg",
+        "type": "course",
+        "hours": 8
       },
       {
-        "date": "2018-03-13 00:00:00-0300",
+        "date": "2018-03-13",
         "name": "Fundamentos da Ciência de Dados",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_fundamentos_cd.jpg",
-        "icon": "chartpie",
-        "time": 8
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_fundamentos_cd.jpg",
+        "type": "course",
+        "hours": 8
       },
       {
-        "date": "2018-03-10 00:00:00-0300",
+        "date": "2018-03-10",
         "name": "Redes Neurais Artificiais e Deep Learning",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_rna_dp.jpg",
-        "icon": "chartpie",
-        "time": 3.5
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_rna_dp.jpg",
+        "type": "course",
+        "hours": 3.5
       },
       {
-        "date": "2017-09-24 00:00:00-0300",
+        "date": "2017-09-24",
         "name": "Introdução à Machine Learning",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_ml.jpg",
-        "icon": "chartpie",
-        "time": 8
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_ml.jpg",
+        "type": "course",
+        "hours": 8
       },
       {
-        "date": "2017-08-27 00:00:00-0300",
+        "date": "2017-08-27",
         "name": "Linguagem R",
-        "institute": "Igor Alcantara",
-        "img": "/cert/igoralcantara_r.jpg",
-        "icon": "chartpie",
-        "time": 8
+        "issuer": "Igor Alcantara",
+        "file": "/cert/igoralcantara_r.jpg",
+        "type": "course",
+        "hours": 8
       }
     ]
   },
   "projects": {
     "title": "Projetos & Desenvolvimentos",
-    "top": "Projetos em destaque",
-    "others": "Outros projetos",
+    "sections": {
+      "featured": "Projetos em destaque",
+      "others": "Outros projetos"
+    },
     "viewAll": "Ver todos os projetos",
-    "viewHighlight": "Visualizar somente destaques",
+    "viewFeatured": "Visualizar somente destaques",
     "list": [
       {
-        "title": "Use Python",
+        "name": "Use Python",
         "sourceCode": "https://github.com/johnywalves/use-python",
-        "cover": "usepython",
-        "view": "https://usepython.com.br/",
+        "image": "usepython",
+        "url": "https://usepython.com.br/",
         "description": "Curso introdutório em Python abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados"
       },
       {
-        "title": "Machado Alves",
+        "name": "Machado Alves",
         "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
-        "cover": "machadoalves",
-        "view": "https://marchadoalves.jwalves.com/",
+        "image": "machadoalves",
+        "url": "https://marchadoalves.jwalves.com/",
         "description": "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar"
       },
       {
-        "title": "Devflix",
+        "name": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
-        "cover": "devflix",
-        "view": "https://devflix.jwalves.com",
+        "image": "devflix",
+        "url": "https://devflix.jwalves.com",
         "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
       },
       {
-        "title": "Bom dia, equipes dev!",
+        "name": "Bom dia, equipes dev!",
         "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
-        "cover": "bomdia",
-        "coverPosition": "center",
-        "view": "https://bomdiaequipesdev.com.br/",
+        "image": "bomdia",
+        "imagePosition": "center",
+        "url": "https://bomdiaequipesdev.com.br/",
         "description": "Uma maneira criativa para saudar seus colegas desenvolvedores toda manhã"
       },
       {
-        "title": "Boilerplate para React, Next.js e TypeScript",
+        "name": "Boilerplate para React, Next.js e TypeScript",
         "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
-        "cover": "boilerplate",
-        "view": "https://next-pages-boilerplate.vercel.app",
+        "image": "boilerplate",
+        "url": "https://next-pages-boilerplate.vercel.app",
         "description": "Boilerplate com React, Next.js, Typescript, Storybook e Styled Components para começar rapidamente e com configuração mínima"
       },
       {
-        "title": "Daisy Bell",
+        "name": "Daisy Bell",
         "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "cover": "daisybell",
-        "view": "https://daisy.johnywalves.com.br",
+        "image": "daisybell",
+        "url": "https://daisy.johnywalves.com.br",
         "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
       },
       {
-        "title": "Animações com CSS",
+        "name": "Animações com CSS",
         "sourceCode": "https://github.com/johnywalves/cssanimatic",
-        "cover": "cssanimatic",
-        "view": "https://johnywalves.github.io/cssanimatic",
+        "image": "cssanimatic",
+        "url": "https://johnywalves.github.io/cssanimatic",
         "description": "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS"
       },
       {
-        "title": "Johny W. Alves",
+        "name": "Johny W. Alves",
         "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
-        "cover": "thumbnail",
-        "view": "https://johnywalves.com.br",
+        "image": "thumbnail",
+        "url": "https://johnywalves.com.br",
         "description": "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiências"
       },
       {
-        "title": "Registro de tempo",
+        "name": "Registro de tempo",
         "sourceCode": "https://github.com/johnywalves/register-switch",
-        "cover": "registerSwitch",
-        "view": "https://switch.jwalves.com/",
+        "image": "registerSwitch",
+        "url": "https://switch.jwalves.com/",
         "description": "Tempo gasto executando tarefas de forma simples para habilitar e desabilitar"
       },
       {
-        "title": "Criador de Personagens e Tirinhas",
-        "view": "https://comics.johnywalves.com.br",
-        "cover": "comicscreator",
+        "name": "Criador de Personagens e Tirinhas",
+        "url": "https://comics.johnywalves.com.br",
+        "image": "comicscreator",
         "description": "Ferramenta para geração e visualização de tirinhas em SVG"
       },
       {
-        "title": "Fire Make Better",
+        "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
-        "cover": "firemakebetter",
-        "view": "https://johnywalves.github.io/fire-make-better/",
+        "image": "firemakebetter",
+        "url": "https://johnywalves.github.io/fire-make-better/",
         "description": "Projeto desenvolvido para estudo em Angular, para organizar algumas receitas, atualmente pesquisando no Spoonacular"
       },
       {
-        "title": "Navegação de mapa",
+        "name": "Navegação de mapa",
         "sourceCode": "https://github.com/johnywalves/wolt",
-        "cover": "wolt",
-        "view": "https://johnywalves.github.io/wolt/",
+        "image": "wolt",
+        "url": "https://johnywalves.github.io/wolt/",
         "description": "Projeto de visualização de mapa com pontos de interesses"
       },
       {
-        "title": "Biblioteca Steam",
+        "name": "Biblioteca Steam",
         "sourceCode": "https://github.com/johnywalves/steamlibrary",
-        "cover": "steamLibrary",
-        "view": "https://johnywalves.github.io/steamlibrary/",
+        "image": "steamLibrary",
+        "url": "https://johnywalves.github.io/steamlibrary/",
         "description": "Visualização de biblioteca de jogos Steam"
       },
       {
-        "title": "Perfil github.io",
+        "name": "Perfil github.io",
         "sourceCode": "https://github.com/johnywalves/johnywalves.github.io/",
-        "cover": "githubio",
-        "view": "https://johnywalves.github.io/",
+        "image": "githubio",
+        "url": "https://johnywalves.github.io/",
         "description": "Cartão de visitas Github.io"
       },
       {
-        "title": "Card Game em React",
+        "name": "Card Game em React",
         "sourceCode": "https://github.com/johnywalves/card-game-react",
-        "cover": "githubio",
-        "view": "https://card-game-in-react.vercel.app",
+        "image": "githubio",
+        "url": "https://card-game-in-react.vercel.app",
         "description": "Desenvolvendo um jogo tipo Magic: The Gathering, Hearthstone e Yu-Gi-Oh! do conceito até a entrega com React"
       },
       {
-        "title": "Sangue Quente",
+        "name": "Sangue Quente",
         "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
-        "cover": "githubio",
-        "view": "https://sanguequente.art/",
+        "image": "githubio",
+        "url": "https://sanguequente.art/",
         "description": "Um acervo de crônicas de Lobisomem: O Apocalipse"
       }
     ]
   },
-  "samples": {
+  "miniProjects": {
     "title": "Projetos de uma página",
     "list": [
       {
-        "title": "Menu Hamburger",
+        "name": "Menu Hamburger",
         "description": "Menu para a tela inteira com três faixas",
-        "link": "/web/hamburgermenu.html"
+        "url": "/web/hamburgermenu.html"
       },
       {
-        "title": "Campo Animado",
+        "name": "Campo Animado",
         "description": "Campo para inserção de valores com efeitos de animação",
-        "link": "/web/inputanimation.html"
+        "url": "/web/inputanimation.html"
       },
       {
-        "title": "Carregando e Girando",
+        "name": "Carregando e Girando",
         "description": "Efeito cíclico para indicação de carregamento de recursos",
-        "link": "/web/loadingspinner.html"
+        "url": "/web/loadingspinner.html"
       },
       {
-        "title": "Pesquisa de Pessoas",
+        "name": "Pesquisa de Pessoas",
         "description": "Cartas de apresentação de pessoas com opção de pesquisa por texto",
-        "link": "/web/peoplesearch.html"
+        "url": "/web/peoplesearch.html"
       },
       {
-        "title": "Relógio com simulação do céu",
+        "name": "Relógio com simulação do céu",
         "description": "Manipulação de componentes e animações ao passar do tempo",
-        "link": "/web/clocksunandmon.html"
+        "url": "/web/clocksunandmon.html"
       },
       {
-        "title": "Sol e Lua",
+        "name": "Sol e Lua",
         "description": "Animação de transição de escuro e claro com a lua e o sol",
-        "link": "/web/sunmoon.html"
+        "url": "/web/sunmoon.html"
       },
       {
-        "title": "Questões Carreira Policial",
+        "name": "Questões Carreira Policial",
         "description": "Listagem de questões resolvidas para estudo em carreira policial",
-        "link": "/web/provascarreirapolicial/index.html"
+        "url": "/web/provascarreirapolicial/index.html"
       },
       {
-        "title": "Letras pulando",
+        "name": "Letras pulando",
         "description": "Animação de letras pulando",
-        "link": "/web/jumpingletters.html"
+        "url": "/web/jumpingletters.html"
       },
       {
-        "title": "Quadro Kanban",
+        "name": "Quadro Kanban",
         "description": "Um pequeno Kanban com Drag and Drop",
-        "link": "/web/kanban/index.html"
+        "url": "/web/kanban/index.html"
       },
       {
-        "title": "Letras Neon",
+        "name": "Letras Neon",
         "description": "Letreiro neon animação",
-        "link": "/web/neonletters.html"
+        "url": "/web/neonletters.html"
       },
       {
-        "title": "Esqueleto de elementos",
+        "name": "Esqueleto de elementos",
         "description": "Efeito de Esqueleto para elementos carregando",
-        "link": "/web/skeleton.html"
+        "url": "/web/skeleton.html"
       },
       {
-        "title": "Perfis",
+        "name": "Perfis",
         "description": "Coleção de perfis online",
-        "link": "/web/profiles.html"
+        "url": "/web/profiles.html"
       },
       {
-        "title": "A história de Johny",
+        "name": "A história de Johny",
         "description": "Álbum de fotos com uma pequena parte da minha história",
-        "link": "https://johnywalves.github.io/johnys-story/"
+        "url": "https://johnywalves.github.io/johnys-story/"
       },
       {
-        "title": "População Mundial | Dashboard",
+        "name": "População Mundial | Dashboard",
         "description": "Coleção de gráficos para apresentação da população mundial",
-        "link": "https://johnywalves.com.br/web/world_d3/"
+        "url": "https://johnywalves.com.br/web/world_d3/"
       },
       {
-        "title": "Números por Extenso",
+        "name": "Números por Extenso",
         "description": "Apresentação de números aleatórios e conversão para texto",
-        "link": "/web/numberinwords.html"
+        "url": "/web/numberinwords.html"
       },
       {
-        "title": "Convite de aniversário",
+        "name": "Convite de aniversário",
         "description": "Convite para festa ocorrida em 2023",
-        "link": "/niver"
+        "url": "/niver"
       },
       {
-        "title": "Kalyra",
+        "name": "Kalyra",
         "description": "Ficha de Personagem para D&D 5ª Edição - Meio-Elfa",
-        "link": "https://kalyra.jwalves.com/"
+        "url": "https://kalyra.jwalves.com/"
       },
       {
-        "title": "Sizes Screen Test",
+        "name": "Sizes Screen Test",
         "description": "Teste de altura da tela para dispositivos Web",
-        "link": "/web/sizescreentest.html"
+        "url": "/web/sizescreentest.html"
       }
     ]
   },
@@ -540,8 +463,8 @@
     "seeMore": "Lista completa no site",
     "list": [
       {
-        "date": "Fev 2023 - Jul 2026",
-        "title": "Mestrado em Ciência da Computação",
+        "period": "Fev 2023 - Jul 2026",
+        "degree": "Mestrado em Ciência da Computação",
         "institution": "UNESP - Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
         "description": [
           "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
@@ -551,40 +474,40 @@
         ]
       },
       {
-        "date": "Out 2020 - Dez 2022",
-        "title": "Especialização em Gestão de Projetos em TI",
+        "period": "Out 2020 - Dez 2022",
+        "degree": "Especialização em Gestão de Projetos em TI",
         "institution": "Fatec Rio Preto - Faculdade de Tecnologia",
-        "certification": "/cert/fatec_gpti.pdf",
+        "certificate": "/cert/fatec_gpti.pdf",
         "description": [
           "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software"
         ],
-        "production": {
+        "thesis": {
           "title": "Título: Analizo - Análise textual para validação de comunicação corporativa",
           "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
         }
       },
       {
-        "date": "Mar 2018 - Mar 2020",
-        "title": "Especialização em Big Data",
+        "period": "Mar 2018 - Mar 2020",
+        "degree": "Especialização em Big Data",
         "institution": "Centro Universitário Senac",
-        "certification": "/cert/senac_bigdata.pdf",
+        "certificate": "/cert/senac_bigdata.pdf",
         "description": [
           "Especialização no campo de Big Data, visando ao correto entendimento, à definição de uso, implementação, além de fornecer ferramentas e subsídios para a gestão das tecnologias e processos envolvidos."
         ],
-        "production": {
+        "thesis": {
           "title": "Título: Proposta para aplicação de Regras de Associação para varejos online",
           "file": "/docs/associacao_varejo_online_pt.pdf"
         }
       },
       {
-        "date": "Jan 2015 - Dez 2017",
-        "title": "Graduação em Informática para Negócios",
+        "period": "Jan 2015 - Dez 2017",
+        "degree": "Graduação em Informática para Negócios",
         "institution": "Fatec Rio Preto - Faculdade de Tecnologia",
-        "certification": "/cert/fatec_graduacao.pdf",
+        "certificate": "/cert/fatec_graduacao.pdf",
         "description": [
           "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas"
         ],
-        "kudos": [
+        "honors": [
           {
             "name": "Premiação de Maior Média",
             "file": "/cert/fatec_maior_media.jpg"
@@ -594,14 +517,14 @@
             "file": "/cert/fatec_melhor_tcc.jpg"
           }
         ],
-        "production": {
+        "thesis": {
           "title": "Título: ForeSeries - Uma abordagem para predição de valores em séries temporais",
           "file": "/docs/fore_series_pt.pdf"
         }
       },
       {
-        "date": "Jan 2002 - Jul 2003",
-        "title": "Técnico em Informática",
+        "period": "Jan 2002 - Jul 2003",
+        "degree": "Técnico em Informática",
         "institution": "Etec Philadelpho Gouveia Netto",
         "description": [
           "O técnico em Informática desenvolve e opera sistemas, aplicações e interfaces gráficas. Monta estruturas de banco de dados e codifica programas. Projeta, implanta e realiza manutenção de sistemas e aplicações. Seleciona recursos de trabalho, linguagens de programação, ferramentas e metodologias para o desenvolvimento de sistemas"
@@ -614,20 +537,35 @@
     "seeMore": "Lista completa no site",
     "list": [
       {
-        "date": "Set 2024 - Atualmente",
-        "title": "Tech Designer",
-        "institution": "WeFit",
-        "description": [
+        "period": "Fev 2026 - Atualmente",
+        "role": "Tech Lead Front-End | Especialista React & Next.js",
+        "company": "Freelance",
+        "location": "São Paulo, Brasil (Remoto)",
+        "highlights": [
+          "Construiu e liderou desenvolvimento de plataformas full-stack escaláveis com React, Next.js e Firebase",
+          "Fundou e desenvolveu TCG RP: plataforma completa de gestão de eventos com arquitetura monorepo",
+          "Desenvolveu ecossistema dual-platform com interface pública e área administrativa segura usando Firebase",
+          "Criou sistema end-to-end de certificação com React, Next.js, Express e Contentful",
+          "Estabeleceu programas de treinamento interno, capacitando equipes em React e Next.js"
+        ]
+      },
+      {
+        "period": "Set 2024 - Fev 2026",
+        "role": "Engenheiro Front-end Sênior | Especialista React & Next.js",
+        "company": "WeFit",
+        "location": "São Paulo, Brasil (Remoto)",
+        "highlights": [
           "<strong>Projeto Porto Seguro - Plataforma de Gestão para Corretoras</strong>: Desenvolvimento para plataforma modular utilizando uma arquitetura híbrida (SSR e CSR) com Next.js, garantindo desempenho e escalabilidade. Componentização reutilizáveis em React e TypeScript, dashboards analíticos com Recharts e interfaces responsivas com Tailwind CSS, assegurando consistência e eficiência no desenvolvimento.",
           "Como contribuições-chave, promovi a qualidade do código através de revisões técnicas (Core Review) e padronização, além de atuar como mentor de desenvolvedores júnior. Automatizei processos críticos, reduzindo o tempo de desenvolvimento.",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts e Tailwind CSS"
         ]
       },
       {
-        "date": "Jul 2023 - Set 2024",
-        "title": "Desenvolvedor Front-end Sênior",
-        "institution": "Seguralta",
-        "description": [
+        "period": "Jul 2023 - Set 2024",
+        "role": "Desenvolvedor Front-end Sênior",
+        "company": "Seguralta",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Desenvolvimento do <strong>Seguralta Core</strong>: Plataforma que facilita a operação de corretoras de seguros, oferecendo aos franqueados acesso detalhado a comissões, renovações e apólices a vencer, entre outros serviços",
           "Manutenção e aprimoramento do <strong>Portal de Clientes</strong>, com foco na melhoria da experiência do usuário (UX) e na otimização de resultados orgânicos em motores de busca (SEO)",
           "Liderança técnica em desenvolvimento de software, com foco no front-end e na garantia de um back-end robusto e eficiente. Responsável pela aplicação de metodologias ágeis (Scrum), práticas de desenvolvimento colaborativo (GitFlow) e versionamento de componentes. Conduzi uma documentação completa e atualizada, além de oferecer mentoria para desenvolvedores juniores",
@@ -636,30 +574,48 @@
         ]
       },
       {
-        "date": "Mai 2023 - Jul 2023",
-        "title": "Desenvolvedor Front-end",
-        "institution": "Hepta Tecnologia e Informática",
-        "description": [
+        "period": "Mai 2023 - Jul 2023",
+        "role": "Desenvolvedor Front-end",
+        "company": "Hepta Tecnologia e Informática",
+        "location": "São Paulo, Brasil (Remoto)",
+        "highlights": [
           "<strong>Projeto CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços. Utilizando uma abordagem moderna com micro-frontend e monorepo, garanti uma arquitetura modular e escalável, que permite uma evolução contínua e eficiente da plataforma",
           "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
         ]
       },
       {
-        "date": "Set 2021 - Fev 2023",
-        "title": "Desenvolvedor Front-end Sênior",
-        "institution": "CI&T Software",
-        "description": [
-          "<strong>Projeto Coca-Cola</strong>: Experiência em divulgação de produtos, promoções e coleta de leads nas plataformas da América Latina e Caribe, além de habilidades de análise e acompanhamento de métricas de consumidores",
-          "Tecnologias: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS) e GitHub Actions",
-          "<strong>Projeto Anbima</strong>: Desenvolvimento de um sistema de coleta de informações de carteiras administradas e reestruturação na publicação de dados de produtos financeiros, com foco na melhoria de desempenho e resultados nas ferramentas de busca (SEO)",
-          "Tecnologias: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js e Gitlab"
+        "period": "Set 2021 - Fev 2023",
+        "role": "Desenvolvedor Front-end Sênior",
+        "company": "CI&T Software",
+        "location": "São Paulo, Brasil (Remoto)",
+        "clients": [
+          {
+            "name": "Anbima – Greenfield Platform Development",
+            "highlights": [
+              "• Architected and launched a comprehensive financial data platform for Anbima from the ground up using React and Next.js, creating a modern system for collecting and publishing managed portfolio information with strict regulatory compliance.",
+              "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), significantly improving page load times, Core Web Vitals, and organic search visibility for financial product data.",
+              "• Designed reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
+              "• Engineered robust data validation workflows and integrated with back-end APIs using optimized data fetching strategies to deliver real-time portfolio information."
+            ]
+          },
+          {
+            "name": "Coca-Cola – Platform Maintenance & Evolution",
+            "highlights": [
+              "• Provided ongoing maintenance and multilingual support for Coca-Cola's promotional platforms across Latin America and the Caribbean, serving millions of users in 20+ countries within the Adobe Experience Manager (AEM) ecosystem.",
+              "• Managed multilingual content workflows in AEM, coordinating translations and regional adaptations for Brazil, Mexico, Argentina, Colombia, and Caribbean markets.",
+              "• Delivered critical production support during high-traffic promotional campaigns, ensuring rapid incident response, front-end fixes, and 99.9% uptime.",
+              "• Implemented front-end enhancements with Vanilla JavaScript, HTML, and CSS to improve user experience, mobile responsiveness, and cross-browser compatibility.",
+              "• Collaborated with AWS infrastructure teams and leveraged GitHub Actions CI/CD pipelines for reliable multi-country deployments."
+            ]
+          }
         ]
       },
       {
-        "date": "Out 2020 - Set 2021",
-        "title": "Desenvolvedor Front-end",
-        "institution": "Meta Serviços em Informática",
-        "description": [
+        "period": "Out 2020 - Set 2021",
+        "role": "Desenvolvedor Front-end",
+        "company": "Meta Serviços em Informática",
+        "location": "São Paulo, Brasil (Remoto)",
+        "highlights": [
           "Manutenção e aprimoramento da plataforma <strong>Zarp Localiza</strong>, incluindo reestruturação de tecnologia e infraestrutura",
           "Foco na melhoria da experiência do usuário, desempenho da plataforma e otimização para alcançar a primeira posição nos resultados orgânicos de busca (SEO)",
           "Liderança na implantação de CI/CD, seleção de tecnologias front-end e monitoramento de métricas, incluindo o funil de venda",
@@ -667,19 +623,21 @@
         ]
       },
       {
-        "date": "Nov 2019 - Out 2020",
-        "title": "Desenvolvedor FullStack",
-        "institution": "Invillia - Desenvolvimento de Produtos Digitais",
-        "description": [
+        "period": "Nov 2019 - Out 2020",
+        "role": "Desenvolvedor FullStack",
+        "company": "Invillia - Desenvolvimento de Produtos Digitais",
+        "location": "São Paulo, Brasil (Remoto)",
+        "highlights": [
           "Desenvolvimento da suíte de aplicativos <strong>Invillia Apps</strong> para gestão de equipes e trabalho remoto, com foco na otimização de memória e integração com Microsoft Teams. Atuação no front-end e back-end, incluindo visualização de dados e entrega por APIs",
           "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
         ]
       },
       {
-        "date": "Abr 2019 - Nov 2019",
-        "title": "Desenvolvedor FullStack",
-        "institution": "Unimed Rio Preto",
-        "description": [
+        "period": "Abr 2019 - Nov 2019",
+        "role": "Desenvolvedor FullStack",
+        "company": "Unimed Rio Preto",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas",
           "Realização do planejamento e desenvolvimento de uma API para autenticação de usuários e um guia médico",
           "Criação de ambiente com automação de testes, monitoramento e CI/CD dos sistemas de gestão e prestação de serviços",
@@ -687,10 +645,11 @@
         ]
       },
       {
-        "date": "Jul 2018 - Abr 2019",
-        "title": "Desenvolvedor de Software",
-        "institution": "Bnex",
-        "description": [
+        "period": "Jul 2018 - Abr 2019",
+        "role": "Desenvolvedor de Software",
+        "company": "Bnex",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Responsável pela gestão e desenvolvimento de uma plataforma back-office web e mobile, voltada para o acompanhamento de promoters em pontos de revenda",
           "Realização do desenvolvimento de visualização de dados, utilizando dashboards, para o acompanhamento de resultados na empresa <strong>JBS</strong>",
           "Execução da manutenção na carga e transformação dos dados (ETL) dos parceiros da empresa <strong>JBS</strong>",
@@ -698,67 +657,74 @@
         ]
       },
       {
-        "date": "Set 2017 - Jul 2018",
-        "title": "Consultor de Automação de Processos (RPA)",
-        "institution": "WDG Automation",
-        "description": [
+        "period": "Set 2017 - Jul 2018",
+        "role": "Consultor de Automação de Processos (RPA)",
+        "company": "WDG Automation",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Responsável pela automação de processos e desenvolvimento de chatbots, além da estruturação de projetos de atendimento para recalls na <strong>Toyota Rodobens</strong>",
           "Desenvolvimento de uma extensão para o Google Chrome voltada para telemarketing da <strong>Claro</strong>",
           "Tecnologias: WDG Automation, Bizagi BPMN Modeler e JavaScript"
         ]
       },
       {
-        "date": "Out 2013 - Set 2017",
-        "title": "Desenvolvedor de Software Sênior",
-        "institution": "Emais Urbanismo e Incorporações",
-        "description": [
+        "period": "Out 2013 - Set 2017",
+        "role": "Desenvolvedor de Software Sênior",
+        "company": "Emais Urbanismo e Incorporações",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Responsável pela manutenção, suporte e desenvolvimento contínuo de um sistema ERP e CRM para controle fiscal, contábil, financeiro e gestão de carteira de imóveis",
           "Tecnologias: Delphi e Microsoft SQL Server"
         ]
       },
       {
-        "date": "Nov 2011 - Jun 2013",
-        "title": "Desenvolvedor e Consultor Contábil",
-        "institution": "Autônomo",
-        "description": [
+        "period": "Nov 2011 - Jun 2013",
+        "role": "Desenvolvedor e Consultor Contábil",
+        "company": "Autônomo",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Oferecimento de serviços de automação de obrigações fiscais para diversos clientes",
           "Tecnologias: Windows Forms, .Net C# e Microsoft SQL Server"
         ]
       },
       {
-        "date": "Jan 2011 - Nov 2011",
-        "title": "Desenvolvedor de Software",
-        "institution": "Dual Consultoria e Sistemas",
-        "description": [
+        "period": "Jan 2011 - Nov 2011",
+        "role": "Desenvolvedor de Software",
+        "company": "Dual Consultoria e Sistemas",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Responsável pela manutenção, suporte e atendimento aos clientes de um software de ERP especializado em gestão para distribuidoras",
           "Desenvolvimento de um sistema ERP especializado na área financeira e no cumprimento de obrigações fiscais",
           "Tecnologias: Progress 4GL"
         ]
       },
       {
-        "date": "Mar 2008 - Jan 2011",
-        "title": "Desenvolvedor de Software",
-        "institution": "Hexa Informática",
-        "description": [
+        "period": "Mar 2008 - Jan 2011",
+        "role": "Desenvolvedor de Software",
+        "company": "Hexa Informática",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Responsável pelo desenvolvimento, implementação e manutenção de um sistema de gestão de redes ópticas",
           "Tecnologias: Delphi e Microsoft SQL Server"
         ]
       },
       {
-        "date": "Dez 2005 - Mar 2008",
-        "title": "Desenvolvedor de Software",
-        "institution": "Condor Informática",
-        "description": [
+        "period": "Dez 2005 - Mar 2008",
+        "role": "Desenvolvedor de Software",
+        "company": "Condor Informática",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Manutenção e implementação de ERPs para controle financeiro, estoque e entregas de obrigações fiscais",
           "Desenvolvimento de ferramenta para Delegacia de Investigações Gerais (DIG) para controle interno de dados de detenções",
           "Tecnologias: Delphi e Firebird"
         ]
       },
       {
-        "date": "Dez 2004 - Dez 2005",
-        "title": "Desenvolvedor de Software",
-        "institution": "SOC Comércio e Serviços em Informática",
-        "description": [
+        "period": "Dez 2004 - Dez 2005",
+        "role": "Desenvolvedor de Software",
+        "company": "SOC Comércio e Serviços em Informática",
+        "location": "São José do Rio Preto, Brasil",
+        "highlights": [
           "Oferecimento de consultoria e desenvolvimento de soluções para a entrega de arquivos relacionados a obrigações fiscais",
           "Realização de venda, montagem e manutenção de computadores",
           "Tecnologias: Delphi e Firebird"
@@ -766,60 +732,44 @@
       }
     ]
   },
-  "utils": {
+  "utilities": {
     "title": "Utilidades e Ferramentas",
-    "titleCheatsheets": "Dicas de código",
-    "titleTools": "Ferramentas",
+    "cheatsheets": "Dicas de código",
+    "tools": "Ferramentas",
     "colorExplorer": {
       "title": "#e0138c - Explorador de cores"
     }
   },
-  "menuLinks": [
-    {
-      "label": "johny",
-      "url": "/"
-    },
-    {
-      "label": "artigos",
-      "url": "/blog/"
-    },
-    {
-      "label": "tirinhas",
-      "url": "/comics/"
-    },
-    {
-      "label": "projetos",
-      "url": "/projects/"
-    },
-    {
-      "label": "utilidades",
-      "url": "/utils/"
-    },
-    {
-      "label": "pesquisa",
-      "url": "/search/"
-    }
-  ],
-  "socialLinks": [
-    {
-      "label": "GitHub",
-      "icon": "Github",
-      "url": "https://github.com/johnywalves"
-    },
-    {
-      "label": "LinkedIn",
-      "icon": "Linkedin",
-      "url": "https://www.linkedin.com/in/johnywalves"
-    },
-    {
-      "label": "CNPq",
-      "icon": "School",
-      "url": "http://lattes.cnpq.br/0468996619713052"
-    },
-    {
-      "label": "E-mail",
-      "icon": "Email",
-      "url": "mailto:contato@johnywalves.com.br"
-    }
-  ]
+  "navigation": {
+    "menu": [
+      { "label": "johny", "url": "/" },
+      { "label": "artigos", "url": "/blog/" },
+      { "label": "tirinhas", "url": "/comics/" },
+      { "label": "projetos", "url": "/projects/" },
+      { "label": "utilidades", "url": "/utils/" },
+      { "label": "pesquisa", "url": "/search/" }
+    ],
+    "social": [
+      {
+        "platform": "GitHub",
+        "icon": "Github",
+        "url": "https://github.com/johnywalves"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "Linkedin",
+        "url": "https://www.linkedin.com/in/johnywalves"
+      },
+      {
+        "platform": "CNPq",
+        "icon": "School",
+        "url": "http://lattes.cnpq.br/0468996619713052"
+      },
+      {
+        "platform": "E-mail",
+        "icon": "Email",
+        "url": "mailto:contato@johnywalves.com.br"
+      }
+    ]
+  }
 }
