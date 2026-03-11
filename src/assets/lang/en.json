@@ -615,61 +615,85 @@
     "list": [
       {
         "date": "Sep 2024 - Currently",
-        "title": "Tech Designer",
+        "title": "Front-End Engineer | React & Next.js Specialist",
         "institution": "WeFit",
+        "location": "São Paulo, Brazil (remote)",
         "description": [
-          "<strong>Porto Seguro Project - Brokerage Management Platform</strong>: Development of a modular platform using a hybrid architecture (SSR and CSR) with Next.js, ensuring performance and scalability. Reusable componentization with React and TypeScript, analytical dashboards with Recharts, and responsive interfaces with Tailwind CSS, guaranteeing consistency and efficiency in development.",
-          "As key contributions, I improved code quality through technical reviews (Core Review) and standardization, as well as mentoring junior developers. I automated critical processes, reducing development time.",
-          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts, and Tailwind CSS"
+          "Architected scalable front-end solutions and component libraries with React, Next.js, and TypeScript, while leading technical reviews, mentoring teams, and building analytical dashboards that accelerated delivery and improved code quality.",
+          "• Architected a modular brokerage management platform using a hybrid Next.js architecture (SSR/CSR), ensuring high performance, scalability, and an optimized user experience for brokers.",
+          "• Built a reusable component library with React, TypeScript, and Tailwind CSS, guaranteeing design consistency across the platform and accelerating development velocity for new features.",
+          "• Improved code quality and team capability by leading technical reviews (Core Review), enforcing coding standards, and mentoring junior developers in React and Next.js best practices.",
+          "• Developed interactive analytical dashboards with Recharts, transforming complex data into clear visual insights for business stakeholders.",
+          "• Automated critical development processes, significantly reducing manual effort and shortening project lead times."
         ]
       },
       {
         "date": "Jul 2023 - Sep 2024",
-        "title": "Senior Front-end Developer",
+        "title": "Front-End Technical Lead | React & Next.js Specialist",
         "institution": "Seguralta",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
-          "Development of <strong>Seguralta Core</strong>: Platform that facilitates the operation of insurance brokerages, offering franchisees detailed access to commissions, renewals, and upcoming policy expirations, among other services",
-          "Maintenance and enhancement of the <strong>Customer Portal</strong>, with a focus on improving user experience (UX) and optimizing organic results in search engines (SEO)",
-          "Technical leadership in software development, with a focus on the front-end and ensuring a robust and efficient back-end. Responsible for applying agile methodologies (Scrum), collaborative development practices (GitFlow), and component versioning. I conducted complete and up-to-date documentation and provided mentorship for junior developers",
-          "My responsibilities included process automation, continuous monitoring of the environment with a focus on access metrics, detection and resolution of front-end errors, performance optimization with Core Web Vitals, continuous integration and delivery (CI/CD), and the adoption of quality practices such as unit and end-to-end testing",
-          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest, and Cypress"
+          "Architected and launched a comprehensive insurance brokerage platform while leading front-end strategy, establishing scalable component libraries, implementing robust quality monitoring ecosystems, and mentoring teams to drive engineering excellence and business growth.",
+          "• Architected and launched Seguralta Core, a comprehensive insurance brokerage platform built with React, Next.js, and FastAPI, providing franchisees with real-time access to commissions, renewals, and policy expiration data, streamlining critical business operations.",
+          "• Led the strategic redesign of the Customer Portal, applying modern UX principles and SEO best practices to enhance user satisfaction and significantly improve organic search visibility.",
+          "• Established a scalable front-end architecture by implementing a reusable component library with bit.dev/bit.cloud and Storybook, ensuring design consistency and accelerating development velocity across multiple projects.",
+          "• Drove engineering excellence and team growth by mentoring junior developers, leading code reviews, enforcing GitFlow workflows, and championing Scrum methodologies to foster a high-performance culture.",
+          "• Engineered a robust quality and monitoring ecosystem: Integrated New Relic for performance monitoring, SonarQube for code quality analysis, and comprehensive testing (Jest, Testing Library, Cypress), while automating deployments with BitBucket Pipelines to optimize Core Web Vitals and ensure system reliability."
         ]
       },
       {
         "date": "May 2023 - Jul 2023",
-        "title": "Front-end Developer",
+        "title": "Front-End Engineer | React & Next.js Specialist",
         "institution": "Hepta Tecnologia e Informática",
+        "location": "São Paulo, Brazil (remote)",
         "description": [
-          "<strong>CREA-SP Project</strong>: Development of the front-end for the platform for applying Technical Responsibility Notes (ART) in Works and Services. Using a modern approach with micro-frontend and monorepo, I ensured a modular and scalable architecture that allows for continuous and efficient platform evolution",
-          "Technologies: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
+          "CREA-SP Project – Technical Responsibility Notes (ART) Platform",
+          "• Architected and developed the front-end for CREA-SP's electronic ART platform, enabling engineering professionals across São Paulo to submit and manage Technical Responsibility Notes for works and services through a modern, intuitive digital interface.",
+          "• Designed and implemented a micro-frontend architecture using Module Federation within a monorepo, ensuring modularity, scalability, and the ability for multiple teams to develop and deploy features independently.",
+          "• Built reusable, type-safe components with React, Next.js, and TypeScript, establishing a solid foundation for continuous platform evolution and maintainability.",
+          "• Created a consistent, accessible UI library with Chakra UI, accelerating development and delivering a professional, responsive user experience across all platform modules.",
+          "• Managed the full development lifecycle in Azure DevOps, including version control, CI/CD pipelines, and automated quality checks, ensuring reliable and efficient releases."
         ]
       },
       {
         "date": "Set 2021 - Feb 2023",
-        "title": "Senior Front-end Developer",
+        "title": "Senior Front-End Engineer | CI&T Client Delivery",
         "institution": "CI&T Software",
+        "location": "São Paulo, Brazil (remote)",
         "description": [
-          "<strong>Coca-Cola Project</strong>: Experience in promoting products, running promotions, and collecting leads on platforms across Latin America and the Caribbean, along with skills in consumer metrics analysis and monitoring",
-          "Technologies: HTML, CSS, Vanilla JavaScript, Adobe Experience Manager Forms, Amazon Web Services (AWS), and GitHub Actions",
-          "<strong>Anbima Project</strong>: Development of a system for collecting managed portfolio information and restructuring the publication of financial product data, focusing on performance improvement and search engine results (SEO)",
-          "Technologies: HTML, CSS, JavaScript, Search Engine Optimization (SEO), React, Next.js, and Gitlab"
+          "Delivered high-impact solutions for Meta's enterprise clients acros Latin America, spanning greenfield development (Anbima) and platform maintenance/evolution (Coca-Cola).",
+          "Meta (Client: Anbima) – Greenfield Platform Development",
+          "• Architected and launched a comprehensive financial data platform for Anbima from the ground up using React and Next.js, creating a modern system for collecting and publishing managed portfolio information with strict regulatory compliance.",
+          "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), significantly improving page load times, Core Web Vitals, and organic search visibility for financial product data.",
+          "• Designed reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
+          "• Engineered robust data validation workflows and integrated with back-end APIs using optimized data fetching strategies to deliver real-time portfolio information.",
+          "Meta (Client: Coca-Cola) – Platform Maintenance & Evolution",
+          "• Provided ongoing maintenance and multilingual support for Coca-Cola's promotional platforms across Latin America and the Caribbean, serving millions of users in 20+ countries within the Adobe Experience Manager (AEM) ecosystem.",
+          "• Managed multilingual content workflows in AEM, coordinating translations and regional adaptations for Brazil, Mexico, Argentina, Colombia, and Caribbean markets.",
+          "• Delivered critical production support during high-traffic promotional campaigns, ensuring rapid incident response, front-end fixes, and 99.9% uptime.",
+          "• Implemented front-end enhancements with Vanilla JavaScript, HTML, and CSS to improve user experience, mobile responsiveness, and cross-browser compatibility.",
+          "• Collaborated with AWS infrastructure teams and leveraged GitHub Actions CI/CD pipelines for reliable multi-country deployments."
         ]
       },
       {
         "date": "Out 2020 - Set 2021",
         "title": "Front-end Developer",
         "institution": "Meta Serviços em Informática",
+        "location": "São Paulo, Brazil (remote)",
         "description": [
-          "Maintenance and enhancement of the Zarp Localiza platform, including technology and infrastructure restructuring",
-          "Focus on improving user experience, platform performance, and optimization to achieve the top position in organic search results (SEO)",
-          "Leadership in implementing CI/CD, selecting front-end technologies, and monitoring metrics, including the sales funnel",
-          "Technologies: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar, and Datadog"
+          "Zarp Localiza Platform – Technology Restructuring & SEO Optimization",
+          "• Led the complete technology and infrastructure restructuring of the Zarp Localiza platform, migrating to React and Next.js to establish a modern, scalable architecture that improved developer productivity and platform performance.",
+          "• Drove SEO strategy to achieve #1 organic rankings: Implemented comprehensive optimizations including semantic HTML, structured data, Next.js SSR, and Core Web Vitals improvements that propelled the platform to top positions in organic search results, driving significant growth in organic traffic.",
+          "• Championed CI/CD adoption with Azure DevOps: Introduced and implemented automated build, test, and deployment pipelines in Azure DevOps, reducing release cycles, minimizing manual errors, and enabling rapid iteration on features and SEO enhancements.",
+          "• Optimized user experience and the sales funnel: Leveraged Hotjar (heatmaps, session recordings) and Datadog (performance monitoring) to analyze user behavior, identify friction points, and implement UX improvements that positively impacted conversion rates.",
+          "• Selected and standardized front-end technologies: Led the technology selection process, establishing React, Next.js, and TypeScript as the core stack, ensuring code quality, reusability, and long-term maintainability across the platform."
         ]
       },
       {
         "date": "Nov 2019  - Out 2020",
         "title": "FullStack Developer",
         "institution": "Invillia - Desenvolvimento de Produtos Digitais",
+        "location": "São Paulo, Brazil (remote)",
         "description": [
           "Development of the Invillia Apps suite for team management and remote work, focusing on memory optimization and integration with Microsoft Teams. Worked on both front-end and back-end, including data visualization and delivery through APIs",
           "Technologies: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express, and MySQL"
@@ -679,6 +703,7 @@
         "date": "Apr 2019 - Nov 2019",
         "title": "FullStack Developer",
         "institution": "Unimed Rio Preto",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Development and coordination with third parties of the beneficiaries portal (UI/UX) with financial management, exams, and appointment scheduling",
           "Planning and development of an API for user authentication and a medical guide",
@@ -690,6 +715,7 @@
         "date": "Jul 2018 - Apr 2019",
         "title": "Software Developer",
         "institution": "Bnex",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Responsible for the management and development of a web and mobile back-office platform, focused on tracking promoters at retail locations",
           "Performed the development of data visualization using dashboards to track results at <strong>JBS</strong>",
@@ -701,6 +727,7 @@
         "date": "Set 2017 - Jul 2018",
         "title": "Process Automation Consultant (RPA)",
         "institution": "WDG Automation",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Responsible for process automation and chatbot development, as well as structuring customer service projects for recalls at <strong>Toyota Rodobens</strong>",
           "Development of a Google Chrome extension focused on telemarketing for <strong>Claro</strong>",
@@ -711,6 +738,7 @@
         "date": "Oct 2013 - Set 2017",
         "title": "Senior Software Developer",
         "institution": "Emais Urbanismo e Incorporações",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Responsible for the maintenance, support, and ongoing development of an ERP and CRM system for fiscal control, accounting, financial management, and real estate portfolio management",
           "Technologies: Delphi and Microsoft SQL Server"
@@ -720,6 +748,7 @@
         "date": "Nov 2011 - Jun 2013",
         "title": "Developer and Accounting Consultant",
         "institution": "Freelancer",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Providing services for automation of tax obligations for multiple clients",
           "Technologies: Windows Forms, .Net C#, and Microsoft SQL Server"
@@ -729,6 +758,7 @@
         "date": "Jan 2011 - Nov 2011",
         "title": "Software Developer",
         "institution": "Dual Consultoria e Sistemas",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Responsible for the maintenance, support, and customer service of an ERP software specialized in management for distributors",
           "Development of an ERP system specialized in the financial area and compliance with tax obligations",
@@ -739,6 +769,7 @@
         "date": "Mar 2008 - Jan 2011",
         "title": "Software Developer",
         "institution": "Hexa Informática",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Responsible for the development, implementation, and maintenance of an optical network management system",
           "Technologies: Delphi and Microsoft SQL Server"
@@ -748,6 +779,7 @@
         "date": "Dec 2005 - Mar 2008",
         "title": "Software Developer",
         "institution": "Condor Informática",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Maintenance and implementation of ERPs for financial control, inventory management, and compliance with tax obligations",
           "Development of a tool for the General Investigations Police Department (DIG) for internal data management of detentions",
@@ -758,6 +790,7 @@
         "date": "Dec 2004 - Dec 2005",
         "title": "Software Developer",
         "institution": "SOC Informática",
+        "location": "São José do Rio Preto, Brazil",
         "description": [
           "Providing consultancy and developing solutions for the delivery of files related to tax obligations",
           "Offering sales, assembly, and maintenance services for computers",
