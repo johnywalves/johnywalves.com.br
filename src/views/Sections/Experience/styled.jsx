@@ -110,7 +110,7 @@ const fadeInInfo = keyframes`
 `
 
 const selectedSkill = css`
-  max-height: 200rem;
+  max-height: none;
   animation: ${fadeInInfo} 1s ease-out forwards;
 `
 
@@ -179,7 +179,7 @@ export const Areas = styled.div`
 `
 
 const selectedArea = css`
-  max-height: 5000px;
+  max-height: none;
   padding: 30px 0 0;
   animation: ${fadeInInfo} 1s ease-out forwards;
 `
