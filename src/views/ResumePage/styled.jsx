@@ -178,6 +178,13 @@ export const ResumePerson = styled.section`
     margin: 0 0 8px;
   }
 
+  & p {
+    line-height: 1rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: -0.25rem 0 0.5rem;
+  }
+
   & ul {
     display: flex;
     flex-direction: column;
@@ -250,5 +257,9 @@ export const ResumeSubTitle = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  & em {
+    font-weight: 400;
   }
 `

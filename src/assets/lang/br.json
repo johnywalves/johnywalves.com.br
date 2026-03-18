@@ -142,7 +142,6 @@
   },
   "certifications": {
     "title": "Cursos e Certificados",
-    "seeMore": "Lista completa no site",
     "list": [
       {
         "date": "2023-07-07",
@@ -460,7 +459,6 @@
   },
   "education": {
     "title": "Formação Acadêmica",
-    "seeMore": "Lista completa no site",
     "list": [
       {
         "period": "Fev 2023 - Jul 2026",
@@ -534,7 +532,6 @@
   },
   "experience": {
     "title": "Experiência Profissional",
-    "seeMore": "Lista completa no site",
     "list": [
       {
         "period": "Fev 2026 - Atualmente",

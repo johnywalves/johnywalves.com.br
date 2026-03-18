@@ -37,7 +37,7 @@ async function getResumeAndCoverLetter(servingUrl, page, language) {
   })
 
   await page.pdf({
-    path: `./public/docs/johnywalves_${position}_lettercover.pdf`,
+    path: `./public/docs/johnywalves_${position}_cover_letter.pdf`,
     printBackground: true,
     format: "A4",
   })
