@@ -21,6 +21,9 @@ const CoverLetterPage = ({ language }) => {
       <ResumeSheet>
         <ResumePerson>
           <h1>Johny W. Alves</h1>
+
+          <p>{language.seo.headline}</p>
+
           <ul>
             <li>
               <img src={PhoneSVG} alt="" width={12} height={12} />{" "}
@@ -53,9 +56,11 @@ const CoverLetterPage = ({ language }) => {
 
         <ResumeSection>
           {language.coverLetter.map((text, index) => (
-            <p key={index} className="cover">
-              {text}
-            </p>
+            <p
+              key={index}
+              className="cover"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
           ))}
         </ResumeSection>
       </ResumeSheet>

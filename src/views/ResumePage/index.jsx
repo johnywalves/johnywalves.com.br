@@ -19,7 +19,7 @@ import {
   ResumeFooter,
 } from "./styled"
 
-const getFirst = (text) => text.split(" ")[text.split(" ").length - 1]
+const getFirst = (text) => text.split(" ")[1]
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 const getYear = (text) => new Date(text).getFullYear()
 
@@ -33,6 +33,9 @@ const getDescription = (text) => {
 const Person = ({ language }) => (
   <ResumePerson>
     <h1>Johny W. Alves</h1>
+
+    <p>{language.seo.headline}</p>
+
     <ul>
       <li>
         <img src={PhoneSVG} alt="" width={12} height={12} />{" "}
@@ -67,9 +70,12 @@ const ResumePage = ({ language }) => {
         <ResumeSection>
           <h2>{language.ui.labels.about}</h2>
           <hr />
-          <p className="description">
-            {getDescription(language.seo.description)}
-          </p>
+          <p
+            className="description"
+            dangerouslySetInnerHTML={{
+              __html: getDescription(language.seo.description),
+            }}
+          />
         </ResumeSection>
 
         <ResumeSection>
@@ -105,15 +111,6 @@ const ResumePage = ({ language }) => {
                 </ul>
               </ResumeSubSection>
             ))}
-
-          <a
-            href="https://johnywalves.com.br/?section=experiences"
-            target="_blank"
-            without
-            rel="noreferrer"
-          >
-            {language.experience.seeMore}
-          </a>
         </ResumeSection>
 
         <ResumeFooter>
@@ -126,9 +123,8 @@ const ResumePage = ({ language }) => {
         <ResumeSection>
           <h2>{language.education.title}</h2>
           <hr />
-          {language.education.list
-            .splice(0, 4)
-            .map(({ period, degree, institution, details, thesis }) => (
+          {language.education.list.map(
+            ({ period, degree, institution, details, thesis }) => (
               <ResumeCourse key={period}>
                 <h3>
                   {degree}
@@ -143,7 +139,8 @@ const ResumePage = ({ language }) => {
                 {details && details.map((text) => <p>{text}</p>)}
                 {thesis && <p>{thesis.title}</p>}
               </ResumeCourse>
-            ))}
+            )
+          )}
         </ResumeSection>
 
         <ResumeSection>

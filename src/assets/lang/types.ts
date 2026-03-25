@@ -78,7 +78,6 @@ export type LangFile = {
   }
   certifications: {
     title: string
-    seeMore: string
     list: Array<{
       date: string
       name: string
@@ -115,7 +114,6 @@ export type LangFile = {
   }
   education: {
     title: string
-    seeMore: string
     list: Array<{
       period: string
       degree: string
@@ -135,7 +133,6 @@ export type LangFile = {
   }
   experience: {
     title: string
-    seeMore: string
     list: Array<{
       period: string
       role: string

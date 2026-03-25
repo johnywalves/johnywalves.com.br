@@ -1,8 +1,8 @@
 {
   "seo": {
-    "description": "Johny William de Oliveira Alves, Senior Software Engineer with 20+ years of experience delivering scalable solutions in fintech, telecom, and consumer goods. He led high-impact projects for clients like Coca-Cola and Anbima, building systems for millions of users. Expert in React, Node.js, TypeScript, and CI/CD, with a strong focus on performance optimization and team mentorship. Currently expanding into machine learning and eager to contribute to international SaaS product teams.",
+    "description": "Johny William de Oliveira Alves, Senior Software Engineer with over <strong>20 years of experience</strong> architecting and delivering scalable solutions across fintech, telecommunications, and consumer goods. Expert in modern architectures using <strong>React, Next.js, and TypeScript</strong>, I have led high-impact projects for global clients such as <strong>Coca-Cola</strong>, serving millions of users with 99.9% uptime, and Anbima, where I architected a greenfield financial platform from the ground up. Committed to engineering excellence, I implemented SEO strategies that achieved #1 organic rankings and performance optimizations that improved system speed by over 30%. Currently a <strong>Master’s candidate in Computer Science (Deep Learning and Artificial Intelligence)</strong>, I am eager to leverage my expertise in <strong>mentorship and CI/CD automation</strong> to contribute to innovative international SaaS product teams",
     "position": "Senior Software Engineer",
-    "headline": "Senior Front-End Engineer | React & Next.js Specialist | Tech Mentor | SaaS & Fintech Focus"
+    "headline": "Senior Frontend Engineer | React & Next.js | Frontend Architect | SaaS & Fintech | Remote & International Experience | Tech Mentor"
   },
   "personal": {
     "name": "Johny W. Alves",
@@ -44,13 +44,14 @@
     "message": "Can I help you with anything? Do you have any questions or suggestions? Get in touch via social media or send an email. I'll be happy to answer."
   },
   "coverLetter": [
-    "Dear Hiring Manager,",
-    "I would like to introduce myself as a senior frontend developer with over 20 years of experience in creating user interfaces and working with various technologies. I am currently seeking a new opportunity and would love to work with a team of engaged and collaborative people.",
-    "Throughout my career, I have had the opportunity to work with a wide range of technologies, including HTML, CSS, JavaScript, React, Next.js, and many others. This has allowed me to develop a deep understanding of frontend development best practices, as well as the ability to learn new technologies quickly.",
-    "One of the things that motivates me most as a developer is producing knowledge and sharing what I've learned with teammates and the broader community. I firmly believe that knowledge sharing is essential for a healthy and collaborative work environment.",
-    "If you are looking for a senior frontend developer with a passion for learning, growing, and working as part of a team, I would be a great candidate for your company. Thank you in advance for the opportunity to discuss how I can contribute to your company's success.",
-    "Sincerely,",
-    "Johny W. Alves"
+    "<strong>Dear [Hiring Manager Name/Team Name]</strong>,",
+    "As a passionate frontend developer with <strong>over 20 years of experience</strong> architecting scalable web solutions, I was excited to discover the <strong>[Position Name]</strong> role at <strong>[Company Name]</strong>, whose commitment to innovative products deeply resonates with my professional background.",
+    "Having led high-impact projects for global brands like <strong>Coca-Cola</strong> and <strong>Anbima</strong>, I am eager to bring my expertise in the <strong>React/Next.js ecosystem</strong> and technical leadership to your engineering team.",
+    "Throughout my career, I have focused on delivering measurable business value through technical excellence. At <strong>Zarp Localiza</strong>, I led a complete technology restructuring that propelled the platform to <strong>#1 organic search rankings</strong> by optimizing Core Web Vitals and implementing advanced SSR strategies. During my tenure at <strong>CI&T</strong>, I architected a greenfield financial platform for <strong>Anbima</strong> and ensured <strong>99.9% uptime</strong> for Coca-Cola’s promotional systems across 20+ countries during high-traffic global campaigns. More recently, at <strong>Seguralta</strong> and <strong>WeFit</strong>, I established scalable component libraries and modular architectures that significantly accelerated development velocity and ensured design consistency across multiple workstreams.",
+    "Beyond my technical contributions, I am a dedicated Tech Mentor and a <strong>Master’s candidate in Computer Science</strong> focused on Deep Learning and Artificial Intelligence (AI). I am particularly drawn to <strong>[Company Name]’s</strong> dedication to excellence, which aligns with my passion for fostering a high-performance culture through <strong>mentorship</strong>, rigorous code reviews, and the adoption of Agile/Scrum methodologies. I believe that my blend of deep engineering experience and continuous learning makes me an ideal fit to help <strong>[Company Name]</strong> scale its next generation of intelligent SaaS products.",
+    "I would welcome the opportunity to discuss how my skills and 20+ years of experience can contribute to the continued success of <strong>[Company Name]</strong>. I am available at your convenience for a conversation.",
+    "<strong>Sincerely,</strong>",
+    "<strong>Johny W. Alves<strong/>"
   ],
   "blog": {
     "title": "Articles",
@@ -92,57 +93,143 @@
       {
         "name": "Languages",
         "items": [
-          { "name": "HTML/HTML5", "icon": "Html5" },
-          { "name": "CSS/CSS3", "icon": "Css3" },
-          { "name": "Java", "icon": "Java" },
-          { "name": "JavaScript", "icon": "Javascript" },
-          { "name": "Python", "icon": "Python" },
-          { "name": "TypeScript", "icon": "Typescript" }
+          {
+            "name": "HTML/HTML5",
+            "icon": "Html5"
+          },
+          {
+            "name": "CSS/CSS3",
+            "icon": "Css3"
+          },
+          {
+            "name": "Java",
+            "icon": "Java"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "Javascript"
+          },
+          {
+            "name": "Python",
+            "icon": "Python"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "Typescript"
+          }
         ]
       },
       {
         "name": "Frameworks & Libraries",
         "items": [
-          { "name": "D3.js", "icon": "D3js" },
-          { "name": "Express.js", "icon": "Express" },
-          { "name": "Gatsby", "icon": "Gatsby" },
-          { "name": "Jekyll", "icon": "Jekyll" },
-          { "name": "Module Federation", "icon": "Webpack" },
-          { "name": "Next.js", "icon": "Nextdotjs" },
-          { "name": "Node.js", "icon": "Nodejs" },
-          { "name": "React", "icon": "ReactLogo" },
-          { "name": "Redux", "icon": "Redux" },
-          { "name": "Spring Boot", "icon": "SpringBoot" },
-          { "name": "Styled Components", "icon": "Styledcomponents" },
-          { "name": "Tailwind CSS", "icon": "TailwindCss" }
+          {
+            "name": "D3.js",
+            "icon": "D3js"
+          },
+          {
+            "name": "Express.js",
+            "icon": "Express"
+          },
+          {
+            "name": "Gatsby",
+            "icon": "Gatsby"
+          },
+          {
+            "name": "Jekyll",
+            "icon": "Jekyll"
+          },
+          {
+            "name": "Module Federation",
+            "icon": "Webpack"
+          },
+          {
+            "name": "Next.js",
+            "icon": "Nextdotjs"
+          },
+          {
+            "name": "Node.js",
+            "icon": "Nodejs"
+          },
+          {
+            "name": "React",
+            "icon": "ReactLogo"
+          },
+          {
+            "name": "Redux",
+            "icon": "Redux"
+          },
+          {
+            "name": "Spring Boot",
+            "icon": "SpringBoot"
+          },
+          {
+            "name": "Styled Components",
+            "icon": "Styledcomponents"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "TailwindCss"
+          }
         ]
       },
       {
         "name": "Data & Analytics",
         "items": [
-          { "name": "SQL Server", "icon": "Microsoftsqlserver" },
-          { "name": "MySQL", "icon": "Mysql" },
-          { "name": "PostgreSQL", "icon": "Postgresql" },
-          { "name": "Python", "icon": "Python" },
-          { "name": "R", "icon": "RProject" }
+          {
+            "name": "SQL Server",
+            "icon": "Microsoftsqlserver"
+          },
+          {
+            "name": "MySQL",
+            "icon": "Mysql"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "Postgresql"
+          },
+          {
+            "name": "Python",
+            "icon": "Python"
+          },
+          {
+            "name": "R",
+            "icon": "RProject"
+          }
         ]
       },
       {
         "name": "DevOps & Tools",
         "items": [
-          { "name": "AWS", "icon": "Aws" },
-          { "name": "Azure DevOps", "icon": "Azuredevops" },
-          { "name": "BPM", "icon": "Flowchart" },
-          { "name": "Docker", "icon": "Docker" },
-          { "name": "Git", "icon": "Git" },
-          { "name": "Jenkins", "icon": "Jenkins" }
+          {
+            "name": "AWS",
+            "icon": "Aws"
+          },
+          {
+            "name": "Azure DevOps",
+            "icon": "Azuredevops"
+          },
+          {
+            "name": "BPM",
+            "icon": "Flowchart"
+          },
+          {
+            "name": "Docker",
+            "icon": "Docker"
+          },
+          {
+            "name": "Git",
+            "icon": "Git"
+          },
+          {
+            "name": "Jenkins",
+            "icon": "Jenkins"
+          }
         ]
       }
     ]
   },
   "certifications": {
     "title": "Courses & Certifications",
-    "seeMore": "View full list on website",
     "list": [
       {
         "date": "2023-07-07",
@@ -460,7 +547,6 @@
   },
   "education": {
     "title": "Education",
-    "seeMore": "View full list on website",
     "list": [
       {
         "period": "Feb 2023 - Jul 2026",
@@ -534,7 +620,6 @@
   },
   "experience": {
     "title": "Experience",
-    "seeMore": "View full list on website",
     "list": [
       {
         "period": "Feb 2026 - Present",
@@ -542,11 +627,10 @@
         "company": "Freelance",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "Built and led development of scalable full-stack platforms with React, Next.js and Firebase",
-          "• Founded and developed TCG RP: Architected and built a comprehensive event management and organization platform from the ground up using React, Next.js, and a Contentful with monorepo, resulting in a scalable and maintainable web solution.",
-          "• Engineered a dual-platform ecosystem: Developed both a public-facing interface and a secure administrative area, integrating Firebase for real-time data synchronization and user management, streamlining back-office operations.",
-          "• Created an end-to-end certification system: Designed and implemented a full-stack certification and tracking platform using React, Next.js, Express, and Contentful, enabling automated certificate issuance and progress monitoring for trainees.",
-          "• Established internal training programs: Led front-end development training and consulting sessions, empowering teams to master React and Next.js, which accelerated project delivery and improved code quality across the organization."
+          "Built and led the development of scalable full-stack platforms with React, Next.js, Contentful, and Firebase.",
+          "• Front-End Technical Lead & Mentor: Delivered expert-led workshops on React and Next.js best practices and D3.js data visualization, empowering cross-functional teams to implement modern development techniques and high-performance frontend patterns",
+          "• Certification Platform: Architected and engineered a full-cycle certification management system (UI/UX to infrastructure) using React, Next.js, and Node.js. Integrated Contentful CMS and Express to automate certificate issuance and progress tracking, significantly reducing administrative overhead and streamlining the certification lifecycle.",
+          "• Event Management: Developed TCG RP, a scalable React and Next.js event platform using a monorepo approach and Contentful CMS. The system features an integrated vendor admin area and a WhatsApp bot for automated event tracking, delivering a maintainable and efficient full-stack web solution"
         ]
       },
       {
@@ -555,11 +639,10 @@
         "company": "WeFit",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "Architected modular brokerage platform with hybrid Next.js architecture (SSR/CSR)",
-          "• Architected a modular brokerage management platform using a hybrid Next.js architecture (SSR/CSR), ensuring high performance, scalability, and an optimized user experience for brokers.",
-          "• Built a reusable component library with React, TypeScript, and Tailwind CSS, guaranteeing design consistency across the platform and accelerating development velocity for new features.",
-          "• Improved code quality and team capability by leading technical reviews (Core Review), enforcing coding standards, and mentoring junior developers in React and Next.js best practices.",
-          "• Developed interactive analytical dashboards with Recharts, transforming complex data into clear visual insights for business stakeholders."
+          "• Engineered a scalable front-end ecosystem and reusable component libraries using React, Next.js, and TypeScript, which accelerated development velocity by 36% and ensured 100% design consistency across all brokerage modules.",
+          "• Architected a high-performance brokerage management platform leveraging a hybrid Next.js architecture (SSR/CSR), resulting in a 36% improvement in page load times and a seamless, scalable experience for high-volume broker operations.",
+          "• Elevated engineering excellence and team capability by leading rigorous technical Core Reviews and mentoring junior developers in React and Next.js best practices, which reduced post-release bugs and standardized high-quality coding workflows.",
+          "• Designed high-impact analytical dashboards using Recharts, transforming complex financial datasets into real-time visual insights that empowered business stakeholders to make faster, data-driven strategic decisions."
         ]
       },
       {
@@ -568,9 +651,7 @@
         "company": "Seguralta",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Architected and launched Seguralta Core insurance platform with React, Next.js, and FastAPI",
           "• Architected and launched Seguralta Core, a comprehensive insurance brokerage platform built with React, Next.js, and FastAPI, providing franchisees with real-time access to commissions, renewals, and policy expiration data, streamlining critical business operations.",
-          "• Established a scalable front-end architecture by implementing a reusable component library with bit.dev/bit.cloud and Storybook, ensuring design consistency and accelerating development velocity across multiple projects.",
           "• Drove engineering excellence and team growth by mentoring junior developers, leading code reviews, enforcing GitFlow workflows, and championing Scrum methodologies to foster a high-performance culture.",
           "• Engineered a robust quality and monitoring ecosystem: Integrated New Relic for performance monitoring, SonarQube for code quality analysis, and comprehensive testing (Jest, Testing Library, Cypress), while automating deployments with BitBucket Pipelines to optimize Core Web Vitals and ensure system reliability."
         ]
@@ -776,12 +857,30 @@
   },
   "navigation": {
     "menu": [
-      { "label": "Home", "url": "/" },
-      { "label": "Articles", "url": "/blog/" },
-      { "label": "Comics", "url": "/comics/" },
-      { "label": "Projects", "url": "/projects/" },
-      { "label": "Utilities", "url": "/utils/" },
-      { "label": "Search", "url": "/search/" }
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "Articles",
+        "url": "/blog/"
+      },
+      {
+        "label": "Comics",
+        "url": "/comics/"
+      },
+      {
+        "label": "Projects",
+        "url": "/projects/"
+      },
+      {
+        "label": "Utilities",
+        "url": "/utils/"
+      },
+      {
+        "label": "Search",
+        "url": "/search/"
+      }
     ],
     "social": [
       {
