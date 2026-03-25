@@ -41,7 +41,7 @@ const SectionAbout = () => {
         <AboutMe>
           <Header title={ui.labels.about} light left />
           <Line />
-          <Description>{seo.description}</Description>
+          <Description dangerouslySetInnerHTML={{ __html: seo.description }} />
         </AboutMe>
 
         <Languages>
