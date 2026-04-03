@@ -34,9 +34,6 @@ export const AboutMe = styled.div`
 
   & > div:first-of-type,
   & > p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 35px 0;
   }
 
