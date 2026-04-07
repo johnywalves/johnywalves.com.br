@@ -13,16 +13,16 @@
     "labels": {
       "and": "e",
       "hour": "horas",
-      "completionIn": "Previsão de conclusão em",
-      "about": "Sobre",
+      "completionIn": "Conclusão em",
+      "about": "Resumo",
       "seeMore": "Ver mais",
       "seeLess": "Ver menos",
-      "mostRecent": "Mais recentes",
+      "mostRecent": "Mais recente",
       "visit": "Visitar",
       "sourceCode": "Código fonte",
-      "search": "Pesquisa",
+      "search": "Buscar",
       "notFound": "A página que você procura não existe",
-      "backToHome": "voltar para a home"
+      "backToHome": "Voltar ao início"
     },
     "searchResult": "$1 resultados encontrados em $2ms"
   },
@@ -40,37 +40,38 @@
     ]
   },
   "contact": {
-    "title": "Contatos",
-    "message": "Posso te ajudar com alguma coisa? Tem alguma dúvida ou sugestão? Entre em contato pelas redes sociais ou mande um e-mail, ficarei feliz em responder."
+    "title": "Contato",
+    "message": "Posso ajudá-lo com algo? Tem alguma pergunta ou sugestão? Entre em contato pelas redes sociais ou envie um e-mail. Ficarei feliz em responder."
   },
   "coverLetter": [
-    "Prezado(a) contratante",
-    "Gostaria de me apresentar como um desenvolvedor frontend sênior com mais de 15 anos de experiência na criação de interfaces de usuário e utilização de diversas tecnologias. Estou atualmente buscando uma nova alocação e adoraria trabalhar com uma equipe de pessoas engajadas e colaborativas.",
-    "Ao longo de minha carreira, tenho tido a oportunidade de trabalhar com uma ampla variedade de tecnologias, incluindo HTML, CSS, JavaScript, React, Next.js e muitas outras. Isso me permitiu desenvolver uma compreensão profunda das melhores práticas de desenvolvimento frontend, bem como a capacidade de aprender novas tecnologias rapidamente.",
-    "Uma das coisas que mais me motiva como desenvolvedor é produzir conhecimento e compartilhar o que aprendi com colegas de equipe e a comunidade em geral. Acredito firmemente que o compartilhamento de conhecimento é essencial para um ambiente de trabalho saudável e colaborativo.",
-    "Se você estiver procurando por um desenvolvedor frontend sênior com uma paixão por aprender, crescer e trabalhar em equipe, sou um ótimo candidato para sua empresa. Agradeço antecipadamente a oportunidade de discutir mais sobre como posso contribuir para o sucesso da sua empresa.",
-    "Atenciosamente",
-    "Johny W. Alves"
+    "<strong>Prezado(a) [Nome do Gerente de Contratação/Nome da Equipe]</strong>,",
+    "Como um desenvolvedor frontend apaixonado com <strong>mais de 20 anos de experiência</strong> arquitetando soluções web escaláveis, fiquei animado ao descobrir a vaga de <strong>[Nome da Posição]</strong> na <strong>[Nome da Empresa]</strong>, cujo compromisso com produtos inovadores ressoa profundamente com minha trajetória profissional.",
+    "Tendo liderado projetos de alto impacto para marcas globais como <strong>Coca-Cola</strong> e <strong>Anbima</strong>, estou ansioso para trazer minha experiência no <strong>ecossistema React/Next.js</strong> e liderança técnica para o seu time de engenharia.",
+    "Ao longo da minha carreira, tenho focado em entregar valor comercial mensurável através da excelência técnica. Na <strong>Zarp Localiza</strong>, liderei uma reestruturação tecnológica completa que impulsionou a plataforma para o <strong>#1 nos rankings de busca orgânica</strong> ao otimizar o Core Web Vitals e implementar estratégias avançadas de SSR. Durante minha passagem pela <strong>CI&T</strong>, arquitetei uma plataforma financeira do zero para a <strong>Anbima</strong> e garanti <strong>99,9% de disponibilidade</strong> para os sistemas promocionais da Coca-Cola em mais de 20 países durante campanhas globais de alto tráfego. Mais recentemente, na <strong>Seguralta</strong> e <strong>WeFit</strong>, estabeleci bibliotecas de componentes escaláveis e arquiteturas modulares que aceleraram significativamente a velocidade de desenvolvimento e garantiram consistência de design em múltiplos fluxos de trabalho.",
+    "Além das minhas contribuições técnicas, sou um Mentor de Tecnologia dedicado e <strong>cursando Mestrado em Ciência da Computação</strong> com foco em Deep Learning e Inteligência Artificial (IA). Sou particularmente atraído pela dedicação da <strong>[Nome da Empresa]</strong> à excelência, que se alinha com minha paixão por promover uma cultura de alto desempenho através de <strong>mentoria</strong>, revisões de código rigorosas e adoção de metodologias Agile/Scrum. Acredito que minha combinação de profunda experiência em engenharia e aprendizado contínuo me torna o ideal para ajudar a <strong>[Nome da Empresa]</strong> a escalar sua próxima geração de produtos SaaS inteligentes.",
+    "Gostaria de ter a oportunidade de discutir como minhas habilidades e mais de 20 anos de experiência podem contribuir para o sucesso contínuo da <strong>[Nome da Empresa]</strong>. Estou disponível em sua conveniência para uma conversa.",
+    "<strong>Atenciosamente,</strong>",
+    "<strong>Johny W. Alves</strong>"
   ],
   "blog": {
     "title": "Artigos",
     "category": "Categoria",
     "categories": "Categorias",
     "highlights": "Destaques",
-    "all": "Artigos sobre tecnologias, conceitos e alguns pensamentos",
+    "all": "Todos os artigos",
     "viewAll": "Ver todos os artigos",
     "feed": "https://johnywalves.com.br/feed-posts.xml"
   },
   "comics": {
-    "title": "Tirinhas",
+    "title": "Quadrinhos",
     "pagination": {
-      "first": "Primeiro",
+      "first": "Primeira",
       "previous": "Anterior",
-      "next": "Próximo",
-      "last": "Último"
+      "next": "Próxima",
+      "last": "Última"
     },
-    "all": "Tirinhas sobre a vida de trabalhadores de tecnologia",
-    "viewAll": "Ver todas as tirinhas",
+    "all": "Todos os quadrinhos",
+    "viewAll": "Ver todos os quadrinhos",
     "feed": "https://johnywalves.com.br/feed-comics.xml"
   },
   "languages": {
@@ -87,61 +88,148 @@
     ]
   },
   "skills": {
-    "title": "Tecnologias",
+    "title": "Stack de Tecnologias",
     "categories": [
       {
         "name": "Linguagens",
         "items": [
-          { "name": "HTML / HTML5", "icon": "Html5" },
-          { "name": "CSS / CSS3", "icon": "Css3" },
-          { "name": "Java", "icon": "Java" },
-          { "name": "JavaScript", "icon": "Javascript" },
-          { "name": "Python", "icon": "Python" },
-          { "name": "TypeScript", "icon": "Typescript" }
+          {
+            "name": "HTML/HTML5",
+            "icon": "Html5"
+          },
+          {
+            "name": "CSS/CSS3",
+            "icon": "Css3"
+          },
+          {
+            "name": "Java",
+            "icon": "Java"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "Javascript"
+          },
+          {
+            "name": "Python",
+            "icon": "Python"
+          },
+          {
+            "name": "TypeScript",
+            "icon": "Typescript"
+          }
         ]
       },
       {
         "name": "Frameworks e Bibliotecas",
         "items": [
-          { "name": "D3.js", "icon": "D3js" },
-          { "name": "Express.js", "icon": "Express" },
-          { "name": "Gatsby", "icon": "Gatsby" },
-          { "name": "Jekyll", "icon": "Jekyll" },
-          { "name": "Module Federation", "icon": "Webpack" },
-          { "name": "Next.js", "icon": "Nextdotjs" },
-          { "name": "Node", "icon": "Nodejs" },
-          { "name": "React", "icon": "ReactLogo" },
-          { "name": "Redux", "icon": "Redux" },
-          { "name": "Spring Boot", "icon": "SpringBoot" },
-          { "name": "Styled Components", "icon": "Styledcomponents" },
-          { "name": "Tailwind CSS", "icon": "TailwindCss" }
+          {
+            "name": "D3.js",
+            "icon": "D3js"
+          },
+          {
+            "name": "Express.js",
+            "icon": "Express"
+          },
+          {
+            "name": "Gatsby",
+            "icon": "Gatsby"
+          },
+          {
+            "name": "Jekyll",
+            "icon": "Jekyll"
+          },
+          {
+            "name": "Module Federation",
+            "icon": "Webpack"
+          },
+          {
+            "name": "Next.js",
+            "icon": "Nextdotjs"
+          },
+          {
+            "name": "Node.js",
+            "icon": "Nodejs"
+          },
+          {
+            "name": "React",
+            "icon": "ReactLogo"
+          },
+          {
+            "name": "Redux",
+            "icon": "Redux"
+          },
+          {
+            "name": "Spring Boot",
+            "icon": "SpringBoot"
+          },
+          {
+            "name": "Styled Components",
+            "icon": "Styledcomponents"
+          },
+          {
+            "name": "Tailwind CSS",
+            "icon": "TailwindCss"
+          }
         ]
       },
       {
-        "name": "Manipulação de Dados",
+        "name": "Dados e Analytics",
         "items": [
-          { "name": "SQL Server", "icon": "Microsoftsqlserver" },
-          { "name": "MySQL", "icon": "Mysql" },
-          { "name": "PostgreSQL", "icon": "Postgresql" },
-          { "name": "Python", "icon": "Python" },
-          { "name": "R", "icon": "RProject" }
+          {
+            "name": "SQL Server",
+            "icon": "Microsoftsqlserver"
+          },
+          {
+            "name": "MySQL",
+            "icon": "Mysql"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "Postgresql"
+          },
+          {
+            "name": "Python",
+            "icon": "Python"
+          },
+          {
+            "name": "R",
+            "icon": "RProject"
+          }
         ]
       },
       {
-        "name": "Ferramentas",
+        "name": "DevOps e Ferramentas",
         "items": [
-          { "name": "AWS", "icon": "Aws" },
-          { "name": "Azure DevOps", "icon": "Azuredevops" },
-          { "name": "BPM", "icon": "Flowchart" },
-          { "name": "Docker", "icon": "Docker" },
-          { "name": "Git", "icon": "Git" },
-          { "name": "Jenkins", "icon": "Jenkins" }
+          {
+            "name": "AWS",
+            "icon": "Aws"
+          },
+          {
+            "name": "Azure DevOps",
+            "icon": "Azuredevops"
+          },
+          {
+            "name": "BPM",
+            "icon": "Flowchart"
+          },
+          {
+            "name": "Docker",
+            "icon": "Docker"
+          },
+          {
+            "name": "Git",
+            "icon": "Git"
+          },
+          {
+            "name": "Jenkins",
+            "icon": "Jenkins"
+          }
         ]
       }
     ]
   },
   "certifications": {
-    "title": "Cursos e Certificados",
+    "title": "Cursos e Certificações",
     "list": [
       {
         "date": "2023-07-07",
@@ -152,7 +240,7 @@
       },
       {
         "date": "2022-07-08",
-        "name": "Voxy Proficiency Achievement Certificate - High Intermediate English (B2)",
+        "name": "Inglês Intermediário Avançado (B2)",
         "issuer": "Voxy",
         "file": "/cert/voxy_proficiency_achievement_certificate_-_high_intermediate.jpg",
         "type": "language"
@@ -167,7 +255,7 @@
       },
       {
         "date": "2018-07-27",
-        "name": "Games 2D: com Unity e C#",
+        "name": "Jogos 2D: com Unity e C#",
         "issuer": "Senac São José do Rio Preto",
         "file": "/cert/senac_games_2d.jpg",
         "type": "course",
@@ -175,7 +263,7 @@
       },
       {
         "date": "2018-09-16",
-        "name": "Ciência de Dados e Machine Learing em Python",
+        "name": "Ciência de Dados e Machine Learning em Python",
         "issuer": "Igor Alcantara",
         "file": "/cert/igoralcantara_ml_python.jpg",
         "type": "course",
@@ -199,7 +287,7 @@
       },
       {
         "date": "2018-07-22",
-        "name": "Estatística em Qlik",
+        "name": "Estatística no Qlik",
         "issuer": "Igor Alcantara",
         "file": "/cert/igoralcantara_estatistica_qlik.jpg",
         "type": "course",
@@ -223,7 +311,7 @@
       },
       {
         "date": "2017-09-24",
-        "name": "Introdução à Machine Learning",
+        "name": "Fundamentos de Machine Learning",
         "issuer": "Igor Alcantara",
         "file": "/cert/igoralcantara_ml.jpg",
         "type": "course",
@@ -240,184 +328,184 @@
     ]
   },
   "projects": {
-    "title": "Projetos & Desenvolvimentos",
+    "title": "Projetos",
     "sections": {
-      "featured": "Projetos em destaque",
-      "others": "Outros projetos"
+      "featured": "Projetos em Destaque",
+      "others": "Outros Projetos"
     },
     "viewAll": "Ver todos os projetos",
-    "viewFeatured": "Visualizar somente destaques",
+    "viewFeatured": "Ver apenas destaques",
     "list": [
       {
         "name": "Use Python",
         "sourceCode": "https://github.com/johnywalves/use-python",
         "image": "usepython",
         "url": "https://usepython.com.br/",
-        "description": "Curso introdutório em Python abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados"
+        "description": "Curso introdutório de Python cobrindo configuração de ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados"
       },
       {
         "name": "Machado Alves",
         "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
         "image": "machadoalves",
         "url": "https://marchadoalves.jwalves.com/",
-        "description": "Coleção de histórias curtas de vários escritores, escritas para a plataforma ou domínio público, para ler e compartilhar"
+        "description": "Coletânea de contos de diversos escritores, escritos para a plataforma ou em domínio público, para ler e compartilhar"
       },
       {
         "name": "Devflix",
         "sourceCode": "https://github.com/johnywalves/devflix",
         "image": "devflix",
-        "url": "https://devflix.jwalves.com",
-        "description": "Plataforma para compartilhamento de conhecimento sobre desenvolvimento de software em língua brasileira"
+        "url": "https://devflix.jwalves.com/",
+        "description": "Plataforma para compartilhar conhecimento sobre desenvolvimento de software em português"
       },
       {
-        "name": "Bom dia, equipes dev!",
+        "name": "Bom Dia, Times de Dev!",
         "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
         "image": "bomdia",
         "imagePosition": "center",
         "url": "https://bomdiaequipesdev.com.br/",
-        "description": "Uma maneira criativa para saudar seus colegas desenvolvedores toda manhã"
+        "description": "Uma forma criativa de cumprimentar seus colegas desenvolvedores toda manhã"
       },
       {
-        "name": "Boilerplate para React, Next.js e TypeScript",
+        "name": "Boilerplate React/Next.js/TypeScript",
         "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
         "image": "boilerplate",
         "url": "https://next-pages-boilerplate.vercel.app",
-        "description": "Boilerplate com React, Next.js, Typescript, Storybook e Styled Components para começar rapidamente e com configuração mínima"
+        "description": "Boilerplate com React, Next.js, Typescript, Storybook e Styled Components para começar rápido com configuração mínima"
       },
       {
         "name": "Daisy Bell",
         "sourceCode": "https://github.com/johnywalves/daisy-bell",
         "image": "daisybell",
         "url": "https://daisy.johnywalves.com.br",
-        "description": "Modelo de projeto para compartilhamento de imagens com texto de contexto"
+        "description": "Template de projeto para compartilhar imagens com texto em contexto"
       },
       {
-        "name": "Animações com CSS",
+        "name": "CSS Animatic",
         "sourceCode": "https://github.com/johnywalves/cssanimatic",
         "image": "cssanimatic",
         "url": "https://johnywalves.github.io/cssanimatic",
-        "description": "CSS Animation easy, how should be: ferramenta para auxiliar na criação de de aminações puramente com CSS"
+        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS"
       },
       {
-        "name": "Johny W. Alves",
+        "name": "Portfólio Johny W. Alves",
         "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
         "image": "thumbnail",
         "url": "https://johnywalves.com.br",
-        "description": "Esta bela página, um pequeno portfólio e área para experimentar e compartilhar experiências"
+        "description": "Este website: um portfólio e espaço experimental para compartilhar experiências"
       },
       {
-        "name": "Registro de tempo",
+        "name": "Register Switch",
         "sourceCode": "https://github.com/johnywalves/register-switch",
         "image": "registerSwitch",
         "url": "https://switch.jwalves.com/",
-        "description": "Tempo gasto executando tarefas de forma simples para habilitar e desabilitar"
+        "description": "Ferramenta simples de controle de tempo para ativar e desativar tarefas"
       },
       {
-        "name": "Criador de Personagens e Tirinhas",
+        "name": "Criador de Personagens e Quadrinhos",
         "url": "https://comics.johnywalves.com.br",
         "image": "comicscreator",
-        "description": "Ferramenta para geração e visualização de tirinhas em SVG"
+        "description": "Ferramenta para gerar e visualizar tirinhas SVG"
       },
       {
         "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
         "image": "firemakebetter",
         "url": "https://johnywalves.github.io/fire-make-better/",
-        "description": "Projeto desenvolvido para estudo em Angular, para organizar algumas receitas, atualmente pesquisando no Spoonacular"
+        "description": "Projeto Angular organizador de receitas, atualmente integrando com a API Spoonacular"
       },
       {
-        "name": "Navegação de mapa",
+        "name": "Navegação no Mapa",
         "sourceCode": "https://github.com/johnywalves/wolt",
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
-        "description": "Projeto de visualização de mapa com pontos de interesses"
+        "description": "Visualização de mapa com pontos de interesse"
       },
       {
-        "name": "Biblioteca Steam",
+        "name": "Steam Library",
         "sourceCode": "https://github.com/johnywalves/steamlibrary",
         "image": "steamLibrary",
         "url": "https://johnywalves.github.io/steamlibrary/",
-        "description": "Visualização de biblioteca de jogos Steam"
+        "description": "Visualização da biblioteca de jogos Steam"
       },
       {
-        "name": "Perfil github.io",
+        "name": "Perfil GitHub",
         "sourceCode": "https://github.com/johnywalves/johnywalves.github.io/",
         "image": "githubio",
         "url": "https://johnywalves.github.io/",
-        "description": "Cartão de visitas Github.io"
+        "description": "Cartão de visitas no GitHub.io"
       },
       {
-        "name": "Card Game em React",
+        "name": "Jogo de Cartas em React",
         "sourceCode": "https://github.com/johnywalves/card-game-react",
         "image": "githubio",
         "url": "https://card-game-in-react.vercel.app",
-        "description": "Desenvolvendo um jogo tipo Magic: The Gathering, Hearthstone e Yu-Gi-Oh! do conceito até a entrega com React"
+        "description": "Desenvolvendo um jogo como Magic: The Gathering, Hearthstone e Yu-Gi-Oh! do conceito à entrega com React"
       },
       {
         "name": "Sangue Quente",
         "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
         "image": "githubio",
         "url": "https://sanguequente.art/",
-        "description": "Um acervo de crônicas de Lobisomem: O Apocalipse"
+        "description": "Uma coleção de crônicas de Lobisomem: O Apocalipse"
       }
     ]
   },
   "miniProjects": {
-    "title": "Projetos de uma página",
+    "title": "Mini Projetos",
     "list": [
       {
-        "name": "Menu Hamburger",
-        "description": "Menu para a tela inteira com três faixas",
+        "name": "Menu Hambúrguer",
+        "description": "Menu de tela cheia com três faixas",
         "url": "/web/hamburgermenu.html"
       },
       {
-        "name": "Campo Animado",
-        "description": "Campo para inserção de valores com efeitos de animação",
+        "name": "Animação de Input",
+        "description": "Campo de entrada com efeitos de animação",
         "url": "/web/inputanimation.html"
       },
       {
-        "name": "Carregando e Girando",
+        "name": "Spinner de Carregamento",
         "description": "Efeito cíclico para indicação de carregamento de recursos",
         "url": "/web/loadingspinner.html"
       },
       {
-        "name": "Pesquisa de Pessoas",
-        "description": "Cartas de apresentação de pessoas com opção de pesquisa por texto",
+        "name": "Busca de Pessoas",
+        "description": "Cards de introdução com busca por texto",
         "url": "/web/peoplesearch.html"
       },
       {
-        "name": "Relógio com simulação do céu",
-        "description": "Manipulação de componentes e animações ao passar do tempo",
+        "name": "Relógio com Simulação de Céu",
+        "description": "Componentes e animações ao longo do tempo",
         "url": "/web/clocksunandmon.html"
       },
       {
         "name": "Sol e Lua",
-        "description": "Animação de transição de escuro e claro com a lua e o sol",
+        "description": "Animação de transição escuro/claro",
         "url": "/web/sunmoon.html"
       },
       {
-        "name": "Questões Carreira Policial",
-        "description": "Listagem de questões resolvidas para estudo em carreira policial",
+        "name": "Questões de Concurso Policial",
+        "description": "Questões resolvidas para estudos de carreira policial",
         "url": "/web/provascarreirapolicial/index.html"
       },
       {
-        "name": "Letras pulando",
-        "description": "Animação de letras pulando",
+        "name": "Letras Saltitantes",
+        "description": "Animação de letras saltitantes",
         "url": "/web/jumpingletters.html"
       },
       {
         "name": "Quadro Kanban",
-        "description": "Um pequeno Kanban com Drag and Drop",
+        "description": "Gráfico Kanban com arrastar e soltar",
         "url": "/web/kanban/index.html"
       },
       {
-        "name": "Letras Neon",
-        "description": "Letreiro neon animação",
+        "name": "Letras de Neon",
+        "description": "Efeito de letreiro de neon animado",
         "url": "/web/neonletters.html"
       },
       {
-        "name": "Esqueleto de elementos",
-        "description": "Efeito de Esqueleto para elementos carregando",
+        "name": "Elementos Skeleton",
+        "description": "Efeito de esqueleto de carregamento",
         "url": "/web/skeleton.html"
       },
       {
@@ -426,33 +514,33 @@
         "url": "/web/profiles.html"
       },
       {
-        "name": "A história de Johny",
-        "description": "Álbum de fotos com uma pequena parte da minha história",
+        "name": "História do Johny",
+        "description": "Álbum de história pessoal",
         "url": "https://johnywalves.github.io/johnys-story/"
       },
       {
-        "name": "População Mundial | Dashboard",
-        "description": "Coleção de gráficos para apresentação da população mundial",
+        "name": "Dashboard População Mundial",
+        "description": "Coleção de gráficos para dados populacionais mundiais",
         "url": "https://johnywalves.com.br/web/world_d3/"
       },
       {
         "name": "Números por Extenso",
-        "description": "Apresentação de números aleatórios e conversão para texto",
+        "description": "Números aleatórios e conversão em palavras",
         "url": "/web/numberinwords.html"
       },
       {
-        "name": "Convite de aniversário",
-        "description": "Convite para festa ocorrida em 2023",
+        "name": "Convite de Aniversário",
+        "description": "Convite para festa de 2023",
         "url": "/niver"
       },
       {
         "name": "Kalyra",
-        "description": "Ficha de Personagem para D&D 5ª Edição - Meio-Elfa",
+        "description": "Ficha de Personagem D&D 5ª Edição - Meio-Elfo",
         "url": "https://kalyra.jwalves.com/"
       },
       {
-        "name": "Sizes Screen Test",
-        "description": "Teste de altura da tela para dispositivos Web",
+        "name": "Teste de Tamanho de Tela",
+        "description": "Teste tamanhos de tela para dispositivos web",
         "url": "/web/sizescreentest.html"
       }
     ]
@@ -463,60 +551,60 @@
       {
         "period": "Fev 2023 - Jul 2026",
         "degree": "Mestrado em Ciência da Computação",
-        "institution": "UNESP - Universidade Estadual Paulista \"Júlio de Mesquita Filho\"",
+        "institution": "UNESP",
         "description": [
-          "Curso de Mestrado do Programa de Pós-Graduação Interunidades Ciência da Computação da Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
+          "Programa de Mestrado em Ciência da Computação na Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ],
         "details": [
-          "Atividades: Processamento de Imagens Digitais, Tópicos Avançados em Visualização, Aprendizado Profundo"
+          "Foco: Processamento Digital de Imagens, Tópicos Avançados em Visualização, Deep Learning"
         ]
       },
       {
         "period": "Out 2020 - Dez 2022",
-        "degree": "Especialização em Gestão de Projetos em TI",
-        "institution": "Fatec Rio Preto - Faculdade de Tecnologia",
+        "degree": "Especialização em Gestão de Projetos de TI",
+        "institution": "Fatec Rio Preto",
         "certificate": "/cert/fatec_gpti.pdf",
         "description": [
-          "Especialização na área de T.I. para trabalhar na concepção, desenvolvimento e implantação de projetos de infraestrutura de redes, desenvolvendo e administrando a segurança da informação, gerenciar projetos de T.I. de prestação de serviços, aquisição de hardware e configuração de softwares em empresas de portes e ramos de atividades distintos, governança e desenvolvimento de software"
+          "Especialização em projetos de infraestrutura de rede, gestão de segurança da informação, gestão de projetos de TI, prestação de serviços, aquisição de hardware, configuração de software, governança e desenvolvimento de software"
         ],
         "thesis": {
-          "title": "Título: Analizo - Análise textual para validação de comunicação corporativa",
+          "title": "Analizo - Análise textual para validação de comunicação corporativa",
           "file": "/docs/analizo_comunicacao_corporativa_pt.pdf"
         }
       },
       {
         "period": "Mar 2018 - Mar 2020",
         "degree": "Especialização em Big Data",
-        "institution": "Centro Universitário Senac",
+        "institution": "Senac São Paulo",
         "certificate": "/cert/senac_bigdata.pdf",
         "description": [
-          "Especialização no campo de Big Data, visando ao correto entendimento, à definição de uso, implementação, além de fornecer ferramentas e subsídios para a gestão das tecnologias e processos envolvidos."
+          "Processamento e armazenamento distribuído, projetos de visualização e carregamento de dados, introdução à estatística e business intelligence"
         ],
         "thesis": {
-          "title": "Título: Proposta para aplicação de Regras de Associação para varejos online",
+          "title": "Proposta de aplicação de Regras de Associação para varejistas online",
           "file": "/docs/associacao_varejo_online_pt.pdf"
         }
       },
       {
         "period": "Jan 2015 - Dez 2017",
-        "degree": "Graduação em Informática para Negócios",
-        "institution": "Fatec Rio Preto - Faculdade de Tecnologia",
+        "degree": "Bacharelado em Informática de Negócios",
+        "institution": "Fatec Rio Preto",
         "certificate": "/cert/fatec_graduacao.pdf",
         "description": [
-          "Formação em tecnólogo em informática e negócios com bases para desenvolvimento de sistemas de informação para negócios utilizando processos tecnológicos e científicos que auxiliem no processo decisório das empresas"
+          "Informática para Negócios, Desenvolvimento de Software e Gestão Empresarial"
         ],
         "honors": [
           {
-            "name": "Premiação de Maior Média",
+            "name": "Prêmio Melhor Média Geral",
             "file": "/cert/fatec_maior_media.jpg"
           },
           {
-            "name": "Premiação Melhor Trabalho de Graduação",
+            "name": "Prêmio Melhor Trabalho de Graduação",
             "file": "/cert/fatec_melhor_tcc.jpg"
           }
         ],
         "thesis": {
-          "title": "Título: ForeSeries - Uma abordagem para predição de valores em séries temporais",
+          "title": "ForeSeries - Uma abordagem para predição de valores em séries temporais",
           "file": "/docs/fore_series_pt.pdf"
         }
       },
@@ -525,17 +613,17 @@
         "degree": "Técnico em Informática",
         "institution": "Etec Philadelpho Gouveia Netto",
         "description": [
-          "O técnico em Informática desenvolve e opera sistemas, aplicações e interfaces gráficas. Monta estruturas de banco de dados e codifica programas. Projeta, implanta e realiza manutenção de sistemas e aplicações. Seleciona recursos de trabalho, linguagens de programação, ferramentas e metodologias para o desenvolvimento de sistemas"
+          "Formação técnica em lógica, manutenção de hardware e desenvolvimento Web/Desktop"
         ]
       }
     ]
   },
   "experience": {
-    "title": "Experiência Profissional",
+    "title": "Experiência",
     "list": [
       {
-        "period": "Fev 2026 - Atualmente",
-        "role": "Tech Lead Front-End | Especialista React & Next.js",
+        "period": "Fev 2026 - Presente",
+        "role": "Líder Técnico Front-End | Especialista React & Next.js",
         "company": "Freelance",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
@@ -547,7 +635,7 @@
       },
       {
         "period": "Set 2024 - Fev 2026",
-        "role": "Engenheiro Front-end Sênior | Especialista React & Next.js",
+        "role": "Engenheiro Front-End Sênior | Especialista React & Next.js",
         "company": "WeFit",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
@@ -559,7 +647,7 @@
       },
       {
         "period": "Jul 2023 - Set 2024",
-        "role": "Desenvolvedor Front-end Sênior",
+        "role": "Líder Técnico Front-End Sênior | Especialista React & Next.js",
         "company": "Seguralta",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
@@ -570,7 +658,7 @@
       },
       {
         "period": "Mai 2023 - Jul 2023",
-        "role": "Desenvolvedor Front-end",
+        "role": "Engenheiro Front-End Sênior | Especialista React & Next.js",
         "company": "Hepta Tecnologia e Informática",
         "location": "São Paulo, Brasil (Remoto)",
         "project": "CREA-SP – Plataforma de ART (Anotação de Responsabilidade Técnica)",
@@ -585,11 +673,12 @@
       },
       {
         "period": "Set 2021 - Fev 2023",
-        "role": "Desenvolvedor Front-end Sênior",
+        "role": "Engenheiro Front-End Sênior | Entrega para Clientes CI&T",
         "company": "CI&T Software",
         "location": "São Paulo, Brasil (Remoto)",
         "clients": [
           {
+            "name": "Anbima – Desenvolvimento de Plataforma Greenfield",
             "name": "Anbima – Desenvolvimento de Plataforma Greenfield",
             "highlights": [
               "• Arquitetei e lancei do zero plataforma abrangente de dados financeiros para a Anbima com React e Next.js, criando sistema moderno para coleta e publicação de informações de carteiras gerenciadas com conformidade regulatória.",
@@ -599,6 +688,7 @@
             ]
           },
           {
+            "name": "Coca-Cola – Manutenção e Evolução de Plataforma",
             "name": "Coca-Cola – Manutenção e Evolução de Plataforma",
             "highlights": [
               "• Realizei manutenção contínua e suporte multilíngue para as plataformas promocionais da Coca-Cola na América Latina e Caribe, atendendo milhões de usuários em 20+ países no ecossistema Adobe Experience Manager (AEM).",
@@ -612,9 +702,10 @@
       },
       {
         "period": "Out 2020 - Set 2021",
-        "role": "Desenvolvedor Front-end",
+        "role": "Engenheiro Front-End | Entrega para Cliente Meta",
         "company": "Meta Serviços em Informática",
         "location": "São Paulo, Brasil (Remoto)",
+        "project": "Plataforma Zarp Localiza",
         "project": "Plataforma Zarp Localiza",
         "highlights": [
           "Plataforma Zarp Localiza – Reestruturação Tecnológica e Otimização de SEO",
@@ -627,8 +718,8 @@
       },
       {
         "period": "Nov 2019 - Out 2020",
-        "role": "Desenvolvedor FullStack",
-        "company": "Invillia - Desenvolvimento de Produtos Digitais",
+        "role": "Engenheiro de Software",
+        "company": "Invillia",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
           "Invillia Apps Suite – Plataforma de Gestão de Equipes e Trabalho Remoto",
@@ -641,7 +732,7 @@
       },
       {
         "period": "Abr 2019 - Nov 2019",
-        "role": "Desenvolvedor FullStack",
+        "role": "Engenheiro de Software",
         "company": "Unimed Rio Preto",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
@@ -653,7 +744,7 @@
       },
       {
         "period": "Jul 2018 - Abr 2019",
-        "role": "Desenvolvedor de Software",
+        "role": "Engenheiro de Software",
         "company": "Bnex",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
@@ -707,7 +798,7 @@
       {
         "period": "Nov 2011 - Jun 2013",
         "role": "Desenvolvedor e Consultor Contábil",
-        "company": "Autônomo",
+        "company": "Freelancer",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
           "Desenvolvi ferramentas de automação fiscal e bancos de dados para simplificar fluxos de obrigações fiscais para clientes.",
@@ -755,7 +846,7 @@
       {
         "period": "Dez 2004 - Dez 2005",
         "role": "Desenvolvedor de Software",
-        "company": "SOC Comércio e Serviços em Informática",
+        "company": "SOC Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
           "Desenvolvi soluções fiscais personalizadas em Delphi e Firebird, automatizando conformidade e fluxos de obrigações para clientes.",
@@ -768,20 +859,38 @@
   },
   "utilities": {
     "title": "Utilidades e Ferramentas",
-    "cheatsheets": "Dicas de código",
+    "cheatsheets": "Folhas de consulta",
     "tools": "Ferramentas",
     "colorExplorer": {
-      "title": "#e0138c - Explorador de cores"
+      "title": "#e0138c - Explorador de Cores"
     }
   },
   "navigation": {
     "menu": [
-      { "label": "johny", "url": "/" },
-      { "label": "artigos", "url": "/blog/" },
-      { "label": "tirinhas", "url": "/comics/" },
-      { "label": "projetos", "url": "/projects/" },
-      { "label": "utilidades", "url": "/utils/" },
-      { "label": "pesquisa", "url": "/search/" }
+      {
+        "label": "Início",
+        "url": "/"
+      },
+      {
+        "label": "Artigos",
+        "url": "/blog/"
+      },
+      {
+        "label": "Quadrinhos",
+        "url": "/comics/"
+      },
+      {
+        "label": "Projetos",
+        "url": "/projects/"
+      },
+      {
+        "label": "Utilidades",
+        "url": "/utils/"
+      },
+      {
+        "label": "Buscar",
+        "url": "/search/"
+      }
     ],
     "social": [
       {
@@ -795,7 +904,7 @@
         "url": "https://www.linkedin.com/in/johnywalves"
       },
       {
-        "platform": "CNPq",
+        "platform": "CNPq (Lattes)",
         "icon": "School",
         "url": "http://lattes.cnpq.br/0468996619713052"
       },
