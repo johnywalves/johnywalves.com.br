@@ -1,6 +1,6 @@
 {
   "seo": {
-    "description": "Johny William de Oliveira Alves, Senior Software Engineer with over <strong>20 years of experience</strong> architecting and delivering scalable solutions across fintech, telecommunications, and consumer goods. Expert in modern architectures using <strong>React, Next.js, and TypeScript</strong>, I have led high-impact projects for global clients such as <strong>Coca-Cola</strong>, serving millions of users with 99.9% uptime, and Anbima, where I architected a greenfield financial platform from the ground up. Committed to engineering excellence, I implemented SEO strategies that achieved #1 organic rankings and performance optimizations that improved system speed by over 30%. Currently a <strong>Master’s candidate in Computer Science (Deep Learning and Artificial Intelligence)</strong>, I am eager to leverage my expertise in <strong>mentorship and CI/CD automation</strong> to contribute to innovative international SaaS product teams",
+    "description": "Johny William de Oliveira Alves, Senior Software Engineer with <strong>20+ years of experience</strong> in fintech, telecom, and consumer goods. Expert in <strong>React, Next.js, and TypeScript</strong>, with high-impact projects for clients like <strong>Coca-Cola</strong> (99.9% uptime, millions of users) and Anbima. Master’s candidate in Computer Science (<strong>Deep Learning & AI</strong>), focused on mentorship and CI/CD automation.",
     "position": "Senior Software Engineer",
     "headline": "Senior Frontend Engineer | React & Next.js | Frontend Architect | SaaS & Fintech | Remote & International Experience | Tech Mentor"
   },
@@ -798,8 +798,10 @@
         "company": "Freelancer",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Provided tax obligation automation services for multiple clients",
-          "Tech: Windows Forms, .NET C#, Microsoft SQL Server"
+          "Developed tax automation tools and databases to streamline fiscal workflows for clients.",
+          "• Developed tax compliance automation services for multiple clients using Windows Forms and .NET C#.",
+          "• Created intuitive desktop applications that simplified complex fiscal workflows, reducing manual effort.",
+          "• Designed and maintained SQL Server databases for secure storage and fast access to client tax data."
         ]
       },
       {
@@ -808,9 +810,10 @@
         "company": "Dual Consultoria e Sistemas",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Maintained ERP software for distributor management",
-          "Developed ERP system for financial and tax compliance",
-          "Tech: Progress 4GL"
+          "Maintained and enhanced an ERP system, automating tax and financial modules while ensuring client business continuity.",
+          "• Maintained and optimized a specialized distributor management ERP using Progress 4GL, ensuring operational stability.",
+          "• Engineered and deployed core financial and tax compliance modules, automating complex fiscal reporting workflows.",
+          "• Provided high-level technical support and system enhancements to guarantee business continuity for clients."
         ]
       },
       {
@@ -819,8 +822,10 @@
         "company": "Hexa Informática",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Developed and maintained optical network management system",
-          "Tech: Delphi, Microsoft SQL Server"
+          "Engineered an optical industry ERP with optimized databases and full-cycle deployment leadership.",
+          "• Engineered a robust ERP solution for the optical industry, enhancing inventory and financial workflows.",
+          "• Optimized SQL Server database design and modular Delphi development for mission-critical retail operations.",
+          "• Directed full-cycle system deployments and migrations, significantly reducing client onboarding time."
         ]
       },
       {
@@ -829,9 +834,10 @@
         "company": "Condor Informática",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Maintained ERPs for financial control and tax compliance",
-          "Developed internal data management tool for Police Department (DIG)",
-          "Tech: Delphi, Firebird"
+          "Delivered compliant ERP systems and public safety data tools, leading end-to-end deployments.",
+          "• Engineered and optimized mission-critical ERP systems using Delphi and Firebird, ensuring 100% regulatory compliance.",
+          "• Spearheaded end-to-end ERP deployments, managing requirements gathering, system configuration, and user training.",
+          "• Architected versatile data solutions, including a specialized tool for the Police Department to enhance public safety operations."
         ]
       },
       {
@@ -840,9 +846,10 @@
         "company": "SOC Informática",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Provided consultancy and developed tax obligation file delivery solutions",
-          "Offered computer sales, assembly, and maintenance services",
-          "Tech: Delphi, Firebird"
+          "Developed custom Delphi and Firebird tax solutions, automating fiscal compliance and client workflows.",
+          "• Provided consulting and development services for tax compliance, creating custom Delphi and Firebird applications.",
+          "• Developed fiscal file generation systems that automated complex tax calculations and ensured regulatory compliance.",
+          "• Customized solutions tailored to each client's specific tax obligations and workflows, enhancing user adoption and integration."
         ]
       }
     ]

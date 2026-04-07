@@ -34,9 +34,6 @@ export const AboutMe = styled.div`
 
   & > div:first-of-type,
   & > p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 35px 0;
   }
 
@@ -59,12 +56,12 @@ export const Line = styled.div`
 
   ${media.lessThan("medium")`
     display: none;
-  `}
+`}
 `
 
 export const Description = styled.p`
   font-size: 1.25rem;
-  text-align: left;
+  text-align: justify;
 
   ${media.lessThan("medium")`
     font-size: 1rem;

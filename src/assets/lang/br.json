@@ -1,6 +1,6 @@
 {
   "seo": {
-    "description": "Meu nome é Johny William de Oliveira Alves, desenvolvedor Web com mais de 20 anos de experiência. Estudante de ciência de dados, com foco em aprendizado de máquina (machine learning) e visão computacional. Com experiência em gestão de projetos, automação de processos e análise de métricas. Tenho habilidades sólidas em diversas tecnologias modernas, incluindo JavaScript com React e Next.js, TypeScript, Python, Node, entre outras.",
+    "description": "Meu nome é Johny William de Oliveira Alves, Engenheiro de Software Sênior com <strong>mais de 20 anos de experiência</strong> em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, com projetos de alto impacto para clientes como <strong>Coca-Cola</strong> (99,9% de uptime, milhões de usuários) e Anbima. Mestrando em Ciência da Computação (<strong>Deep Learning e IA</strong>), com foco em mentoria e automação CI/CD.",
     "position": "Engenheiro Front-end Sênior",
     "headline": "Senior Front-End Engineer | React & Next.js Specialist | Tech Mentor | SaaS & Fintech Focus"
   },
@@ -539,11 +539,10 @@
         "company": "Freelance",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "Construiu e liderou desenvolvimento de plataformas full-stack escaláveis com React, Next.js e Firebase",
-          "Fundou e desenvolveu TCG RP: plataforma completa de gestão de eventos com arquitetura monorepo",
-          "Desenvolveu ecossistema dual-platform com interface pública e área administrativa segura usando Firebase",
-          "Criou sistema end-to-end de certificação com React, Next.js, Express e Contentful",
-          "Estabeleceu programas de treinamento interno, capacitando equipes em React e Next.js"
+          "Construí e liderei o desenvolvimento de plataformas full-stack escaláveis com React, Next.js, Contentful e Firebase.",
+          "• Tech Lead Front-End & Mentor: Ministrei workshops sobre boas práticas em React, Next.js e D3.js, capacitando equipes multifuncionais em técnicas modernas de desenvolvimento e padrões de alta performance.",
+          "• Plataforma de Certificação: Arquitetei sistema completo de gestão de certificações usando React, Next.js e Node.js, integrando Contentful e Express para automatizar emissão de certificados e rastreamento de progresso.",
+          "• Gestão de Eventos: Desenvolvi o TCG RP, plataforma escalável de eventos com React e Next.js em monorepo e Contentful, incluindo área administrativa integrada e bot WhatsApp para rastreamento automatizado."
         ]
       },
       {
@@ -552,9 +551,10 @@
         "company": "WeFit",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "<strong>Projeto Porto Seguro - Plataforma de Gestão para Corretoras</strong>: Desenvolvimento para plataforma modular utilizando uma arquitetura híbrida (SSR e CSR) com Next.js, garantindo desempenho e escalabilidade. Componentização reutilizáveis em React e TypeScript, dashboards analíticos com Recharts e interfaces responsivas com Tailwind CSS, assegurando consistência e eficiência no desenvolvimento.",
-          "Como contribuições-chave, promovi a qualidade do código através de revisões técnicas (Core Review) e padronização, além de atuar como mentor de desenvolvedores júnior. Automatizei processos críticos, reduzindo o tempo de desenvolvimento.",
-          "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Recharts e Tailwind CSS"
+          "• Desenvolvi ecossistema front-end escalável e bibliotecas de componentes reutilizáveis com React, Next.js e TypeScript, acelerando a velocidade de desenvolvimento em 36% e garantindo consistência visual total entre módulos da corretora.",
+          "• Arquitetei plataforma de gestão para corretoras de alto desempenho com arquitetura híbrida Next.js (SSR/CSR), resultando em 36% de melhoria no tempo de carregamento e experiência escalável para operações de alto volume.",
+          "• Elevei a excelência técnica liderando Code Reviews rigorosos e mentorando desenvolvedores júnior em React e Next.js, reduzindo bugs pós-release e padronizando fluxos de desenvolvimento de qualidade.",
+          "• Desenvolvi dashboards analíticos de alto impacto com Recharts, transformando dados financeiros complexos em insights visuais em tempo real que apoiaram decisões estratégicas dos stakeholders."
         ]
       },
       {
@@ -563,11 +563,9 @@
         "company": "Seguralta",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Desenvolvimento do <strong>Seguralta Core</strong>: Plataforma que facilita a operação de corretoras de seguros, oferecendo aos franqueados acesso detalhado a comissões, renovações e apólices a vencer, entre outros serviços",
-          "Manutenção e aprimoramento do <strong>Portal de Clientes</strong>, com foco na melhoria da experiência do usuário (UX) e na otimização de resultados orgânicos em motores de busca (SEO)",
-          "Liderança técnica em desenvolvimento de software, com foco no front-end e na garantia de um back-end robusto e eficiente. Responsável pela aplicação de metodologias ágeis (Scrum), práticas de desenvolvimento colaborativo (GitFlow) e versionamento de componentes. Conduzi uma documentação completa e atualizada, além de oferecer mentoria para desenvolvedores juniores",
-          "Minhas atribuições incluíram a automação de processos, monitoramento contínuo do ambiente com foco em métricas de acesso, detecção e resolução de erros no front-end, otimização de desempenho com Core Web Vitals, integração e a entrega contínuas (CI/CD) e adoção de práticas de qualidade como testes unitários e end-to-end",
-          "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, PHP, Python, React, Next.js, D3.js, bit.dev, bit.cloud, BitBucket, BitBucket Pipelines, New Relic, SonarQube, Styled Components, Storybook, GraphQL, Restful, useQuery, FastAPI, Testing Library, Jest e Cypress"
+          "• Arquitetei e lancei o <strong>Seguralta Core</strong>, plataforma abrangente para corretoras de seguros com React, Next.js e FastAPI, oferecendo acesso em tempo real a comissões, renovações e apólices a vencer.",
+          "• Promovi a excelência técnica e o crescimento da equipe por meio de mentoria, code reviews, GitFlow e metodologias Scrum.",
+          "• Implementei ecossistema de qualidade e monitoramento com New Relic, SonarQube e testes (Jest, Testing Library, Cypress), automatizando deploys com BitBucket Pipelines para otimizar Core Web Vitals."
         ]
       },
       {
@@ -575,9 +573,14 @@
         "role": "Desenvolvedor Front-end",
         "company": "Hepta Tecnologia e Informática",
         "location": "São Paulo, Brasil (Remoto)",
+        "project": "CREA-SP – Plataforma de ART (Anotação de Responsabilidade Técnica)",
         "highlights": [
-          "<strong>Projeto CREA-SP</strong>: Desenvolvimento do front-end da plataforma para aplicação de ART (Anotação de Responsabilidade Técnica) em Obras e Serviços. Utilizando uma abordagem moderna com micro-frontend e monorepo, garanti uma arquitetura modular e escalável, que permite uma evolução contínua e eficiente da plataforma",
-          "Tecnologias: HTML (HTML5), CSS (CSS3), JavaScript, TypeScript, React, Next.js, Module Federation (micro-frontend), Chakra UI e Azure DevOps"
+          "Arquitetei arquitetura micro-frontend com Module Federation em monorepo",
+          "• Desenvolvi o front-end da plataforma eletrônica de ART do CREA-SP, viabilizando o registro e gestão digital de Anotações de Responsabilidade Técnica para profissionais de engenharia em São Paulo.",
+          "• Projetei e implementei arquitetura micro-frontend com Module Federation em monorepo, garantindo modularidade, escalabilidade e autonomia para que múltiplas equipes desenvolvessem e fizessem deploy de forma independente.",
+          "• Construí componentes reutilizáveis e type-safe com React, Next.js e TypeScript, criando base sólida para evolução contínua e manutenibilidade da plataforma.",
+          "• Criei biblioteca de UI consistente e acessível com Chakra UI, acelerando o desenvolvimento e entregando experiência profissional e responsiva em todos os módulos.",
+          "• Gerenciei o ciclo de desenvolvimento no Azure DevOps, com controle de versão, pipelines de CI/CD e validações automatizadas, garantindo releases confiáveis e eficientes."
         ]
       },
       {
@@ -587,22 +590,22 @@
         "location": "São Paulo, Brasil (Remoto)",
         "clients": [
           {
-            "name": "Anbima – Greenfield Platform Development",
+            "name": "Anbima – Desenvolvimento de Plataforma Greenfield",
             "highlights": [
-              "• Architected and launched a comprehensive financial data platform for Anbima from the ground up using React and Next.js, creating a modern system for collecting and publishing managed portfolio information with strict regulatory compliance.",
-              "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), significantly improving page load times, Core Web Vitals, and organic search visibility for financial product data.",
-              "• Designed reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
-              "• Engineered robust data validation workflows and integrated with back-end APIs using optimized data fetching strategies to deliver real-time portfolio information."
+              "• Arquitetei e lancei do zero plataforma abrangente de dados financeiros para a Anbima com React e Next.js, criando sistema moderno para coleta e publicação de informações de carteiras gerenciadas com conformidade regulatória.",
+              "• Implementei estratégias de renderização híbrida (SSR para conteúdo financeiro crítico em SEO, CSR para dashboards interativos), melhorando significativamente o tempo de carregamento, Core Web Vitals e visibilidade orgânica.",
+              "• Projetei bibliotecas de componentes reutilizáveis com React e TypeScript, garantindo consistência, manutenibilidade e desenvolvimento ágil de novas funcionalidades.",
+              "• Implementei fluxos de validação de dados robustos e integrei APIs back-end com estratégias otimizadas de data fetching para entrega de informações de carteiras em tempo real."
             ]
           },
           {
-            "name": "Coca-Cola – Platform Maintenance & Evolution",
+            "name": "Coca-Cola – Manutenção e Evolução de Plataforma",
             "highlights": [
-              "• Provided ongoing maintenance and multilingual support for Coca-Cola's promotional platforms across Latin America and the Caribbean, serving millions of users in 20+ countries within the Adobe Experience Manager (AEM) ecosystem.",
-              "• Managed multilingual content workflows in AEM, coordinating translations and regional adaptations for Brazil, Mexico, Argentina, Colombia, and Caribbean markets.",
-              "• Delivered critical production support during high-traffic promotional campaigns, ensuring rapid incident response, front-end fixes, and 99.9% uptime.",
-              "• Implemented front-end enhancements with Vanilla JavaScript, HTML, and CSS to improve user experience, mobile responsiveness, and cross-browser compatibility.",
-              "• Collaborated with AWS infrastructure teams and leveraged GitHub Actions CI/CD pipelines for reliable multi-country deployments."
+              "• Realizei manutenção contínua e suporte multilíngue para as plataformas promocionais da Coca-Cola na América Latina e Caribe, atendendo milhões de usuários em 20+ países no ecossistema Adobe Experience Manager (AEM).",
+              "• Gerenciei fluxos de conteúdo multilíngue no AEM, coordenando traduções e adaptações regionais para Brasil, México, Argentina, Colômbia e mercados do Caribe.",
+              "• Entreguei suporte crítico em produção durante campanhas de alto tráfego, garantindo resposta rápida a incidentes, correções front-end e 99,9% de uptime.",
+              "• Implementei melhorias front-end com JavaScript, HTML e CSS para aprimorar experiência do usuário, responsividade mobile e compatibilidade entre navegadores.",
+              "• Colaborei com equipes de infraestrutura AWS e utilizei pipelines CI/CD com GitHub Actions para deploys confiáveis em múltiplos países."
             ]
           }
         ]
@@ -612,11 +615,14 @@
         "role": "Desenvolvedor Front-end",
         "company": "Meta Serviços em Informática",
         "location": "São Paulo, Brasil (Remoto)",
+        "project": "Plataforma Zarp Localiza",
         "highlights": [
-          "Manutenção e aprimoramento da plataforma <strong>Zarp Localiza</strong>, incluindo reestruturação de tecnologia e infraestrutura",
-          "Foco na melhoria da experiência do usuário, desempenho da plataforma e otimização para alcançar a primeira posição nos resultados orgânicos de busca (SEO)",
-          "Liderança na implantação de CI/CD, seleção de tecnologias front-end e monitoramento de métricas, incluindo o funil de venda",
-          "Tecnologias: SEO, HTML, CSS, JavaScript, React, Next.js, Azure DevOps, Hotjar e Datadog"
+          "Plataforma Zarp Localiza – Reestruturação Tecnológica e Otimização de SEO",
+          "• Liderei a reestruturação completa de tecnologia e infraestrutura da plataforma Zarp Localiza, migrando para React e Next.js para estabelecer arquitetura moderna e escalável com maior produtividade e performance.",
+          "• Implementei estratégia de SEO para conquistar ranking orgânico #1: otimizações com HTML semântico, dados estruturados, SSR com Next.js e Core Web Vitals que elevaram a plataforma ao topo dos resultados orgânicos, aumentando significativamente o tráfego.",
+          "• Implantei CI/CD com Azure DevOps: introduzi pipelines automatizados de build, teste e deploy, reduzindo ciclos de release, minimizando erros manuais e permitindo iteração ágil em features e melhorias de SEO.",
+          "• Otimizei a experiência do usuário e o funil de vendas usando Hotjar e Datadog para analisar comportamento, identificar pontos de atrito e implementar melhorias de UX que impactaram positivamente as taxas de conversão.",
+          "• Selecionei e padronizei as tecnologias front-end: liderei a escolha de React, Next.js e TypeScript como stack principal, garantindo qualidade de código, reusabilidade e manutenibilidade de longo prazo."
         ]
       },
       {
@@ -625,8 +631,12 @@
         "company": "Invillia - Desenvolvimento de Produtos Digitais",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "Desenvolvimento da suíte de aplicativos <strong>Invillia Apps</strong> para gestão de equipes e trabalho remoto, com foco na otimização de memória e integração com Microsoft Teams. Atuação no front-end e back-end, incluindo visualização de dados e entrega por APIs",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Redux, D3.js, Node, Express e MySQL"
+          "Invillia Apps Suite – Plataforma de Gestão de Equipes e Trabalho Remoto",
+          "• Desenvolvi funcionalidades full-stack para o Invillia Apps Suite, plataforma de gestão de equipes e trabalho remoto, atuando no front-end (React, TypeScript, Redux, D3.js) e back-end (Node.js, Express, MySQL).",
+          "• Implementei integração com Microsoft Teams, viabilizando acesso fluido a ferramentas de gestão de equipes, controle de presença e métricas de produtividade dentro da plataforma corporativa.",
+          "• Otimizei o uso de memória em componentes React e no gerenciamento de estado com Redux, eliminando vazamentos e melhorando a estabilidade em sessões prolongadas de trabalho remoto.",
+          "• Construí visualizações de dados interativas com D3.js, criando dashboards de performance de equipes, tendências de produtividade e alocação de recursos para decisões baseadas em dados.",
+          "• Projetei e entreguei APIs RESTful com Node.js e Express, garantindo entrega confiável de dados de bancos MySQL otimizados para as aplicações front-end."
         ]
       },
       {
@@ -635,10 +645,10 @@
         "company": "Unimed Rio Preto",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Desenvolvimento, e coordenação com terceiros, do portal de beneficiários (UI/UX) com gestão financeira, exames e agendamento de consultas",
-          "Realização do planejamento e desenvolvimento de uma API para autenticação de usuários e um guia médico",
-          "Criação de ambiente com automação de testes, monitoramento e CI/CD dos sistemas de gestão e prestação de serviços",
-          "Tecnologias: HTML, CSS, JavaScript, TypeScript, React, Next.js, Java, Spring Boot, PL/SQL, Oracle Database, RESTFul, Jest, Python, Grafana, Apache Tomcat e Jenkins"
+          "Liderei o desenvolvimento de portal unificado de saúde, integrando autenticação segura, agendamentos, CI/CD e monitoramento em tempo real para melhorar a segurança e a experiência do paciente.",
+          "• Entreguei experiência digital unificada para beneficiários: liderei o desenvolvimento de portal que consolidou gestão financeira, agendamento de exames e consultas, permitindo ao paciente gerenciar sua saúde em um único lugar.",
+          "• Melhorei a segurança e o acesso: implementei API de autenticação robusta com Java e Spring Boot, garantindo acesso seguro a dados sensíveis de saúde e financeiros para milhares de beneficiários.",
+          "• Viabilizei monitoramento proativo do sistema: implantei dashboards Grafana com visibilidade em tempo real sobre saúde do sistema, performance de APIs e atividade de usuários, reduzindo o tempo médio de detecção de incidentes."
         ]
       },
       {
@@ -647,10 +657,12 @@
         "company": "Bnex",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Responsável pela gestão e desenvolvimento de uma plataforma back-office web e mobile, voltada para o acompanhamento de promoters em pontos de revenda",
-          "Realização do desenvolvimento de visualização de dados, utilizando dashboards, para o acompanhamento de resultados na empresa <strong>JBS</strong>",
-          "Execução da manutenção na carga e transformação dos dados (ETL) dos parceiros da empresa <strong>JBS</strong>",
-          "Tecnologias: HTML, CSS, JavaScript, Java, SQL, .Net C#, Asp.NET MVC, React Native, Node.js e Pentaho"
+          "Plataforma de Rastreamento de Promotores e Analytics JBS",
+          "• Gerenciei e desenvolvi plataforma back-office web e mobile para rastreamento de promoters em pontos de revenda, criando aplicações React Native para equipes de campo e dashboards ASP.NET MVC para operações.",
+          "• Entreguei dashboards de visualização de dados para a JBS: projetei dashboards interativos que rastreavam performance de promoters e resultados no varejo, permitindo monitoramento de KPIs e decisões baseadas em dados em tempo real.",
+          "• Implementei processos ETL para integração de dados de parceiros: desenvolvi e mantive pipelines Pentaho para carregar, transformar e integrar dados em bancos SQL, garantindo relatórios e analytics abrangentes.",
+          "• Mantive infraestrutura de dados de ponta a ponta: suportei todo o ciclo de dados, do processamento ETL à visualização em dashboards, garantindo precisão e disponibilidade para inteligência de negócio.",
+          "• Desenvolvi em múltiplas stacks tecnológicas: utilizei Java, .NET C#, Node.js, React Native e Pentaho para entregar soluções integradas de rastreamento e integração de dados de parceiros."
         ]
       },
       {
@@ -658,10 +670,23 @@
         "role": "Consultor de Automação de Processos (RPA)",
         "company": "WDG Automation",
         "location": "São José do Rio Preto, Brasil",
-        "highlights": [
-          "Responsável pela automação de processos e desenvolvimento de chatbots, além da estruturação de projetos de atendimento para recalls na <strong>Toyota Rodobens</strong>",
-          "Desenvolvimento de uma extensão para o Google Chrome voltada para telemarketing da <strong>Claro</strong>",
-          "Tecnologias: WDG Automation, Bizagi BPMN Modeler e JavaScript"
+        "clients": [
+          {
+            "name": "Toyota Rodobens – Automação de Atendimento para Recalls",
+            "highlights": [
+              "• Liderei a automação de processos e o desenvolvimento de chatbots para campanhas de recall da Toyota Rodobens usando WDG Automation e Bizagi BPMN Modeler, agilizando notificações e agendamentos.",
+              "• Estruturei projetos de atendimento ao cliente para gestão de recalls, mapeando fluxos otimizados que reduziram esforço manual e melhoraram a experiência dos proprietários afetados.",
+              "• Implementei soluções RPA que automatizaram tarefas repetitivas, garantindo comunicação pontual e aumentando a eficácia das campanhas de recall."
+            ]
+          },
+          {
+            "name": "Claro – Extensão Chrome para Telemarketing",
+            "highlights": [
+              "• Desenvolvi extensão personalizada para Google Chrome em JavaScript para equipes de telemarketing da Claro, automatizando consulta de clientes, registro de chamadas e entrada de dados.",
+              "• Aumentei a produtividade dos agentes reduzindo trabalho manual e acelerando o acesso a informações dos clientes, permitindo maior foco no atendimento.",
+              "• Integrei a extensão com sistemas de telemarketing e ferramentas de CRM existentes, garantindo fluxo de dados consistente entre plataformas."
+            ]
+          }
         ]
       },
       {
@@ -670,8 +695,13 @@
         "company": "Emais Urbanismo e Incorporações",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Responsável pela manutenção, suporte e desenvolvimento contínuo de um sistema ERP e CRM para controle fiscal, contábil, financeiro e gestão de carteira de imóveis",
-          "Tecnologias: Delphi e Microsoft SQL Server"
+          "Sistema ERP/CRM Crítico – Controle Fiscal, Contábil, Financeiro e Gestão de Carteira de Imóveis",
+          "• Realizei manutenção, suporte e desenvolvimento contínuo de sistema ERP e CRM abrangente em Delphi e Microsoft SQL Server, cobrindo controle fiscal, contabilidade, gestão financeira e carteira de imóveis.",
+          "• Garanti a confiabilidade e continuidade do negócio por meio de manutenção proativa, correção de bugs e suporte responsivo, minimizando downtime em funções críticas.",
+          "• Desenvolvi novos módulos e funcionalidades em múltiplos domínios, adaptando o sistema a requisitos em evolução de conformidade fiscal, relatórios financeiros e rastreamento imobiliário.",
+          "• Otimizei bancos de dados SQL Server, projetando stored procedures, índices e queries eficientes para acesso rápido, integridade e relatórios precisos.",
+          "• Mantive e aprimorei código Delphi legado, equilibrando estabilidade com melhorias de performance e novas funcionalidades para estender a vida útil do sistema.",
+          "• Desenvolvi profunda expertise em regulamentações fiscais, contabilidade, gestão financeira e operações imobiliárias para suportar e evoluir o sistema com eficácia."
         ]
       },
       {
@@ -680,8 +710,10 @@
         "company": "Autônomo",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Oferecimento de serviços de automação de obrigações fiscais para diversos clientes",
-          "Tecnologias: Windows Forms, .Net C# e Microsoft SQL Server"
+          "Desenvolvi ferramentas de automação fiscal e bancos de dados para simplificar fluxos de obrigações fiscais para clientes.",
+          "• Desenvolvi serviços de automação de obrigações fiscais para múltiplos clientes utilizando Windows Forms e .NET C#.",
+          "• Criei aplicações desktop intuitivas que simplificaram fluxos fiscais complexos, reduzindo o esforço manual.",
+          "• Projetei e mantive bancos de dados SQL Server para armazenamento seguro e acesso rápido aos dados fiscais dos clientes."
         ]
       },
       {
@@ -690,9 +722,10 @@
         "company": "Dual Consultoria e Sistemas",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Responsável pela manutenção, suporte e atendimento aos clientes de um software de ERP especializado em gestão para distribuidoras",
-          "Desenvolvimento de um sistema ERP especializado na área financeira e no cumprimento de obrigações fiscais",
-          "Tecnologias: Progress 4GL"
+          "Mantive e aprimorei sistema ERP, automatizando módulos fiscais e financeiros e garantindo continuidade do negócio para os clientes.",
+          "• Mantive e otimizei ERP especializado em gestão de distribuidoras em Progress 4GL, garantindo estabilidade operacional.",
+          "• Implementei e fiz deploy de módulos core de conformidade financeira e fiscal, automatizando fluxos complexos de relatórios.",
+          "• Prestei suporte técnico de alto nível e aprimoramentos contínuos para garantir a continuidade do negócio para os clientes."
         ]
       },
       {
@@ -701,8 +734,10 @@
         "company": "Hexa Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Responsável pelo desenvolvimento, implementação e manutenção de um sistema de gestão de redes ópticas",
-          "Tecnologias: Delphi e Microsoft SQL Server"
+          "Desenvolvi ERP para o setor óptico com bancos de dados otimizados e liderança no ciclo completo de implantação.",
+          "• Desenvolvi solução ERP robusta para o setor óptico, aprimorando fluxos de inventário e financeiro.",
+          "• Otimizei o design do banco de dados SQL Server e o desenvolvimento modular em Delphi para operações críticas.",
+          "• Conduzi implantações e migrações de sistema do ciclo completo, reduzindo significativamente o tempo de onboarding de clientes."
         ]
       },
       {
@@ -711,9 +746,10 @@
         "company": "Condor Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Manutenção e implementação de ERPs para controle financeiro, estoque e entregas de obrigações fiscais",
-          "Desenvolvimento de ferramenta para Delegacia de Investigações Gerais (DIG) para controle interno de dados de detenções",
-          "Tecnologias: Delphi e Firebird"
+          "Entreguei sistemas ERP em conformidade e ferramentas de dados para segurança pública, liderando implantações do início ao fim.",
+          "• Desenvolvi e otimizei sistemas ERP críticos com Delphi e Firebird, garantindo 100% de conformidade regulatória.",
+          "• Liderei implantações ERP do início ao fim, gerenciando levantamento de requisitos, configuração do sistema e treinamento de usuários.",
+          "• Arquitetei soluções de dados versáteis, incluindo ferramenta especializada para a Delegacia de Investigações Gerais (DIG) para gestão de dados de segurança pública."
         ]
       },
       {
@@ -722,9 +758,10 @@
         "company": "SOC Comércio e Serviços em Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Oferecimento de consultoria e desenvolvimento de soluções para a entrega de arquivos relacionados a obrigações fiscais",
-          "Realização de venda, montagem e manutenção de computadores",
-          "Tecnologias: Delphi e Firebird"
+          "Desenvolvi soluções fiscais personalizadas em Delphi e Firebird, automatizando conformidade e fluxos de obrigações para clientes.",
+          "• Prestei consultoria e desenvolvi serviços de conformidade fiscal, criando aplicações customizadas em Delphi e Firebird.",
+          "• Desenvolvi sistemas de geração de arquivos fiscais que automatizaram cálculos tributários complexos e garantiram conformidade regulatória.",
+          "• Customizei soluções adaptadas às obrigações e fluxos fiscais específicos de cada cliente, aumentando adoção e integração."
         ]
       }
     ]
