@@ -1,6 +1,6 @@
 {
   "seo": {
-    "description": "Meu nome é Johny William de Oliveira Alves, Engenheiro de Software Sênior com <strong>mais de 20 anos de experiência</strong> em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, com projetos de alto impacto para clientes como <strong>Coca-Cola</strong> (99,9% de uptime, milhões de usuários) e Anbima. Mestrando em Ciência da Computação (<strong>Deep Learning e IA</strong>), com foco em mentoria e automação CI/CD.",
+    "description": "Meu nome é Johny William de Oliveira Alves, Engenheiro Frontend Sênior com <strong>mais de 20 anos de experiência</strong> entregando aplicações web escaláveis em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, impulsionando <strong>99,9% de uptime</strong> e milhões de usuários em projetos de alto impacto para clientes como <strong>Coca-Cola</strong> e Anbima. Atualmente cursando Mestrado em Ciência da Computação, com especialização em <strong>Deep Learning e IA</strong>, com forte foco em mentoria e automação CI/CD para acelerar a entrega de software.",
     "position": "Engenheiro Front-end Sênior",
     "headline": "Senior Front-End Engineer | React & Next.js Specialist | Tech Mentor | SaaS & Fintech Focus"
   },
@@ -337,6 +337,12 @@
     "viewFeatured": "Ver apenas destaques",
     "list": [
       {
+        "name": "TCG Rio Preto",
+        "image": "tcgrp",
+        "url": "https://tcgrp.com.br/",
+        "description": "Plataforma da comunidade de jogos de cartas colecionáveis ​​em São José do Rio Preto e arredores. Encontre eventos, lojas e jogadores"
+      },
+      {
         "name": "Use Python",
         "sourceCode": "https://github.com/johnywalves/use-python",
         "image": "usepython",
@@ -402,6 +408,7 @@
       },
       {
         "name": "Criador de Personagens e Quadrinhos",
+        "sourceCode": "https://github.com/johnywalves/character-creator",
         "url": "https://comics.johnywalves.com.br",
         "image": "comicscreator",
         "description": "Ferramenta para gerar e visualizar tirinhas SVG"
@@ -627,10 +634,9 @@
         "company": "Freelance",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "Construí e liderei o desenvolvimento de plataformas full-stack escaláveis com React, Next.js, Contentful e Firebase.",
-          "• Tech Lead Front-End & Mentor: Ministrei workshops sobre boas práticas em React, Next.js e D3.js, capacitando equipes multifuncionais em técnicas modernas de desenvolvimento e padrões de alta performance.",
-          "• Plataforma de Certificação: Arquitetei sistema completo de gestão de certificações usando React, Next.js e Node.js, integrando Contentful e Express para automatizar emissão de certificados e rastreamento de progresso.",
-          "• Gestão de Eventos: Desenvolvi o TCG RP, plataforma escalável de eventos com React e Next.js em monorepo e Contentful, incluindo área administrativa integrada e bot WhatsApp para rastreamento automatizado."
+          "• Tech Lead Front-End & Mentor: Ministrei workshops sobre boas práticas em React, Next.js e D3.js, capacitando equipes multifuncionais a construir e manter uma fonte confiável de informações para lojistas e jogadores sobre eventos da região.",
+          "• Plataforma de Certificação: Arquitetei sistema completo de gestão de certificações (UI/UX à infraestrutura) com React, Next.js, Node.js e Contentful CMS, automatizando emissão de certificados e rastreamento de progresso e eliminando sobrecarga administrativa manual.",
+          "• Plataforma de Eventos: Implementei o TCG RP, plataforma escalável de eventos com React e Next.js em arquitetura monorepo e Contentful CMS, integrando área administrativa para lojistas e bot WhatsApp para rastreamento automatizado, reduzindo o tempo de coordenação operacional e melhorando a eficiência na gestão de participantes."
         ]
       },
       {
@@ -641,7 +647,7 @@
         "highlights": [
           "• Desenvolvi ecossistema front-end escalável e bibliotecas de componentes reutilizáveis com React, Next.js e TypeScript, acelerando a velocidade de desenvolvimento em 36% e garantindo consistência visual total entre módulos da corretora.",
           "• Arquitetei plataforma de gestão para corretoras de alto desempenho com arquitetura híbrida Next.js (SSR/CSR), resultando em 36% de melhoria no tempo de carregamento e experiência escalável para operações de alto volume.",
-          "• Elevei a excelência técnica liderando Code Reviews rigorosos e mentorando desenvolvedores júnior em React e Next.js, reduzindo bugs pós-release e padronizando fluxos de desenvolvimento de qualidade.",
+          "• Elevei a excelência técnica liderando code reviews e mentorando desenvolvedores júnior em React e Next.js, mapeando proativamente erros antes de serem reportados pelos usuários, estabelecendo suítes de testes para validar entregas e viabilizando resposta rápida a incidentes que reduziu o tempo de resolução em todos os módulos da corretora.",
           "• Desenvolvi dashboards analíticos de alto impacto com Recharts, transformando dados financeiros complexos em insights visuais em tempo real que apoiaram decisões estratégicas dos stakeholders."
         ]
       },
@@ -652,7 +658,7 @@
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
           "• Arquitetei e lancei o <strong>Seguralta Core</strong>, plataforma abrangente para corretoras de seguros com React, Next.js e FastAPI, oferecendo acesso em tempo real a comissões, renovações e apólices a vencer.",
-          "• Promovi a excelência técnica e o crescimento da equipe por meio de mentoria, code reviews, GitFlow e metodologias Scrum.",
+          "• Impulsionei o crescimento da equipe mentorando desenvolvedores júnior até entregas independentes por meio de code reviews estruturados e práticas GitFlow, e estabeleci pipeline de validação contínua com ESLint, testes unitários (Jest) e testes end-to-end (Cypress), eliminando regressões e garantindo confiança nos releases.",
           "• Implementei ecossistema de qualidade e monitoramento com New Relic, SonarQube e testes (Jest, Testing Library, Cypress), automatizando deploys com BitBucket Pipelines para otimizar Core Web Vitals."
         ]
       },
@@ -663,11 +669,10 @@
         "location": "São Paulo, Brasil (Remoto)",
         "project": "CREA-SP – Plataforma de ART (Anotação de Responsabilidade Técnica)",
         "highlights": [
-          "Arquitetei arquitetura micro-frontend com Module Federation em monorepo",
           "• Desenvolvi o front-end da plataforma eletrônica de ART do CREA-SP, viabilizando o registro e gestão digital de Anotações de Responsabilidade Técnica para profissionais de engenharia em São Paulo.",
           "• Projetei e implementei arquitetura micro-frontend com Module Federation em monorepo, garantindo modularidade, escalabilidade e autonomia para que múltiplas equipes desenvolvessem e fizessem deploy de forma independente.",
           "• Construí componentes reutilizáveis e type-safe com React, Next.js e TypeScript, criando base sólida para evolução contínua e manutenibilidade da plataforma.",
-          "• Criei biblioteca de UI consistente e acessível com Chakra UI, acelerando o desenvolvimento e entregando experiência profissional e responsiva em todos os módulos.",
+          "• Entreguei biblioteca de UI consistente e acessível com Chakra UI, acelerando o desenvolvimento e garantindo experiência profissional e responsiva em todos os módulos.",
           "• Gerenciei o ciclo de desenvolvimento no Azure DevOps, com controle de versão, pipelines de CI/CD e validações automatizadas, garantindo releases confiáveis e eficientes."
         ]
       },
@@ -679,16 +684,14 @@
         "clients": [
           {
             "name": "Anbima – Desenvolvimento de Plataforma Greenfield",
-            "name": "Anbima – Desenvolvimento de Plataforma Greenfield",
             "highlights": [
               "• Arquitetei e lancei do zero plataforma abrangente de dados financeiros para a Anbima com React e Next.js, criando sistema moderno para coleta e publicação de informações de carteiras gerenciadas com conformidade regulatória.",
-              "• Implementei estratégias de renderização híbrida (SSR para conteúdo financeiro crítico em SEO, CSR para dashboards interativos), melhorando significativamente o tempo de carregamento, Core Web Vitals e visibilidade orgânica.",
+              "• Implementei estratégias de renderização híbrida (SSR para conteúdo financeiro crítico em SEO, CSR para dashboards interativos), melhorando o tempo de carregamento em ~60%, elevando os scores de Core Web Vitals e aumentando a visibilidade orgânica dos dados financeiros.",
               "• Projetei bibliotecas de componentes reutilizáveis com React e TypeScript, garantindo consistência, manutenibilidade e desenvolvimento ágil de novas funcionalidades.",
               "• Implementei fluxos de validação de dados robustos e integrei APIs back-end com estratégias otimizadas de data fetching para entrega de informações de carteiras em tempo real."
             ]
           },
           {
-            "name": "Coca-Cola – Manutenção e Evolução de Plataforma",
             "name": "Coca-Cola – Manutenção e Evolução de Plataforma",
             "highlights": [
               "• Realizei manutenção contínua e suporte multilíngue para as plataformas promocionais da Coca-Cola na América Latina e Caribe, atendendo milhões de usuários em 20+ países no ecossistema Adobe Experience Manager (AEM).",
@@ -706,9 +709,7 @@
         "company": "Meta Serviços em Informática",
         "location": "São Paulo, Brasil (Remoto)",
         "project": "Plataforma Zarp Localiza",
-        "project": "Plataforma Zarp Localiza",
         "highlights": [
-          "Plataforma Zarp Localiza – Reestruturação Tecnológica e Otimização de SEO",
           "• Liderei a reestruturação completa de tecnologia e infraestrutura da plataforma Zarp Localiza, migrando para React e Next.js para estabelecer arquitetura moderna e escalável com maior produtividade e performance.",
           "• Implementei estratégia de SEO para conquistar ranking orgânico #1: otimizações com HTML semântico, dados estruturados, SSR com Next.js e Core Web Vitals que elevaram a plataforma ao topo dos resultados orgânicos, aumentando significativamente o tráfego.",
           "• Implantei CI/CD com Azure DevOps: introduzi pipelines automatizados de build, teste e deploy, reduzindo ciclos de release, minimizando erros manuais e permitindo iteração ágil em features e melhorias de SEO.",
@@ -722,8 +723,7 @@
         "company": "Invillia",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "Invillia Apps Suite – Plataforma de Gestão de Equipes e Trabalho Remoto",
-          "• Desenvolvi funcionalidades full-stack para o Invillia Apps Suite, plataforma de gestão de equipes e trabalho remoto, atuando no front-end (React, TypeScript, Redux, D3.js) e back-end (Node.js, Express, MySQL).",
+          "• Implementei funcionalidades full-stack para o Invillia Apps Suite, plataforma de gestão de equipes e trabalho remoto, atuando no front-end (React, TypeScript, Redux, D3.js) e back-end (Node.js, Express, MySQL).",
           "• Implementei integração com Microsoft Teams, viabilizando acesso fluido a ferramentas de gestão de equipes, controle de presença e métricas de produtividade dentro da plataforma corporativa.",
           "• Otimizei o uso de memória em componentes React e no gerenciamento de estado com Redux, eliminando vazamentos e melhorando a estabilidade em sessões prolongadas de trabalho remoto.",
           "• Construí visualizações de dados interativas com D3.js, criando dashboards de performance de equipes, tendências de produtividade e alocação de recursos para decisões baseadas em dados.",
@@ -736,7 +736,6 @@
         "company": "Unimed Rio Preto",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Liderei o desenvolvimento de portal unificado de saúde, integrando autenticação segura, agendamentos, CI/CD e monitoramento em tempo real para melhorar a segurança e a experiência do paciente.",
           "• Entreguei experiência digital unificada para beneficiários: liderei o desenvolvimento de portal que consolidou gestão financeira, agendamento de exames e consultas, permitindo ao paciente gerenciar sua saúde em um único lugar.",
           "• Melhorei a segurança e o acesso: implementei API de autenticação robusta com Java e Spring Boot, garantindo acesso seguro a dados sensíveis de saúde e financeiros para milhares de beneficiários.",
           "• Viabilizei monitoramento proativo do sistema: implantei dashboards Grafana com visibilidade em tempo real sobre saúde do sistema, performance de APIs e atividade de usuários, reduzindo o tempo médio de detecção de incidentes."
@@ -748,12 +747,10 @@
         "company": "Bnex",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Plataforma de Rastreamento de Promotores e Analytics JBS",
           "• Gerenciei e desenvolvi plataforma back-office web e mobile para rastreamento de promoters em pontos de revenda, criando aplicações React Native para equipes de campo e dashboards ASP.NET MVC para operações.",
           "• Entreguei dashboards de visualização de dados para a JBS: projetei dashboards interativos que rastreavam performance de promoters e resultados no varejo, permitindo monitoramento de KPIs e decisões baseadas em dados em tempo real.",
           "• Implementei processos ETL para integração de dados de parceiros: desenvolvi e mantive pipelines Pentaho para carregar, transformar e integrar dados em bancos SQL, garantindo relatórios e analytics abrangentes.",
-          "• Mantive infraestrutura de dados de ponta a ponta: suportei todo o ciclo de dados, do processamento ETL à visualização em dashboards, garantindo precisão e disponibilidade para inteligência de negócio.",
-          "• Desenvolvi em múltiplas stacks tecnológicas: utilizei Java, .NET C#, Node.js, React Native e Pentaho para entregar soluções integradas de rastreamento e integração de dados de parceiros."
+          "• Mantive infraestrutura de dados de ponta a ponta: suportei todo o ciclo de dados, do processamento ETL à visualização em dashboards, garantindo precisão e disponibilidade para inteligência de negócio."
         ]
       },
       {
@@ -773,7 +770,7 @@
           {
             "name": "Claro – Extensão Chrome para Telemarketing",
             "highlights": [
-              "• Desenvolvi extensão personalizada para Google Chrome em JavaScript para equipes de telemarketing da Claro, automatizando consulta de clientes, registro de chamadas e entrada de dados.",
+              "• Implementei extensão personalizada para Google Chrome em JavaScript para equipes de telemarketing da Claro, automatizando consulta de clientes, registro de chamadas e entrada de dados.",
               "• Aumentei a produtividade dos agentes reduzindo trabalho manual e acelerando o acesso a informações dos clientes, permitindo maior foco no atendimento.",
               "• Integrei a extensão com sistemas de telemarketing e ferramentas de CRM existentes, garantindo fluxo de dados consistente entre plataformas."
             ]
@@ -786,13 +783,12 @@
         "company": "Emais Urbanismo e Incorporações",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Sistema ERP/CRM Crítico – Controle Fiscal, Contábil, Financeiro e Gestão de Carteira de Imóveis",
           "• Realizei manutenção, suporte e desenvolvimento contínuo de sistema ERP e CRM abrangente em Delphi e Microsoft SQL Server, cobrindo controle fiscal, contabilidade, gestão financeira e carteira de imóveis.",
           "• Garanti a confiabilidade e continuidade do negócio por meio de manutenção proativa, correção de bugs e suporte responsivo, minimizando downtime em funções críticas.",
-          "• Desenvolvi novos módulos e funcionalidades em múltiplos domínios, adaptando o sistema a requisitos em evolução de conformidade fiscal, relatórios financeiros e rastreamento imobiliário.",
+          "• Entreguei novos módulos e funcionalidades em múltiplos domínios, adaptando o sistema a requisitos em evolução de conformidade fiscal, relatórios financeiros e rastreamento imobiliário.",
           "• Otimizei bancos de dados SQL Server, projetando stored procedures, índices e queries eficientes para acesso rápido, integridade e relatórios precisos.",
           "• Mantive e aprimorei código Delphi legado, equilibrando estabilidade com melhorias de performance e novas funcionalidades para estender a vida útil do sistema.",
-          "• Desenvolvi profunda expertise em regulamentações fiscais, contabilidade, gestão financeira e operações imobiliárias para suportar e evoluir o sistema com eficácia."
+          "• Garantí conformidade regulatória e jurídica nos módulos de contratos e obrigações fiscais, adaptando o sistema à evolução das regulamentações tributárias e requisitos jurídicos do setor imobiliário, sustentando as operações sem incidentes de compliance."
         ]
       },
       {
@@ -801,8 +797,7 @@
         "company": "Freelancer",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Desenvolvi ferramentas de automação fiscal e bancos de dados para simplificar fluxos de obrigações fiscais para clientes.",
-          "• Desenvolvi serviços de automação de obrigações fiscais para múltiplos clientes utilizando Windows Forms e .NET C#.",
+          "• Implementei serviços de automação de obrigações fiscais para múltiplos clientes utilizando Windows Forms e .NET C#.",
           "• Criei aplicações desktop intuitivas que simplificaram fluxos fiscais complexos, reduzindo o esforço manual.",
           "• Projetei e mantive bancos de dados SQL Server para armazenamento seguro e acesso rápido aos dados fiscais dos clientes."
         ]
@@ -813,7 +808,6 @@
         "company": "Dual Consultoria e Sistemas",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Mantive e aprimorei sistema ERP, automatizando módulos fiscais e financeiros e garantindo continuidade do negócio para os clientes.",
           "• Mantive e otimizei ERP especializado em gestão de distribuidoras em Progress 4GL, garantindo estabilidade operacional.",
           "• Implementei e fiz deploy de módulos core de conformidade financeira e fiscal, automatizando fluxos complexos de relatórios.",
           "• Prestei suporte técnico de alto nível e aprimoramentos contínuos para garantir a continuidade do negócio para os clientes."
@@ -825,8 +819,7 @@
         "company": "Hexa Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Desenvolvi ERP para o setor óptico com bancos de dados otimizados e liderança no ciclo completo de implantação.",
-          "• Desenvolvi solução ERP robusta para o setor óptico, aprimorando fluxos de inventário e financeiro.",
+          "• Implementei solução ERP robusta para o setor óptico, aprimorando fluxos de inventário e financeiro.",
           "• Otimizei o design do banco de dados SQL Server e o desenvolvimento modular em Delphi para operações críticas.",
           "• Conduzi implantações e migrações de sistema do ciclo completo, reduzindo significativamente o tempo de onboarding de clientes."
         ]
@@ -837,8 +830,7 @@
         "company": "Condor Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Entreguei sistemas ERP em conformidade e ferramentas de dados para segurança pública, liderando implantações do início ao fim.",
-          "• Desenvolvi e otimizei sistemas ERP críticos com Delphi e Firebird, garantindo 100% de conformidade regulatória.",
+          "• Implementei e otimizei sistemas ERP críticos com Delphi e Firebird, garantindo 100% de conformidade regulatória.",
           "• Liderei implantações ERP do início ao fim, gerenciando levantamento de requisitos, configuração do sistema e treinamento de usuários.",
           "• Arquitetei soluções de dados versáteis, incluindo ferramenta especializada para a Delegacia de Investigações Gerais (DIG) para gestão de dados de segurança pública."
         ]
@@ -849,9 +841,8 @@
         "company": "SOC Informática",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "Desenvolvi soluções fiscais personalizadas em Delphi e Firebird, automatizando conformidade e fluxos de obrigações para clientes.",
           "• Prestei consultoria e desenvolvi serviços de conformidade fiscal, criando aplicações customizadas em Delphi e Firebird.",
-          "• Desenvolvi sistemas de geração de arquivos fiscais que automatizaram cálculos tributários complexos e garantiram conformidade regulatória.",
+          "• Implementei sistemas de geração de arquivos fiscais que automatizaram cálculos tributários complexos e garantiram conformidade regulatória.",
           "• Customizei soluções adaptadas às obrigações e fluxos fiscais específicos de cada cliente, aumentando adoção e integração."
         ]
       }

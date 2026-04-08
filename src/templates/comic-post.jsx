@@ -19,6 +19,11 @@ import {
 
 const ComicPost = ({ data, pageContext: { number, slug } }) => {
   const post = data.markdownRemark
+  const { featuredImage, featuredImageEn } = post.frontmatter
+  const isPt = Strings.getLanguage() === "pt"
+  const comicImageData = (
+    isPt ? featuredImage : featuredImageEn || featuredImage
+  ).childImageSharp.gatsbyImageData
 
   return (
     <Blueprint content title={post.frontmatter.title}>
@@ -28,10 +33,7 @@ const ComicPost = ({ data, pageContext: { number, slug } }) => {
           <PostTitle>{post.frontmatter.title}</PostTitle>
           <ComicWrapper>
             <PostComic
-              image={
-                (post.frontmatter.featuredImage || post.frontmatter.comicImage)
-                  .childImageSharp.gatsbyImageData
-              }
+              image={comicImageData}
               alt={post.frontmatter.transcription}
             />
           </ComicWrapper>
@@ -70,10 +72,10 @@ export const query = graphql`
             )
           }
         }
-        comicImage {
+        featuredImageEn {
           childImageSharp {
             gatsbyImageData(
-              width: 750
+              width: 1200
               layout: CONSTRAINED
               placeholder: BLURRED
             )

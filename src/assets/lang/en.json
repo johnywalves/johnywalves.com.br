@@ -1,8 +1,8 @@
 {
   "seo": {
-    "description": "Johny William de Oliveira Alves, Senior Software Engineer with <strong>20+ years of experience</strong> in fintech, telecom, and consumer goods. Expert in <strong>React, Next.js, and TypeScript</strong>, with high-impact projects for clients like <strong>Coca-Cola</strong> (99.9% uptime, millions of users) and Anbima. Master’s candidate in Computer Science (<strong>Deep Learning & AI</strong>), focused on mentorship and CI/CD automation.",
+    "description": "Johny William de Oliveira Alves, Senior Frontend Engineer with <strong>20+ years of experience</strong> delivering scalable web apps in fintech, telecom, and consumer goods. Expert in <strong>React, Next.js, and TypeScript</strong>, driving <strong>99.9% uptime</strong> and millions of users in high-impact projects for clients such as <strong>Coca-Cola</strong> and Anbima. Currently pursuing a Master’s in Computer Science, specialized in <strong>Deep Learning and AI</strong>, with a strong focus on mentorship and CI/CD automation to accelerate software delivery.",
     "position": "Senior Software Engineer",
-    "headline": "Senior Frontend Engineer | React & Next.js Specialist | Scalable Web Apps"
+    "headline": "Senior Frontend Engineer | React & Next.js Specialist | Scalable SaaS Applications | Agile & CI/CD Advocate"
   },
   "personal": {
     "name": "Johny W. Alves",
@@ -337,6 +337,12 @@
     "viewFeatured": "View featured only",
     "list": [
       {
+        "name": "TCG Rio Preto",
+        "image": "tcgrp",
+        "url": "https://tcgrp.com.br/",
+        "description": "Trading Card Games community platform in São José do Rio Preto and the surrounding area. Find events, stores, and players"
+      },
+      {
         "name": "Use Python",
         "sourceCode": "https://github.com/johnywalves/use-python",
         "image": "usepython",
@@ -402,6 +408,7 @@
       },
       {
         "name": "Characters & Comics Creator",
+        "sourceCode": "https://github.com/johnywalves/character-creator",
         "url": "https://comics.johnywalves.com.br",
         "image": "comicscreator",
         "description": "Tool for generating and viewing SVG comic strips"
@@ -627,10 +634,9 @@
         "company": "Freelance",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "Built and led the development of scalable full-stack platforms with React, Next.js, Contentful, and Firebase.",
-          "• Front-End Technical Lead & Mentor: Delivered expert-led workshops on React and Next.js best practices and D3.js data visualization, empowering cross-functional teams to implement modern development techniques and high-performance frontend patterns",
-          "• Certification Platform: Architected and engineered a full-cycle certification management system (UI/UX to infrastructure) using React, Next.js, and Node.js. Integrated Contentful CMS and Express to automate certificate issuance and progress tracking, significantly reducing administrative overhead and streamlining the certification lifecycle.",
-          "• Event Management: Developed TCG RP, a scalable React and Next.js event platform using a monorepo approach and Contentful CMS. The system features an integrated vendor admin area and a WhatsApp bot for automated event tracking, delivering a maintainable and efficient full-stack web solution"
+          "• Front-End Technical Lead & Mentor: Delivered expert-led workshops on React, Next.js, and D3.js best practices, enabling cross-functional teams to build and maintain a trusted information hub for local store owners and players to discover and track regional events.",
+          "• Certification Platform: Architected a full-cycle certification management system (UI/UX to infrastructure) using React, Next.js, Node.js, and Contentful CMS, automating certificate issuance and progress tracking and eliminating manual administrative overhead.",
+          "• Event Platform: Engineered TCG RP, a scalable event platform with React and Next.js using a monorepo architecture and Contentful CMS, integrating a vendor admin area and WhatsApp bot for automated event tracking, reducing operational coordination time and improving attendee management efficiency."
         ]
       },
       {
@@ -641,7 +647,7 @@
         "highlights": [
           "• Engineered a scalable front-end ecosystem and reusable component libraries using React, Next.js, and TypeScript, which accelerated development velocity by 36% and ensured 100% design consistency across all brokerage modules.",
           "• Architected a high-performance brokerage management platform leveraging a hybrid Next.js architecture (SSR/CSR), resulting in a 36% improvement in page load times and a seamless, scalable experience for high-volume broker operations.",
-          "• Elevated engineering excellence and team capability by leading rigorous technical Core Reviews and mentoring junior developers in React and Next.js best practices, which reduced post-release bugs and standardized high-quality coding workflows.",
+          "• Elevated engineering excellence by leading technical code reviews and mentoring junior developers in React and Next.js best practices, proactively mapping errors before user reports, establishing test suites to validate deliveries, and enabling rapid incident response that reduced time-to-fix across all brokerage modules.",
           "• Designed high-impact analytical dashboards using Recharts, transforming complex financial datasets into real-time visual insights that empowered business stakeholders to make faster, data-driven strategic decisions."
         ]
       },
@@ -652,7 +658,7 @@
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
           "• Architected and launched Seguralta Core, a comprehensive insurance brokerage platform built with React, Next.js, and FastAPI, providing franchisees with real-time access to commissions, renewals, and policy expiration data, streamlining critical business operations.",
-          "• Drove engineering excellence and team growth by mentoring junior developers, leading code reviews, enforcing GitFlow workflows, and championing Scrum methodologies to foster a high-performance culture.",
+          "• Drove team growth by mentoring junior developers to independent delivery through structured code reviews and GitFlow practices, and established a continuous validation pipeline with ESLint, unit tests (Jest), and end-to-end tests (Cypress), eliminating regressions and ensuring release confidence.",
           "• Engineered a robust quality and monitoring ecosystem: Integrated New Relic for performance monitoring, SonarQube for code quality analysis, and comprehensive testing (Jest, Testing Library, Cypress), while automating deployments with BitBucket Pipelines to optimize Core Web Vitals and ensure system reliability."
         ]
       },
@@ -663,11 +669,10 @@
         "location": "São Paulo, Brazil (Remote)",
         "project": "CREA-SP – Technical Responsibility Notes (ART) Platform",
         "highlights": [
-          "Architected micro-frontend architecture using Module Federation in a monorepo",
           "• Architected and developed the front-end for CREA-SP's electronic ART platform, enabling engineering professionals across São Paulo to submit and manage Technical Responsibility Notes for works and services through a modern, intuitive digital interface.",
           "• Designed and implemented a micro-frontend architecture using Module Federation within a monorepo, ensuring modularity, scalability, and the ability for multiple teams to develop and deploy features independently.",
           "• Built reusable, type-safe components with React, Next.js, and TypeScript, establishing a solid foundation for continuous platform evolution and maintainability.",
-          "• Created a consistent, accessible UI library with Chakra UI, accelerating development and delivering a professional, responsive user experience across all platform modules.",
+          "• Delivered a consistent, accessible UI library with Chakra UI, accelerating development and ensuring a professional, responsive user experience across all platform modules.",
           "• Managed the full development lifecycle in Azure DevOps, including version control, CI/CD pipelines, and automated quality checks, ensuring reliable and efficient releases."
         ]
       },
@@ -681,7 +686,7 @@
             "name": "Anbima – Greenfield Platform Development",
             "highlights": [
               "• Architected and launched a comprehensive financial data platform for Anbima from the ground up using React and Next.js, creating a modern system for collecting and publishing managed portfolio information with strict regulatory compliance.",
-              "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), significantly improving page load times, Core Web Vitals, and organic search visibility for financial product data.",
+              "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), improving page load times by ~60%, boosting Core Web Vitals scores, and increasing organic search visibility for financial product data.",
               "• Designed reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
               "• Engineered robust data validation workflows and integrated with back-end APIs using optimized data fetching strategies to deliver real-time portfolio information."
             ]
@@ -705,7 +710,6 @@
         "location": "São Paulo, Brazil (Remote)",
         "project": "Zarp Localiza Platform",
         "highlights": [
-          "Zarp Localiza Platform – Technology Restructuring & SEO Optimization",
           "• Led the complete technology and infrastructure restructuring of the Zarp Localiza platform, migrating to React and Next.js to establish a modern, scalable architecture that improved developer productivity and platform performance.",
           "• Drove SEO strategy to achieve #1 organic rankings: Implemented comprehensive optimizations including semantic HTML, structured data, Next.js SSR, and Core Web Vitals improvements that propelled the platform to top positions in organic search results, driving significant growth in organic traffic.",
           "• Championed CI/CD adoption with Azure DevOps: Introduced and implemented automated build, test, and deployment pipelines in Azure DevOps, reducing release cycles, minimizing manual errors, and enabling rapid iteration on features and SEO enhancements.",
@@ -719,8 +723,7 @@
         "company": "Invillia",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "Invillia Apps Suite – Team Management & Remote Work Platform",
-          "• Developed full-stack features for the Invillia Apps Suite, a platform designed to optimize team management and remote work, working across front-end (React, TypeScript, Redux, D3.js) and back-end (Node.js, Express, MySQL).",
+          "• Engineered full-stack features for the Invillia Apps Suite, a platform designed to optimize team management and remote work, spanning front-end (React, TypeScript, Redux, D3.js) and back-end (Node.js, Express, MySQL).",
           "• Engineered integration with Microsoft Teams, enabling seamless access to team management tools, attendance tracking, and productivity metrics within the corporate communication platform.",
           "• Optimized memory usage across React components and Redux state management, profiling and refactoring to eliminate leaks and improve stability for long-running remote work sessions.",
           "• Built interactive data visualizations with D3.js, creating dashboards that displayed team performance, productivity trends, and resource allocation to support data-driven management decisions.",
@@ -733,7 +736,6 @@
         "company": "Unimed Rio Preto",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Led the development of a unified healthcare portal that consolidated patient services, implemented secure Java/Spring Boot authentication, automated CI/CD pipelines, and integrated third-party services while establishing real-time monitoring to enhance security, efficiency, and user experience.",
           "• Delivered a unified digital experience for healthcare beneficiaries: Led the development of a portal that consolidated financial management, exam scheduling, and appointment booking, empowering patients to manage their healthcare needs in one place.",
           "• Improved security and user access: Implemented a robust authentication API with Java and Spring Boot, ensuring secure access to sensitive health and financial data for thousands of beneficiaries.",
           "• Enabled proactive system monitoring: Deployed Grafana dashboards that provided real-time visibility into system health, API performance, and user activity, reducing mean time to detection (MTTD) for incidents."
@@ -745,12 +747,10 @@
         "company": "Bnex",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Promoter Tracking Platform & JBS Analytics",
           "• Managed and developed a web and mobile back-office platform for tracking promoters at retail locations, building React Native mobile applications for field staff and ASP.NET MVC web dashboards for operations teams.",
           "• Delivered data visualization dashboards for JBS: Designed interactive dashboards that tracked promoter performance and retail results, enabling JBS stakeholders to monitor KPIs and make data-driven decisions in real-time.",
           "• Engineered ETL processes for partner data integration: Developed and maintained Pentaho ETL pipelines to load, transform, and integrate partner data into SQL databases, ensuring comprehensive reporting and analytics.",
-          "• Maintained end-to-end data infrastructure: Supported the entire data lifecycle from ETL processing to dashboard visualization, ensuring data accuracy, reliability, and timely availability for business intelligence.",
-          "• Developed across multiple technology stacks: Leveraged Java, .NET C#, Node.js, React Native, and Pentaho to deliver integrated solutions for promoter tracking and partner data integration."
+          "• Maintained end-to-end data infrastructure: Supported the entire data lifecycle from ETL processing to dashboard visualization, ensuring data accuracy, reliability, and timely availability for business intelligence."
         ]
       },
       {
@@ -770,9 +770,9 @@
           {
             "name": "Claro – Telemarketing Chrome Extension",
             "highlights": [
-              "• Developed a custom Google Chrome extension using JavaScript for Claro telemarketing teams, automating customer lookup, call logging, and data entry tasks.",
+              "• Engineered a custom Google Chrome extension using JavaScript for Claro telemarketing teams, automating customer lookup, call logging, and data entry tasks.",
               "• Boosted agent productivity by reducing manual work and enabling faster access to customer information, allowing agents to focus on customer engagement and increasing call efficiency.",
-              "• Integrated the extension with existing telemarketing systems and CRM tools, ensuring seamless data "
+              "• Integrated the extension with existing telemarketing systems and CRM tools, ensuring seamless data synchronization and workflow continuity across platforms."
             ]
           }
         ]
@@ -783,13 +783,12 @@
         "company": "Emais Urbanismo e Incorporações",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Mission-Critical ERP/CRM System – Fiscal, Accounting, Financial & Real Estate Management",
           "• Provided maintenance, support, and continuous development for a comprehensive ERP and CRM system built with Delphi and Microsoft SQL Server, serving fiscal control, accounting, financial management, and real estate portfolio operations.",
           "• Ensured system reliability and business continuity through proactive maintenance, timely bug fixes, and responsive user support, minimizing downtime and disruptions to critical business functions.",
-          "• Developed new features and modules across multiple domains, adapting the system to evolving business requirements in fiscal compliance, financial reporting, and real estate portfolio tracking.",
+          "• Delivered new features and modules across multiple domains, adapting the system to evolving business requirements in fiscal compliance, financial reporting, and real estate portfolio tracking.",
           "• Optimized Microsoft SQL Server databases, designing efficient stored procedures, indexes, and queries to ensure fast data access, data integrity, and accurate reporting.",
           "• Maintained and enhanced legacy Delphi code, balancing stability with performance improvements and new functionality to extend the system's useful life.",
-          "• Developed deep domain expertise in fiscal regulations, accounting principles, financial management, and real estate operations to effectively support and evolve the system."
+          "• Ensured full regulatory and legal compliance across contract and fiscal modules, adapting the system to evolving Brazilian tax regulations and real estate legal requirements, supporting business operations without compliance incidents."
         ]
       },
       {
@@ -798,8 +797,7 @@
         "company": "Freelancer",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Developed tax automation tools and databases to streamline fiscal workflows for clients.",
-          "• Developed tax compliance automation services for multiple clients using Windows Forms and .NET C#.",
+          "• Engineered tax compliance automation services for multiple clients using Windows Forms and .NET C#.",
           "• Created intuitive desktop applications that simplified complex fiscal workflows, reducing manual effort.",
           "• Designed and maintained SQL Server databases for secure storage and fast access to client tax data."
         ]
@@ -810,7 +808,6 @@
         "company": "Dual Consultoria e Sistemas",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Maintained and enhanced an ERP system, automating tax and financial modules while ensuring client business continuity.",
           "• Maintained and optimized a specialized distributor management ERP using Progress 4GL, ensuring operational stability.",
           "• Engineered and deployed core financial and tax compliance modules, automating complex fiscal reporting workflows.",
           "• Provided high-level technical support and system enhancements to guarantee business continuity for clients."
@@ -822,7 +819,6 @@
         "company": "Hexa Informática",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Engineered an optical industry ERP with optimized databases and full-cycle deployment leadership.",
           "• Engineered a robust ERP solution for the optical industry, enhancing inventory and financial workflows.",
           "• Optimized SQL Server database design and modular Delphi development for mission-critical retail operations.",
           "• Directed full-cycle system deployments and migrations, significantly reducing client onboarding time."
@@ -834,7 +830,6 @@
         "company": "Condor Informática",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Delivered compliant ERP systems and public safety data tools, leading end-to-end deployments.",
           "• Engineered and optimized mission-critical ERP systems using Delphi and Firebird, ensuring 100% regulatory compliance.",
           "• Spearheaded end-to-end ERP deployments, managing requirements gathering, system configuration, and user training.",
           "• Architected versatile data solutions, including a specialized tool for the Police Department to enhance public safety operations."
@@ -846,9 +841,8 @@
         "company": "SOC Informática",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "Developed custom Delphi and Firebird tax solutions, automating fiscal compliance and client workflows.",
           "• Provided consulting and development services for tax compliance, creating custom Delphi and Firebird applications.",
-          "• Developed fiscal file generation systems that automated complex tax calculations and ensured regulatory compliance.",
+          "• Engineered fiscal file generation systems that automated complex tax calculations and ensured regulatory compliance.",
           "• Customized solutions tailored to each client's specific tax obligations and workflows, enhancing user adoption and integration."
         ]
       }

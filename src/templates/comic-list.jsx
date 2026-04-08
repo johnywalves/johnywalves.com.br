@@ -39,27 +39,33 @@ const ComicList = ({
                   transcription,
                   number,
                   featuredImage,
-                  comicImage,
+                  featuredImageEn,
                 },
                 fields: { slug },
               },
             },
             index
-          ) => (
-            <span key={index}>
-              <ComicItem
-                slug={slug}
-                number={number}
-                date={date}
-                title={title}
-                transcription={transcription}
-                featuredImage={featuredImage || comicImage}
-              />
-              <SeparatorList>
-                <Hamster />
-              </SeparatorList>
-            </span>
-          )
+          ) => {
+            const isPt = Strings.getLanguage() === "pt"
+            const image = isPt
+              ? featuredImage
+              : featuredImageEn || featuredImage
+            return (
+              <span key={index}>
+                <ComicItem
+                  slug={slug}
+                  number={number}
+                  date={date}
+                  title={title}
+                  transcription={transcription}
+                  featuredImage={image}
+                />
+                <SeparatorList>
+                  <Hamster />
+                </SeparatorList>
+              </span>
+            )
+          }
         )}
         <NavigationPage
           isFirst={isFirst}
@@ -103,10 +109,10 @@ export const query = graphql`
                 )
               }
             }
-            comicImage {
+            featuredImageEn {
               childImageSharp {
                 gatsbyImageData(
-                  width: 600
+                  width: 900
                   layout: CONSTRAINED
                   placeholder: BLURRED
                 )
