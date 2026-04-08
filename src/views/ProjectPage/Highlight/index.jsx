@@ -29,6 +29,9 @@ const Highlight = ({
 }) => {
   const images = useStaticQuery(graphql`
     query {
+      tcgrp: file(relativePath: { eq: "tcgrp.png" }) {
+        ...extractFieldsPage
+      }
       usepython: file(relativePath: { eq: "usepython.jpg" }) {
         ...extractFieldsHighlight
       }

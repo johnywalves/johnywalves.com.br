@@ -125,7 +125,7 @@ export const LanguageName = styled.p`
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 125%;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
 
   & svg {
