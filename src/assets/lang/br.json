@@ -2,7 +2,7 @@
   "seo": {
     "description": "Meu nome é Johny William de Oliveira Alves, Engenheiro Frontend Sênior com <strong>mais de 20 anos de experiência</strong> entregando aplicações web escaláveis em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, impulsionando <strong>99,9% de uptime</strong> e milhões de usuários em projetos de alto impacto para clientes como <strong>Coca-Cola</strong> e Anbima. Atualmente cursando Mestrado em Ciência da Computação, com especialização em <strong>Deep Learning e IA</strong>, com forte foco em mentoria e automação CI/CD para acelerar a entrega de software.",
     "position": "Engenheiro Front-end Sênior",
-    "headline": "Senior Front-End Engineer | React & Next.js Specialist | Tech Mentor | SaaS & Fintech Focus"
+    "headline": "Senior Frontend Engineer | React & Next.js Specialist | Scalable SaaS Applications | Agile & CI/CD Advocate"
   },
   "personal": {
     "name": "Johny W. Alves",
@@ -79,11 +79,11 @@
     "list": [
       {
         "name": "Inglês",
-        "proficiency": "Intermediário (B2)"
+        "proficiency": "Proficiência profissional no trabalho (B2 - Intermediário)"
       },
       {
         "name": "Português",
-        "proficiency": "Nativo"
+        "proficiency": "Nativo / Fluente"
       }
     ]
   },
@@ -563,7 +563,7 @@
           "Programa de Mestrado em Ciência da Computação na Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ],
         "details": [
-          "Foco: Processamento Digital de Imagens, Tópicos Avançados em Visualização, Deep Learning"
+          "Foco: Processamento Digital de Imagens, Tópicos Avançados em Visualização e Aprendizado Profundo"
         ]
       },
       {

@@ -79,11 +79,11 @@
     "list": [
       {
         "name": "English",
-        "proficiency": "Intermediate (B2)"
+        "proficiency": "Professional Working Proficiency (B2 - Intermediate)"
       },
       {
         "name": "Portuguese",
-        "proficiency": "Native"
+        "proficiency": "Native / Fluent"
       }
     ]
   },
@@ -563,7 +563,7 @@
           "Master's program in Computer Science at Universidade Estadual Paulista \"Júlio de Mesquita Filho\""
         ],
         "details": [
-          "Focus: Digital Image Processing, Advanced Topics in Visualization, Deep Learning"
+          "Focus: Digital Image Processing, Advanced Topics in Visualization, and Deep Learning"
         ]
       },
       {
