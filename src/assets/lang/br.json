@@ -232,6 +232,13 @@
     "title": "Cursos e Certificações",
     "list": [
       {
+        "date": "2026-03-23",
+        "name": "Inglês C1 (Avançado): Proficiência eficaz",
+        "issuer": "EF SET",
+        "file": "/cert/ef_set_certificate.pdf",
+        "type": "certification"
+      },
+      {
         "date": "2023-07-07",
         "name": "Professional Scrum Developer I",
         "issuer": "Scrum.org",
@@ -634,9 +641,9 @@
         "company": "Freelance",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "• Tech Lead Front-End & Mentor: Ministrei workshops sobre boas práticas em React, Next.js e D3.js, capacitando equipes multifuncionais a construir e manter uma fonte confiável de informações para lojistas e jogadores sobre eventos da região.",
-          "• Plataforma de Certificação: Arquitetei sistema completo de gestão de certificações (UI/UX à infraestrutura) com React, Next.js, Node.js e Contentful CMS, automatizando emissão de certificados e rastreamento de progresso e eliminando sobrecarga administrativa manual.",
-          "• Plataforma de Eventos: Implementei o TCG RP, plataforma escalável de eventos com React e Next.js em arquitetura monorepo e Contentful CMS, integrando área administrativa para lojistas e bot WhatsApp para rastreamento automatizado, reduzindo o tempo de coordenação operacional e melhorando a eficiência na gestão de participantes."
+          "• <strong>Tech Lead Front-End & Mentor</strong>: Ministrei workshops sobre boas práticas em React, Next.js e D3.js, capacitando equipes multifuncionais a construir e manter uma fonte confiável de informações para lojistas e jogadores sobre eventos da região.",
+          "• <strong>Plataforma de Certificação</strong>: Arquitetei sistema completo de gestão de certificações (UI/UX à infraestrutura) com React, Next.js, Node.js e Contentful CMS, automatizando emissão de certificados e rastreamento de progresso e eliminando sobrecarga administrativa manual.",
+          "• <strong>Plataforma de Eventos</strong>: Implementei o TCG RP, plataforma escalável de eventos com React e Next.js em arquitetura monorepo e Contentful CMS, integrando área administrativa para lojistas e bot WhatsApp para rastreamento automatizado. Utilizei o <strong>Claude Code com Skills e Plugins</strong> para otimizar os fluxos de desenvolvimento, e implementei cobertura abrangente de testes com Playwright para testes end-to-end e Jest + Testing Library para testes unitários, reduzindo o tempo de coordenação operacional e melhorando a eficiência na gestão de participantes."
         ]
       },
       {

@@ -232,6 +232,13 @@
     "title": "Courses & Certifications",
     "list": [
       {
+        "date": "2026-03-23",
+        "name": "Inglês C1 (Avançado): Proficiência eficaz",
+        "issuer": "EF SET",
+        "file": "/cert/ef_set_certificate.pdf",
+        "type": "certification"
+      },
+      {
         "date": "2023-07-07",
         "name": "Professional Scrum Developer I",
         "issuer": "Scrum.org",
@@ -634,9 +641,9 @@
         "company": "Freelance",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "• Front-End Technical Lead & Mentor: Delivered expert-led workshops on React, Next.js, and D3.js best practices, enabling cross-functional teams to build and maintain a trusted information hub for local store owners and players to discover and track regional events.",
-          "• Certification Platform: Architected a full-cycle certification management system (UI/UX to infrastructure) using React, Next.js, Node.js, and Contentful CMS, automating certificate issuance and progress tracking and eliminating manual administrative overhead.",
-          "• Event Platform: Engineered TCG RP, a scalable event platform with React and Next.js using a monorepo architecture and Contentful CMS, integrating a vendor admin area and WhatsApp bot for automated event tracking, reducing operational coordination time and improving attendee management efficiency."
+          "• <strong>Front-End Technical Lead & Mentor</strong>: Delivered expert-led workshops on React, Next.js, and D3.js best practices, enabling cross-functional teams to build and maintain a trusted information hub for local store owners and players to discover and track regional events.",
+          "• <strong>Certification Platform</strong>: Architected a full-cycle certification management system (UI/UX to infrastructure) using React, Next.js, Node.js, and Contentful CMS, automating certificate issuance and progress tracking and eliminating manual administrative overhead.",
+          "• <strong>Event Platform</strong>: Engineered TCG RP, a scalable event platform with React and Next.js using a monorepo architecture and Contentful CMS, integrating a vendor admin area and WhatsApp bot for automated event tracking. Leveraged <strong>Claude Code with Skills and Plugins</strong> to streamline development workflows, and implemented comprehensive test coverage using Playwright for end-to-end testing and Jest + Testing Library for unit tests, reducing operational coordination time and improving attendee management efficiency."
         ]
       },
       {
