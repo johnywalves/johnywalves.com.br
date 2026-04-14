@@ -1,5 +1,3 @@
-import React from "react"
-
 import {
   PinSVG,
   ChainSVG,
@@ -136,7 +134,10 @@ const ResumePage = ({ language }) => {
                   </time>{" "}
                 </h3>
 
-                {details && details.map((text) => <p>{text}</p>)}
+                {details &&
+                  details.map((text) => (
+                    <p dangerouslySetInnerHTML={{ __html: text }} />
+                  ))}
                 {thesis && <p>{thesis.title}</p>}
               </ResumeCourse>
             )
