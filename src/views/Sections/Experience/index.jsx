@@ -214,21 +214,23 @@ const SectionExperience = () => {
                 </DateText>
                 <Title>{role}</Title>
                 <Descriptions list={1}>
-                  {clients?.map(({ name, highlights }, idx) => (
+                  {clients?.map(({ name, highlights }) => (
                     <>
                       <h4>{name}</h4>
-                      {highlights?.map((text, idx) => (
-                        <ExperienceDescription key={idx}>
-                          {text}
-                        </ExperienceDescription>
+                      {highlights?.map((text) => (
+                        <ExperienceDescription
+                          key={text.toLowerCase()}
+                          dangerouslySetInnerHTML={{ __html: text }}
+                        />
                       ))}
                     </>
                   ))}
 
-                  {highlights?.map((text, idx) => (
-                    <ExperienceDescription key={idx}>
-                      {text}
-                    </ExperienceDescription>
+                  {highlights?.map((text) => (
+                    <ExperienceDescription
+                      key={text.toLowerCase()}
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    />
                   ))}
                 </Descriptions>
               </Accomplishment>
