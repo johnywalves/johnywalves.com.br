@@ -1,4 +1,5 @@
 import React from "react"
+import { languagePropType } from "assets/lang/propTypes"
 
 import {
   PinSVG,
@@ -66,6 +67,10 @@ const CoverLetterPage = ({ language }) => {
       </ResumeSheet>
     </ResumeWrapper>
   )
+}
+
+CoverLetterPage.propTypes = {
+  language: languagePropType.isRequired,
 }
 
 export default CoverLetterPage

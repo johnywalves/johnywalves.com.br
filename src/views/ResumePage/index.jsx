@@ -1,4 +1,5 @@
 import React from "react"
+import { languagePropType } from "assets/lang/propTypes"
 import {
   ResumeWrapper,
   ResumeSection,
@@ -193,6 +194,14 @@ const ResumePage = ({ language }) => {
       </ResumeSheet>
     </ResumeWrapper>
   )
+}
+
+Person.propTypes = {
+  language: languagePropType.isRequired,
+}
+
+ResumePage.propTypes = {
+  language: languagePropType.isRequired,
 }
 
 export default ResumePage

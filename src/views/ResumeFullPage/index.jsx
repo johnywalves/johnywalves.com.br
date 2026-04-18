@@ -8,6 +8,7 @@ import {
   ResumeSubTitle,
   ResumeSheet,
 } from "../ResumePage/styled"
+import { languagePropType } from "assets/lang/propTypes"
 
 const getFirst = (text) => text.split(" ")[1]
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
@@ -61,7 +62,7 @@ const ResumeFullPage = ({ language }) => (
         <h2>{language.experience.title}</h2>
         <hr />
         {language.experience.list.map(
-          ({ period, role, company, location, highlights }) => (
+          ({ period, role, company, location, highlights, clients }) => (
             <ResumeSubSection key={period}>
               <ResumeSubTitle>
                 <h3>{role}</h3>
@@ -74,14 +75,32 @@ const ResumeFullPage = ({ language }) => (
                 </h4>
               </ResumeSubTitle>
 
-              <ul>
-                {highlights.map((text, index) => (
-                  <li
-                    key={index}
-                    dangerouslySetInnerHTML={{ __html: text }}
-                  />
+              {highlights && (
+                <ul>
+                  {highlights.map((text, index) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: text }}
+                    />
+                  ))}
+                </ul>
+              )}
+              {clients &&
+                clients.map(({ name, highlights: clientHighlights }, ci) => (
+                  <div key={ci}>
+                    <p>
+                      <strong>{name}</strong>
+                    </p>
+                    <ul>
+                      {clientHighlights.map((text, index) => (
+                        <li
+                          key={index}
+                          dangerouslySetInnerHTML={{ __html: text }}
+                        />
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
             </ResumeSubSection>
           )
         )}
@@ -165,5 +184,9 @@ const ResumeFullPage = ({ language }) => (
     </ResumeSheet>
   </ResumeWrapper>
 )
+
+ResumeFullPage.propTypes = {
+  language: languagePropType.isRequired,
+}
 
 export default ResumeFullPage
