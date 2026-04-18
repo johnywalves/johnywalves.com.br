@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer")
 const express = require("express")
-const fs = require("fs")
-const http = require("http")
+const fs = require("node:fs")
+const http = require("node:http")
 
 async function getImage(servingUrl, page, slug) {
   await page.goto(`${servingUrl}/__generated/${slug}/index.html`, {
@@ -17,16 +17,27 @@ async function getImage(servingUrl, page, slug) {
 }
 
 async function getResumeAndCoverLetter(servingUrl, page, language) {
+  const position =
+    language === "en" ? "frontend_engineer" : "engenheiro_frontend"
+
   // Resume
   await page.goto(`${servingUrl}/resume/${language}/index.html`, {
     waitUntil: "networkidle0",
   })
 
-  const position =
-    language === "en" ? "frontend_engineer" : "engenheiro_frontend"
-
   await page.pdf({
     path: `./public/docs/johnywalves_${position}.pdf`,
+    printBackground: false,
+    format: "A4",
+  })
+
+  // Full Resume
+  await page.goto(`${servingUrl}/resume/full-${language}/index.html`, {
+    waitUntil: "networkidle0",
+  })
+
+  await page.pdf({
+    path: `./public/docs/johnywalves_${position}_full.pdf`,
     printBackground: false,
     format: "A4",
   })

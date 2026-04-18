@@ -1,13 +1,5 @@
 import React from "react"
 import {
-  PinSVG,
-  ChainSVG,
-  CatSVG,
-  LinkedInSVG,
-  PhoneSVG,
-  EmailSVG,
-} from "../../assets/emoji"
-import {
   ResumeWrapper,
   ResumeSection,
   ResumePerson,
@@ -23,10 +15,8 @@ const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 const getYear = (text) => new Date(text).getFullYear()
 
 const getDescription = (text) => {
-  const withoutFirstBreak = text.split(", ").slice(1).join(", ")
-  const capitulation =
-    withoutFirstBreak[0].toUpperCase() + withoutFirstBreak.slice(1)
-  return capitulation
+  const parts = text.split(", ").slice(1).join(", ")
+  return parts.charAt(0).toUpperCase() + parts.slice(1)
 }
 
 const Person = ({ language }) => (
@@ -37,21 +27,17 @@ const Person = ({ language }) => (
 
     <ul>
       <li>
-        <img src={PhoneSVG} alt="" width={12} height={12} />{" "}
-        {language.personal.phone}
-        <img src={PinSVG} alt="" width={12} height={12} />{" "}
-        {language.personal.location}
+        {language.personal.phone} &bull; {language.personal.location}
       </li>
       <li>
-        <img src={EmailSVG} alt="" width={12} height={12} />
         <a href="mailto:contato@johnywalves.com.br">
           contato@johnywalves.com.br
-        </a>
-        <img src={ChainSVG} alt="" width={12} height={12} />
-        <a href="https://johnywalves.com.br">johnywalves.com.br</a>
-        <img src={CatSVG} alt="" width={12} height={12} />
-        <a href="https://github.com/johnywalves">github.com/johnywalves</a>
-        <img src={LinkedInSVG} alt="" width={12} height={12} />
+        </a>{" "}
+        &bull;{" "}
+        <a href="https://johnywalves.com.br">johnywalves.com.br</a>{" "}
+        &bull;{" "}
+        <a href="https://github.com/johnywalves">github.com/johnywalves</a>{" "}
+        &bull;{" "}
         <a href="https://linkedin.com/in/johnywalves">
           linkedin.com/in/johnywalves
         </a>
@@ -154,12 +140,7 @@ const ResumePage = ({ language }) => {
                 <ResumeCourse>
                   <p>
                     <span>{name}: </span>
-                    {items
-                      .map(({ name }) => name)
-                      .slice(0, -1)
-                      .join(", ")}
-                    {`, ${language.ui.labels.and} `}
-                    {items.map(({ name }) => name).slice(-1)}
+                    {items.map(({ name }) => name).join(", ")}
                   </p>
                 </ResumeCourse>
               </li>
@@ -190,7 +171,7 @@ const ResumePage = ({ language }) => {
           </h2>
           <hr />
           {language.certifications.list
-            .splice(0, 10)
+            .slice(0, 10)
             .map(({ date, name, issuer, hours }) => (
               <ResumeCourse key={date}>
                 <p>
