@@ -636,19 +636,8 @@
     "title": "Experiência",
     "list": [
       {
-        "period": "Fev 2026 - Presente",
-        "role": "Líder Técnico Front-End | Especialista React & Next.js",
-        "company": "Freelance",
-        "location": "São Paulo, Brasil (Remoto)",
-        "highlights": [
-          "• <strong>Tech Lead Front-End & Mentor</strong>: Ministrei workshops sobre boas práticas em React, Next.js e D3.js, capacitando equipes multifuncionais a construir e manter uma fonte confiável de informações para lojistas e jogadores sobre eventos da região.",
-          "• <strong>Plataforma de Certificação</strong>: Arquitetei sistema completo de gestão de certificações (UI/UX à infraestrutura) com React, Next.js, Node.js e Contentful CMS, automatizando emissão de certificados e rastreamento de progresso e eliminando sobrecarga administrativa manual.",
-          "• <strong>Plataforma de Eventos</strong>: Implementei o TCG RP, plataforma escalável de eventos com React e Next.js em arquitetura monorepo e Contentful CMS, integrando área administrativa para lojistas e bot WhatsApp para rastreamento automatizado. Utilizei o <strong>Claude Code com Skills e Plugins</strong> para otimizar os fluxos de desenvolvimento, e implementei cobertura abrangente de testes com Playwright para testes end-to-end e Jest + Testing Library para testes unitários, reduzindo o tempo de coordenação operacional e melhorando a eficiência na gestão de participantes."
-        ]
-      },
-      {
-        "period": "Set 2024 - Fev 2026",
-        "role": "Engenheiro Front-End Sênior | Especialista React & Next.js",
+        "period": "Set 2024 - Presente",
+        "role": "Desenvolvedor Front-End Sênior | Especialista React & Next.js",
         "company": "WeFit",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
@@ -660,7 +649,7 @@
       },
       {
         "period": "Jul 2023 - Set 2024",
-        "role": "Líder Técnico Front-End Sênior | Especialista React & Next.js",
+        "role": "Desenvolvedor Front-End Sênior | Especialista React & Next.js",
         "company": "Seguralta",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
@@ -671,7 +660,7 @@
       },
       {
         "period": "Mai 2023 - Jul 2023",
-        "role": "Engenheiro Front-End Sênior | Especialista React & Next.js",
+        "role": "Desenvolvedor Front-End Sênior | Especialista React & Next.js",
         "company": "Hepta Tecnologia e Informática",
         "location": "São Paulo, Brasil (Remoto)",
         "project": "CREA-SP – Plataforma de ART (Anotação de Responsabilidade Técnica)",
@@ -685,7 +674,7 @@
       },
       {
         "period": "Set 2021 - Fev 2023",
-        "role": "Engenheiro Front-End Sênior | Entrega para Clientes CI&T",
+        "role": "Desenvolvedor Front-End Sênior | Entrega para Clientes CI&T",
         "company": "CI&T Software",
         "location": "São Paulo, Brasil (Remoto)",
         "clients": [
@@ -712,7 +701,7 @@
       },
       {
         "period": "Out 2020 - Set 2021",
-        "role": "Engenheiro Front-End | Entrega para Cliente Meta",
+        "role": "Desenvolvedor Front-End | Entrega para Cliente Meta",
         "company": "Meta Serviços em Informática",
         "location": "São Paulo, Brasil (Remoto)",
         "project": "Plataforma Zarp Localiza",
@@ -726,7 +715,7 @@
       },
       {
         "period": "Nov 2019 - Out 2020",
-        "role": "Engenheiro de Software",
+        "role": "Desenvolvedor de Software",
         "company": "Invillia",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
@@ -739,7 +728,7 @@
       },
       {
         "period": "Abr 2019 - Nov 2019",
-        "role": "Engenheiro de Software",
+        "role": "Desenvolvedor de Software",
         "company": "Unimed Rio Preto",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
@@ -750,7 +739,7 @@
       },
       {
         "period": "Jul 2018 - Abr 2019",
-        "role": "Engenheiro de Software",
+        "role": "Desenvolvedor de Software",
         "company": "Bnex",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
