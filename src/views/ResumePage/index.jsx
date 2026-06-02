@@ -43,9 +43,7 @@ const Person = ({ language }) => (
       </li>
       <li>
         <img src={EmailSVG} alt="" width={12} height={12} />
-        <a href="mailto:contato@johnywalves.com.br">
-          contato@johnywalves.com.br
-        </a>
+        <a href="mailto:johnywalves@gmail.com">johnywalves@gmail.com</a>
         <img src={ChainSVG} alt="" width={12} height={12} />
         <a href="https://johnywalves.com.br">johnywalves.com.br</a>
         <img src={CatSVG} alt="" width={12} height={12} />

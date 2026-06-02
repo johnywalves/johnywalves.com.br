@@ -32,11 +32,8 @@ const ResumeFullPage = ({ language }) => (
             {language.personal.phone} &bull; {language.personal.location}
           </li>
           <li>
-            <a href="mailto:contato@johnywalves.com.br">
-              contato@johnywalves.com.br
-            </a>{" "}
-            &bull;{" "}
-            <a href="https://johnywalves.com.br">johnywalves.com.br</a>{" "}
+            <a href="mailto:johnywalves@gmail.com">johnywalves@gmail.com</a>{" "}
+            &bull; <a href="https://johnywalves.com.br">johnywalves.com.br</a>{" "}
             &bull;{" "}
             <a href="https://github.com/johnywalves">github.com/johnywalves</a>{" "}
             &bull;{" "}
