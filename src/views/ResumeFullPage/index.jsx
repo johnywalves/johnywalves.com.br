@@ -1,4 +1,5 @@
 import React from "react"
+import { createGlobalStyle } from "styled-components"
 import {
   ResumeWrapper,
   ResumeSection,
@@ -11,6 +12,12 @@ import {
 } from "../ResumePage/styled"
 import { languagePropType } from "assets/lang/propTypes"
 
+const PrintStyles = createGlobalStyle`
+  @page {
+    margin-bottom: 60px;
+  }
+`
+
 const getFirst = (text) => text.split(" ")[1]
 const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 const getYear = (text) => new Date(text).getFullYear()
@@ -21,6 +28,8 @@ const getDescription = (text) => {
 }
 
 const ResumeFullPage = ({ language }) => (
+  <>
+  <PrintStyles />
   <ResumeWrapper>
     <ResumeFullContent>
       <ResumePerson>
@@ -184,6 +193,7 @@ const ResumeFullPage = ({ language }) => (
       </ResumeFullFooter>
     </ResumeFullContent>
   </ResumeWrapper>
+  </>
 )
 
 ResumeFullPage.propTypes = {

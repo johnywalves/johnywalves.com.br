@@ -79,6 +79,11 @@ export const ResumeSheet = styled.div`
     height: 297mm;
     page-break-after: always;
     break-after: page;
+
+    &:last-of-type {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
   }
 `
 
