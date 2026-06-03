@@ -6,7 +6,8 @@ import {
   ResumeCourse,
   ResumeSubSection,
   ResumeSubTitle,
-  ResumeSheet,
+  ResumeFullContent,
+  ResumeFullFooter,
 } from "../ResumePage/styled"
 import { languagePropType } from "assets/lang/propTypes"
 
@@ -21,7 +22,7 @@ const getDescription = (text) => {
 
 const ResumeFullPage = ({ language }) => (
   <ResumeWrapper>
-    <ResumeSheet>
+    <ResumeFullContent>
       <ResumePerson>
         <h1>Johny W. Alves</h1>
 
@@ -178,7 +179,10 @@ const ResumeFullPage = ({ language }) => (
           </ResumeCourse>
         ))}
       </ResumeSection>
-    </ResumeSheet>
+      <ResumeFullFooter>
+        <p>johnywalves.com.br</p>
+      </ResumeFullFooter>
+    </ResumeFullContent>
   </ResumeWrapper>
 )
 

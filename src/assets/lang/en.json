@@ -638,13 +638,13 @@
       {
         "period": "Sep 2024 - Present",
         "role": "Senior Front-End Engineer | React & Next.js Specialist",
-        "company": "WeFit",
+        "company": "WeFit (outsourcing for Porto Seguro)",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "• Engineered a scalable front-end ecosystem and reusable component libraries using React, Next.js, and TypeScript, which accelerated development velocity by 36% and ensured 100% design consistency across all brokerage modules.",
-          "• Architected a high-performance brokerage management platform leveraging a hybrid Next.js architecture (SSR/CSR), resulting in a 36% improvement in page load times and a seamless, scalable experience for high-volume broker operations.",
-          "• Elevated engineering excellence by leading technical code reviews and mentoring junior developers in React and Next.js best practices, proactively mapping errors before user reports, establishing test suites to validate deliveries, and enabling rapid incident response that reduced time-to-fix across all brokerage modules.",
-          "• Designed high-impact analytical dashboards using Recharts, transforming complex financial datasets into real-time visual insights that empowered business stakeholders to make faster, data-driven strategic decisions."
+          "• Engineered a scalable front-end ecosystem and reusable component libraries using React, Next.js, and TypeScript for Porto Seguro's brokerage operations, accelerating development velocity by 36% and ensuring 100% design consistency across all modules.",
+          "• Architected a high-performance brokerage management platform with a hybrid Next.js architecture (SSR/CSR), improving page load times by 36% and delivering a seamless experience for high‑volume broker workflows.",
+          "• Elevated engineering excellence by leading technical code reviews and mentoring junior developers in React and Next.js best practices, proactively mapping errors before user reports, establishing test suites, and enabling rapid incident response – reducing time‑to‑fix across all brokerage modules.",
+          "• Designed high-impact analytical dashboards using Recharts, transforming complex financial datasets into real‑time visual insights that empowered Porto Seguro's stakeholders to make faster, data‑driven strategic decisions."
         ]
       },
       {

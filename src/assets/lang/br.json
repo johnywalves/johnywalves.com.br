@@ -636,15 +636,15 @@
     "title": "Experiência",
     "list": [
       {
-        "period": "Set 2024 - Presente",
-        "role": "Desenvolvedor Front-End Sênior | Especialista React & Next.js",
-        "company": "WeFit",
-        "location": "São Paulo, Brasil (Remoto)",
-        "highlights": [
-          "• Desenvolvi ecossistema front-end escalável e bibliotecas de componentes reutilizáveis com React, Next.js e TypeScript, acelerando a velocidade de desenvolvimento em 36% e garantindo consistência visual total entre módulos da corretora.",
-          "• Arquitetei plataforma de gestão para corretoras de alto desempenho com arquitetura híbrida Next.js (SSR/CSR), resultando em 36% de melhoria no tempo de carregamento e experiência escalável para operações de alto volume.",
-          "• Elevei a excelência técnica liderando code reviews e mentorando desenvolvedores júnior em React e Next.js, mapeando proativamente erros antes de serem reportados pelos usuários, estabelecendo suítes de testes para validar entregas e viabilizando resposta rápida a incidentes que reduziu o tempo de resolução em todos os módulos da corretora.",
-          "• Desenvolvi dashboards analíticos de alto impacto com Recharts, transformando dados financeiros complexos em insights visuais em tempo real que apoiaram decisões estratégicas dos stakeholders."
+        "periodo": "Set 2024 - Presente",
+        "cargo": "Engenheiro Front-End Sênior | Especialista em React e Next.js",
+        "empresa": "WeFit (projeto para Porto Seguro)",
+        "local": "São Paulo, Brasil (Remoto)",
+        "destaques": [
+          "• Projetei um ecossistema frontend escalável e bibliotecas de componentes reutilizáveis com React, Next.js e TypeScript para as operações de corretagem da Porto Seguro, acelerando a velocidade de desenvolvimento em 36% e garantindo 100% de consistência visual entre todos os módulos.",
+          "• Arquitetei uma plataforma de gestão de corretagem de alto desempenho com arquitetura híbrida Next.js (SSR/CSR), melhorando o tempo de carregamento das páginas em 36% e entregando uma experiência fluida para operações de corretagem de alto volume.",
+          "• Elevei a excelência técnica liderando code reviews e mentorando desenvolvedores juniores em boas práticas de React e Next.js, mapeando erros proativamente antes dos usuários, estabelecendo suites de testes e viabilizando resposta rápida a incidentes – reduzindo o tempo de resolução em todos os módulos da corretora.",
+          "• Criei dashboards analíticos de alto impacto com Recharts, transformando conjuntos de dados financeiros complexos em insights visuais em tempo real que capacitaram os stakeholders da Porto Seguro a tomar decisões estratégicas mais rápidas e baseadas em dados."
         ]
       },
       {
