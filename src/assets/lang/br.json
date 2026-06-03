@@ -636,11 +636,11 @@
     "title": "Experiência",
     "list": [
       {
-        "periodo": "Set 2024 - Presente",
-        "cargo": "Engenheiro Front-End Sênior | Especialista em React e Next.js",
-        "empresa": "WeFit (projeto para Porto Seguro)",
-        "local": "São Paulo, Brasil (Remoto)",
-        "destaques": [
+        "period": "Set 2024 - Presente",
+        "role": "Engenheiro Front-End Sênior | Especialista em React e Next.js",
+        "company": "WeFit (projeto para Porto Seguro)",
+        "location": "São Paulo, Brasil (Remoto)",
+        "highlights": [
           "• Projetei um ecossistema frontend escalável e bibliotecas de componentes reutilizáveis com React, Next.js e TypeScript para as operações de corretagem da Porto Seguro, acelerando a velocidade de desenvolvimento em 36% e garantindo 100% de consistência visual entre todos os módulos.",
           "• Arquitetei uma plataforma de gestão de corretagem de alto desempenho com arquitetura híbrida Next.js (SSR/CSR), melhorando o tempo de carregamento das páginas em 36% e entregando uma experiência fluida para operações de corretagem de alto volume.",
           "• Elevei a excelência técnica liderando code reviews e mentorando desenvolvedores juniores em boas práticas de React e Next.js, mapeando erros proativamente antes dos usuários, estabelecendo suites de testes e viabilizando resposta rápida a incidentes – reduzindo o tempo de resolução em todos os módulos da corretora.",
