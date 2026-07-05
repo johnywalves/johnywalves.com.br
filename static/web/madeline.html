@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personagem - Madeline D'Harlaph</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 12px;
+            margin: 0;
+            padding: 20px;
+        }
+        .page {
+            background-color: #fff;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto 20px auto;
+            padding: 15mm; /* Margem interna para a tela */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 1px solid #ccc; /* Borda visual na tela */
+            box-sizing: border-box;
+            page-break-after: always;
+            position: relative;
+        }
+        /* Controle rigoroso para Impressão e Moldura */
+        @media print {
+            @page {
+                size: A4;
+                margin: 5mm; /* Margem física da impressora */
+            }
+            body { 
+                background-color: transparent; 
+                padding: 0; 
+                margin: 0; 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+            }
+            .page { 
+                box-shadow: none; 
+                border: 2px solid #2c3e50; /* Moldura elegante ativada para impressão */
+                margin: 0; 
+                padding: 10mm; /* Espaço seguro entre a moldura e os textos */
+                width: 100%; 
+                min-height: 287mm; /* Força a moldura a ir até o final da folha A4 */
+                page-break-after: always; 
+            }
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 6px;
+            border-bottom: 2px solid #2c3e50;
+        }
+        p { margin: 4px 0; }
+        .header-info {
+            margin-bottom: 15px;
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .attributes {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-weight: bold;
+        }
+        .attr {
+            background: #ecf0f1;
+            padding: 8px;
+            border-radius: 5px;
+            width: 22%;
+        }
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            margin-top: 8px;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+        }
+        .status-item input {
+            margin-right: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            text-align: left;
+            font-size: 12px;
+        }
+        .track-box {
+            height: 22px; 
+        }
+        .stat-box {
+            display: inline-block;
+            border: 1px solid #7f8c8d;
+            height: 18px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        .skills, .equipment, .vehicle, .bonds, .resources {
+            margin-bottom: 12px;
+        }
+        .skill-item {
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        .inventory-lines {
+            margin-top: 8px;
+        }
+        .line {
+            border-bottom: 1px dashed #ccc;
+            height: 22px;
+            display: flex;
+            align-items: center;
+        }
+        /* Sistema de alinhamento das emoções utilizando o flexbox solicitado */
+        .emotions-line {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .emotions-line label {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            cursor: pointer;
+        }
+        .emotions-line input {
+            margin: 0 4px 0 0;
+        }
+        .emotions-line .divider {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PÁGINA 1 -->
+<div class="page">
+    <h1>MADELINE D´HARLAPH</h1>
+    
+    <div class="header-info">
+        <div style="margin-bottom: 8px; font-size: 14px;"><strong>Identidade:</strong> Valquíria da Ordem dos Protetores dos Dragões de Saint Madeline</div>
+        <div class="header-row">
+            <span><strong>Nível:</strong> 8 (Elementalist 1 / Weaponmaster 4 / Pilot 3)</span>
+            <span><strong>Tema:</strong> Dever (Duty)</span>
+            <span><strong>Origem:</strong> Os Planaltos de Harlaph</span>
+        </div>
+    </div>
+
+    <div class="grid-2col">
+        <!-- Atributos e Status -->
+        <div class="box">
+            <h2>Atributos e Status</h2>
+            <div class="attributes">
+                <div class="attr">DEX<br><span style="font-size: 16px;">d8</span></div>
+                <div class="attr">INS<br><span style="font-size: 16px;">d6</span></div>
+                <div class="attr">MIG<br><span style="font-size: 16px;">d10</span></div>
+                <div class="attr">WLP<br><span style="font-size: 16px;">d8</span></div>
+            </div>
+            <div class="status-grid">
+                <div class="status-item"><input type="checkbox"> SLOW (Lento)</div>
+                <div class="status-item"><input type="checkbox"> SHAKEN (Abalado)</div>
+                <div class="status-item"><input type="checkbox"> DAZED (Ofuscado)</div>
+                <div class="status-item"><input type="checkbox"> ENRAGED (Enfurecido)</div>
+                <div class="status-item"><input type="checkbox"> WEAK (Fraco)</div>
+                <div class="status-item"><input type="checkbox"> POISONED (Envenenado)</div>
+            </div>
+        </div>
+
+        <!-- Defesas, Pontos e Condições Extras -->
+        <div class="box">
+            <h2>Defesa, Pontos e Extras</h2>
+            <div style="display: flex; justify-content: space-between;">
+                <!-- Coluna Esquerda: Defesas -->
+                <div style="width: 48%;">
+                    <p style="display: flex; justify-content: space-between; align-items: center;"><span><strong>DEF:</strong> 10 | Montada 11</span> <span class="stat-box" style="width: 30px;"></span></p>
+                    <p style="display: flex; justify-content: space-between; align-items: center;"><span><strong>M.DEF:</strong> 6 | Montada 10</span> <span class="stat-box" style="width: 30px;"></span></p>
+                    <p style="display: flex; justify-content: space-between; align-items: center;"><span><strong>Iniciativa:</strong> -2</span> <span class="stat-box" style="width: 30px;"></span></p>
+                </div>
+                <!-- Coluna Direita: Pontos Fabula/XP -->
+                <div style="width: 48%;">
+                    <p style="display: flex; justify-content: space-between; align-items: center;"><span><strong>Fabula Points:</strong></span> <span class="stat-box" style="width: 45px;"></span></p>
+                    <p style="display: flex; justify-content: space-between; align-items: center;"><span><strong>Experiência:</strong></span> <span class="stat-box" style="width: 45px;"></span></p>
+                </div>
+            </div>
+            <!-- Largura Total: Condições Extras -->
+            <div style="margin-top: 10px; font-size: 12px; border-top: 1px dashed #ccc; padding-top: 8px;">
+                <strong>Condições Extras:</strong><br>
+                <label style="display: flex; align-items: center; margin-top: 4px; white-space: nowrap;">
+                    <input type="checkbox" style="margin-right: 5px;"> 
+                    Fortaleza (redução de 5 pts para dados de chefes)
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recursos: HP, MP, IP -->
+    <div class="box resources">
+        <h2>Recursos Vitalícios</h2>
+        <table>
+            <tr>
+                <th width="15%">Recurso</th>
+                <th width="15%">Máximo</th>
+                <th width="15%">Crise</th>
+                <th width="55%">Controle Atual</th>
+            </tr>
+            <tr>
+                <td><strong>HP</strong> (Vida)</td>
+                <td>68</td>
+                <td>34</td>
+                <td class="track-box"></td>
+            </tr>
+            <tr>
+                <td><strong>MP</strong> (Mente)</td>
+                <td>53</td>
+                <td>-</td>
+                <td class="track-box"></td>
+            </tr>
+            <tr>
+                <td><strong>IP</strong> (Inventário)</td>
+                <td>6</td>
+                <td>-</td>
+                <td class="track-box"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Habilidades de Classe -->
+    <div class="box skills">
+        <h2>Classes e Habilidades</h2>
+        <div class="skill-item">
+            <strong>Elementalist (Nv 1):</strong> 
+            <ul style="margin: 4px 0; padding-left: 20px;">
+                <li><em>Elemental Magic (SL 1) - Elemental Weapon:</em> Gasta 10 MP. Alvo: Uma Arma. Duração: Cena. Imbui uma arma com Ar, Raio, Terra, Fogo ou Gelo. O dano causado se torna o elemento escolhido. Pode fazer um ataque livre ao conjurar na própria arma.</li>
+            </ul>
+        </div>
+        <div class="skill-item">
+            <strong>Weaponmaster (Nv 4):</strong>
+            <ul style="margin: 4px 0; padding-left: 20px;">
+                <li style="margin-bottom: 4px;"><em>Bladestorm:</em> Gasta 10 MP para atingir até dois alvos num único ataque.</li>
+                <li style="margin-bottom: 4px;"><em>Melee Weapon Mastery (SL 1):</em> +1 Precisão corpo a corpo.</li>
+                <li style="margin-bottom: 4px;"><em>Breach (SL 1):</em> Gasta 5 MP para ataque livre sem dano que pode destruir escudo/armadura ou aumentar dano recebido pelo alvo.</li>
+                <li><em>Counterattack:</em> Se um inimigo errar ou acertar um ataque corpo a corpo contra você com um <strong>número PAR</strong> na precisão, faça um contra-ataque livre (Calculado com HR = 0 -> causa 10 de dano fixo).</li>
+            </ul>
+        </div>
+        <div class="skill-item" style="margin-bottom: 0;">
+            <strong>Pilot (Nv 3):</strong> 
+            <ul style="margin: 4px 0; padding-left: 20px;">
+                <li style="margin-bottom: 4px;"><em>Personal Vehicle (SL 1):</em> Montaria Chokka.</li>
+                <li><em>Heart in the Engine (SL 2):</em> Custo 0 MP. Escolha no início do seu turno montado: +4 de Dano no próximo ataque <strong>durante o turno</strong>; <strong>OU</strong> Reduz 4 do próximo dano recebido; <strong>OU</strong> Cura Slow/Weak.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-2col">
+        <!-- Equipamento e Ataques -->
+        <div class="box equipment" style="margin-bottom: 0;">
+            <h2>Equipamento & Combate</h2>
+            <p><strong>Arma: Espada Grande (Greatsword)</strong><br>
+            Precisão Base: 【DEX + MIG】 +2 | Dano Base: 【HR + 10】 físico</p>
+            
+            <p><strong>🔥 ATAQUE MONTADO (Adv. Targeting + Heart Engine) 🔥</strong><br>
+            Precisão Montada: <strong>【DEX + MIG】 +4</strong><br>
+            Dano Montado no seu turno: <strong>【HR + 14】 físico</strong><br>
+            Dano de Contra-ataque: <strong>10 físico fixo</strong> <span style="font-size: 11px;"><em>(Fora do turno HR = 0)</em></span></p>
+
+            <p><strong>Armadura: Brigandine (Marcial)</strong><br>
+            DEF 10, M.DEF +0, Init -2.</p>
+        </div>
+
+        <!-- Veículo Pessoal -->
+        <div class="box vehicle" style="margin-bottom: 0;">
+            <h2>Veículo Pessoal: Chokka</h2>
+            <p><strong>Moldura:</strong> Steed (Montaria, viaja x2, 1 passageiro extra).</p>
+            <p><strong>Módulos Habilitados (4 slots):</strong></p>
+            <ul style="margin: 5px 0; padding-left: 20px;">
+                <li style="margin-bottom: 5px;"><strong>Aerial Module (2 slots):</strong> Permite voar, foca ataques corpo a corpo aéreos.</li>
+                <li style="margin-bottom: 5px;"><strong>Standard Plating (1 slot):</strong> Defesa Base 11 / M.DEF 10.</li>
+                <li><strong>Advanced Targeting (1 slot):</strong> +2 de Precisão (ataques/magias).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- PÁGINA 2 -->
+<div class="page">
+    <!-- Laços (Bonds) -->
+    <div class="box bonds">
+        <h2>Laços (Bonds)</h2>
+        <table>
+            <tr>
+                <th width="15%">Alvo do Laço</th>
+                <th width="80%">Emoções (Cada emoção marcada = +1 Força)</th>
+                <th width="5%">Força</th>
+            </tr>
+            <!-- Linha 1 -->
+            <tr>
+                <td class="track-box" style="padding: 4px 8px; font-weight: bold;">Shiro</td>
+                <td style="padding: 4px 8px;">
+                    <div class="emotions-line">
+                        <label><input type="checkbox"> Admiração</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Inferioridade</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox" checked> Lealdade</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Desconfiança</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Afeição</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Ódio</label>
+                    </div>
+                </td>
+                <td class="track-box" style="text-align: center; font-weight: bold;">1</td>
+            </tr>
+            <!-- Linha 2 -->
+            <tr>
+                <td class="track-box" style="padding: 4px 8px; font-weight: bold;">Guilda dos Caçadores</td>
+                <td style="padding: 4px 8px;">
+                    <div class="emotions-line">
+                        <label><input type="checkbox" checked> Admiração</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Inferioridade</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Lealdade</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Desconfiança</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Afeição</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Ódio</label>
+                    </div>
+                </td>
+                <td class="track-box" style="text-align: center; font-weight: bold;">1</td>
+            </tr>
+            <!-- Linha 3 -->
+            <tr>
+                <td class="track-box"></td>
+                <td style="padding: 4px 8px;">
+                    <div class="emotions-line">
+                        <label><input type="checkbox"> Admiração</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Inferioridade</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Lealdade</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Desconfiança</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Afeição</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Ódio</label>
+                    </div>
+                </td>
+                <td class="track-box"></td>
+            </tr>
+            <!-- Linha 4 -->
+            <tr>
+                <td class="track-box"></td>
+                <td style="padding: 4px 8px;">
+                    <div class="emotions-line">
+                        <label><input type="checkbox"> Admiração</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Inferioridade</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Lealdade</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Desconfiança</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Afeição</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Ódio</label>
+                    </div>
+                </td>
+                <td class="track-box"></td>
+            </tr>
+            <!-- Linha 5 -->
+            <tr>
+                <td class="track-box"></td>
+                <td style="padding: 4px 8px;">
+                    <div class="emotions-line">
+                        <label><input type="checkbox"> Admiração</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Inferioridade</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Lealdade</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Desconfiança</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Afeição</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Ódio</label>
+                    </div>
+                </td>
+                <td class="track-box"></td>
+            </tr>
+            <!-- Linha 6 -->
+            <tr>
+                <td class="track-box"></td>
+                <td style="padding: 4px 8px;">
+                    <div class="emotions-line">
+                        <label><input type="checkbox"> Admiração</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Inferioridade</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Lealdade</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Desconfiança</label>
+                        <span class="divider">|</span>
+                        <label><input type="checkbox"> Afeição</label>
+                        <span>ou</span>
+                        <label><input type="checkbox"> Ódio</label>
+                    </div>
+                </td>
+                <td class="track-box"></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Inventário Aberto Expandido -->
+    <div class="box" style="margin-bottom: 0;">
+        <h2>Inventário Expandido (Itens, Missões, Chaves e Anotações)</h2>
+        <div class="inventory-lines">
+            <div class="line" style="font-weight: bold;">Dinheiro (Zénites): </div>
+            <div class="line">3x Pitajus (5 HP por 24h por ingredientes)</div>
+            <div class="line">3x Cogumelo Cajado Púrpura (causa shaken)</div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
