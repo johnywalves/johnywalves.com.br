@@ -1,5 +1,4 @@
 import React from "react"
-
 import {
   PinSVG,
   ChainSVG,
@@ -8,6 +7,7 @@ import {
   PhoneSVG,
   EmailSVG,
 } from "../../assets/emoji"
+import { languagePropType } from "assets/lang/propTypes"
 import {
   ResumeWrapper,
   ResumeSection,
@@ -24,10 +24,8 @@ const getLast = (text) => text.split(" ")[text.split(" ").length - 1]
 const getYear = (text) => new Date(text).getFullYear()
 
 const getDescription = (text) => {
-  const withoutFirstBreak = text.split(", ").slice(1).join(", ")
-  const capitulation =
-    withoutFirstBreak[0].toUpperCase() + withoutFirstBreak.slice(1)
-  return capitulation
+  const parts = text.split(", ").slice(1).join(", ")
+  return parts.charAt(0).toUpperCase() + parts.slice(1)
 }
 
 const Person = ({ language }) => (
@@ -45,9 +43,7 @@ const Person = ({ language }) => (
       </li>
       <li>
         <img src={EmailSVG} alt="" width={12} height={12} />
-        <a href="mailto:contato@johnywalves.com.br">
-          contato@johnywalves.com.br
-        </a>
+        <a href="mailto:johnywalves@gmail.com">johnywalves@gmail.com</a>
         <img src={ChainSVG} alt="" width={12} height={12} />
         <a href="https://johnywalves.com.br">johnywalves.com.br</a>
         <img src={CatSVG} alt="" width={12} height={12} />
@@ -136,7 +132,10 @@ const ResumePage = ({ language }) => {
                   </time>{" "}
                 </h3>
 
-                {details && details.map((text) => <p>{text}</p>)}
+                {details &&
+                  details.map((text) => (
+                    <p dangerouslySetInnerHTML={{ __html: text }} />
+                  ))}
                 {thesis && <p>{thesis.title}</p>}
               </ResumeCourse>
             )
@@ -152,12 +151,7 @@ const ResumePage = ({ language }) => {
                 <ResumeCourse>
                   <p>
                     <span>{name}: </span>
-                    {items
-                      .map(({ name }) => name)
-                      .slice(0, -1)
-                      .join(", ")}
-                    {`, ${language.ui.labels.and} `}
-                    {items.map(({ name }) => name).slice(-1)}
+                    {items.map(({ name }) => name).join(", ")}
                   </p>
                 </ResumeCourse>
               </li>
@@ -188,7 +182,7 @@ const ResumePage = ({ language }) => {
           </h2>
           <hr />
           {language.certifications.list
-            .splice(0, 10)
+            .slice(0, 10)
             .map(({ date, name, issuer, hours }) => (
               <ResumeCourse key={date}>
                 <p>
@@ -210,6 +204,14 @@ const ResumePage = ({ language }) => {
       </ResumeSheet>
     </ResumeWrapper>
   )
+}
+
+Person.propTypes = {
+  language: languagePropType.isRequired,
+}
+
+ResumePage.propTypes = {
+  language: languagePropType.isRequired,
 }
 
 export default ResumePage

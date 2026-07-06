@@ -74,6 +74,17 @@ export const ResumeSheet = styled.div`
   background-color: var(--background);
   padding: 32px 48px 0;
   position: relative;
+
+  @media print {
+    height: 297mm;
+    page-break-after: always;
+    break-after: page;
+
+    &:last-of-type {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+  }
 `
 
 export const ResumeFooter = styled.footer`
@@ -86,6 +97,28 @@ export const ResumeFooter = styled.footer`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`
+
+export const ResumeFullContent = styled.div`
+  background-color: var(--background);
+  padding: 32px 48px 80px;
+`
+
+export const ResumeFullFooter = styled.footer`
+  display: none;
+
+  @media print {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 48px;
+    right: 48px;
+    padding: 0.5rem 0 1rem;
+    border-top: 1px solid var(--highlight);
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--background);
+  }
 `
 
 export const ResumeSection = styled.section`

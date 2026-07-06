@@ -43,12 +43,13 @@ const SectionComics = () => {
                   )
                 }
               }
-              comicImage {
+              featuredImageEn {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 750
+                    width: 1200
                     layout: CONSTRAINED
-                    placeholder: BLURRED
+                    placeholder: DOMINANT_COLOR
+                    formats: [AUTO, WEBP]
                   )
                 }
               }
@@ -87,8 +88,9 @@ const SectionComics = () => {
                 <HomeComicsImage
                   image={
                     (
-                      node.frontmatter.featuredImage ||
-                      node.frontmatter.comicImage
+                      Strings.getLanguage() === "pt"
+                        ? node.frontmatter.featuredImage
+                        : node.frontmatter.featuredImageEn || node.frontmatter.featuredImage
                     ).childImageSharp.gatsbyImageData
                   }
                   title={node.frontmatter.transcription}
