@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 import { neonHighlight } from "../styled"
 
@@ -10,15 +9,20 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: max(85vh, 650px);
+  min-height: max(40vh, 500px);
   overflow: hidden;
 
-  background: url("/vectors/waves.svg"),
+  background:
+    url("/vectors/waves.svg"),
     linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
   background-color: var(--background);
-  background-size: 50% 100%, 100%;
+  background-size:
+    50% 100%,
+    100%;
   background-repeat: no-repeat;
-  background-position: left bottom, center;
+  background-position:
+    left bottom,
+    center;
 `
 
 export const Content = styled.div`
@@ -28,6 +32,7 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 var(--36px);
+  z-index: 2;
 `
 
 export const Title = styled.h1`
@@ -47,24 +52,16 @@ export const Title = styled.h1`
   }
 
   & span:nth-child(2) {
-    font-size: 5rem;
-    line-height: 80%;
-  }
-
-  & span:nth-child(3) {
-    font-size: 8rem;
-    line-height: 90%;
+    font-size: 12rem;
+    line-height: 55%;
   }
 
   ${media.lessThan("large")`
     & span:nth-child(1) {
       font-size: 8rem;
-
-    & span:nth-child(2) {
-      font-size: 2.5rem;
     }
 
-    & span:nth-child(3) {
+    & span:nth-child(2) {
       font-size: 4rem;
     }
   `}
@@ -75,18 +72,9 @@ export const Title = styled.h1`
     }
 
     & span:nth-child(2) {
-      font-size: 1.25rem;
-    }
-
-    & span:nth-child(3) {
       font-size: 2rem;
     }
   `}
-`
-
-export const ImageCover = styled(GatsbyImage)`
-  height: 500px;
-  z-index: 1;
 `
 
 export const Cover = styled.div`

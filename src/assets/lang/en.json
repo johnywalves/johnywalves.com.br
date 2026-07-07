@@ -335,7 +335,7 @@
     ]
   },
   "projects": {
-    "title": "Projects",
+    "title": "Portfolio Showcase",
     "sections": {
       "featured": "Featured Projects",
       "others": "Other Projects"
@@ -344,102 +344,103 @@
     "viewFeatured": "View featured only",
     "list": [
       {
-        "name": "TCG Rio Preto",
-        "image": "tcgrp",
         "url": "https://tcgrp.com.br/",
-        "description": "Trading Card Games community platform in São José do Rio Preto and the surrounding area. Find events, stores, and players"
+        "name": "TCG Rio Preto",
+        "headline": "Full-stack com real-time updates",
+        "description": "Trading Card Games community platform in São José do Rio Preto and the surrounding area. Find events, stores, and players",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "tcgrp"
       },
       {
-        "name": "Use Python",
-        "sourceCode": "https://github.com/johnywalves/use-python",
-        "image": "usepython",
+        "url": "https://gigas.jwalves.com/",
+        "name": "Codex Gigas",
+        "headline": "Full-stack com real-time updates",
+        "description": "Trading Card Games community platform in São José do Rio Preto and the surrounding area. Find events, stores, and players",
+        "stack": ["Eleventy"],
+        "image": "tcgrp"
+      },
+      {
+        "url": "https://www.arquivosdaordem.com.br/",
+        "name": "Ordem dos Santos contra as Trevas",
+        "headline": "Full-stack com real-time updates",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a convallis ex, a dapibus odio. Integer placerat felis nec hendrerit posuere. In id nibh nec neque accumsan condimentum",
+        "stack": ["Eleventy"],
+        "image": "tcgrp"
+      },
+      {
         "url": "https://usepython.com.br/",
-        "description": "Introductory Python course covering development environment setup, process automation, data manipulation, analysis and visualization"
+        "sourceCode": "https://github.com/johnywalves/use-python",
+        "name": "Use Python",
+        "headline": "Full-stack com real-time updates",
+        "description": "Introductory Python course covering development environment setup, process automation, data manipulation, analysis and visualization",
+        "stack": ["Jekyll.js", "Ruby"],
+        "image": "usepython"
       },
       {
-        "name": "Machado Alves",
-        "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
-        "image": "machadoalves",
         "url": "https://marchadoalves.jwalves.com/",
-        "description": "Collection of short stories by various writers, written for the platform or public domain, to read and share"
+        "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
+        "name": "Machado Alves",
+        "headline": "Full-stack com real-time updates",
+        "description": "Collection of short stories by various writers, written for the platform or public domain, to read and share",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "machadoalves"
       },
       {
-        "name": "Devflix",
-        "sourceCode": "https://github.com/johnywalves/devflix",
-        "image": "devflix",
         "url": "https://devflix.jwalves.com/",
-        "description": "Platform for sharing knowledge about software development in Portuguese"
+        "sourceCode": "https://github.com/johnywalves/devflix",
+        "name": "Devflix",
+        "description": "Platform for sharing knowledge about software development in Portuguese",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "devflix"
       },
       {
-        "name": "Good Morning, Dev Teams!",
-        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
-        "image": "bomdia",
-        "imagePosition": "center",
         "url": "https://bomdiaequipesdev.com.br/",
-        "description": "A creative way to greet your fellow developers every morning"
+        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
+        "name": "Good Morning, Dev Teams!",
+        "description": "A creative way to greet your fellow developers every morning",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "bomdia",
+        "imagePosition": "center"
       },
       {
-        "name": "React • Next.js • TypeScript Boilerplate",
-        "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
-        "image": "boilerplate",
         "url": "https://next-pages-boilerplate.vercel.app",
-        "description": "Boilerplate with React, Next.js, Typescript, Storybook and Styled Components to get started fast with minimal configuration"
-      },
-      {
-        "name": "Daisy Bell",
-        "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "image": "daisybell",
-        "url": "https://daisy.johnywalves.com.br",
-        "description": "Project template for sharing images with text in context"
+        "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
+        "name": "React • Next.js • TypeScript Boilerplate",
+        "description": "Boilerplate with React, Next.js, Typescript, Storybook and Styled Components to get started fast with minimal configuration",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "boilerplate"
       },
       {
         "name": "CSS Animatic",
         "sourceCode": "https://github.com/johnywalves/cssanimatic",
         "image": "cssanimatic",
         "url": "https://johnywalves.github.io/cssanimatic",
-        "description": "CSS Animation made easy: tool to help create animations purely with CSS"
-      },
-      {
-        "name": "Johny W. Alves Portfolio",
-        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
-        "image": "thumbnail",
-        "url": "https://johnywalves.com.br",
-        "description": "This website: a portfolio and experimental space to share experiences"
-      },
-      {
-        "name": "Register Switch",
-        "sourceCode": "https://github.com/johnywalves/register-switch",
-        "image": "registerSwitch",
-        "url": "https://switch.jwalves.com/",
-        "description": "Simple time tracking tool for enabling and disabling tasks"
+        "description": "CSS Animation made easy: tool to help create animations purely with CSS",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Characters & Comics Creator",
         "sourceCode": "https://github.com/johnywalves/character-creator",
         "url": "https://comics.johnywalves.com.br",
         "image": "comicscreator",
-        "description": "Tool for generating and viewing SVG comic strips"
+        "description": "Tool for generating and viewing SVG comic strips",
+        "stack": ["React.js", "Next.js", "TypeScript"]
       },
       {
         "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
         "image": "firemakebetter",
         "url": "https://johnywalves.github.io/fire-make-better/",
-        "description": "Angular recipe organizer project, currently integrating with Spoonacular API"
+        "description": "Angular recipe organizer project, currently integrating with Spoonacular API",
+        "stack": ["React.js", "Angular.js", "TypeScript"]
       },
       {
         "name": "Map Navigation",
         "sourceCode": "https://github.com/johnywalves/wolt",
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
-        "description": "Map visualization with points of interest"
-      },
-      {
-        "name": "Steam Library",
-        "sourceCode": "https://github.com/johnywalves/steamlibrary",
-        "image": "steamLibrary",
-        "url": "https://johnywalves.github.io/steamlibrary/",
-        "description": "Steam game library view"
+        "description": "Map visualization with points of interest",
+        "stack": ["JavaScript"]
       },
       {
         "name": "GitHub Profile",
@@ -456,11 +457,12 @@
         "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
       },
       {
-        "name": "Sangue Quente",
+        "name": "Terra Quente",
         "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
         "image": "githubio",
         "url": "https://sanguequente.art/",
-        "description": "A collection of Werewolf: The Apocalypse chronicles"
+        "description": "A collection of Werewolf: The Apocalypse chronicles",
+        "stack": ["Jekyll"]
       }
     ]
   },
@@ -468,94 +470,136 @@
     "title": "Mini Projects",
     "list": [
       {
+        "name": "Johny W. Alves Portfolio",
+        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
+        "image": "thumbnail",
+        "url": "https://johnywalves.com.br",
+        "description": "This website: a portfolio and experimental space to share experiences",
+        "stack": ["Gatsby.js", "React.js", "TypeScript"]
+      },
+      {
+        "name": "Steam Library",
+        "sourceCode": "https://github.com/johnywalves/steamlibrary",
+        "image": "steamLibrary",
+        "url": "https://johnywalves.github.io/steamlibrary/",
+        "description": "Steam game library view",
+        "stack": ["JavaScript"]
+      },
+      {
+        "url": "https://daisy.johnywalves.com.br",
+        "sourceCode": "https://github.com/johnywalves/daisy-bell",
+        "name": "Daisy Bell",
+        "image": "daisybell",
+        "description": "Project template for sharing images with text in context",
+        "stack": ["React.js", "TypeScript"]
+      },
+      {
         "name": "Hamburger Menu",
         "description": "Full screen menu with three tracks",
-        "url": "/web/hamburgermenu.html"
+        "url": "/web/hamburgermenu.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Input Animation",
         "description": "Input field with animation effects",
-        "url": "/web/inputanimation.html"
+        "url": "/web/inputanimation.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Loading Spinner",
         "description": "Cyclic effect for resource loading indication",
-        "url": "/web/loadingspinner.html"
+        "url": "/web/loadingspinner.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "People Search",
         "description": "Introduction cards with text search",
-        "url": "/web/peoplesearch.html"
+        "url": "/web/peoplesearch.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Clock with Sky Simulation",
         "description": "Components and animations over time",
-        "url": "/web/clocksunandmon.html"
+        "url": "/web/clocksunandmon.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Sun and Moon",
         "description": "Dark/light transition animation",
-        "url": "/web/sunmoon.html"
+        "url": "/web/sunmoon.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Police Career Exam Questions",
         "description": "Resolved questions for police career studies",
-        "url": "/web/provascarreirapolicial/index.html"
+        "url": "/web/provascarreirapolicial/index.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Jumping Letters",
         "description": "Letter jumping animation",
-        "url": "/web/jumpingletters.html"
+        "url": "/web/jumpingletters.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Kanban Board",
         "description": "Kanban chart with drag and drop",
-        "url": "/web/kanban/index.html"
+        "url": "/web/kanban/index.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Neon Letters",
         "description": "Animated neon sign effect",
-        "url": "/web/neonletters.html"
+        "url": "/web/neonletters.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Skeleton Elements",
         "description": "Loading skeleton effect",
-        "url": "/web/skeleton.html"
+        "url": "/web/skeleton.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Profiles",
         "description": "Online profile collection",
-        "url": "/web/profiles.html"
+        "url": "/web/profiles.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Johny's Story",
         "description": "Personal history scrapbook",
-        "url": "https://johnywalves.github.io/johnys-story/"
+        "url": "https://johnywalves.github.io/johnys-story/",
+        "stack": ["JavaScript"]
       },
       {
         "name": "World Population Dashboard",
         "description": "Collection of graphs for world population data",
-        "url": "https://johnywalves.com.br/web/world_d3/"
+        "url": "https://johnywalves.com.br/web/world_d3/",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Numbers in Words",
         "description": "Random numbers and word conversion",
-        "url": "/web/numberinwords.html"
+        "url": "/web/numberinwords.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Birthday Invitation",
         "description": "2023 party invitation",
-        "url": "/niver"
+        "url": "/niver",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Kalyra",
         "description": "D&D 5th Edition Character Sheet - Half-Elf",
-        "url": "https://kalyra.jwalves.com/"
+        "url": "https://kalyra.jwalves.com/",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Screen Size Test",
         "description": "Test screen sizes for web devices",
-        "url": "/web/sizescreentest.html"
+        "url": "/web/sizescreentest.html",
+        "stack": ["JavaScript"]
       }
     ]
   },

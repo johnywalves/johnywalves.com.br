@@ -3,27 +3,17 @@ import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Strings from "components/strings"
-import { Header } from "components/Cards"
 
 import TriangleNeon from "assets/vectors/TriangleNeon"
 
-import OnePage from "./OnePage"
-import Highlight from "./Highlight"
-import Project from "./Project"
-import Other from "./Other"
+import ProjectCard from "./ProjectCard"
 import Hero from "./Hero"
 import {
   PageWrapper,
-  BoxTop,
-  BoxSide,
-  BoxRight,
-  ContainerHighlight,
-  ContainerSecondHighlight,
-  ContainerOpenPage,
   ContainerProject,
-  List,
+  BoxSide,
+  BoxTop,
   ListOther,
-  ListOnePage,
 } from "./styled"
 
 const ProjectPage = () => {
@@ -90,7 +80,7 @@ const ProjectPage = () => {
     <PageWrapper>
       <Hero />
 
-      <ContainerHighlight>
+      <ContainerProject>
         <BoxTop>
           <Parallax translateY={[-30, 50]}>
             <TriangleNeon height="400" width="400" />
@@ -99,55 +89,17 @@ const ProjectPage = () => {
             <TriangleNeon height="250" width="250" />
           </Parallax>
         </BoxTop>
-
-        {Strings.projects.list.slice(0, 1).map((project, index) => (
-          <Highlight key={index} {...project} />
-        ))}
-      </ContainerHighlight>
-
-      <ContainerProject>
-        <Header title={Strings.projects.sections.featured} />
-        <List>
-          {Strings.projects.list.slice(1, 4).map((project, index) => (
-            <Project
-              key={index}
-              {...project}
-              image={getImage(project.image).childImageSharp.gatsbyImageData}
-              alt=""
-            />
-          ))}
-        </List>
-
-        <BoxRight>
-          <Parallax translateY={[50, 200]}>
-            <TriangleNeon />
-          </Parallax>
-        </BoxRight>
-      </ContainerProject>
-
-      <ContainerSecondHighlight>
-        {Strings.projects.list.slice(4, 5).map((project, index) => (
-          <Highlight key={index} revert {...project} />
-        ))}
-      </ContainerSecondHighlight>
-
-      <ContainerProject>
-        <Header title={Strings.projects.sections.others} />
+ 
         <ListOther>
-          {Strings.projects.list.slice(5).map((project, index) => (
-            <Other key={index} {...project} />
+          {Strings.projects.list.map((project) => (
+            <ProjectCard
+              key={project.name}
+              {...project}
+              image={getImage(project.image).childImageSharp?.gatsbyImageData}
+            />
           ))}
         </ListOther>
       </ContainerProject>
-
-      <ContainerOpenPage>
-        <Header title={Strings.miniProjects.title} dark />
-        <ListOnePage>
-          {Strings.miniProjects.list.map((props, index) => (
-            <OnePage key={index} {...props} />
-          ))}
-        </ListOnePage>
-      </ContainerOpenPage>
 
       <BoxSide>
         <Parallax translateY={[0, 300]}>

@@ -2,10 +2,15 @@ import styled, { css } from "styled-components"
 import media from "styled-media-query"
 
 export const neonHighlight = css`
-  text-shadow: 0 0 7px var(--highlight), 0 0 10px var(--highlight),
-    0 0 21px var(--highlight), 0 0 42px var(--highlight-light),
-    0 0 82px var(--highlight-light), 0 0 92px var(--highlight-light),
-    0 0 102px var(--highlight-light), 0 0 151px var(--highlight-light);
+  text-shadow:
+    0 0 7px var(--highlight),
+    0 0 10px var(--highlight),
+    0 0 21px var(--highlight),
+    0 0 42px var(--highlight-light),
+    0 0 82px var(--highlight-light),
+    0 0 92px var(--highlight-light),
+    0 0 102px var(--highlight-light),
+    0 0 151px var(--highlight-light);
 `
 
 export const lightHighlight = css`
@@ -68,54 +73,19 @@ export const SectionContainer = styled.section`
   padding-bottom: var(--72px);
 `
 
-export const ContainerHighlight = styled(SectionContainer)`
+export const ContainerProject = styled(SectionContainer)`
   position: relative;
-
-  background: url("/vectors/neon-particles-bottom.svg");
-  background-color: var(--background);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-`
-
-export const ContainerSecondHighlight = styled(SectionContainer)`
-  background: url("/vectors/neon-particles-top.svg"),
-    url("/vectors/neon-particles-bottom.svg");
-  background-color: var(--background);
-  background-repeat: no-repeat;
-  background-position: top left, bottom right;
 `
 
 export const ContainerOpenPage = styled(SectionContainer)`
   position: relative;
 `
 
-export const ContainerProject = styled(SectionContainer)`
-  background: url("/vectors/lowpoly-shadow.svg");
-  background-color: var(--highlight);
-`
-
-export const List = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: var(--72px) 0 var(--24px);
-  gap: var(--36px);
-
-  ${media.lessThan("large")`
-    grid-template-columns: repeat(2, 1fr);
-  `}
-
-  ${media.lessThan("medium")`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  `}
-`
-
 export const ListOther = styled.ul`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: var(--72px) 0 var(--24px);
-  gap: var(--36px);
+  gap: 1.5rem;
 
   @media (max-width: 1400px) {
     grid-template-columns: repeat(4, 1fr);
@@ -131,19 +101,5 @@ export const ListOther = styled.ul`
 
   ${media.lessThan("small")`
     grid-template-columns: 1fr;
-  `}
-`
-
-export const ListOnePage = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: var(--72px) 0 var(--24px);
-  gap: var(--36px);
-
-  ${media.lessThan("medium")`
-    justify-content: center;
   `}
 `
