@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useMemo } from "react"
 import { Parallax } from "react-scroll-parallax"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -8,18 +8,26 @@ import TriangleNeon from "assets/vectors/TriangleNeon"
 
 import ProjectCard from "./ProjectCard"
 import Hero from "./Hero"
+import Button from "components/Button"
 import {
   PageWrapper,
   ContainerProject,
   BoxSide,
   BoxTop,
   ListOther,
+  FilterContainer,
 } from "./styled"
 
 const ProjectPage = () => {
   const images = useStaticQuery(graphql`
     query {
-      tcgrp: file(relativePath: { eq: "tcgrp.png" }) {
+      tcgrp: file(relativePath: { eq: "tcgrp.jpg" }) {
+        ...extractFieldsPage
+      }
+      gigas: file(relativePath: { eq: "gigas.jpg" }) {
+        ...extractFieldsPage
+      }
+      arquivosdaordem: file(relativePath: { eq: "arquivosdaordem.jpg" }) {
         ...extractFieldsPage
       }
       usepython: file(relativePath: { eq: "usepython.jpg" }) {
@@ -76,6 +84,30 @@ const ProjectPage = () => {
   `)
   const getImage = (name) => images[name] || images.firemakebetter
 
+  const [activeFilter, setActiveFilter] = useState(null)
+
+  const topTechs = ["Next.js", "Eleventy", "Jekyll"]
+
+  const handleFilterClick = (filter) => {
+    setActiveFilter(activeFilter === filter ? null : filter)
+  }
+
+  const displayedProjects = useMemo(() => {
+    if (activeFilter === "Outdated") {
+      return Strings.projects.outdated || []
+    }
+    if (activeFilter) {
+      return Strings.projects.list.filter((p) => {
+        if (!p.stack) return false
+        const normalizedStack = p.stack.map((s) =>
+          s === "React.js" ? "React" : s
+        )
+        return normalizedStack.includes(activeFilter)
+      })
+    }
+    return Strings.projects.list
+  }, [activeFilter])
+
   return (
     <PageWrapper>
       <Hero />
@@ -89,9 +121,29 @@ const ProjectPage = () => {
             <TriangleNeon height="250" width="250" />
           </Parallax>
         </BoxTop>
- 
+
+        <FilterContainer>
+          {topTechs.map((tech) => (
+            <Button
+              key={tech}
+              selected={activeFilter === tech}
+              onClick={() => handleFilterClick(tech)}
+              light
+            >
+              {tech}
+            </Button>
+          ))}
+          <Button
+            selected={activeFilter === "Outdated"}
+            onClick={() => handleFilterClick("Outdated")}
+            light
+          >
+            Outdated
+          </Button>
+        </FilterContainer>
+
         <ListOther>
-          {Strings.projects.list.map((project) => (
+          {displayedProjects.map((project) => (
             <ProjectCard
               key={project.name}
               {...project}

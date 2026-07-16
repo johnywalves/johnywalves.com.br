@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import media from "styled-media-query"
 
 import { neonHighlight } from "../styled"
@@ -12,17 +12,22 @@ export const Wrapper = styled.section`
   min-height: max(40vh, 500px);
   overflow: hidden;
 
-  background:
-    url("/vectors/waves.svg"),
-    linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
+  background: linear-gradient(90deg, transparent 50%, var(--highlight) 50%);
   background-color: var(--background);
-  background-size:
-    50% 100%,
-    100%;
-  background-repeat: no-repeat;
-  background-position:
-    left bottom,
-    center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: url("/vectors/waves.svg") left bottom no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
 `
 
 export const Content = styled.div`
@@ -86,3 +91,38 @@ export const Cover = styled.div`
   height: 100%;
   background: url("/vectors/lowpoly-shadow.svg");
 `
+
+const blink = keyframes`
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+`
+
+export const CodeWrapper = styled.div`
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  width: 40%;
+  max-width: 600px;
+  color: var(--white);
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  z-index: 2;
+  pointer-events: none;
+
+  ${media.lessThan("medium")`
+    font-size: 0.8rem;
+    left: 2%;
+    width: 46%;
+    bottom: 20%;
+  `}
+
+  &::after {
+    content: '|';
+    animation: ${blink} 1s step-end infinite;
+  }
+`
+

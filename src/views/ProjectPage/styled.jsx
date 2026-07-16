@@ -83,23 +83,29 @@ export const ContainerOpenPage = styled(SectionContainer)`
 
 export const ListOther = styled.ul`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: var(--72px) 0 var(--24px);
   gap: 1.5rem;
 
   @media (max-width: 1400px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media (max-width: 1150px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  ${media.lessThan("medium")`
+  @media (max-width: 1150px) {
     grid-template-columns: repeat(2, 1fr);
-  `}
+  }
 
-  ${media.lessThan("small")`
-    grid-template-columns: 1fr;
+  ${media.lessThan("medium")`
+    grid-template-columns: repeat(1, 1fr);
   `}
+`
+
+export const FilterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: -2rem;
+  flex-wrap: wrap;
 `

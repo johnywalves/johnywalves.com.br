@@ -31,11 +31,11 @@
     "files": [
       {
         "language": "English",
-        "path": "/docs/johnywalves_frontend_engineer.pdf"
+        "path": "/docs/Johny_W_Alves-Frontend_Engineer.pdf"
       },
       {
         "language": "Portuguese",
-        "path": "/docs/johnywalves_engenheiro_frontend.pdf"
+        "path": "/docs/Johny_W_Alves-Desenvolvedor_Frontend.pdf"
       }
     ]
   },
@@ -346,34 +346,49 @@
       {
         "url": "https://tcgrp.com.br/",
         "name": "TCG Rio Preto",
-        "headline": "Full-stack com real-time updates",
-        "description": "Trading Card Games community platform in São José do Rio Preto and the surrounding area. Find events, stores, and players",
-        "stack": ["React.js", "Next.js", "TypeScript"],
+        "headline": "TCG and RPG community platform with multi-channel engagement (web, WhatsApp, email)",
+        "description": "Full-stack platform for the Trading Card Games and RPG community in São José do Rio Preto and the surrounding region. Aggregates events from local game stores, manages RPG session scheduling, and reaches players through a public site, an automated WhatsApp bot, and scheduled email digests — all backed by a headless CMS and a Turborepo monorepo.",
+        "stack": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Strapi",
+          "TailwindCSS",
+          "TypeScript",
+          "Turborepo"
+        ],
+        "badge": "SPOTLIGHT",
+        "year": 2026,
         "image": "tcgrp"
       },
       {
         "url": "https://gigas.jwalves.com/",
         "name": "Codex Gigas",
-        "headline": "Full-stack com real-time updates",
-        "description": "Trading Card Games community platform in São José do Rio Preto and the surrounding area. Find events, stores, and players",
-        "stack": ["Eleventy"],
-        "image": "tcgrp"
+        "headline": "Personal Digital Garden & Zettelkasten",
+        "description": "A highly optimized, statically generated knowledge base. It features interconnected notes, automatic backlinks, wikilinks resolution, and an offline full-text search engine.",
+        "stack": ["Eleventy", "Lunr.js", "Markdown"],
+        "year": 2026,
+        "image": "gigas"
       },
       {
         "url": "https://www.arquivosdaordem.com.br/",
-        "name": "Ordem dos Santos contra as Trevas",
-        "headline": "Full-stack com real-time updates",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a convallis ex, a dapibus odio. Integer placerat felis nec hendrerit posuere. In id nibh nec neque accumsan condimentum",
-        "stack": ["Eleventy"],
-        "image": "tcgrp"
+        "name": "Order of Saints Against Darkness",
+        "headline": "Episodic web-book and solarpunk worldbuilding",
+        "description": "A literature and worldbuilding project set in an optimistic yet mysterious solarpunk universe. Built as a static web-book optimized for long-form reading, it explores character-driven mysteries where magic operates under strict logic, mathematics, and physiological costs.",
+        "stack": ["Eleventy", "Markdown", "Vanilla CSS"],
+        "year": 2026,
+        "image": "arquivosdaordem"
       },
       {
         "url": "https://usepython.com.br/",
         "sourceCode": "https://github.com/johnywalves/use-python",
         "name": "Use Python",
-        "headline": "Full-stack com real-time updates",
-        "description": "Introductory Python course covering development environment setup, process automation, data manipulation, analysis and visualization",
-        "stack": ["Jekyll.js", "Ruby"],
+        "headline": "Introductory Python Course",
+        "description": "Introductory Python course covering development environment setup, process automation, data manipulation, analysis, and visualization.",
+        "stack": ["Jekyll", "Python", "CSS Modules"],
+        "badge": "FEATURED",
+        "year": 2024,
         "image": "usepython"
       },
       {
@@ -383,32 +398,27 @@
         "headline": "Full-stack com real-time updates",
         "description": "Collection of short stories by various writers, written for the platform or public domain, to read and share",
         "stack": ["React.js", "Next.js", "TypeScript"],
+        "year": 2022,
         "image": "machadoalves"
-      },
-      {
-        "url": "https://devflix.jwalves.com/",
-        "sourceCode": "https://github.com/johnywalves/devflix",
-        "name": "Devflix",
-        "description": "Platform for sharing knowledge about software development in Portuguese",
-        "stack": ["React.js", "Next.js", "TypeScript"],
-        "image": "devflix"
       },
       {
         "url": "https://bomdiaequipesdev.com.br/",
         "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
         "name": "Good Morning, Dev Teams!",
-        "description": "A creative way to greet your fellow developers every morning",
-        "stack": ["React.js", "Next.js", "TypeScript"],
+        "headline": "Automação + DevOps",
+        "description": "Automatic motivational message system for development teams. Slack integration, team customization and engagement metrics.",
+        "stack": [
+          "Node.js",
+          "Slack API",
+          "TypeScript",
+          "Cron",
+          "Redis",
+          "~3,200 loc"
+        ],
+        "badge": "SPOTLIGHT",
+        "year": 2023,
         "image": "bomdia",
         "imagePosition": "center"
-      },
-      {
-        "url": "https://next-pages-boilerplate.vercel.app",
-        "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
-        "name": "React • Next.js • TypeScript Boilerplate",
-        "description": "Boilerplate with React, Next.js, Typescript, Storybook and Styled Components to get started fast with minimal configuration",
-        "stack": ["React.js", "Next.js", "TypeScript"],
-        "image": "boilerplate"
       },
       {
         "name": "CSS Animatic",
@@ -427,34 +437,12 @@
         "stack": ["React.js", "Next.js", "TypeScript"]
       },
       {
-        "name": "Fire Make Better",
-        "sourceCode": "https://github.com/johnywalves/fire-make-better",
-        "image": "firemakebetter",
-        "url": "https://johnywalves.github.io/fire-make-better/",
-        "description": "Angular recipe organizer project, currently integrating with Spoonacular API",
-        "stack": ["React.js", "Angular.js", "TypeScript"]
-      },
-      {
         "name": "Map Navigation",
         "sourceCode": "https://github.com/johnywalves/wolt",
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
         "description": "Map visualization with points of interest",
         "stack": ["JavaScript"]
-      },
-      {
-        "name": "GitHub Profile",
-        "sourceCode": "https://github.com/johnywalves/johnywalves.github.io/",
-        "image": "githubio",
-        "url": "https://johnywalves.github.io/",
-        "description": "Business card on GitHub.io"
-      },
-      {
-        "name": "Card Game in React",
-        "sourceCode": "https://github.com/johnywalves/card-game-react",
-        "image": "githubio",
-        "url": "https://card-game-in-react.vercel.app",
-        "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
       },
       {
         "name": "Terra Quente",
@@ -464,11 +452,46 @@
         "description": "A collection of Werewolf: The Apocalypse chronicles",
         "stack": ["Jekyll"]
       }
-    ]
-  },
-  "miniProjects": {
-    "title": "Mini Projects",
-    "list": [
+    ],
+    "outdated": [
+      {
+        "name": "Fire Make Better",
+        "sourceCode": "https://github.com/johnywalves/fire-make-better",
+        "image": "firemakebetter",
+        "url": "https://johnywalves.github.io/fire-make-better/",
+        "description": "Angular recipe organizer project, currently integrating with Spoonacular API",
+        "stack": ["React.js", "Angular.js", "TypeScript"]
+      },
+      {
+        "name": "GitHub Profile",
+        "sourceCode": "https://github.com/johnywalves/johnywalves.github.io/",
+        "image": "githubio",
+        "url": "https://johnywalves.github.io/",
+        "description": "Business card on GitHub.io"
+      },
+      {
+        "url": "https://devflix.jwalves.com/",
+        "sourceCode": "https://github.com/johnywalves/devflix",
+        "name": "Devflix",
+        "description": "Platform for sharing knowledge about software development in Portuguese",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "devflix"
+      },
+      {
+        "name": "Card Game in React",
+        "sourceCode": "https://github.com/johnywalves/card-game-react",
+        "image": "githubio",
+        "url": "https://card-game-in-react.vercel.app",
+        "description": "Developing a game like Magic: The Gathering, Hearthstone and Yu-Gi-Oh! from concept to delivery with React"
+      },
+      {
+        "url": "https://next-pages-boilerplate.vercel.app",
+        "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
+        "name": "React • Next.js • TypeScript Boilerplate",
+        "description": "Boilerplate with React, Next.js, Typescript, Storybook and Styled Components to get started fast with minimal configuration",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "boilerplate"
+      },
       {
         "name": "Johny W. Alves Portfolio",
         "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
@@ -685,10 +708,9 @@
         "company": "WeFit (outsourcing for Porto Seguro)",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "• Engineered a scalable front-end ecosystem and reusable component libraries using React, Next.js, and TypeScript for Porto Seguro's brokerage operations, accelerating development velocity by 36% and ensuring 100% design consistency across all modules.",
-          "• Architected a high-performance brokerage management platform with a hybrid Next.js architecture (SSR/CSR), improving page load times by 36% and delivering a seamless experience for high‑volume broker workflows.",
-          "• Elevated engineering excellence by leading technical code reviews and mentoring junior developers in React and Next.js best practices, proactively mapping errors before user reports, establishing test suites, and enabling rapid incident response – reducing time‑to‑fix across all brokerage modules.",
-          "• Designed high-impact analytical dashboards using Recharts, transforming complex financial datasets into real‑time visual insights that empowered Porto Seguro's stakeholders to make faster, data‑driven strategic decisions."
+          "• Designed a scalable frontend ecosystem for Porto Seguro's brokerage operations using React, Next.js, JavaScript, TypeScript, Recharts and Tailwind CSS, including reusable component libraries that accelerated development by 36% and ensured 100% visual consistency, plus a hybrid SSR/CSR architecture that cut page load times by 36% for high‑volume operations. The CI/CD pipeline (Jenkins) with automated tests (Jest, Playwright) and AWS hosting (S3, CloudFront) ensured that every deployment met performance and reliability standards.",
+          "• Elevated engineering excellence by leading code reviews, mentoring junior developers in React/Next.js best practices, and proactively mapping errors before users noticed them. I also established comprehensive test suites with Jest (unit/integration) and Playwright (end‑to‑end), integrated into the CI/CD pipeline (Jenkins), thereby reducing incident response time across all modules and improving release confidence.",
+          "• Built high‑impact analytical dashboards with Recharts, transforming complex financial data into real‑time visual insights that empowered Porto Seguro stakeholders to make faster, data‑driven strategic decisions."
         ]
       },
       {
@@ -697,9 +719,9 @@
         "company": "Seguralta",
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
-          "• Architected and launched Seguralta Core, a comprehensive insurance brokerage platform built with React, Next.js, and FastAPI, providing franchisees with real-time access to commissions, renewals, and policy expiration data, streamlining critical business operations.",
-          "• Drove team growth by mentoring junior developers to independent delivery through structured code reviews and GitFlow practices, and established a continuous validation pipeline with ESLint, unit tests (Jest), and end-to-end tests (Cypress), eliminating regressions and ensuring release confidence.",
-          "• Engineered a robust quality and monitoring ecosystem: Integrated New Relic for performance monitoring, SonarQube for code quality analysis, and comprehensive testing (Jest, Testing Library, Cypress), while automating deployments with BitBucket Pipelines to optimize Core Web Vitals and ensure system reliability."
+          "• At Seguralta, I built an insurance platform from scratch using microfrontends (Module Federation), design systems, and integrations with REST APIs and GraphQL (via DatoCMS for headless content), delivering real‑time dashboards with load times under 1.5 seconds and supporting peaks of 3x more users without performance degradation.",
+          "• Accelerated team growth by mentoring junior developers to independent delivery through structured code reviews and GitFlow practices, and established a continuous validation pipeline with ESLint, unit tests (Jest), and end‑to‑end tests (Cypress), eliminating regressions and ensuring release confidence.",
+          "• Implemented a quality and monitoring ecosystem with New Relic and SonarQube, automating deployments with BitBucket Pipelines and GitLab CI/CD to optimize Core Web Vitals, using Turborepo to manage the monorepo and AWS (S3, CloudFront, Lambda) for hosting and continuous integration."
         ]
       },
       {
@@ -709,11 +731,9 @@
         "location": "São Paulo, Brazil (Remote)",
         "project": "CREA-SP – Technical Responsibility Notes (ART) Platform",
         "highlights": [
-          "• Architected and developed the front-end for CREA-SP's electronic ART platform, enabling engineering professionals across São Paulo to submit and manage Technical Responsibility Notes for works and services through a modern, intuitive digital interface.",
-          "• Designed and implemented a micro-frontend architecture using Module Federation within a monorepo, ensuring modularity, scalability, and the ability for multiple teams to develop and deploy features independently.",
-          "• Built reusable, type-safe components with React, Next.js, and TypeScript, establishing a solid foundation for continuous platform evolution and maintainability.",
-          "• Delivered a consistent, accessible UI library with Chakra UI, accelerating development and ensuring a professional, responsive user experience across all platform modules.",
-          "• Managed the full development lifecycle in Azure DevOps, including version control, CI/CD pipelines, and automated quality checks, ensuring reliable and efficient releases."
+          "• Developed the front-end for CREA-SP's electronic ART platform, enabling engineering professionals to digitally register and manage Technical Responsibility Notes, using reusable, type-safe components (React/Next.js/TypeScript) and a consistent, accessible UI library with Chakra UI.",
+          "• Designed and implemented a micro-frontend architecture with Module Federation in a monorepo managed with Turborepo, ensuring modularity, scalability, and autonomy for multiple teams to develop and deploy features independently.",
+          "• Managed the full development lifecycle in Azure DevOps, including version control, CI/CD pipelines, and automated quality checks, ensuring reliable, efficient, and high‑quality releases from build to production."
         ]
       },
       {

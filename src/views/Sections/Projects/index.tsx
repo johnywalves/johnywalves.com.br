@@ -20,7 +20,13 @@ type ImagesQuery = {
 const SectionProjects = () => {
   const images = useStaticQuery<ImagesQuery>(graphql`
     query {
-      tcgrp: file(relativePath: { eq: "tcgrp.png" }) {
+      tcgrp: file(relativePath: { eq: "tcgrp.jpg" }) {
+        ...extractFieldsPage
+      }
+      gigas: file(relativePath: { eq: "gigas.jpg" }) {
+        ...extractFieldsPage
+      }
+      arquivosdaordem: file(relativePath: { eq: "arquivosdaordem.jpg" }) {
         ...extractFieldsPage
       }
       usepython: file(relativePath: { eq: "usepython.jpg" }) {

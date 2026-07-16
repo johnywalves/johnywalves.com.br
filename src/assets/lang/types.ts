@@ -103,10 +103,7 @@ export type LangFile = {
       description: string
       imagePosition?: string
     }>
-  }
-  miniProjects: {
-    title: string
-    list: Array<{
+    outdated: Array<{
       name: string
       description: string
       url: string

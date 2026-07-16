@@ -13,6 +13,10 @@ import {
   ProjectCardImageOverlay,
   ProjectCardBody,
   ProjectCardHeader,
+  ProjectCardMetaRow,
+  ProjectCardMeta,
+  ProjectCardBadge,
+  ProjectCardYear,
   ProjectCardTitle,
   ProjectCardLinks,
   ProjectCardLink,
@@ -31,9 +35,11 @@ const ProjectCard = ({
   description,
   stack,
   image,
+  badge,
+  year,
 }) => (
   <ProjectCardWrapper>
-    <ProjectCardGlow />
+    <ProjectCardGlow $badgeType={badge} />
 
     {image && (
       <ProjectCardImageWrapper>
@@ -44,34 +50,40 @@ const ProjectCard = ({
 
     <ProjectCardBody>
       <ProjectCardHeader>
-        <ProjectCardTitle>{name}</ProjectCardTitle>
-        <ProjectCardLinks>
-          <ProjectCardLink
-            href={url}
-            aria-label={`${Strings.ui.labels.visit} ${name}`}
-            target="_blank"
-            rel="nofollow noreferrer"
-          >
-            <ExternalLink />
-          </ProjectCardLink>
-          {sourceCode && (
+        <ProjectCardMetaRow>
+          <ProjectCardMeta>
+            {badge && <ProjectCardBadge $type={badge}>{badge}</ProjectCardBadge>}
+            {year && <ProjectCardYear>{year}</ProjectCardYear>}
+          </ProjectCardMeta>
+          <ProjectCardLinks>
+            {sourceCode && (
+              <ProjectCardLink
+                href={sourceCode}
+                aria-label={`${Strings.ui.labels.sourceCode} ${name}`}
+                target="_blank"
+                rel="nofollow noreferrer"
+              >
+                <Github />
+              </ProjectCardLink>
+            )}
             <ProjectCardLink
-              href={sourceCode}
-              aria-label={`${Strings.ui.labels.sourceCode} ${name}`}
+              href={url}
+              aria-label={`${Strings.ui.labels.visit} ${name}`}
               target="_blank"
               rel="nofollow noreferrer"
             >
-              <Github />
+              <ExternalLink />
             </ProjectCardLink>
-          )}
-        </ProjectCardLinks>
+          </ProjectCardLinks>
+        </ProjectCardMetaRow>
+        <ProjectCardTitle>{name}</ProjectCardTitle>
       </ProjectCardHeader>
 
       <ProjectCardDescription>{description}</ProjectCardDescription>
 
       {headline && (
         <ProjectCardHeadline>
-          <ProjectCardGlowDot />
+          <ProjectCardGlowDot $type={badge} />
           {headline}
         </ProjectCardHeadline>
       )}
@@ -95,6 +107,8 @@ ProjectCard.propTypes = {
   description: PropTypes.string.isRequired,
   stack: PropTypes.arrayOf(PropTypes.string),
   image: PropTypes.object,
+  badge: PropTypes.string,
+  year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default ProjectCard

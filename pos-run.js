@@ -18,28 +18,37 @@ async function getImage(servingUrl, page, slug) {
 
 async function getResumeAndCoverLetter(servingUrl, page, language) {
   const position =
-    language === "en" ? "frontend_engineer" : "engenheiro_frontend"
+    language === "en" ? "Frontend_Engineer" : "Desenvolvedor_Frontend"
 
   // Resume
-  await page.goto(`${servingUrl}/resume/${language}/index.html`, {
-    waitUntil: "networkidle0",
-  })
-
-  await page.pdf({
-    path: `./public/docs/johnywalves_${position}.pdf`,
-    printBackground: false,
-    format: "A4",
-  })
-
-  // Full Resume
   await page.goto(`${servingUrl}/resume/full-${language}/index.html`, {
     waitUntil: "networkidle0",
   })
 
   await page.pdf({
-    path: `./public/docs/johnywalves_${position}_full.pdf`,
+    path: `./public/docs/Johny_W_Alves-${position}-Full.pdf`,
     printBackground: false,
     format: "A4",
+  })
+
+  // Full Resume
+  await page.goto(`${servingUrl}/resume/${language}/index.html`, {
+    waitUntil: "networkidle0",
+  })
+
+  await page.pdf({
+    path: `./public/docs/Johny_W_Alves-${position}.pdf`,
+    printBackground: false,
+    format: "A4",
+    displayHeaderFooter: true,
+    headerTemplate: "<span></span>",
+    footerTemplate: `
+      <div style="font-size: 12px; width: 100%; display: flex; justify-content: space-between; margin: 0 48px 16px; border-top: 1px solid #e0138c; padding-top: 8px; padding-bottom: 16px; color: #555; font-family: sans-serif;">
+        <span>johnywalves.com.br</span>
+        <span><span class="pageNumber"></span>/<span class="totalPages"></span></span>
+      </div>
+    `,
+    preferCSSPageSize: true,
   })
 
   // Cover Letter
@@ -48,7 +57,7 @@ async function getResumeAndCoverLetter(servingUrl, page, language) {
   })
 
   await page.pdf({
-    path: `./public/docs/johnywalves_${position}_cover.pdf`,
+    path: `./public/docs/Johny_W_Alves_${position}_cover.pdf`,
     printBackground: true,
     format: "A4",
   })

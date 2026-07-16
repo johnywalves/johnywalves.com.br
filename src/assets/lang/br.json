@@ -1,8 +1,8 @@
 {
   "seo": {
-    "description": "Meu nome é Johny William de Oliveira Alves, Engenheiro Frontend Sênior com <strong>mais de 20 anos de experiência</strong> entregando aplicações web escaláveis em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, impulsionando <strong>99,9% de uptime</strong> e milhões de usuários em projetos de alto impacto para clientes como <strong>Coca-Cola</strong> e Anbima. Atualmente cursando Mestrado em Ciência da Computação, com especialização em <strong>Deep Learning e IA</strong>, com forte foco em mentoria e automação CI/CD para acelerar a entrega de software.",
-    "position": "Engenheiro Front-end Sênior",
-    "headline": "Senior Frontend Engineer | React & Next.js Specialist | Scalable SaaS Applications | Agile & CI/CD Advocate"
+    "description": "Meu nome é Johny William de Oliveira Alves, Desenvolvedor Frontend Sênior com <strong>mais de 20 anos de experiência</strong> entregando aplicações web escaláveis em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, impulsionando <strong>99,9% de uptime</strong> e milhões de usuários em projetos de alto impacto para clientes como <strong>Coca-Cola</strong> e Anbima. Atualmente cursando Mestrado em Ciência da Computação, com especialização em <strong>Deep Learning e IA</strong>, com forte foco em mentoria e automação CI/CD para acelerar a entrega de software.",
+    "position": "Desenvolvedor Frontend Sênior",
+    "headline": "Desenvolvedor Frontend Sênior | React & Next.js Specialist | Scalable SaaS Applications | Agile & CI/CD Advocate"
   },
   "personal": {
     "name": "Johny W. Alves",
@@ -31,11 +31,11 @@
     "files": [
       {
         "language": "Inglês",
-        "path": "/docs/johnywalves_frontend_engineer.pdf"
+        "path": "/docs/Johny_W_Alves-Frontend_Engineer.pdf"
       },
       {
         "language": "Português",
-        "path": "/docs/johnywalves_engenheiro_frontend.pdf"
+        "path": "/docs/Johny_W_Alves-Desenvolvedor_Frontend.pdf"
       }
     ]
   },
@@ -344,102 +344,123 @@
     "viewFeatured": "Ver apenas destaques",
     "list": [
       {
-        "name": "TCG Rio Preto",
-        "image": "tcgrp",
         "url": "https://tcgrp.com.br/",
-        "description": "Plataforma da comunidade de jogos de cartas colecionáveis ​​em São José do Rio Preto e arredores. Encontre eventos, lojas e jogadores"
+        "name": "TCG Rio Preto",
+        "headline": "Full-stack com real-time updates",
+        "description": "Plataforma completa para jogadores de Trading Card Game da região de Rio Preto. Gerenciamento de torneios, banco de cartas e rankings em tempo real.",
+        "stack": [
+          "React",
+          "Next.js",
+          "Node.js",
+          "PostgreSQL",
+          "Strapi",
+          "TailwindCSS",
+          "TypeScript",
+          "Turborepo"
+        ],
+        "badge": "SPOTLIGHT",
+        "year": 2026,
+        "image": "tcgrp"
       },
       {
-        "name": "Use Python",
-        "sourceCode": "https://github.com/johnywalves/use-python",
-        "image": "usepython",
+        "url": "https://gigas.jwalves.com/",
+        "name": "Codex Gigas",
+        "headline": "Jardim Digital Pessoal & Zettelkasten",
+        "description": "Uma base de conhecimento altamente otimizada e gerada estaticamente. Possui notas interconectadas, backlinks automáticos, resolução de wikilinks e um mecanismo de busca offline de texto completo.",
+        "stack": ["Eleventy", "Lunr.js", "Markdown"],
+        "year": 2026,
+        "image": "gigas"
+      },
+      {
+        "url": "https://www.arquivosdaordem.com.br/",
+        "name": "Ordem dos Santos contra as Trevas",
+        "headline": "Web-book episódico e worldbuilding solarpunk",
+        "description": "Um projeto de literatura e worldbuilding situado em um universo solarpunk otimista, mas misterioso. Construído como um web-book estático otimizado para leitura longa, explora mistérios guiados por personagens onde a magia opera sob lógica rigorosa, matemática e custos fisiológicos.",
+        "stack": ["Eleventy", "Markdown", "Vanilla CSS"],
+        "year": 2026,
+        "image": "arquivosdaordem"
+      },
+      {
         "url": "https://usepython.com.br/",
-        "description": "Curso introdutório de Python cobrindo configuração de ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados"
+        "sourceCode": "https://github.com/johnywalves/use-python",
+        "name": "Use Python",
+        "headline": "Curso introdutório de Python",
+        "description": "Curso introdutório em Python abordando a configuração do ambiente de desenvolvimento, automação de processos, manipulação, análise e visualização de dados",
+        "stack": ["Jekyll", "Python", "CSS Modules"],
+        "badge": "FEATURED",
+        "year": 2024,
+        "image": "usepython"
       },
       {
-        "name": "Machado Alves",
-        "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
-        "image": "machadoalves",
         "url": "https://marchadoalves.jwalves.com/",
-        "description": "Coletânea de contos de diversos escritores, escritos para a plataforma ou em domínio público, para ler e compartilhar"
+        "sourceCode": "https://github.com/johnywalves/machadoalves.com.br",
+        "name": "Machado Alves",
+        "headline": "Full-stack com real-time updates",
+        "description": "Coletânea de contos de diversos escritores, escritos para a plataforma ou em domínio público, para ler e compartilhar",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "year": 2022,
+        "image": "machadoalves"
       },
       {
-        "name": "Devflix",
-        "sourceCode": "https://github.com/johnywalves/devflix",
-        "image": "devflix",
-        "url": "https://devflix.jwalves.com/",
-        "description": "Plataforma para compartilhar conhecimento sobre desenvolvimento de software em português"
-      },
-      {
-        "name": "Bom Dia, Times de Dev!",
-        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
-        "image": "bomdia",
-        "imagePosition": "center",
         "url": "https://bomdiaequipesdev.com.br/",
-        "description": "Uma forma criativa de cumprimentar seus colegas desenvolvedores toda manhã"
-      },
-      {
-        "name": "Boilerplate React • Next.js • TypeScript",
-        "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
-        "image": "boilerplate",
-        "url": "https://next-pages-boilerplate.vercel.app",
-        "description": "Boilerplate com React, Next.js, Typescript, Storybook e Styled Components para começar rápido com configuração mínima"
-      },
-      {
-        "name": "Daisy Bell",
-        "sourceCode": "https://github.com/johnywalves/daisy-bell",
-        "image": "daisybell",
-        "url": "https://daisy.johnywalves.com.br",
-        "description": "Template de projeto para compartilhar imagens com texto em contexto"
+        "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
+        "name": "Bom Dia, Times de Dev!",
+        "headline": "Automação + DevOps",
+        "description": "Sistema de mensagens motivacionais automáticas para equipes de desenvolvimento. Integração com Slack, personalização por time e métricas de engajamento.",
+        "stack": [
+          "Node.js",
+          "Slack API",
+          "TypeScript",
+          "Cron",
+          "Redis",
+          "~3,200 loc"
+        ],
+        "badge": "SPOTLIGHT",
+        "year": 2023,
+        "image": "bomdia",
+        "imagePosition": "center"
       },
       {
         "name": "CSS Animatic",
         "sourceCode": "https://github.com/johnywalves/cssanimatic",
         "image": "cssanimatic",
         "url": "https://johnywalves.github.io/cssanimatic",
-        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS"
-      },
-      {
-        "name": "Portfólio Johny W. Alves",
-        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
-        "image": "thumbnail",
-        "url": "https://johnywalves.com.br",
-        "description": "Este website: um portfólio e espaço experimental para compartilhar experiências"
-      },
-      {
-        "name": "Register Switch",
-        "sourceCode": "https://github.com/johnywalves/register-switch",
-        "image": "registerSwitch",
-        "url": "https://switch.jwalves.com/",
-        "description": "Ferramenta simples de controle de tempo para ativar e desativar tarefas"
+        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Criador de Personagens e Quadrinhos",
         "sourceCode": "https://github.com/johnywalves/character-creator",
         "url": "https://comics.johnywalves.com.br",
         "image": "comicscreator",
-        "description": "Ferramenta para gerar e visualizar tirinhas SVG"
-      },
-      {
-        "name": "Fire Make Better",
-        "sourceCode": "https://github.com/johnywalves/fire-make-better",
-        "image": "firemakebetter",
-        "url": "https://johnywalves.github.io/fire-make-better/",
-        "description": "Projeto Angular organizador de receitas, atualmente integrando com a API Spoonacular"
+        "description": "Ferramenta para gerar e visualizar tirinhas SVG",
+        "stack": ["React.js", "Next.js", "TypeScript"]
       },
       {
         "name": "Navegação no Mapa",
         "sourceCode": "https://github.com/johnywalves/wolt",
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
-        "description": "Visualização de mapa com pontos de interesse"
+        "description": "Visualização de mapa com pontos de interesse",
+        "stack": ["JavaScript"]
       },
       {
-        "name": "Steam Library",
-        "sourceCode": "https://github.com/johnywalves/steamlibrary",
-        "image": "steamLibrary",
-        "url": "https://johnywalves.github.io/steamlibrary/",
-        "description": "Visualização da biblioteca de jogos Steam"
+        "name": "Terra Quente",
+        "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
+        "image": "githubio",
+        "url": "https://sanguequente.art/",
+        "description": "Uma coleção de crônicas de Lobisomem: O Apocalipse",
+        "stack": ["Jekyll"]
+      }
+    ],
+    "outdated": [
+      {
+        "name": "Fire Make Better",
+        "sourceCode": "https://github.com/johnywalves/fire-make-better",
+        "image": "firemakebetter",
+        "url": "https://johnywalves.github.io/fire-make-better/",
+        "description": "Projeto Angular organizador de receitas, atualmente integrando com a API Spoonacular",
+        "stack": ["React.js", "Angular.js", "TypeScript"]
       },
       {
         "name": "Perfil GitHub",
@@ -449,6 +470,14 @@
         "description": "Cartão de visitas no GitHub.io"
       },
       {
+        "url": "https://devflix.jwalves.com/",
+        "sourceCode": "https://github.com/johnywalves/devflix",
+        "name": "Devflix",
+        "description": "Plataforma para compartilhar conhecimento sobre desenvolvimento de software em português",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "devflix"
+      },
+      {
         "name": "Jogo de Cartas em React",
         "sourceCode": "https://github.com/johnywalves/card-game-react",
         "image": "githubio",
@@ -456,106 +485,144 @@
         "description": "Desenvolvendo um jogo como Magic: The Gathering, Hearthstone e Yu-Gi-Oh! do conceito à entrega com React"
       },
       {
-        "name": "Sangue Quente",
-        "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
-        "image": "githubio",
-        "url": "https://sanguequente.art/",
-        "description": "Uma coleção de crônicas de Lobisomem: O Apocalipse"
-      }
-    ]
-  },
-  "miniProjects": {
-    "title": "Mini Projetos",
-    "list": [
+        "url": "https://next-pages-boilerplate.vercel.app",
+        "sourceCode": "https://github.com/johnywalves/next-pages-boilerplate",
+        "name": "Boilerplate React • Next.js • TypeScript",
+        "description": "Boilerplate com React, Next.js, Typescript, Storybook e Styled Components para começar rápido com configuração mínima",
+        "stack": ["React.js", "Next.js", "TypeScript"],
+        "image": "boilerplate"
+      },
+      {
+        "name": "Portfólio Johny W. Alves",
+        "sourceCode": "https://github.com/johnywalves/johnywalves.com.br",
+        "image": "thumbnail",
+        "url": "https://johnywalves.com.br",
+        "description": "Este website: um portfólio e espaço experimental para compartilhar experiências",
+        "stack": ["Gatsby.js", "React.js", "TypeScript"]
+      },
+      {
+        "name": "Steam Library",
+        "sourceCode": "https://github.com/johnywalves/steamlibrary",
+        "image": "steamLibrary",
+        "url": "https://johnywalves.github.io/steamlibrary/",
+        "description": "Visualização da biblioteca de jogos Steam",
+        "stack": ["JavaScript"]
+      },
+      {
+        "url": "https://daisy.johnywalves.com.br",
+        "sourceCode": "https://github.com/johnywalves/daisy-bell",
+        "name": "Daisy Bell",
+        "image": "daisybell",
+        "description": "Template de projeto para compartilhar imagens com texto em contexto",
+        "stack": ["React.js", "TypeScript"]
+      },
       {
         "name": "Menu Hambúrguer",
         "description": "Menu de tela cheia com três faixas",
-        "url": "/web/hamburgermenu.html"
+        "url": "/web/hamburgermenu.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Animação de Input",
         "description": "Campo de entrada com efeitos de animação",
-        "url": "/web/inputanimation.html"
+        "url": "/web/inputanimation.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Spinner de Carregamento",
         "description": "Efeito cíclico para indicação de carregamento de recursos",
-        "url": "/web/loadingspinner.html"
+        "url": "/web/loadingspinner.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Busca de Pessoas",
         "description": "Cards de introdução com busca por texto",
-        "url": "/web/peoplesearch.html"
+        "url": "/web/peoplesearch.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Relógio com Simulação de Céu",
         "description": "Componentes e animações ao longo do tempo",
-        "url": "/web/clocksunandmon.html"
+        "url": "/web/clocksunandmon.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Sol e Lua",
         "description": "Animação de transição escuro/claro",
-        "url": "/web/sunmoon.html"
+        "url": "/web/sunmoon.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Questões de Concurso Policial",
         "description": "Questões resolvidas para estudos de carreira policial",
-        "url": "/web/provascarreirapolicial/index.html"
+        "url": "/web/provascarreirapolicial/index.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Letras Saltitantes",
         "description": "Animação de letras saltitantes",
-        "url": "/web/jumpingletters.html"
+        "url": "/web/jumpingletters.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Quadro Kanban",
         "description": "Gráfico Kanban com arrastar e soltar",
-        "url": "/web/kanban/index.html"
+        "url": "/web/kanban/index.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Letras de Neon",
         "description": "Efeito de letreiro de neon animado",
-        "url": "/web/neonletters.html"
+        "url": "/web/neonletters.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Elementos Skeleton",
         "description": "Efeito de esqueleto de carregamento",
-        "url": "/web/skeleton.html"
+        "url": "/web/skeleton.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Perfis",
         "description": "Coleção de perfis online",
-        "url": "/web/profiles.html"
+        "url": "/web/profiles.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "História do Johny",
         "description": "Álbum de história pessoal",
-        "url": "https://johnywalves.github.io/johnys-story/"
+        "url": "https://johnywalves.github.io/johnys-story/",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Dashboard População Mundial",
         "description": "Coleção de gráficos para dados populacionais mundiais",
-        "url": "https://johnywalves.com.br/web/world_d3/"
+        "url": "https://johnywalves.com.br/web/world_d3/",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Números por Extenso",
         "description": "Números aleatórios e conversão em palavras",
-        "url": "/web/numberinwords.html"
+        "url": "/web/numberinwords.html",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Convite de Aniversário",
         "description": "Convite para festa de 2023",
-        "url": "/niver"
+        "url": "/niver",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Kalyra",
         "description": "Ficha de Personagem D&D 5ª Edição - Meio-Elfo",
-        "url": "https://kalyra.jwalves.com/"
+        "url": "https://kalyra.jwalves.com/",
+        "stack": ["JavaScript"]
       },
       {
         "name": "Teste de Tamanho de Tela",
         "description": "Teste tamanhos de tela para dispositivos web",
-        "url": "/web/sizescreentest.html"
+        "url": "/web/sizescreentest.html",
+        "stack": ["JavaScript"]
       }
     ]
   },
@@ -637,14 +704,13 @@
     "list": [
       {
         "period": "Set 2024 - Presente",
-        "role": "Engenheiro Front-End Sênior | Especialista em React e Next.js",
+        "role": "Desenvolvedor Front-End Sênior | Especialista em React e Next.js",
         "company": "WeFit (projeto para Porto Seguro)",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "• Projetei um ecossistema frontend escalável e bibliotecas de componentes reutilizáveis com React, Next.js e TypeScript para as operações de corretagem da Porto Seguro, acelerando a velocidade de desenvolvimento em 36% e garantindo 100% de consistência visual entre todos os módulos.",
-          "• Arquitetei uma plataforma de gestão de corretagem de alto desempenho com arquitetura híbrida Next.js (SSR/CSR), melhorando o tempo de carregamento das páginas em 36% e entregando uma experiência fluida para operações de corretagem de alto volume.",
-          "• Elevei a excelência técnica liderando code reviews e mentorando desenvolvedores juniores em boas práticas de React e Next.js, mapeando erros proativamente antes dos usuários, estabelecendo suites de testes e viabilizando resposta rápida a incidentes – reduzindo o tempo de resolução em todos os módulos da corretora.",
-          "• Criei dashboards analíticos de alto impacto com Recharts, transformando conjuntos de dados financeiros complexos em insights visuais em tempo real que capacitaram os stakeholders da Porto Seguro a tomar decisões estratégicas mais rápidas e baseadas em dados."
+          "• Projetei um ecossistema frontend escalável para as operações da Porto Seguro com React, Next.js e TypeScript, incluindo bibliotecas de componentes reutilizáveis que aceleraram o desenvolvimento em 36% e garantiram 100% de consistência visual, além de uma arquitetura híbrida (SSR/CSR) que reduziu o tempo de carregamento das páginas em 36% para operações de alto volume. O pipeline de CI/CD (Jenkins) com testes automatizados (Jest, Playwright) e hospedagem na AWS (S3, CloudFront) assegurou que cada deploy atendesse aos padrões de desempenho e confiabilidade.",
+          "• Elevei a excelência técnica liderando code reviews, mentorando desenvolvedores juniores em boas práticas de React e Next.js e mapeando erros de forma proativa antes que os usuários percebam. Estabeleci suítes de testes abrangentes com Jest (unitários e de integração) e Playwright (end‑to‑end), integradas ao pipeline de CI/CD (Jenkins), o que reduziu o tempo de resposta a incidentes em todos os módulos e aumentou a confiança nos releases.",
+          "• Criei dashboards analíticos de alto impacto com Recharts, transformando dados financeiros complexos em insights visuais em tempo real, capacitando stakeholders da Porto Seguro a tomar decisões estratégicas mais rápidas e orientadas por dados."
         ]
       },
       {
@@ -653,9 +719,9 @@
         "company": "Seguralta",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "• Arquitetei e lancei o <strong>Seguralta Core</strong>, plataforma abrangente para corretoras de seguros com React, Next.js e FastAPI, oferecendo acesso em tempo real a comissões, renovações e apólices a vencer.",
-          "• Impulsionei o crescimento da equipe mentorando desenvolvedores júnior até entregas independentes por meio de code reviews estruturados e práticas GitFlow, e estabeleci pipeline de validação contínua com ESLint, testes unitários (Jest) e testes end-to-end (Cypress), eliminando regressões e garantindo confiança nos releases.",
-          "• Implementei ecossistema de qualidade e monitoramento com New Relic, SonarQube e testes (Jest, Testing Library, Cypress), automatizando deploys com BitBucket Pipelines para otimizar Core Web Vitals."
+          "• Na Seguralta, construí uma plataforma de seguros do zero com microfrontends (Module Federation), design systems e integrações com APIs REST e GraphQL (via DatoCMS para conteúdo headless), entregando dashboards em tempo real com carregamento abaixo de 1,5 segundos e suporte a picos de 3x mais usuários sem degradação de performance.",
+          "• Impulsionei o crescimento da equipe mentorando desenvolvedores júnior até entregas independentes por meio de code reviews estruturados e da prática GitFlow, e estabeleci um pipeline de validação contínua com ESLint, testes unitários (Jest) e testes end-to-end (Cypress), eliminando regressões e garantindo confiança nos releases.",
+          "• Implementei um ecossistema de qualidade e monitoramento com New Relic e SonarQube, automatizando deploys com BitBucket Pipelines e GitLab CI/CD para otimizar os Core Web Vitals, utilizando Turborepo para gerenciar o monorepo e AWS (S3, CloudFront, Lambda) para hospedagem e integração contínua."
         ]
       },
       {
@@ -665,11 +731,9 @@
         "location": "São Paulo, Brasil (Remoto)",
         "project": "CREA-SP – Plataforma de ART (Anotação de Responsabilidade Técnica)",
         "highlights": [
-          "• Desenvolvi o front-end da plataforma eletrônica de ART do CREA-SP, viabilizando o registro e gestão digital de Anotações de Responsabilidade Técnica para profissionais de engenharia em São Paulo.",
-          "• Projetei e implementei arquitetura micro-frontend com Module Federation em monorepo, garantindo modularidade, escalabilidade e autonomia para que múltiplas equipes desenvolvessem e fizessem deploy de forma independente.",
-          "• Construí componentes reutilizáveis e type-safe com React, Next.js e TypeScript, criando base sólida para evolução contínua e manutenibilidade da plataforma.",
-          "• Entreguei biblioteca de UI consistente e acessível com Chakra UI, acelerando o desenvolvimento e garantindo experiência profissional e responsiva em todos os módulos.",
-          "• Gerenciei o ciclo de desenvolvimento no Azure DevOps, com controle de versão, pipelines de CI/CD e validações automatizadas, garantindo releases confiáveis e eficientes."
+          "• Desenvolvi o front-end da plataforma eletrônica de ART do CREA-SP, viabilizando o registro e a gestão digital de Anotações de Responsabilidade Técnica para engenheiros, com componentes reutilizáveis, type-safe (React/Next.js/TypeScript) e uma biblioteca UI consistente e acessível com Chakra UI.",
+          "• Projetei e implementei uma arquitetura de micro-frontends com Module Federation em um monorepo gerenciado com Turborepo, garantindo modularidade, escalabilidade e autonomia para que múltiplas equipes desenvolvam e realizem deploy de forma independente.",
+          "• Gerenciei o ciclo de desenvolvimento no Azure DevOps, com controle de versão, pipelines de CI/CD e validações automatizadas, assegurando releases confiáveis, eficientes e de alta qualidade, da construção à produção."
         ]
       },
       {
@@ -681,20 +745,17 @@
           {
             "name": "Anbima – Desenvolvimento de Plataforma Greenfield",
             "highlights": [
-              "• Arquitetei e lancei do zero plataforma abrangente de dados financeiros para a Anbima com React e Next.js, criando sistema moderno para coleta e publicação de informações de carteiras gerenciadas com conformidade regulatória.",
-              "• Implementei estratégias de renderização híbrida (SSR para conteúdo financeiro crítico em SEO, CSR para dashboards interativos), melhorando o tempo de carregamento em ~60%, elevando os scores de Core Web Vitals e aumentando a visibilidade orgânica dos dados financeiros.",
-              "• Projetei bibliotecas de componentes reutilizáveis com React e TypeScript, garantindo consistência, manutenibilidade e desenvolvimento ágil de novas funcionalidades.",
-              "• Implementei fluxos de validação de dados robustos e integrei APIs back-end com estratégias otimizadas de data fetching para entrega de informações de carteiras em tempo real."
+              "• Arquitei e lancei do zero uma plataforma de dados financeiros para a Anbima com React e Next.js, garantindo conformidade regulatória e a coleta/publicação de informações de carteiras gerenciadas.",
+              "• Implementei renderização híbrida (SSR para SEO e CSR para dashboards), reduzindo o tempo de carregamento em ~60% e elevando os escores de Core Web Vitals.",
+              "• Projetei bibliotecas de componentes reutilizáveis com React e TypeScript e integrei APIs com estratégias otimizadas de data fetching para entrega de informações em tempo real."
             ]
           },
           {
             "name": "Coca-Cola – Manutenção e Evolução de Plataforma",
             "highlights": [
-              "• Realizei manutenção contínua e suporte multilíngue para as plataformas promocionais da Coca-Cola na América Latina e Caribe, atendendo milhões de usuários em 20+ países no ecossistema Adobe Experience Manager (AEM).",
-              "• Gerenciei fluxos de conteúdo multilíngue no AEM, coordenando traduções e adaptações regionais para Brasil, México, Argentina, Colômbia e mercados do Caribe.",
-              "• Entreguei suporte crítico em produção durante campanhas de alto tráfego, garantindo resposta rápida a incidentes, correções front-end e 99,9% de uptime.",
-              "• Implementei melhorias front-end com JavaScript, HTML e CSS para aprimorar experiência do usuário, responsividade mobile e compatibilidade entre navegadores.",
-              "• Colaborei com equipes de infraestrutura AWS e utilizei pipelines CI/CD com GitHub Actions para deploys confiáveis em múltiplos países."
+              "• Realizei manutenção contínua e suporte multilíngue às plataformas promocionais da Coca-Cola em mais de 20 países da América Latina e do Caribe, garantindo 99,9% de uptime.",
+              "• Gerenciei fluxos de conteúdo multilíngue no Adobe Experience Manager (AEM), coordenando traduções e adaptações regionais para mercados como o Brasil, o México, a Argentina e a Colômbia.",
+              "• Colaborei com equipes da AWS e utilizei pipelines de CI/CD com GitHub Actions para deploys confiáveis em múltiplos países, além de implementar melhorias front-end em JavaScript, HTML e CSS."
             ]
           }
         ]
@@ -706,11 +767,9 @@
         "location": "São Paulo, Brasil (Remoto)",
         "project": "Plataforma Zarp Localiza",
         "highlights": [
-          "• Liderei a reestruturação completa de tecnologia e infraestrutura da plataforma Zarp Localiza, migrando para React e Next.js para estabelecer arquitetura moderna e escalável com maior produtividade e performance.",
-          "• Implementei estratégia de SEO para conquistar ranking orgânico #1: otimizações com HTML semântico, dados estruturados, SSR com Next.js e Core Web Vitals que elevaram a plataforma ao topo dos resultados orgânicos, aumentando significativamente o tráfego.",
-          "• Implantei CI/CD com Azure DevOps: introduzi pipelines automatizados de build, teste e deploy, reduzindo ciclos de release, minimizando erros manuais e permitindo iteração ágil em features e melhorias de SEO.",
-          "• Otimizei a experiência do usuário e o funil de vendas usando Hotjar e Datadog para analisar comportamento, identificar pontos de atrito e implementar melhorias de UX que impactaram positivamente as taxas de conversão.",
-          "• Selecionei e padronizei as tecnologias front-end: liderei a escolha de React, Next.js e TypeScript como stack principal, garantindo qualidade de código, reusabilidade e manutenibilidade de longo prazo."
+          "• Liderei toda a reestruturação tecnológica e de infraestrutura da plataforma Zarp Localiza, migrando para React e Next.js, estabelecendo uma arquitetura moderna e escalável que elevou a produtividade do time e o desempenho da plataforma.",
+          "• Implementei uma estratégia de SEO que posicionou a plataforma em #1 nos resultados orgânicos, com otimizações como HTML semântico, dados estruturados, SSR com Next.js e melhorias nos Core Web Vitals, gerando um aumento expressivo no tráfego orgânico.",
+          "• Impulsei a adoção de CI/CD com Azure DevOps, automatizando builds, testes e deploys, o que reduziu os ciclos de release, eliminou erros manuais e acelerou iterações em funcionalidades e melhorias de SEO e UX, com o apoio de ferramentas como Hotjar e Datadog para otimizar a experiência do usuário e a taxa de conversão."
         ]
       },
       {
@@ -719,11 +778,9 @@
         "company": "Invillia",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "• Implementei funcionalidades full-stack para o Invillia Apps Suite, plataforma de gestão de equipes e trabalho remoto, atuando no front-end (React, TypeScript, Redux, D3.js) e back-end (Node.js, Express, MySQL).",
-          "• Implementei integração com Microsoft Teams, viabilizando acesso fluido a ferramentas de gestão de equipes, controle de presença e métricas de produtividade dentro da plataforma corporativa.",
-          "• Otimizei o uso de memória em componentes React e no gerenciamento de estado com Redux, eliminando vazamentos e melhorando a estabilidade em sessões prolongadas de trabalho remoto.",
-          "• Construí visualizações de dados interativas com D3.js, criando dashboards de performance de equipes, tendências de produtividade e alocação de recursos para decisões baseadas em dados.",
-          "• Projetei e entreguei APIs RESTful com Node.js e Express, garantindo entrega confiável de dados de bancos MySQL otimizados para as aplicações front-end."
+          "• Atuei no desenvolvimento full-stack do Invillia Apps Suite, plataforma de gestão de times remotos, com front-end em React, TypeScript, Redux e D3.js e back-end em Node.js, Express e MySQL, incluindo integração com o Microsoft Teams para acesso a ferramentas de gestão, acompanhamento de frequência e métricas de produtividade.",
+          "• Criei visualizações interativas de dados com D3.js, desenvolvendo dashboards que exibiam o desempenho de times, tendências de produtividade e a alocação de recursos para apoiar decisões gerenciais orientadas por dados.",
+          "• Projetei e entreguei APIs RESTful com Node.js e Express, garantindo a entrega confiável de dados provenientes de bancos de dados MySQL otimizados, além de otimizar o uso de memória em componentes React e no gerenciamento de estado com Redux, eliminando vazamentos e melhorando a estabilidade em sessões de trabalho remoto de longa duração."
         ]
       },
       {
@@ -732,9 +789,9 @@
         "company": "Unimed Rio Preto",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "• Entreguei experiência digital unificada para beneficiários: liderei o desenvolvimento de portal que consolidou gestão financeira, agendamento de exames e consultas, permitindo ao paciente gerenciar sua saúde em um único lugar.",
-          "• Melhorei a segurança e o acesso: implementei API de autenticação robusta com Java e Spring Boot, garantindo acesso seguro a dados sensíveis de saúde e financeiros para milhares de beneficiários.",
-          "• Viabilizei monitoramento proativo do sistema: implantei dashboards Grafana com visibilidade em tempo real sobre saúde do sistema, performance de APIs e atividade de usuários, reduzindo o tempo médio de detecção de incidentes."
+          "• Liderei o desenvolvimento de um portal unificado para os beneficiários da Unimed Rio Preto, consolidando a gestão financeira e o agendamento de exames e consultas em uma única plataforma digital.",
+          "• Implementei uma API de autenticação robusta em Java e Spring Boot, garantindo acesso seguro a dados sensíveis de saúde e financeiros para milhares de beneficiários.",
+          "• Implantei dashboards no Grafana para monitoramento proativo do sistema, oferecendo visibilidade em tempo real sobre a saúde da infraestrutura, o desempenho das APIs e a atividade dos usuários, reduzindo o tempo médio de detecção de incidentes."
         ]
       },
       {
@@ -743,10 +800,9 @@
         "company": "Bnex",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "• Gerenciei e desenvolvi plataforma back-office web e mobile para rastreamento de promoters em pontos de revenda, criando aplicações React Native para equipes de campo e dashboards ASP.NET MVC para operações.",
-          "• Entreguei dashboards de visualização de dados para a JBS: projetei dashboards interativos que rastreavam performance de promoters e resultados no varejo, permitindo monitoramento de KPIs e decisões baseadas em dados em tempo real.",
-          "• Implementei processos ETL para integração de dados de parceiros: desenvolvi e mantive pipelines Pentaho para carregar, transformar e integrar dados em bancos SQL, garantindo relatórios e analytics abrangentes.",
-          "• Mantive infraestrutura de dados de ponta a ponta: suportei todo o ciclo de dados, do processamento ETL à visualização em dashboards, garantindo precisão e disponibilidade para inteligência de negócio."
+          "• Gerenciei e desenvolvi uma plataforma web e mobile para o acompanhamento de promotores em pontos de venda, com aplicativos em React Native para equipes de campo e dashboards em ASP.NET MVC para times de operações.",
+          "• Projetei dashboards interativos para a JBS, monitorando o desempenho de promotores e os resultados no varejo, permitindo que stakeholders acompanhassem KPIs e tomassem decisões baseadas em dados em tempo real.",
+          "• Desenvolvi e mantive pipelines ETL com Pentaho para a integração de dados de parceiros em bancos de dados SQL, garantindo relatórios completos e análises precisas, além de manter toda a infraestrutura de dados, do processamento à visualização em dashboards."
         ]
       },
       {
@@ -758,17 +814,17 @@
           {
             "name": "Toyota Rodobens – Automação de Atendimento para Recalls",
             "highlights": [
-              "• Liderei a automação de processos e o desenvolvimento de chatbots para campanhas de recall da Toyota Rodobens usando WDG Automation e Bizagi BPMN Modeler, agilizando notificações e agendamentos.",
-              "• Estruturei projetos de atendimento ao cliente para gestão de recalls, mapeando fluxos otimizados que reduziram esforço manual e melhoraram a experiência dos proprietários afetados.",
-              "• Implementei soluções RPA que automatizaram tarefas repetitivas, garantindo comunicação pontual e aumentando a eficácia das campanhas de recall."
+              "• Liderei a automação de processos e o desenvolvimento de chatbot para as campanhas de recall da Toyota Rodobens com WDG Automation e Bizagi BPMN Modeler, otimizando notificações, agendamentos e comunicações de acompanhamento.",
+              "• Estruturei projetos de atendimento ao cliente de ponta a ponta para a gestão de recall, mapeando fluxos de trabalho que melhoraram a coordenação, reduziram o esforço manual e aprimoraram a experiência dos proprietários de veículos afetados.",
+              "• Implementei soluções de RPA que automatizaram tarefas repetitivas, garantindo comunicação ágil com os proprietários e aumentando a eficácia das campanhas de recall."
             ]
           },
           {
             "name": "Claro – Extensão Chrome para Telemarketing",
             "highlights": [
-              "• Implementei extensão personalizada para Google Chrome em JavaScript para equipes de telemarketing da Claro, automatizando consulta de clientes, registro de chamadas e entrada de dados.",
-              "• Aumentei a produtividade dos agentes reduzindo trabalho manual e acelerando o acesso a informações dos clientes, permitindo maior foco no atendimento.",
-              "• Integrei a extensão com sistemas de telemarketing e ferramentas de CRM existentes, garantindo fluxo de dados consistente entre plataformas."
+              "• Desenvolvi uma extensão personalizada para o Google Chrome com JavaScript para as equipes de telemarketing da Claro, automatizando a consulta a clientes, o registro de chamadas e as tarefas de entrada de dados.",
+              "• Aumentei a produtividade dos agentes ao reduzir o trabalho manual e ao agilizar o acesso às informações dos clientes, permitindo foco no engajamento e maior eficiência nas chamadas.",
+              "• Integrei a extensão aos sistemas de telemarketing e às ferramentas de CRM existentes, garantindo a sincronização de dados e a continuidade dos fluxos de trabalho entre plataformas."
             ]
           }
         ]
@@ -779,12 +835,9 @@
         "company": "Emais Urbanismo e Incorporações",
         "location": "São José do Rio Preto, Brasil",
         "highlights": [
-          "• Realizei manutenção, suporte e desenvolvimento contínuo de sistema ERP e CRM abrangente em Delphi e Microsoft SQL Server, cobrindo controle fiscal, contabilidade, gestão financeira e carteira de imóveis.",
-          "• Garanti a confiabilidade e continuidade do negócio por meio de manutenção proativa, correção de bugs e suporte responsivo, minimizando downtime em funções críticas.",
-          "• Entreguei novos módulos e funcionalidades em múltiplos domínios, adaptando o sistema a requisitos em evolução de conformidade fiscal, relatórios financeiros e rastreamento imobiliário.",
-          "• Otimizei bancos de dados SQL Server, projetando stored procedures, índices e queries eficientes para acesso rápido, integridade e relatórios precisos.",
-          "• Mantive e aprimorei código Delphi legado, equilibrando estabilidade com melhorias de performance e novas funcionalidades para estender a vida útil do sistema.",
-          "• Garantí conformidade regulatória e jurídica nos módulos de contratos e obrigações fiscais, adaptando o sistema à evolução das regulamentações tributárias e requisitos jurídicos do setor imobiliário, sustentando as operações sem incidentes de compliance."
+          "• Realizei manutenção, suporte e desenvolvimento contínuo de um sistema ERP e CRM completo com Delphi e Microsoft SQL Server, atendendo às áreas fiscal, contábil, financeira e de gestão de portfólio imobiliário.",
+          "• Garanti confiabilidade e continuidade dos negócios por meio de manutenção proativa, correções ágeis de bugs e suporte responsivo aos usuários, minimizando interrupções em funções críticas, além de otimizar bancos de dados SQL Server com stored procedures, índices e consultas eficientes, garantindo o desempenho e a integridade dos dados.",
+          "• Entreguei novos módulos e funcionalidades para atender a requisitos em evolução, assegurando conformidade regulatória e legal com as leis fiscais brasileiras e as exigências do setor imobiliário, além de manter e aprimorar o código legado em Delphi para prolongar a vida útil do sistema sem incidentes de conformidade."
         ]
       },
       {

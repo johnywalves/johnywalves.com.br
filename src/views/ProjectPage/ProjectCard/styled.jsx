@@ -22,18 +22,23 @@ export const ProjectCardGlow = styled.div`
   height: 2px;
   width: 100%;
   flex-shrink: 0;
-  background: linear-gradient(90deg, var(--highlight) 0%, transparent 100%);
+  background: linear-gradient(90deg, ${({ $badgeType }) => {
+    if ($badgeType === "SPOTLIGHT") return "var(--highlight)";
+    if ($badgeType === "FEATURED") return "var(--third)";
+    if ($badgeType === "TOOLS") return "var(--secondary)";
+    return "var(--highlight)";
+  }} 0%, transparent 100%);
 `
 
 export const ProjectCardImageWrapper = styled.div`
   position: relative;
-  height: 130px;
+  height: 180px;
   width: 100%;
   flex-shrink: 0;
 `
 
 export const ProjectCardImage = styled(GatsbyImage)`
-  height: 130px;
+  height: 180px;
   width: 100%;
 `
 
@@ -41,7 +46,7 @@ export const ProjectCardImageOverlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 130px;
+  height: 180px;
   width: 100%;
   background: linear-gradient(
     180deg,
@@ -53,15 +58,56 @@ export const ProjectCardImageOverlay = styled.div`
 export const ProjectCardBody = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: var(--8px);
   padding: var(--16px);
 `
 
 export const ProjectCardHeader = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
   gap: var(--8px);
+`
+
+export const ProjectCardMetaRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`
+
+export const ProjectCardMeta = styled.div`
+  display: flex;
+  align-items: center;
+  gap: var(--8px);
+  font-size: 0.75rem;
+`
+
+export const ProjectCardBadge = styled.span`
+  padding: 2px 6px;
+  border: 1px solid ${({ $type }) => {
+    if ($type === "SPOTLIGHT") return "var(--highlight)";
+    if ($type === "FEATURED") return "var(--third)";
+    if ($type === "TOOLS") return "var(--secondary)";
+    return "var(--texts)";
+  }};
+  color: ${({ $type }) => {
+    if ($type === "SPOTLIGHT") return "var(--highlight)";
+    if ($type === "FEATURED") return "var(--third)";
+    if ($type === "TOOLS") return "var(--secondary)";
+    return "var(--texts)";
+  }};
+  background-color: ${({ $type }) => {
+    if ($type === "SPOTLIGHT") return "rgba(224, 19, 140, 0.1)";
+    if ($type === "FEATURED") return "rgba(68, 181, 239, 0.1)";
+    if ($type === "TOOLS") return "rgba(136, 87, 195, 0.1)";
+    return "transparent";
+  }};
+  border-radius: var(--4px);
+`
+
+export const ProjectCardYear = styled.span`
+  color: var(--shadow-colors);
 `
 
 export const ProjectCardTitle = styled.h3`
@@ -102,6 +148,7 @@ export const ProjectCardDescription = styled.p`
   color: var(--texts);
   font-size: 0.875rem;
   line-height: 1.3rem;
+  margin-bottom: auto;
 `
 
 export const ProjectCardHeadline = styled.div`
@@ -118,8 +165,18 @@ export const ProjectCardGlowDot = styled.span`
   width: 6px;
   flex-shrink: 0;
   border-radius: 50%;
-  background-color: var(--highlight);
-  box-shadow: 0 0 6px var(--highlight);
+  background-color: ${({ $type }) => {
+    if ($type === "SPOTLIGHT") return "var(--highlight)";
+    if ($type === "FEATURED") return "var(--third)";
+    if ($type === "TOOLS") return "var(--secondary)";
+    return "var(--highlight)";
+  }};
+  box-shadow: 0 0 6px ${({ $type }) => {
+    if ($type === "SPOTLIGHT") return "var(--highlight)";
+    if ($type === "FEATURED") return "var(--third)";
+    if ($type === "TOOLS") return "var(--secondary)";
+    return "var(--highlight)";
+  }};
 `
 
 export const ProjectCardStack = styled.div`
@@ -131,10 +188,10 @@ export const ProjectCardStack = styled.div`
 `
 
 export const ProjectCardStackItem = styled.span`
-  padding: var(--2px) var(--4px);
+  padding: var(--2px) var(--8px);
   font-size: 0.7rem;
-  color: var(--third);
-  background-color: var(--background-semi);
-  border: 1px solid var(--third-light);
+  color: var(--color-line);
+  background-color: transparent;
+  border: 1px solid var(--color-line);
   border-radius: var(--2px);
 `

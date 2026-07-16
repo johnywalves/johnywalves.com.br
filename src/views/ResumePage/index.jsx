@@ -16,7 +16,6 @@ import {
   ResumeSubSection,
   ResumeSubTitle,
   ResumeSheet,
-  ResumeFooter,
 } from "./styled"
 
 const getFirst = (text) => text.split(" ")[1]
@@ -108,15 +107,10 @@ const ResumePage = ({ language }) => {
               </ResumeSubSection>
             ))}
         </ResumeSection>
-
-        <ResumeFooter>
-          <p>johnywalves.com.br</p>
-          <p>1/2</p>
-        </ResumeFooter>
       </ResumeSheet>
 
       <ResumeSheet>
-        <ResumeSection>
+        <ResumeSection className="keep-together">
           <h2>{language.education.title}</h2>
           <hr />
           {language.education.list.map(
@@ -142,7 +136,7 @@ const ResumePage = ({ language }) => {
           )}
         </ResumeSection>
 
-        <ResumeSection>
+        <ResumeSection className="keep-together">
           <h2>{language.skills.title}</h2>
           <hr />
           <ul>
@@ -196,11 +190,6 @@ const ResumePage = ({ language }) => {
               </ResumeCourse>
             ))}
         </ResumeSection>
-
-        <ResumeFooter>
-          <p>johnywalves.com.br</p>
-          <p>2/2</p>
-        </ResumeFooter>
       </ResumeSheet>
     </ResumeWrapper>
   )

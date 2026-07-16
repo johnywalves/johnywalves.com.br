@@ -127,6 +127,13 @@ export const ResumeSection = styled.section`
 
   margin: 8px 0 0;
 
+  @media print {
+    &.keep-together {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+
   & h1 {
     margin: 16px 0 0 8px;
   }
@@ -258,6 +265,11 @@ export const ResumeCourse = styled.section`
 
 export const ResumeSubSection = styled.article`
   margin: 0 0 8px;
+
+  @media print {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 
   & li {
     margin: 4px 0 0;

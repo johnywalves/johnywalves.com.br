@@ -16,5 +16,5 @@ const ResumeBrazilian = () => (
 export default ResumeBrazilian
 
 export const Head = ({ location }) => (
-  <Seo location={location} title="Curriculum Vitae - Brazilian" />
+  <Seo location={location} title="Currículo - Português" />
 )
