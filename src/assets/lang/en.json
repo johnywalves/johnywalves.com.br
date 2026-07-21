@@ -708,7 +708,7 @@
         "company": "WeFit (outsourcing for Porto Seguro)",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "• Designed a scalable frontend ecosystem for Porto Seguro's brokerage operations using React, Next.js, JavaScript, TypeScript, Recharts and Tailwind CSS, including reusable component libraries that accelerated development by 36% and ensured 100% visual consistency, plus a hybrid SSR/CSR architecture that cut page load times by 36% for high‑volume operations. The CI/CD pipeline (Jenkins) with automated tests (Jest, Playwright) and AWS hosting (S3, CloudFront) ensured that every deployment met performance and reliability standards.",
+          "• Designed a scalable frontend ecosystem for Porto Seguro's brokerage operations using React 19, Next.js, JavaScript, TypeScript, Recharts and Tailwind CSS, including a design system and reusable component libraries that accelerated development by 36% and ensured 100% visual consistency, plus a hybrid SSR/CSR architecture that cut page load times by 36% for high‑volume operations. The CI/CD pipeline (Jenkins) with automated tests (Jest, Playwright) and AWS hosting (S3, CloudFront) ensured that every deployment met performance and reliability standards.",
           "• Elevated engineering excellence by leading code reviews, mentoring junior developers in React/Next.js best practices, and proactively mapping errors before users noticed them. I also established comprehensive test suites with Jest (unit/integration) and Playwright (end‑to‑end), integrated into the CI/CD pipeline (Jenkins), thereby reducing incident response time across all modules and improving release confidence.",
           "• Built high‑impact analytical dashboards with Recharts, transforming complex financial data into real‑time visual insights that empowered Porto Seguro stakeholders to make faster, data‑driven strategic decisions."
         ]
@@ -747,7 +747,7 @@
             "highlights": [
               "• Architected and launched a comprehensive financial data platform for Anbima from the ground up using React and Next.js, creating a modern system for collecting and publishing managed portfolio information with strict regulatory compliance.",
               "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), improving page load times by ~60%, boosting Core Web Vitals scores, and increasing organic search visibility for financial product data.",
-              "• Designed reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
+              "• Designed a design system and reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
               "• Engineered robust data validation workflows and integrated with back-end APIs using optimized data fetching strategies to deliver real-time portfolio information."
             ]
           },
@@ -774,7 +774,7 @@
           "• Drove SEO strategy to achieve #1 organic rankings: Implemented comprehensive optimizations including semantic HTML, structured data, Next.js SSR, and Core Web Vitals improvements that propelled the platform to top positions in organic search results, driving significant growth in organic traffic.",
           "• Championed CI/CD adoption with Azure DevOps: Introduced and implemented automated build, test, and deployment pipelines in Azure DevOps, reducing release cycles, minimizing manual errors, and enabling rapid iteration on features and SEO enhancements.",
           "• Optimized user experience and the sales funnel: Leveraged Hotjar (heatmaps, session recordings) and Datadog (performance monitoring) to analyze user behavior, identify friction points, and implement UX improvements that positively impacted conversion rates.",
-          "• Selected and standardized front-end technologies: Led the technology selection process, establishing React, Next.js, and TypeScript as the core stack, ensuring code quality, reusability, and long-term maintainability across the platform."
+          "• Selected and standardized front-end technologies: Led the technology selection process, establishing React, Next.js, and TypeScript as the core stack and introducing a design system for the platform, ensuring code quality, reusability, and long-term maintainability across the platform."
         ]
       },
       {

@@ -708,7 +708,7 @@
         "company": "WeFit (projeto para Porto Seguro)",
         "location": "São Paulo, Brasil (Remoto)",
         "highlights": [
-          "• Projetei um ecossistema frontend escalável para as operações da Porto Seguro com React, Next.js e TypeScript, incluindo bibliotecas de componentes reutilizáveis que aceleraram o desenvolvimento em 36% e garantiram 100% de consistência visual, além de uma arquitetura híbrida (SSR/CSR) que reduziu o tempo de carregamento das páginas em 36% para operações de alto volume. O pipeline de CI/CD (Jenkins) com testes automatizados (Jest, Playwright) e hospedagem na AWS (S3, CloudFront) assegurou que cada deploy atendesse aos padrões de desempenho e confiabilidade.",
+          "• Projetei um ecossistema frontend escalável para as operações da Porto Seguro com React 19, Next.js e TypeScript, incluindo um design system e bibliotecas de componentes reutilizáveis que aceleraram o desenvolvimento em 36% e garantiram 100% de consistência visual, além de uma arquitetura híbrida (SSR/CSR) que reduziu o tempo de carregamento das páginas em 36% para operações de alto volume. O pipeline de CI/CD (Jenkins) com testes automatizados (Jest, Playwright) e hospedagem na AWS (S3, CloudFront) assegurou que cada deploy atendesse aos padrões de desempenho e confiabilidade.",
           "• Elevei a excelência técnica liderando code reviews, mentorando desenvolvedores juniores em boas práticas de React e Next.js e mapeando erros de forma proativa antes que os usuários percebam. Estabeleci suítes de testes abrangentes com Jest (unitários e de integração) e Playwright (end‑to‑end), integradas ao pipeline de CI/CD (Jenkins), o que reduziu o tempo de resposta a incidentes em todos os módulos e aumentou a confiança nos releases.",
           "• Criei dashboards analíticos de alto impacto com Recharts, transformando dados financeiros complexos em insights visuais em tempo real, capacitando stakeholders da Porto Seguro a tomar decisões estratégicas mais rápidas e orientadas por dados."
         ]
@@ -747,7 +747,7 @@
             "highlights": [
               "• Arquitei e lancei do zero uma plataforma de dados financeiros para a Anbima com React e Next.js, garantindo conformidade regulatória e a coleta/publicação de informações de carteiras gerenciadas.",
               "• Implementei renderização híbrida (SSR para SEO e CSR para dashboards), reduzindo o tempo de carregamento em ~60% e elevando os escores de Core Web Vitals.",
-              "• Projetei bibliotecas de componentes reutilizáveis com React e TypeScript e integrei APIs com estratégias otimizadas de data fetching para entrega de informações em tempo real."
+              "• Projetei um design system e bibliotecas de componentes reutilizáveis com React e TypeScript e integrei APIs com estratégias otimizadas de data fetching para entrega de informações em tempo real."
             ]
           },
           {
@@ -767,7 +767,7 @@
         "location": "São Paulo, Brasil (Remoto)",
         "project": "Plataforma Zarp Localiza",
         "highlights": [
-          "• Liderei toda a reestruturação tecnológica e de infraestrutura da plataforma Zarp Localiza, migrando para React e Next.js, estabelecendo uma arquitetura moderna e escalável que elevou a produtividade do time e o desempenho da plataforma.",
+          "• Liderei toda a reestruturação tecnológica e de infraestrutura da plataforma Zarp Localiza, migrando para React e Next.js e implementando um design system e bibliotecas de componentes, estabelecendo uma arquitetura moderna e escalável que elevou a produtividade do time e o desempenho da plataforma.",
           "• Implementei uma estratégia de SEO que posicionou a plataforma em #1 nos resultados orgânicos, com otimizações como HTML semântico, dados estruturados, SSR com Next.js e melhorias nos Core Web Vitals, gerando um aumento expressivo no tráfego orgânico.",
           "• Impulsei a adoção de CI/CD com Azure DevOps, automatizando builds, testes e deploys, o que reduziu os ciclos de release, eliminou erros manuais e acelerou iterações em funcionalidades e melhorias de SEO e UX, com o apoio de ferramentas como Hotjar e Datadog para otimizar a experiência do usuário e a taxa de conversão."
         ]
