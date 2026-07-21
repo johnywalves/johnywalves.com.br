@@ -685,8 +685,9 @@
         "company": "WeFit (outsourcing for Porto Seguro)",
         "location": "São Paulo, Brazil (Remote)",
         "highlights": [
-          "• Engineered a scalable front-end ecosystem and reusable component libraries using React, Next.js, and TypeScript for Porto Seguro's brokerage operations, accelerating development velocity by 36% and ensuring 100% design consistency across all modules.",
+          "• Engineered a scalable front-end ecosystem and reusable component libraries using React 19, Next.js, and TypeScript for Porto Seguro's brokerage operations, accelerating development velocity by 36% and ensuring 100% design consistency across all modules.",
           "• Architected a high-performance brokerage management platform with a hybrid Next.js architecture (SSR/CSR), improving page load times by 36% and delivering a seamless experience for high‑volume broker workflows.",
+          "• Implemented a corporate design system with Storybook and design tokens, standardizing UI components and accelerating adoption of React 19 features (Server Components, Actions, and hooks like useActionState and useOptimistic) across the codebase.",
           "• Elevated engineering excellence by leading technical code reviews and mentoring junior developers in React and Next.js best practices, proactively mapping errors before user reports, establishing test suites, and enabling rapid incident response – reducing time‑to‑fix across all brokerage modules.",
           "• Designed high-impact analytical dashboards using Recharts, transforming complex financial datasets into real‑time visual insights that empowered Porto Seguro's stakeholders to make faster, data‑driven strategic decisions."
         ]
@@ -698,6 +699,7 @@
         "location": "São José do Rio Preto, Brazil",
         "highlights": [
           "• Architected and launched Seguralta Core, a comprehensive insurance brokerage platform built with React, Next.js, and FastAPI, providing franchisees with real-time access to commissions, renewals, and policy expiration data, streamlining critical business operations.",
+          "• Built and maintained an in-house design system with a component library documented in Storybook, ensuring visual consistency and accelerating delivery of new screens.",
           "• Drove team growth by mentoring junior developers to independent delivery through structured code reviews and GitFlow practices, and established a continuous validation pipeline with ESLint, unit tests (Jest), and end-to-end tests (Cypress), eliminating regressions and ensuring release confidence.",
           "• Engineered a robust quality and monitoring ecosystem: Integrated New Relic for performance monitoring, SonarQube for code quality analysis, and comprehensive testing (Jest, Testing Library, Cypress), while automating deployments with BitBucket Pipelines to optimize Core Web Vitals and ensure system reliability."
         ]
@@ -728,6 +730,7 @@
               "• Architected and launched a comprehensive financial data platform for Anbima from the ground up using React and Next.js, creating a modern system for collecting and publishing managed portfolio information with strict regulatory compliance.",
               "• Implemented hybrid rendering strategies (SSR for SEO-critical financial content, CSR for interactive dashboards), improving page load times by ~60%, boosting Core Web Vitals scores, and increasing organic search visibility for financial product data.",
               "• Designed reusable component libraries with React and TypeScript, ensuring consistency, maintainability, and rapid development of new features.",
+              "• Created and documented a design system with Storybook for Anbima, standardizing visual components and design tokens across the financial platform's modules.",
               "• Engineered robust data validation workflows and integrated with back-end APIs using optimized data fetching strategies to deliver real-time portfolio information."
             ]
           },
@@ -751,6 +754,7 @@
         "project": "Zarp Localiza Platform",
         "highlights": [
           "• Led the complete technology and infrastructure restructuring of the Zarp Localiza platform, migrating to React and Next.js to establish a modern, scalable architecture that improved developer productivity and platform performance.",
+          "• Implemented a design system for the Zarp Localiza platform, standardizing UI components and visual guidelines to accelerate development and ensure brand consistency.",
           "• Drove SEO strategy to achieve #1 organic rankings: Implemented comprehensive optimizations including semantic HTML, structured data, Next.js SSR, and Core Web Vitals improvements that propelled the platform to top positions in organic search results, driving significant growth in organic traffic.",
           "• Championed CI/CD adoption with Azure DevOps: Introduced and implemented automated build, test, and deployment pipelines in Azure DevOps, reducing release cycles, minimizing manual errors, and enabling rapid iteration on features and SEO enhancements.",
           "• Optimized user experience and the sales funnel: Leveraged Hotjar (heatmaps, session recordings) and Datadog (performance monitoring) to analyze user behavior, identify friction points, and implement UX improvements that positively impacted conversion rates.",
