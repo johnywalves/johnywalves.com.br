@@ -29,3 +29,10 @@ Run the development server:
 ```bash
 npm run dev
 ```
+
+For build
+
+```bash
+node ./node_modules/puppeteer/install.mjs
+npm run build && npm run pos-run
+```
