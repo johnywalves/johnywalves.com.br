@@ -176,7 +176,6 @@ export const ResumeSection = styled.section`
     &.description {
       margin-top: 12px;
       text-align: justify;
-      text-indent: 24px;
     }
 
     &.cover {
