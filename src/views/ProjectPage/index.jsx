@@ -69,7 +69,7 @@ const ProjectPage = () => {
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
         ...extractFieldsPage
       }
-      blank: file(relativePath: { eq: "blank.png" }) {
+      blank: file(relativePath: { eq: "blank.jpg" }) {
         ...extractFieldsPage
       }
     }
