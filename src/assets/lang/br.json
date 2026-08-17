@@ -414,14 +414,6 @@
         "imagePosition": "center"
       },
       {
-        "name": "CSS Animatic",
-        "sourceCode": "https://github.com/johnywalves/cssanimatic",
-        "image": "cssanimatic",
-        "url": "https://johnywalves.github.io/cssanimatic",
-        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS",
-        "stack": ["JavaScript"]
-      },
-      {
         "name": "Criador de Personagens e Quadrinhos",
         "sourceCode": "https://github.com/johnywalves/character-creator",
         "url": "https://comics.johnywalves.com.br",
@@ -435,7 +427,7 @@
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
         "description": "Visualização de mapa com pontos de interesse",
-        "stack": ["JavaScript"]
+        "stack": ["Jekyll", "JavaScript"]
       },
       {
         "name": "Terra Quente",
@@ -447,6 +439,14 @@
       }
     ],
     "outdated": [
+      {
+        "name": "CSS Animatic",
+        "sourceCode": "https://github.com/johnywalves/cssanimatic",
+        "image": "cssanimatic",
+        "url": "https://johnywalves.github.io/cssanimatic",
+        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS",
+        "stack": ["JavaScript"]
+      },      
       {
         "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
