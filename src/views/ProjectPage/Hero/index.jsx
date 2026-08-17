@@ -7,7 +7,7 @@ import TypingCode from "./TypingCode"
 
 const Hero = () => (
   <Wrapper>
-    <TypingCode />
+    {/*<TypingCode />*/}
     <Cover />
     <Content>
       <Title>
