@@ -402,12 +402,19 @@
         "image": "machadoalves"
       },
       {
-        "url": "https://bomdiaequipesdev.com.br/",
+        "url": "https://bomdia.jwalves.com",
         "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
         "name": "Good Morning, Dev Teams!",
         "headline": "Automação + DevOps",
         "description": "Automatic motivational message system for development teams. Slack integration, team customization and engagement metrics.",
-        "stack": ["Node.js", "Slack API", "TypeScript", "Cron", "Redis", "~3,200 loc"],
+        "stack": [
+          "Node.js",
+          "Slack API",
+          "TypeScript",
+          "Cron",
+          "Redis",
+          "~3,200 loc"
+        ],
         "badge": "SPOTLIGHT",
         "year": 2023,
         "image": "bomdia",
@@ -441,9 +448,16 @@
         "name": "Terra Quente",
         "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
         "image": "githubio",
-        "url": "https://sanguequente.art/",
+        "url": "https://terraquente.jwalves.com",
         "description": "A collection of Werewolf: The Apocalypse chronicles",
         "stack": ["Jekyll"]
+      },
+      {
+        "name": "Vitorian Wars",
+        "image": "githubio",
+        "url": "https://'vitorianwars.com",
+        "description": "Card Game in development",
+        "stack": ["Next.js"]
       }
     ],
     "outdated": [
