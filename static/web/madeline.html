@@ -42,7 +42,7 @@
                 box-shadow: none; 
                 border: 2px solid #2c3e50; /* Moldura elegante ativada para impressão */
                 margin: 0; 
-                padding: 10mm; /* Espaço seguro entre a moldura e os textos */
+                padding: 6mm; /* Espaço seguro entre a moldura e os textos */
                 width: 100%; 
                 min-height: 287mm; /* Força a moldura a ir até o final da folha A4 */
                 page-break-after: always; 
@@ -142,9 +142,10 @@
         .emotions-line {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: space-between;
-            white-space: nowrap;
+            justify-content: flex-start;
+            gap: 4px 8px;
             width: 100%;
         }
         .emotions-line label {
