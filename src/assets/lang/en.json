@@ -460,7 +460,7 @@
         "url": "https://johnywalves.github.io/cssanimatic",
         "description": "CSS Animation made easy: tool to help create animations purely with CSS",
         "stack": ["JavaScript"]
-      },      
+      },
       {
         "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
@@ -710,7 +710,16 @@
     "title": "Experience",
     "list": [
       {
-        "period": "Sep 2024 - Present",
+        "period": "Aug 2026 - Present",
+        "role": "Senior Full Stack Engineer",
+        "company": "Mirante Tecnologia (outsourcing for Petrobras)",
+        "location": "Brasilia, Brazil (Remote)",
+        "highlights": [
+          "• Leading the migration of a Streamlit (Python) application to a modern React, Next.js, and TypeScript architecture. I'm responsible for the frontend architecture, componentization, REST API integration, and defining quality standards with automated testing and CI/CD. The project gradually replaces the legacy system, delivering a more performant, scalable, and maintainable experience."
+        ]
+      },
+      {
+        "period": "Sep 2024 - Aug 2026",
         "role": "Senior Front-End Engineer | React & Next.js Specialist",
         "company": "WeFit (outsourcing for Porto Seguro)",
         "location": "São Paulo, Brazil (Remote)",
