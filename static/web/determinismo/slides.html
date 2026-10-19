@@ -19,7 +19,7 @@
     --accent: #ff89fd;
     --accent-2: #cdb0f7;
     --accent-3: #7cc9f5;
-    --card: #303030;
+    --card: #303030e0;
     --border: rgba(255, 137, 253, 0.45);
     --line: rgba(252, 252, 252, 0.18);
     --glow-1: rgba(224, 19, 140, 0.22);
@@ -34,7 +34,7 @@
     --accent: #b00b6c;
     --accent-2: #6a3fa6;
     --accent-3: #0a6aa1;
-    --card: #f1f1f1;
+    --card: #f1f1f1e0;
     --border: rgba(176, 11, 108, 0.5);
     --line: rgba(51, 51, 51, 0.22);
     --glow-1: rgba(224, 19, 140, 0.10);
@@ -201,6 +201,88 @@
     max-width: 62rem; word-break: break-all;
   }
 
+
+  .pipe { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 74rem; text-align: left; }
+  .pipe-row {
+    display: grid; grid-template-columns: 2.4rem 9rem minmax(0, 1.25fr) minmax(0, 1.2fr);
+    align-items: center; gap: 1rem;
+    background: var(--card); border: 2px solid var(--line); border-radius: 0.7rem; padding: 0.5rem 1rem 0.5rem 0.7rem;
+  }
+  .pipe-row.key { border-color: var(--brand); border-width: 3px; }
+  .pn {
+    width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--brand-2); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.15rem;
+  }
+  .pipe-row.key .pn { background: var(--brand); }
+  .pname { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
+  .pdesc { font-size: 1.15rem; line-height: 1.35; color: var(--text); }
+  .pex {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.98rem; line-height: 1.35;
+    background: var(--code-bg); color: var(--accent-3); border-radius: 0.4rem; padding: 0.35rem 0.6rem;
+  }
+  .pipe-note { margin-top: 0.8rem; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+
+
+  .matrix {
+    display: grid; grid-template-columns: 9rem minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.7rem; width: 100%; max-width: 68rem; text-align: left;
+  }
+  .mx-col, .mx-row { display: flex; flex-direction: column; justify-content: center; gap: 0.1rem; }
+  .mx-col { align-items: center; text-align: center; padding-bottom: 0.2rem; }
+  .mx-col span, .mx-row span { font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .mx-col b, .mx-row b { font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1.1; }
+  .mx-row { padding-right: 0.5rem; border-right: 4px solid var(--line); }
+  .mx-cell {
+    background: var(--card); border: 2px solid var(--border); border-radius: 0.9rem;
+    padding: 1rem 1.3rem; display: flex; flex-direction: column; gap: 0.4rem; justify-content: center;
+  }
+  .mx-level { font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+  .mx-level.lv-bit { color: var(--accent); }
+  .mx-level.lv-func { color: var(--accent-3); }
+  .mx-level.lv-stat { color: var(--accent-2); }
+  .mx-what { font-size: 1.3rem; line-height: 1.35; color: var(--text); }
+  .mx-ex {
+    margin-top: 0.2rem; padding-top: 0.5rem; border-top: 1px solid var(--line);
+    font-size: 1.15rem; color: var(--muted);
+  }
+  .mx-ex::before { content: "Ex.: "; font-weight: 800; color: var(--text); }
+  .mx-note { margin-top: 1rem; font-size: 1.45rem; font-weight: 700; color: var(--accent); }
+
+
+  .spectrum { position: relative; width: 100%; max-width: 68rem; margin-top: 1.5rem; }
+  .sp-ends {
+    display: flex; justify-content: space-between; margin-bottom: 1.6rem;
+    font-size: 1.15rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
+  .sp-line {
+    position: absolute; left: 0; right: 0; top: 1.05rem; height: 0.5rem; border-radius: 99px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-3), var(--accent-2));
+  }
+  .sp-marks { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .sp-mark { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+  .sp-dot {
+    width: 2.6rem; height: 2.6rem; border-radius: 50%;
+    background: var(--bg-1); border: 0.45rem solid currentColor; margin-bottom: 0.9rem;
+  }
+  .sp-name { font-size: 2.4rem; font-weight: 800; line-height: 1.1; color: currentColor; }
+  .sp-desc {
+    font-size: 1.35rem; color: var(--text); background: var(--card);
+    border: 2px solid var(--border); border-radius: 0.6rem; padding: 0.4rem 1rem; margin-top: 0.4rem;
+  }
+  .m-bit { color: var(--accent); } .m-func { color: var(--accent-3); } .m-stat { color: var(--accent-2); }
+  .sp-note { margin-top: 3rem; font-size: 1.7rem; font-weight: 600; color: var(--text); max-width: 56rem; }
+
+
+  .about { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; width: 100%; max-width: 70rem; margin-top: 2rem; text-align: left; }
+  .about-item {
+    background: var(--card); border: 2px solid var(--border); border-radius: 0.9rem;
+    padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .about-item b { font-size: 2.2rem; font-weight: 800; line-height: 1.1; color: var(--accent); }
+  .about-item span { font-size: 1.2rem; line-height: 1.4; color: var(--text); }
+  .about-stack { margin-top: 1.8rem; font-size: 1.5rem; font-weight: 700; color: var(--accent-3); letter-spacing: 0.04em; }
+  @media (max-width: 768px) { .about { grid-template-columns: 1fr 1fr; } }
+
   .progress {
     position: fixed; top: 0; left: 0; height: 0.3rem; z-index: 11;
     background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--brand-3));
@@ -262,6 +344,20 @@
     <p style="margin-top:2rem;">A mesma tecnologia, expectativas opostas. O erro comum é tratá-las com a mesma arquitetura.</p>
   </section>
 
+  <!-- 3B APRESENTAÇÃO DO PALESTRANTE -->
+  <section class="slide">
+    <div class="kicker">Quem fala</div>
+    <h1>Johny W. Alves</h1>
+    <p class="subtitle" style="margin-top:0;">Engenheiro frontend sênior</p>
+    <div class="about">
+      <div class="about-item"><b>20+</b><span>anos de experiência</span></div>
+      <div class="about-item"><b>7</b><span>anos construindo aplicações React em escala</span></div>
+      <div class="about-item"><b>Mestrado</b><span>em Deep Learning e IA, em andamento</span></div>
+      <div class="about-item"><b>Todo dia</b><span>IA no fluxo de entrega e na qualidade do código</span></div>
+    </div>
+    <div class="about-stack">React · Next.js · TypeScript · Node.js</div>
+  </section>
+
   <!-- 4 TESE -->
   <section class="slide">
     <div class="kicker">A tese</div>
@@ -274,16 +370,16 @@
   <!-- 5 PIPELINE -->
   <section class="slide">
     <h2>O pipeline <span class="accent">generativo</span></h2>
-    <div class="flow">
-      <div class="flow-node">Prompt</div>
-      <div class="flow-node">Tokens</div>
-      <div class="flow-node">Embeddings</div>
-      <div class="flow-node">Atenção</div>
-      <div class="flow-node">Distribuição</div>
-      <div class="flow-node">Amostragem</div>
-      <div class="flow-node">Texto</div>
+    <div class="pipe">
+      <div class="pipe-row"><div class="pn">1</div><div class="pname">Prompt</div><div class="pdesc">O texto que entra.</div><div class="pex">"O cliente pode cancelar? Resposta:"</div></div>
+      <div class="pipe-row"><div class="pn">2</div><div class="pname">Tokens</div><div class="pdesc">O texto é cortado em pedaços e cada pedaço vira um número.</div><div class="pex">O · cliente · pode · cancelar · ? &rarr; 12 · 4821 · 903 · 7715 · 30</div></div>
+      <div class="pipe-row"><div class="pn">3</div><div class="pname">Embeddings</div><div class="pdesc">Cada número vira um vetor que representa significado.</div><div class="pex">4821 &rarr; [0,12 &nbsp;&minus;0,87 &nbsp;0,33 &hellip;]</div></div>
+      <div class="pipe-row"><div class="pn">4</div><div class="pname">Atenção</div><div class="pdesc">Cada token pesa quais outros importam para o contexto.</div><div class="pex">"cancelar" olha para "cliente" e "pode"</div></div>
+      <div class="pipe-row key"><div class="pn">5</div><div class="pname">Distribuição</div><div class="pdesc">O modelo calcula a probabilidade de cada próximo token.</div><div class="pex">sim 42% · não 23% · talvez 15% · &hellip;</div></div>
+      <div class="pipe-row key"><div class="pn">6</div><div class="pname">Amostragem</div><div class="pdesc">Um token é sorteado dessa distribuição.</div><div class="pex">sorteou "sim"</div></div>
+      <div class="pipe-row"><div class="pn">7</div><div class="pname">Texto</div><div class="pdesc">O token entra no contexto e o ciclo repete até terminar.</div><div class="pex">"sim" volta ao passo 2</div></div>
     </div>
-    <p style="margin-top:2rem;">O ponto crítico está nos dois últimos passos: distribuição e amostragem.</p>
+    <p class="pipe-note">Aqui nasce a variabilidade: passos 5 e 6.</p>
   </section>
 
   <!-- 6 DISTRIBUIÇÃO -->
@@ -415,12 +511,16 @@
   <!-- 15 ESPECTRO -->
   <section class="slide">
     <h2>Determinismo <span class="accent">não é binário</span></h2>
-    <div class="flow" style="margin-top:2.5rem;">
-      <div class="flow-node" style="border-color:var(--accent-3);">Bit-exato</div>
-      <div class="flow-node" style="border-color:var(--accent-2);">Funcional</div>
-      <div class="flow-node" style="border-color:var(--accent);">Estatístico</div>
+    <div class="spectrum">
+      <div class="sp-ends"><span>&larr; Mais controle</span><span>Mais variação &rarr;</span></div>
+      <div class="sp-marks">
+        <div class="sp-line"></div>
+        <div class="sp-mark m-bit"><div class="sp-dot"></div><div class="sp-name">Bit-exato</div><div class="sp-desc">Mesmos bytes</div></div>
+        <div class="sp-mark m-func"><div class="sp-dot"></div><div class="sp-name">Funcional</div><div class="sp-desc">Mesma decisão</div></div>
+        <div class="sp-mark m-stat"><div class="sp-dot"></div><div class="sp-name">Estatístico</div><div class="sp-desc">Mesma distribuição</div></div>
+      </div>
     </div>
-    <p style="margin-top:2.5rem;font-size:1.7rem;">A pergunta certa não é "é determinístico?", é "qual nível esta tarefa exige?"</p>
+    <p class="sp-note">A pergunta certa não é "é determinístico?", é "qual nível esta tarefa exige?"</p>
   </section>
 
   <!-- 16 TRÊS NÍVEIS -->
@@ -438,12 +538,36 @@
   <!-- 17 MATRIZ -->
   <section class="slide">
     <h2>Escolha o <span class="accent">nível certo</span></h2>
-    <div class="cards">
-      <div class="card tilt"><h3>Crítico + variável</h3><p>Erro grave se variar? Sim. Variabilidade desejada? Sim. Resultado: <strong style="color:var(--accent)">Funcional</strong></p></div>
-      <div class="card tilt"><h3>Crítico + fixo</h3><p>Erro grave se variar? Sim. Variabilidade desejada? Não. Resultado: <strong style="color:var(--accent)">Bit-exato</strong></p></div>
-      <div class="card tilt"><h3>Não-crítico + variável</h3><p>Erro grave? Não. Variabilidade? Sim. Resultado: <strong style="color:var(--accent)">Estatístico</strong></p></div>
-      <div class="card tilt"><h3>Não-crítico + fixo</h3><p>Erro grave? Não. Variabilidade? Não. Resultado: <strong style="color:var(--accent)">Funcional</strong></p></div>
+    <div class="matrix">
+      <div class="mx-corner"></div>
+      <div class="mx-col"><span>Variabilidade desejada?</span><b>Sim</b></div>
+      <div class="mx-col"><span>Variabilidade desejada?</span><b>Não</b></div>
+
+      <div class="mx-row"><span>Erro grave se variar?</span><b>Sim</b></div>
+      <div class="mx-cell">
+        <div class="mx-level lv-func">Funcional</div>
+        <div class="mx-what">Decisão fixa, redação livre</div>
+        <div class="mx-ex">Laudo, parecer</div>
+      </div>
+      <div class="mx-cell">
+        <div class="mx-level lv-bit">Bit-exato</div>
+        <div class="mx-what">Saída idêntica, byte a byte</div>
+        <div class="mx-ex">Reprodutibilidade científica</div>
+      </div>
+
+      <div class="mx-row"><span>Erro grave se variar?</span><b>Não</b></div>
+      <div class="mx-cell">
+        <div class="mx-level lv-stat">Estatístico</div>
+        <div class="mx-what">Mesma distribuição, variar é bom</div>
+        <div class="mx-ex">Ideação, recomendação</div>
+      </div>
+      <div class="mx-cell">
+        <div class="mx-level lv-func">Funcional</div>
+        <div class="mx-what">Mesma ação, custo médio</div>
+        <div class="mx-ex">Roteamento, extração</div>
+      </div>
     </div>
+    <p class="mx-note">Forçar bit-exato onde não precisa é caro. Aceitar estatístico onde precisa é irresponsável.</p>
   </section>
 
   <!-- 18 TRANSIÇÃO -->

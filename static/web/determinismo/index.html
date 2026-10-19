@@ -8,13 +8,13 @@
   /* Paleta do site (src/styles/general.jsx) */
   :root { --brand: #e0138c; --brand-2: #8857c3; --brand-3: #44b5ef; }
   body.dark, body:not(.light) {
-    --bg: #222222; --card: #303030; --card-2: #3a3a3a;
+    --bg: #222222; --card: #303030e0; --card-2: #3a3a3a;
     --text: #ffffff; --muted: #e0e0e0; --dim: #bdbdbd;
     --accent: #ff89fd; --accent-3: #7cc9f5; --good: #6fe3a0; --warn: #ffd166; --bad: #ff7b8a;
     --border: rgba(255, 137, 253, 0.45); --line: rgba(252, 252, 252, 0.18);
   }
   body.light {
-    --bg: #fdfdfd; --card: #f1f1f1; --card-2: #e6e6e6;
+    --bg: #fdfdfd; --card: #f1f1f1e0; --card-2: #e6e6e6;
     --text: #1c1c1c; --muted: #333333; --dim: #555555;
     --accent: #b00b6c; --accent-3: #0a6aa1; --good: #0d7a43; --warn: #8a5a00; --bad: #b3202f;
     --border: rgba(176, 11, 108, 0.5); --line: rgba(51, 51, 51, 0.22);
@@ -157,15 +157,15 @@
 
 <script>
 const BLOCKS = [
-  { id: 1, name: 'Abertura: o paradoxo', min: 8, from: 1, to: 4 },
-  { id: 2, name: 'Como LLMs geram texto', min: 12, from: 5, to: 9 },
-  { id: 3, name: 'Fontes de não-determinismo', min: 12, from: 10, to: 14 },
-  { id: 4, name: 'O espectro do determinismo', min: 10, from: 15, to: 18 },
-  { id: 5, name: 'System One: o portão determinístico', min: 15, from: 19, to: 24 },
-  { id: 6, name: 'System One + System Two + Especificação', min: 15, from: 25, to: 29 },
-  { id: 7, name: 'Estudo de caso ao vivo', min: 8, from: 30, to: 31 },
-  { id: 8, name: 'Limites, riscos e ética', min: 5, from: 32, to: 32 },
-  { id: 9, name: 'Q&A', min: 5, from: 33, to: 33 },
+  { id: 1, name: 'Abertura: o paradoxo', min: 8, from: 1, to: 5 },
+  { id: 2, name: 'Como LLMs geram texto', min: 12, from: 6, to: 10 },
+  { id: 3, name: 'Fontes de não-determinismo', min: 12, from: 11, to: 15 },
+  { id: 4, name: 'O espectro do determinismo', min: 10, from: 16, to: 19 },
+  { id: 5, name: 'System One: o portão determinístico', min: 15, from: 20, to: 25 },
+  { id: 6, name: 'System One + System Two + Especificação', min: 15, from: 26, to: 30 },
+  { id: 7, name: 'Estudo de caso ao vivo', min: 8, from: 31, to: 32 },
+  { id: 8, name: 'Limites, riscos e ética', min: 5, from: 33, to: 33 },
+  { id: 9, name: 'Q&A', min: 5, from: 34, to: 34 },
 ];
 
 // t: título | crit: slide crítico | key: mensagem-chave | visual | say: fala | extra: detalhes opcionais (lista)
@@ -178,12 +178,23 @@ const SLIDES = [
   { t: 'Dois exemplos contrastantes',
     visual: 'Split screen. Esquerda, variabilidade é feature: brainstorming de campanha, ideação, design exploratório. Direita, determinismo é requisito: laudo jurídico, parecer financeiro, código em produção, diagnóstico.',
     say: '"A mesma tecnologia, expectativas opostas. O erro comum é tratar as duas com a mesma arquitetura."' },
+  { t: 'Quem fala',
+    key: 'Por que eu falo disso: uso IA todo dia e preciso que ela seja confiável em produção.',
+    visual: 'Nome, cargo (engenheiro frontend sênior) e quatro cartões: 20+ anos de experiência; 7 anos com React em escala; mestrado em Deep Learning e IA (em andamento); IA no fluxo diário de entrega. Stack: React, Next.js, TypeScript, Node.js.',
+    say: 'Apresentação curta, até 1 minuto, sem ler o slide. Ligar ao problema que acabou de ser mostrado: "Eu uso IA todos os dias para entregar, e é por isso que o problema de variabilidade e controle me interessa." Depois voltar para a tese.' },
   { t: 'Tese', crit: 1, key: 'Determinismo é requisito de arquitetura, não parâmetro de modelo.',
     visual: 'Uma frase grande, centralizada. Rodapé: "E o System One é o portão determinístico dessa arquitetura."',
     say: '"Se vocês levarem uma frase hoje, levem esta. Temperature=0 não é arquitetura. E é aí que entra o personagem principal da segunda metade."' },
-  { t: 'O pipeline generativo',
-    visual: 'Fluxo horizontal: Prompt, Tokens, Embeddings, Atenção, Distribuição de probabilidade, Amostragem, Texto.',
-    say: 'Passar rápido, é contexto. "O ponto importante está no penúltimo e no último passo."' },
+  { t: 'O pipeline generativo', key: 'Variabilidade nasce nos dois últimos passos: distribuição e amostragem.',
+    visual: 'Sete passos em lista, com um exemplo único ("O cliente pode cancelar? Resposta:") que segue até o slide 7. Passos 5 e 6 destacados.',
+    extra: ['1 Prompt: o texto que entra.',
+            '2 Tokens: o texto é cortado em pedaços e cada pedaço vira um número (ID).',
+            '3 Embeddings: cada ID vira um vetor de números que representa significado.',
+            '4 Atenção: cada token pesa quais outros tokens importam para o contexto.',
+            '5 Distribuição: o modelo calcula a probabilidade de cada token do vocabulário ser o próximo.',
+            '6 Amostragem: um token é sorteado dessa distribuição.',
+            '7 Texto: o token entra no contexto e o ciclo repete até terminar.'],
+    say: 'Passar rápido pelos passos 1 a 4, é contexto: "Até aqui é matemática determinística, a mesma entrada dá a mesma conta." Desacelerar no 5 e no 6: "O modelo não escreve uma resposta. Ele calcula probabilidades e sorteia um token por vez. O ponto importante está no penúltimo e no último passo."' },
   { t: 'A distribuição de probabilidade', key: 'O modelo não "escolhe a resposta certa". Ele amostra de uma distribuição.',
     visual: 'Gráfico de barras de probabilidades sobre o vocabulário (top 10 tokens com %).',
     say: '"Aqui nasce toda a variabilidade. Não é bug, é o design."' },
@@ -219,7 +230,11 @@ const SLIDES = [
   { t: 'Os três níveis',
     visual: 'Tabela. Bit-exato: mesmo hash SHA-256, reprodutibilidade científica, custo altíssimo. Funcional: mesma decisão/ação, roteamento/laudo/código, custo médio. Estatístico: mesma distribuição, ideação/recomendação, custo baixo.',
     say: '"Bit-exato raramente é necessário. Funcional quase sempre é. Estatístico é o default da indústria hoje."' },
-  { t: 'Escolha o nível certo', visual: 'Matriz 2×2 (tarefa crítica × variabilidade desejada) com exemplos posicionados.',
+  { t: 'Escolha o nível certo', visual: 'Matriz 2×2. Linhas: erro grave se variar (sim/não). Colunas: variabilidade desejada (sim/não). Cada célula tem nível, o que significa e um exemplo.',
+    extra: ['Crítico + variar é desejado: Funcional. Decisão fixa, redação livre. Ex.: laudo, parecer.',
+            'Crítico + variar não é desejado: Bit-exato. Saída idêntica byte a byte. Ex.: reprodutibilidade científica.',
+            'Não crítico + variar é desejado: Estatístico. Mesma distribuição. Ex.: ideação, recomendação.',
+            'Não crítico + variar não é desejado: Funcional. Mesma ação, custo médio. Ex.: roteamento, extração.'],
     say: '"Forçar bit-exato onde não precisa é caro. Aceitar estatístico onde precisa é irresponsável."' },
   { t: 'Transição', crit: 1, key: 'Como chegar ao determinismo funcional? Com um portão determinístico na arquitetura: o System One.',
     visual: 'Frase central.', say: 'Virar a chave da apresentação. A partir daqui, System One é o protagonista.' },
@@ -289,7 +304,8 @@ const SLIDES = [
 
 
 const TOTAL = SLIDES.length;
-const SLIDES_URL = 'determinismo-slides.html';
+// funciona com /web/determinismo, /web/determinismo/ e /web/determinismo/index.html
+const SLIDES_URL = new URL('slides.html', /\/$|\.html$/.test(location.pathname) ? location.href : location.href + '/').href;
 const KEY = 'determinismo-presenter-v1';
 
 const TOTAL_MIN = 90;
