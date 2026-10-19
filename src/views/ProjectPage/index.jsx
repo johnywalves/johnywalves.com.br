@@ -69,6 +69,9 @@ const ProjectPage = () => {
       firemakebetter: file(relativePath: { eq: "firemakebetter.png" }) {
         ...extractFieldsPage
       }
+      blank: file(relativePath: { eq: "blank.jpg" }) {
+        ...extractFieldsPage
+      }
     }
 
     fragment extractFieldsPage on File {
@@ -82,7 +85,7 @@ const ProjectPage = () => {
       }
     }
   `)
-  const getImage = (name) => images[name] || images.firemakebetter
+  const getImage = (name) => images[name] || images.blank
 
   const [activeFilter, setActiveFilter] = useState(null)
 

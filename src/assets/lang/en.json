@@ -1,6 +1,6 @@
 {
   "seo": {
-    "description": "Johny William de Oliveira Alves, Senior Frontend Engineer with <strong>20+ years of experience</strong> delivering scalable web apps in fintech, telecom, and consumer goods. Expert in <strong>React, Next.js, and TypeScript</strong>, driving <strong>99.9% uptime</strong> and millions of users in high-impact projects for clients such as <strong>Coca-Cola</strong> and Anbima. Currently pursuing a Master’s in Computer Science, specialized in <strong>Deep Learning and AI</strong>, with a strong focus on mentorship and CI/CD automation to accelerate software delivery.",
+    "description": "My name is Johny William de Oliveira Alves, I'm a Senior Frontend Engineer with over 20 years of experience, specializing in React, Next.js, TypeScript, and Node.js.<br>Over the last 7 years, I've been building and scaling high‑quality React applications, shaping frontend architecture, and mentoring developers to deliver fast, accessible, and performant user experiences.<br>I've architected greenfield platforms with micro‑frontends (Module Federation), built reusable component ecosystems that accelerated development by 36%, and maintained high‑traffic systems with 99.9% uptime. In one project, I delivered real‑time dashboards with load times under 1.5 seconds using a micro‑frontend architecture. I'm also completing a Master's in Deep Learning and AI and use AI tools daily to accelerate delivery and improve code quality.<br>I'm looking for a role where I can architect, mentor, and ship great products.",
     "position": "Senior Software Engineer",
     "headline": "Senior Frontend Engineer | React & Next.js Specialist | Scalable SaaS Applications | Agile & CI/CD Advocate"
   },
@@ -402,24 +402,23 @@
         "image": "machadoalves"
       },
       {
-        "url": "https://bomdiaequipesdev.com.br/",
+        "url": "https://bomdia.jwalves.com",
         "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
         "name": "Good Morning, Dev Teams!",
         "headline": "Automação + DevOps",
         "description": "Automatic motivational message system for development teams. Slack integration, team customization and engagement metrics.",
-        "stack": ["Node.js", "Slack API", "TypeScript", "Cron", "Redis", "~3,200 loc"],
+        "stack": [
+          "Node.js",
+          "Slack API",
+          "TypeScript",
+          "Cron",
+          "Redis",
+          "~3,200 loc"
+        ],
         "badge": "SPOTLIGHT",
         "year": 2023,
         "image": "bomdia",
         "imagePosition": "center"
-      },
-      {
-        "name": "CSS Animatic",
-        "sourceCode": "https://github.com/johnywalves/cssanimatic",
-        "image": "cssanimatic",
-        "url": "https://johnywalves.github.io/cssanimatic",
-        "description": "CSS Animation made easy: tool to help create animations purely with CSS",
-        "stack": ["JavaScript"]
       },
       {
         "name": "Characters & Comics Creator",
@@ -435,18 +434,33 @@
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
         "description": "Map visualization with points of interest",
-        "stack": ["JavaScript"]
+        "stack": ["Jekyll", "JavaScript"]
       },
       {
         "name": "Terra Quente",
         "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
         "image": "githubio",
-        "url": "https://sanguequente.art/",
+        "url": "https://terraquente.jwalves.com",
         "description": "A collection of Werewolf: The Apocalypse chronicles",
         "stack": ["Jekyll"]
+      },
+      {
+        "name": "Vitorian Wars",
+        "image": "githubio",
+        "url": "https://'vitorianwars.com",
+        "description": "Card Game in development",
+        "stack": ["Next.js"]
       }
     ],
     "outdated": [
+      {
+        "name": "CSS Animatic",
+        "sourceCode": "https://github.com/johnywalves/cssanimatic",
+        "image": "cssanimatic",
+        "url": "https://johnywalves.github.io/cssanimatic",
+        "description": "CSS Animation made easy: tool to help create animations purely with CSS",
+        "stack": ["JavaScript"]
+      },
       {
         "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
@@ -696,7 +710,16 @@
     "title": "Experience",
     "list": [
       {
-        "period": "Sep 2024 - Present",
+        "period": "Aug 2026 - Present",
+        "role": "Senior Full Stack Engineer",
+        "company": "Mirante Tecnologia (outsourcing for Petrobras)",
+        "location": "Brasilia, Brazil (Remote)",
+        "highlights": [
+          "• Leading the migration of a Streamlit (Python) application to a modern React, Next.js, and TypeScript architecture. I'm responsible for the frontend architecture, componentization, REST API integration, and defining quality standards with automated testing and CI/CD. The project gradually replaces the legacy system, delivering a more performant, scalable, and maintainable experience."
+        ]
+      },
+      {
+        "period": "Sep 2024 - Aug 2026",
         "role": "Senior Front-End Engineer | React & Next.js Specialist",
         "company": "WeFit (outsourcing for Porto Seguro)",
         "location": "São Paulo, Brazil (Remote)",

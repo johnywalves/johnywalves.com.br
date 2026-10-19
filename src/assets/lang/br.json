@@ -1,6 +1,6 @@
 {
   "seo": {
-    "description": "Meu nome é Johny William de Oliveira Alves, Desenvolvedor Frontend Sênior com <strong>mais de 20 anos de experiência</strong> entregando aplicações web escaláveis em fintech, telecomunicações e bens de consumo. Especialista em <strong>React, Next.js e TypeScript</strong>, impulsionando <strong>99,9% de uptime</strong> e milhões de usuários em projetos de alto impacto para clientes como <strong>Coca-Cola</strong> e Anbima. Atualmente cursando Mestrado em Ciência da Computação, com especialização em <strong>Deep Learning e IA</strong>, com forte foco em mentoria e automação CI/CD para acelerar a entrega de software.",
+    "description": "Meu nome é Johny William de Oliveira Alves, Sou engenheiro frontend sênior com mais de 20 anos de experiência, especializado em React, Next.js, TypeScript e Node.js.<br>Nos últimos 7 anos, tenho construído e escalado aplicações React de alta qualidade, atuado na definição de arquitetura frontend e mentorado desenvolvedores para entregar experiências rápidas, acessíveis e performáticas.<br>Arquitei plataformas do zero com microfrontends, construí ecossistemas de componentes reutilizáveis que aceleraram o desenvolvimento em 36% e mantive sistemas de alto tráfego com 99,9% de disponibilidade. Em um dos projetos, entreguei dashboards em tempo real com tempo de carregamento inferior a 1,5 segundos, utilizando microfrontends com Module Federation.<br>Também estou concluindo um mestrado em Deep Learning e IA e utilizo ferramentas de IA diariamente para acelerar as entregas e melhorar a qualidade do código.<br>Busco uma oportunidade na qual possa arquitetar, mentorar e entregar produtos de excelência.",
     "position": "Desenvolvedor Frontend Sênior",
     "headline": "Desenvolvedor Frontend Sênior | React & Next.js Specialist | Scalable SaaS Applications | Agile & CI/CD Advocate"
   },
@@ -402,24 +402,23 @@
         "image": "machadoalves"
       },
       {
-        "url": "https://bomdiaequipesdev.com.br/",
+        "url": "https://bomdia.jwalves.com",
         "sourceCode": "https://github.com/johnywalves/bom-dia-equipes-dev",
         "name": "Bom Dia, Times de Dev!",
         "headline": "Automação + DevOps",
         "description": "Sistema de mensagens motivacionais automáticas para equipes de desenvolvimento. Integração com Slack, personalização por time e métricas de engajamento.",
-        "stack": ["Node.js", "Slack API", "TypeScript", "Cron", "Redis", "~3,200 loc"],
+        "stack": [
+          "Node.js",
+          "Slack API",
+          "TypeScript",
+          "Cron",
+          "Redis",
+          "~3,200 loc"
+        ],
         "badge": "SPOTLIGHT",
         "year": 2023,
         "image": "bomdia",
         "imagePosition": "center"
-      },
-      {
-        "name": "CSS Animatic",
-        "sourceCode": "https://github.com/johnywalves/cssanimatic",
-        "image": "cssanimatic",
-        "url": "https://johnywalves.github.io/cssanimatic",
-        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS",
-        "stack": ["JavaScript"]
       },
       {
         "name": "Criador de Personagens e Quadrinhos",
@@ -435,18 +434,33 @@
         "image": "wolt",
         "url": "https://johnywalves.github.io/wolt/",
         "description": "Visualização de mapa com pontos de interesse",
-        "stack": ["JavaScript"]
+        "stack": ["Jekyll", "JavaScript"]
       },
       {
         "name": "Terra Quente",
         "sourceCode": "https://github.com/johnywalves/sangue-terra-quente",
         "image": "githubio",
-        "url": "https://sanguequente.art/",
+        "url": "https://terraquente.jwalves.com",
         "description": "Uma coleção de crônicas de Lobisomem: O Apocalipse",
         "stack": ["Jekyll"]
+      },
+      {
+        "name": "Vitorian Wars",
+        "image": "githubio",
+        "url": "https://'vitorianwars.com",
+        "description": "Jogo de cartas em desenvolvimento",
+        "stack": ["Next.js"]
       }
     ],
     "outdated": [
+      {
+        "name": "CSS Animatic",
+        "sourceCode": "https://github.com/johnywalves/cssanimatic",
+        "image": "cssanimatic",
+        "url": "https://johnywalves.github.io/cssanimatic",
+        "description": "Animação CSS facilitada: ferramenta para ajudar a criar animações puramente com CSS",
+        "stack": ["JavaScript"]
+      },
       {
         "name": "Fire Make Better",
         "sourceCode": "https://github.com/johnywalves/fire-make-better",
@@ -696,7 +710,16 @@
     "title": "Experiência",
     "list": [
       {
-        "period": "Set 2024 - Presente",
+        "period": "Ago 2026 - Presente",
+        "role": "Desenvolvedor Full Stack Sênior | Especialista em React e Node.js",
+        "company": "Mirante Tecnologia (projeto para Petrobras)",
+        "location": "Brasilia, Brazil (Remote)",
+        "highlights": [
+          "• Liderando a migração de uma aplicação em Streamlit (Python) para uma arquitetura moderna em React, Next.js e TypeScript. Sou responsável pela arquitetura frontend, componentização, integração com APIs REST e definição de padrões de qualidade com testes automatizados e CI/CD. O projeto substitui gradualmente o sistema legado, entregando uma experiência mais performática, escalável e de fácil manutenção."
+        ]
+      },
+      {
+        "period": "Set 2024 - Ago 2026",
         "role": "Desenvolvedor Front-End Sênior | Especialista em React e Next.js",
         "company": "WeFit (projeto para Porto Seguro)",
         "location": "São Paulo, Brasil (Remoto)",

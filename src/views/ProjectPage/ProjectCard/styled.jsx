@@ -142,6 +142,10 @@ export const ProjectCardLink = styled.a`
   &:hover {
     color: var(--third);
   }
+
+  &:visited {
+    color: var(--highlight);
+  }
 `
 
 export const ProjectCardDescription = styled.p`
