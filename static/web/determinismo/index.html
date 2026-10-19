@@ -304,8 +304,13 @@ const SLIDES = [
 
 
 const TOTAL = SLIDES.length;
-// funciona com /web/determinismo, /web/determinismo/ e /web/determinismo/index.html
-const SLIDES_URL = new URL('slides.html', /\/$|\.html$/.test(location.pathname) ? location.href : location.href + '/').href;
+// A pasta pode ser servida como /web/determinismo (sem barra, como no Netlify), /web/determinismo/ ou .../index.html
+const SLIDES_URL = (() => {
+  const dir = location.pathname.replace(/\/(index\.html)?$/, '').replace(/\/?$/, '/');
+  return location.origin === 'null' || location.protocol === 'file:'
+    ? new URL('slides.html', location.href).href
+    : location.origin + dir + 'slides.html';
+})();
 const KEY = 'determinismo-presenter-v1';
 
 const TOTAL_MIN = 90;

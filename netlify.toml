@@ -1,3 +1,14 @@
 [build]
   command = "npx gatsby clean && npm run build"
   publish = "public"
+
+# A apresentação mostra os slides em iframes da própria página (prévia do controle)
+[[headers]]
+  for = "/web/determinismo"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/web/determinismo/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
