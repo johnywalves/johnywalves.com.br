@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roteiro · LLMs, IA Generativa e Determinismo</title>
+<style>
+  /* Paleta do site (src/styles/general.jsx) */
+  :root { --brand: #e0138c; --brand-2: #8857c3; --brand-3: #44b5ef; }
+  body.dark, body:not(.light) {
+    --bg: #222222; --card: #303030; --card-2: #3a3a3a;
+    --text: #ffffff; --muted: #e0e0e0; --dim: #bdbdbd;
+    --accent: #ff89fd; --accent-3: #7cc9f5; --good: #6fe3a0; --warn: #ffd166; --bad: #ff7b8a;
+    --border: rgba(255, 137, 253, 0.45); --line: rgba(252, 252, 252, 0.18);
+  }
+  body.light {
+    --bg: #fdfdfd; --card: #f1f1f1; --card-2: #e6e6e6;
+    --text: #1c1c1c; --muted: #333333; --dim: #555555;
+    --accent: #b00b6c; --accent-3: #0a6aa1; --good: #0d7a43; --warn: #8a5a00; --bad: #b3202f;
+    --border: rgba(176, 11, 108, 0.5); --line: rgba(51, 51, 51, 0.22);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: clamp(16px, 1.15vw, 24px); }
+  body {
+    min-height: 100vh; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    display: flex; flex-direction: column; height: 100vh; overflow: hidden;
+  }
+  button {
+    font: inherit; cursor: pointer; color: var(--text); background: var(--card);
+    border: 2px solid var(--border); border-radius: 999px; padding: 0.45rem 1.1rem; font-weight: 700;
+  }
+  button:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+  button:focus-visible { outline: 3px solid var(--accent-3); outline-offset: 2px; }
+  button.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+  button.primary:hover { filter: brightness(1.12); }
+
+  /* Barra superior */
+  .top {
+    display: flex; align-items: stretch; gap: 1.2rem; padding: 0.8rem 1.4rem;
+    border-bottom: 2px solid var(--line); background: var(--card); flex-wrap: wrap;
+  }
+  .stat { display: flex; flex-direction: column; justify-content: center; min-width: 7rem; }
+  .stat .lbl { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim); font-weight: 800; }
+  .stat .val { font-size: 2.6rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.05; }
+  .stat .val.sm { font-size: 1.6rem; }
+  .stat .val.good { color: var(--good); } .stat .val.warn { color: var(--warn); } .stat .val.bad { color: var(--bad); }
+  .spacer { flex: 1; }
+  .controls { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+  .sep { width: 2px; background: var(--line); align-self: stretch; }
+  .conn { font-size: 0.85rem; font-weight: 700; color: var(--dim); }
+  .conn.on { color: var(--good); }
+
+  /* Barra de blocos */
+  .blocks { display: flex; gap: 3px; padding: 0.6rem 1.4rem 0; }
+  .blk { position: relative; height: 0.5rem; border-radius: 99px; background: var(--card-2); overflow: hidden; }
+  .blk > i { position: absolute; inset: 0 auto 0 0; background: var(--brand-3); width: 0; }
+  .blk.done > i { background: var(--brand-2); }
+  .blk.cur > i { background: var(--brand); }
+  .blk-lbl { display: flex; gap: 3px; padding: 0.3rem 1.4rem 0; font-size: 0.78rem; font-weight: 700; color: var(--dim); }
+  .blk-lbl span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .blk-lbl span.cur { color: var(--accent); }
+
+  /* Corpo */
+  main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 1.4rem; padding: 1rem 1.4rem 1.2rem; }
+  .notes { display: flex; flex-direction: column; min-height: 0; overflow-y: auto; padding-right: 0.4rem; }
+  .meta { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
+  .chip {
+    font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0.2rem 0.75rem; border-radius: 999px; border: 2px solid currentColor;
+  }
+  .chip.blk-c { color: var(--accent-3); } .chip.crit { color: var(--bad); }
+  .chip.time { color: var(--warn); }
+  h1 { font-size: 2.4rem; line-height: 1.15; margin: 0.2rem 0 0.9rem; }
+  h1 .n { color: var(--accent); }
+  .sec { margin-bottom: 1rem; }
+  .sec h2 { font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; color: var(--accent); margin-bottom: 0.3rem; }
+  .sec p, .sec li { font-size: 1.35rem; line-height: 1.5; color: var(--text); }
+  .sec li { margin-left: 1.3rem; margin-bottom: 0.25rem; }
+  .sec.key { background: var(--card); border-left: 0.35rem solid var(--brand); border-radius: 0.6rem; padding: 0.8rem 1rem; }
+  .sec.say p { font-size: 1.7rem; line-height: 1.5; font-weight: 600; }
+  .sec.visual p { color: var(--muted); }
+
+  .side { display: flex; flex-direction: column; gap: 0.8rem; min-height: 0; }
+  .nav, .kbd { flex-shrink: 0; }
+  .pv h2 { font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; color: var(--dim); margin-bottom: 0.3rem; }
+  .frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border: 2px solid var(--border); border-radius: 0.6rem; overflow: hidden; background: var(--bg); }
+  .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
+  .previews { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; flex-shrink: 0; }
+  .nextTitle { font-size: 1.1rem; font-weight: 700; color: var(--muted); flex-shrink: 0; }
+
+  .nav { display: flex; gap: 0.6rem; align-items: center; }
+  .nav .count { font-size: 1.3rem; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 5rem; text-align: center; }
+  .agenda { flex: 1; min-height: 6rem; overflow-y: auto; background: var(--card); border: 2px solid var(--line); border-radius: 0.7rem; padding: 0.6rem 0.8rem; }
+  .agenda h2 { font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; color: var(--dim); margin-bottom: 0.3rem; }
+  .agenda button {
+    display: flex; width: 100%; justify-content: space-between; gap: 0.6rem; text-align: left;
+    border: 0; border-radius: 0.4rem; background: transparent; padding: 0.25rem 0.4rem; font-weight: 600; font-size: 1rem;
+  }
+  .agenda button.cur { background: var(--brand); color: #fff; }
+  .agenda button .m { color: inherit; opacity: 0.85; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .empty { margin: auto; text-align: center; max-width: 34rem; }
+  .empty p { font-size: 1.4rem; line-height: 1.5; margin-bottom: 1.2rem; }
+  .kbd { font-size: 0.85rem; color: var(--dim); }
+  kbd { border: 1px solid var(--line); background: var(--card); border-radius: 4px; padding: 0 0.35rem; font-family: inherit; font-weight: 700; }
+  main { cursor: pointer; }
+  .agenda, .nav, .kbd { cursor: default; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; overflow-y: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="stat"><span class="lbl">Hora</span><span class="val" id="clock">--:--:--</span></div>
+  <div class="stat"><span class="lbl">Decorrido</span><span class="val" id="elapsed">00:00:00</span></div>
+  <div class="stat"><span class="lbl">Restante</span><span class="val" id="remaining">01:30:00</span></div>
+  <div class="stat"><span class="lbl">Bloco</span><span class="val sm" id="blockTime">0:00 / 0 min</span></div>
+  <div class="stat"><span class="lbl">Ritmo</span><span class="val sm" id="pace">no ritmo</span></div>
+  <div class="spacer"></div>
+  <div class="controls">
+    <button id="startBtn" class="primary">Iniciar</button>
+    <button id="resetBtn" title="Zerar cronômetro e voltar ao slide 1">Zerar</button>
+    <span class="sep"></span>
+    <button id="openBtn" class="primary">Abrir slides</button>
+    <span class="conn" id="conn">slides fechados</span>
+    <span class="sep"></span>
+    <button id="themeBtn" title="Alternar tema (compartilhado com o site)">Tema</button>
+  </div>
+</header>
+
+<div class="blocks" id="blocks"></div>
+<div class="blk-lbl" id="blkLbl"></div>
+
+<main>
+  <section class="notes" id="notes"></section>
+  <aside class="side">
+    <div class="previews">
+      <div class="pv">
+        <h2>Slide atual</h2>
+        <div class="frame"><iframe id="curFrame" title="Slide atual" src="about:blank"></iframe></div>
+      </div>
+      <div class="pv">
+        <h2>Próximo</h2>
+        <div class="frame"><iframe id="nextFrame" title="Próximo slide" src="about:blank"></iframe></div>
+      </div>
+    </div>
+    <div class="nextTitle" id="nextTitle"></div>
+    <div class="nav">
+      <button id="prev">&larr; Anterior</button>
+      <span class="count" id="count">1 / 33</span>
+      <button id="next" class="primary">Próximo &rarr;</button>
+    </div>
+    <div class="kbd"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> <kbd>Espaço</kbd> navegam · <kbd>S</kbd> abre slides · <kbd>P</kbd> pausa · <kbd>F</kbd> tela cheia nos slides</div>
+    <div class="agenda" id="agenda"></div>
+  </aside>
+</main>
+
+<script>
+const BLOCKS = [
+  { id: 1, name: 'Abertura: o paradoxo', min: 8, from: 1, to: 4 },
+  { id: 2, name: 'Como LLMs geram texto', min: 12, from: 5, to: 9 },
+  { id: 3, name: 'Fontes de não-determinismo', min: 12, from: 10, to: 14 },
+  { id: 4, name: 'O espectro do determinismo', min: 10, from: 15, to: 18 },
+  { id: 5, name: 'System One: o portão determinístico', min: 15, from: 19, to: 24 },
+  { id: 6, name: 'System One + System Two + Especificação', min: 15, from: 25, to: 29 },
+  { id: 7, name: 'Estudo de caso ao vivo', min: 8, from: 30, to: 31 },
+  { id: 8, name: 'Limites, riscos e ética', min: 5, from: 32, to: 32 },
+  { id: 9, name: 'Q&A', min: 5, from: 33, to: 33 },
+];
+
+// t: título | crit: slide crítico | key: mensagem-chave | visual | say: fala | extra: detalhes opcionais (lista)
+const SLIDES = [
+  { t: 'Capa', crit: 1, visual: 'Título da apresentação, subtítulo, nome do apresentador, evento/data.',
+    say: 'Abrir com energia. Não ler o slide. "Hoje vamos falar de uma tensão que todo mundo que coloca IA em produção enfrenta."' },
+  { t: 'O paradoxo', key: 'Quanto mais poderosa a IA generativa, mais o mundo exige que ela seja previsível.',
+    visual: 'Dois painéis lado a lado. Esquerda: "IA mais criativa" (cérebro/faísca). Direita: "Mundo mais exigente por controle" (cadeado/balança).',
+    say: '"Nunca tivemos modelos tão capazes de criar. E nunca tivemos tantas exigências de auditoria, compliance e reprodutibilidade."' },
+  { t: 'Dois exemplos contrastantes',
+    visual: 'Split screen. Esquerda, variabilidade é feature: brainstorming de campanha, ideação, design exploratório. Direita, determinismo é requisito: laudo jurídico, parecer financeiro, código em produção, diagnóstico.',
+    say: '"A mesma tecnologia, expectativas opostas. O erro comum é tratar as duas com a mesma arquitetura."' },
+  { t: 'Tese', crit: 1, key: 'Determinismo é requisito de arquitetura, não parâmetro de modelo.',
+    visual: 'Uma frase grande, centralizada. Rodapé: "E o System One é o portão determinístico dessa arquitetura."',
+    say: '"Se vocês levarem uma frase hoje, levem esta. Temperature=0 não é arquitetura. E é aí que entra o personagem principal da segunda metade."' },
+  { t: 'O pipeline generativo',
+    visual: 'Fluxo horizontal: Prompt, Tokens, Embeddings, Atenção, Distribuição de probabilidade, Amostragem, Texto.',
+    say: 'Passar rápido, é contexto. "O ponto importante está no penúltimo e no último passo."' },
+  { t: 'A distribuição de probabilidade', key: 'O modelo não "escolhe a resposta certa". Ele amostra de uma distribuição.',
+    visual: 'Gráfico de barras de probabilidades sobre o vocabulário (top 10 tokens com %).',
+    say: '"Aqui nasce toda a variabilidade. Não é bug, é o design."' },
+  { t: 'Temperatura, top-p, top-k',
+    visual: 'Três mini-gráficos mostrando o efeito de cada parâmetro. Tabela: temperature=0 (greedy/argmax, parece mas não garante), top-p (nucleus sampling, não), top-k (limita ao top k, não).',
+    say: '"Temperature=0 pega sempre o token mais provável. Parece determinístico. Mas..."' },
+  { t: 'Demo: mesma pergunta, temperaturas diferentes',
+    visual: 'Captura de tela (ou gravação) de duas execuções lado a lado: temperature=0 vs temperature=1. Backup: vídeo gravado, não fazer ao vivo.',
+    say: '"Mesmo com temperature=0, se eu rodar de novo amanhã, pode vir diferente. Por quê? Próximo bloco."' },
+  { t: 'Transição', visual: 'Slide minimalista com uma pergunta: "Temperature=0 resolve?" e a resposta "Não. E a razão é mais profunda do que parece."',
+    say: 'Criar expectativa para o bloco 3.' },
+
+  { t: 'Três fontes, não uma', crit: 1,
+    visual: 'Três ícones/camadas empilhadas: Hardware/GPU (não-associatividade de ponto flutuante + batching dinâmico); Interpretação (deriva de interpretação da tarefa); Saída (espaço de saída livre).',
+    say: '"A maioria só conhece a primeira. A segunda é a mais subestimada."' },
+  { t: 'Fonte 1: GPU e batching', key: 'A ordem de acumulação depende do batch. O batch varia em produção. A saída varia.',
+    visual: 'Diagrama simples de acumulação de ponto flutuante em ordem diferente conforme o batch.',
+    say: '"Mesma entrada, mesmo modelo, mesmo temperature=0. Execuções diferentes, saídas diferentes. Isso é real e mensurável."' },
+  { t: 'Fonte 2: deriva de interpretação', crit: 1,
+    key: 'Engenharia de prompt ajusta a probabilidade de escolha dentro do espaço de interpretação. Não elimina a diversidade de interpretações.',
+    visual: 'Pergunta ambígua no topo e três interpretações em paralelo, cada uma com resposta coerente internamente, mas incompatíveis entre si.',
+    say: '"Este é o ponto mais importante do bloco. O modelo pode estar \'certo\' em três sentidos diferentes. Prompt não resolve isso."' },
+  { t: 'Fonte 3: espaço de saída livre', key: 'Mesmo com temperature=0, texto livre permite variação de formato e desvio semântico.',
+    visual: 'Três saídas válidas para o mesmo pedido, em formatos diferentes: JSON, prosa, lista.',
+    say: '"Se a saída é texto livre, o determinismo funcional é impossível por construção."' },
+  { t: 'Síntese do bloco',
+    visual: 'Tabela. GPU/batching: parâmetro não, arquitetura parcialmente. Deriva de interpretação: parâmetro não, arquitetura sim (especificação). Espaço de saída: parâmetro não, arquitetura sim (System One).',
+    say: '"Nenhuma das três se resolve só com temperature=0. Todas se resolvem, ou se mitigam, na arquitetura. É a ponte para o próximo bloco."' },
+
+  { t: 'Determinismo não é binário', key: 'A pergunta certa não é "é determinístico?", é "qual nível de determinismo esta tarefa exige?"',
+    visual: 'Espectro horizontal com três marcadores: Bit-exato, Funcional, Estatístico.',
+    say: '"A pergunta certa não é \'é determinístico?\', é \'qual nível de determinismo esta tarefa exige?\'"' },
+  { t: 'Os três níveis',
+    visual: 'Tabela. Bit-exato: mesmo hash SHA-256, reprodutibilidade científica, custo altíssimo. Funcional: mesma decisão/ação, roteamento/laudo/código, custo médio. Estatístico: mesma distribuição, ideação/recomendação, custo baixo.',
+    say: '"Bit-exato raramente é necessário. Funcional quase sempre é. Estatístico é o default da indústria hoje."' },
+  { t: 'Escolha o nível certo', visual: 'Matriz 2×2 (tarefa crítica × variabilidade desejada) com exemplos posicionados.',
+    say: '"Forçar bit-exato onde não precisa é caro. Aceitar estatístico onde precisa é irresponsável."' },
+  { t: 'Transição', crit: 1, key: 'Como chegar ao determinismo funcional? Com um portão determinístico na arquitetura: o System One.',
+    visual: 'Frase central.', say: 'Virar a chave da apresentação. A partir daqui, System One é o protagonista.' },
+
+  { t: 'O que é System One (definição)', crit: 1, key: 'Sistema de execução de decisão local e não generativo: um portão de controle antes do LLM.',
+    visual: 'Caixa de definição destacada. "System One aqui não é o pensamento rápido cognitivo de Kahneman. É um sistema de execução de decisão local e não generativo, na camada de arquitetura. Decide de forma determinística por regras predefinidas, classificadores de intenção e mecanismos de auditoria."',
+    say: 'Desambiguar explicitamente. "Se você conhece Kahneman, esqueça por um momento. O nome é o mesmo, o conceito é outro."' },
+  { t: 'Função 1: espaço aberto → espaço fechado', crit: 1,
+    key: '"Smart if-statements": classificação em enumeração predefinida. Mesma entrada + mesmo modelo + parâmetros fixos = mesma decisão.',
+    visual: 'Funil. Entrada livre ("quero cancelar minha assinatura e pedir reembolso do mês passado") → classificação determinística → [billing_agent, tech_support, security_review].',
+    say: '"Em vez de deixar o LLM gerar livremente uma tag de intenção, o System One classifica em um conjunto finito. Determinístico por construção."' },
+  { t: 'Função 2: auditoria (ActionLedger)', crit: 1,
+    key: 'Reconstruibilidade e invariância de ordem. PICA chega a 0% de viés de ordem.',
+    visual: 'Fluxo: decisão → registro no ledger → verificação de correspondência → execução. Bullets: Reconstruibilidade (rastrear decisão até política e entrada). Invariância de ordem (pontuar opções independentemente evita viés de posição do LLM).',
+    say: '"A ação só executa se a decisão corresponder exatamente ao registro. Isso é auditabilidade real, não log de texto."' },
+  { t: 'Função 3: limitação do espaço de saída', key: 'Fecha a entrada (função 1) e fecha a saída.',
+    visual: 'Lista de tipos de retorno permitidos, com ícones: choice / score / null / range_eval / set_choice.',
+    say: '"Espaço de saída limitado impede que o modelo \'invente\'. É o complemento da função 1: fecha a entrada e fecha a saída."' },
+  { t: 'O que o System One troca', key: 'Entradas fora da enumeração predefinida precisam de fallback.',
+    visual: 'Balança. De um lado, capacidade de lidar com o inesperado. Do outro, confiabilidade e auditabilidade.',
+    say: '"Nada é de graça. Ao limitar o espaço de decisão, ganha-se confiabilidade e perde-se flexibilidade. O fallback é obrigatório."' },
+  { t: 'Síntese do bloco', key: 'System One não gera. Ele decide, registra e limita.',
+    visual: 'Três funções em três colunas, com uma frase de fechamento embaixo.',
+    say: '"Guardem essas três palavras: decide, registra, limita."' },
+
+  { t: 'A arquitetura em 3 camadas', crit: 1,
+    visual: 'Tabela central da apresentação, em slide grande. Entrada (System One) · Especificação determinística · Execução (System Two), com colunas Mecanismo, Resolve, Não resolve.',
+    extra: ['Entrada: resolve ambiguidade, desvio de roteamento e injeção. Não resolve raciocínio lógico complexo.',
+            'Especificação: resolve deriva de interpretação e variância entre modelos. Não resolve execução de um modelo específico.',
+            'Execução: resolve raciocínio em etapas e uso de ferramentas. Não resolve determinismo em nível de token.'],
+    say: '"Este é o slide que vocês devem fotografar. Cada camada resolve o que a outra não resolve."' },
+  { t: 'O achado que muda tudo', crit: 1,
+    key: 'Após restrições de substrato reduzirem múltiplas interpretações a uma única, quatro modelos de fronteira geram saídas idênticas byte a byte.',
+    visual: 'Quatro logos de modelos de fronteira (genéricos) convergindo para o mesmo hash SHA-256. Abaixo: "40 execuções · primeira invocação · saída idêntica byte a byte".',
+    say: 'Momento "uau" da apresentação. Pausar. "Uma vez que a especificação é rigorosamente determinizada, até o próprio LLM se comporta como módulo de software determinístico."' },
+  { t: 'Roteamento por confiança', crit: 1,
+    visual: 'Semáforo ou três faixas. Alta: System One decide automaticamente. Média: confirmação humana. Baixa: encaminhar para LLM (System Two) ou humano.',
+    say: '"É aqui que as camadas se coordenam. O System One não é um gargalo: é um roteador."' },
+  { t: 'Como as camadas conversam',
+    visual: 'Fluxo completo: entrada → System One → [alta/média/baixa] → System Two → especificação → saída → ledger.',
+    say: '"Vocês vão ver esse fluxo funcionando no próximo bloco."' },
+  { t: 'Síntese do bloco',
+    visual: 'Três frases, uma por camada: System One fecha a entrada e a saída. Especificação determinística fecha a interpretação. System Two executa o raciocínio complexo dentro do espaço limitado.',
+    say: '"Três fechamentos. Determinismo funcional."' },
+
+  { t: 'Fluxo ponta a ponta: atendimento ao cliente', crit: 1,
+    visual: 'Diagrama numerado de 5 etapas: 1) entrada ambígua chega; 2) System One classifica intenção e registra no ActionLedger; 3) confiança alta roteia direto, baixa vai para LLM refinar ou humano confirmar; 4) System Two executa raciocínio/tool calling no espaço limitado; 5) saída validada contra schema, ação executada, registro auditável.',
+    say: 'Percorrer o fluxo devagar, apontando cada camada. Este é o slide que "fecha" a arquitetura na cabeça da plateia.' },
+  { t: 'O ledger como artefato concreto', key: 'Esta decisão pode ser reconstruída e auditada.',
+    visual: 'Captura de tela (mock) de um registro de auditoria: entrada, política aplicada, decisão, hash, timestamp.',
+    say: '"Auditabilidade não é discurso. É este artefato aqui."' },
+
+  { t: 'O que o System One não resolve', crit: 1,
+    visual: 'Duas listas lado a lado.',
+    extra: ['Não resolve: raciocínio complexo (papel do System Two).',
+            'Não resolve: entradas fora da enumeração predefinida (precisa de fallback).',
+            'Não resolve: manutenção da taxonomia ao longo do tempo (governança de regras).',
+            'Risco: viés embutido nas regras de classificação.',
+            'Risco: falsa sensação de segurança.',
+            'Risco: determinismo ≠ justiça. Um sistema determinístico pode ser deterministicamente injusto.'],
+    say: 'Fechar com honestidade intelectual. "Determinismo é uma ferramenta, não uma virtude moral."' },
+
+  { t: 'Takeaways + contato',
+    visual: 'Os 5 takeaways numerados + QR code / contato / link do repositório de exemplos.',
+    say: 'Deixar na tela durante todo o Q&A.' },
+];
+
+
+const TOTAL = SLIDES.length;
+const SLIDES_URL = 'determinismo-slides.html';
+const KEY = 'determinismo-presenter-v1';
+
+const TOTAL_MIN = 90;
+const blockOf = n => BLOCKS.find(b => n >= b.from && n <= b.to);
+// minuto esperado no início de cada slide (bloco dividido igualmente entre seus slides)
+let cum = 0;
+const startMin = [];
+BLOCKS.forEach(b => {
+  const cnt = b.to - b.from + 1;
+  for (let i = 0; i < cnt; i++) startMin[b.from - 1 + i] = cum + b.min * i / cnt;
+  cum += b.min;
+});
+const slideMin = n => { const b = blockOf(n + 1); return b.min / (b.to - b.from + 1); };
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, '0');
+const fmt = ms => { const s = Math.floor(Math.abs(ms) / 1000); return `${pad(Math.floor(s / 3600))}:${pad(Math.floor(s % 3600 / 60))}:${pad(s % 60)}`; };
+const fmtMS = ms => { const s = Math.floor(Math.abs(ms) / 1000); return `${Math.floor(s / 60)}:${pad(s % 60)}`; };
+const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+
+// ---------- estado ----------
+let st = { idx: 0, acc: 0, since: null, blockEnter: 0 };
+try { Object.assign(st, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
+if (st.idx >= TOTAL || st.idx < 0) st.idx = 0;
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
+const elapsed = () => st.acc + (st.since ? Date.now() - st.since : 0);
+const running = () => !!st.since;
+
+function start() { if (!running()) { st.since = Date.now(); save(); renderBtn(); } }
+function pause() { if (running()) { st.acc = elapsed(); st.since = null; save(); renderBtn(); } }
+function renderBtn() { $('startBtn').textContent = running() ? 'Pausar' : (st.acc > 0 ? 'Continuar' : 'Iniciar'); }
+
+// ---------- tema ----------
+function applyTheme() {
+  let t = null; try { t = localStorage.getItem('theme'); } catch (e) {}
+  if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.body.className = t;
+}
+applyTheme();
+window.addEventListener('storage', e => { if (e.key === 'theme') applyTheme(); });
+$('themeBtn').onclick = () => {
+  const t = document.body.classList.contains('light') ? 'dark' : 'light';
+  try { localStorage.setItem('theme', t); } catch (e) {}
+  applyTheme();
+};
+
+// ---------- janela dos slides ----------
+let win = null;
+let channel = null;
+try { channel = new BroadcastChannel('determinismo-deck'); } catch (e) {}
+
+function winAlive() { return win && !win.closed; }
+function openSlides() {
+  if (winAlive()) { win.focus(); return; }
+  const w = Math.min(screen.availWidth, 1600), h = Math.min(screen.availHeight, 900);
+  // se houver segundo monitor, o navegador posiciona; a janela pode ser arrastada e F entra em tela cheia
+  win = window.open(`${SLIDES_URL}?slide=${st.idx + 1}`, 'determinismo-slides',
+    `popup=yes,width=${w},height=${h},left=${screen.availLeft || 0},top=${screen.availTop || 0}`);
+  if (!win) alert('O navegador bloqueou a janela. Permita pop-ups para este site e clique em "Abrir slides" de novo.');
+  renderConn();
+}
+function sendToSlides() {
+  const msg = { dsh: 'goto', idx: st.idx };
+  if (channel) channel.postMessage(msg);
+  if (winAlive()) win.postMessage(msg, '*');
+}
+function renderConn() {
+  const on = winAlive();
+  $('conn').textContent = on ? 'slides abertos' : 'slides fechados';
+  $('conn').classList.toggle('on', on);
+  $('openBtn').textContent = on ? 'Focar slides' : 'Abrir slides';
+}
+setInterval(renderConn, 1000);
+
+function onRemote(d) {
+  if (!d) return;
+  if (d.dsh === 'sync') go(d.idx, true);
+  else if (d.dsh === 'hello') sendToSlides();
+}
+if (channel) channel.onmessage = e => onRemote(e.data);
+window.addEventListener('message', e => { if (e.source && e.source === win) onRemote(e.data); });
+window.addEventListener('beforeunload', () => { if (winAlive()) win.close(); });
+
+// ---------- navegação ----------
+function go(n, fromRemote) {
+  n = Math.max(0, Math.min(TOTAL - 1, n));
+  const prevBlock = blockOf(st.idx + 1).id;
+  st.idx = n;
+  if (blockOf(n + 1).id !== prevBlock) st.blockEnter = elapsed();
+  save();
+  render();
+  if (!fromRemote) sendToSlides();
+}
+
+// ---------- render ----------
+function sec(cls, title, body) { return `<div class="sec ${cls}"><h2>${title}</h2>${body}</div>`; }
+function render() {
+  const n = st.idx, s = SLIDES[n], b = blockOf(n + 1);
+  let html = `<div class="meta">
+      <span class="chip blk-c">Bloco ${b.id} · ${esc(b.name)}</span>
+      ${s.crit ? '<span class="chip crit">Slide crítico: não cortar</span>' : ''}
+      <span class="chip time">~${slideMin(n).toFixed(1).replace('.', ',')} min</span></div>
+    <h1><span class="n">${n + 1}.</span> ${esc(s.t)}</h1>`;
+  if (s.key) html += sec('key', 'Mensagem-chave', `<p>${esc(s.key)}</p>`);
+  html += sec('say', 'Fala', `<p>${esc(s.say)}</p>`);
+  html += sec('visual', 'Visual no slide', `<p>${esc(s.visual)}</p>` + (s.extra ? `<ul>${s.extra.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''));
+  $('notes').innerHTML = html;
+  $('notes').scrollTop = 0;
+
+  $('count').textContent = `${n + 1} / ${TOTAL}`;
+  const nx = SLIDES[n + 1];
+  $('nextTitle').textContent = nx ? `${n + 2}. ${nx.t}` : 'Fim da apresentação';
+  setFrame($('curFrame'), n);
+  setFrame($('nextFrame'), Math.min(n + 1, TOTAL - 1));
+
+  // barra de blocos
+  $('blocks').innerHTML = BLOCKS.map(x => {
+    const cls = x.id < b.id ? 'done' : x.id === b.id ? 'cur' : '';
+    const pct = x.id < b.id ? 100 : x.id === b.id ? ((n + 1 - x.from + 1) / (x.to - x.from + 1)) * 100 : 0;
+    return `<div class="blk ${cls}" style="flex:${x.min}"><i style="width:${pct}%"></i></div>`;
+  }).join('');
+  $('blkLbl').innerHTML = BLOCKS.map(x => `<span class="${x.id === b.id ? 'cur' : ''}" style="flex:${x.min}">${x.id}. ${esc(x.name)}</span>`).join('');
+
+  $('agenda').innerHTML = '<h2>Blocos</h2>' + BLOCKS.map(x =>
+    `<button data-go="${x.from - 1}" class="${x.id === b.id ? 'cur' : ''}"><span>${x.id}. ${esc(x.name)}</span><span class="m">${x.min} min · ${x.from === x.to ? 'sl. ' + x.from : 'sl. ' + x.from + '–' + x.to}</span></button>`).join('');
+  $('agenda').querySelectorAll('button').forEach(btn => btn.onclick = () => go(+btn.dataset.go));
+  tick();
+}
+
+const frameState = new WeakMap();
+function setFrame(f, n) {
+  if (!frameState.has(f)) {
+    f.src = `${SLIDES_URL}?embed=1&slide=${n + 1}`;
+    frameState.set(f, n);
+    return;
+  }
+  frameState.set(f, n);
+  try { f.contentWindow.postMessage({ dsh: 'goto', idx: n }, '*'); } catch (e) {}
+}
+// garante o slide correto quando o iframe termina de carregar
+['curFrame', 'nextFrame'].forEach(id => $(id).addEventListener('load', () => {
+  const f = $(id); const n = frameState.get(f);
+  if (n !== undefined) try { f.contentWindow.postMessage({ dsh: 'goto', idx: n }, '*'); } catch (e) {}
+}));
+
+function tick() {
+  const now = new Date();
+  $('clock').textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+  const el = elapsed();
+  $('elapsed').textContent = fmt(el);
+  const rem = TOTAL_MIN * 60000 - el;
+  const r = $('remaining');
+  r.textContent = (rem < 0 ? '-' : '') + fmt(rem);
+  r.className = 'val ' + (rem < 0 ? 'bad' : rem < 5 * 60000 ? 'warn' : '');
+
+  const b = blockOf(st.idx + 1);
+  const be = Math.max(0, el - st.blockEnter);
+  const bt = $('blockTime');
+  bt.textContent = `${fmtMS(be)} / ${b.min} min`;
+  bt.className = 'val sm ' + (be > b.min * 60000 * 1.15 ? 'bad' : be > b.min * 60000 ? 'warn' : '');
+
+  const p = $('pace');
+  if (el === 0 && !running()) { p.textContent = 'não iniciado'; p.className = 'val sm'; return; }
+  const diff = el - startMin[st.idx] * 60000; // >0: atrasado
+  if (Math.abs(diff) < 60000) { p.textContent = 'no ritmo'; p.className = 'val sm good'; }
+  else if (diff > 0) { p.textContent = `${fmtMS(diff)} atrasado`; p.className = 'val sm ' + (diff > 5 * 60000 ? 'bad' : 'warn'); }
+  else { p.textContent = `${fmtMS(diff)} adiantado`; p.className = 'val sm good'; }
+}
+setInterval(tick, 250);
+
+// ---------- eventos ----------
+$('startBtn').onclick = () => running() ? pause() : start();
+$('resetBtn').onclick = () => {
+  if (!confirm('Zerar cronômetro e voltar ao slide 1?')) return;
+  st = { idx: 0, acc: 0, since: null, blockEnter: 0 };
+  save(); renderBtn(); render(); sendToSlides();
+};
+$('openBtn').onclick = openSlides;
+$('prev').onclick = () => go(st.idx - 1);
+$('next').onclick = () => { if (!running() && st.acc === 0 && st.idx === 0) start(); go(st.idx + 1); };
+
+document.addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key;
+  if (k === 'ArrowRight' || k === ' ' || k === 'PageDown') { e.preventDefault(); $('next').click(); }
+  else if (k === 'ArrowLeft' || k === 'PageUp') { e.preventDefault(); go(st.idx - 1); }
+  else if (k === 'Home') go(0);
+  else if (k === 'End') go(TOTAL - 1);
+  else if (k === 's' || k === 'S') openSlides();
+  else if (k === 'p' || k === 'P') running() ? pause() : start();
+});
+
+// clique no fundo avança; ignora controles, agenda, topo e seleção de texto
+document.addEventListener('click', e => {
+  if (e.target.closest('button, a, input, .top, .agenda, .nav, .blocks, .blk-lbl')) return;
+  if (String(window.getSelection()).length > 0) return;
+  $('next').click();
+});
+
+renderBtn();
+render();
+</script>
+</body>
+</html>

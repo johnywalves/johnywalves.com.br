@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slides · LLMs, IA Generativa e Determinismo</title>
+<style>
+  /* Paleta do site (src/styles/general.jsx) */
+  :root {
+    --brand: #e0138c;
+    --brand-2: #8857c3;
+    --brand-3: #44b5ef;
+  }
+  body.dark, body:not(.light) {
+    --bg-1: #222222;
+    --bg-2: #303030;
+    --text: #ffffff;
+    --muted: #e0e0e0;
+    --accent: #ff89fd;
+    --accent-2: #cdb0f7;
+    --accent-3: #7cc9f5;
+    --card: #303030;
+    --border: rgba(255, 137, 253, 0.45);
+    --line: rgba(252, 252, 252, 0.18);
+    --glow-1: rgba(224, 19, 140, 0.22);
+    --glow-2: rgba(68, 181, 239, 0.14);
+    --code-bg: #181818;
+  }
+  body.light {
+    --bg-1: #fdfdfd;
+    --bg-2: #f8f8f8;
+    --text: #1c1c1c;
+    --muted: #3d3d3d;
+    --accent: #b00b6c;
+    --accent-2: #6a3fa6;
+    --accent-3: #0a6aa1;
+    --card: #f1f1f1;
+    --border: rgba(176, 11, 108, 0.5);
+    --line: rgba(51, 51, 51, 0.22);
+    --glow-1: rgba(224, 19, 140, 0.10);
+    --glow-2: rgba(68, 181, 239, 0.12);
+    --code-bg: #ececec;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* 1rem = ~24px em 1920x1080; escala com a janela */
+  html {
+    font-size: min(1.25vw, 2.2vh);
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: var(--bg-1);
+    color: var(--text);
+  }
+
+  .bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 20%, var(--glow-1), transparent 45%),
+      radial-gradient(circle at 85% 80%, var(--glow-2), transparent 45%);
+  }
+
+  .deck { position: relative; z-index: 2; width: 100vw; height: 100vh; }
+
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 4vh 5vw 8vh;
+    opacity: 0; visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+    text-align: center;
+  }
+  .slide.active { opacity: 1; visibility: visible; transform: none; }
+  body.embed .slide { transition: none; }
+
+  h1 {
+    font-size: 5.4rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+  }
+  h2 {
+    font-size: 3rem; font-weight: 800; line-height: 1.15;
+    margin-bottom: 1.4rem; color: var(--text);
+  }
+  h2 .accent { color: var(--accent); }
+  p { font-size: 1.6rem; line-height: 1.5; color: var(--muted); max-width: 62rem; }
+  p strong { color: var(--text); }
+  .lead { font-size: 2rem; color: var(--text); }
+  .huge {
+    font-size: 3.6rem; font-weight: 800; line-height: 1.2;
+    max-width: 66rem; color: var(--text);
+  }
+  .huge .hl, .hl { color: var(--accent); }
+  .subtitle { color: var(--muted); font-size: 2rem; margin-top: 1rem; }
+  .kicker {
+    font-size: 1.15rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.2rem; font-weight: 800;
+  }
+  h1::after {
+    content: ""; display: block; width: 7rem; height: 0.4rem; border-radius: 99px;
+    margin: 1.4rem auto 0;
+    background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--brand-3));
+  }
+
+  .cards { display: flex; gap: 1.4rem; flex-wrap: wrap; justify-content: center; margin-top: 0.8rem; max-width: 70rem; }
+  .card {
+    background: var(--card); border: 2px solid var(--border); border-radius: 1rem;
+    padding: 1.4rem 1.6rem; min-width: 14rem; max-width: 22rem; flex: 1 1 14rem;
+    text-align: left;
+  }
+  .card h3 { font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--accent); font-weight: 800; }
+  .card p { font-size: 1.3rem; line-height: 1.45; color: var(--text); }
+  .card .num { font-size: 2.8rem; font-weight: 800; color: var(--accent-3); line-height: 1; margin-bottom: 0.4rem; }
+
+  table {
+    border-collapse: separate; border-spacing: 0;
+    width: 100%; max-width: 68rem; margin: 0.8rem auto 0;
+    font-size: 1.35rem;
+    background: var(--card); border-radius: 0.9rem; overflow: hidden;
+    border: 2px solid var(--border);
+  }
+  th {
+    background: var(--brand); color: #fff; text-align: left;
+    padding: 0.8rem 1.1rem; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.03em;
+  }
+  td {
+    padding: 0.75rem 1.1rem; border-top: 1px solid var(--line);
+    color: var(--text); text-align: left; vertical-align: top; line-height: 1.4;
+  }
+  tr:first-child td { border-top: 0; }
+
+  .flow { display: flex; align-items: center; gap: 1.3rem; flex-wrap: wrap; justify-content: center; margin-top: 1.2rem; max-width: 72rem; }
+  .flow-node {
+    background: var(--card); border: 2px solid var(--border);
+    padding: 0.7rem 1.1rem; border-radius: 0.7rem;
+    font-size: 1.35rem; font-weight: 700; color: var(--text); position: relative;
+  }
+  .flow-node:not(:last-child)::after {
+    content: ""; position: absolute; right: -0.95rem; top: 50%;
+    width: 0.6rem; height: 0.6rem;
+    border-top: 3px solid var(--accent); border-right: 3px solid var(--accent);
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .steps { text-align: left; max-width: 62rem; margin: 0.6rem auto 0; }
+  .step { display: flex; gap: 1.1rem; align-items: flex-start; padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+  .step-num {
+    flex-shrink: 0; width: 2.6rem; height: 2.6rem; border-radius: 50%;
+    background: var(--brand); color: #fff; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  }
+  .step-text { color: var(--text); font-size: 1.5rem; line-height: 1.4; padding-top: 0.2rem; }
+  .step-text strong { color: var(--accent); }
+
+  .quote-box {
+    background: var(--card); border-left: 0.5rem solid var(--brand);
+    padding: 1.8rem 2.2rem; border-radius: 0.9rem; max-width: 64rem;
+    text-align: left; font-size: 1.7rem; line-height: 1.55; color: var(--text);
+  }
+  .quote-box .label {
+    display: inline-block; font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.7rem; font-weight: 800;
+  }
+  .quote-box p { max-width: none; }
+
+  .list { text-align: left; max-width: 64rem; margin: 0.6rem auto 0; list-style: none; }
+  .list li {
+    list-style: none; padding: 0.55rem 0 0.55rem 2rem; position: relative;
+    font-size: 1.55rem; color: var(--text); line-height: 1.45;
+  }
+  .list li::before {
+    content: ""; position: absolute; left: 0.3rem; top: 1.15rem;
+    width: 0.7rem; height: 0.7rem; background: var(--brand); border-radius: 2px; transform: rotate(45deg);
+  }
+  .list li strong { color: var(--accent); }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 70rem; width: 100%; margin-top: 0.6rem; }
+  .split > div { text-align: left; }
+  .split h3 { color: var(--accent); font-size: 1.7rem; margin-bottom: 0.5rem; }
+  .split .list li { font-size: 1.4rem; }
+
+  .tag {
+    display: inline-block; padding: 0.25rem 0.9rem; border-radius: 999px;
+    font-size: 1.15rem; font-weight: 800; letter-spacing: 0.03em; border: 2px solid currentColor;
+  }
+  .tag.ok { color: var(--accent-3); }
+  .tag.warn { color: var(--accent); }
+  .tag.no { color: var(--accent-2); }
+
+  .hash-demo {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: 1.2rem; background: var(--code-bg);
+    border: 2px solid var(--border); border-radius: 0.8rem;
+    padding: 1rem 1.4rem; color: var(--accent-3); margin-top: 1rem;
+    max-width: 62rem; word-break: break-all;
+  }
+
+  .progress {
+    position: fixed; top: 0; left: 0; height: 0.3rem; z-index: 11;
+    background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--brand-3));
+    transition: width 0.3s ease;
+  }
+  .counter {
+    position: fixed; bottom: 1rem; right: 1.4rem; z-index: 10;
+    font-size: 1.1rem; color: var(--muted); font-variant-numeric: tabular-nums;
+  }
+  .counter strong { color: var(--accent); }
+  body.embed .counter { display: none; }
+
+  @media (max-width: 768px) {
+    .split { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- 1 CAPA -->
+  <section class="slide active">
+    <h1>LLMs, IA Generativa<br>e Determinismo</h1>
+    <p class="subtitle">Navegando entre a Criatividade e o Controle</p>
+  </section>
+
+  <!-- 2 PARADOXO -->
+  <section class="slide">
+    <h2>O <span class="accent">paradoxo</span></h2>
+    <div class="cards">
+      <div class="card tilt">
+        <h3>IA mais criativa</h3>
+        <p>Modelos cada vez mais capazes de criar, explorar, imaginar.</p>
+      </div>
+      <div class="card tilt">
+        <h3>Mundo mais exigente</h3>
+        <p>Auditoria, compliance, reprodutibilidade, confiança.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;max-width:800px;">Quanto mais poderosa a IA generativa, mais o mundo exige que ela seja previsível.</p>
+  </section>
+
+  <!-- 3 DOIS EXEMPLOS -->
+  <section class="slide">
+    <h2>Dois exemplos <span class="accent">contrastantes</span></h2>
+    <div class="cards">
+      <div class="card tilt">
+        <h3>Variabilidade é feature</h3>
+        <p>Brainstorming de campanha · ideação · design exploratório · recomendação.</p>
+      </div>
+      <div class="card tilt">
+        <h3>Determinismo é requisito</h3>
+        <p>Laudo jurídico · parecer financeiro · código em produção · diagnóstico.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;">A mesma tecnologia, expectativas opostas. O erro comum é tratá-las com a mesma arquitetura.</p>
+  </section>
+
+  <!-- 4 TESE -->
+  <section class="slide">
+    <div class="kicker">A tese</div>
+    <div class="huge">
+      Determinismo é requisito de <span class="hl">arquitetura</span>,<br>não parâmetro de modelo.
+    </div>
+    <p class="subtitle" style="margin-top:2rem;">E o System One é o portão determinístico dessa arquitetura.</p>
+  </section>
+
+  <!-- 5 PIPELINE -->
+  <section class="slide">
+    <h2>O pipeline <span class="accent">generativo</span></h2>
+    <div class="flow">
+      <div class="flow-node">Prompt</div>
+      <div class="flow-node">Tokens</div>
+      <div class="flow-node">Embeddings</div>
+      <div class="flow-node">Atenção</div>
+      <div class="flow-node">Distribuição</div>
+      <div class="flow-node">Amostragem</div>
+      <div class="flow-node">Texto</div>
+    </div>
+    <p style="margin-top:2rem;">O ponto crítico está nos dois últimos passos: distribuição e amostragem.</p>
+  </section>
+
+  <!-- 6 DISTRIBUIÇÃO -->
+  <section class="slide">
+    <h2>A distribuição de <span class="accent">probabilidade</span></h2>
+    <table>
+      <tr><th>Token</th><th>Probabilidade</th></tr>
+      <tr><td>"sim"</td><td>42%</td></tr>
+      <tr><td>"não"</td><td>23%</td></tr>
+      <tr><td>"talvez"</td><td>15%</td></tr>
+      <tr><td>"depende"</td><td>11%</td></tr>
+      <tr><td>outros</td><td>9%</td></tr>
+    </table>
+    <p style="margin-top:2rem;">O modelo não "escolhe a resposta certa". Ele <strong style="color:var(--accent)">amostra</strong> de uma distribuição.</p>
+  </section>
+
+  <!-- 7 PARÂMETROS -->
+  <section class="slide">
+    <h2>Temperatura, top-p, <span class="accent">top-k</span></h2>
+    <table>
+      <tr><th>Parâmetro</th><th>Efeito</th><th>Determinismo?</th></tr>
+      <tr><td>temperature = 0</td><td>greedy / argmax</td><td><span class="tag warn">parece</span></td></tr>
+      <tr><td>top-p</td><td>nucleus sampling</td><td><span class="tag no">não</span></td></tr>
+      <tr><td>top-k</td><td>limita ao top k</td><td><span class="tag no">não</span></td></tr>
+    </table>
+    <p style="margin-top:2rem;">Temperature = 0 pega sempre o token mais provável. Parece determinístico. Mas...</p>
+  </section>
+
+  <!-- 8 DEMO -->
+  <section class="slide">
+    <h2>Mesma pergunta, <span class="accent">temperaturas diferentes</span></h2>
+    <div class="cards">
+      <div class="card tilt">
+        <h3>temperature = 0</h3>
+        <p>"A capital da França é Paris. A população é de aproximadamente..."</p>
+      </div>
+      <div class="card tilt">
+        <h3>temperature = 1</h3>
+        <p>"Paris! A Cidade Luz. Vamos falar da Torre Eiffel, do Louvre..."</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;">Mesmo com temperature=0, a execução de amanhã pode ser diferente. Por quê?</p>
+  </section>
+
+  <!-- 9 TRANSIÇÃO -->
+  <section class="slide">
+    <div class="huge">
+      <span class="hl">Temperature = 0</span> resolve?
+    </div>
+    <p class="subtitle" style="margin-top:2rem;font-size:1.9rem;">Não. E a razão é mais profunda do que parece.</p>
+  </section>
+
+  <!-- 10 TRÊS FONTES -->
+  <section class="slide">
+    <h2>Três fontes, <span class="accent">não uma</span></h2>
+    <div class="cards">
+      <div class="card tilt">
+        <div class="num">1</div>
+        <h3>Hardware / GPU</h3>
+        <p>Não-associatividade de ponto flutuante + batching dinâmico.</p>
+      </div>
+      <div class="card tilt">
+        <div class="num">2</div>
+        <h3>Interpretação</h3>
+        <p>Deriva de interpretação da tarefa. A mais subestimada.</p>
+      </div>
+      <div class="card tilt">
+        <div class="num">3</div>
+        <h3>Saída</h3>
+        <p>Espaço de saída livre: formato e semântica variam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 GPU -->
+  <section class="slide">
+    <h2>Fonte 1: <span class="accent">GPU e batching</span></h2>
+    <div class="huge" style="font-size:2.6rem;margin-top:1rem;">
+      A ordem de acumulação depende do batch.<br>
+      O batch varia em produção.<br>
+      <span class="hl">A saída varia.</span>
+    </div>
+    <p style="margin-top:2rem;">Mesma entrada, mesmo modelo, mesmo temperature=0. Execuções diferentes, saídas diferentes.</p>
+  </section>
+
+  <!-- 12 DERIVA -->
+  <section class="slide">
+    <h2>Fonte 2: <span class="accent">deriva de interpretação</span></h2>
+    <div class="cards">
+      <div class="card tilt">
+        <h3>Interpretação A</h3>
+        <p>Coerente internamente. Mas incompatível com B e C.</p>
+      </div>
+      <div class="card tilt">
+        <h3>Interpretação B</h3>
+        <p>Coerente internamente. Mas incompatível com A e C.</p>
+      </div>
+      <div class="card tilt">
+        <h3>Interpretação C</h3>
+        <p>Coerente internamente. Mas incompatível com A e B.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;max-width:900px;">Engenharia de prompt ajusta a probabilidade de escolha dentro do espaço de interpretação. <strong style="color:var(--accent)">Não elimina a diversidade de interpretações.</strong></p>
+  </section>
+
+  <!-- 13 SAÍDA LIVRE -->
+  <section class="slide">
+    <h2>Fonte 3: <span class="accent">espaço de saída livre</span></h2>
+    <div class="cards">
+      <div class="card tilt"><h3>JSON</h3><p>{"acao": "cancelar", "motivo": "..."}</p></div>
+      <div class="card tilt"><h3>Prosa</h3><p>"Claro, posso ajudar com o cancelamento..."</p></div>
+      <div class="card tilt"><h3>Lista</h3><p>1. Cancelar<br>2. Reembolsar<br>3. Confirmar</p></div>
+    </div>
+    <p style="margin-top:2rem;">Mesmo com temperature=0, texto livre permite variação de formato e desvio semântico.</p>
+  </section>
+
+  <!-- 14 SÍNTESE -->
+  <section class="slide">
+    <h2>Síntese do <span class="accent">bloco</span></h2>
+    <table>
+      <tr><th>Fonte</th><th>Resolvível por parâmetro?</th><th>Resolvível por arquitetura?</th></tr>
+      <tr><td>GPU / batching</td><td><span class="tag no">não</span></td><td><span class="tag warn">parcialmente</span></td></tr>
+      <tr><td>Deriva de interpretação</td><td><span class="tag no">não</span></td><td><span class="tag ok">sim</span></td></tr>
+      <tr><td>Espaço de saída</td><td><span class="tag no">não</span></td><td><span class="tag ok">sim</span></td></tr>
+    </table>
+    <p style="margin-top:2rem;">Nenhuma das três se resolve só com temperature=0. Todas se resolvem na arquitetura.</p>
+  </section>
+
+  <!-- 15 ESPECTRO -->
+  <section class="slide">
+    <h2>Determinismo <span class="accent">não é binário</span></h2>
+    <div class="flow" style="margin-top:2.5rem;">
+      <div class="flow-node" style="border-color:var(--accent-3);">Bit-exato</div>
+      <div class="flow-node" style="border-color:var(--accent-2);">Funcional</div>
+      <div class="flow-node" style="border-color:var(--accent);">Estatístico</div>
+    </div>
+    <p style="margin-top:2.5rem;font-size:1.7rem;">A pergunta certa não é "é determinístico?", é "qual nível esta tarefa exige?"</p>
+  </section>
+
+  <!-- 16 TRÊS NÍVEIS -->
+  <section class="slide">
+    <h2>Os <span class="accent">três níveis</span></h2>
+    <table>
+      <tr><th>Nível</th><th>Definição</th><th>Exemplo</th><th>Custo</th></tr>
+      <tr><td>Bit-exato</td><td>mesmo hash SHA-256</td><td>reprodutibilidade científica</td><td>altíssimo</td></tr>
+      <tr><td>Funcional</td><td>mesma decisão / ação</td><td>roteamento, laudo, código</td><td>médio</td></tr>
+      <tr><td>Estatístico</td><td>mesma distribuição</td><td>ideação, recomendação</td><td>baixo</td></tr>
+    </table>
+    <p style="margin-top:2rem;">Bit-exato raramente é necessário. Funcional quase sempre é.</p>
+  </section>
+
+  <!-- 17 MATRIZ -->
+  <section class="slide">
+    <h2>Escolha o <span class="accent">nível certo</span></h2>
+    <div class="cards">
+      <div class="card tilt"><h3>Crítico + variável</h3><p>Erro grave se variar? Sim. Variabilidade desejada? Sim. Resultado: <strong style="color:var(--accent)">Funcional</strong></p></div>
+      <div class="card tilt"><h3>Crítico + fixo</h3><p>Erro grave se variar? Sim. Variabilidade desejada? Não. Resultado: <strong style="color:var(--accent)">Bit-exato</strong></p></div>
+      <div class="card tilt"><h3>Não-crítico + variável</h3><p>Erro grave? Não. Variabilidade? Sim. Resultado: <strong style="color:var(--accent)">Estatístico</strong></p></div>
+      <div class="card tilt"><h3>Não-crítico + fixo</h3><p>Erro grave? Não. Variabilidade? Não. Resultado: <strong style="color:var(--accent)">Funcional</strong></p></div>
+    </div>
+  </section>
+
+  <!-- 18 TRANSIÇÃO -->
+  <section class="slide">
+    <div class="huge">
+      Como chegar ao determinismo funcional?
+    </div>
+    <p class="subtitle" style="margin-top:2rem;font-size:1.9rem;">Com um portão determinístico na arquitetura: o <span style="color:var(--accent);font-weight:800;">System One</span>.</p>
+  </section>
+
+  <!-- 19 DEFINIÇÃO -->
+  <section class="slide">
+    <h2>O que é <span class="accent">System One</span></h2>
+    <div class="quote-box">
+      <span class="label">Definição</span>
+      <p style="color:var(--text);font-size:inherit;">System One aqui <strong>não é</strong> o "pensamento rápido" cognitivo de Kahneman. É um sistema de execução de decisão local e <strong>não generativo</strong>, implantado na camada de arquitetura. Toma decisões determinísticas por meio de limites de regras predefinidas, classificadores de intenção e mecanismos de auditoria, um <strong style="color:var(--accent)">"portão de controle"</strong> antes do LLM.</p>
+    </div>
+  </section>
+
+  <!-- 20 FUNÇÃO 1 -->
+  <section class="slide">
+    <h2>Função 1: <span class="accent">espaço aberto vira espaço fechado</span></h2>
+    <div class="flow" style="margin-top:2rem;">
+      <div class="flow-node">"quero cancelar minha assinatura e pedir reembolso"</div>
+      <div class="flow-node" style="border-color:var(--accent);">System One</div>
+      <div class="flow-node">["billing", "tech_support", "security"]</div>
+    </div>
+    <p style="margin-top:2rem;max-width:900px;">"Smart if-statements": classificação em enumeração predefinida. Mesma entrada + mesmo modelo + parâmetros fixos = <strong style="color:var(--accent)">mesma decisão</strong>.</p>
+  </section>
+
+  <!-- 21 FUNÇÃO 2 -->
+  <section class="slide">
+    <h2>Função 2: <span class="accent">auditoria</span> (ActionLedger)</h2>
+    <div class="flow" style="margin-top:1.5rem;">
+      <div class="flow-node">Decisão</div>
+      <div class="flow-node">Registro no ledger</div>
+      <div class="flow-node">Verificação</div>
+      <div class="flow-node" style="border-color:var(--accent);">Execução</div>
+    </div>
+    <ul class="list" style="margin-top:2rem;">
+      <li><strong>Reconstruibilidade:</strong> rastrear decisão até política e entrada.</li>
+      <li><strong>Invariância de ordem:</strong> pontuar opções independentemente evita viés de posição do LLM. PICA chega a <strong>0% de viés de ordem</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- 22 FUNÇÃO 3 -->
+  <section class="slide">
+    <h2>Função 3: <span class="accent">limitação do espaço de saída</span></h2>
+    <div class="cards" style="margin-top:1.5rem;">
+      <div class="card tilt"><h3>choice</h3><p>Seleção em enumeração.</p></div>
+      <div class="card tilt"><h3>score</h3><p>Pontuação calibrada.</p></div>
+      <div class="card tilt"><h3>range_eval</h3><p>Avaliação em faixa.</p></div>
+      <div class="card tilt"><h3>set_choice</h3><p>Múltipla escolha.</p></div>
+    </div>
+    <p style="margin-top:2rem;">Espaço de saída limitado impede que o modelo "invente".</p>
+  </section>
+
+  <!-- 23 TRADE-OFF -->
+  <section class="slide">
+    <h2>O que o System One <span class="accent">troca</span></h2>
+    <div class="split" style="margin-top:2rem;">
+      <div class="card tilt" style="max-width:100%;">
+        <h3>Ganha</h3>
+        <p>Confiabilidade · auditabilidade · determinismo funcional.</p>
+      </div>
+      <div class="card tilt" style="max-width:100%;">
+        <h3>Perde</h3>
+        <p>Capacidade de lidar com o inesperado. Entradas fora da enumeração precisam de fallback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24 SÍNTESE -->
+  <section class="slide">
+    <div class="huge">
+      System One não gera.<br>
+      Ele <span class="hl">decide</span>, <span class="hl">registra</span> e <span class="hl">limita</span>.
+    </div>
+  </section>
+
+  <!-- 25 ARQUITETURA 3 CAMADAS -->
+  <section class="slide">
+    <h2>A arquitetura em <span class="accent">3 camadas</span></h2>
+    <table>
+      <tr><th>Camada</th><th>Mecanismo</th><th>Resolve</th><th>Não resolve</th></tr>
+      <tr><td><strong>Entrada (System One)</strong></td><td>Regras, pequeno modelo, limite de saída</td><td>Ambiguidade de entrada, desvio de roteamento, injeção</td><td>Raciocínio lógico complexo</td></tr>
+      <tr><td><strong>Especificação</strong></td><td>Substrato de restrições em linguagem natural</td><td>Deriva de interpretação, variância entre modelos</td><td>Execução de um modelo específico</td></tr>
+      <tr><td><strong>Execução (System Two)</strong></td><td>Chain-of-thought, decomposição, tools</td><td>Raciocínio complexo, uso de ferramentas</td><td>Determinismo em nível de token</td></tr>
+    </table>
+  </section>
+
+  <!-- 26 ACHADO -->
+  <section class="slide">
+    <h2>O achado que <span class="accent">muda tudo</span></h2>
+    <div class="huge" style="font-size:2.3rem;">
+      Após restrições de substrato reduzirem múltiplas interpretações a uma única,<br>
+      <span class="hl">quatro modelos de fronteira diferentes geram saídas idênticas byte a byte.</span>
+    </div>
+    <div class="hash-demo">SHA-256: a3f9c1e7b2d84f6a9c0e5d1b8f3a7c2e6d4b9f1a5c8e3d7b2f6a9c4e1d8b5a3f</div>
+    <p style="margin-top:1.5rem;">40 execuções · primeira invocação · saída idêntica byte a byte</p>
+  </section>
+
+  <!-- 27 ROTEAMENTO -->
+  <section class="slide">
+    <h2>Roteamento por <span class="accent">confiança</span></h2>
+    <table>
+      <tr><th>Confiança</th><th>Ação</th></tr>
+      <tr><td><span class="tag ok">Alta</span></td><td>System One decide automaticamente</td></tr>
+      <tr><td><span class="tag warn">Média</span></td><td>Confirmação humana</td></tr>
+      <tr><td><span class="tag no">Baixa</span></td><td>Encaminhar para LLM (System Two) ou humano</td></tr>
+    </table>
+    <p style="margin-top:2rem;">O System One não é gargalo. É roteador.</p>
+  </section>
+
+  <!-- 28 FLUXO -->
+  <section class="slide">
+    <h2>Como as camadas <span class="accent">conversam</span></h2>
+    <div class="flow" style="margin-top:2rem;">
+      <div class="flow-node">Entrada</div>
+      <div class="flow-node" style="border-color:var(--accent);">System One</div>
+      <div class="flow-node">Alta / Média / Baixa</div>
+      <div class="flow-node">System Two</div>
+      <div class="flow-node">Especificação</div>
+      <div class="flow-node">Saída</div>
+      <div class="flow-node">Ledger</div>
+    </div>
+  </section>
+
+  <!-- 29 SÍNTESE -->
+  <section class="slide">
+    <h2>Síntese do <span class="accent">bloco</span></h2>
+    <ul class="list">
+      <li><strong>System One</strong> fecha a entrada e a saída.</li>
+      <li><strong>Especificação determinística</strong> fecha a interpretação.</li>
+      <li><strong>System Two</strong> executa o raciocínio complexo dentro do espaço limitado.</li>
+    </ul>
+    <p style="margin-top:2rem;font-size:1.7rem;">Três fechamentos. Determinismo funcional.</p>
+  </section>
+
+  <!-- 30 CASO -->
+  <section class="slide">
+    <h2>Fluxo ponta a ponta: <span class="accent">atendimento ao cliente</span></h2>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-text">Entrada ambígua do usuário chega.</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-text"><strong>System One</strong> classifica intenção (determinístico) e registra no ActionLedger.</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text">Confiança alta: roteia direto; baixa: LLM refina ou humano confirma.</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-text"><strong>System Two</strong> executa raciocínio / tool calling dentro do espaço limitado.</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-text">Saída validada contra schema, ação executada, registro auditável.</div></div>
+    </div>
+  </section>
+
+  <!-- 31 LEDGER -->
+  <section class="slide">
+    <h2>O ledger como <span class="accent">artefato concreto</span></h2>
+    <div class="hash-demo" style="text-align:left;line-height:1.9;">
+      <div><span style="color:var(--muted);">entrada:</span> "quero cancelar e pedir reembolso"</div>
+      <div><span style="color:var(--muted);">política:</span> billing.cancellation.v3</div>
+      <div><span style="color:var(--muted);">decisão:</span> billing_agent</div>
+      <div><span style="color:var(--muted);">confiança:</span> 0.94 (alta)</div>
+      <div><span style="color:var(--muted);">hash:</span> a3f9c1e7b2d84f6a9c0e5d1b8f3a7c2e</div>
+      <div><span style="color:var(--muted);">timestamp:</span> 2026-10-19T14:32:07Z</div>
+    </div>
+    <p style="margin-top:1.5rem;">Auditabilidade não é discurso. É este artefato aqui.</p>
+  </section>
+
+  <!-- 32 LIMITES -->
+  <section class="slide">
+    <h2>O que o System One <span class="accent">não resolve</span></h2>
+    <div class="split" style="margin-top:1.5rem;">
+      <div>
+        <h3>Não resolve</h3>
+        <ul class="list">
+          <li>Raciocínio complexo (papel do System Two)</li>
+          <li>Entradas fora da enumeração (fallback)</li>
+          <li>Manutenção da taxonomia ao longo do tempo</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Riscos</h3>
+        <ul class="list">
+          <li>Viés embutido nas regras de classificação</li>
+          <li>Falsa sensação de segurança</li>
+          <li>Determinismo não é sinônimo de justiça</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 33 TAKEAWAYS -->
+  <section class="slide">
+    <h2>Takeaways</h2>
+    <ul class="list" style="max-width:1000px;">
+      <li>Determinismo não é binário. Escolha o nível certo para a tarefa.</li>
+      <li>Temperature=0 não garante reprodutibilidade. GPU, batching e interpretação importam.</li>
+      <li>System One transforma entrada aberta em decisão fechada.</li>
+      <li>Especificação determinística faz até modelos diferentes convergirem byte a byte.</li>
+      <li>Controle vem da arquitetura em camadas. E toda rigidez tem custo.</li>
+    </ul>
+  </section>
+
+</div>
+
+<div class="counter"><strong id="current">1</strong> / <span id="total">33</span></div>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const embed = params.has('embed');
+  if (embed) document.body.classList.add('embed');
+
+  /* Tema: segue o mesmo localStorage do site */
+  function applyTheme() {
+    let t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    document.body.className = t + (embed ? ' embed' : '');
+  }
+  applyTheme();
+  window.addEventListener('storage', e => { if (e.key === 'theme') applyTheme(); });
+
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+  let idx = Math.max(0, Math.min(total - 1, (parseInt(params.get('slide'), 10) || 1) - 1));
+  document.getElementById('total').textContent = total;
+
+  let channel = null;
+  try { channel = new BroadcastChannel('determinismo-deck'); } catch (e) {}
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    document.getElementById('current').textContent = idx + 1;
+    document.getElementById('progress').style.width = ((idx + 1) / total * 100) + '%';
+  }
+
+  function announce() {
+    if (embed) return;
+    const msg = { dsh: 'sync', idx };
+    if (channel) channel.postMessage(msg);
+    if (window.opener && !window.opener.closed) window.opener.postMessage(msg, '*');
+  }
+
+  function show(n, remote) {
+    idx = Math.max(0, Math.min(total - 1, n));
+    render();
+    if (!remote) announce();
+  }
+
+  window.addEventListener('message', e => {
+    const d = e.data;
+    if (d && d.dsh === 'goto') show(d.idx, true);
+  });
+  if (channel) channel.onmessage = e => {
+    const d = e.data;
+    if (d && (d.dsh === 'goto' || d.dsh === 'sync') && !embed) show(d.idx, true);
+  };
+
+  if (!embed) {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown' || e.key === 'Enter') { e.preventDefault(); show(idx + 1); }
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'Backspace') { e.preventDefault(); show(idx - 1); }
+      else if (e.key === 'Home') show(0);
+      else if (e.key === 'End') show(total - 1);
+      else if (e.key === 'f' || e.key === 'F') {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.documentElement.requestFullscreen();
+      }
+    });
+    document.addEventListener('click', e => show(idx + (e.clientX < innerWidth * 0.25 ? -1 : 1)));
+
+    let touchX = null;
+    document.addEventListener('touchstart', e => touchX = e.touches[0].clientX);
+    document.addEventListener('touchend', e => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+      touchX = null;
+    });
+
+    /* pede o estado atual ao painel do apresentador */
+    const hello = { dsh: 'hello' };
+    if (channel) channel.postMessage(hello);
+    if (window.opener && !window.opener.closed) window.opener.postMessage(hello, '*');
+  }
+
+  render();
+</script>
+</body>
+</html>
