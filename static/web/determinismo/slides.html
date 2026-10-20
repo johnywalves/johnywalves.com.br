@@ -1,857 +1,2383 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slides · LLMs, IA Generativa e Determinismo</title>
-<style>
-  /* Paleta do site (src/styles/general.jsx) */
-  :root {
-    --brand: #e0138c;
-    --brand-2: #8857c3;
-    --brand-3: #44b5ef;
-  }
-  body.dark, body:not(.light) {
-    --bg-1: #222222;
-    --bg-2: #303030;
-    --text: #ffffff;
-    --muted: #e0e0e0;
-    --accent: #ff89fd;
-    --accent-2: #cdb0f7;
-    --accent-3: #7cc9f5;
-    --card: #303030e0;
-    --border: rgba(255, 137, 253, 0.45);
-    --line: rgba(252, 252, 252, 0.18);
-    --glow-1: rgba(224, 19, 140, 0.22);
-    --glow-2: rgba(68, 181, 239, 0.14);
-    --code-bg: #181818;
-  }
-  body.light {
-    --bg-1: #fdfdfd;
-    --bg-2: #f8f8f8;
-    --text: #1c1c1c;
-    --muted: #3d3d3d;
-    --accent: #b00b6c;
-    --accent-2: #6a3fa6;
-    --accent-3: #0a6aa1;
-    --card: #f1f1f1e0;
-    --border: rgba(176, 11, 108, 0.5);
-    --line: rgba(51, 51, 51, 0.22);
-    --glow-1: rgba(224, 19, 140, 0.10);
-    --glow-2: rgba(68, 181, 239, 0.12);
-    --code-bg: #ececec;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slides · LLMs, IA Generativa e Determinismo</title>
+    <style>
+      /* Paleta do site (src/styles/general.jsx) */
+      :root {
+        --brand: #e0138c;
+        --brand-2: #8857c3;
+        --brand-3: #44b5ef;
+      }
+      body.dark,
+      body:not(.light) {
+        --bg-1: #222222;
+        --bg-2: #303030;
+        --text: #ffffff;
+        --muted: #e0e0e0;
+        --accent: #ff89fd;
+        --accent-2: #cdb0f7;
+        --accent-3: #7cc9f5;
+        --card: #303030d0;
+        --border: rgba(255, 137, 253, 0.45);
+        --line: rgba(252, 252, 252, 0.18);
+        --glow-1: rgba(224, 19, 140, 0.22);
+        --glow-2: rgba(68, 181, 239, 0.14);
+        --code-bg: #181818;
+      }
+      body.light {
+        --bg-1: #fdfdfd;
+        --bg-2: #f8f8f8;
+        --text: #1c1c1c;
+        --muted: #3d3d3d;
+        --accent: #b00b6c;
+        --accent-2: #6a3fa6;
+        --accent-3: #0a6aa1;
+        --card: #f1f1f1e0;
+        --border: rgba(176, 11, 108, 0.5);
+        --line: rgba(51, 51, 51, 0.22);
+        --glow-1: rgba(224, 19, 140, 0.1);
+        --glow-2: rgba(68, 181, 239, 0.12);
+        --code-bg: #ececec;
+      }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  /* 1rem = ~24px em 1920x1080; escala com a janela */
-  html {
-    font-size: min(1.25vw, 2.2vh);
-    height: 100%;
-    overflow: hidden;
-  }
-  body {
-    height: 100%;
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background: var(--bg-1);
-    color: var(--text);
-  }
+      /* 1rem = ~24px em 1920x1080; escala com a janela */
+      html {
+        font-size: min(1.25vw, 2.2vh);
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        height: 100%;
+        overflow: hidden;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        background: var(--bg-1);
+        color: var(--text);
+      }
 
-  .bg {
-    position: fixed; inset: 0; z-index: 0; pointer-events: none;
-    background:
-      radial-gradient(circle at 15% 20%, var(--glow-1), transparent 45%),
-      radial-gradient(circle at 85% 80%, var(--glow-2), transparent 45%);
-  }
+      .bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(circle at 15% 20%, var(--glow-1), transparent 45%),
+          radial-gradient(circle at 85% 80%, var(--glow-2), transparent 45%);
+      }
 
-  .deck { position: relative; z-index: 2; width: 100vw; height: 100vh; }
+      .deck {
+        position: relative;
+        z-index: 2;
+        width: 100vw;
+        height: 100vh;
+      }
 
-  .slide {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 4vh 5vw 8vh;
-    opacity: 0; visibility: hidden;
-    transform: translateY(20px);
-    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
-    text-align: center;
-  }
-  .slide.active { opacity: 1; visibility: visible; transform: none; }
-  body.embed .slide { transition: none; }
+      .slide {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4vh 5vw 8vh;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease,
+          visibility 0.35s;
+        text-align: center;
+      }
+      .slide.active {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      body.embed .slide {
+        transition: none;
+      }
 
-  h1 {
-    font-size: 5.4rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: 1.2rem;
-  }
-  h2 {
-    font-size: 3rem; font-weight: 800; line-height: 1.15;
-    margin-bottom: 1.4rem; color: var(--text);
-  }
-  h2 .accent { color: var(--accent); }
-  p { font-size: 1.6rem; line-height: 1.5; color: var(--muted); max-width: 62rem; }
-  p strong { color: var(--text); }
-  .lead { font-size: 2rem; color: var(--text); }
-  .huge {
-    font-size: 3.6rem; font-weight: 800; line-height: 1.2;
-    max-width: 66rem; color: var(--text);
-  }
-  .huge .hl, .hl { color: var(--accent); }
-  .subtitle { color: var(--muted); font-size: 2rem; margin-top: 1rem; }
-  .kicker {
-    font-size: 1.15rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 1.2rem; font-weight: 800;
-  }
-  h1::after {
-    content: ""; display: block; width: 7rem; height: 0.4rem; border-radius: 99px;
-    margin: 1.4rem auto 0;
-    background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--brand-3));
-  }
+      h1 {
+        font-size: 5.4rem;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        margin-bottom: 1.2rem;
+      }
+      h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.15;
+        margin-bottom: 1.4rem;
+        color: var(--text);
+      }
+      h2 .accent {
+        color: var(--accent);
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: var(--muted);
+        max-width: 62rem;
+      }
+      p strong {
+        color: var(--text);
+      }
+      .lead {
+        font-size: 2rem;
+        color: var(--text);
+      }
+      .huge {
+        font-size: 3.6rem;
+        font-weight: 800;
+        line-height: 1.2;
+        max-width: 66rem;
+        color: var(--text);
+      }
+      .huge .hl,
+      .hl {
+        color: var(--accent);
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
+      .kicker {
+        font-size: 1.15rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.2rem;
+        font-weight: 800;
+      }
+      h1::after {
+        content: "";
+        display: block;
+        width: 7rem;
+        height: 0.4rem;
+        border-radius: 99px;
+        margin: 1.4rem auto 0;
+        background: linear-gradient(
+          90deg,
+          var(--brand),
+          var(--brand-2),
+          var(--brand-3)
+        );
+      }
 
-  .cards { display: flex; gap: 1.4rem; flex-wrap: wrap; justify-content: center; margin-top: 0.8rem; max-width: 70rem; }
-  .card {
-    background: var(--card); border: 2px solid var(--border); border-radius: 1rem;
-    padding: 1.4rem 1.6rem; min-width: 14rem; max-width: 22rem; flex: 1 1 14rem;
-    text-align: left;
-  }
-  .card h3 { font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--accent); font-weight: 800; }
-  .card p { font-size: 1.3rem; line-height: 1.45; color: var(--text); }
-  .card .num { font-size: 2.8rem; font-weight: 800; color: var(--accent-3); line-height: 1; margin-bottom: 0.4rem; }
+      .cards {
+        display: flex;
+        gap: 1.4rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.8rem;
+        max-width: 70rem;
+      }
+      .card {
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 1rem;
+        padding: 1.4rem 1.6rem;
+        min-width: 14rem;
+        max-width: 22rem;
+        flex: 1 1 14rem;
+        text-align: left;
+      }
+      .card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
+        font-weight: 800;
+      }
+      .card p {
+        font-size: 1.3rem;
+        line-height: 1.45;
+        color: var(--text);
+      }
+      .card .num {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: var(--accent-3);
+        line-height: 1;
+        margin-bottom: 0.4rem;
+      }
 
-  table {
-    border-collapse: separate; border-spacing: 0;
-    width: 100%; max-width: 68rem; margin: 0.8rem auto 0;
-    font-size: 1.35rem;
-    background: var(--card); border-radius: 0.9rem; overflow: hidden;
-    border: 2px solid var(--border);
-  }
-  th {
-    background: var(--brand); color: #fff; text-align: left;
-    padding: 0.8rem 1.1rem; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.03em;
-  }
-  td {
-    padding: 0.75rem 1.1rem; border-top: 1px solid var(--line);
-    color: var(--text); text-align: left; vertical-align: top; line-height: 1.4;
-  }
-  tr:first-child td { border-top: 0; }
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        max-width: 68rem;
+        margin: 0.8rem auto 0;
+        font-size: 1.35rem;
+        background: var(--card);
+        border-radius: 0.9rem;
+        overflow: hidden;
+        border: 2px solid var(--border);
+      }
+      th {
+        background: var(--brand);
+        color: #fff;
+        text-align: left;
+        padding: 0.8rem 1.1rem;
+        font-weight: 800;
+        font-size: 1.15rem;
+        letter-spacing: 0.03em;
+      }
+      td {
+        padding: 0.75rem 1.1rem;
+        border-top: 1px solid var(--line);
+        color: var(--text);
+        text-align: left;
+        vertical-align: top;
+        line-height: 1.4;
+      }
+      tr:first-child td {
+        border-top: 0;
+      }
 
-  .flow { display: flex; align-items: center; gap: 1.3rem; flex-wrap: wrap; justify-content: center; margin-top: 1.2rem; max-width: 72rem; }
-  .flow-node {
-    background: var(--card); border: 2px solid var(--border);
-    padding: 0.7rem 1.1rem; border-radius: 0.7rem;
-    font-size: 1.35rem; font-weight: 700; color: var(--text); position: relative;
-  }
-  .flow-node:not(:last-child)::after {
-    content: ""; position: absolute; right: -0.95rem; top: 50%;
-    width: 0.6rem; height: 0.6rem;
-    border-top: 3px solid var(--accent); border-right: 3px solid var(--accent);
-    transform: translateY(-50%) rotate(45deg);
-  }
+      .flow {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.2rem;
+        max-width: 72rem;
+      }
+      .flow-node {
+        background: var(--card);
+        border: 2px solid var(--border);
+        padding: 0.7rem 1.1rem;
+        border-radius: 0.7rem;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--text);
+        position: relative;
+      }
+      .flow-node:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -0.95rem;
+        top: 50%;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-top: 3px solid var(--accent);
+        border-right: 3px solid var(--accent);
+        transform: translateY(-50%) rotate(45deg);
+      }
 
-  .steps { text-align: left; max-width: 62rem; margin: 0.6rem auto 0; }
-  .step { display: flex; gap: 1.1rem; align-items: flex-start; padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
-  .step-num {
-    flex-shrink: 0; width: 2.6rem; height: 2.6rem; border-radius: 50%;
-    background: var(--brand); color: #fff; font-weight: 800;
-    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
-  }
-  .step-text { color: var(--text); font-size: 1.5rem; line-height: 1.4; padding-top: 0.2rem; }
-  .step-text strong { color: var(--accent); }
+      .steps {
+        text-align: left;
+        max-width: 62rem;
+        margin: 0.6rem auto 0;
+      }
+      .step {
+        display: flex;
+        gap: 1.1rem;
+        align-items: flex-start;
+        padding: 0.55rem 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .step-num {
+        flex-shrink: 0;
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+      .step-text {
+        color: var(--text);
+        font-size: 1.5rem;
+        line-height: 1.4;
+        padding-top: 0.2rem;
+      }
+      .step-text strong {
+        color: var(--accent);
+      }
 
-  .quote-box {
-    background: var(--card); border-left: 0.5rem solid var(--brand);
-    padding: 1.8rem 2.2rem; border-radius: 0.9rem; max-width: 64rem;
-    text-align: left; font-size: 1.7rem; line-height: 1.55; color: var(--text);
-  }
-  .quote-box .label {
-    display: inline-block; font-size: 1.1rem; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 0.7rem; font-weight: 800;
-  }
-  .quote-box p { max-width: none; }
+      .quote-box {
+        background: var(--card);
+        border-left: 0.5rem solid var(--brand);
+        padding: 1.8rem 2.2rem;
+        border-radius: 0.9rem;
+        max-width: 64rem;
+        text-align: left;
+        font-size: 1.7rem;
+        line-height: 1.55;
+        color: var(--text);
+      }
+      .quote-box .label {
+        display: inline-block;
+        font-size: 1.1rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.7rem;
+        font-weight: 800;
+      }
+      .quote-box p {
+        max-width: none;
+      }
 
-  .list { text-align: left; max-width: 64rem; margin: 0.6rem auto 0; list-style: none; }
-  .list li {
-    list-style: none; padding: 0.55rem 0 0.55rem 2rem; position: relative;
-    font-size: 1.55rem; color: var(--text); line-height: 1.45;
-  }
-  .list li::before {
-    content: ""; position: absolute; left: 0.3rem; top: 1.15rem;
-    width: 0.7rem; height: 0.7rem; background: var(--brand); border-radius: 2px; transform: rotate(45deg);
-  }
-  .list li strong { color: var(--accent); }
+      .list {
+        text-align: left;
+        max-width: 64rem;
+        margin: 0.6rem auto 0;
+        list-style: none;
+      }
+      .list li {
+        list-style: none;
+        padding: 0.55rem 0 0.55rem 2rem;
+        position: relative;
+        font-size: 1.55rem;
+        color: var(--text);
+        line-height: 1.45;
+      }
+      .list li::before {
+        content: "";
+        position: absolute;
+        left: 0.3rem;
+        top: 1.15rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        background: var(--brand);
+        border-radius: 2px;
+        transform: rotate(45deg);
+      }
+      .list li strong {
+        color: var(--accent);
+      }
 
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 70rem; width: 100%; margin-top: 0.6rem; }
-  .split > div { text-align: left; }
-  .split h3 { color: var(--accent); font-size: 1.7rem; margin-bottom: 0.5rem; }
-  .split .list li { font-size: 1.4rem; }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: 70rem;
+        width: 100%;
+        margin-top: 0.6rem;
+      }
+      .split > div {
+        text-align: left;
+      }
+      .split h3 {
+        color: var(--accent);
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+      }
+      .split .list li {
+        font-size: 1.4rem;
+      }
 
-  .tag {
-    display: inline-block; padding: 0.25rem 0.9rem; border-radius: 999px;
-    font-size: 1.15rem; font-weight: 800; letter-spacing: 0.03em; border: 2px solid currentColor;
-  }
-  .tag.ok { color: var(--accent-3); }
-  .tag.warn { color: var(--accent); }
-  .tag.no { color: var(--accent-2); }
+      .tag {
+        display: inline-block;
+        padding: 0.25rem 0.9rem;
+        border-radius: 999px;
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        border: 2px solid currentColor;
+      }
+      .tag.ok {
+        color: var(--accent-3);
+      }
+      .tag.warn {
+        color: var(--accent);
+      }
+      .tag.no {
+        color: var(--accent-2);
+      }
 
-  .hash-demo {
-    font-family: 'Fira Code', 'Courier New', Courier, monospace;
-    font-size: 1.2rem; background: var(--code-bg);
-    border: 2px solid var(--border); border-radius: 0.8rem;
-    padding: 1rem 1.4rem; color: var(--accent-3); margin-top: 1rem;
-    max-width: 62rem; word-break: break-all;
+      .hash-demo {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1.2rem;
+        background: var(--code-bg);
+        border: 2px solid var(--border);
+        border-radius: 0.8rem;
+        padding: 1rem 1.4rem;
+        color: var(--accent-3);
+        margin-top: 1rem;
+        max-width: 62rem;
+        word-break: break-all;
+      }
+
+      .pipe {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 74rem;
+        text-align: left;
+      }
+      .pipe-row {
+        display: grid;
+        grid-template-columns: 2.4rem 9rem minmax(0, 1.25fr) minmax(0, 1.2fr);
+        align-items: center;
+        gap: 1rem;
+        background: var(--card);
+        border: 2px solid var(--line);
+        border-radius: 0.7rem;
+        padding: 0.5rem 1rem 0.5rem 0.7rem;
+      }
+      .pipe-row.key {
+        border-color: var(--brand);
+        border-width: 3px;
+      }
+      .pn {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        background: var(--brand-2);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.15rem;
+      }
+      .pipe-row.key .pn {
+        background: var(--brand);
+      }
+      .pname {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+      .pdesc {
+        font-size: 1.15rem;
+        line-height: 1.35;
+        color: var(--text);
+      }
+      .pex {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 0.98rem;
+        line-height: 1.35;
+        background: var(--code-bg);
+        color: var(--accent-3);
+        border-radius: 0.4rem;
+        padding: 0.35rem 0.6rem;
+      }
+      .pipe-note {
+        margin-top: 0.8rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: 9rem minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0.7rem;
+        width: 100%;
+        max-width: 68rem;
+        text-align: left;
+      }
+      .mx-col,
+      .mx-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.1rem;
+      }
+      .mx-col {
+        align-items: center;
+        text-align: center;
+        padding-bottom: 0.2rem;
+      }
+      .mx-col span,
+      .mx-row span {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .mx-col b,
+      .mx-row b {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--text);
+        line-height: 1.1;
+      }
+      .mx-row {
+        padding-right: 0.5rem;
+        border-right: 4px solid var(--line);
+      }
+      .mx-cell {
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 0.9rem;
+        padding: 1rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        justify-content: center;
+      }
+      .mx-level {
+        font-size: 1.9rem;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .mx-level.lv-bit {
+        color: var(--accent);
+      }
+      .mx-level.lv-func {
+        color: var(--accent-3);
+      }
+      .mx-level.lv-stat {
+        color: var(--accent-2);
+      }
+      .mx-what {
+        font-size: 1.3rem;
+        line-height: 1.35;
+        color: var(--text);
+      }
+      .mx-ex {
+        margin-top: 0.2rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid var(--line);
+        font-size: 1.15rem;
+        color: var(--muted);
+      }
+      .mx-ex::before {
+        content: "Ex.: ";
+        font-weight: 800;
+        color: var(--text);
+      }
+      .mx-note {
+        margin-top: 1rem;
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .spectrum {
+        position: relative;
+        width: 100%;
+        max-width: 68rem;
+        margin-top: 1.5rem;
+      }
+      .sp-ends {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .sp-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 1.05rem;
+        height: 0.5rem;
+        border-radius: 99px;
+        background: linear-gradient(
+          90deg,
+          var(--accent),
+          var(--accent-3),
+          var(--accent-2)
+        );
+      }
+      .sp-marks {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      .sp-mark {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .sp-dot {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        background: var(--bg-1);
+        border: 0.45rem solid currentColor;
+        margin-bottom: 0.9rem;
+      }
+      .sp-name {
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 1.1;
+        color: currentColor;
+      }
+      .sp-desc {
+        font-size: 1.35rem;
+        color: var(--text);
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 0.6rem;
+        padding: 0.4rem 1rem;
+        margin-top: 0.4rem;
+      }
+      .m-bit {
+        color: var(--accent);
+      }
+      .m-func {
+        color: var(--accent-3);
+      }
+      .m-stat {
+        color: var(--accent-2);
+      }
+      .sp-note {
+        margin-top: 3rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: var(--text);
+        max-width: 56rem;
+      }
+
+      .speaker {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 3.5rem;
+        width: 100%;
+        max-width: 68rem;
+        text-align: left;
+      }
+      .speaker-photo {
+        width: 17rem;
+        height: 17rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 0.4rem solid var(--brand);
+        box-shadow: 0 0 0 0.5rem var(--card);
+      }
+      .speaker-info h1 { margin-bottom: 0.3rem; font-size: 4rem; }
+      .speaker-info h1::after { margin: 1rem 0 0; }
+      .speaker-info .kicker { margin-bottom: 0.6rem; }
+      .about {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1.4rem;
+        text-align: left;
+      }
+      .about-item {
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 0.9rem;
+        padding: 1.1rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .about-item b {
+        font-size: 2.2rem;
+        font-weight: 800;
+        line-height: 1.1;
+        color: var(--accent);
+      }
+      .about-item span {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        color: var(--text);
+      }
+      .about-stack {
+        margin-top: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--accent-3);
+        letter-spacing: 0.04em;
+      }
+      @media (max-width: 768px) {
+        .speaker {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          text-align: center;
+        }
+      }
+
+      .flow-v {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 34rem;
+        gap: 2.6rem;
+      }
+      .flow-v .flow-node:not(:last-child)::after {
+        /* reset seta horizontal */
+        right: auto;
+        top: auto;
+        /* seta vertical */
+        left: 50%;
+        bottom: -1.8rem;
+        width: 0.8rem;
+        height: 0.8rem;
+        transform: translateX(-50%) rotate(45deg);
+        border-top: none;
+        border-left: none;
+        border-bottom: 3px solid var(--accent);
+        border-right: 3px solid var(--accent);
+      }
+      .flow-node-in {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1.2rem;
+        color: var(--muted);
+      }
+      .flow-node-sys {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--accent);
+        background: rgba(224, 19, 140, 0.08);
+      }
+      .flow-node-out {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1.2rem;
+        color: var(--accent-3);
+      }
+
+    
+  .layers-flow { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 62rem; margin-top: 0.6rem; }
+  .lf-row { display: flex; align-items: center; justify-content: center; gap: 1.2rem; width: 100%; }
+  .lf-row-2 { justify-content: center; gap: 2rem; }
+  .lf-node {
+    background: var(--card); border: 2px solid var(--border); border-radius: 0.8rem;
+    padding: 0.7rem 1.3rem; text-align: center; font-size: 1.35rem; font-weight: 800;
+    color: var(--text); line-height: 1.3;
   }
+  .lf-node span { display: block; font-size: 1rem; font-weight: 500; color: var(--muted); margin-top: 0.2rem; }
+  .lf-entry { border-color: var(--line); color: var(--muted); font-weight: 600; font-size: 1.2rem; }
+  .lf-s1 { border-color: var(--brand); border-width: 3px; color: var(--accent); }
+  .lf-s2 { border-color: var(--accent-3); border-width: 3px; color: var(--accent-3); min-width: 14rem; }
+  .lf-spec { border-color: var(--accent-2); border-width: 2px; color: var(--accent-2); font-size: 1.2rem; }
+  .lf-out { border-color: var(--accent-3); min-width: 12rem; }
+  .lf-ledger { border-color: var(--accent-2); min-width: 12rem; }
+  /* linha do meio: grid de 3 colunas iguais, stretch vertical */
+  .lf-mid-grid {
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+    gap: 1.2rem; width: 100%;
+  }
+  .lf-fork-col { display: flex; flex-direction: column; align-items: center; gap: 0.55rem; }
+  .lf-badge { font-size: 1.05rem; font-weight: 800; padding: 0.25rem 0.9rem; border-radius: 999px; border: 2px solid currentColor; white-space: nowrap; }
+  .lf-high { color: var(--accent-3); }
+  .lf-mid  { color: var(--accent);   }
+  .lf-low  { color: var(--accent-2); }
+  /* seta vertical */
+  .lf-vsep { display: flex; flex-direction: column; align-items: center; gap: 0; flex-shrink: 0; padding: 0.3rem 0; }
+  .lf-vline { width: 2px; height: 1.1rem; background: var(--accent); }
+  .lf-chevron { width: 0.65rem; height: 0.65rem; border-bottom: 3px solid var(--accent); border-right: 3px solid var(--accent); transform: rotate(45deg); margin-top: -0.15rem; }
 
 
-  .pipe { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 74rem; text-align: left; }
-  .pipe-row {
-    display: grid; grid-template-columns: 2.4rem 9rem minmax(0, 1.25fr) minmax(0, 1.2fr);
-    align-items: center; gap: 1rem;
-    background: var(--card); border: 2px solid var(--line); border-radius: 0.7rem; padding: 0.5rem 1rem 0.5rem 0.7rem;
+  /* ---- estudo de caso: mock de tela com pontos numerados ---- */
+  .slide:has(.case) h2 { margin-bottom: 0.8rem; font-size: 2.6rem; }
+  .case {
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.4rem; width: 100%; max-width: 74rem; text-align: left; align-items: center;
   }
-  .pipe-row.key { border-color: var(--brand); border-width: 3px; }
-  .pn {
-    width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--brand-2); color: #fff;
-    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.15rem;
+  .mock { background: var(--bg-2); border: 2px solid var(--border); border-radius: 1rem; }
+  .mock-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.6rem 1.1rem; background: var(--brand); color: #fff;
+    border-radius: 0.8rem 0.8rem 0 0; font-size: 1.1rem;
   }
-  .pipe-row.key .pn { background: var(--brand); }
-  .pname { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
-  .pdesc { font-size: 1.15rem; line-height: 1.35; color: var(--text); }
-  .pex {
-    font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.98rem; line-height: 1.35;
-    background: var(--code-bg); color: var(--accent-3); border-radius: 0.4rem; padding: 0.35rem 0.6rem;
+  .mock-bar span { opacity: 0.9; font-weight: 600; }
+  .mock-body { padding: 1rem 1rem 0.8rem 1.6rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .m-item {
+    position: relative; background: var(--card); border: 2px solid var(--line);
+    border-radius: 0.7rem; padding: 0.4rem 0.8rem 0.4rem 1.3rem;
+    font-size: 1.1rem; line-height: 1.3; color: var(--text);
   }
-  .pipe-note { margin-top: 0.8rem; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+  .pin {
+    position: absolute; left: -1.05rem; top: 50%; transform: translateY(-50%);
+    width: 2rem; height: 2rem; border-radius: 50%;
+    background: var(--brand); color: #fff; font-style: normal; font-weight: 800; font-size: 1.05rem;
+    display: flex; align-items: center; justify-content: center;
+    border: 0.2rem solid var(--bg-2); box-shadow: 0 0 0 2px var(--brand);
+  }
+  .m-user { border-color: var(--accent-3); align-self: flex-end; max-width: 92%; }
+  .m-bot { border-color: var(--accent); }
+  .m-tag { display: inline-block; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.15rem; }
+  .t-s1 { color: var(--accent); } .t-route { color: var(--accent-2); } .t-s2 { color: var(--accent-3); }
+  .m-code { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 1rem; }
+  .m-code b { color: var(--accent); }
+  .m-sub { font-size: 0.9rem; color: var(--muted); }
+  .m-ok { font-size: 0.95rem; font-weight: 700; color: var(--accent-3); margin-top: 0.25rem; }
+  .m-levels { display: flex; gap: 0.4rem; margin: 0.1rem 0; }
+  .lv { font-size: 0.9rem; font-weight: 800; padding: 0.1rem 0.7rem; border-radius: 999px; border: 2px solid var(--line); color: var(--muted); }
+  .lv.on { border-color: var(--accent-3); color: var(--accent-3); background: rgba(68, 181, 239, 0.15); }
+
+  .legend { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .legend li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.9rem; align-items: start; }
+  .legend i {
+    width: 2rem; height: 2rem; border-radius: 50%; background: var(--brand); color: #fff;
+    font-style: normal; font-weight: 800; font-size: 1.05rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .legend b { display: block; font-size: 1.3rem; color: var(--accent); line-height: 1.2; }
+  .legend div { font-size: 1.05rem; line-height: 1.3; color: var(--text); }
+
+  .led { gap: 0.7rem; }
+  .led-row { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 0.8rem; align-items: baseline; }
+  .led-row .k { font-size: 0.95rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+  .led-row .v { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.98rem; word-break: break-all; }
+  .led-row .v b { color: var(--accent); }
+  .led-ok { text-align: center; padding-top: 0.2rem; }
+  @media (max-width: 900px) { .case { grid-template-columns: 1fr; } }
 
 
-  .matrix {
-    display: grid; grid-template-columns: 9rem minmax(0, 1fr) minmax(0, 1fr);
-    gap: 0.7rem; width: 100%; max-width: 68rem; text-align: left;
-  }
-  .mx-col, .mx-row { display: flex; flex-direction: column; justify-content: center; gap: 0.1rem; }
-  .mx-col { align-items: center; text-align: center; padding-bottom: 0.2rem; }
-  .mx-col span, .mx-row span { font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-  .mx-col b, .mx-row b { font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1.1; }
-  .mx-row { padding-right: 0.5rem; border-right: 4px solid var(--line); }
-  .mx-cell {
-    background: var(--card); border: 2px solid var(--border); border-radius: 0.9rem;
-    padding: 1rem 1.3rem; display: flex; flex-direction: column; gap: 0.4rem; justify-content: center;
-  }
-  .mx-level { font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
-  .mx-level.lv-bit { color: var(--accent); }
-  .mx-level.lv-func { color: var(--accent-3); }
-  .mx-level.lv-stat { color: var(--accent-2); }
-  .mx-what { font-size: 1.3rem; line-height: 1.35; color: var(--text); }
-  .mx-ex {
-    margin-top: 0.2rem; padding-top: 0.5rem; border-top: 1px solid var(--line);
-    font-size: 1.15rem; color: var(--muted);
-  }
-  .mx-ex::before { content: "Ex.: "; font-weight: 800; color: var(--text); }
-  .mx-note { margin-top: 1rem; font-size: 1.45rem; font-weight: 700; color: var(--accent); }
+  /* ---- caso: estado "sem resposta" ---- */
+  .m-pending { border-style: dashed; border-color: var(--muted); min-height: 3.4rem; }
+  .m-pending .m-sub { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; }
+  .m-pending .m-code { color: var(--muted); }
+  .m-dots { display: flex; gap: 0.4rem; padding: 0.15rem 0; }
+  .m-dots span { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: var(--muted); }
 
 
-  .spectrum { position: relative; width: 100%; max-width: 68rem; margin-top: 1.5rem; }
-  .sp-ends {
-    display: flex; justify-content: space-between; margin-bottom: 1.6rem;
-    font-size: 1.15rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  /* ---- função 3: tipos de retorno com exemplo ---- */
+  .outs { width: 100%; max-width: 70rem; display: flex; flex-direction: column; gap: 0.6rem; text-align: left; }
+  .outs-head, .outs-row {
+    display: grid; grid-template-columns: 11rem minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 1.2rem; align-items: center;
   }
-  .sp-line {
-    position: absolute; left: 0; right: 0; top: 1.05rem; height: 0.5rem; border-radius: 99px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-3), var(--accent-2));
+  .outs-head { padding: 0 1.2rem; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .outs-row { background: var(--card); border: 2px solid var(--border); border-radius: 0.8rem; padding: 0.55rem 1.2rem; }
+  .outs-row b { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 1.4rem; font-weight: 800; }
+  .outs-row .q { font-size: 1.25rem; color: var(--text); line-height: 1.3; }
+  .outs-row code {
+    display: block; font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 1.15rem; font-weight: 700;
+    background: var(--code-bg); color: var(--accent-3); border-radius: 0.5rem; padding: 0.35rem 0.7rem;
   }
-  .sp-marks { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-  .sp-mark { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
-  .sp-dot {
-    width: 2.6rem; height: 2.6rem; border-radius: 50%;
-    background: var(--bg-1); border: 0.45rem solid currentColor; margin-bottom: 0.9rem;
-  }
-  .sp-name { font-size: 2.4rem; font-weight: 800; line-height: 1.1; color: currentColor; }
-  .sp-desc {
-    font-size: 1.35rem; color: var(--text); background: var(--card);
-    border: 2px solid var(--border); border-radius: 0.6rem; padding: 0.4rem 1rem; margin-top: 0.4rem;
-  }
-  .m-bit { color: var(--accent); } .m-func { color: var(--accent-3); } .m-stat { color: var(--accent-2); }
-  .sp-note { margin-top: 3rem; font-size: 1.7rem; font-weight: 600; color: var(--text); max-width: 56rem; }
+  .outs-row code em { display: block; font-family: inherit; font-style: normal; font-size: 0.85rem; font-weight: 500; color: var(--muted); margin-top: 0.1rem; }
+  .t-choice { color: var(--accent); } .t-score { color: var(--accent-3); } .t-range { color: var(--accent-2); }
+  .t-set { color: var(--accent); } .t-null { color: var(--muted); }
+  @media (max-width: 900px) { .outs-head { display: none; } .outs-row { grid-template-columns: 1fr; gap: 0.3rem; } }
 
 
-  .about { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.2rem; width: 100%; max-width: 70rem; margin-top: 2rem; text-align: left; }
-  .about-item {
-    background: var(--card); border: 2px solid var(--border); border-radius: 0.9rem;
-    padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem;
+  /* ---- slide 9: simulação de execuções lado a lado ---- */
+  .sim-prompt {
+    width: 100%; max-width: 68rem; text-align: left; font-size: 1.25rem; color: var(--text);
+    background: var(--card); border: 2px solid var(--line); border-radius: 0.7rem; padding: 0.5rem 1.1rem; margin-bottom: 1rem;
   }
-  .about-item b { font-size: 2.2rem; font-weight: 800; line-height: 1.1; color: var(--accent); }
-  .about-item span { font-size: 1.2rem; line-height: 1.4; color: var(--text); }
-  .about-stack { margin-top: 1.8rem; font-size: 1.5rem; font-weight: 700; color: var(--accent-3); letter-spacing: 0.04em; }
-  @media (max-width: 768px) { .about { grid-template-columns: 1fr 1fr; } }
+  .sim-prompt b { color: var(--accent); margin-right: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; }
+  .sim { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; width: 100%; max-width: 68rem; text-align: left; }
+  .sim-panel { background: var(--card); border: 2px solid var(--border); border-radius: 1rem; display: flex; flex-direction: column; overflow: hidden; }
+  .sim-head { display: flex; justify-content: space-between; align-items: center; padding: 0.55rem 1.1rem; background: var(--brand); color: #fff; font-size: 1.2rem; }
+  #simP0 .sim-head { background: var(--brand-2); }
+  .sim-run { font-size: 0.95rem; font-weight: 700; opacity: 0.95; }
+  .sim-run em { font-style: normal; }
+  .sim-text { padding: 0.9rem 1.1rem; min-height: 7.4rem; font-size: 1.4rem; line-height: 1.5; color: var(--text); }
+  .sim-text .tok { white-space: pre-wrap; }
+  .sim-text .tok.diff { color: #fff; background: var(--brand); border-radius: 0.25rem; padding: 0 0.15rem; }
+  .sim-text .cur { display: inline-block; width: 0.12em; height: 1.1em; background: var(--accent); vertical-align: text-bottom; margin-left: 1px; animation: simblink 0.8s steps(1) infinite; }
+  @keyframes simblink { 50% { opacity: 0; } }
+  .sim-foot { border-top: 2px solid var(--line); padding: 0.6rem 1.1rem 0.8rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .sim-hash { display: flex; align-items: center; gap: 0.7rem; font-size: 0.95rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .sim-hash code { font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 1.2rem; letter-spacing: 0; text-transform: none; background: var(--code-bg); color: var(--accent-3); padding: 0.1rem 0.6rem; border-radius: 0.4rem; }
+  .sim-hash code.diff { color: var(--accent); }
+  .sim-status { font-size: 1.1rem; font-weight: 700; min-height: 1.5rem; color: var(--muted); }
+  .sim-status.same { color: var(--accent-3); }
+  .sim-status.diff { color: var(--accent); }
+  .sim-chips { display: flex; gap: 0.5rem; }
+  .sim-chips i { width: 2.4rem; height: 0.6rem; border-radius: 99px; background: var(--line); }
+  .sim-chips i.same { background: var(--accent-3); }
+  .sim-chips i.diff { background: var(--brand); }
+  .sim-score { font-size: 1.05rem; color: var(--text); }
+  .sim-score b { color: var(--accent); font-size: 1.2rem; }
+  .sim-note { margin-top: 1.1rem; font-size: 1.55rem; font-weight: 600; color: var(--text); max-width: 60rem; }
+  .sim-note small { display: block; margin-top: 0.3rem; font-size: 0.95rem; font-weight: 500; color: var(--muted); }
+  @media (max-width: 900px) { .sim { grid-template-columns: 1fr; } }
+
+
+  /* ---- animações do estudo de caso (ligadas por JS com .anim) ---- */
+  .legend li { padding: 0.35rem 0.6rem; border-radius: 0.7rem; border: 2px solid transparent; transition: opacity 0.4s, background 0.4s, border-color 0.4s; }
+  .m-alt { min-height: 1.5em; font-size: 1rem; font-style: italic; color: var(--muted); margin-top: 0.15rem; }
+  .case.anim .m-item { opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s; }
+  .case.anim .m-item.show { opacity: 1; visibility: visible; transform: none; }
+  .case.anim .m-item .pin { transform: translateY(-50%) scale(0.4); transition: transform 0.45s cubic-bezier(0.2, 1.6, 0.4, 1); }
+  .case.anim .m-item.show .pin { transform: translateY(-50%) scale(1); }
+  .case.anim .m-item.now { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(224, 19, 140, 0.28); }
+  .case.anim .legend li { opacity: 0.28; }
+  .case.anim .legend li.seen { opacity: 0.7; }
+  .case.anim .legend li.on { opacity: 1; background: var(--card); border-color: var(--brand); }
+  .case.anim .lv.on:not(.lit) { border-color: var(--line); color: var(--muted); background: transparent; }
+  .case.anim .lv { transition: all 0.35s; }
+  .case.anim .m-bot .m-ok, .case.anim .led-ok { opacity: 0; transition: opacity 0.5s; }
+  .case.anim .m-bot.done .m-ok, .case.anim .led-ok.done { opacity: 1; }
+  .case.anim .m-dots span { animation: simdot 1.1s ease-in-out infinite; }
+  .case.anim .m-dots span:nth-child(2) { animation-delay: 0.18s; }
+  .case.anim .m-dots span:nth-child(3) { animation-delay: 0.36s; }
+  @keyframes simdot { 0%, 100% { opacity: 0.25; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-0.25rem); } }
+  .case.anim .m-pending .m-code { animation: simblink 1s steps(1) infinite; }
+  .case.anim .m-alt .txt { animation: altin 0.35s ease; }
+  @keyframes altin { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  .case.anim .typing::after { content: ""; display: inline-block; width: 0.12em; height: 1em; margin-left: 2px; background: var(--accent); vertical-align: text-bottom; animation: simblink 0.8s steps(1) infinite; }
+
+
+  /* ---- slide do achado: 40 execuções, mesma saída ---- */
+  .wow { width: 100%; max-width: 72rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-top: 0.4rem; }
+  .wow-lead { font-size: 1.45rem; color: var(--muted); max-width: 52rem; line-height: 1.35; }
+  .wow-big { font-size: 2.7rem; font-weight: 800; line-height: 1.15; color: var(--text); }
+  .wow-big .n { color: var(--accent); font-size: 3.4rem; margin-right: 0.2rem; }
+  .wow-hl { color: var(--accent); }
+  .wow-main { display: flex; align-items: center; justify-content: center; gap: 2.2rem; margin-top: 0.8rem; width: 100%; }
+  .wow-grid { display: flex; flex-direction: column; gap: 0.4rem; }
+  .wow-row { display: grid; grid-template-columns: 6.6rem auto; gap: 0.8rem; align-items: center; text-align: left; }
+  .wow-row b { font-size: 1.05rem; color: var(--muted); font-weight: 700; }
+  .wow-cells { display: grid; grid-template-columns: repeat(10, 3.6rem); gap: 0.35rem; }
+  .wow-cells i {
+    font-style: normal; font-family: 'Fira Code', 'Courier New', Courier, monospace; font-size: 0.95rem; font-weight: 700;
+    text-align: center; padding: 0.3rem 0; border-radius: 0.4rem;
+    background: rgba(68, 181, 239, 0.16); border: 2px solid var(--accent-3); color: var(--accent-3);
+    transition: background 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  .wow-side { text-align: center; min-width: 11rem; }
+  .wow-count b { font-size: 4.6rem; font-weight: 800; color: var(--accent); line-height: 1; }
+  .wow-count span { font-size: 1.6rem; color: var(--muted); font-weight: 700; margin-left: 0.2rem; }
+  .wow-count-lbl { font-size: 1.1rem; color: var(--text); line-height: 1.3; margin-top: 0.2rem; }
+  .wow-uniq { margin-top: 0.6rem; display: inline-block; font-size: 1.15rem; font-weight: 800; color: var(--accent-3); border: 2px solid var(--accent-3); border-radius: 999px; padding: 0.15rem 0.9rem; }
+  .wow-hash { display: flex; align-items: baseline; gap: 0.9rem; text-align: left; margin-top: 0.7rem; font-size: 1.05rem; padding: 0.7rem 1.1rem; }
+  .wow-hash .lbl { color: var(--muted); font-weight: 800; letter-spacing: 0.08em; }
+  .wow-foot { font-size: 1.15rem; color: var(--muted); margin-top: 0.1rem; }
+
+  .wow.anim .wow-step { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .wow.anim .wow-step.show { opacity: 1; transform: none; }
+  .wow.anim .wow-cells i { background: transparent; border-color: var(--line); color: transparent; }
+  .wow.anim .wow-cells i.run { border-color: var(--accent-3); animation: wowrun 0.5s ease-in-out infinite; }
+  .wow.anim .wow-cells i.ok { background: rgba(68, 181, 239, 0.16); border-color: var(--accent-3); color: var(--accent-3); animation: none; }
+  .wow.anim .wow-cells i.pop { box-shadow: 0 0 0 3px rgba(68, 181, 239, 0.45); }
+  .wow.anim.all .wow-cells i { box-shadow: 0 0 0.9rem rgba(224, 19, 140, 0.55); border-color: var(--brand); color: #fff; background: var(--brand); }
+  .wow.anim .wow-uniq { opacity: 0; transition: opacity 0.5s; }
+  .wow.anim .wow-uniq.show { opacity: 1; }
+  .wow.anim .wow-hash .hv.typing::after { content: ""; display: inline-block; width: 0.12em; height: 1em; margin-left: 2px; background: var(--accent); vertical-align: text-bottom; animation: simblink 0.8s steps(1) infinite; }
+  @keyframes wowrun { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+  @media (max-width: 900px) { .wow-main { flex-direction: column; } .wow-big { font-size: 2rem; } }
 
   .progress {
-    position: fixed; top: 0; left: 0; height: 0.3rem; z-index: 11;
-    background: linear-gradient(90deg, var(--brand), var(--brand-2), var(--brand-3));
-    transition: width 0.3s ease;
-  }
-  .counter {
-    position: fixed; bottom: 1rem; right: 1.4rem; z-index: 10;
-    font-size: 1.1rem; color: var(--muted); font-variant-numeric: tabular-nums;
-  }
-  .counter strong { color: var(--accent); }
-  body.embed .counter { display: none; }
-
-  @media (max-width: 768px) {
-    .split { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-<div class="bg"></div>
-<div class="progress" id="progress"></div>
-
-<div class="deck" id="deck">
-
-  <!-- 1 CAPA -->
-  <section class="slide active">
-    <h1>LLMs, IA Generativa<br>e Determinismo</h1>
-    <p class="subtitle">Navegando entre a Criatividade e o Controle</p>
-  </section>
-
-  <!-- 2 PARADOXO -->
-  <section class="slide">
-    <h2>O <span class="accent">paradoxo</span></h2>
-    <div class="cards">
-      <div class="card tilt">
-        <h3>IA mais criativa</h3>
-        <p>Modelos cada vez mais capazes de criar, explorar, imaginar.</p>
-      </div>
-      <div class="card tilt">
-        <h3>Mundo mais exigente</h3>
-        <p>Auditoria, compliance, reprodutibilidade, confiança.</p>
-      </div>
-    </div>
-    <p style="margin-top:2rem;max-width:800px;">Quanto mais poderosa a IA generativa, mais o mundo exige que ela seja previsível.</p>
-  </section>
-
-  <!-- 3 DOIS EXEMPLOS -->
-  <section class="slide">
-    <h2>Dois exemplos <span class="accent">contrastantes</span></h2>
-    <div class="cards">
-      <div class="card tilt">
-        <h3>Variabilidade é feature</h3>
-        <p>Brainstorming de campanha · ideação · design exploratório · recomendação.</p>
-      </div>
-      <div class="card tilt">
-        <h3>Determinismo é requisito</h3>
-        <p>Laudo jurídico · parecer financeiro · código em produção · diagnóstico.</p>
-      </div>
-    </div>
-    <p style="margin-top:2rem;">A mesma tecnologia, expectativas opostas. O erro comum é tratá-las com a mesma arquitetura.</p>
-  </section>
-
-  <!-- 3B APRESENTAÇÃO DO PALESTRANTE -->
-  <section class="slide">
-    <div class="kicker">Quem fala</div>
-    <h1>Johny W. Alves</h1>
-    <p class="subtitle" style="margin-top:0;">Engenheiro frontend sênior</p>
-    <div class="about">
-      <div class="about-item"><b>20+</b><span>anos de experiência</span></div>
-      <div class="about-item"><b>7</b><span>anos construindo aplicações React em escala</span></div>
-      <div class="about-item"><b>Mestrado</b><span>em Deep Learning e IA, em andamento</span></div>
-      <div class="about-item"><b>Todo dia</b><span>IA no fluxo de entrega e na qualidade do código</span></div>
-    </div>
-    <div class="about-stack">React · Next.js · TypeScript · Node.js</div>
-  </section>
-
-  <!-- 4 TESE -->
-  <section class="slide">
-    <div class="kicker">A tese</div>
-    <div class="huge">
-      Determinismo é requisito de <span class="hl">arquitetura</span>,<br>não parâmetro de modelo.
-    </div>
-    <p class="subtitle" style="margin-top:2rem;">E o System One é o portão determinístico dessa arquitetura.</p>
-  </section>
-
-  <!-- 5 PIPELINE -->
-  <section class="slide">
-    <h2>O pipeline <span class="accent">generativo</span></h2>
-    <div class="pipe">
-      <div class="pipe-row"><div class="pn">1</div><div class="pname">Prompt</div><div class="pdesc">O texto que entra.</div><div class="pex">"O cliente pode cancelar? Resposta:"</div></div>
-      <div class="pipe-row"><div class="pn">2</div><div class="pname">Tokens</div><div class="pdesc">O texto é cortado em pedaços e cada pedaço vira um número.</div><div class="pex">O · cliente · pode · cancelar · ? &rarr; 12 · 4821 · 903 · 7715 · 30</div></div>
-      <div class="pipe-row"><div class="pn">3</div><div class="pname">Embeddings</div><div class="pdesc">Cada número vira um vetor que representa significado.</div><div class="pex">4821 &rarr; [0,12 &nbsp;&minus;0,87 &nbsp;0,33 &hellip;]</div></div>
-      <div class="pipe-row"><div class="pn">4</div><div class="pname">Atenção</div><div class="pdesc">Cada token pesa quais outros importam para o contexto.</div><div class="pex">"cancelar" olha para "cliente" e "pode"</div></div>
-      <div class="pipe-row key"><div class="pn">5</div><div class="pname">Distribuição</div><div class="pdesc">O modelo calcula a probabilidade de cada próximo token.</div><div class="pex">sim 42% · não 23% · talvez 15% · &hellip;</div></div>
-      <div class="pipe-row key"><div class="pn">6</div><div class="pname">Amostragem</div><div class="pdesc">Um token é sorteado dessa distribuição.</div><div class="pex">sorteou "sim"</div></div>
-      <div class="pipe-row"><div class="pn">7</div><div class="pname">Texto</div><div class="pdesc">O token entra no contexto e o ciclo repete até terminar.</div><div class="pex">"sim" volta ao passo 2</div></div>
-    </div>
-    <p class="pipe-note">Aqui nasce a variabilidade: passos 5 e 6.</p>
-  </section>
-
-  <!-- 6 DISTRIBUIÇÃO -->
-  <section class="slide">
-    <h2>A distribuição de <span class="accent">probabilidade</span></h2>
-    <table>
-      <tr><th>Token</th><th>Probabilidade</th></tr>
-      <tr><td>"sim"</td><td>42%</td></tr>
-      <tr><td>"não"</td><td>23%</td></tr>
-      <tr><td>"talvez"</td><td>15%</td></tr>
-      <tr><td>"depende"</td><td>11%</td></tr>
-      <tr><td>outros</td><td>9%</td></tr>
-    </table>
-    <p style="margin-top:2rem;">O modelo não "escolhe a resposta certa". Ele <strong style="color:var(--accent)">amostra</strong> de uma distribuição.</p>
-  </section>
-
-  <!-- 7 PARÂMETROS -->
-  <section class="slide">
-    <h2>Temperatura, top-p, <span class="accent">top-k</span></h2>
-    <table>
-      <tr><th>Parâmetro</th><th>Efeito</th><th>Determinismo?</th></tr>
-      <tr><td>temperature = 0</td><td>greedy / argmax</td><td><span class="tag warn">parece</span></td></tr>
-      <tr><td>top-p</td><td>nucleus sampling</td><td><span class="tag no">não</span></td></tr>
-      <tr><td>top-k</td><td>limita ao top k</td><td><span class="tag no">não</span></td></tr>
-    </table>
-    <p style="margin-top:2rem;">Temperature = 0 pega sempre o token mais provável. Parece determinístico. Mas...</p>
-  </section>
-
-  <!-- 8 DEMO -->
-  <section class="slide">
-    <h2>Mesma pergunta, <span class="accent">temperaturas diferentes</span></h2>
-    <div class="cards">
-      <div class="card tilt">
-        <h3>temperature = 0</h3>
-        <p>"A capital da França é Paris. A população é de aproximadamente..."</p>
-      </div>
-      <div class="card tilt">
-        <h3>temperature = 1</h3>
-        <p>"Paris! A Cidade Luz. Vamos falar da Torre Eiffel, do Louvre..."</p>
-      </div>
-    </div>
-    <p style="margin-top:2rem;">Mesmo com temperature=0, a execução de amanhã pode ser diferente. Por quê?</p>
-  </section>
-
-  <!-- 9 TRANSIÇÃO -->
-  <section class="slide">
-    <div class="huge">
-      <span class="hl">Temperature = 0</span> resolve?
-    </div>
-    <p class="subtitle" style="margin-top:2rem;font-size:1.9rem;">Não. E a razão é mais profunda do que parece.</p>
-  </section>
-
-  <!-- 10 TRÊS FONTES -->
-  <section class="slide">
-    <h2>Três fontes, <span class="accent">não uma</span></h2>
-    <div class="cards">
-      <div class="card tilt">
-        <div class="num">1</div>
-        <h3>Hardware / GPU</h3>
-        <p>Não-associatividade de ponto flutuante + batching dinâmico.</p>
-      </div>
-      <div class="card tilt">
-        <div class="num">2</div>
-        <h3>Interpretação</h3>
-        <p>Deriva de interpretação da tarefa. A mais subestimada.</p>
-      </div>
-      <div class="card tilt">
-        <div class="num">3</div>
-        <h3>Saída</h3>
-        <p>Espaço de saída livre: formato e semântica variam.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11 GPU -->
-  <section class="slide">
-    <h2>Fonte 1: <span class="accent">GPU e batching</span></h2>
-    <div class="huge" style="font-size:2.6rem;margin-top:1rem;">
-      A ordem de acumulação depende do batch.<br>
-      O batch varia em produção.<br>
-      <span class="hl">A saída varia.</span>
-    </div>
-    <p style="margin-top:2rem;">Mesma entrada, mesmo modelo, mesmo temperature=0. Execuções diferentes, saídas diferentes.</p>
-  </section>
-
-  <!-- 12 DERIVA -->
-  <section class="slide">
-    <h2>Fonte 2: <span class="accent">deriva de interpretação</span></h2>
-    <div class="cards">
-      <div class="card tilt">
-        <h3>Interpretação A</h3>
-        <p>Coerente internamente. Mas incompatível com B e C.</p>
-      </div>
-      <div class="card tilt">
-        <h3>Interpretação B</h3>
-        <p>Coerente internamente. Mas incompatível com A e C.</p>
-      </div>
-      <div class="card tilt">
-        <h3>Interpretação C</h3>
-        <p>Coerente internamente. Mas incompatível com A e B.</p>
-      </div>
-    </div>
-    <p style="margin-top:2rem;max-width:900px;">Engenharia de prompt ajusta a probabilidade de escolha dentro do espaço de interpretação. <strong style="color:var(--accent)">Não elimina a diversidade de interpretações.</strong></p>
-  </section>
-
-  <!-- 13 SAÍDA LIVRE -->
-  <section class="slide">
-    <h2>Fonte 3: <span class="accent">espaço de saída livre</span></h2>
-    <div class="cards">
-      <div class="card tilt"><h3>JSON</h3><p>{"acao": "cancelar", "motivo": "..."}</p></div>
-      <div class="card tilt"><h3>Prosa</h3><p>"Claro, posso ajudar com o cancelamento..."</p></div>
-      <div class="card tilt"><h3>Lista</h3><p>1. Cancelar<br>2. Reembolsar<br>3. Confirmar</p></div>
-    </div>
-    <p style="margin-top:2rem;">Mesmo com temperature=0, texto livre permite variação de formato e desvio semântico.</p>
-  </section>
-
-  <!-- 14 SÍNTESE -->
-  <section class="slide">
-    <h2>Síntese do <span class="accent">bloco</span></h2>
-    <table>
-      <tr><th>Fonte</th><th>Resolvível por parâmetro?</th><th>Resolvível por arquitetura?</th></tr>
-      <tr><td>GPU / batching</td><td><span class="tag no">não</span></td><td><span class="tag warn">parcialmente</span></td></tr>
-      <tr><td>Deriva de interpretação</td><td><span class="tag no">não</span></td><td><span class="tag ok">sim</span></td></tr>
-      <tr><td>Espaço de saída</td><td><span class="tag no">não</span></td><td><span class="tag ok">sim</span></td></tr>
-    </table>
-    <p style="margin-top:2rem;">Nenhuma das três se resolve só com temperature=0. Todas se resolvem na arquitetura.</p>
-  </section>
-
-  <!-- 15 ESPECTRO -->
-  <section class="slide">
-    <h2>Determinismo <span class="accent">não é binário</span></h2>
-    <div class="spectrum">
-      <div class="sp-ends"><span>&larr; Mais controle</span><span>Mais variação &rarr;</span></div>
-      <div class="sp-marks">
-        <div class="sp-line"></div>
-        <div class="sp-mark m-bit"><div class="sp-dot"></div><div class="sp-name">Bit-exato</div><div class="sp-desc">Mesmos bytes</div></div>
-        <div class="sp-mark m-func"><div class="sp-dot"></div><div class="sp-name">Funcional</div><div class="sp-desc">Mesma decisão</div></div>
-        <div class="sp-mark m-stat"><div class="sp-dot"></div><div class="sp-name">Estatístico</div><div class="sp-desc">Mesma distribuição</div></div>
-      </div>
-    </div>
-    <p class="sp-note">A pergunta certa não é "é determinístico?", é "qual nível esta tarefa exige?"</p>
-  </section>
-
-  <!-- 16 TRÊS NÍVEIS -->
-  <section class="slide">
-    <h2>Os <span class="accent">três níveis</span></h2>
-    <table>
-      <tr><th>Nível</th><th>Definição</th><th>Exemplo</th><th>Custo</th></tr>
-      <tr><td>Bit-exato</td><td>mesmo hash SHA-256</td><td>reprodutibilidade científica</td><td>altíssimo</td></tr>
-      <tr><td>Funcional</td><td>mesma decisão / ação</td><td>roteamento, laudo, código</td><td>médio</td></tr>
-      <tr><td>Estatístico</td><td>mesma distribuição</td><td>ideação, recomendação</td><td>baixo</td></tr>
-    </table>
-    <p style="margin-top:2rem;">Bit-exato raramente é necessário. Funcional quase sempre é.</p>
-  </section>
-
-  <!-- 17 MATRIZ -->
-  <section class="slide">
-    <h2>Escolha o <span class="accent">nível certo</span></h2>
-    <div class="matrix">
-      <div class="mx-corner"></div>
-      <div class="mx-col"><span>Variabilidade desejada?</span><b>Sim</b></div>
-      <div class="mx-col"><span>Variabilidade desejada?</span><b>Não</b></div>
-
-      <div class="mx-row"><span>Erro grave se variar?</span><b>Sim</b></div>
-      <div class="mx-cell">
-        <div class="mx-level lv-func">Funcional</div>
-        <div class="mx-what">Decisão fixa, redação livre</div>
-        <div class="mx-ex">Laudo, parecer</div>
-      </div>
-      <div class="mx-cell">
-        <div class="mx-level lv-bit">Bit-exato</div>
-        <div class="mx-what">Saída idêntica, byte a byte</div>
-        <div class="mx-ex">Reprodutibilidade científica</div>
-      </div>
-
-      <div class="mx-row"><span>Erro grave se variar?</span><b>Não</b></div>
-      <div class="mx-cell">
-        <div class="mx-level lv-stat">Estatístico</div>
-        <div class="mx-what">Mesma distribuição, variar é bom</div>
-        <div class="mx-ex">Ideação, recomendação</div>
-      </div>
-      <div class="mx-cell">
-        <div class="mx-level lv-func">Funcional</div>
-        <div class="mx-what">Mesma ação, custo médio</div>
-        <div class="mx-ex">Roteamento, extração</div>
-      </div>
-    </div>
-    <p class="mx-note">Forçar bit-exato onde não precisa é caro. Aceitar estatístico onde precisa é irresponsável.</p>
-  </section>
-
-  <!-- 18 TRANSIÇÃO -->
-  <section class="slide">
-    <div class="huge">
-      Como chegar ao determinismo funcional?
-    </div>
-    <p class="subtitle" style="margin-top:2rem;font-size:1.9rem;">Com um portão determinístico na arquitetura: o <span style="color:var(--accent);font-weight:800;">System One</span>.</p>
-  </section>
-
-  <!-- 19 DEFINIÇÃO -->
-  <section class="slide">
-    <h2>O que é <span class="accent">System One</span></h2>
-    <div class="quote-box">
-      <span class="label">Definição</span>
-      <p style="color:var(--text);font-size:inherit;">System One aqui <strong>não é</strong> o "pensamento rápido" cognitivo de Kahneman. É um sistema de execução de decisão local e <strong>não generativo</strong>, implantado na camada de arquitetura. Toma decisões determinísticas por meio de limites de regras predefinidas, classificadores de intenção e mecanismos de auditoria, um <strong style="color:var(--accent)">"portão de controle"</strong> antes do LLM.</p>
-    </div>
-  </section>
-
-  <!-- 20 FUNÇÃO 1 -->
-  <section class="slide">
-    <h2>Função 1: <span class="accent">espaço aberto vira espaço fechado</span></h2>
-    <div class="flow" style="margin-top:2rem;">
-      <div class="flow-node">"quero cancelar minha assinatura e pedir reembolso"</div>
-      <div class="flow-node" style="border-color:var(--accent);">System One</div>
-      <div class="flow-node">["billing", "tech_support", "security"]</div>
-    </div>
-    <p style="margin-top:2rem;max-width:900px;">"Smart if-statements": classificação em enumeração predefinida. Mesma entrada + mesmo modelo + parâmetros fixos = <strong style="color:var(--accent)">mesma decisão</strong>.</p>
-  </section>
-
-  <!-- 21 FUNÇÃO 2 -->
-  <section class="slide">
-    <h2>Função 2: <span class="accent">auditoria</span> (ActionLedger)</h2>
-    <div class="flow" style="margin-top:1.5rem;">
-      <div class="flow-node">Decisão</div>
-      <div class="flow-node">Registro no ledger</div>
-      <div class="flow-node">Verificação</div>
-      <div class="flow-node" style="border-color:var(--accent);">Execução</div>
-    </div>
-    <ul class="list" style="margin-top:2rem;">
-      <li><strong>Reconstruibilidade:</strong> rastrear decisão até política e entrada.</li>
-      <li><strong>Invariância de ordem:</strong> pontuar opções independentemente evita viés de posição do LLM. PICA chega a <strong>0% de viés de ordem</strong>.</li>
-    </ul>
-  </section>
-
-  <!-- 22 FUNÇÃO 3 -->
-  <section class="slide">
-    <h2>Função 3: <span class="accent">limitação do espaço de saída</span></h2>
-    <div class="cards" style="margin-top:1.5rem;">
-      <div class="card tilt"><h3>choice</h3><p>Seleção em enumeração.</p></div>
-      <div class="card tilt"><h3>score</h3><p>Pontuação calibrada.</p></div>
-      <div class="card tilt"><h3>range_eval</h3><p>Avaliação em faixa.</p></div>
-      <div class="card tilt"><h3>set_choice</h3><p>Múltipla escolha.</p></div>
-    </div>
-    <p style="margin-top:2rem;">Espaço de saída limitado impede que o modelo "invente".</p>
-  </section>
-
-  <!-- 23 TRADE-OFF -->
-  <section class="slide">
-    <h2>O que o System One <span class="accent">troca</span></h2>
-    <div class="split" style="margin-top:2rem;">
-      <div class="card tilt" style="max-width:100%;">
-        <h3>Ganha</h3>
-        <p>Confiabilidade · auditabilidade · determinismo funcional.</p>
-      </div>
-      <div class="card tilt" style="max-width:100%;">
-        <h3>Perde</h3>
-        <p>Capacidade de lidar com o inesperado. Entradas fora da enumeração precisam de fallback.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 24 SÍNTESE -->
-  <section class="slide">
-    <div class="huge">
-      System One não gera.<br>
-      Ele <span class="hl">decide</span>, <span class="hl">registra</span> e <span class="hl">limita</span>.
-    </div>
-  </section>
-
-  <!-- 25 ARQUITETURA 3 CAMADAS -->
-  <section class="slide">
-    <h2>A arquitetura em <span class="accent">3 camadas</span></h2>
-    <table>
-      <tr><th>Camada</th><th>Mecanismo</th><th>Resolve</th><th>Não resolve</th></tr>
-      <tr><td><strong>Entrada (System One)</strong></td><td>Regras, pequeno modelo, limite de saída</td><td>Ambiguidade de entrada, desvio de roteamento, injeção</td><td>Raciocínio lógico complexo</td></tr>
-      <tr><td><strong>Especificação</strong></td><td>Substrato de restrições em linguagem natural</td><td>Deriva de interpretação, variância entre modelos</td><td>Execução de um modelo específico</td></tr>
-      <tr><td><strong>Execução (System Two)</strong></td><td>Chain-of-thought, decomposição, tools</td><td>Raciocínio complexo, uso de ferramentas</td><td>Determinismo em nível de token</td></tr>
-    </table>
-  </section>
-
-  <!-- 26 ACHADO -->
-  <section class="slide">
-    <h2>O achado que <span class="accent">muda tudo</span></h2>
-    <div class="huge" style="font-size:2.3rem;">
-      Após restrições de substrato reduzirem múltiplas interpretações a uma única,<br>
-      <span class="hl">quatro modelos de fronteira diferentes geram saídas idênticas byte a byte.</span>
-    </div>
-    <div class="hash-demo">SHA-256: a3f9c1e7b2d84f6a9c0e5d1b8f3a7c2e6d4b9f1a5c8e3d7b2f6a9c4e1d8b5a3f</div>
-    <p style="margin-top:1.5rem;">40 execuções · primeira invocação · saída idêntica byte a byte</p>
-  </section>
-
-  <!-- 27 ROTEAMENTO -->
-  <section class="slide">
-    <h2>Roteamento por <span class="accent">confiança</span></h2>
-    <table>
-      <tr><th>Confiança</th><th>Ação</th></tr>
-      <tr><td><span class="tag ok">Alta</span></td><td>System One decide automaticamente</td></tr>
-      <tr><td><span class="tag warn">Média</span></td><td>Confirmação humana</td></tr>
-      <tr><td><span class="tag no">Baixa</span></td><td>Encaminhar para LLM (System Two) ou humano</td></tr>
-    </table>
-    <p style="margin-top:2rem;">O System One não é gargalo. É roteador.</p>
-  </section>
-
-  <!-- 28 FLUXO -->
-  <section class="slide">
-    <h2>Como as camadas <span class="accent">conversam</span></h2>
-    <div class="flow" style="margin-top:2rem;">
-      <div class="flow-node">Entrada</div>
-      <div class="flow-node" style="border-color:var(--accent);">System One</div>
-      <div class="flow-node">Alta / Média / Baixa</div>
-      <div class="flow-node">System Two</div>
-      <div class="flow-node">Especificação</div>
-      <div class="flow-node">Saída</div>
-      <div class="flow-node">Ledger</div>
-    </div>
-  </section>
-
-  <!-- 29 SÍNTESE -->
-  <section class="slide">
-    <h2>Síntese do <span class="accent">bloco</span></h2>
-    <ul class="list">
-      <li><strong>System One</strong> fecha a entrada e a saída.</li>
-      <li><strong>Especificação determinística</strong> fecha a interpretação.</li>
-      <li><strong>System Two</strong> executa o raciocínio complexo dentro do espaço limitado.</li>
-    </ul>
-    <p style="margin-top:2rem;font-size:1.7rem;">Três fechamentos. Determinismo funcional.</p>
-  </section>
-
-  <!-- 30 CASO -->
-  <section class="slide">
-    <h2>Fluxo ponta a ponta: <span class="accent">atendimento ao cliente</span></h2>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><div class="step-text">Entrada ambígua do usuário chega.</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-text"><strong>System One</strong> classifica intenção (determinístico) e registra no ActionLedger.</div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-text">Confiança alta: roteia direto; baixa: LLM refina ou humano confirma.</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-text"><strong>System Two</strong> executa raciocínio / tool calling dentro do espaço limitado.</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-text">Saída validada contra schema, ação executada, registro auditável.</div></div>
-    </div>
-  </section>
-
-  <!-- 31 LEDGER -->
-  <section class="slide">
-    <h2>O ledger como <span class="accent">artefato concreto</span></h2>
-    <div class="hash-demo" style="text-align:left;line-height:1.9;">
-      <div><span style="color:var(--muted);">entrada:</span> "quero cancelar e pedir reembolso"</div>
-      <div><span style="color:var(--muted);">política:</span> billing.cancellation.v3</div>
-      <div><span style="color:var(--muted);">decisão:</span> billing_agent</div>
-      <div><span style="color:var(--muted);">confiança:</span> 0.94 (alta)</div>
-      <div><span style="color:var(--muted);">hash:</span> a3f9c1e7b2d84f6a9c0e5d1b8f3a7c2e</div>
-      <div><span style="color:var(--muted);">timestamp:</span> 2026-10-19T14:32:07Z</div>
-    </div>
-    <p style="margin-top:1.5rem;">Auditabilidade não é discurso. É este artefato aqui.</p>
-  </section>
-
-  <!-- 32 LIMITES -->
-  <section class="slide">
-    <h2>O que o System One <span class="accent">não resolve</span></h2>
-    <div class="split" style="margin-top:1.5rem;">
-      <div>
-        <h3>Não resolve</h3>
-        <ul class="list">
-          <li>Raciocínio complexo (papel do System Two)</li>
-          <li>Entradas fora da enumeração (fallback)</li>
-          <li>Manutenção da taxonomia ao longo do tempo</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Riscos</h3>
-        <ul class="list">
-          <li>Viés embutido nas regras de classificação</li>
-          <li>Falsa sensação de segurança</li>
-          <li>Determinismo não é sinônimo de justiça</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- 33 TAKEAWAYS -->
-  <section class="slide">
-    <h2>Takeaways</h2>
-    <ul class="list" style="max-width:1000px;">
-      <li>Determinismo não é binário. Escolha o nível certo para a tarefa.</li>
-      <li>Temperature=0 não garante reprodutibilidade. GPU, batching e interpretação importam.</li>
-      <li>System One transforma entrada aberta em decisão fechada.</li>
-      <li>Especificação determinística faz até modelos diferentes convergirem byte a byte.</li>
-      <li>Controle vem da arquitetura em camadas. E toda rigidez tem custo.</li>
-    </ul>
-  </section>
-
-</div>
-
-<div class="counter"><strong id="current">1</strong> / <span id="total">33</span></div>
-
-<script>
-  const params = new URLSearchParams(location.search);
-  const embed = params.has('embed');
-  if (embed) document.body.classList.add('embed');
-
-  /* Tema: segue o mesmo localStorage do site */
-  function applyTheme() {
-    let t = null;
-    try { t = localStorage.getItem('theme'); } catch (e) {}
-    if (!t) t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-    document.body.className = t + (embed ? ' embed' : '');
-  }
-  applyTheme();
-  window.addEventListener('storage', e => { if (e.key === 'theme') applyTheme(); });
-
-  const slides = document.querySelectorAll('.slide');
-  const total = slides.length;
-  let idx = Math.max(0, Math.min(total - 1, (parseInt(params.get('slide'), 10) || 1) - 1));
-  document.getElementById('total').textContent = total;
-
-  let channel = null;
-  try { channel = new BroadcastChannel('determinismo-deck'); } catch (e) {}
-
-  function render() {
-    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
-    document.getElementById('current').textContent = idx + 1;
-    document.getElementById('progress').style.width = ((idx + 1) / total * 100) + '%';
-  }
-
-  function announce() {
-    if (embed) return;
-    const msg = { dsh: 'sync', idx };
-    if (channel) channel.postMessage(msg);
-    if (window.opener && !window.opener.closed) window.opener.postMessage(msg, '*');
-  }
-
-  function show(n, remote) {
-    idx = Math.max(0, Math.min(total - 1, n));
-    render();
-    if (!remote) announce();
-  }
-
-  window.addEventListener('message', e => {
-    const d = e.data;
-    if (d && d.dsh === 'goto') show(d.idx, true);
-  });
-  if (channel) channel.onmessage = e => {
-    const d = e.data;
-    if (d && (d.dsh === 'goto' || d.dsh === 'sync') && !embed) show(d.idx, true);
-  };
-
-  if (!embed) {
-    document.addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown' || e.key === 'Enter') { e.preventDefault(); show(idx + 1); }
-      else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'Backspace') { e.preventDefault(); show(idx - 1); }
-      else if (e.key === 'Home') show(0);
-      else if (e.key === 'End') show(total - 1);
-      else if (e.key === 'f' || e.key === 'F') {
-        if (document.fullscreenElement) document.exitFullscreen();
-        else document.documentElement.requestFullscreen();
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 0.3rem;
+        z-index: 11;
+        background: linear-gradient(
+          90deg,
+          var(--brand),
+          var(--brand-2),
+          var(--brand-3)
+        );
+        transition: width 0.3s ease;
       }
-    });
-    document.addEventListener('click', e => show(idx + (e.clientX < innerWidth * 0.25 ? -1 : 1)));
+      .counter {
+        position: fixed;
+        bottom: 1rem;
+        right: 1.4rem;
+        z-index: 10;
+        font-size: 1.1rem;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .counter strong {
+        color: var(--accent);
+      }
+      body.embed .counter {
+        display: none;
+      }
 
-    let touchX = null;
-    document.addEventListener('touchstart', e => touchX = e.touches[0].clientX);
-    document.addEventListener('touchend', e => {
-      if (touchX === null) return;
-      const dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
-      touchX = null;
-    });
+      @media (max-width: 768px) {
+        .split {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="progress" id="progress"></div>
 
-    /* pede o estado atual ao painel do apresentador */
-    const hello = { dsh: 'hello' };
-    if (channel) channel.postMessage(hello);
-    if (window.opener && !window.opener.closed) window.opener.postMessage(hello, '*');
-  }
+    <div class="deck" id="deck">
+      <!-- 1 CAPA -->
+      <section class="slide active">
+        <h1>LLMs, IA Generativa<br />e Determinismo</h1>
+        <p class="subtitle">Navegando entre a Criatividade e o Controle</p>
+      </section>
 
-  render();
-</script>
+      <!-- 2 PARADOXO -->
+      <section class="slide">
+        <h2>O <span class="accent">paradoxo</span></h2>
+        <div class="cards">
+          <div class="card tilt">
+            <h3>IA mais criativa</h3>
+            <p>Modelos cada vez mais capazes de criar, explorar, imaginar.</p>
+          </div>
+          <div class="card tilt">
+            <h3>Mundo mais exigente</h3>
+            <p>Auditoria, compliance, reprodutibilidade, confiança.</p>
+          </div>
+        </div>
+        <p style="margin-top: 2rem; max-width: 800px">
+          Quanto mais poderosa a IA generativa, mais o mundo exige que ela seja
+          previsível.
+        </p>
+      </section>
+
+      <!-- 3 DOIS EXEMPLOS -->
+      <section class="slide">
+        <h2>Dois exemplos <span class="accent">contrastantes</span></h2>
+        <div class="cards">
+          <div class="card tilt">
+            <h3>Variabilidade é<br />feature</h3>
+            <p>
+              Brainstorming de campanha · ideação · design exploratório ·
+              recomendação
+            </p>
+          </div>
+          <div class="card tilt">
+            <h3>Determinismo é<br />requisito</h3>
+            <p>
+              Laudo jurídico · parecer financeiro · código em produção ·
+              diagnóstico
+            </p>
+          </div>
+        </div>
+        <p style="margin-top: 2rem">
+          A mesma tecnologia, expectativas opostas.<br />O erro comum é
+          tratá-las com a mesma arquitetura.
+        </p>
+      </section>
+
+      <!-- 3B APRESENTAÇÃO DO PALESTRANTE -->
+      <section class="slide">
+        <div class="speaker">
+          <img class="speaker-photo" src="johnywalves.jpg" alt="Johny W. Alves" />
+          <div class="speaker-info">
+            <div class="kicker">Quem fala</div>
+            <h1>Johny W. Alves</h1>
+            <p class="subtitle" style="margin-top: 0">Engenheiro frontend sênior</p>
+            <div class="about">
+              <div class="about-item">
+                <b>20+</b><span>anos de experiência</span>
+              </div>
+              <div class="about-item">
+                <b>7</b><span>anos com React em escala</span>
+              </div>
+              <div class="about-item">
+                <b>Mestrado</b><span>em Deep Learning e IA, em andamento</span>
+              </div>
+              <div class="about-item">
+                <b>Todo dia</b><span>IA no fluxo de entrega e na qualidade do código</span>
+              </div>
+            </div>
+            <div class="about-stack">React · Next.js · TypeScript · Node.js</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 TESE -->
+      <section class="slide">
+        <div class="kicker">A tese</div>
+        <div class="huge">
+          Determinismo é requisito de
+          <span class="hl">arquitetura</span>,<br />não parâmetro de modelo.
+        </div>
+        <p class="subtitle" style="margin-top: 2rem">
+          E o System One é o portão determinístico dessa arquitetura.
+        </p>
+      </section>
+
+      <!-- 5 PIPELINE -->
+      <section class="slide">
+        <h2>O pipeline <span class="accent">generativo</span></h2>
+        <div class="pipe">
+          <div class="pipe-row">
+            <div class="pn">1</div>
+            <div class="pname">Prompt</div>
+            <div class="pdesc">O texto que entra.</div>
+            <div class="pex">"O cliente pode cancelar? Resposta:"</div>
+          </div>
+          <div class="pipe-row">
+            <div class="pn">2</div>
+            <div class="pname">Tokens</div>
+            <div class="pdesc">
+              O texto é cortado em pedaços e cada pedaço vira um número.
+            </div>
+            <div class="pex">
+              O · cliente · pode · cancelar · ? &rarr; 12 · 4821 · 903 · 7715 ·
+              30
+            </div>
+          </div>
+          <div class="pipe-row">
+            <div class="pn">3</div>
+            <div class="pname">Embeddings</div>
+            <div class="pdesc">
+              Cada número vira um vetor que representa significado.
+            </div>
+            <div class="pex">
+              4821 &rarr; [0,12 &nbsp;&minus;0,87 &nbsp;0,33 &hellip;]
+            </div>
+          </div>
+          <div class="pipe-row">
+            <div class="pn">4</div>
+            <div class="pname">Atenção</div>
+            <div class="pdesc">
+              Cada token pesa quais outros importam para o contexto.
+            </div>
+            <div class="pex">"cancelar" olha para "cliente" e "pode"</div>
+          </div>
+          <div class="pipe-row key">
+            <div class="pn">5</div>
+            <div class="pname">Distribuição</div>
+            <div class="pdesc">
+              O modelo calcula a probabilidade de cada próximo token.
+            </div>
+            <div class="pex">sim 42% · não 23% · talvez 15% · &hellip;</div>
+          </div>
+          <div class="pipe-row key">
+            <div class="pn">6</div>
+            <div class="pname">Amostragem</div>
+            <div class="pdesc">Um token é sorteado dessa distribuição.</div>
+            <div class="pex">sorteou "sim"</div>
+          </div>
+          <div class="pipe-row">
+            <div class="pn">7</div>
+            <div class="pname">Texto</div>
+            <div class="pdesc">
+              O token entra no contexto e o ciclo repete até terminar.
+            </div>
+            <div class="pex">"sim" volta ao passo 2</div>
+          </div>
+        </div>
+        <p class="pipe-note">Aqui nasce a variabilidade: passos 5 e 6.</p>
+      </section>
+
+      <!-- 6 DISTRIBUIÇÃO -->
+      <section class="slide">
+        <h2>A distribuição de <span class="accent">probabilidade</span></h2>
+        <table>
+          <tr>
+            <th>Token</th>
+            <th>Probabilidade</th>
+          </tr>
+          <tr>
+            <td>"sim"</td>
+            <td>42%</td>
+          </tr>
+          <tr>
+            <td>"não"</td>
+            <td>23%</td>
+          </tr>
+          <tr>
+            <td>"talvez"</td>
+            <td>15%</td>
+          </tr>
+          <tr>
+            <td>"depende"</td>
+            <td>11%</td>
+          </tr>
+          <tr>
+            <td>outros</td>
+            <td>9%</td>
+          </tr>
+        </table>
+        <p style="margin-top: 2rem">
+          O modelo não "escolhe a resposta certa". Ele
+          <strong style="color: var(--accent)">amostra</strong> de uma
+          distribuição.
+        </p>
+      </section>
+
+      <!-- 7 PARÂMETROS -->
+      <section class="slide">
+        <h2>Temperatura, top-p, <span class="accent">top-k</span></h2>
+        <table>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Efeito</th>
+            <th>Determinismo?</th>
+          </tr>
+          <tr>
+            <td>temperature = 0</td>
+            <td>greedy / argmax</td>
+            <td><span class="tag warn">parece</span></td>
+          </tr>
+          <tr>
+            <td>top-p</td>
+            <td>nucleus sampling</td>
+            <td><span class="tag no">não</span></td>
+          </tr>
+          <tr>
+            <td>top-k</td>
+            <td>limita ao top k</td>
+            <td><span class="tag no">não</span></td>
+          </tr>
+        </table>
+        <p style="margin-top: 2rem">
+          Temperature = 0 pega sempre o token mais provável. Parece
+          determinístico. Mas...
+        </p>
+      </section>
+
+      <!-- 8 DEMO -->
+      <section class="slide" id="demoSlide">
+        <h2>
+          Mesma pergunta, <span class="accent">temperaturas diferentes</span>
+        </h2>
+        <div class="sim-prompt"><b>Prompt</b> Qual é a capital da França? Responda em uma frase.</div>
+        <div class="sim">
+          <div class="sim-panel" id="simP0">
+            <div class="sim-head"><b>temperature = 0</b><span class="sim-run">Execução <em>1</em>/4</span></div>
+            <div class="sim-text" aria-live="off"></div>
+            <div class="sim-foot">
+              <div class="sim-hash"><span>hash</span><code>--------</code></div>
+              <div class="sim-status">&nbsp;</div>
+              <div class="sim-chips"><i></i><i></i><i></i><i></i></div>
+              <div class="sim-score">Iguais à execução 1: <b>0</b> de 4</div>
+            </div>
+          </div>
+          <div class="sim-panel" id="simP1">
+            <div class="sim-head"><b>temperature = 1</b><span class="sim-run">Execução <em>1</em>/4</span></div>
+            <div class="sim-text" aria-live="off"></div>
+            <div class="sim-foot">
+              <div class="sim-hash"><span>hash</span><code>--------</code></div>
+              <div class="sim-status">&nbsp;</div>
+              <div class="sim-chips"><i></i><i></i><i></i><i></i></div>
+              <div class="sim-score">Iguais à execução 1: <b>0</b> de 4</div>
+            </div>
+          </div>
+        </div>
+        <p class="sim-note">
+          Mesmo com temperature=0, a execução de amanhã pode ser diferente. Por
+          quê?
+          <small>Simulação ilustrativa, com textos fixos.</small>
+        </p>
+      </section>
+
+      <!-- 9 TRANSIÇÃO -->
+      <section class="slide">
+        <div class="huge"><span class="hl">Temperature = 0</span> resolve?</div>
+        <p class="subtitle" style="margin-top: 2rem; font-size: 1.9rem">
+          Não. E a razão é mais profunda do que parece.
+        </p>
+      </section>
+
+      <!-- 10 TRÊS FONTES -->
+      <section class="slide">
+        <h2>Três fontes, <span class="accent">não uma</span></h2>
+        <div class="cards">
+          <div class="card tilt">
+            <div class="num">1</div>
+            <h3>Hardware / GPU</h3>
+            <p>Não-associatividade de ponto flutuante + batching dinâmico.</p>
+          </div>
+          <div class="card tilt">
+            <div class="num">2</div>
+            <h3>Interpretação</h3>
+            <p>Deriva de interpretação da tarefa. A mais subestimada.</p>
+          </div>
+          <div class="card tilt">
+            <div class="num">3</div>
+            <h3>Saída</h3>
+            <p>Espaço de saída livre: formato e semântica variam.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 GPU -->
+      <section class="slide">
+        <h2>Fonte 1: <span class="accent">GPU e batching</span></h2>
+        <div class="huge" style="font-size: 2.6rem; margin-top: 1rem">
+          A ordem de acumulação depende do batch.<br />
+          O batch varia em produção.<br />
+          <span class="hl">A saída varia.</span>
+        </div>
+        <p style="margin-top: 2rem">
+          Mesma entrada, mesmo modelo, mesmo temperature=0. Execuções
+          diferentes, saídas diferentes.
+        </p>
+      </section>
+
+      <!-- 12 DERIVA -->
+      <section class="slide">
+        <h2>Fonte 2: <span class="accent">deriva de interpretação</span></h2>
+        <div class="cards">
+          <div class="card tilt">
+            <h3>Interpretação A</h3>
+            <p>Coerente internamente. Mas incompatível com B e C.</p>
+          </div>
+          <div class="card tilt">
+            <h3>Interpretação B</h3>
+            <p>Coerente internamente. Mas incompatível com A e C.</p>
+          </div>
+          <div class="card tilt">
+            <h3>Interpretação C</h3>
+            <p>Coerente internamente. Mas incompatível com A e B.</p>
+          </div>
+        </div>
+        <p style="margin-top: 2rem; max-width: 900px">
+          Engenharia de prompt ajusta a probabilidade de escolha dentro do
+          espaço de interpretação.
+          <strong style="color: var(--accent)"
+            >Não elimina a diversidade de interpretações.</strong
+          >
+        </p>
+      </section>
+
+      <!-- 13 SAÍDA LIVRE -->
+      <section class="slide">
+        <h2>Fonte 3: <span class="accent">espaço de saída livre</span></h2>
+        <div class="cards">
+          <div class="card tilt">
+            <h3>JSON</h3>
+            <p>{"acao": "cancelar", "motivo": "..."}</p>
+          </div>
+          <div class="card tilt">
+            <h3>Prosa</h3>
+            <p>"Claro, posso ajudar com o cancelamento..."</p>
+          </div>
+          <div class="card tilt">
+            <h3>Lista</h3>
+            <p>1. Cancelar<br />2. Reembolsar<br />3. Confirmar</p>
+          </div>
+        </div>
+        <p style="margin-top: 2rem">
+          Mesmo com temperature=0, texto livre permite variação de formato e
+          desvio semântico.
+        </p>
+      </section>
+
+      <!-- 14 SÍNTESE -->
+      <section class="slide">
+        <h2>Síntese do <span class="accent">bloco</span></h2>
+        <table>
+          <tr>
+            <th>Fonte</th>
+            <th>Resolvível por parâmetro?</th>
+            <th>Resolvível por arquitetura?</th>
+          </tr>
+          <tr>
+            <td>GPU / batching</td>
+            <td><span class="tag no">não</span></td>
+            <td><span class="tag warn">parcialmente</span></td>
+          </tr>
+          <tr>
+            <td>Deriva de interpretação</td>
+            <td><span class="tag no">não</span></td>
+            <td><span class="tag ok">sim</span></td>
+          </tr>
+          <tr>
+            <td>Espaço de saída</td>
+            <td><span class="tag no">não</span></td>
+            <td><span class="tag ok">sim</span></td>
+          </tr>
+        </table>
+        <p style="margin-top: 2rem">
+          Nenhuma das três se resolve só com temperature=0. Todas se resolvem na
+          arquitetura.
+        </p>
+      </section>
+
+      <!-- 15 ESPECTRO -->
+      <section class="slide">
+        <h2>Determinismo <span class="accent">não é binário</span></h2>
+        <div class="spectrum">
+          <div class="sp-ends">
+            <span>&larr; Mais controle</span><span>Mais variação &rarr;</span>
+          </div>
+          <div class="sp-marks">
+            <div class="sp-line"></div>
+            <div class="sp-mark m-bit">
+              <div class="sp-dot"></div>
+              <div class="sp-name">Bit-exato</div>
+              <div class="sp-desc">Mesmos bytes</div>
+            </div>
+            <div class="sp-mark m-func">
+              <div class="sp-dot"></div>
+              <div class="sp-name">Funcional</div>
+              <div class="sp-desc">Mesma decisão</div>
+            </div>
+            <div class="sp-mark m-stat">
+              <div class="sp-dot"></div>
+              <div class="sp-name">Estatístico</div>
+              <div class="sp-desc">Mesma distribuição</div>
+            </div>
+          </div>
+        </div>
+        <p class="sp-note">
+          A pergunta certa não é "é determinístico?", é "qual nível esta tarefa
+          exige?"
+        </p>
+      </section>
+
+      <!-- 16 TRÊS NÍVEIS -->
+      <section class="slide">
+        <h2>Os <span class="accent">três níveis</span></h2>
+        <table>
+          <tr>
+            <th>Nível</th>
+            <th>Definição</th>
+            <th>Exemplo</th>
+            <th>Custo</th>
+          </tr>
+          <tr>
+            <td>Bit-exato</td>
+            <td>mesmo hash SHA-256</td>
+            <td>reprodutibilidade científica</td>
+            <td>altíssimo</td>
+          </tr>
+          <tr>
+            <td>Funcional</td>
+            <td>mesma decisão / ação</td>
+            <td>roteamento, laudo, código</td>
+            <td>médio</td>
+          </tr>
+          <tr>
+            <td>Estatístico</td>
+            <td>mesma distribuição</td>
+            <td>ideação, recomendação</td>
+            <td>baixo</td>
+          </tr>
+        </table>
+        <p style="margin-top: 2rem">
+          Bit-exato raramente é necessário. Funcional quase sempre é.
+        </p>
+      </section>
+
+      <!-- 17 MATRIZ -->
+      <section class="slide">
+        <h2>Escolha o <span class="accent">nível certo</span></h2>
+        <div class="matrix">
+          <div class="mx-corner"></div>
+          <div class="mx-col">
+            <span>Variabilidade desejada?</span><b>Sim</b>
+          </div>
+          <div class="mx-col">
+            <span>Variabilidade desejada?</span><b>Não</b>
+          </div>
+
+          <div class="mx-row"><span>Erro grave se variar?</span><b>Sim</b></div>
+          <div class="mx-cell">
+            <div class="mx-level lv-func">Funcional</div>
+            <div class="mx-what">Decisão fixa, redação livre</div>
+            <div class="mx-ex">Laudo, parecer</div>
+          </div>
+          <div class="mx-cell">
+            <div class="mx-level lv-bit">Bit-exato</div>
+            <div class="mx-what">Saída idêntica, byte a byte</div>
+            <div class="mx-ex">Reprodutibilidade científica</div>
+          </div>
+
+          <div class="mx-row"><span>Erro grave se variar?</span><b>Não</b></div>
+          <div class="mx-cell">
+            <div class="mx-level lv-stat">Estatístico</div>
+            <div class="mx-what">Mesma distribuição, variar é bom</div>
+            <div class="mx-ex">Ideação, recomendação</div>
+          </div>
+          <div class="mx-cell">
+            <div class="mx-level lv-func">Funcional</div>
+            <div class="mx-what">Mesma ação, custo médio</div>
+            <div class="mx-ex">Roteamento, extração</div>
+          </div>
+        </div>
+        <p class="mx-note">
+          Forçar bit-exato onde não precisa é caro. Aceitar estatístico onde
+          precisa é irresponsável.
+        </p>
+      </section>
+
+      <!-- 18 TRANSIÇÃO -->
+      <section class="slide">
+        <div class="huge">Como chegar ao determinismo funcional?</div>
+        <p class="subtitle" style="margin-top: 2rem; font-size: 1.9rem">
+          Com um portão determinístico na arquitetura: o
+          <span style="color: var(--accent); font-weight: 800">System One</span
+          >.
+        </p>
+      </section>
+
+      <!-- 19 DEFINIÇÃO -->
+      <section class="slide">
+        <h2>O que é <span class="accent">System One</span></h2>
+        <div class="quote-box">
+          <span class="label">Definição</span>
+          <p style="color: var(--text); font-size: inherit">
+            System One aqui <strong>não é</strong> o "pensamento rápido"
+            cognitivo de Kahneman. É um sistema de execução de decisão local e
+            <strong>não generativo</strong>, implantado na camada de
+            arquitetura. Toma decisões determinísticas por meio de limites de
+            regras predefinidas, classificadores de intenção e mecanismos de
+            auditoria, um
+            <strong style="color: var(--accent)">"portão de controle"</strong>
+            antes do LLM.
+          </p>
+        </div>
+      </section>
+
+      <!-- 20 FUNÇÃO 1 -->
+      <section class="slide">
+        <h2>
+          Função 1:
+          <span class="accent">espaço aberto vira espaço fechado</span>
+        </h2>
+        <div class="flow flow-v" style="margin-top: 2rem">
+          <div class="flow-node flow-node-in">
+            "quero cancelar minha assinatura e pedir reembolso"
+          </div>
+          <div
+            class="flow-node flow-node-sys"
+            style="border-color: var(--accent); border-width: 3px"
+          >
+            System One
+          </div>
+          <div class="flow-node flow-node-out">
+            ["billing", "tech_support", "security"]
+          </div>
+        </div>
+        <p style="margin-top: 2rem; max-width: 900px">
+          "Smart if-statements": classificação em enumeração predefinida. Mesma
+          entrada + mesmo modelo + parâmetros fixos =
+          <strong style="color: var(--accent)">mesma decisão</strong>.
+        </p>
+      </section>
+
+      <!-- 21 FUNÇÃO 2 -->
+      <section class="slide">
+        <h2>Função 2: <span class="accent">auditoria</span> (ActionLedger)</h2>
+        <div class="flow" style="margin-top: 1.5rem">
+          <div class="flow-node">Decisão</div>
+          <div class="flow-node">Registro no ledger</div>
+          <div class="flow-node">Verificação</div>
+          <div class="flow-node" style="border-color: var(--accent)">
+            Execução
+          </div>
+        </div>
+        <ul class="list" style="margin-top: 2rem">
+          <li>
+            <strong>Reconstruibilidade:</strong> rastrear decisão até política e
+            entrada.
+          </li>
+          <li>
+            <strong>Invariância de ordem:</strong> pontuar opções
+            independentemente evita viés de posição do LLM. PICA chega a
+            <strong>0% de viés de ordem</strong>.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 22 FUNÇÃO 3 -->
+      <section class="slide">
+        <h2>
+          Função 3: <span class="accent">limitação do espaço de saída</span>
+        </h2>
+        <div class="outs">
+          <div class="outs-head">
+            <span>Tipo</span><span>Pergunta ao modelo</span><span>Retorno permitido</span>
+          </div>
+
+          <div class="outs-row">
+            <b class="t-choice">choice</b>
+            <span class="q">Qual é a intenção do cliente?</span>
+            <code>"billing_agent"<em>um item da lista</em></code>
+          </div>
+          <div class="outs-row">
+            <b class="t-score">score</b>
+            <span class="q">Quão urgente é o pedido?</span>
+            <code>0,82<em>número de 0 a 1</em></code>
+          </div>
+          <div class="outs-row">
+            <b class="t-range">range_eval</b>
+            <span class="q">Em que faixa está o valor do reembolso?</span>
+            <code>"R$ 0–100"<em>uma faixa predefinida</em></code>
+          </div>
+          <div class="outs-row">
+            <b class="t-set">set_choice</b>
+            <span class="q">Quais áreas precisam participar?</span>
+            <code>["billing", "security"]<em>vários itens da lista</em></code>
+          </div>
+          <div class="outs-row">
+            <b class="t-null">null</b>
+            <span class="q">Nenhuma opção serve?</span>
+            <code>null<em>aciona o fallback</em></code>
+          </div>
+        </div>
+        <p class="mx-note" style="margin-top: 1.1rem">
+          Nunca texto livre: o modelo não "inventa" uma resposta.
+        </p>
+      </section>
+
+      <!-- 23 TRADE-OFF -->
+      <section class="slide">
+        <h2>O que o System One <span class="accent">troca</span></h2>
+        <div class="split" style="margin-top: 2rem">
+          <div class="card tilt" style="max-width: 100%">
+            <h3>Ganha</h3>
+            <p>Confiabilidade · auditabilidade · determinismo funcional.</p>
+          </div>
+          <div class="card tilt" style="max-width: 100%">
+            <h3>Perde</h3>
+            <p>
+              Capacidade de lidar com o inesperado. Entradas fora da enumeração
+              precisam de fallback.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 24 SÍNTESE -->
+      <section class="slide">
+        <div class="huge">
+          System One não gera.<br />
+          Ele <span class="hl">decide</span>, <span class="hl">registra</span> e
+          <span class="hl">limita</span>.
+        </div>
+      </section>
+
+      <!-- 25 ARQUITETURA 3 CAMADAS -->
+      <section class="slide">
+        <h2>A arquitetura em <span class="accent">3 camadas</span></h2>
+        <table style="table-layout:fixed">
+          <colgroup><col style="width:22%"><col style="width:26%"><col style="width:26%"><col style="width:26%"></colgroup>
+          <tr>
+            <th>Camada</th>
+            <th>Mecanismo</th>
+            <th>Resolve</th>
+            <th>Não resolve</th>
+          </tr>
+          <tr>
+            <td>
+              <strong>Entrada<br />(System One)</strong>
+            </td>
+            <td>Regras, pequeno modelo, limite de saída</td>
+            <td>Ambiguidade de entrada, desvio de roteamento, injeção</td>
+            <td>Raciocínio lógico complexo</td>
+          </tr>
+          <tr>
+            <td><strong>Especificação</strong></td>
+            <td>Substrato de restrições em linguagem natural</td>
+            <td>Deriva de interpretação, variância entre modelos</td>
+            <td>Execução de um modelo específico</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Execução<br />(System Two)</strong>
+            </td>
+            <td>Chain-of-thought, decomposição, tools</td>
+            <td>Raciocínio complexo, uso de ferramentas</td>
+            <td>Determinismo em nível de token</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 26 ACHADO -->
+      <section class="slide" data-wow>
+        <h2>O achado que <span class="accent">muda tudo</span></h2>
+        <div class="wow">
+          <p class="wow-lead wow-step">
+            Após restrições de substrato reduzirem múltiplas interpretações a
+            uma única,
+          </p>
+          <div class="wow-big wow-step"><span class="n">4</span> modelos de fronteira diferentes</div>
+          <div class="wow-big wow-hl wow-step">saída idêntica, byte a byte.</div>
+
+          <div class="wow-main wow-step">
+            <div class="wow-grid">
+            <div class="wow-row"><b>Modelo A</b><div class="wow-cells"><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i></div></div>
+            <div class="wow-row"><b>Modelo B</b><div class="wow-cells"><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i></div></div>
+            <div class="wow-row"><b>Modelo C</b><div class="wow-cells"><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i></div></div>
+            <div class="wow-row"><b>Modelo D</b><div class="wow-cells"><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i><i>a3f9</i></div></div>
+            </div>
+            <div class="wow-side">
+              <div class="wow-count"><b>40</b><span>/ 40</span></div>
+              <div class="wow-count-lbl">execuções com a mesma saída</div>
+              <div class="wow-uniq">1 hash único</div>
+            </div>
+          </div>
+
+          <div class="hash-demo wow-hash wow-step">
+            <span class="lbl">SHA-256</span>
+            <span class="hv">a3f9c1e7b2d84f6a9c0e5d1b8f3a7c2e6d4b9f1a5c8e3d7b2f6a9c4e1d8b5a3f</span>
+          </div>
+          <p class="wow-foot wow-step">
+            40 execuções · primeira invocação · saída idêntica byte a byte
+          </p>
+        </div>
+      </section>
+
+      <!-- 27 ROTEAMENTO -->
+      <section class="slide">
+        <h2>Roteamento por <span class="accent">confiança</span></h2>
+        <table>
+          <tr>
+            <th>Confiança</th>
+            <th>Ação</th>
+          </tr>
+          <tr>
+            <td><span class="tag ok">Alta</span></td>
+            <td>System One decide automaticamente</td>
+          </tr>
+          <tr>
+            <td><span class="tag warn">Média</span></td>
+            <td>Confirmação humana</td>
+          </tr>
+          <tr>
+            <td><span class="tag no">Baixa</span></td>
+            <td>Encaminhar para LLM (System Two) ou humano</td>
+          </tr>
+        </table>
+        <p style="margin-top: 2rem">O System One não é gargalo. É roteador.</p>
+      </section>
+
+      <!-- 28 FLUXO -->
+      <section class="slide">
+        <h2>Como as camadas <span class="accent">conversam</span></h2>
+        <div class="layers-flow">
+
+          <div class="lf-row">
+            <div class="lf-node lf-entry">Entrada do usuário</div>
+          </div>
+
+          <div class="lf-vsep"><div class="lf-vline"></div><div class="lf-chevron"></div></div>
+
+          <div class="lf-mid-grid">
+            <div class="lf-node lf-s1">System One<span>classifica · registra · limita</span></div>
+            <div class="lf-fork-col">
+              <div class="lf-badge lf-high">● Alta confiança</div>
+              <div class="lf-badge lf-mid">● Média</div>
+              <div class="lf-badge lf-low">● Baixa</div>
+            </div>
+            <div class="lf-node lf-spec">Especificação<span>fecha a interpretação</span></div>
+          </div>
+
+          <div class="lf-vsep"><div class="lf-vline"></div><div class="lf-chevron"></div></div>
+
+          <div class="lf-row">
+            <div class="lf-node lf-s2">System Two<span>raciocínio · tools</span></div>
+          </div>
+
+          <div class="lf-vsep"><div class="lf-vline"></div><div class="lf-chevron"></div></div>
+
+          <div class="lf-row lf-row-2">
+            <div class="lf-node lf-out">Saída validada</div>
+            <div class="lf-node lf-ledger">Ledger auditável</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 29 SÍNTESE -->
+      <section class="slide">
+        <h2>Síntese do <span class="accent">bloco</span></h2>
+        <ul class="list">
+          <li><strong>System One</strong> fecha a entrada e a saída.</li>
+          <li>
+            <strong>Especificação determinística</strong> fecha a interpretação.
+          </li>
+          <li>
+            <strong>System Two</strong> executa o raciocínio complexo dentro do
+            espaço limitado.
+          </li>
+        </ul>
+        <p style="margin-top: 2rem; font-size: 1.7rem">
+          Três fechamentos. Determinismo funcional.
+        </p>
+      </section>
+
+      <!-- 30A PROBLEMA DO CASO -->
+      <section class="slide" data-anim="problem">
+        <div class="kicker">Estudo de caso · o problema</div>
+        <h2>Chat de suporte: <span class="accent">e agora, o que responder?</span></h2>
+        <div class="case">
+          <div class="mock">
+            <div class="mock-bar"><b>Chat de suporte</b><span>Assinatura Pro</span></div>
+            <div class="mock-body">
+
+              <div class="m-item m-user">
+                <i class="pin">1</i>
+                <span class="t">"quero cancelar e pedir reembolso do mês passado"</span>
+              </div>
+
+              <div class="m-item m-pending">
+                <i class="pin">2</i>
+                <div class="m-dots"><span></span><span></span><span></span></div>
+                <div class="m-sub">sem resposta</div>
+                <div class="m-alt" aria-hidden="true"></div>
+              </div>
+
+              <div class="m-item m-pending">
+                <i class="pin">3</i>
+                <div class="m-sub">registro da decisão</div>
+                <div class="m-code">&mdash;</div>
+              </div>
+
+            </div>
+          </div>
+
+          <ol class="legend">
+            <li><i>1</i><div><b>O que o cliente quer?</b>Cancelar, reembolsar ou os dois? A mesma frase pode ser lida de jeitos diferentes.</div></li>
+            <li><i>2</i><div><b>Qual será a resposta?</b>Texto livre: se perguntar de novo, o formato e o conteúdo podem mudar.</div></li>
+            <li><i>3</i><div><b>Quem prova o que foi feito?</b>Sem registro, ninguém reconstrói a decisão depois.</div></li>
+          </ol>
+        </div>
+        <p class="mx-note" style="margin-top: 1.2rem">
+          Como responder sempre da mesma forma e conseguir provar por quê?
+        </p>
+      </section>
+
+      <!-- 30 CASO -->
+      <section class="slide" data-anim="flow">
+        <h2>
+          Fluxo ponta a ponta:
+          <span class="accent">atendimento ao cliente</span>
+        </h2>
+        <div class="case">
+          <div class="mock">
+            <div class="mock-bar"><b>Chat de suporte</b><span>Assinatura Pro</span></div>
+            <div class="mock-body">
+
+              <div class="m-item m-user">
+                <i class="pin">1</i>
+                <span class="t">"quero cancelar e pedir reembolso do mês passado"</span>
+              </div>
+
+              <div class="m-item m-event">
+                <i class="pin">2</i>
+                <div class="m-tag t-s1">System One</div>
+                <div class="m-code">intenção = <b>billing_agent</b> · confiança <b>0,94</b></div>
+                <div class="m-sub">registrado no ledger #4821</div>
+              </div>
+
+              <div class="m-item m-event">
+                <i class="pin">3</i>
+                <div class="m-tag t-route">Roteamento</div>
+                <div class="m-levels">
+                  <span class="lv on">Alta</span><span class="lv">Média</span><span class="lv">Baixa</span>
+                </div>
+                <div class="m-sub">alta: segue direto, sem humano</div>
+              </div>
+
+              <div class="m-item m-event">
+                <i class="pin">4</i>
+                <div class="m-tag t-s2">System Two</div>
+                <div class="m-code">consulta cobrança · <b>reembolso(mês = anterior)</b></div>
+                <div class="m-sub">só chama ferramentas permitidas</div>
+              </div>
+
+              <div class="m-item m-bot">
+                <i class="pin">5</i>
+                <div>Cancelamento agendado. Reembolso de R$ 49,90 em até 5 dias.</div>
+                <div class="m-ok">✓ saída válida no schema · ação executada · ledger #4821</div>
+              </div>
+
+            </div>
+          </div>
+
+          <ol class="legend">
+            <li><i>1</i><div><b>Entrada aberta</b>O cliente escreve do jeito que quiser.</div></li>
+            <li><i>2</i><div><b>System One decide</b>Classifica em uma lista fechada e registra no ledger.</div></li>
+            <li><i>3</i><div><b>Confiança manda</b>Alta segue direto. Média pede confirmação. Baixa vai para LLM ou humano.</div></li>
+            <li><i>4</i><div><b>System Two executa</b>Raciocina e chama ferramentas dentro do espaço limitado.</div></li>
+            <li><i>5</i><div><b>Saída validada</b>Confere o schema, executa e deixa o registro auditável.</div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 31 LEDGER -->
+      <section class="slide" data-anim="ledger">
+        <h2>O ledger como <span class="accent">artefato concreto</span></h2>
+        <div class="case">
+          <div class="mock">
+            <div class="mock-bar"><b>ActionLedger</b><span>registro #4821</span></div>
+            <div class="mock-body led">
+
+              <div class="m-item led-row">
+                <i class="pin">1</i>
+                <span class="k">entrada</span>
+                <span class="v">"quero cancelar e pedir reembolso do mês passado"</span>
+              </div>
+              <div class="m-item led-row">
+                <i class="pin">2</i>
+                <span class="k">política</span>
+                <span class="v">billing.cancellation.v3</span>
+              </div>
+              <div class="m-item led-row">
+                <i class="pin">3</i>
+                <span class="k">decisão</span>
+                <span class="v"><b>billing_agent</b> · confiança 0,94 (alta)</span>
+              </div>
+              <div class="m-item led-row">
+                <i class="pin">4</i>
+                <span class="k">hash</span>
+                <span class="v">a3f9c1e7b2d84f6a9c0e5d1b8f3a7c2e</span>
+              </div>
+              <div class="m-item led-row">
+                <i class="pin">5</i>
+                <span class="k">timestamp</span>
+                <span class="v">2026-10-19T14:32:07Z</span>
+              </div>
+
+              <div class="m-ok led-ok">✓ ação executada = decisão registrada</div>
+            </div>
+          </div>
+
+          <ol class="legend">
+            <li><i>1</i><div><b>O que entrou</b>A entrada exata, sem resumo.</div></li>
+            <li><i>2</i><div><b>Qual regra decidiu</b>A política e a versão aplicadas.</div></li>
+            <li><i>3</i><div><b>O que foi decidido</b>O resultado e a confiança, em um valor da lista fechada.</div></li>
+            <li><i>4</i><div><b>Prova de integridade</b>A ação só roda se bater com este registro.</div></li>
+            <li><i>5</i><div><b>Quando</b>Dá para reconstruir a ordem dos fatos.</div></li>
+          </ol>
+        </div>
+        <p class="mx-note" style="margin-top: 1.2rem">
+          Auditabilidade não é discurso. É este artefato aqui.
+        </p>
+      </section>
+
+      <!-- 32 LIMITES -->
+      <section class="slide">
+        <h2>O que o System One <span class="accent">não resolve</span></h2>
+        <div class="split" style="margin-top: 1.5rem">
+          <div>
+            <h3>Não resolve</h3>
+            <ul class="list">
+              <li>Raciocínio complexo (papel do System Two)</li>
+              <li>Entradas fora da enumeração (fallback)</li>
+              <li>Manutenção da taxonomia ao longo do tempo</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Riscos</h3>
+            <ul class="list">
+              <li>Viés embutido nas regras de classificação</li>
+              <li>Falsa sensação de segurança</li>
+              <li>Determinismo não é sinônimo de justiça</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 33 PARA LEVAR -->
+      <section class="slide">
+        <h2>Para <span class="accent">levar</span></h2>
+        <ul class="list" style="max-width: 1000px">
+          <li>
+            Determinismo não é binário. Escolha o nível certo para a tarefa.
+          </li>
+          <li>
+            Temperature=0 não garante reprodutibilidade. GPU, batching e
+            interpretação importam.
+          </li>
+          <li>System One transforma entrada aberta em decisão fechada.</li>
+          <li>
+            Especificação determinística faz até modelos diferentes convergirem
+            byte a byte.
+          </li>
+          <li>
+            Controle vem da arquitetura em camadas. E toda rigidez tem custo.
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="counter">
+      <strong id="current">1</strong> / <span id="total">33</span>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(location.search)
+      const embed = params.has("embed")
+      if (embed) document.body.classList.add("embed")
+
+      /* Tema: segue o mesmo localStorage do site */
+      function applyTheme() {
+        let t = null
+        try {
+          t = localStorage.getItem("theme")
+        } catch (e) {}
+        if (!t)
+          t =
+            window.matchMedia &&
+            matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+        document.body.className = t + (embed ? " embed" : "")
+      }
+      applyTheme()
+      window.addEventListener("storage", (e) => {
+        if (e.key === "theme") applyTheme()
+      })
+
+      const slides = document.querySelectorAll(".slide")
+      const total = slides.length
+      let idx = Math.max(
+        0,
+        Math.min(total - 1, (parseInt(params.get("slide"), 10) || 1) - 1)
+      )
+      document.getElementById("total").textContent = total
+
+      let channel = null
+      try {
+        channel = new BroadcastChannel("determinismo-deck")
+      } catch (e) {}
+
+      function render() {
+        slides.forEach((s, i) => s.classList.toggle("active", i === idx))
+        document.getElementById("current").textContent = idx + 1
+        document.getElementById("progress").style.width =
+          ((idx + 1) / total) * 100 + "%"
+      }
+
+      function announce() {
+        if (embed) return
+        const msg = { dsh: "sync", idx }
+        if (channel) channel.postMessage(msg)
+        if (window.opener && !window.opener.closed)
+          window.opener.postMessage(msg, "*")
+      }
+
+      function show(n, remote) {
+        idx = Math.max(0, Math.min(total - 1, n))
+        render()
+        if (!remote) announce()
+      }
+
+      window.addEventListener("message", (e) => {
+        const d = e.data
+        if (d && d.dsh === "goto") show(d.idx, true)
+      })
+      if (channel)
+        channel.onmessage = (e) => {
+          const d = e.data
+          if (d && (d.dsh === "goto" || d.dsh === "sync") && !embed)
+            show(d.idx, true)
+        }
+
+      if (!embed) {
+        document.addEventListener("keydown", (e) => {
+          if (
+            e.key === "ArrowRight" ||
+            e.key === " " ||
+            e.key === "PageDown" ||
+            e.key === "Enter"
+          ) {
+            e.preventDefault()
+            show(idx + 1)
+          } else if (
+            e.key === "ArrowLeft" ||
+            e.key === "PageUp" ||
+            e.key === "Backspace"
+          ) {
+            e.preventDefault()
+            show(idx - 1)
+          } else if (e.key === "Home") show(0)
+          else if (e.key === "End") show(total - 1)
+          else if (e.key === "f" || e.key === "F") {
+            if (document.fullscreenElement) document.exitFullscreen()
+            else document.documentElement.requestFullscreen()
+          }
+        })
+        document.addEventListener("click", (e) =>
+          show(idx + (e.clientX < innerWidth * 0.25 ? -1 : 1))
+        )
+
+        let touchX = null
+        document.addEventListener(
+          "touchstart",
+          (e) => (touchX = e.touches[0].clientX)
+        )
+        document.addEventListener("touchend", (e) => {
+          if (touchX === null) return
+          const dx = e.changedTouches[0].clientX - touchX
+          if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1))
+          touchX = null
+        })
+
+        /* pede o estado atual ao painel do apresentador */
+        const hello = { dsh: "hello" }
+        if (channel) channel.postMessage(hello)
+        if (window.opener && !window.opener.closed)
+          window.opener.postMessage(hello, "*")
+      }
+
+      render()
+    </script>
+    <script>
+      /* Simulação do slide "Mesma pergunta, temperaturas diferentes".
+         Textos fixos (sem Math.random) para sair igual em todo ensaio. */
+      (function () {
+        var slide = document.getElementById('demoSlide');
+        if (!slide) return;
+        var RUNS = {
+          0: [
+            'A capital da França é Paris, uma cidade com cerca de 2,1 milhões de habitantes.',
+            'A capital da França é Paris, uma cidade com cerca de 2,1 milhões de habitantes.',
+            'A capital da França é Paris, uma cidade com cerca de 2,1 milhões de habitantes.',
+            'A capital da França é Paris, uma cidade com perto de 2,1 milhões de habitantes.'
+          ],
+          1: [
+            'A capital da França é Paris, às margens do rio Sena.',
+            'Paris é a capital da França e a cidade mais populosa do país.',
+            'Paris! A Cidade Luz é a capital francesa, famosa pela Torre Eiffel.',
+            'A França tem Paris como capital, o centro político e cultural do país.'
+          ]
+        };
+        var TOKEN_MS = 85, PAUSE_MS = 1500, END_MS = 3800;
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function tokens(t) { return t.match(/ ?[^ ,.!?]+|[,.!?]/g) || [t]; }
+        function hash(t) { // FNV-1a 32 bits
+          var h = 0x811c9dc5;
+          for (var i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+          return ('00000000' + h.toString(16)).slice(-8);
+        }
+        function panel(id) {
+          var el = document.getElementById(id);
+          return {
+            text: el.querySelector('.sim-text'),
+            run: el.querySelector('.sim-run em'),
+            hash: el.querySelector('.sim-hash code'),
+            status: el.querySelector('.sim-status'),
+            chips: el.querySelectorAll('.sim-chips i'),
+            score: el.querySelector('.sim-score b')
+          };
+        }
+        var P = [panel('simP0'), panel('simP1')];
+        var gen = 0, timer = null, same = [0, 0];
+
+        function resetUI() {
+          same = [0, 0];
+          P.forEach(function (p) {
+            p.text.innerHTML = ''; p.run.textContent = '1';
+            p.hash.textContent = '--------'; p.hash.className = '';
+            p.status.textContent = '\u00a0'; p.status.className = 'sim-status';
+            p.score.textContent = '0';
+            p.chips.forEach(function (c) { c.className = ''; });
+          });
+        }
+        function finish(k, r) { // marca resultado da execução r no painel k
+          var p = P[k], txt = RUNS[k][r], h = hash(txt), base = hash(RUNS[k][0]);
+          p.hash.textContent = h;
+          var isSame = h === base;
+          if (r === 0) { p.status.textContent = 'referência'; p.status.className = 'sim-status'; p.chips[r].className = 'same'; same[k] = 1; }
+          else if (isSame) { same[k]++; p.status.textContent = '= igual à execução 1'; p.status.className = 'sim-status same'; p.chips[r].className = 'same'; }
+          else {
+            var a = tokens(txt), b = tokens(RUNS[k][0]), n = 0;
+            for (var i = 0; i < Math.max(a.length, b.length); i++) if (a[i] !== b[i]) n++;
+            p.status.textContent = '\u2260 diferente da execução 1 (' + n + (n === 1 ? ' token' : ' tokens') + ')';
+            p.status.className = 'sim-status diff'; p.chips[r].className = 'diff'; p.hash.className = 'diff';
+          }
+          p.score.textContent = same[k];
+        }
+        function paintFull(k, r) {
+          var p = P[k], a = tokens(RUNS[k][r]), b = tokens(RUNS[k][0]), html = '';
+          a.forEach(function (t, i) { html += '<span class="tok' + (r > 0 && t !== b[i] ? ' diff' : '') + '">' + t + '</span>'; });
+          p.text.innerHTML = html; p.run.textContent = String(r + 1);
+        }
+        function active() { return slide.classList.contains('active'); }
+
+        function stream(r, done) {
+          var seq = [tokens(RUNS[0][r]), tokens(RUNS[1][r])], idx = [0, 0], myGen = gen;
+          P.forEach(function (p, k) { p.run.textContent = String(r + 1); p.text.innerHTML = ''; p.status.textContent = '\u00a0'; p.status.className = 'sim-status'; p.hash.textContent = '--------'; p.hash.className = ''; });
+          (function tick() {
+            if (myGen !== gen) return;
+            if (!active()) { stop(); return; }
+            var left = false;
+            for (var k = 0; k < 2; k++) {
+              if (idx[k] < seq[k].length) {
+                var base = tokens(RUNS[k][0]), t = seq[k][idx[k]];
+                var cls = 'tok' + (r > 0 && t !== base[idx[k]] ? ' diff' : '');
+                var old = P[k].text.querySelector('.cur'); if (old) old.remove();
+                P[k].text.insertAdjacentHTML('beforeend', '<span class="' + cls + '">' + t + '</span><span class="cur"></span>');
+                idx[k]++; left = true;
+              } else { var c = P[k].text.querySelector('.cur'); if (c) c.remove(); }
+            }
+            if (left) { timer = setTimeout(tick, TOKEN_MS); }
+            else { finish(0, r); finish(1, r); timer = setTimeout(done, r === 3 ? END_MS : PAUSE_MS); }
+          })();
+        }
+        function loop(r) {
+          if (!active()) { stop(); return; }
+          if (r > 3) { resetUI(); r = 0; }
+          stream(r, function () { loop(r + 1); });
+        }
+        function start() {
+          if (timer !== null) return;
+          gen++; resetUI();
+          if (reduce) { for (var r = 0; r < 4; r++) { for (var k = 0; k < 2; k++) { paintFull(k, r); finish(k, r); } } return; }
+          timer = setTimeout(function () { loop(0); }, 400);
+        }
+        function stop() { gen++; if (timer) clearTimeout(timer); timer = null; resetUI(); }
+
+        new MutationObserver(function () { active() ? start() : (timer !== null || P[0].text.innerHTML) && stop(); })
+          .observe(slide, { attributes: true, attributeFilter: ['class'] });
+        if (active()) start();
+      })();
+    </script>
+    <script>
+      /* Animações em loop do estudo de caso (slides com data-anim).
+         Textos fixos e tempos fixos: saem iguais em todo ensaio. */
+      (function () {
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var SCRIPTS = {
+          problem: { steps: [2500, 2900, 2300], hold: 4200 },
+          flow:    { steps: [2300, 2100, 2500, 2100, 2600], hold: 4200 },
+          ledger:  { steps: [1500, 1500, 1700, 2300, 1700], hold: 4500 }
+        };
+        var ALTS = ['"Claro! Cancelei a sua assinatura."', '"Reembolsos: abra um chamado no portal."', '{"status": "cancelled"}'];
+
+        function Runner(slide) {
+          var kind = slide.getAttribute('data-anim'), cfg = SCRIPTS[kind];
+          var c = slide.querySelector('.case');
+          var items = [].slice.call(c.querySelectorAll('.mock-body > .m-item'));
+          var legend = [].slice.call(c.querySelectorAll('.legend li'));
+          var timers = [], alive = false, cleanup = null;
+          var userT = c.querySelector('.m-user .t');
+          var userText = userT ? userT.textContent : '';
+          var hashEl = kind === 'ledger' ? items[3].querySelector('.v') : null;
+          var hashText = hashEl ? hashEl.textContent : '';
+          var altTxt = c.querySelector('.m-alt .txt');
+          var lit = c.querySelector('.lv.on');
+          var ok = c.querySelector('.m-bot') || c.querySelector('.led-ok');
+
+          function at(fn, ms) { timers.push(setTimeout(function () { if (alive) fn(); }, ms)); }
+          function clearAll() { timers.forEach(clearTimeout); timers = []; }
+          function type(el, text, per, cls) {
+            el.textContent = ''; el.classList.add('typing');
+            for (var i = 1; i <= text.length; i++) (function (n) { at(function () { el.textContent = text.slice(0, n); if (n === text.length) el.classList.remove('typing'); }, per * n); })(i);
+          }
+          function resetState() {
+            items.forEach(function (i) { i.classList.remove('show', 'now', 'done'); });
+            legend.forEach(function (l) { l.classList.remove('on', 'seen'); });
+            if (ok) ok.classList.remove('done');
+            if (lit) lit.classList.remove('lit');
+            if (userT) userT.textContent = '';
+            if (hashEl) hashEl.textContent = '';
+            if (altTxt) altTxt.textContent = '';
+          }
+          function restoreStatic() {
+            c.classList.remove('anim');
+            items.forEach(function (i) { i.classList.remove('show', 'now', 'done'); });
+            legend.forEach(function (l) { l.classList.remove('on', 'seen'); });
+            if (userT) { userT.classList.remove('typing'); userT.textContent = userText; }
+            if (hashEl) { hashEl.classList.remove('typing'); hashEl.textContent = hashText; }
+            if (altTxt) altTxt.textContent = '';
+          }
+          function reveal(i) {
+            items.forEach(function (it, k) { it.classList.toggle('now', k === i); });
+            items[i].classList.add('show');
+            legend.forEach(function (l, k) { l.classList.toggle('on', k === i); l.classList.toggle('seen', k < i); });
+            if (i === 0 && userT) type(userT, userText, 34);
+            if (kind === 'problem' && i === 1 && altTxt) {
+              var n = 0, tick = function () { altTxt.innerHTML = '<span class="txt"></span>'; altTxt.firstChild.textContent = ALTS[n % ALTS.length]; n++; if (alive) timers.push(setTimeout(tick, 1000)); };
+              at(tick, 600);
+            }
+            if (kind === 'flow' && i === 2 && lit) at(function () { lit.classList.add('lit'); }, 700);
+            if (kind === 'flow' && i === 4) at(function () { items[4].classList.add('done'); }, 800);
+            if (kind === 'ledger' && i === 3 && hashEl) at(function () { type(hashEl, hashText, 38); }, 350);
+          }
+          function cycle() {
+            resetState();
+            var t = 350;
+            cfg.steps.forEach(function (d, i) { at(function () { reveal(i); }, t); t += d; });
+            if (kind === 'ledger') at(function () { ok.classList.add('done'); }, t - 400);
+            at(function () { items.forEach(function (it) { it.classList.remove('show', 'now'); }); legend.forEach(function (l) { l.classList.remove('on'); l.classList.add('seen'); }); }, t + cfg.hold);
+            at(cycle, t + cfg.hold + 800);
+          }
+          return {
+            start: function () {
+              if (alive) return;
+              if (cleanup) { clearTimeout(cleanup); cleanup = null; }
+              if (reduce) return;
+              alive = true; c.classList.add('anim'); cycle();
+            },
+            stop: function () {
+              if (!alive && !c.classList.contains('anim')) return;
+              alive = false; clearAll();
+              if (cleanup) clearTimeout(cleanup);
+              cleanup = setTimeout(restoreStatic, 450);
+            }
+          };
+        }
+
+        [].slice.call(document.querySelectorAll('.slide[data-anim]')).forEach(function (slide) {
+          var r = Runner(slide);
+          function sync() { slide.classList.contains('active') ? r.start() : r.stop(); }
+          new MutationObserver(sync).observe(slide, { attributes: true, attributeFilter: ['class'] });
+          sync();
+        });
+      })();
+    </script>
+      <script>
+      /* Slide do achado: 40 execuções, todas com a mesma saída (hash idêntico).
+         Roteiro de tempo fixo, em loop enquanto o slide está ativo. */
+      (function () {
+        var slide = document.querySelector('.slide[data-wow]');
+        if (!slide) return;
+        var w = slide.querySelector('.wow');
+        var steps = [].slice.call(w.querySelectorAll('.wow-step'));
+        var cells = [].slice.call(w.querySelectorAll('.wow-cells i'));
+        var count = w.querySelector('.wow-count b');
+        var uniq = w.querySelector('.wow-uniq');
+        var hv = w.querySelector('.wow-hash .hv');
+        var full = hv.textContent;
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var timers = [], alive = false, cleanup = null;
+        function at(fn, ms) { timers.push(setTimeout(function () { if (alive) fn(); }, ms)); }
+        function reset() {
+          steps.forEach(function (s) { s.classList.remove('show'); });
+          cells.forEach(function (c) { c.className = ''; });
+          w.classList.remove('all'); uniq.classList.remove('show');
+          count.textContent = '0'; hv.textContent = ''; hv.classList.remove('typing');
+        }
+        function cycle() {
+          reset();
+          var t = 300;
+          at(function () { steps[0].classList.add('show'); }, t);          // contexto
+          at(function () { steps[1].classList.add('show'); }, t += 1400);  // 4 modelos
+          at(function () { steps[2].classList.add('show'); }, t += 1300);  // saída idêntica
+          at(function () { steps[3].classList.add('show'); }, t += 1500);  // grade
+          t += 700;
+          cells.forEach(function (c, i) {
+            at(function () { c.classList.add('run'); }, t + i * 85);
+            at(function () { c.classList.remove('run'); c.classList.add('ok', 'pop'); count.textContent = String(i + 1); }, t + i * 85 + 260);
+            at(function () { c.classList.remove('pop'); }, t + i * 85 + 560);
+          });
+          t += cells.length * 85 + 700;
+          at(function () { w.classList.add('all'); uniq.classList.add('show'); }, t);           // pulso final
+          at(function () { steps[4].classList.add('show'); hv.classList.add('typing'); }, t += 600);
+          for (var i = 1; i <= full.length; i++) (function (n) { at(function () { hv.textContent = full.slice(0, n); if (n === full.length) hv.classList.remove('typing'); }, t + n * 24); })(i);
+          t += full.length * 24 + 400;
+          at(function () { steps[5].classList.add('show'); }, t);
+          t += 6500;
+          at(function () { steps.forEach(function (s) { s.classList.remove('show'); }); w.classList.remove('all'); uniq.classList.remove('show'); }, t);
+          at(cycle, t + 900);
+        }
+        function restore() {
+          w.classList.remove('anim', 'all'); steps.forEach(function (s) { s.classList.remove('show'); });
+          cells.forEach(function (c) { c.className = ''; });
+          uniq.classList.remove('show'); count.textContent = '40'; hv.classList.remove('typing'); hv.textContent = full;
+        }
+        function start() { if (alive || reduce) return; if (cleanup) { clearTimeout(cleanup); cleanup = null; } alive = true; w.classList.add('anim'); cycle(); }
+        function stop() { if (!alive) return; alive = false; timers.forEach(clearTimeout); timers = []; cleanup = setTimeout(restore, 450); }
+        function sync() { slide.classList.contains('active') ? start() : stop(); }
+        new MutationObserver(sync).observe(slide, { attributes: true, attributeFilter: ['class'] });
+        sync();
+      })();
+    </script>
 </body>
 </html>

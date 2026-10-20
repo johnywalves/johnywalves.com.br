@@ -80,6 +80,11 @@
   .sec.key { background: var(--card); border-left: 0.35rem solid var(--brand); border-radius: 0.6rem; padding: 0.8rem 1rem; }
   .sec.say p { font-size: 1.7rem; line-height: 1.5; font-weight: 600; }
   .sec.visual p { color: var(--muted); }
+  .sec.terms { background: var(--card); border-left: 0.35rem solid var(--accent-3); border-radius: 0.6rem; padding: 0.8rem 1rem; }
+  .sec.terms h2 { color: var(--accent-3); }
+  .sec.terms dt { font-size: 1.35rem; font-weight: 800; color: var(--text); margin-top: 0.4rem; }
+  .sec.terms dt:first-child { margin-top: 0; }
+  .sec.terms dd { font-size: 1.25rem; line-height: 1.5; color: var(--muted); }
 
   .side { display: flex; flex-direction: column; gap: 0.8rem; min-height: 0; }
   .nav, .kbd { flex-shrink: 0; }
@@ -163,12 +168,12 @@ const BLOCKS = [
   { id: 4, name: 'O espectro do determinismo', min: 10, from: 16, to: 19 },
   { id: 5, name: 'System One: o portão determinístico', min: 15, from: 20, to: 25 },
   { id: 6, name: 'System One + System Two + Especificação', min: 15, from: 26, to: 30 },
-  { id: 7, name: 'Estudo de caso ao vivo', min: 8, from: 31, to: 32 },
-  { id: 8, name: 'Limites, riscos e ética', min: 5, from: 33, to: 33 },
-  { id: 9, name: 'Q&A', min: 5, from: 34, to: 34 },
+  { id: 7, name: 'Estudo de caso ao vivo', min: 8, from: 31, to: 33 },
+  { id: 8, name: 'Limites, riscos e ética', min: 5, from: 34, to: 34 },
+  { id: 9, name: 'Q&A', min: 5, from: 35, to: 35 },
 ];
 
-// t: título | crit: slide crítico | key: mensagem-chave | visual | say: fala | extra: detalhes opcionais (lista)
+// t: título | crit: slide crítico | key: mensagem-chave | visual | say: fala | extra: detalhes opcionais (lista) | terms: [[termo, explicação]] glossário da 1ª vez que o termo aparece
 const SLIDES = [
   { t: 'Capa', crit: 1, visual: 'Título da apresentação, subtítulo, nome do apresentador, evento/data.',
     say: 'Abrir com energia. Não ler o slide. "Hoje vamos falar de uma tensão que todo mundo que coloca IA em produção enfrenta."' },
@@ -200,15 +205,22 @@ const SLIDES = [
     say: '"Aqui nasce toda a variabilidade. Não é bug, é o design."' },
   { t: 'Temperatura, top-p, top-k',
     visual: 'Três mini-gráficos mostrando o efeito de cada parâmetro. Tabela: temperature=0 (greedy/argmax, parece mas não garante), top-p (nucleus sampling, não), top-k (limita ao top k, não).',
+    terms: [['Temperatura (temperature)', 'Botão que controla o quanto o sorteio do próximo token se espalha. Baixa: favorece muito os mais prováveis. Alta: dá chance a tokens improváveis. Com 0 não há sorteio, o modelo pega o mais provável.'],
+            ['Greedy / argmax', 'Estratégia "gulosa": em cada passo escolhe sempre o token de maior probabilidade, sem sortear. Argmax é o nome da operação matemática que devolve o item de maior valor. Parece determinístico, mas empates e arredondamentos de GPU ainda podem trocar o token.'],
+            ['Top-p (nucleus sampling)', 'Em vez de olhar todo o vocabulário, junta os tokens mais prováveis até somar p da probabilidade (ex.: p = 0,9) e sorteia só dentro desse "núcleo". Reduz o improvável, mas continua sorteando, então não garante determinismo.'],
+            ['Top-k', 'Mantém só os k tokens mais prováveis (ex.: k = 40) e sorteia entre eles. Limita as opções, mas o sorteio continua, então também não garante determinismo.']],
     say: '"Temperature=0 pega sempre o token mais provável. Parece determinístico. Mas..."' },
   { t: 'Demo: mesma pergunta, temperaturas diferentes',
-    visual: 'Captura de tela (ou gravação) de duas execuções lado a lado: temperature=0 vs temperature=1. Backup: vídeo gravado, não fazer ao vivo.',
+    visual: 'Simulação animada em loop (~20 s): quatro execuções da mesma pergunta lado a lado, temperature=0 e temperature=1, com hash e placar de iguais por execução. Texto fixo, igual em todo ensaio. Em temperature=0 a execução 4 troca uma palavra e o hash muda. Backup: vídeo gravado.',
     say: '"Mesmo com temperature=0, se eu rodar de novo amanhã, pode vir diferente. Por quê? Próximo bloco."' },
   { t: 'Transição', visual: 'Slide minimalista com uma pergunta: "Temperature=0 resolve?" e a resposta "Não. E a razão é mais profunda do que parece."',
     say: 'Criar expectativa para o bloco 3.' },
 
   { t: 'Três fontes, não uma', crit: 1,
     visual: 'Três ícones/camadas empilhadas: Hardware/GPU (não-associatividade de ponto flutuante + batching dinâmico); Interpretação (deriva de interpretação da tarefa); Saída (espaço de saída livre).',
+    terms: [['GPU', 'Placa de vídeo usada para rodar o modelo. Faz milhares de contas em paralelo, e a ordem em que cada conta termina pode mudar de uma execução para outra.'],
+            ['Batching', 'Agrupar vários pedidos de usuários diferentes e processar juntos, para aproveitar melhor a GPU. O tamanho e a composição do grupo mudam a cada momento em produção.'],
+            ['Ponto flutuante', 'Forma como o computador guarda números decimais, com arredondamento. Somar na ordem A+B+C pode dar um resultado minimamente diferente de C+B+A (não-associatividade), e essa diferença pode virar outro token.']],
     say: '"A maioria só conhece a primeira. A segunda é a mais subestimada."' },
   { t: 'Fonte 1: GPU e batching', key: 'A ordem de acumulação depende do batch. O batch varia em produção. A saída varia.',
     visual: 'Diagrama simples de acumulação de ponto flutuante em ordem diferente conforme o batch.',
@@ -241,6 +253,9 @@ const SLIDES = [
 
   { t: 'O que é System One (definição)', crit: 1, key: 'Sistema de execução de decisão local e não generativo: um portão de controle antes do LLM.',
     visual: 'Caixa de definição destacada. "System One aqui não é o pensamento rápido cognitivo de Kahneman. É um sistema de execução de decisão local e não generativo, na camada de arquitetura. Decide de forma determinística por regras predefinidas, classificadores de intenção e mecanismos de auditoria."',
+    terms: [['Kahneman', 'Daniel Kahneman, psicólogo e Nobel de Economia (2002), autor de "Rápido e Devagar". Propôs dois modos de pensar: o Sistema 1, rápido, intuitivo e automático, e o Sistema 2, lento, deliberado e analítico. É uma teoria sobre a mente humana.'],
+            ['System One (aqui)', 'Nome emprestado, conceito diferente. Não é intuição nem "pensamento rápido": é um componente de software que decide por regras predefinidas, sem gerar texto, antes do LLM. O único ponto em comum é a ideia de uma camada rápida que roda antes de outra mais lenta e deliberada.'],
+            ['System Two (aqui)', 'Também só compartilha o nome. É a camada de execução com LLM: raciocínio em etapas, decomposição e chamada de ferramentas, dentro do espaço que o System One delimitou.']],
     say: 'Desambiguar explicitamente. "Se você conhece Kahneman, esqueça por um momento. O nome é o mesmo, o conceito é outro."' },
   { t: 'Função 1: espaço aberto → espaço fechado', crit: 1,
     key: '"Smart if-statements": classificação em enumeração predefinida. Mesma entrada + mesmo modelo + parâmetros fixos = mesma decisão.',
@@ -249,9 +264,17 @@ const SLIDES = [
   { t: 'Função 2: auditoria (ActionLedger)', crit: 1,
     key: 'Reconstruibilidade e invariância de ordem. PICA chega a 0% de viés de ordem.',
     visual: 'Fluxo: decisão → registro no ledger → verificação de correspondência → execução. Bullets: Reconstruibilidade (rastrear decisão até política e entrada). Invariância de ordem (pontuar opções independentemente evita viés de posição do LLM).',
+    terms: [['Ledger', 'Livro-razão: registro sequencial, só de acréscimo, de tudo o que foi decidido. Cada linha guarda entrada, política aplicada, decisão, hash e horário.'],
+            ['ActionLedger', 'O ledger do System One. A ação só é executada se a decisão corresponder exatamente ao que está registrado, por isso dá para reconstruir e auditar depois.'],
+            ['PICA', 'Método de pontuar cada opção de forma independente, sem o modelo ver as outras. Elimina o viés de posição (preferir a primeira ou a última opção).']],
     say: '"A ação só executa se a decisão corresponder exatamente ao registro. Isso é auditabilidade real, não log de texto."' },
   { t: 'Função 3: limitação do espaço de saída', key: 'Fecha a entrada (função 1) e fecha a saída.',
-    visual: 'Lista de tipos de retorno permitidos, com ícones: choice / score / null / range_eval / set_choice.',
+    visual: 'Tabela com cinco tipos de retorno. Cada linha tem o tipo, uma pergunta de exemplo ao modelo e o retorno permitido. Rodapé: "Nunca texto livre".',
+    extra: ['choice: "Qual é a intenção do cliente?" → "billing_agent" (um item da lista).',
+            'score: "Quão urgente é o pedido?" → 0,82 (número de 0 a 1).',
+            'range_eval: "Em que faixa está o valor do reembolso?" → "R$ 0–100" (uma faixa predefinida).',
+            'set_choice: "Quais áreas precisam participar?" → ["billing", "security"] (vários itens da lista).',
+            'null: "Nenhuma opção serve?" → null (aciona o fallback, que o próximo slide detalha).'],
     say: '"Espaço de saída limitado impede que o modelo \'invente\'. É o complemento da função 1: fecha a entrada e fecha a saída."' },
   { t: 'O que o System One troca', key: 'Entradas fora da enumeração predefinida precisam de fallback.',
     visual: 'Balança. De um lado, capacidade de lidar com o inesperado. Do outro, confiabilidade e auditabilidade.',
@@ -268,24 +291,55 @@ const SLIDES = [
     say: '"Este é o slide que vocês devem fotografar. Cada camada resolve o que a outra não resolve."' },
   { t: 'O achado que muda tudo', crit: 1,
     key: 'Após restrições de substrato reduzirem múltiplas interpretações a uma única, quatro modelos de fronteira geram saídas idênticas byte a byte.',
-    visual: 'Quatro logos de modelos de fronteira (genéricos) convergindo para o mesmo hash SHA-256. Abaixo: "40 execuções · primeira invocação · saída idêntica byte a byte".',
+    visual: 'Frase de impacto dividida em três golpes, aparecendo em sequência: (1) contexto pequeno "Após restrições de substrato reduzirem múltiplas interpretações a uma única,"; (2) "4 modelos de fronteira diferentes"; (3) "saída idêntica, byte a byte." Depois, grade de 4 linhas (Modelo A a D) x 10 colunas = 40 execuções. Cada célula roda, confirma com o mesmo hash curto (a3f9) e o contador sobe até 40/40; no fim todas acendem juntas e aparece "1 hash único". Por último o SHA-256 completo é digitado e surge "40 execuções · primeira invocação · saída idêntica byte a byte". Loop de ~20 s.',
+    extra: ['Modelo A a D são genéricos: não citar fornecedores sem ter os dados do experimento.',
+            'Pausar quando a grade fechar em 40/40 e o hash for digitado.'],
     say: 'Momento "uau" da apresentação. Pausar. "Uma vez que a especificação é rigorosamente determinizada, até o próprio LLM se comporta como módulo de software determinístico."' },
   { t: 'Roteamento por confiança', crit: 1,
     visual: 'Semáforo ou três faixas. Alta: System One decide automaticamente. Média: confirmação humana. Baixa: encaminhar para LLM (System Two) ou humano.',
     say: '"É aqui que as camadas se coordenam. O System One não é um gargalo: é um roteador."' },
   { t: 'Como as camadas conversam',
-    visual: 'Fluxo completo: entrada → System One → [alta/média/baixa] → System Two → especificação → saída → ledger.',
-    say: '"Vocês vão ver esse fluxo funcionando no próximo bloco."' },
+    key: 'A especificação é o contrato entre o System One e o System Two: fecha o que o pedido significa antes de o LLM agir.',
+    visual: 'Diagrama vertical: Entrada do usuário → System One (classifica · registra · limita) com faixas Alta/Média/Baixa → Especificação (fecha a interpretação) → System Two (raciocínio · tools) → Saída validada + Ledger auditável.',
+    terms: [['Especificação determinística', 'Descrição escrita e fechada do que o pedido significa e do que deve ser feito: ação, parâmetros permitidos, regras e formato da saída. Não deixa o LLM interpretar o pedido do zero. Mesma especificação, mesma interpretação, em qualquer modelo.'],
+            ['Deriva de interpretação', 'Quando o mesmo pedido é lido de formas diferentes de uma execução para outra, ou de um modelo para outro. A especificação é o que fecha isso (fonte 2).']],
+    extra: ['Caso: "quero cancelar e pedir reembolso do mês passado".',
+            '1 Entrada: texto aberto do cliente. Nada foi decidido ainda.',
+            '2 System One: classifica em billing_agent (confiança 0,94), registra no ledger e limita as opções.',
+            'Faixa de confiança: alta segue; média pede confirmação humana; baixa vai para LLM ou humano. Só o que passa segue para a especificação.',
+            '3 Especificação (exemplo): política billing.cancellation.v3. Define que "cancelar" é encerrar a assinatura, que "reembolso do mês passado" é o ciclo anterior, que as ações são cancelar e reembolsar, e que o retorno vem em formato fixo. O pedido deixa de ser uma frase ambígua e vira instrução fechada.',
+            '4 System Two: raciocina e chama ferramentas, mas só dentro do que a especificação permite.',
+            '5 Saída validada e ledger: confere o schema, executa e registra a decisão, que pode ser reconstruída depois.',
+            'Resumo para falar: System One decide e limita. Especificação fecha o sentido. System Two executa.'],
+    say: '"Reparem na ordem: o LLM só entra depois que a especificação fechou o significado do pedido. Por isso modelos diferentes chegam à mesma saída." Percorrer o diagrama de cima para baixo. Vocês vão ver esse fluxo funcionando no próximo bloco.' },
   { t: 'Síntese do bloco',
     visual: 'Três frases, uma por camada: System One fecha a entrada e a saída. Especificação determinística fecha a interpretação. System Two executa o raciocínio complexo dentro do espaço limitado.',
     say: '"Três fechamentos. Determinismo funcional."' },
 
+  { t: 'O problema: chat de suporte sem resposta', crit: 1,
+    key: 'Antes da solução, sentir o problema: uma mensagem comum, sem resposta, e três perguntas em aberto.',
+    visual: 'Mock do chat de suporte animado em loop: a mensagem do cliente é digitada, a resposta fica em reticências alternando respostas possíveis ("sem resposta"), o registro fica vazio. A legenda acende o ponto 1, 2 e 3 em sequência. Rodapé: "Como responder sempre da mesma forma e conseguir provar por quê?"',
+    extra: ['1 O que o cliente quer? Cancelar, reembolsar ou os dois. É a deriva de interpretação (fonte 2).',
+            '2 Qual será a resposta? Texto livre muda de formato e conteúdo. É o espaço de saída livre (fonte 3).',
+            '3 Quem prova o que foi feito? Sem registro não há reconstrução. É a falta de auditoria.'],
+    say: 'Deixar a plateia ler a mensagem e perguntar: "O que vocês responderiam?" Apontar cada ponto e ligar às fontes de não-determinismo já vistas. Fechar com a pergunta do rodapé e virar o slide: "Agora vamos ver como a arquitetura responde."' },
   { t: 'Fluxo ponta a ponta: atendimento ao cliente', crit: 1,
-    visual: 'Diagrama numerado de 5 etapas: 1) entrada ambígua chega; 2) System One classifica intenção e registra no ActionLedger; 3) confiança alta roteia direto, baixa vai para LLM refinar ou humano confirmar; 4) System Two executa raciocínio/tool calling no espaço limitado; 5) saída validada contra schema, ação executada, registro auditável.',
-    say: 'Percorrer o fluxo devagar, apontando cada camada. Este é o slide que "fecha" a arquitetura na cabeça da plateia.' },
+    key: 'Uma mensagem aberta vira uma decisão fechada, auditável e executada, passo a passo.',
+    visual: 'Mock do chat de suporte animado em loop: cada passo aparece em sequência (1 a 5), o nível Alta acende no passo 3 e o selo de saída validada surge no 5. A legenda acende o ponto atual. Sai do slide e volta ao estático.',
+    extra: ['1 Entrada aberta: o cliente escreve "quero cancelar e pedir reembolso do mês passado".',
+            '2 System One decide: classifica em billing_agent (confiança 0,94) e registra no ledger #4821.',
+            '3 Confiança manda: alta segue direto; média pede confirmação humana; baixa vai para LLM ou humano.',
+            '4 System Two executa: consulta cobrança e chama reembolso(mês = anterior), só com ferramentas permitidas.',
+            '5 Saída validada: confere o schema, executa a ação e deixa o registro auditável.'],
+    say: 'Percorrer devagar, apontando cada ponto numerado na tela. Dizer em voz alta o nome da camada em cada passo. "Reparem que o LLM só aparece no passo 4, e já com o espaço limitado." Este é o slide que "fecha" a arquitetura na cabeça da plateia.' },
   { t: 'O ledger como artefato concreto', key: 'Esta decisão pode ser reconstruída e auditada.',
-    visual: 'Captura de tela (mock) de um registro de auditoria: entrada, política aplicada, decisão, hash, timestamp.',
-    say: '"Auditabilidade não é discurso. É este artefato aqui."' },
+    visual: 'Mock da tela do ActionLedger animado em loop: os campos aparecem um a um (1 a 5), o hash é digitado e o selo "ação executada = decisão registrada" surge no fim. A legenda acende o ponto atual.',
+    extra: ['1 entrada: o texto exato, sem resumo.',
+            '2 política: billing.cancellation.v3, a regra e a versão aplicadas.',
+            '3 decisão: billing_agent com confiança 0,94, um valor da lista fechada.',
+            '4 hash: prova de integridade; a ação só roda se bater com o registro.',
+            '5 timestamp: permite reconstruir a ordem dos fatos.'],
+    say: '"Auditabilidade não é discurso. É este artefato aqui." Apontar o ponto 4: "A ação só executa se a decisão corresponder exatamente a este registro."' },
 
   { t: 'O que o System One não resolve', crit: 1,
     visual: 'Duas listas lado a lado.',
@@ -297,8 +351,8 @@ const SLIDES = [
             'Risco: determinismo ≠ justiça. Um sistema determinístico pode ser deterministicamente injusto.'],
     say: 'Fechar com honestidade intelectual. "Determinismo é uma ferramenta, não uma virtude moral."' },
 
-  { t: 'Takeaways + contato',
-    visual: 'Os 5 takeaways numerados + QR code / contato / link do repositório de exemplos.',
+  { t: 'Para levar + contato',
+    visual: 'Os 5 pontos para levar, numerados + QR code / contato / link do repositório de exemplos.',
     say: 'Deixar na tela durante todo o Q&A.' },
 ];
 
@@ -415,6 +469,7 @@ function render() {
     <h1><span class="n">${n + 1}.</span> ${esc(s.t)}</h1>`;
   if (s.key) html += sec('key', 'Mensagem-chave', `<p>${esc(s.key)}</p>`);
   html += sec('say', 'Fala', `<p>${esc(s.say)}</p>`);
+  if (s.terms) html += sec('terms', 'Termos novos', `<dl>${s.terms.map(t => `<dt>${esc(t[0])}</dt><dd>${esc(t[1])}</dd>`).join('')}</dl>`);
   html += sec('visual', 'Visual no slide', `<p>${esc(s.visual)}</p>` + (s.extra ? `<ul>${s.extra.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''));
   $('notes').innerHTML = html;
   $('notes').scrollTop = 0;
