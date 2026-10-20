@@ -251,16 +251,16 @@
       .flow {
         display: flex;
         align-items: center;
-        gap: 1.3rem;
+        gap: 3.4rem;
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 1.2rem;
-        max-width: 72rem;
+        max-width: 80rem;
       }
       .flow-node {
         background: var(--card);
         border: 2px solid var(--border);
-        padding: 0.7rem 1.1rem;
+        padding: 0.9rem 1.5rem;
         border-radius: 0.7rem;
         font-size: 1.35rem;
         font-weight: 700;
@@ -270,10 +270,10 @@
       .flow-node:not(:last-child)::after {
         content: "";
         position: absolute;
-        right: -0.95rem;
+        right: -1.95rem;
         top: 50%;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 0.8rem;
+        height: 0.8rem;
         border-top: 3px solid var(--accent);
         border-right: 3px solid var(--accent);
         transform: translateY(-50%) rotate(45deg);
@@ -474,6 +474,120 @@
         color: var(--accent-3);
         border-radius: 0.4rem;
         padding: 0.35rem 0.6rem;
+      }
+      /* ---- tokens e embeddings ---- */
+      .te {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 1.4rem;
+        width: 100%;
+        max-width: 76rem;
+        text-align: left;
+      }
+      .te-card {
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 0.9rem;
+        padding: 0.8rem 1.1rem;
+      }
+      .te-card h3 {
+        font-size: 1.35rem;
+        color: var(--accent);
+        margin-bottom: 0.6rem;
+      }
+      .te-ilus {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.4rem;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border: 2px dashed var(--muted);
+        border-radius: 999px;
+        padding: 0.05rem 0.6rem;
+      }
+      .te-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-bottom: 0.7rem;
+      }
+      .te-chip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid var(--line);
+        border-radius: 0.5rem;
+        background: var(--code-bg);
+        padding: 0.2rem 0.5rem;
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        line-height: 1.25;
+      }
+      .te-chip b {
+        font-size: 1.05rem;
+        color: var(--text);
+        white-space: pre;
+      }
+      .te-chip i {
+        font-style: normal;
+        font-size: 0.85rem;
+        color: var(--accent-3);
+      }
+      .te-vec {
+        display: grid;
+        grid-template-columns: 6.5rem minmax(0, 1fr) auto;
+        gap: 0.2rem 0.7rem;
+        align-items: center;
+        margin-bottom: 0.7rem;
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 0.98rem;
+      }
+      .te-vec b {
+        color: var(--text);
+      }
+      .te-vec code {
+        background: var(--code-bg);
+        color: var(--accent-3);
+        border-radius: 0.4rem;
+        padding: 0.2rem 0.5rem;
+        white-space: nowrap;
+      }
+      .te-vec em {
+        font-style: normal;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+      .te-list {
+        list-style: none;
+        font-size: 1.1rem;
+        line-height: 1.35;
+        color: var(--text);
+      }
+      .te-list li {
+        margin-bottom: 0.3rem;
+        padding-left: 1rem;
+        position: relative;
+      }
+      .te-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .te-list code {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 0.95rem;
+        background: var(--code-bg);
+        color: var(--accent-3);
+        border-radius: 0.3rem;
+        padding: 0 0.3rem;
       }
       .pipe-note {
         margin-top: 0.8rem;
@@ -762,126 +876,120 @@
         color: var(--accent-3);
       }
 
-      .layers-flow {
+      /* ---- fluxo das camadas: passos numerados em coluna ---- */
+      .pf {
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 100%;
-        max-width: 62rem;
-        margin-top: 0.6rem;
+        max-width: 66rem;
+        margin-top: 0.4rem;
+        text-align: left;
       }
-      .lf-row {
+      .pf-row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2.6rem 13rem minmax(0, 1fr);
+        column-gap: 1.1rem;
+        align-items: start;
+        padding-bottom: 0.9rem;
+      }
+      .pf-row:last-child {
+        padding-bottom: 0;
+      }
+      /* linha vertical ligando um passo ao próximo */
+      .pf-row:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        left: 1.3rem;
+        top: 2.6rem;
+        bottom: -0.1rem;
+        width: 3px;
+        margin-left: -1.5px;
+        background: var(--accent);
+        opacity: 0.55;
+      }
+      .pf-n {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        background: var(--brand-2);
+        color: #fff;
+        font-weight: 800;
+        font-size: 1.3rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1.2rem;
-        width: 100%;
+        position: relative;
+        z-index: 1;
       }
-      .lf-row-2 {
-        justify-content: center;
-        gap: 2rem;
-      }
-      .lf-node {
+      .pf-name {
+        border: 3px solid var(--border);
+        border-radius: 0.7rem;
         background: var(--card);
-        border: 2px solid var(--border);
-        border-radius: 0.8rem;
-        padding: 0.7rem 1.3rem;
-        text-align: center;
+        padding: 0.4rem 0.8rem;
         font-size: 1.35rem;
         font-weight: 800;
+        line-height: 1.2;
         color: var(--text);
-        line-height: 1.3;
       }
-      .lf-node span {
+      .pf-name small {
         display: block;
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--muted);
-        margin-top: 0.2rem;
-      }
-      .lf-entry {
-        border-color: var(--line);
-        color: var(--muted);
+        font-size: 0.85rem;
         font-weight: 600;
-        font-size: 1.2rem;
+        color: var(--muted);
       }
-      .lf-s1 {
+      .pf-s1 .pf-name {
         border-color: var(--brand);
-        border-width: 3px;
         color: var(--accent);
       }
-      .lf-s2 {
-        border-color: var(--accent-3);
-        border-width: 3px;
-        color: var(--accent-3);
-        min-width: 14rem;
-      }
-      .lf-spec {
+      .pf-spec .pf-name {
         border-color: var(--accent-2);
-        border-width: 2px;
         color: var(--accent-2);
-        font-size: 1.2rem;
       }
-      .lf-out {
+      .pf-s2 .pf-name {
         border-color: var(--accent-3);
-        min-width: 12rem;
+        color: var(--accent-3);
       }
-      .lf-ledger {
-        border-color: var(--accent-2);
-        min-width: 12rem;
+      .pf-in .pf-name,
+      .pf-out .pf-name {
+        border-color: var(--line);
       }
-      /* linha do meio: grid de 3 colunas iguais, stretch vertical */
-      .lf-mid-grid {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        gap: 1.2rem;
-        width: 100%;
+      .pf-txt {
+        font-size: 1.2rem;
+        line-height: 1.35;
+        color: var(--text);
+        padding-top: 0.2rem;
       }
-      .lf-fork-col {
+      .pf-txt code {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1rem;
+        background: var(--code-bg);
+        color: var(--accent-3);
+        border-radius: 0.35rem;
+        padding: 0.1rem 0.45rem;
+      }
+      .pf-chips {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.55rem;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.6rem;
+        margin-top: 0.4rem;
       }
-      .lf-badge {
-        font-size: 1.05rem;
-        font-weight: 800;
-        padding: 0.25rem 0.9rem;
+      .pf-chip {
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 0.12rem 0.7rem;
         border-radius: 999px;
         border: 2px solid currentColor;
         white-space: nowrap;
       }
-      .lf-high {
+      .pf-chip.hi {
         color: var(--accent-3);
       }
-      .lf-mid {
+      .pf-chip.md {
         color: var(--accent);
       }
-      .lf-low {
+      .pf-chip.lo {
         color: var(--accent-2);
-      }
-      /* seta vertical */
-      .lf-vsep {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        flex-shrink: 0;
-        padding: 0.3rem 0;
-      }
-      .lf-vline {
-        width: 2px;
-        height: 1.1rem;
-        background: var(--accent);
-      }
-      .lf-chevron {
-        width: 0.65rem;
-        height: 0.65rem;
-        border-bottom: 3px solid var(--accent);
-        border-right: 3px solid var(--accent);
-        transform: rotate(45deg);
-        margin-top: -0.15rem;
       }
 
       /* ---- estudo de caso: mock de tela com pontos numerados ---- */
@@ -1198,6 +1306,115 @@
         font-family: "Fira Code", "Courier New", Courier, monospace;
         margin-right: 0.35rem;
       }
+      /* ---- função 3: chamada e resposta reais ---- */
+      .call {
+        width: 100%;
+        max-width: 66rem;
+        text-align: left;
+      }
+      .call-line {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+      .call-line span {
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .call pre {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1.05rem;
+        line-height: 1.4;
+        background: var(--code-bg);
+        color: var(--accent-3);
+        border: 2px solid var(--border);
+        border-radius: 0.8rem;
+        padding: 0.9rem 1.3rem;
+        white-space: pre;
+        overflow: hidden;
+      }
+      .call pre.wrap {
+        white-space: pre-wrap;
+        font-size: 0.98rem;
+      }
+      .spec-cols {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+        gap: 1.2rem;
+        width: 100%;
+        max-width: 76rem;
+        text-align: left;
+      }
+      .spec-cols h3 {
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.4rem;
+      }
+      /* ---- respostas do achado ---- */
+      .ans {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        width: 100%;
+        max-width: 76rem;
+        text-align: left;
+      }
+      .ans-row {
+        display: grid;
+        grid-template-columns: 15rem minmax(0, 1fr);
+        gap: 1.1rem;
+        align-items: center;
+        background: var(--card);
+        border: 2px solid var(--border);
+        border-radius: 0.8rem;
+        padding: 0.55rem 1.1rem;
+      }
+      .ans-row.same {
+        border-color: var(--accent-3);
+        border-width: 3px;
+      }
+      .ans-row.alt {
+        border-color: var(--accent-2);
+      }
+      .ans-lbl b {
+        display: block;
+        font-size: 1.3rem;
+        color: var(--accent);
+      }
+      .ans-lbl span {
+        display: block;
+        font-size: 0.95rem;
+        line-height: 1.3;
+        color: var(--muted);
+      }
+      .ans-row code {
+        display: block;
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 0.92rem;
+        line-height: 1.4;
+        background: var(--code-bg);
+        color: var(--accent-3);
+        border-radius: 0.5rem;
+        padding: 0.45rem 0.7rem;
+        word-break: break-all;
+      }
+      .ans-row code i {
+        font-style: normal;
+        font-weight: 800;
+        color: var(--accent);
+      }
+      .call pre i {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .call pre u {
+        text-decoration: none;
+        color: var(--muted);
+      }
       @media (max-width: 900px) {
         .outs-head {
           display: none;
@@ -1391,7 +1608,8 @@
           border-color 0.4s;
       }
       .m-alt {
-        min-height: 3.1em; line-height: 1.5;
+        min-height: 3.1em;
+        line-height: 1.5;
         font-size: 1rem;
         font-style: italic;
         color: var(--muted);
@@ -1803,25 +2021,76 @@
       }
 
       /* ---- ícones dos cards (Lucide, ISC): mesmo traço e cor do tema ---- */
-  .card-ico { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.9rem; color: var(--accent); }
-  .card-ico svg { width: 3rem; height: 3rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .card-ico {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        margin-bottom: 0.9rem;
+        color: var(--accent);
+      }
+      .card-ico svg {
+        width: 3rem;
+        height: 3rem;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
 
-  /* ---- slide 7: barra discreta dentro da tabela padrão ---- */
-  .dist-prob { display: flex; align-items: center; gap: 0.9rem; }
-  .dist-bar { flex: 1; height: 0.8rem; border-radius: 99px; background: var(--code-bg); overflow: hidden; min-width: 8rem; }
-  .dist-bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--brand), var(--brand-2)); }
-  .dist-prob b { font-family: "Fira Code", "Courier New", Courier, monospace; font-size: 1.3rem; color: var(--accent); min-width: 4.6rem; text-align: right; }
-  .route { max-width: 70rem; font-size: 1.3rem; }
-  /* ---- slide 28: tabela de roteamento ---- */
-  .route small { display: block; font-size: 0.95rem; color: var(--muted); margin-top: 0.2rem; }
-  .route td b { color: var(--accent); }
-  .route-note { font-size: 0.95rem; color: var(--muted); margin-top: 0.6rem; max-width: 52rem; }
+      /* ---- slide 7: barra discreta dentro da tabela padrão ---- */
+      .dist-prob {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+      .dist-bar {
+        flex: 1;
+        height: 0.8rem;
+        border-radius: 99px;
+        background: var(--code-bg);
+        overflow: hidden;
+        min-width: 8rem;
+      }
+      .dist-bar i {
+        display: block;
+        height: 100%;
+        border-radius: 99px;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      }
+      .dist-prob b {
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 1.3rem;
+        color: var(--accent);
+        min-width: 4.6rem;
+        text-align: right;
+      }
+      .route {
+        max-width: 70rem;
+        font-size: 1.3rem;
+      }
+      /* ---- slide 28: tabela de roteamento ---- */
+      .route small {
+        display: block;
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-top: 0.2rem;
+      }
+      .route td b {
+        color: var(--accent);
+      }
+      .route-note {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-top: 0.6rem;
+        max-width: 52rem;
+      }
 
-
-
-  /* ---- slides com etiqueta: centro de massa abaixo da etiqueta ---- */
-  .slide:has(.real-badge) { padding-top: 3.4rem; }
-  .progress {
+      /* ---- slides com etiqueta: centro de massa abaixo da etiqueta ---- */
+      .slide:has(.real-badge) {
+        padding-top: 3.4rem;
+      }
+      .progress {
         position: fixed;
         top: 0;
         left: 0;
@@ -1874,12 +2143,43 @@
         <h2>O <span class="accent">paradoxo</span></h2>
         <div class="cards">
           <div class="card tilt">
-            <div class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18V5" /> <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" /> <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" /> <path d="M17.996 5.125a4 4 0 012.526 5.77" /> <path d="M18 18a4 4 0 002-7.465" /> <path d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517" /> <path d="M6 18a4 4 0 01-2-7.465" /> <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /> <path d="M20 2v4" /> <path d="M22 4h-4" /> <circle cx="4" cy="20" r="2" /></svg></div>
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 18V5" />
+                <path d="M15 13a4.17 4.17 0 01-3-4 4.17 4.17 0 01-3 4" />
+                <path d="M17.707 6.294A3 3 0 1012 5a3 3 0 10-5.707 1.294" />
+                <path d="M17.996 5.125a4 4 0 012.526 5.77" />
+                <path d="M18 18a4 4 0 002-7.465" />
+                <path
+                  d="M19.967 17.482a4 4 0 11-7.967.517 4 4 0 11-7.967-.517"
+                />
+                <path d="M6 18a4 4 0 01-2-7.465" />
+                <path d="M6.004 5.125a4 4 0 00-2.526 5.77" /></svg
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+                />
+                <path d="M20 2v4" />
+                <path d="M22 4h-4" />
+                <circle cx="4" cy="20" r="2" />
+              </svg>
+            </div>
             <h3>IA mais criativa</h3>
             <p>Modelos cada vez mais capazes de criar, explorar, imaginar.</p>
           </div>
           <div class="card tilt">
-            <div class="card-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18" /> <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" /> <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" /> <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" /> <path d="M7 21h10" /></svg></div>
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v18" />
+                <path d="m19 8 3 8a5 5 0 0 1-6 0zV7" />
+                <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
+                <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
+                <path d="M7 21h10" />
+              </svg>
+            </div>
             <h3>Mundo mais exigente<br />por controle</h3>
             <p>Auditoria, compliance, reprodutibilidade, confiança.</p>
           </div>
@@ -1890,32 +2190,7 @@
         </p>
       </section>
 
-      <!-- 3 DOIS EXEMPLOS -->
-      <section class="slide">
-        <h2>Dois exemplos <span class="accent">contrastantes</span></h2>
-        <div class="cards">
-          <div class="card tilt">
-            <h3>Variabilidade é<br />feature</h3>
-            <p>
-              Brainstorming de campanha · ideação · design exploratório ·
-              recomendação
-            </p>
-          </div>
-          <div class="card tilt">
-            <h3>Determinismo é<br />requisito</h3>
-            <p>
-              Laudo jurídico · parecer financeiro · código em produção ·
-              diagnóstico
-            </p>
-          </div>
-        </div>
-        <p style="margin-top: 2rem">
-          A mesma tecnologia, expectativas opostas.<br />O erro comum é
-          tratá-las com a mesma arquitetura.
-        </p>
-      </section>
-
-      <!-- 3B APRESENTAÇÃO DO PALESTRANTE -->
+      <!-- 3 APRESENTAÇÃO DO PALESTRANTE -->
       <section class="slide">
         <div class="speaker">
           <img
@@ -1951,6 +2226,31 @@
         </div>
       </section>
 
+      <!-- 3B DOIS EXEMPLOS -->
+      <section class="slide">
+        <h2>Dois exemplos <span class="accent">contrastantes</span></h2>
+        <div class="cards">
+          <div class="card tilt">
+            <h3>Variabilidade é<br />Feature</h3>
+            <p>
+              Brainstorming de campanha · ideação · design exploratório ·
+              recomendação
+            </p>
+          </div>
+          <div class="card tilt">
+            <h3>Determinismo é<br />Requisito</h3>
+            <p>
+              Laudo jurídico · parecer financeiro · código em produção ·
+              diagnóstico
+            </p>
+          </div>
+        </div>
+        <p style="margin-top: 2rem">
+          A mesma tecnologia, expectativas opostas.<br />O erro comum é
+          tratá-las com a mesma arquitetura.
+        </p>
+      </section>
+
       <!-- 4 TESE -->
       <section class="slide">
         <div class="kicker">A tese</div>
@@ -1980,8 +2280,8 @@
               O texto é cortado em pedaços e cada pedaço vira um número.
             </div>
             <div class="pex">
-              O · cliente · pode · cancelar · ? &rarr; 12 · 4821 · 903 · 7715 ·
-              30
+              O · cliente · pode · cancelar &rarr; 46 · 23508 · 9684 · 169134
+              &hellip;
             </div>
           </div>
           <div class="pipe-row">
@@ -1991,7 +2291,7 @@
               Cada número vira um vetor que representa significado.
             </div>
             <div class="pex">
-              4821 &rarr; [0,12 &nbsp;&minus;0,87 &nbsp;0,33 &hellip;]
+              169134 &rarr; [0,12 &nbsp;&minus;0,87 &nbsp;0,33 &hellip;]
             </div>
           </div>
           <div class="pipe-row">
@@ -2026,15 +2326,68 @@
           </div>
         </div>
         <p class="pipe-note">Aqui nasce a variabilidade: passos 5 e 6.</p>
+        <p class="route-note">
+          IDs do passo 2 são reais (tokenizador o200k_base). Vetor, atenção e
+          probabilidades são ilustrativos; as reais aparecem no slide 8.
+        </p>
+      </section>
+
+      <!-- 5B TOKENS E EMBEDDINGS -->
+      <section class="slide">
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span>tokens e IDs medidos com o tokenizador o200k_base (OpenAI)</span>
+        </div>
+        <h2>Tokens e <span class="accent">embeddings</span></h2>
+        <div class="te">
+          <div class="te-card">
+            <h3>1 · Tokens: texto vira número</h3>
+            <div class="te-chips">
+              <div class="te-chip"><b>O</b><i>46</i></div>
+              <div class="te-chip"><b> cliente</b><i>23508</i></div>
+              <div class="te-chip"><b> pode</b><i>9684</i></div>
+              <div class="te-chip"><b> cancelar</b><i>169134</i></div>
+              <div class="te-chip"><b>?</b><i>30</i></div>
+              <div class="te-chip"><b> Res</b><i>2317</i></div>
+              <div class="te-chip"><b>posta</b><i>22686</i></div>
+              <div class="te-chip"><b>:</b><i>25</i></div>
+            </div>
+            <ul class="te-list">
+              <li>O tokenizador é uma tabela fixa: mesmo texto, <strong>mesmos IDs</strong>.</li>
+              <li>Pedaço não é palavra: "Resposta" vira <code>Res</code> + <code>posta</code>.</li>
+              <li>O espaço conta: <code>␣cancelar</code> é 1 token. Sem espaço, "cancelar" vira 2.</li>
+            </ul>
+          </div>
+          <div class="te-card">
+            <h3>
+              2 · Embeddings: número vira significado
+              <span class="te-ilus">ilustrativo</span>
+            </h3>
+            <div class="te-vec">
+              <b>cancelar</b><code>[ 0,12 −0,87 0,33 … ]</code><em></em>
+              <b>encerrar</b><code>[ 0,10 −0,81 0,35 … ]</code><em>perto</em>
+              <b>banana</b><code>[ −0,64 0,22 0,71 … ]</code><em>longe</em>
+            </div>
+            <ul class="te-list">
+              <li>Cada ID vira um <strong>vetor</strong>: centenas ou milhares de números.</li>
+              <li>Sentido parecido, vetores próximos. A atenção (passo 4) trabalha em cima disso.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mx-note" style="margin-top: 0.9rem">
+          Até aqui é conta fixa: mesma entrada, mesmos tokens, mesmos vetores.
+        </p>
       </section>
 
       <!-- 6 DISTRIBUIÇÃO -->
       <section class="slide">
-        <div class="real-badge"><b>Dados reais</b><span>Llama 4 Maverick · 20/10/2026 · 50 chamadas</span></div>
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span>Llama 4 Maverick · 20/10/2026 · 50 chamadas</span>
+        </div>
         <h2>A distribuição de <span class="accent">probabilidade</span></h2>
         <div class="sim-prompt">
-          <b>Prompt</b> Complete com uma única palavra: Paris é uma cidade
-          muito
+          <b>Prompt</b> Complete com uma única palavra: Paris é uma cidade muito
         </div>
         <table class="route">
           <tr>
@@ -2043,23 +2396,38 @@
           </tr>
           <tr>
             <td>"bon"</td>
-            <td class="dist-prob"><div class="dist-bar"><i style="width: 86.9%"></i></div><b>86,9%</b></td>
+            <td class="dist-prob">
+              <div class="dist-bar"><i style="width: 86.9%"></i></div>
+              <b>86,9%</b>
+            </td>
           </tr>
           <tr>
             <td>"Bon"</td>
-            <td class="dist-prob"><div class="dist-bar"><i style="width: 11.6%"></i></div><b>11,6%</b></td>
+            <td class="dist-prob">
+              <div class="dist-bar"><i style="width: 11.6%"></i></div>
+              <b>11,6%</b>
+            </td>
           </tr>
           <tr>
             <td>"l"</td>
-            <td class="dist-prob"><div class="dist-bar"><i style="width: 0.5%"></i></div><b>0,5%</b></td>
+            <td class="dist-prob">
+              <div class="dist-bar"><i style="width: 0.5%"></i></div>
+              <b>0,5%</b>
+            </td>
           </tr>
           <tr>
             <td>"L"</td>
-            <td class="dist-prob"><div class="dist-bar"><i style="width: 0.3%"></i></div><b>0,3%</b></td>
+            <td class="dist-prob">
+              <div class="dist-bar"><i style="width: 0.3%"></i></div>
+              <b>0,3%</b>
+            </td>
           </tr>
           <tr>
             <td>"outros"</td>
-            <td class="dist-prob"><div class="dist-bar"><i style="width: 0.8%"></i></div><b>0,8%</b></td>
+            <td class="dist-prob">
+              <div class="dist-bar"><i style="width: 0.8%"></i></div>
+              <b>0,8%</b>
+            </td>
           </tr>
         </table>
         <div class="outs-stat">
@@ -2106,13 +2474,16 @@
 
       <!-- 8 DEMO -->
       <section class="slide" id="demoSlide">
-        <div class="real-badge"><b>Dados reais</b><span>Llama 4 Maverick · 20/10/2026 · 10 execuções por temperatura</span></div>
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span
+            >Llama 4 Maverick · 20/10/2026 · 10 execuções por temperatura</span
+          >
+        </div>
         <h2>
           Mesma pergunta, <span class="accent">temperaturas diferentes</span>
         </h2>
-        <div class="sim-prompt">
-          <b>Prompt</b> Descreva Paris em uma frase.
-        </div>
+        <div class="sim-prompt"><b>Prompt</b> Descreva Paris em uma frase.</div>
         <div class="sim">
           <div class="sim-panel" id="simP0">
             <div class="sim-head">
@@ -2467,22 +2838,36 @@
             entrada.
           </li>
           <li>
-            <strong>Invariância de ordem:</strong> pontuar opções
-            independentemente evita viés de posição do LLM. PICA chega a
-            <strong>0% de viés de ordem</strong>.
+            <strong>Invariância de ordem:</strong> a decisão não muda quando a
+            ordem das opções muda.
           </li>
         </ul>
+        <div class="outs-stat" style="margin-top: 1.2rem">
+          <span><b>Ilustrativo</b> [billing, tech, security] &rarr; billing</span>
+          <span><b>Ilustrativo</b> [security, billing, tech] &rarr; billing</span>
+        </div>
+        <p class="route-note">
+          LLMs tendem a favorecer a primeira ou a última opção da lista. Se
+          embaralhar a lista muda a decisão, a decisão depende da posição, não
+          do conteúdo.
+        </p>
       </section>
 
       <!-- 22 FUNÇÃO 3 -->
       <section class="slide">
-        <div class="real-badge"><b>Dados reais</b><span>coletados em 20/10/2026 · Jev 1.13 · 40 chamadas idênticas</span></div>
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span
+            >coletados em 20/10/2026 · Jev 1.13 · 40 chamadas idênticas</span
+          >
+        </div>
         <h2>
           Função 3: <span class="accent">limitação do espaço de saída</span>
         </h2>
         <div class="outs">
           <div class="outs-head">
-            <span>Tipo</span><span>Pergunta ao modelo</span><span>Retorno permitido</span>
+            <span>Tipo</span><span>Pergunta ao modelo</span
+            ><span>Retorno permitido</span>
           </div>
           <div class="outs-row">
             <b class="t-choice">choice</b>
@@ -2510,10 +2895,82 @@
         </p>
       </section>
 
+      <!-- 22A FUNÇÃO 3: A CHAMADA -->
+      <section class="slide">
+        <div class="real-badge">
+          <b>Chamada real</b
+          ><span>run-jev.mjs · Jev 1.13 · repetida 40 vezes, sem mudar nada</span>
+        </div>
+        <h2>Função 3: <span class="accent">a chamada</span></h2>
+        <div class="call">
+          <div class="call-line">
+            POST <span>JEV_API_URL · Authorization: Bearer ***</span>
+          </div>
+          <pre>{
+  <i>"model"</i>: "openrouter/typesafe/jev-1.13",
+  <i>"state"</i>: "quero cancelar e pedir reembolso do mês passado",
+  <i>"questions"</i>: {
+    <i>"urgente"</i>: { "type": "noul",
+                "instructions": "O cliente pede uma ação urgente?" },
+    <i>"intencao"</i>: { "type": "choice",
+                 "instructions": "Qual é a intenção do cliente?",
+                 "criteria": {
+                   "billing_agent": "cobrança, cancelamento ou reembolso",
+                   "tech_support": "problema técnico",
+                   "security_review": "questão de segurança" } },
+    <i>"grau"</i>: { "type": "score",
+             "instructions": "Quão urgente é o pedido?",
+             "criteria": ["sem pressa", "precisa de resposta hoje",
+                          "crítico, perda imediata"] }
+  }
+}</pre>
+        </div>
+        <p class="mx-note" style="margin-top: 0.9rem">
+          Uma mensagem, três perguntas, respostas só dentro do que foi listado.
+        </p>
+      </section>
+
+      <!-- 22B FUNÇÃO 3: A RESPOSTA -->
+      <section class="slide">
+        <div class="real-badge">
+          <b>Resposta real</b
+          ><span>execução 6 de 40 · 20/10/2026 · results.jev.json</span>
+        </div>
+        <h2>Função 3: <span class="accent">a resposta</span></h2>
+        <div class="call">
+          <div class="call-line">
+            200 OK <span>· typesafe/jev-1.13-20260917 · ~0,35 s</span>
+          </div>
+          <pre>{
+  <i>"urgente"</i>: { "noul": 0.35 },
+  <i>"intencao"</i>: { "choice": "billing_agent",
+                "probabilities": { "billing_agent": 1,
+                                   "tech_support": 0,
+                                   "security_review": 0 },
+                "confidence": 1 },
+  <i>"grau"</i>: { "score": 0.74,
+           "probabilities": { "0": 0.27, "1": 0.73, "2": 0 },
+           "confidence": 0.59 }
+}   <u>// campos "type" e "legend" omitidos para caber</u></pre>
+        </div>
+        <div class="outs-stat">
+          <span><b>40/40</b> intencao idêntica</span>
+          <span><b>0,33–0,37</b> urgente</span>
+          <span><b>0,66–0,78</b> grau</span>
+        </div>
+        <p class="mx-note" style="margin-top: 0.9rem">
+          A decisão discreta repete. O número tem ruído: decida por limiar.
+        </p>
+      </section>
+
       <!-- 23 TRADE-OFF -->
       <section class="slide">
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span>coletados em 20/10/2026 · latência e roteamento</span>
+        </div>
         <h2>O que o System One <span class="accent">troca</span></h2>
-        <div class="split" style="margin-top: 2rem">
+        <div class="split" style="margin-top: 1.5rem">
           <div class="card tilt" style="max-width: 100%">
             <h3>Ganha</h3>
             <p>Confiabilidade · auditabilidade · determinismo funcional.</p>
@@ -2521,10 +2978,14 @@
           <div class="card tilt" style="max-width: 100%">
             <h3>Perde</h3>
             <p>
-              Capacidade de lidar com o inesperado. Entradas fora da enumeração
-              precisam de fallback.
+              Flexibilidade com o inesperado, latência extra e manutenção da
+              taxonomia. Entradas fora da enumeração precisam de fallback.
             </p>
           </div>
+        </div>
+        <div class="outs-stat">
+          <span><b>~0,35 s</b> mediana do portão (112 chamadas)</span>
+          <span><b>2,9 a 4,2 s</b> mediana de uma chamada ao LLM</span>
         </div>
       </section>
 
@@ -2563,7 +3024,7 @@
           </tr>
           <tr>
             <td><strong>Especificação</strong></td>
-            <td>Substrato de restrições em linguagem natural</td>
+            <td>Política em linguagem natural + schema estrito</td>
             <td>Deriva de interpretação, variância entre modelos</td>
             <td>Execução de um modelo específico</td>
           </tr>
@@ -2578,6 +3039,49 @@
         </table>
       </section>
 
+      <!-- 25B ESPECIFICAÇÃO: O QUE OS MODELOS RECEBEM -->
+      <section class="slide">
+        <div class="real-badge">
+          <b>Requisição real</b
+          ><span>run.mjs · mesma especificação para os 4 modelos</span>
+        </div>
+        <h2>Especificação: <span class="accent">o que os modelos recebem</span></h2>
+        <div class="spec-cols">
+          <div class="call">
+            <h3>1 · Política (prompt de sistema)</h3>
+            <pre class="wrap">Você é o módulo de classificação de um chat de suporte. Siga a política <i>billing.cancellation.v3</i>.
+- "cancelar" = encerrar a assinatura ao fim do ciclo atual.
+- "reembolso do mês passado" = reembolsar o ciclo de cobrança anterior.
+- Intenções permitidas: billing_agent, tech_support, security_review.
+- Ações permitidas: cancel_subscription, refund_previous_cycle, em ordem alfabética.
+Responda somente com o JSON do schema. Nunca escreva texto fora do JSON.</pre>
+          </div>
+          <div class="call">
+            <h3>2 · Requisição e schema estrito</h3>
+            <pre class="wrap">{
+  <i>"messages"</i>: [
+    { "role": "system",
+      "content": <u>/* política ao lado */</u> },
+    { "role": "user",
+      "content": "quero cancelar e pedir reembolso do mês passado" } ],
+  <i>"response_format"</i>: { "type": "json_schema",
+    "strict": true, "schema": {
+      "intent": enum [billing_agent,
+        tech_support, security_review],
+      "actions": [enum cancel_subscription,
+        refund_previous_cycle],
+      "refund_cycle": enum ["previous"],
+      "additionalProperties": false } },
+  <i>"temperature"</i>: 0 <u>// GPT 6.1 Sol não aceita</u>
+}</pre>
+          </div>
+        </div>
+        <p class="mx-note" style="margin-top: 0.9rem">
+          Política fecha o sentido. Schema fecha a forma. Sem isso, o controle
+          recebia só: "Responda ao cliente."
+        </p>
+      </section>
+
       <!-- 26 ACHADO -->
       <section class="slide" data-wow>
         <div class="real-badge">
@@ -2587,8 +3091,8 @@
         <h2>O achado que <span class="accent">muda tudo</span></h2>
         <div class="wow">
           <p class="wow-lead wow-step">
-            Após restrições de substrato reduzirem múltiplas interpretações a
-            uma única,
+            Após a especificação reduzir múltiplas interpretações a uma
+            única,
           </p>
           <div class="wow-big wow-step">
             <span class="n">4</span> modelos de fronteira diferentes
@@ -2674,9 +3178,57 @@
         </div>
       </section>
 
+      <!-- 26B ACHADO: AS RESPOSTAS -->
+      <section class="slide">
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span>coletados em 20/10/2026 · as respostas das 40 execuções</span>
+        </div>
+        <h2>As respostas do <span class="accent">achado</span></h2>
+        <div class="ans">
+          <div class="ans-row same">
+            <div class="ans-lbl">
+              <b>A · 30 de 40</b>
+              <span>GPT 6.1 Sol · Claude Sonnet 5.5 · Gemini 3.8 Flash</span>
+              <span>SHA-256 0ff2f850…</span>
+            </div>
+            <code>{"intent":"billing_agent","actions":["cancel_subscription","refund_previous_cycle"],"refund_cycle":"previous"}</code>
+          </div>
+          <div class="ans-row alt">
+            <div class="ans-lbl">
+              <b>B · 7 de 40</b>
+              <span>Llama 4 Maverick</span>
+              <span>mesma decisão, chaves em outra ordem</span>
+            </div>
+            <code>{<i>"actions"</i>: ["cancel_subscription", "refund_previous_cycle"], <i>"intent"</i>: "billing_agent", "refund_cycle": "previous"}</code>
+          </div>
+          <div class="ans-row alt">
+            <div class="ans-lbl">
+              <b>C · 2 de 40</b>
+              <span>Llama 4 Maverick</span>
+              <span>mesma ordem de A, com espaços</span>
+            </div>
+            <code>{"intent": "billing_agent", "actions": ["cancel_subscription", "refund_previous_cycle"], "refund_cycle": "previous"}</code>
+          </div>
+        </div>
+        <div class="outs-stat">
+          <span><b>39/40</b> com a mesma decisão</span>
+          <span><b>1/40</b> falha do provedor (429)</span>
+        </div>
+        <p class="mx-note" style="margin-top: 0.9rem">
+          Mesma decisão. O que muda é só a forma: espaços e ordem das chaves.
+        </p>
+      </section>
+
       <!-- 27 ROTEAMENTO -->
       <section class="slide">
-        <div class="real-badge"><b>Dados reais</b><span>coletados em 20/10/2026 · Jev 1.13 · 24 mensagens × 3 chamadas</span></div>
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span
+            >coletados em 20/10/2026 · Jev 1.13 · 24 mensagens × 3
+            chamadas</span
+          >
+        </div>
         <h2>Roteamento por <span class="accent">confiança</span></h2>
         <table class="route">
           <tr>
@@ -2690,7 +3242,9 @@
             <td><b>14</b> de 24</td>
           </tr>
           <tr>
-            <td><span class="tag warn">Média</span> <small>0,60–0,89</small></td>
+            <td>
+              <span class="tag warn">Média</span> <small>0,60–0,89</small>
+            </td>
             <td>Confirmação humana</td>
             <td><b>7</b> de 24</td>
           </tr>
@@ -2702,62 +3256,64 @@
         </table>
         <div class="outs-stat">
           <span><b>14</b> Alta · 14/14 corretas</span>
-          <span><b>7</b> Média</span>
-          <span><b>3</b> Baixa</span>
+          <span><b>10 de 24</b> mensagens de teste vão para fallback</span>
           <span><b>0/18</b> fora do escopo em Alta</span>
         </div>
         <p class="mx-note" style="margin-top: 0.9rem">
           O System One não é gargalo. É roteador.
         </p>
-
+        <p class="route-note">
+          Métricas: taxa de fallback · acerto na faixa Alta · estabilidade da
+          intenção
+        </p>
       </section>
 
       <!-- 28 FLUXO -->
       <section class="slide">
         <h2>Como as camadas <span class="accent">conversam</span></h2>
-        <div class="layers-flow">
-          <div class="lf-row">
-            <div class="lf-node lf-entry">Entrada do usuário</div>
-          </div>
-
-          <div class="lf-vsep">
-            <div class="lf-vline"></div>
-            <div class="lf-chevron"></div>
-          </div>
-
-          <div class="lf-mid-grid">
-            <div class="lf-node lf-s1">
-              System One<span>classifica · registra · limita</span>
-            </div>
-            <div class="lf-fork-col">
-              <div class="lf-badge lf-high">● Alta confiança</div>
-              <div class="lf-badge lf-mid">● Média</div>
-              <div class="lf-badge lf-low">● Baixa</div>
-            </div>
-            <div class="lf-node lf-spec">
-              Especificação<span>fecha a interpretação</span>
+        <div class="pf">
+          <div class="pf-row pf-in">
+            <div class="pf-n">1</div>
+            <div class="pf-name">Entrada<small>texto aberto</small></div>
+            <div class="pf-txt">
+              O cliente escreve: <code>quero cancelar e pedir reembolso do mês passado</code>.
+              Nada foi decidido ainda.
             </div>
           </div>
-
-          <div class="lf-vsep">
-            <div class="lf-vline"></div>
-            <div class="lf-chevron"></div>
-          </div>
-
-          <div class="lf-row">
-            <div class="lf-node lf-s2">
-              System Two<span>raciocínio · tools</span>
+          <div class="pf-row pf-s1">
+            <div class="pf-n">2</div>
+            <div class="pf-name">System One<small>decide · registra · limita</small></div>
+            <div class="pf-txt">
+              Classifica em <code>billing_agent</code> (confiança 0,94) e grava no ledger.
+              A faixa de confiança define o destino:
+              <div class="pf-chips">
+                <span class="pf-chip hi">Alta: segue</span>
+                <span class="pf-chip md">Média: humano confirma</span>
+                <span class="pf-chip lo">Baixa: LLM ou humano</span>
+              </div>
             </div>
           </div>
-
-          <div class="lf-vsep">
-            <div class="lf-vline"></div>
-            <div class="lf-chevron"></div>
+          <div class="pf-row pf-spec">
+            <div class="pf-n">3</div>
+            <div class="pf-name">Especificação<small>política + schema</small></div>
+            <div class="pf-txt">
+              Só o que passou na faixa Alta chega aqui. Fecha o sentido do pedido:
+              <code>billing.cancellation.v3</code> define o que é "cancelar" e "reembolso do mês passado".
+            </div>
           </div>
-
-          <div class="lf-row lf-row-2">
-            <div class="lf-node lf-out">Saída validada</div>
-            <div class="lf-node lf-ledger">Ledger auditável</div>
+          <div class="pf-row pf-s2">
+            <div class="pf-n">4</div>
+            <div class="pf-name">System Two<small>raciocínio · tools</small></div>
+            <div class="pf-txt">
+              O LLM raciocina e chama ferramentas, só dentro do que a especificação permite.
+            </div>
+          </div>
+          <div class="pf-row pf-out">
+            <div class="pf-n">5</div>
+            <div class="pf-name">Saída + Ledger<small>validada e auditável</small></div>
+            <div class="pf-txt">
+              O schema é conferido, a ação executa e a decisão fica registrada para reconstruir depois.
+            </div>
           </div>
         </div>
       </section>
@@ -2782,7 +3338,10 @@
 
       <!-- 30A PROBLEMA DO CASO -->
       <section class="slide" data-anim="problem">
-        <div class="real-badge"><b>Dados reais</b><span>4 modelos · 20/10/2026 · 4 modelos · 40 respostas</span></div>
+        <div class="real-badge">
+          <b>Dados reais</b
+          ><span>4 modelos · 20/10/2026 · 4 modelos · 40 respostas</span>
+        </div>
         <div class="kicker">Estudo de caso · o problema</div>
         <h2>
           Chat de suporte: <span class="accent">e agora, o que responder?</span>
@@ -2828,7 +3387,8 @@
             <li>
               <i>2</i>
               <div>
-                <b>Qual será a resposta?</b>Texto livre: 40 chamadas idênticas, 40 respostas diferentes.
+                <b>Qual será a resposta?</b>Texto livre: 40 chamadas idênticas,
+                40 respostas diferentes.
               </div>
             </li>
             <li>
@@ -3071,7 +3631,7 @@
     </div>
 
     <div class="counter">
-      <strong id="current">1</strong> / <span id="total">33</span>
+      <strong id="current">1</strong> / <span id="total">40</span>
     </div>
 
     <script>
@@ -3199,7 +3759,92 @@
       ;(function () {
         var slide = document.getElementById("demoSlide")
         if (!slide) return
-        var RUNS = {"0": [{"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a Cidade Luz devido à sua rica história, arquitetura deslumbrante e atmosfera romântica, sendo um destino turístico mundialmente famoso.", "h": "15dbae7a"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.", "h": "835e6d1f"}], "1": [{"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica.", "h": "886efe13"}, {"t": "Paris, a capital da França, é famosa por sua arquitetura magnífica, arte, moda e cultura requintada, com marcos icônicos como a Torre Eiffel e a Catedral de Notre-Dame.", "h": "8143e16a"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e cultura vibrante, sendo um destino turístico icônico mundialmente.", "h": "a517ae1f"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade Luz\" por sua rica história, arquitetura magnífica e influência cultural, apresentando marcos icônicos como a Torre Eiffel e o Louvre.", "h": "1477f344"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, com ícones como a Torre Eiffel e o Louvre.", "h": "1350d870"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura magnífica e atmosfera romântica.", "h": "59aa581e"}, {"t": "Paris, a capital da França, é famosa por sua arquitetura histórica, arte, moda e cultura, sendo um dos destinos turísticos mais visitados do mundo.", "h": "7fc7cde0"}, {"t": "Paris, a capital da França, é conhecida como a \"Cidade Luz\" por sua rica história, arte, moda e arquitetura icônica, incluindo a famosa Torre Eiffel.", "h": "f194074f"}, {"t": "Paris, a capital da França, é uma cidade conhecida por sua arquitetura icônica, arte, moda e cultura, com atrações como a Torre Eiffel e o Louvre.", "h": "040ca956"}, {"t": "Paris, a capital da França, é uma cidade conhecida por sua arquitetura histórica, arte, moda e cultura, com marcos icônicos como a Torre Eiffel e a Catedral de Notre-Dame.", "h": "743178e0"}]}
+        var RUNS = {
+          0: [
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: "Paris, a capital da França, é conhecida como a Cidade Luz devido à sua rica história, arquitetura deslumbrante e atmosfera romântica, sendo um destino turístico mundialmente famoso.",
+              h: "15dbae7a",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.',
+              h: "835e6d1f",
+            },
+          ],
+          1: [
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica.',
+              h: "886efe13",
+            },
+            {
+              t: "Paris, a capital da França, é famosa por sua arquitetura magnífica, arte, moda e cultura requintada, com marcos icônicos como a Torre Eiffel e a Catedral de Notre-Dame.",
+              h: "8143e16a",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e cultura vibrante, sendo um destino turístico icônico mundialmente.',
+              h: "a517ae1f",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade Luz" por sua rica história, arquitetura magnífica e influência cultural, apresentando marcos icônicos como a Torre Eiffel e o Louvre.',
+              h: "1477f344",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura deslumbrante e atmosfera romântica, com ícones como a Torre Eiffel e o Louvre.',
+              h: "1350d870",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade da Luz" por sua rica história, arquitetura magnífica e atmosfera romântica.',
+              h: "59aa581e",
+            },
+            {
+              t: "Paris, a capital da França, é famosa por sua arquitetura histórica, arte, moda e cultura, sendo um dos destinos turísticos mais visitados do mundo.",
+              h: "7fc7cde0",
+            },
+            {
+              t: 'Paris, a capital da França, é conhecida como a "Cidade Luz" por sua rica história, arte, moda e arquitetura icônica, incluindo a famosa Torre Eiffel.',
+              h: "f194074f",
+            },
+            {
+              t: "Paris, a capital da França, é uma cidade conhecida por sua arquitetura icônica, arte, moda e cultura, com atrações como a Torre Eiffel e o Louvre.",
+              h: "040ca956",
+            },
+            {
+              t: "Paris, a capital da França, é uma cidade conhecida por sua arquitetura histórica, arte, moda e cultura, com marcos icônicos como a Torre Eiffel e a Catedral de Notre-Dame.",
+              h: "743178e0",
+            },
+          ],
+        }
         var N = RUNS[0].length
         var TOKEN_MS = 38,
           PAUSE_MS = 450
