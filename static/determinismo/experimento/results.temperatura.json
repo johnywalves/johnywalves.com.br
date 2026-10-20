@@ -1,0 +1,1949 @@
+{
+  "startedAt": "2026-10-20T17:07:45.535Z",
+  "prompt": "Qual é a capital da França? Responda em uma frase.",
+  "runs": 10,
+  "temps": [
+    0,
+    1
+  ],
+  "models": [
+    {
+      "label": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "model": "cc/claude-sonnet-5-5"
+    },
+    {
+      "label": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "model": "google/gemini-3.8-flash"
+    },
+    {
+      "label": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "model": "meta-llama/llama-4-maverick"
+    }
+  ],
+  "results": [
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 1,
+      "at": "2026-10-20T17:07:49.933Z",
+      "ms": 4398,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 2,
+      "at": "2026-10-20T17:07:56.805Z",
+      "ms": 5369,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 3,
+      "at": "2026-10-20T17:08:01.548Z",
+      "ms": 3241,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 4,
+      "at": "2026-10-20T17:08:10.633Z",
+      "ms": 7582,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 5,
+      "at": "2026-10-20T17:08:16.541Z",
+      "ms": 4406,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 6,
+      "at": "2026-10-20T17:08:34.615Z",
+      "ms": 16573,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 7,
+      "at": "2026-10-20T17:08:43.875Z",
+      "ms": 7758,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 8,
+      "at": "2026-10-20T17:08:48.721Z",
+      "ms": 3344,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 9,
+      "at": "2026-10-20T17:08:58.959Z",
+      "ms": 8736,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 10,
+      "at": "2026-10-20T17:09:04.537Z",
+      "ms": 4076,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 1,
+      "at": "2026-10-20T17:09:07.403Z",
+      "ms": 1364,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 2,
+      "at": "2026-10-20T17:09:11.855Z",
+      "ms": 2950,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 3,
+      "at": "2026-10-20T17:09:14.901Z",
+      "ms": 1544,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 4,
+      "at": "2026-10-20T17:09:18.334Z",
+      "ms": 1931,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 5,
+      "at": "2026-10-20T17:09:22.463Z",
+      "ms": 2627,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 6,
+      "at": "2026-10-20T17:09:29.141Z",
+      "ms": 5176,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 7,
+      "at": "2026-10-20T17:09:32.225Z",
+      "ms": 1582,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 8,
+      "at": "2026-10-20T17:09:36.872Z",
+      "ms": 3145,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 11,
+        "total_tokens": 2036
+      },
+      "content": "Paris é capital da França.",
+      "sha256": "436649726b941564cf4e5151b67db3c8845c45f78e2695fb52e1037ed6a8c8fe",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 9,
+      "at": "2026-10-20T17:09:40.204Z",
+      "ms": 1830,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 10,
+      "at": "2026-10-20T17:09:44.030Z",
+      "ms": 2323,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 12,
+        "total_tokens": 2037
+      },
+      "content": "Paris é a capital da França.",
+      "sha256": "b090312ce32d334962b489a70dd6d1b01e5a1d2e7d26f82af71229c76c1a8909",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 1,
+      "at": "2026-10-20T17:09:49.335Z",
+      "ms": 3802,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 133,
+        "total_tokens": 147,
+        "cost": 0.00050925,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00050925,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00049875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 126,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 2,
+      "at": "2026-10-20T17:09:53.740Z",
+      "ms": 2903,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 119,
+        "total_tokens": 133,
+        "cost": 0.00045675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00045675,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00044625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 112,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 3,
+      "at": "2026-10-20T17:09:58.620Z",
+      "ms": 3378,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 164,
+        "total_tokens": 178,
+        "cost": 0.0006255,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0006255,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.000615
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 157,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 4,
+      "at": "2026-10-20T17:10:02.416Z",
+      "ms": 2293,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 113,
+        "total_tokens": 127,
+        "cost": 0.00043425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00043425,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00042375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 106,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 5,
+      "at": "2026-10-20T17:10:07.248Z",
+      "ms": 3321,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 143,
+        "total_tokens": 157,
+        "cost": 0.00054675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00054675,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00053625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 136,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 6,
+      "at": "2026-10-20T17:10:11.297Z",
+      "ms": 2546,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 97,
+        "total_tokens": 111,
+        "cost": 0.00037425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00037425,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00036375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 90,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 7,
+      "at": "2026-10-20T17:10:15.684Z",
+      "ms": 2885,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 116,
+        "total_tokens": 130,
+        "cost": 0.0004455,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004455,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.000435
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 8,
+      "at": "2026-10-20T17:10:19.930Z",
+      "ms": 2744,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 119,
+        "total_tokens": 133,
+        "cost": 0.00045675,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00045675,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00044625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 112,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 9,
+      "at": "2026-10-20T17:10:24.618Z",
+      "ms": 3186,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 117,
+        "total_tokens": 131,
+        "cost": 0.00044925,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00044925,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00043875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 110,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 10,
+      "at": "2026-10-20T17:10:28.533Z",
+      "ms": 2413,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 134,
+        "total_tokens": 148,
+        "cost": 0.000513,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000513,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.0005025
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 127,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 1,
+      "at": "2026-10-20T17:10:32.812Z",
+      "ms": 2777,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 107,
+        "total_tokens": 121,
+        "cost": 0.00041175,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00041175,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00040125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 100,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 2,
+      "at": "2026-10-20T17:10:47.165Z",
+      "ms": 12851,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google AI Studio",
+      "usage": {
+        "prompt_tokens": 15,
+        "completion_tokens": 126,
+        "total_tokens": 141,
+        "cost": 0.00048375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00048375,
+          "upstream_inference_prompt_cost": 0.00001125,
+          "upstream_inference_completions_cost": 0.0004725
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 119,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 3,
+      "at": "2026-10-20T17:10:55.740Z",
+      "ms": 7073,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 115,
+        "total_tokens": 129,
+        "cost": 0.00044175,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00044175,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00043125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 108,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 4,
+      "at": "2026-10-20T17:10:59.997Z",
+      "ms": 2755,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 112,
+        "total_tokens": 126,
+        "cost": 0.0004305,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004305,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00042
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 105,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 5,
+      "at": "2026-10-20T17:11:14.350Z",
+      "ms": 12851,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google AI Studio",
+      "usage": {
+        "prompt_tokens": 15,
+        "completion_tokens": 116,
+        "total_tokens": 131,
+        "cost": 0.00044625,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00044625,
+          "upstream_inference_prompt_cost": 0.00001125,
+          "upstream_inference_completions_cost": 0.000435
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 6,
+      "at": "2026-10-20T17:11:19.179Z",
+      "ms": 3326,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 112,
+        "total_tokens": 126,
+        "cost": 0.0004305,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004305,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00042
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 105,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 7,
+      "at": "2026-10-20T17:11:23.581Z",
+      "ms": 2900,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 118,
+        "total_tokens": 132,
+        "cost": 0.000453,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000453,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.0004425
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 111,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 8,
+      "at": "2026-10-20T17:11:28.755Z",
+      "ms": 3673,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 145,
+        "total_tokens": 159,
+        "cost": 0.00055425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00055425,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00054375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 138,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 9,
+      "at": "2026-10-20T17:11:33.113Z",
+      "ms": 2856,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 116,
+        "total_tokens": 130,
+        "cost": 0.0004455,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004455,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.000435
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 109,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 10,
+      "at": "2026-10-20T17:11:36.932Z",
+      "ms": 2316,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 125,
+        "total_tokens": 139,
+        "cost": 0.00047925,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00047925,
+          "upstream_inference_prompt_cost": 0.0000105,
+          "upstream_inference_completions_cost": 0.00046875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 118,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 1,
+      "at": "2026-10-20T17:11:39.230Z",
+      "ms": 796,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001605,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001605,
+          "upstream_inference_prompt_cost": 0.00000805,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 2,
+      "at": "2026-10-20T17:11:41.690Z",
+      "ms": 959,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001605,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001605,
+          "upstream_inference_prompt_cost": 0.00000805,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 3,
+      "at": "2026-10-20T17:11:43.869Z",
+      "ms": 677,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 4,
+      "at": "2026-10-20T17:11:46.058Z",
+      "ms": 686,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 5,
+      "at": "2026-10-20T17:11:48.328Z",
+      "ms": 767,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 6,
+      "at": "2026-10-20T17:11:50.619Z",
+      "ms": 789,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 7,
+      "at": "2026-10-20T17:11:52.810Z",
+      "ms": 688,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 8,
+      "at": "2026-10-20T17:11:55.035Z",
+      "ms": 723,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 9,
+      "at": "2026-10-20T17:11:58.794Z",
+      "ms": 2257,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 10,
+      "at": "2026-10-20T17:12:01.099Z",
+      "ms": 801,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 1,
+      "at": "2026-10-20T17:12:03.276Z",
+      "ms": 676,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 2,
+      "at": "2026-10-20T17:12:05.612Z",
+      "ms": 833,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 3,
+      "at": "2026-10-20T17:12:08.004Z",
+      "ms": 890,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 4,
+      "at": "2026-10-20T17:12:10.237Z",
+      "ms": 732,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 5,
+      "at": "2026-10-20T17:12:12.466Z",
+      "ms": 727,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 6,
+      "at": "2026-10-20T17:12:14.691Z",
+      "ms": 723,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 7,
+      "at": "2026-10-20T17:12:17.255Z",
+      "ms": 1061,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 8,
+      "at": "2026-10-20T17:12:20.076Z",
+      "ms": 1318,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 9,
+      "at": "2026-10-20T17:12:22.378Z",
+      "ms": 800,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 10,
+      "at": "2026-10-20T17:12:24.854Z",
+      "ms": 974,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 8,
+        "total_tokens": 31,
+        "cost": 0.00001317,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00001317,
+          "upstream_inference_prompt_cost": 0.00000517,
+          "upstream_inference_completions_cost": 0.000008
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "A capital da França é Paris.",
+      "sha256": "47a2e95ab4b096cfeaaef0fb9bc40ba7f886fa36e805da78ec90125cc9c670ae",
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T17:12:26.356Z"
+}

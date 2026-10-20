@@ -1,0 +1,521 @@
+{
+  "startedAt": "2026-10-20T16:44:16.168Z",
+  "input": "quero cancelar e pedir reembolso do mês passado",
+  "runsPerModel": 10,
+  "models": [
+    {
+      "label": "openai/gpt-6-luna",
+      "via": "9router",
+      "model": "cx/gpt-6-luna",
+      "exists": true,
+      "temperature": true,
+      "pricing": null
+    }
+  ],
+  "prompts": {
+    "specSystem": "Você é o módulo de classificação de um chat de suporte. Siga a política billing.cancellation.v3.\nPolítica:\n- \"cancelar\" significa encerrar a assinatura ao fim do ciclo atual.\n- \"reembolso do mês passado\" significa reembolsar o ciclo de cobrança anterior.\n- Intenções permitidas: billing_agent, tech_support, security_review.\n- Ações permitidas: cancel_subscription, refund_previous_cycle. Liste em ordem alfabética.\nResponda somente com o JSON do schema. Nunca escreva texto fora do JSON.",
+    "specSchema": {
+      "name": "decisao",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intent",
+          "actions",
+          "refund_cycle"
+        ],
+        "properties": {
+          "intent": {
+            "type": "string",
+            "enum": [
+              "billing_agent",
+              "tech_support",
+              "security_review"
+            ]
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "cancel_subscription",
+                "refund_previous_cycle"
+              ]
+            }
+          },
+          "refund_cycle": {
+            "type": "string",
+            "enum": [
+              "previous"
+            ]
+          }
+        }
+      }
+    },
+    "controlSystem": "Você atende clientes de uma assinatura. Responda ao cliente."
+  },
+  "runs": [
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:44:20.431Z",
+      "ms": 4263,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 115,
+        "total_tokens": 666
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:44:23.301Z",
+      "ms": 2869,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 91,
+        "total_tokens": 642
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:44:25.317Z",
+      "ms": 2015,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 80,
+        "total_tokens": 631
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:44:27.372Z",
+      "ms": 2054,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 67,
+        "total_tokens": 618
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:44:29.265Z",
+      "ms": 1892,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 77,
+        "total_tokens": 628
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:44:33.149Z",
+      "ms": 3883,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 86,
+        "total_tokens": 637
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:44:35.146Z",
+      "ms": 1997,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 77,
+        "total_tokens": 628
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:44:36.851Z",
+      "ms": 1704,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 68,
+        "total_tokens": 619
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:44:38.839Z",
+      "ms": 1987,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 78,
+        "total_tokens": 629
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:44:41.165Z",
+      "ms": 2325,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 551,
+        "completion_tokens": 77,
+        "total_tokens": 628
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"]}",
+      "sha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "canonicalSha256": "9aa32a09a87824a597c6f11af2504b063ca7e87ae8a55f64c1996cda03833057",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:44:44.325Z",
+      "ms": 3159,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 63,
+        "total_tokens": 513
+      },
+      "temperatureSent": 0,
+      "content": "Não consigo cancelar assinatura ou emitir reembolso por aqui. Acesse **Configurações → Assinatura → Gerenciar assinatura** para cancelar. Para pedir reembolso do mês passado, contate o suporte de cobrança pela Central de Ajuda e informe e-mail da conta e data da cobrança.",
+      "sha256": "981c2c895c38ac9bbbf61371c5f0b3c7cc7ce17a80393e542ef7e21ca1535919",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:44:46.521Z",
+      "ms": 2194,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 55,
+        "total_tokens": 505
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar e pedir reembolso do mês passado, acesse **Configurações → Assinatura → Gerenciar assinatura** e envie solicitação de reembolso pelo suporte de cobrança. Informe data e valor da cobrança. Cancelar não garante reembolso.",
+      "sha256": "b4c7e8bf22bc3893fc91b24247a8e46866033ce5db7063e31c8522931e1637e3",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:44:48.545Z",
+      "ms": 2023,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 67,
+        "total_tokens": 517
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com cancelamento e pedido de reembolso. Não consigo acessar sua conta por aqui. Cancele em **Configurações > Assinatura** e solicite reembolso pelo suporte, informando a cobrança do mês passado. O reembolso depende das regras da assinatura e do método de pagamento.",
+      "sha256": "310ff025217a3c606fbaec12163acacdb241aafaed6e2d97967c2134e7867585",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:44:50.375Z",
+      "ms": 1829,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 55,
+        "total_tokens": 505
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar, acesse **Conta > Assinatura > Cancelar**. Para pedir reembolso do mês passado, envie solicitação em **Ajuda > Faturamento > Solicitar reembolso**. Cancelar assinatura não gera reembolso automático.",
+      "sha256": "35a0c62f8346d469e77cb8e7db3b1673ba65e5972a40ca00a805be1825b18e44",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:44:52.324Z",
+      "ms": 1948,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 58,
+        "total_tokens": 508
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar, acesse **Conta > Assinatura > Cancelar assinatura**. Para pedir reembolso do mês passado, envie solicitação pelo **Suporte > Cobrança > Reembolso**. Reembolso depende da política de cobrança e análise da solicitação.",
+      "sha256": "9a0f3c168f71f90482c31fc68750f0e0634b7ec2b1f56bf0ee2fdefb8ba4a5ee",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:44:54.693Z",
+      "ms": 2367,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 60,
+        "total_tokens": 510
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar e pedir reembolso, acesse **Configurações > Assinatura** e selecione **Cancelar**. Depois, contate o suporte pelo **help.openai.com** para solicitar reembolso do mês passado; informe e-mail da conta e data da cobrança.",
+      "sha256": "d0b5ac37e958c3044583d7b0ae0ab5e0f4660ef5b7de68c62486d3d2cb823030",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:44:57.617Z",
+      "ms": 2922,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 50,
+        "total_tokens": 500
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar, abra **Conta > Assinatura > Cancelar**. Para pedir reembolso do mês passado, fale com o suporte e informe o e-mail da conta e a cobrança. Cancelar não gera reembolso automaticamente.",
+      "sha256": "0ec5f02de9c2bdf19b0df38f4bcc0a19de0653067a627050374ffae7f46b0207",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:44:59.115Z",
+      "ms": 1497,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 35,
+        "total_tokens": 485
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar e pedir reembolso do mês passado, preciso saber em qual serviço você assinou e se foi pela web, Apple App Store ou Google Play.",
+      "sha256": "ea6cc2208a6a75a222f91125fb8a1fee8dedb5ecb269e4ae7dd55ba8f0d2023c",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:45:01.067Z",
+      "ms": 1951,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 41,
+        "total_tokens": 491
+      },
+      "temperatureSent": 0,
+      "content": "Cancele a assinatura nas configurações da conta. Para pedir reembolso do mês passado, envie solicitação pelo suporte de cobrança; informe e-mail da conta e data da cobrança.",
+      "sha256": "2cdb051261f6905bf2cf142481f41a54407948232cbd3c8b2d703dd16b6fa622",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6-luna",
+      "via": "9router",
+      "requested": "cx/gpt-6-luna",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:45:03.255Z",
+      "ms": 2187,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6-luna",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 29,
+        "total_tokens": 479
+      },
+      "temperatureSent": 0,
+      "content": "Para cancelar e pedir reembolso do mês passado, preciso saber onde assinou: pelo site, App Store ou Google Play?",
+      "sha256": "4ea866778ad3d4b6fbe7609bacb0a848552491f1acb0acbafa07c0e77d388a99",
+      "canonicalSha256": null,
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T16:45:03.256Z"
+}

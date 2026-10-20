@@ -1,0 +1,49 @@
+{
+  "runsPerModel": 10,
+  "input": "quero cancelar e pedir reembolso do mês passado",
+  "models": [
+    {
+      "label": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "model": "gpt-6.1-sol",
+      "temperature": false
+    },
+    {
+      "label": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "model": "cc/claude-sonnet-5-5"
+    },
+    {
+      "label": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "model": "google/gemini-3.8-flash"
+    },
+    {
+      "label": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "model": "meta-llama/llama-4-maverick",
+      "provider": {
+        "order": [
+          "Parasail"
+        ],
+        "allow_fallbacks": false
+      }
+    }
+  ],
+  "routes": {
+    "openrouter": {
+      "base": "https://openrouter.ai/api/v1",
+      "keyEnv": "OPENROUTER_API_KEY"
+    },
+    "9router": {
+      "base": "http://100.111.182.79:20128/v1",
+      "keyEnv": "NINE_ROUTER_API_KEY",
+      "stream": false
+    },
+    "openai": {
+      "base": "https://api.openai.com/v1",
+      "keyEnv": "OPENAI_API_KEY",
+      "tokensParam": "max_completion_tokens"
+    }
+  }
+}

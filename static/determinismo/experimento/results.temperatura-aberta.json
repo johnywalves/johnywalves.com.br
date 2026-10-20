@@ -1,0 +1,1949 @@
+{
+  "startedAt": "2026-10-20T17:23:04.347Z",
+  "prompt": "Descreva Paris em uma frase.",
+  "runs": 10,
+  "temps": [
+    0,
+    1
+  ],
+  "models": [
+    {
+      "label": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "model": "cc/claude-sonnet-5-5"
+    },
+    {
+      "label": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "model": "google/gemini-3.8-flash"
+    },
+    {
+      "label": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "model": "meta-llama/llama-4-maverick"
+    }
+  ],
+  "results": [
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 1,
+      "at": "2026-10-20T17:23:07.264Z",
+      "ms": 2917,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 59,
+        "total_tokens": 2078
+      },
+      "content": "Paris, capital da França, é cidade às margens do Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e vida cultural intensa.",
+      "sha256": "d1e70601b4a03ad1a8c8cde3b0b1a007419e2114a0a34136b5ad9f3cabe8c649",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 2,
+      "at": "2026-10-20T17:23:19.191Z",
+      "ms": 9423,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 98,
+        "total_tokens": 2117
+      },
+      "content": "Paris, capital da França, cidade grande às margens do rio Sena, famosa por Torre Eiffel, museus como o Louvre, cafés, moda e gastronomia.",
+      "sha256": "a3a01c068bfff923865032662ed8c6d9d55e5a7f07ee9978ca198b5d77e6ea09",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 3,
+      "at": "2026-10-20T17:23:24.014Z",
+      "ms": 2322,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 57,
+        "total_tokens": 2076
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa por arte, moda, gastronomia e monumentos como Torre Eiffel e Louvre.",
+      "sha256": "21a9d84fc1e945c2e33a569029bbe4b4caa36109931130c6d676f3d9a081612a",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 4,
+      "at": "2026-10-20T17:23:42.092Z",
+      "ms": 15575,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 58,
+        "total_tokens": 2077
+      },
+      "content": "Paris, capital da França, é cidade às margens do Sena, famosa por Torre Eiffel, museus como Louvre, café, moda e arquitetura romântica.",
+      "sha256": "5c63964e6e1b4962671d51f806f9efa0328012ffa8dc96943b102bc1d5fd26d6",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 5,
+      "at": "2026-10-20T17:23:49.152Z",
+      "ms": 4557,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 87,
+        "total_tokens": 2106
+      },
+      "content": "Paris, capital da França, cidade grande às margens do Sena, famosa por Torre Eiffel, museus, culinária e vida cultural.",
+      "sha256": "ba1daa63e8e3fc5734b3fe0fff66e554679067323ff5acaa1d0ca80138d37403",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 6,
+      "at": "2026-10-20T17:23:55.614Z",
+      "ms": 3959,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 95,
+        "total_tokens": 2114
+      },
+      "content": "Paris: capital da França, cidade à beira do Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "925be2b7e43b8c9d47f3ea444d95edb93e36dab3ba857b541d6c2c3cbf1f4222",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 7,
+      "at": "2026-10-20T17:24:11.145Z",
+      "ms": 13028,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 59,
+        "total_tokens": 2078
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa pela Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "8cc7f029a437ab470f6e242f9818bec30971ba827e9529d7a6a7f199fc446311",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 8,
+      "at": "2026-10-20T17:24:17.136Z",
+      "ms": 3488,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 84,
+        "total_tokens": 2103
+      },
+      "content": "Paris: capital da França, cidade grande às margens do Sena, famosa por Torre Eiffel, museus, culinária e moda.",
+      "sha256": "2b9f509fa240182fae013ad50370db09ad1d16be8df1d7cb184f0d51e6eb418c",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 9,
+      "at": "2026-10-20T17:24:23.317Z",
+      "ms": 3679,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 56,
+        "total_tokens": 2075
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa por arte, moda, gastronomia e marcos como Torre Eiffel e Louvre.",
+      "sha256": "0a38a4a7dfc5f91a8b26ca01132438e38605a6d0d8eb5065184e639e8283d1c6",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 0,
+      "run": 10,
+      "at": "2026-10-20T17:24:28.622Z",
+      "ms": 2803,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 99,
+        "total_tokens": 2118
+      },
+      "content": "Paris, capital da França, cidade grande às margens do Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e arquitetura romântica.",
+      "sha256": "44b6791c765d2aa272b9ef142de6bba6d41935f75db36acbf4e53057d76ef4f5",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 1,
+      "at": "2026-10-20T17:24:34.434Z",
+      "ms": 3308,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 58,
+        "total_tokens": 2077
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "20d9f34b81eda4be46bb611b0e348f41ebd7de5b2332f287a2bf814f98650cd2",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 2,
+      "at": "2026-10-20T17:24:40.022Z",
+      "ms": 3085,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 58,
+        "total_tokens": 2077
+      },
+      "content": "Paris, capital da França, é cidade às margens do Sena, famosa por arte, moda, gastronomia e monumentos como Torre Eiffel e Louvre.",
+      "sha256": "6ed8ebf79c29e16f4314d002fcc65e953fceb25c9a6fc75bd2c2a3775adf4826",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 3,
+      "at": "2026-10-20T17:24:44.988Z",
+      "ms": 2464,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 99,
+        "total_tokens": 2118
+      },
+      "content": "Paris: capital da França, cidade grande às margens do rio Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "a45628a3bce0be45f00c5e7d9924d95235259e5decb127bf67dbe05594579c5c",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 4,
+      "at": "2026-10-20T17:24:51.685Z",
+      "ms": 4194,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 60,
+        "total_tokens": 2079
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa por Torre Eiffel, museus como o Louvre, cafés, moda e arquitetura histórica.",
+      "sha256": "64c93f643d433df57925cd9bd253de524e8929ac3231d78d69b696b06eeadd7d",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 5,
+      "at": "2026-10-20T17:24:59.604Z",
+      "ms": 5416,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 60,
+        "total_tokens": 2079
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa por Torre Eiffel, museus como o Louvre, cafés, moda e arquitetura histórica.",
+      "sha256": "64c93f643d433df57925cd9bd253de524e8929ac3231d78d69b696b06eeadd7d",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 6,
+      "at": "2026-10-20T17:25:04.250Z",
+      "ms": 2143,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 57,
+        "total_tokens": 2076
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa por arte, moda, gastronomia e monumentos como Torre Eiffel e Louvre.",
+      "sha256": "21a9d84fc1e945c2e33a569029bbe4b4caa36109931130c6d676f3d9a081612a",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 7,
+      "at": "2026-10-20T17:25:08.261Z",
+      "ms": 1509,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 55,
+        "total_tokens": 2074
+      },
+      "content": "Paris: capital da França, cidade às margens do rio Sena, famosa por Torre Eiffel, Louvre, cafés, moda e gastronomia.",
+      "sha256": "695f7edda7b85553519fdf79e31acee784b4d8622b6dfca1a6c79d5e458aa452",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 8,
+      "at": "2026-10-20T17:25:14.969Z",
+      "ms": 4204,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 100,
+        "total_tokens": 2119
+      },
+      "content": "Paris: capital da França, cidade grande às margens do rio Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "a45628a3bce0be45f00c5e7d9924d95235259e5decb127bf67dbe05594579c5c",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 9,
+      "at": "2026-10-20T17:25:20.630Z",
+      "ms": 3157,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 59,
+        "total_tokens": 2078
+      },
+      "content": "Paris: capital da França, cidade às margens do Sena, famosa pela Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "8cc7f029a437ab470f6e242f9818bec30971ba827e9529d7a6a7f199fc446311",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "temperature": 1,
+      "run": 10,
+      "at": "2026-10-20T17:25:25.169Z",
+      "ms": 2025,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2019,
+        "completion_tokens": 97,
+        "total_tokens": 2116
+      },
+      "content": "Paris, capital da França, cidade grande às margens do Sena, famosa por Torre Eiffel, museus como o Louvre, café, moda e arquitetura histórica.",
+      "sha256": "75ab83f91bb3d2af39e68d879f4beecb14f17542d826747e00a52899c01d8845",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 1,
+      "at": "2026-10-20T17:25:39.615Z",
+      "ms": 11933,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 395,
+        "total_tokens": 402,
+        "cost": 0.0014865,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0014865,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00148125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 360,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é um museu a céu aberto onde a elegância arquitetônica, a efervescência cultural e o romance eterno se encontram às margens do Sena.",
+      "sha256": "a9cd600113a39f72e0f009808450137a093ea9d5cfa1698e01b1cb6281cf4ad1",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 2,
+      "at": "2026-10-20T17:25:48.402Z",
+      "ms": 6284,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 476,
+        "total_tokens": 483,
+        "cost": 0.00179025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00179025,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.001785
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 445,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é um museu a céu aberto onde história, arte e romance se entrelaçam com elegância sob o encanto atemporal da Cidade Luz.",
+      "sha256": "30b627b717f25d12f5e4d4823010da6cf40ba09ec142177388f160ac167574c7",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 3,
+      "at": "2026-10-20T17:26:01.822Z",
+      "ms": 10917,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 540,
+        "total_tokens": 547,
+        "cost": 0.00203025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00203025,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.002025
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 511,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz, um museu a céu aberto onde história, arte e romance se entrelaçam em uma elegância atemporal.",
+      "sha256": "c9eb09a52069f917d2f4b8d5af7b2e0182f868f121ff87e66753493ed27644e9",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 4,
+      "at": "2026-10-20T17:26:14.131Z",
+      "ms": 9805,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 427,
+        "total_tokens": 434,
+        "cost": 0.0016065,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0016065,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00160125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 401,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a eterna Cidade Luz, onde arte, história e romance se encontram em cada esquina com uma elegância incomparável.",
+      "sha256": "072d848d572ade4ba72aec052dbd66fb314282e04d69649e5b347409fe09c206",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 5,
+      "at": "2026-10-20T17:26:21.495Z",
+      "ms": 4860,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 439,
+        "total_tokens": 446,
+        "cost": 0.0016515,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0016515,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00164625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 412,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é um museu a céu aberto onde a elegância, a arte e o romance se encontram às margens do Sena.",
+      "sha256": "d1d7462bac8306acdc1da49214e7769ced10a52f9d88f64f5e727ebc49b811cb",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 6,
+      "at": "2026-10-20T17:26:39.688Z",
+      "ms": 15690,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google AI Studio",
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 498,
+        "total_tokens": 506,
+        "cost": 0.0018735,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0018735,
+          "upstream_inference_prompt_cost": 0.000006,
+          "upstream_inference_completions_cost": 0.0018675
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 467,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz, um museu a céu aberto onde história, arte e romance se encontram com elegância à beira do Rio Sena.",
+      "sha256": "e5154b979e2aedacf6b12506b39b8f770a3f412f879278d7b8944c2fc9ce57dd",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 7,
+      "at": "2026-10-20T17:26:49.039Z",
+      "ms": 6848,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 493,
+        "total_tokens": 500,
+        "cost": 0.001854,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001854,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00184875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 463,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz onde a elegância atemporal, a arte e o romance eterno se encontram em cada esquina às margens do Sena.",
+      "sha256": "cc00c2f30ecff3924d31ad7682e7819ea933291b8f0459059a00e62734ab2eca",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 8,
+      "at": "2026-10-20T17:26:56.659Z",
+      "ms": 5118,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 489,
+        "total_tokens": 496,
+        "cost": 0.001839,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001839,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00183375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 459,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é um museu a céu aberto onde a história, a elegância e o romance se encontram poeticamente às margens do Rio Sena.",
+      "sha256": "c8edfe9405f2ec8f11d2c40508a74259c34900d9cb7e6810002ab7ea54a22650",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 9,
+      "at": "2026-10-20T17:27:04.918Z",
+      "ms": 5756,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 428,
+        "total_tokens": 435,
+        "cost": 0.00161025,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00161025,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.001605
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 403,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz onde história, arte e romance se encontram com elegância atemporal às margens do Sena.",
+      "sha256": "322308b8069723b2d099a6c23d6421c260e1c96208721eb6fbc28fc964749826",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 10,
+      "at": "2026-10-20T17:27:12.932Z",
+      "ms": 5512,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 496,
+        "total_tokens": 503,
+        "cost": 0.00186525,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00186525,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00186
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 465,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz, onde a elegância atemporal, a arte e o romance se entrelaçam em um eterno museu a céu aberto.",
+      "sha256": "63cc9c09572fa3c9c5e564cda362836748a5365d626c319f1480ce3c2afe3828",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 1,
+      "at": "2026-10-20T17:27:31.090Z",
+      "ms": 15655,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google AI Studio",
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 483,
+        "total_tokens": 491,
+        "cost": 0.00181725,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00181725,
+          "upstream_inference_prompt_cost": 0.000006,
+          "upstream_inference_completions_cost": 0.00181125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 447,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a eterna Cidade Luz, onde a grandiosidade da história, o pulsar da arte e o romantismo atemporal se encontram em perfeita harmonia a cada esquina.",
+      "sha256": "d9237ad2f7f40fbf1529f68672afc909a708f4b54a3e16d16a7f2661931b6c35",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 2,
+      "at": "2026-10-20T17:27:40.955Z",
+      "ms": 7361,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 502,
+        "total_tokens": 509,
+        "cost": 0.00188775,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00188775,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.0018825
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 470,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Conhecida como a Cidade Luz, Paris é um museu a céu aberto que entrelaça arte, história e romance em uma elegância atemporal.",
+      "sha256": "94462d3111e46f2f487bc8ff1bbf2a8bef05fdbad2025e43b8ad02065e0bb86c",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 3,
+      "at": "2026-10-20T17:27:48.755Z",
+      "ms": 5298,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 480,
+        "total_tokens": 487,
+        "cost": 0.00180525,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00180525,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.0018
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 445,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz: um museu a céu aberto onde séculos de história, elegância arquitetônica e uma atmosfera de eterno romance se encontram em cada esquina.",
+      "sha256": "937fa091c9b46a65dae9733137a427c30b7077f3f7ce4a2f91026e18a8182201",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 4,
+      "at": "2026-10-20T17:28:00.200Z",
+      "ms": 8941,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 495,
+        "total_tokens": 502,
+        "cost": 0.0018615,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0018615,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00185625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 467,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é um museu a céu aberto onde a arte, a história e o romance se entrelaçam com uma elegância atemporal.",
+      "sha256": "52849d62793de21d454cbc7b65dd791a89870d6c485ea03d5e5addc5e599a727",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 5,
+      "at": "2026-10-20T17:28:10.815Z",
+      "ms": 8114,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 586,
+        "total_tokens": 593,
+        "cost": 0.00220275,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00220275,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.0021975
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 554,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a eterna Cidade Luz, um museu a céu aberto onde a história secular, a arte vibrante e o romance se encontram a cada esquina.",
+      "sha256": "3482c4e659630ee59ffaf9074e2e52fcf7ff58d51e96ad1dc13edce2e1023bc7",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 6,
+      "at": "2026-10-20T17:28:18.451Z",
+      "ms": 5133,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 505,
+        "total_tokens": 512,
+        "cost": 0.001899,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001899,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00189375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 481,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é um museu a céu aberto onde história, arte e romance se encontram em uma elegância atemporal.",
+      "sha256": "2cd2af5cdab5ed34048e8beb9adb85b3dc3b9c8ab323f3da1eba0c89a884f2e8",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 7,
+      "at": "2026-10-20T17:28:26.515Z",
+      "ms": 5562,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 522,
+        "total_tokens": 529,
+        "cost": 0.00196275,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00196275,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.0019575
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 497,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é a Cidade Luz onde história, arte e elegância se entrelaçam em uma atmosfera eternamente romântica.",
+      "sha256": "705ffb8e8b3f1d2e705d369a9c3d867326475a41329ce2a081b74611bae9391c",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 8,
+      "at": "2026-10-20T17:28:34.201Z",
+      "ms": 5183,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 418,
+        "total_tokens": 425,
+        "cost": 0.00157275,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00157275,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.0015675
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 381,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Conhecida como a Cidade Luz, Paris é um museu a céu aberto onde a elegância atemporal, a história monumental e o romance se encontram em perfeita harmonia.",
+      "sha256": "a5a6086d17b04a307f8e39d8434ea06b62282a4e40f9eb155abf93b8a1992f6d",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 9,
+      "at": "2026-10-20T17:28:52.805Z",
+      "ms": 16103,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google AI Studio",
+      "usage": {
+        "prompt_tokens": 8,
+        "completion_tokens": 516,
+        "total_tokens": 524,
+        "cost": 0.001941,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001941,
+          "upstream_inference_prompt_cost": 0.000006,
+          "upstream_inference_completions_cost": 0.001935
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 483,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é uma celebração eterna da arte, da elegância e do romance, onde a história ganha vida em cada esquina com um charme inconfundível.",
+      "sha256": "7d110c66d286f02fa726de59f36af24804313939da06123243af915e06999d94",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 10,
+      "at": "2026-10-20T17:29:00.978Z",
+      "ms": 5670,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 7,
+        "completion_tokens": 563,
+        "total_tokens": 570,
+        "cost": 0.0021165,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0021165,
+          "upstream_inference_prompt_cost": 0.00000525,
+          "upstream_inference_completions_cost": 0.00211125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 536,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris é uma poesia viva de luz e romance, onde a arte, a história e a elegância se encontram em cada esquina.",
+      "sha256": "30613c5443b12f34a252ccc070e4223a26b489017ec3d8d98b4d7b9d14714bc9",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 1,
+      "at": "2026-10-20T17:29:04.730Z",
+      "ms": 1248,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.0000553,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000553,
+          "upstream_inference_prompt_cost": 0.0000063,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 2,
+      "at": "2026-10-20T17:29:08.349Z",
+      "ms": 1116,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 3,
+      "at": "2026-10-20T17:29:12.059Z",
+      "ms": 1207,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 4,
+      "at": "2026-10-20T17:29:15.944Z",
+      "ms": 1383,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 5,
+      "at": "2026-10-20T17:29:19.533Z",
+      "ms": 1086,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 6,
+      "at": "2026-10-20T17:29:23.225Z",
+      "ms": 1185,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 39,
+        "total_tokens": 57,
+        "cost": 0.00004242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000039
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a Cidade Luz devido à sua rica história, arquitetura deslumbrante e atmosfera romântica, sendo um destino turístico mundialmente famoso.",
+      "sha256": "15dbae7ab80e71273b481abf84b86719aaeab8cbd86184712df82eed7046907b",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 7,
+      "at": "2026-10-20T17:29:26.842Z",
+      "ms": 1113,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 8,
+      "at": "2026-10-20T17:29:31.176Z",
+      "ms": 1829,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.0000553,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0000553,
+          "upstream_inference_prompt_cost": 0.0000063,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 9,
+      "at": "2026-10-20T17:29:36.203Z",
+      "ms": 2524,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 0,
+      "run": 10,
+      "at": "2026-10-20T17:29:40.367Z",
+      "ms": 1660,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 49,
+        "total_tokens": 67,
+        "cost": 0.00005242,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005242,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000049
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, destacando-se pela icônica Torre Eiffel e museus de renome mundial.",
+      "sha256": "835e6d1fa211bb303b649c151efca07f697ad687a51f0d03206ab4179b24c952",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 1,
+      "at": "2026-10-20T17:29:43.885Z",
+      "ms": 1015,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 33,
+        "total_tokens": 51,
+        "cost": 0.00003642,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00003642,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000033
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica.",
+      "sha256": "886efe13ebd1d386cd868d00496b3a664bddce30770283c8ed607e2daf5c556c",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 2,
+      "at": "2026-10-20T17:29:47.756Z",
+      "ms": 1368,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 46,
+        "total_tokens": 64,
+        "cost": 0.00004942,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004942,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000046
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é famosa por sua arquitetura magnífica, arte, moda e cultura requintada, com marcos icônicos como a Torre Eiffel e a Catedral de Notre-Dame.",
+      "sha256": "8143e16abb4bfa968e18b602203be1841e03a83033c273c5d3403896936e6099",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 3,
+      "at": "2026-10-20T17:29:51.418Z",
+      "ms": 1160,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 41,
+        "total_tokens": 59,
+        "cost": 0.00004442,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004442,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000041
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e cultura vibrante, sendo um destino turístico icônico mundialmente.",
+      "sha256": "a517ae1fc6c0c2d8e5c36ae270b51b787d6a4ac03e4878e3d9fb4975ad33f870",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 4,
+      "at": "2026-10-20T17:29:55.021Z",
+      "ms": 1100,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 46,
+        "total_tokens": 64,
+        "cost": 0.00004942,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004942,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000046
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade Luz\" por sua rica história, arquitetura magnífica e influência cultural, apresentando marcos icônicos como a Torre Eiffel e o Louvre.",
+      "sha256": "1477f344311e880d1e6dbcea893fb23149316aeecd711216e08e28b7bfedf859",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 5,
+      "at": "2026-10-20T17:29:58.660Z",
+      "ms": 1138,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 46,
+        "total_tokens": 64,
+        "cost": 0.00004942,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004942,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000046
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura deslumbrante e atmosfera romântica, com ícones como a Torre Eiffel e o Louvre.",
+      "sha256": "1350d8705a93355533b19483b61a5c1ff137d034d89b8351bdf4ec8a722fedbc",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 6,
+      "at": "2026-10-20T17:30:02.179Z",
+      "ms": 1017,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 32,
+        "total_tokens": 50,
+        "cost": 0.00003542,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00003542,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000032
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade da Luz\" por sua rica história, arquitetura magnífica e atmosfera romântica.",
+      "sha256": "59aa581ef9eec4e53b74b58c11e430b17a7303dfc5158e4986aae9101c0c4a16",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 7,
+      "at": "2026-10-20T17:30:05.823Z",
+      "ms": 1140,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 32,
+        "total_tokens": 50,
+        "cost": 0.00003542,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00003542,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000032
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é famosa por sua arquitetura histórica, arte, moda e cultura, sendo um dos destinos turísticos mais visitados do mundo.",
+      "sha256": "7fc7cde09fbe0908c469907b69f34f398bf089dd18e136aa4bb86273c652e82d",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 8,
+      "at": "2026-10-20T17:30:09.639Z",
+      "ms": 1314,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 36,
+        "total_tokens": 54,
+        "cost": 0.00003942,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00003942,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000036
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é conhecida como a \"Cidade Luz\" por sua rica história, arte, moda e arquitetura icônica, incluindo a famosa Torre Eiffel.",
+      "sha256": "f194074fa5ccfed5880d5a9ebda1e2cabd300e45bf4e3a7b86d49b9132bce030",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 9,
+      "at": "2026-10-20T17:30:14.050Z",
+      "ms": 1908,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 37,
+        "total_tokens": 55,
+        "cost": 0.00004042,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004042,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000037
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é uma cidade conhecida por sua arquitetura icônica, arte, moda e cultura, com atrações como a Torre Eiffel e o Louvre.",
+      "sha256": "040ca9560a0030dc0d7aa8b76e1ed724bdd2046e43c8eb01a23cd755576393b0",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "temperature": 1,
+      "run": 10,
+      "at": "2026-10-20T17:30:17.639Z",
+      "ms": 1087,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 43,
+        "total_tokens": 61,
+        "cost": 0.00004642,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 16,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004642,
+          "upstream_inference_prompt_cost": 0.00000342,
+          "upstream_inference_completions_cost": 0.000043
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "content": "Paris, a capital da França, é uma cidade conhecida por sua arquitetura histórica, arte, moda e cultura, com marcos icônicos como a Torre Eiffel e a Catedral de Notre-Dame.",
+      "sha256": "743178e08286f31d0bc4346a5551308f0ff7f668e1e0b6c562fcc7874c0b36bf",
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T17:30:20.141Z"
+}

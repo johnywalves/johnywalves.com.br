@@ -1,0 +1,741 @@
+{
+  "startedAt": "2026-10-20T16:52:14.680Z",
+  "input": "quero cancelar e pedir reembolso do mês passado",
+  "runsPerModel": 10,
+  "models": [
+    {
+      "label": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "model": "gpt-6.1-sol",
+      "temperature": false,
+      "exists": true,
+      "pricing": null
+    }
+  ],
+  "prompts": {
+    "specSystem": "Você é o módulo de classificação de um chat de suporte. Siga a política billing.cancellation.v3.\nPolítica:\n- \"cancelar\" significa encerrar a assinatura ao fim do ciclo atual.\n- \"reembolso do mês passado\" significa reembolsar o ciclo de cobrança anterior.\n- Intenções permitidas: billing_agent, tech_support, security_review.\n- Ações permitidas: cancel_subscription, refund_previous_cycle. Liste em ordem alfabética.\nResponda somente com o JSON do schema. Nunca escreva texto fora do JSON.",
+    "specSchema": {
+      "name": "decisao",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intent",
+          "actions",
+          "refund_cycle"
+        ],
+        "properties": {
+          "intent": {
+            "type": "string",
+            "enum": [
+              "billing_agent",
+              "tech_support",
+              "security_review"
+            ]
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "cancel_subscription",
+                "refund_previous_cycle"
+              ]
+            }
+          },
+          "refund_cycle": {
+            "type": "string",
+            "enum": [
+              "previous"
+            ]
+          }
+        }
+      }
+    },
+    "controlSystem": "Você atende clientes de uma assinatura. Responda ao cliente."
+  },
+  "runs": [
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:52:18.032Z",
+      "ms": 3352,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:52:21.002Z",
+      "ms": 2969,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:52:23.054Z",
+      "ms": 2051,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:52:24.785Z",
+      "ms": 1730,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:52:27.179Z",
+      "ms": 2393,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:52:30.102Z",
+      "ms": 2922,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:52:32.156Z",
+      "ms": 2054,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:52:35.019Z",
+      "ms": 2862,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:52:38.309Z",
+      "ms": 3289,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:52:41.945Z",
+      "ms": 3634,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 29,
+        "total_tokens": 235,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:52:47.901Z",
+      "ms": 5954,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 163,
+        "total_tokens": 196,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 92,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi: você quer cancelar a assinatura e solicitar o reembolso da cobrança do mês passado.\n\nQual é o serviço da assinatura e a data dessa cobrança? Com isso, posso orientar os próximos passos. O reembolso depende da política do serviço e precisa ser confirmado.\n\nNão envie senha nem dados completos do cartão.",
+      "sha256": "cbef993fc882728d91a56279eac2aca65f1a9730777756df2544538dd68f8dde",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:52:58.599Z",
+      "ms": 10697,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 52,
+        "total_tokens": 85,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Posso ajudar com o cancelamento e a solicitação de reembolso do mês passado. Qual é o serviço ou a assinatura?\n\nNão envie senha nem dados completos do cartão. O reembolso depende da política do serviço e precisará ser confirmado.",
+      "sha256": "dfbdd01250b084dbaa4ee95af240eb5163822ea815487c1520b379d9fda0119f",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:53:01.347Z",
+      "ms": 2746,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 52,
+        "total_tokens": 85,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Posso ajudar com o cancelamento e a solicitação de reembolso do mês passado. Qual é o serviço ou a assinatura?\n\nO reembolso depende da política do serviço e da data da cobrança. Não envie senha nem dados completos do cartão.",
+      "sha256": "4bd5baa31a951ac69450ca00ad06fc836715904e4478faa2c83bca706b8e1c9e",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:53:08.626Z",
+      "ms": 7278,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 195,
+        "total_tokens": 228,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 130,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi: você quer cancelar a assinatura e pedir o reembolso da cobrança do mês passado.\n\nVocê assinou pelo **site, pela App Store ou pelo Google Play**? Com essa informação, posso orientar os próximos passos. O reembolso depende da política aplicável à cobrança.",
+      "sha256": "ec90f7bb2b449413f898267d913ba032b77894ea061d0de401f716ec0dd16d6d",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:53:15.463Z",
+      "ms": 6836,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 199,
+        "total_tokens": 232,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 139,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi: você quer cancelar a assinatura e solicitar o reembolso da cobrança do mês passado.\n\nQual é o serviço ou a plataforma da assinatura? Assim, posso orientar os próximos passos. O reembolso depende da política do serviço e da data da cobrança.",
+      "sha256": "ff1037decd6ff5df2adf6ee906ac1c1f935bd6789f50430b33750239b2ff8418",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:53:24.130Z",
+      "ms": 8667,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 215,
+        "total_tokens": 248,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 144,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Posso te orientar no cancelamento e no pedido de reembolso do mês passado. O reembolso depende da política do serviço e da data da cobrança, então não consigo garanti-lo de antemão.\n\nQual é o serviço da assinatura e por onde você contratou: site, App Store ou Google Play?",
+      "sha256": "9048780b4aefeccf0009f0907a6146f4da73582dd963c7070c6bc4d2a5dd3c7c",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:53:33.802Z",
+      "ms": 9671,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 261,
+        "total_tokens": 294,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 184,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi — você quer cancelar a assinatura e pedir o reembolso da cobrança do mês passado.\n\n**Qual é o nome do serviço?** Assim, posso indicar o caminho correto para os dois pedidos. Não consigo efetivar o cancelamento nem emitir o reembolso diretamente por aqui, e a aprovação do reembolso depende da política do serviço.",
+      "sha256": "7585b1e9752f45e634dbe1dc3d8258bef729b6601f4f739aee1da5562b9bbf7f",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:53:41.676Z",
+      "ms": 7874,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 221,
+        "total_tokens": 254,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 137,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi. Você quer cancelar a assinatura e solicitar o reembolso da cobrança do mês passado.\n\nQual é o serviço e em que data essa cobrança foi feita? Não envie dados do cartão.\n\nPor aqui, não tenho acesso à sua conta para efetuar o cancelamento ou o reembolso, mas posso orientar os próximos passos. O reembolso dependerá das regras do serviço.",
+      "sha256": "d94d471e6cc3a736cba809a1becdc88725996cf43e404adcb34008d995104a16",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:53:48.930Z",
+      "ms": 7252,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 210,
+        "total_tokens": 243,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 148,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi. Você fez a assinatura pelo site, pela App Store ou pelo Google Play?\n\nCom essa informação, posso orientar como cancelar e solicitar o reembolso da cobrança do mês passado. A aprovação do reembolso depende das regras da plataforma e da data da cobrança.",
+      "sha256": "d852372fde8ba22e0c76cb0e85fbfd954a9c8886c02368ad86c32fcbe8c597dc",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "via": "openai",
+      "requested": "gpt-6.1-sol",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:53:59.862Z",
+      "ms": 10931,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 250,
+        "total_tokens": 283,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 181,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "temperatureSent": null,
+      "content": "Entendi: você quer cancelar a assinatura e pedir o reembolso da cobrança do mês passado.\n\nVocê assinou pelo **site, pela App Store ou pelo Google Play**? Assim posso indicar o caminho correto para os dois pedidos. O reembolso depende da política aplicável e ainda precisa ser aprovado.",
+      "sha256": "e679a14b034743e3ce2d795d2f321561e0985dd663f216b896db6d2e9a8c6f93",
+      "canonicalSha256": null,
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T16:53:59.863Z"
+}

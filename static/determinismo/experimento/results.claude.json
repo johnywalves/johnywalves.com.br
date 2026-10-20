@@ -1,0 +1,521 @@
+{
+  "startedAt": "2026-10-20T16:41:54.284Z",
+  "input": "quero cancelar e pedir reembolso do mês passado",
+  "runsPerModel": 10,
+  "models": [
+    {
+      "label": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "model": "cc/claude-sonnet-5-5",
+      "exists": true,
+      "temperature": true,
+      "pricing": null
+    }
+  ],
+  "prompts": {
+    "specSystem": "Você é o módulo de classificação de um chat de suporte. Siga a política billing.cancellation.v3.\nPolítica:\n- \"cancelar\" significa encerrar a assinatura ao fim do ciclo atual.\n- \"reembolso do mês passado\" significa reembolsar o ciclo de cobrança anterior.\n- Intenções permitidas: billing_agent, tech_support, security_review.\n- Ações permitidas: cancel_subscription, refund_previous_cycle. Liste em ordem alfabética.\nResponda somente com o JSON do schema. Nunca escreva texto fora do JSON.",
+    "specSchema": {
+      "name": "decisao",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intent",
+          "actions",
+          "refund_cycle"
+        ],
+        "properties": {
+          "intent": {
+            "type": "string",
+            "enum": [
+              "billing_agent",
+              "tech_support",
+              "security_review"
+            ]
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "cancel_subscription",
+                "refund_previous_cycle"
+              ]
+            }
+          },
+          "refund_cycle": {
+            "type": "string",
+            "enum": [
+              "previous"
+            ]
+          }
+        }
+      }
+    },
+    "controlSystem": "Você atende clientes de uma assinatura. Responda ao cliente."
+  },
+  "runs": [
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:41:58.383Z",
+      "ms": 4099,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:42:00.138Z",
+      "ms": 1753,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:42:02.879Z",
+      "ms": 2740,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:42:06.341Z",
+      "ms": 3461,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:42:09.408Z",
+      "ms": 3066,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:42:11.010Z",
+      "ms": 1601,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:42:12.381Z",
+      "ms": 1370,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:42:19.009Z",
+      "ms": 6626,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:42:22.005Z",
+      "ms": 2995,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:42:23.801Z",
+      "ms": 1794,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 50,
+        "total_tokens": 2075
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:42:27.880Z",
+      "ms": 4078,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 377,
+        "total_tokens": 2402
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com os dois pedidos. Preciso de:\n\n- E-mail da conta\n- Plano contratado\n- Data e valor da cobrança do mês passado\n- Motivo do reembolso (ajuda a analisar o pedido)\n\nCancelamento: encerra o acesso ao fim do período já pago ou imediatamente, conforme o plano. Confirme se quer cancelar agora ou só após o ciclo atual.\n\nReembolso: depende da política do plano e do prazo desde a cobrança. Só confirmo aprovação após analisar a conta. Não prometo valor antes disso.\n\nEnvie os dados e eu sigo com o pedido.",
+      "sha256": "acaeee1b9ae79ac8d0b2286baf026dc7feff2f8b88cc9bbe033802917cf41a64",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:42:36.126Z",
+      "ms": 8245,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 353,
+        "total_tokens": 2378
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com os dois pedidos. Preciso de:\n\n1. E-mail da conta.\n2. Nome do plano.\n3. Data e valor da cobrança do mês passado.\n4. Motivo do reembolso (cobrança indevida, não usou, outro).\n\nCancelamento encerra o acesso ao fim do período já pago, e pode perder dados ou benefícios da conta. Confirme que quer cancelar mesmo.\n\nReembolso depende da política do plano e da análise do pedido. Não posso garantir aprovação antes de checar a cobrança. Mando os dados e aviso o resultado.",
+      "sha256": "0b872506f6103debea509bfc487337f9e20d5f34b6a6c923ab2de2b32ffe4e04",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:42:43.000Z",
+      "ms": 6874,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 341,
+        "total_tokens": 2366
+      },
+      "temperatureSent": 0,
+      "content": "Entendi: cancelar assinatura e pedir reembolso da cobrança do mês passado.\n\nPreciso de:\n\n- E-mail da conta\n- Data e valor da cobrança\n- Motivo do pedido (cobrança indevida, não usou, outro)\n\nCom isso, abro o cancelamento e envio o pedido de reembolso para análise. Aprovação depende da política do plano e do prazo desde a cobrança. Não posso prometer valor ou prazo antes dessa checagem.\n\nSe quiser, cancele já para evitar nova cobrança. Me avise e sigo com isso primeiro.",
+      "sha256": "534bd84c1c1b44dffa659083c2226d7aba15690a6ef28bba897af5a2e5925ab9",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:42:48.061Z",
+      "ms": 5061,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 341,
+        "total_tokens": 2366
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com os dois pedidos. Preciso de:\n\n1. E-mail da conta.\n2. Plano contratado.\n3. Data e valor da cobrança do mês passado.\n4. Motivo do reembolso (cobrança indevida, não usou, outro).\n\nCancelamento encerra acesso ao fim do ciclo atual ou na hora, conforme o plano. Confirme que quer cancelar mesmo, antes de eu seguir.\n\nReembolso depende da política do plano e da análise do caso. Não prometo aprovação agora. Com os dados acima, eu encaminho o pedido.",
+      "sha256": "afda4a50ab3f0f8977a772d84695bbc50a6fd23a6f39f9237a1c8968bee5aacf",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:42:56.245Z",
+      "ms": 8182,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 411,
+        "total_tokens": 2436
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com os dois pedidos. Preciso de:\n\n- E-mail da conta\n- Data aproximada da última cobrança, e valor se souber\n- Motivo do reembolso (cobrança indevida, não usou, outro). Ajuda na análise.\n\nConfirme também: quer cancelar agora ou só ao fim do ciclo atual? Cancelar agora pode encerrar acesso na hora.\n\nNão tenho acesso aos dados da conta neste chat. Reembolso depende de política do plano e de análise do pedido, então não posso garantir aprovação ou prazo antes de verificar.\n\nEnvie os dados acima e eu encaminho os dois pedidos.",
+      "sha256": "f9ab6c80f2be83675b7f137b04229b847dd0a4d3bc0ccce9b1cf0a034216c7b2",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:43:02.687Z",
+      "ms": 6441,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 354,
+        "total_tokens": 2379
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com os dois pedidos. Preciso de:\n\n- E-mail da conta\n- Plano contratado\n- Data e valor da cobrança do mês passado\n- Motivo do reembolso (cobrança indevida, não usou, outro)\n\nCancelamento encerra acesso ao fim do período já pago ou na hora, conforme o plano. Confirme que quer cancelar mesmo, antes de eu seguir.\n\nReembolso depende da política do plano e da análise do pedido. Não consigo garantir aprovação antes de checar a cobrança.",
+      "sha256": "15c694f11776e636c92eb13dce484aa70065d61d16fcdec94b0d8388ddb96ef7",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:43:09.829Z",
+      "ms": 7141,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 368,
+        "total_tokens": 2393
+      },
+      "temperatureSent": 0,
+      "content": "Entendi: cancelar assinatura e reembolso da cobrança do mês passado.\n\nPreciso de:\n\n1. E-mail da conta.\n2. Data e valor da cobrança a reembolsar.\n3. Confirmação: cancelar agora (acesso encerra) ou ao fim do ciclo atual?\n4. Motivo do pedido (opcional, ajuda na análise).\n\nReembolso depende da política do plano e da análise do pedido. Não posso prometer aprovação antes de checar a cobrança.\n\nMande os dados acima. Sigo com cancelamento e pedido de reembolso.",
+      "sha256": "f98c1b044de28df55ab742bb69799699b071aaf67b54a21a288a0529bfa2b7e5",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:43:15.865Z",
+      "ms": 6035,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 339,
+        "total_tokens": 2364
+      },
+      "temperatureSent": 0,
+      "content": "Entendi: cancelar assinatura e reembolsar cobrança do mês passado. Preciso de dados para começar:\n\n1. E-mail da conta.\n2. Nome do plano.\n3. Data e valor da cobrança do mês passado.\n4. Motivo do reembolso (opcional, ajuda na análise).\n\nCancelamento cancela renovação futura. Reembolso passa por análise conforme política do plano. Não posso garantir aprovação antes de checar a conta.\n\nManda os dados que sigo com o pedido.",
+      "sha256": "fde90a92822505415182c59a92725cbe95997a487fe945e7e6cb598f855c7628",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:43:20.388Z",
+      "ms": 4522,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 388,
+        "total_tokens": 2413
+      },
+      "temperatureSent": 0,
+      "content": "Entendi: cancelar assinatura e pedir reembolso da cobrança do mês passado.\n\nPreciso de:\n\n1. E-mail da conta\n2. Plano contratado\n3. Data e valor da cobrança\n4. Motivo do reembolso (opcional, ajuda na análise)\n\nCancelamento: confirme que quer encerrar agora. Após cancelar, acesso pode acabar no fim do ciclo atual ou na hora, dependendo do plano.\n\nReembolso: não posso garantir aprovação antes de analisar a cobrança. Mando os dados e informo o resultado.\n\nResponda com os dados acima e um \"confirmo cancelamento\".",
+      "sha256": "0dd7a89580dfe63180f443215c36544bfc4adbc771e87fbdc114fd92876605a4",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "via": "9router",
+      "requested": "cc/claude-sonnet-5-5",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:43:24.836Z",
+      "ms": 4447,
+      "status": 200,
+      "ok": true,
+      "servedBy": "claude-sonnet-5-5",
+      "provider": null,
+      "usage": {
+        "prompt_tokens": 2025,
+        "completion_tokens": 405,
+        "total_tokens": 2430
+      },
+      "temperatureSent": 0,
+      "content": "Posso ajudar com cancelamento e pedido de reembolso. Preciso de:\n\n1. E-mail da conta\n2. Data e valor da cobrança do mês passado\n3. Motivo do reembolso (cobrança indevida, não usou, outro)\n\nConfirme também: quer cancelar agora ou só no fim do ciclo atual? Cancelamento pode não ter volta, então preciso da sua confirmação clara.\n\nReembolso passa por análise. Não posso garantir aprovação antes de checar a cobrança.",
+      "sha256": "a89077026595e485493a0aea2a84ab492c37b3fbbd017934e41a21925202ba2e",
+      "canonicalSha256": null,
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T16:43:24.836Z"
+}

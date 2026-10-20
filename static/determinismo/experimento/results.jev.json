@@ -1,0 +1,1913 @@
+{
+  "startedAt": "2026-10-20T17:41:01.130Z",
+  "model": "openrouter/typesafe/jev-1.13",
+  "state": "quero cancelar e pedir reembolso do mês passado",
+  "questions": {
+    "urgente": {
+      "type": "noul",
+      "instructions": "O cliente pede uma ação urgente?"
+    },
+    "intencao": {
+      "type": "choice",
+      "instructions": "Qual é a intenção do cliente?",
+      "criteria": {
+        "billing_agent": "cobrança, cancelamento ou reembolso",
+        "tech_support": "problema técnico",
+        "security_review": "questão de segurança"
+      }
+    },
+    "grau": {
+      "type": "score",
+      "instructions": "Quão urgente é o pedido?",
+      "criteria": [
+        "sem pressa",
+        "precisa de resposta hoje",
+        "crítico, perda imediata"
+      ]
+    }
+  },
+  "runs": 40,
+  "results": [
+    {
+      "run": 1,
+      "at": "2026-10-20T17:41:01.626Z",
+      "ms": 476,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.71,
+            "2": 0
+          },
+          "confidence": 0.56
+        }
+      },
+      "sha256": "02c9c33bbdb94cdaec49d8f90114132f0555ab63ef40e4fda5d94dd84df2d842",
+      "error": null
+    },
+    {
+      "run": 2,
+      "at": "2026-10-20T17:41:02.102Z",
+      "ms": 472,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.72,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "4b46ffc3f90b2d6bcbcb6e622d9422272ab164f9de247dc55f2de3cd9f9d8972",
+      "error": null
+    },
+    {
+      "run": 3,
+      "at": "2026-10-20T17:41:02.596Z",
+      "ms": 493,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.66,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.34,
+            "1": 0.66,
+            "2": 0
+          },
+          "confidence": 0.49
+        }
+      },
+      "sha256": "c94b1dc8798f2af1ca83c01fcf924327b3a7dc29140d810d07b32586e796b89a",
+      "error": null
+    },
+    {
+      "run": 4,
+      "at": "2026-10-20T17:41:02.977Z",
+      "ms": 379,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.74,
+            "2": 0
+          },
+          "confidence": 0.61
+        }
+      },
+      "sha256": "2e6cca86bf35e70dc1fefbb6e3a877db6505b7fd1f3fc300375ec8a8a46ebbd4",
+      "error": null
+    },
+    {
+      "run": 5,
+      "at": "2026-10-20T17:41:03.402Z",
+      "ms": 424,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.72,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "5679ee251e31aea59cae0a57a49e3321dccb202774eb0f39d075118d9614faa4",
+      "error": null
+    },
+    {
+      "run": 6,
+      "at": "2026-10-20T17:41:03.768Z",
+      "ms": 360,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "dc10a61e29db4e88bc0e327d44a7d85d4f481597c828909af84449cf26a88b05",
+      "error": null
+    },
+    {
+      "run": 7,
+      "at": "2026-10-20T17:41:04.119Z",
+      "ms": 350,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.7,
+            "2": 0
+          },
+          "confidence": 0.55
+        }
+      },
+      "sha256": "85b970ced7ed5e067f5f240fca0f5b0493b606a315541d671f88d589f4c9127b",
+      "error": null
+    },
+    {
+      "run": 8,
+      "at": "2026-10-20T17:41:04.453Z",
+      "ms": 332,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.69,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.69,
+            "2": 0
+          },
+          "confidence": 0.53
+        }
+      },
+      "sha256": "eb02d08a23f505214f1afdf79fc754bcc4735565d47df24fec55f6ba906e06e0",
+      "error": null
+    },
+    {
+      "run": 9,
+      "at": "2026-10-20T17:41:04.843Z",
+      "ms": 389,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "dc10a61e29db4e88bc0e327d44a7d85d4f481597c828909af84449cf26a88b05",
+      "error": null
+    },
+    {
+      "run": 10,
+      "at": "2026-10-20T17:41:05.198Z",
+      "ms": 353,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.75,
+            "2": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "sha256": "9cd150a2b6b231db89525254226f044228230cb7cc688d2504dcb1bd71a36387",
+      "error": null
+    },
+    {
+      "run": 11,
+      "at": "2026-10-20T17:41:05.558Z",
+      "ms": 359,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.71,
+            "2": 0
+          },
+          "confidence": 0.56
+        }
+      },
+      "sha256": "315490de8e5324d7843d265bf493a0243744d46ade6e8b16b9b5646c6c5ae6a3",
+      "error": null
+    },
+    {
+      "run": 12,
+      "at": "2026-10-20T17:41:05.928Z",
+      "ms": 368,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.74,
+            "2": 0
+          },
+          "confidence": 0.61
+        }
+      },
+      "sha256": "2e6cca86bf35e70dc1fefbb6e3a877db6505b7fd1f3fc300375ec8a8a46ebbd4",
+      "error": null
+    },
+    {
+      "run": 13,
+      "at": "2026-10-20T17:41:06.287Z",
+      "ms": 358,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.72,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "4b46ffc3f90b2d6bcbcb6e622d9422272ab164f9de247dc55f2de3cd9f9d8972",
+      "error": null
+    },
+    {
+      "run": 14,
+      "at": "2026-10-20T17:41:06.652Z",
+      "ms": 364,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.72,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "19e10c3f3b472b2bd296bb94f0c786d24dc9e0bb8e63396a3388bce6e230b6fd",
+      "error": null
+    },
+    {
+      "run": 15,
+      "at": "2026-10-20T17:41:07.009Z",
+      "ms": 356,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.71,
+            "2": 0
+          },
+          "confidence": 0.56
+        }
+      },
+      "sha256": "315490de8e5324d7843d265bf493a0243744d46ade6e8b16b9b5646c6c5ae6a3",
+      "error": null
+    },
+    {
+      "run": 16,
+      "at": "2026-10-20T17:41:07.354Z",
+      "ms": 342,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.75,
+            "2": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "sha256": "df4c39e0c11e5c064eba1a2b49c4bffbe3152404766a761e483428d1255ccd66",
+      "error": null
+    },
+    {
+      "run": 17,
+      "at": "2026-10-20T17:41:07.700Z",
+      "ms": 344,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.7,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.3,
+            "1": 0.7,
+            "2": 0
+          },
+          "confidence": 0.55
+        }
+      },
+      "sha256": "d0dde4f5a5f341121cd16393df04ecfd4f5a561a09c88f8b21a8339f4e183d05",
+      "error": null
+    },
+    {
+      "run": 18,
+      "at": "2026-10-20T17:41:08.054Z",
+      "ms": 352,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.75,
+            "2": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "sha256": "9ce6fb120a35588f300c2b8855e67da1d05978c82259f3f5882cfa0aa6670195",
+      "error": null
+    },
+    {
+      "run": 19,
+      "at": "2026-10-20T17:41:08.391Z",
+      "ms": 336,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.74,
+            "2": 0
+          },
+          "confidence": 0.61
+        }
+      },
+      "sha256": "930a41e6939944d60d5085a0b4368b69451b2caef7f244df05e401b08f92e651",
+      "error": null
+    },
+    {
+      "run": 20,
+      "at": "2026-10-20T17:41:08.734Z",
+      "ms": 342,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "7c066749c46b086d55d2a03d4e83bf24f7ed8e18c4cd7e052afa0698e8d1645f",
+      "error": null
+    },
+    {
+      "run": 21,
+      "at": "2026-10-20T17:41:09.111Z",
+      "ms": 376,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "c1e47f14566354a522ad56a574065a444d409496f4a7c4555550f437c48ba39b",
+      "error": null
+    },
+    {
+      "run": 22,
+      "at": "2026-10-20T17:41:09.461Z",
+      "ms": 349,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "06b3ddbaf3cae9f21af5f87adcdcd37f01abdd667c08d53a976d802ae7eee386",
+      "error": null
+    },
+    {
+      "run": 23,
+      "at": "2026-10-20T17:41:09.793Z",
+      "ms": 331,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.68,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.68,
+            "2": 0
+          },
+          "confidence": 0.52
+        }
+      },
+      "sha256": "1241fbe46624a293a112fcb69d114bdbfcdd70484c482bc789b8a42a63be11bb",
+      "error": null
+    },
+    {
+      "run": 24,
+      "at": "2026-10-20T17:41:10.164Z",
+      "ms": 369,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "7c066749c46b086d55d2a03d4e83bf24f7ed8e18c4cd7e052afa0698e8d1645f",
+      "error": null
+    },
+    {
+      "run": 25,
+      "at": "2026-10-20T17:41:10.531Z",
+      "ms": 366,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.75,
+            "2": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "sha256": "df4c39e0c11e5c064eba1a2b49c4bffbe3152404766a761e483428d1255ccd66",
+      "error": null
+    },
+    {
+      "run": 26,
+      "at": "2026-10-20T17:41:10.872Z",
+      "ms": 340,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.69,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.69,
+            "2": 0
+          },
+          "confidence": 0.53
+        }
+      },
+      "sha256": "2de14f40e5950eb23c1019742bd3b0d00c15b3049c3c2fb1860613d1fd10b292",
+      "error": null
+    },
+    {
+      "run": 27,
+      "at": "2026-10-20T17:41:11.231Z",
+      "ms": 356,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.69,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.31,
+            "1": 0.6900000000000001,
+            "2": 0
+          },
+          "confidence": 0.53
+        }
+      },
+      "sha256": "172b26750961c9a50d86cd9aa261d512b16e9bca72c8552672629c17769f32d0",
+      "error": null
+    },
+    {
+      "run": 28,
+      "at": "2026-10-20T17:41:11.613Z",
+      "ms": 381,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.71,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.29,
+            "1": 0.71,
+            "2": 0
+          },
+          "confidence": 0.56
+        }
+      },
+      "sha256": "02c9c33bbdb94cdaec49d8f90114132f0555ab63ef40e4fda5d94dd84df2d842",
+      "error": null
+    },
+    {
+      "run": 29,
+      "at": "2026-10-20T17:41:11.978Z",
+      "ms": 364,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.37
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "bdb12c3f2586db9e666e0ec46010a275611b234cd094f0a9492bf23c5961be49",
+      "error": null
+    },
+    {
+      "run": 30,
+      "at": "2026-10-20T17:41:12.356Z",
+      "ms": 377,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.78,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.22,
+            "1": 0.77,
+            "2": 0.01
+          },
+          "confidence": 0.66
+        }
+      },
+      "sha256": "1fb4cbab8eafc717779c83116304fa3d4384d7286c43c9aa8664d3b2ddf24586",
+      "error": null
+    },
+    {
+      "run": 31,
+      "at": "2026-10-20T17:41:12.709Z",
+      "ms": 351,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.75,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.75,
+            "2": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "sha256": "5baec86ef0a783abcfb450ffa409dede974cae0cad29d13d8785807000429270",
+      "error": null
+    },
+    {
+      "run": 32,
+      "at": "2026-10-20T17:41:13.089Z",
+      "ms": 379,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "7c066749c46b086d55d2a03d4e83bf24f7ed8e18c4cd7e052afa0698e8d1645f",
+      "error": null
+    },
+    {
+      "run": 33,
+      "at": "2026-10-20T17:41:13.467Z",
+      "ms": 376,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "406ada73fee11a8f924c9f20d04f8ff8c02ca4fbdbe3cdabd3212813908bfae6",
+      "error": null
+    },
+    {
+      "run": 34,
+      "at": "2026-10-20T17:41:13.836Z",
+      "ms": 368,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.68,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.32,
+            "1": 0.68,
+            "2": 0
+          },
+          "confidence": 0.52
+        }
+      },
+      "sha256": "aa41b191e8f8dc5e4a90445eff0b278e0a662e400d7da8d0dc49a27695f89f4e",
+      "error": null
+    },
+    {
+      "run": 35,
+      "at": "2026-10-20T17:41:14.185Z",
+      "ms": 348,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.76,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.25,
+            "1": 0.75,
+            "2": 0
+          },
+          "confidence": 0.62
+        }
+      },
+      "sha256": "844a907b9621aa76d956d5803074caac9329f66c089e6cdbc01f3669e049b036",
+      "error": null
+    },
+    {
+      "run": 36,
+      "at": "2026-10-20T17:41:14.544Z",
+      "ms": 358,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.35
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.74,
+            "2": 0
+          },
+          "confidence": 0.61
+        }
+      },
+      "sha256": "627f8d5f8eb8417f980ecb2eb1f1a2a82a81a7ebc655288570c0e7559257fa56",
+      "error": null
+    },
+    {
+      "run": 37,
+      "at": "2026-10-20T17:41:14.902Z",
+      "ms": 357,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.34
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "2c149bbfc98c423927b97e407260588f664b9ca7cca7130644daba3860713023",
+      "error": null
+    },
+    {
+      "run": 38,
+      "at": "2026-10-20T17:41:15.252Z",
+      "ms": 349,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.26,
+            "1": 0.74,
+            "2": 0
+          },
+          "confidence": 0.61
+        }
+      },
+      "sha256": "aef77c17a2ed578c67d9974bafaffa390964ee5afbaeb579c77b3d27d32af238",
+      "error": null
+    },
+    {
+      "run": 39,
+      "at": "2026-10-20T17:41:15.605Z",
+      "ms": 351,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.33
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.73,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.28,
+            "1": 0.72,
+            "2": 0
+          },
+          "confidence": 0.58
+        }
+      },
+      "sha256": "190225014aae25c4de410d017ae162f0c13494bef10f5e8e28cb0a3a0231099b",
+      "error": null
+    },
+    {
+      "run": 40,
+      "at": "2026-10-20T17:41:15.984Z",
+      "ms": 378,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "usage": {
+        "input_tokens": 417,
+        "output_tokens": 76,
+        "cost": 0.000017514
+      },
+      "answers": {
+        "urgente": {
+          "type": "noul",
+          "noul": 0.36
+        },
+        "intencao": {
+          "type": "choice",
+          "choice": "billing_agent",
+          "probabilities": {
+            "billing_agent": 1,
+            "tech_support": 0,
+            "security_review": 0
+          },
+          "confidence": 1
+        },
+        "grau": {
+          "type": "score",
+          "score": 0.74,
+          "legend": {
+            "0": "sem pressa",
+            "1": "precisa de resposta hoje",
+            "2": "crítico, perda imediata"
+          },
+          "probabilities": {
+            "0": 0.27,
+            "1": 0.73,
+            "2": 0
+          },
+          "confidence": 0.59
+        }
+      },
+      "sha256": "aca90462e16e272e350b03245deb8a313373690478181487ad946cb9348baffe",
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T17:41:15.985Z"
+}

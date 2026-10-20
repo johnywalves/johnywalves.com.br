@@ -1,0 +1,1516 @@
+{
+  "startedAt": "2026-10-20T18:01:29.739Z",
+  "model": "openrouter/typesafe/jev-1.13",
+  "question": {
+    "type": "choice",
+    "instructions": "Qual é a intenção do cliente?",
+    "criteria": {
+      "billing_agent": "cobrança, fatura, plano, cancelamento ou reembolso",
+      "tech_support": "problema técnico ou erro no produto",
+      "security_review": "acesso indevido, conta invadida ou segurança da conta"
+    }
+  },
+  "bands": {
+    "alta": ">= 0,90",
+    "media": "0,60 a 0,89",
+    "baixa": "< 0,60"
+  },
+  "reps": 3,
+  "results": [
+    {
+      "group": "claro",
+      "state": "quero cancelar e pedir reembolso do mês passado",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:30.381Z",
+      "ms": 642,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero cancelar e pedir reembolso do mês passado",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:30.784Z",
+      "ms": 402,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero cancelar e pedir reembolso do mês passado",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:31.112Z",
+      "ms": 328,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "fui cobrado duas vezes no cartão este mês",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:31.464Z",
+      "ms": 350,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "fui cobrado duas vezes no cartão este mês",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:31.805Z",
+      "ms": 341,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "fui cobrado duas vezes no cartão este mês",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:32.158Z",
+      "ms": 353,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "preciso da segunda via da fatura de agosto",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:32.537Z",
+      "ms": 377,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "preciso da segunda via da fatura de agosto",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:32.902Z",
+      "ms": 365,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "preciso da segunda via da fatura de agosto",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:33.249Z",
+      "ms": 347,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero trocar meu plano para o anual",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:33.597Z",
+      "ms": 348,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero trocar meu plano para o anual",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:33.963Z",
+      "ms": 366,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero trocar meu plano para o anual",
+      "expected": [
+        "billing_agent"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:34.321Z",
+      "ms": 358,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 1,
+        "tech_support": 0,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "o aplicativo fecha sozinho quando abro a tela de relatórios",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:34.682Z",
+      "ms": 360,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "o aplicativo fecha sozinho quando abro a tela de relatórios",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:35.212Z",
+      "ms": 530,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "o aplicativo fecha sozinho quando abro a tela de relatórios",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:35.563Z",
+      "ms": 351,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "não consigo fazer upload de arquivos maiores que 10 MB",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:35.928Z",
+      "ms": 364,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "não consigo fazer upload de arquivos maiores que 10 MB",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:36.282Z",
+      "ms": 354,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "não consigo fazer upload de arquivos maiores que 10 MB",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:36.639Z",
+      "ms": 357,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "a página de login fica carregando sem parar",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:37.000Z",
+      "ms": 360,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "a página de login fica carregando sem parar",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:37.353Z",
+      "ms": 353,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "a página de login fica carregando sem parar",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:37.717Z",
+      "ms": 364,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "o botão de exportar para PDF não faz nada",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:38.140Z",
+      "ms": 422,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "o botão de exportar para PDF não faz nada",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:38.479Z",
+      "ms": 339,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "o botão de exportar para PDF não faz nada",
+      "expected": [
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:38.837Z",
+      "ms": 358,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 1,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "acho que alguém acessou minha conta sem permissão",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:39.203Z",
+      "ms": 365,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "acho que alguém acessou minha conta sem permissão",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:39.607Z",
+      "ms": 404,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "acho que alguém acessou minha conta sem permissão",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:39.934Z",
+      "ms": 327,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "recebi um e-mail de login de um país onde nunca estive",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:40.296Z",
+      "ms": 361,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "recebi um e-mail de login de um país onde nunca estive",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:40.626Z",
+      "ms": 330,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "recebi um e-mail de login de um país onde nunca estive",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:41.067Z",
+      "ms": 441,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero ativar a verificação em duas etapas",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:41.405Z",
+      "ms": 337,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero ativar a verificação em duas etapas",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:41.762Z",
+      "ms": 357,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "quero ativar a verificação em duas etapas",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:42.121Z",
+      "ms": 359,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "perdi meu celular e preciso revogar meus acessos",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:42.466Z",
+      "ms": 344,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "perdi meu celular e preciso revogar meus acessos",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:42.817Z",
+      "ms": 351,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "claro",
+      "state": "perdi meu celular e preciso revogar meus acessos",
+      "expected": [
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:43.174Z",
+      "ms": 357,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 1,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0,
+        "security_review": 1
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "meu cartão foi cobrado e não consigo mais acessar a conta",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:43.523Z",
+      "ms": 348,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.76,
+      "probabilities": {
+        "billing_agent": 0.13,
+        "tech_support": 0.03,
+        "security_review": 0.84
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "meu cartão foi cobrado e não consigo mais acessar a conta",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:43.869Z",
+      "ms": 345,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.79,
+      "probabilities": {
+        "billing_agent": 0.11,
+        "tech_support": 0.03,
+        "security_review": 0.86
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "meu cartão foi cobrado e não consigo mais acessar a conta",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:44.306Z",
+      "ms": 437,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.74,
+      "probabilities": {
+        "billing_agent": 0.14,
+        "tech_support": 0.03,
+        "security_review": 0.83
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "não reconheço uma cobrança e acho que invadiram minha conta",
+      "expected": [
+        "billing_agent",
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:44.662Z",
+      "ms": 355,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.98,
+      "probabilities": {
+        "billing_agent": 0.01,
+        "tech_support": 0,
+        "security_review": 0.99
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "não reconheço uma cobrança e acho que invadiram minha conta",
+      "expected": [
+        "billing_agent",
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:44.985Z",
+      "ms": 323,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.98,
+      "probabilities": {
+        "billing_agent": 0.01,
+        "tech_support": 0,
+        "security_review": 0.99
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "não reconheço uma cobrança e acho que invadiram minha conta",
+      "expected": [
+        "billing_agent",
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:45.324Z",
+      "ms": 338,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.98,
+      "probabilities": {
+        "billing_agent": 0.01,
+        "tech_support": 0,
+        "security_review": 0.99
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "o sistema travou na hora de pagar e perdi o acesso",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:45.693Z",
+      "ms": 368,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.82,
+      "probabilities": {
+        "billing_agent": 0.09,
+        "tech_support": 0.88,
+        "security_review": 0.03
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "o sistema travou na hora de pagar e perdi o acesso",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:46.013Z",
+      "ms": 320,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.8,
+      "probabilities": {
+        "billing_agent": 0.1,
+        "tech_support": 0.87,
+        "security_review": 0.03
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "o sistema travou na hora de pagar e perdi o acesso",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:46.364Z",
+      "ms": 351,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.83,
+      "probabilities": {
+        "billing_agent": 0.08,
+        "tech_support": 0.89,
+        "security_review": 0.03
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "mudaram meu e-mail de cobrança e eu não fiz isso",
+      "expected": [
+        "billing_agent",
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:46.796Z",
+      "ms": 431,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.34,
+      "probabilities": {
+        "billing_agent": 0.43,
+        "tech_support": 0.01,
+        "security_review": 0.56
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "mudaram meu e-mail de cobrança e eu não fiz isso",
+      "expected": [
+        "billing_agent",
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:47.196Z",
+      "ms": 400,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.25,
+      "probabilities": {
+        "billing_agent": 0.49,
+        "tech_support": 0.01,
+        "security_review": 0.5
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "mudaram meu e-mail de cobrança e eu não fiz isso",
+      "expected": [
+        "billing_agent",
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:47.539Z",
+      "ms": 343,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.3,
+      "probabilities": {
+        "billing_agent": 0.46,
+        "tech_support": 0.01,
+        "security_review": 0.53
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "o login falha e recebi um aviso de tentativa suspeita",
+      "expected": [
+        "tech_support",
+        "security_review"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:48.075Z",
+      "ms": 532,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.97,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0.02,
+        "security_review": 0.98
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "o login falha e recebi um aviso de tentativa suspeita",
+      "expected": [
+        "tech_support",
+        "security_review"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:48.425Z",
+      "ms": 350,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.95,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0.03,
+        "security_review": 0.97
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "o login falha e recebi um aviso de tentativa suspeita",
+      "expected": [
+        "tech_support",
+        "security_review"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:48.764Z",
+      "ms": 339,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "security_review",
+      "confidence": 0.94,
+      "probabilities": {
+        "billing_agent": 0,
+        "tech_support": 0.04,
+        "security_review": 0.96
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "preciso corrigir o CPF da fatura, mas o formulário dá erro",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 1,
+      "at": "2026-10-20T18:01:49.113Z",
+      "ms": 348,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 0.8,
+      "probabilities": {
+        "billing_agent": 0.87,
+        "tech_support": 0.13,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "preciso corrigir o CPF da fatura, mas o formulário dá erro",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 2,
+      "at": "2026-10-20T18:01:49.462Z",
+      "ms": 349,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 0.82,
+      "probabilities": {
+        "billing_agent": 0.88,
+        "tech_support": 0.12,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "ambigua",
+      "state": "preciso corrigir o CPF da fatura, mas o formulário dá erro",
+      "expected": [
+        "billing_agent",
+        "tech_support"
+      ],
+      "rep": 3,
+      "at": "2026-10-20T18:01:49.814Z",
+      "ms": 352,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 0.83,
+      "probabilities": {
+        "billing_agent": 0.89,
+        "tech_support": 0.11,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "qual é a capital da Austrália?",
+      "expected": [],
+      "rep": 1,
+      "at": "2026-10-20T18:01:50.146Z",
+      "ms": 331,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.83,
+      "probabilities": {
+        "billing_agent": 0.09,
+        "tech_support": 0.89,
+        "security_review": 0.02
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "qual é a capital da Austrália?",
+      "expected": [],
+      "rep": 2,
+      "at": "2026-10-20T18:01:50.494Z",
+      "ms": 348,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.82,
+      "probabilities": {
+        "billing_agent": 0.1,
+        "tech_support": 0.88,
+        "security_review": 0.02
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "qual é a capital da Austrália?",
+      "expected": [],
+      "rep": 3,
+      "at": "2026-10-20T18:01:50.839Z",
+      "ms": 345,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.86,
+      "probabilities": {
+        "billing_agent": 0.07,
+        "tech_support": 0.91,
+        "security_review": 0.02
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "me recomenda um filme para hoje à noite",
+      "expected": [],
+      "rep": 1,
+      "at": "2026-10-20T18:01:51.191Z",
+      "ms": 351,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.51,
+      "probabilities": {
+        "billing_agent": 0.31,
+        "tech_support": 0.67,
+        "security_review": 0.02
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "me recomenda um filme para hoje à noite",
+      "expected": [],
+      "rep": 2,
+      "at": "2026-10-20T18:01:51.521Z",
+      "ms": 330,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.59,
+      "probabilities": {
+        "billing_agent": 0.25,
+        "tech_support": 0.73,
+        "security_review": 0.02
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "me recomenda um filme para hoje à noite",
+      "expected": [],
+      "rep": 3,
+      "at": "2026-10-20T18:01:51.850Z",
+      "ms": 329,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.52,
+      "probabilities": {
+        "billing_agent": 0.3,
+        "tech_support": 0.6799999999999999,
+        "security_review": 0.02
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "vocês têm vaga para desenvolvedor?",
+      "expected": [],
+      "rep": 1,
+      "at": "2026-10-20T18:01:52.212Z",
+      "ms": 360,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.62,
+      "probabilities": {
+        "billing_agent": 0.24,
+        "tech_support": 0.75,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "vocês têm vaga para desenvolvedor?",
+      "expected": [],
+      "rep": 2,
+      "at": "2026-10-20T18:01:52.523Z",
+      "ms": 311,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.67,
+      "probabilities": {
+        "billing_agent": 0.21,
+        "tech_support": 0.78,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "vocês têm vaga para desenvolvedor?",
+      "expected": [],
+      "rep": 3,
+      "at": "2026-10-20T18:01:52.871Z",
+      "ms": 348,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.72,
+      "probabilities": {
+        "billing_agent": 0.18,
+        "tech_support": 0.81,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "quero falar com o setor comercial sobre uma parceria",
+      "expected": [],
+      "rep": 1,
+      "at": "2026-10-20T18:01:53.215Z",
+      "ms": 343,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 0.82,
+      "probabilities": {
+        "billing_agent": 0.88,
+        "tech_support": 0.11,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "quero falar com o setor comercial sobre uma parceria",
+      "expected": [],
+      "rep": 2,
+      "at": "2026-10-20T18:01:53.551Z",
+      "ms": 336,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 0.83,
+      "probabilities": {
+        "billing_agent": 0.89,
+        "tech_support": 0.1,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "quero falar com o setor comercial sobre uma parceria",
+      "expected": [],
+      "rep": 3,
+      "at": "2026-10-20T18:01:53.890Z",
+      "ms": 339,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "billing_agent",
+      "confidence": 0.83,
+      "probabilities": {
+        "billing_agent": 0.89,
+        "tech_support": 0.1,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "obrigado, ótimo atendimento!",
+      "expected": [],
+      "rep": 1,
+      "at": "2026-10-20T18:01:54.240Z",
+      "ms": 349,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.58,
+      "probabilities": {
+        "billing_agent": 0.28,
+        "tech_support": 0.72,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "obrigado, ótimo atendimento!",
+      "expected": [],
+      "rep": 2,
+      "at": "2026-10-20T18:01:54.586Z",
+      "ms": 346,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.61,
+      "probabilities": {
+        "billing_agent": 0.26,
+        "tech_support": 0.74,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "obrigado, ótimo atendimento!",
+      "expected": [],
+      "rep": 3,
+      "at": "2026-10-20T18:01:54.922Z",
+      "ms": 336,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.58,
+      "probabilities": {
+        "billing_agent": 0.28,
+        "tech_support": 0.72,
+        "security_review": 0
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "como faço bolo de cenoura?",
+      "expected": [],
+      "rep": 1,
+      "at": "2026-10-20T18:01:55.260Z",
+      "ms": 336,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.89,
+      "probabilities": {
+        "billing_agent": 0.06,
+        "tech_support": 0.93,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "como faço bolo de cenoura?",
+      "expected": [],
+      "rep": 2,
+      "at": "2026-10-20T18:01:55.622Z",
+      "ms": 362,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.88,
+      "probabilities": {
+        "billing_agent": 0.07,
+        "tech_support": 0.92,
+        "security_review": 0.01
+      },
+      "error": null
+    },
+    {
+      "group": "fora",
+      "state": "como faço bolo de cenoura?",
+      "expected": [],
+      "rep": 3,
+      "at": "2026-10-20T18:01:55.978Z",
+      "ms": 356,
+      "status": 200,
+      "ok": true,
+      "servedBy": "typesafe/jev-1.13-20260917",
+      "choice": "tech_support",
+      "confidence": 0.89,
+      "probabilities": {
+        "billing_agent": 0.06,
+        "tech_support": 0.93,
+        "security_review": 0.01
+      },
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T18:01:55.980Z"
+}

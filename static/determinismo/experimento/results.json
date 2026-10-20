@@ -1,0 +1,3073 @@
+{
+  "startedAt": "2026-10-20T16:28:11.244Z",
+  "input": "quero cancelar e pedir reembolso do mês passado",
+  "runsPerModel": 10,
+  "models": [
+    {
+      "id": "openai/gpt-6.1-sol",
+      "exists": true,
+      "temperature": false,
+      "structured": true,
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "overrides": [
+          {
+            "min_prompt_tokens": 272000,
+            "prompt": "0.000004",
+            "completion": "0.000015",
+            "input_cache_read": "0.0000002",
+            "input_cache_write": "0.000005"
+          }
+        ]
+      }
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5",
+      "exists": true,
+      "temperature": false,
+      "structured": true,
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.0000025",
+        "input_cache_write_1h": "0.000004"
+      }
+    },
+    {
+      "id": "google/gemini-3.8-flash",
+      "exists": true,
+      "temperature": true,
+      "structured": true,
+      "pricing": {
+        "prompt": "0.000000825",
+        "completion": "0.000004125",
+        "image": "0.000000825",
+        "audio": "0.000000825",
+        "input_audio_cache": "0.0000000825",
+        "web_search": "0.014",
+        "internal_reasoning": "0.000004125",
+        "input_cache_read": "0.0000000825",
+        "input_cache_write": "0.0000000416666666666667"
+      }
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "exists": true,
+      "temperature": true,
+      "structured": true,
+      "pricing": {
+        "prompt": "0.0000001875",
+        "completion": "0.0000006525",
+        "input_cache_read": "0.00000005"
+      }
+    }
+  ],
+  "prompts": {
+    "specSystem": "Você é o módulo de classificação de um chat de suporte. Siga a política billing.cancellation.v3.\nPolítica:\n- \"cancelar\" significa encerrar a assinatura ao fim do ciclo atual.\n- \"reembolso do mês passado\" significa reembolsar o ciclo de cobrança anterior.\n- Intenções permitidas: billing_agent, tech_support, security_review.\n- Ações permitidas: cancel_subscription, refund_previous_cycle. Liste em ordem alfabética.\nResponda somente com o JSON do schema. Nunca escreva texto fora do JSON.",
+    "specSchema": {
+      "name": "decisao",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intent",
+          "actions",
+          "refund_cycle"
+        ],
+        "properties": {
+          "intent": {
+            "type": "string",
+            "enum": [
+              "billing_agent",
+              "tech_support",
+              "security_review"
+            ]
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "cancel_subscription",
+                "refund_previous_cycle"
+              ]
+            }
+          },
+          "refund_cycle": {
+            "type": "string",
+            "enum": [
+              "previous"
+            ]
+          }
+        }
+      }
+    },
+    "controlSystem": "Você atende clientes de uma assinatura. Responda ao cliente."
+  },
+  "runs": [
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:28:11.308Z",
+      "ms": 63,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:28:11.434Z",
+      "ms": 124,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:28:11.494Z",
+      "ms": 59,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:28:11.562Z",
+      "ms": 67,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:28:11.614Z",
+      "ms": 51,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:28:11.665Z",
+      "ms": 50,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:28:11.733Z",
+      "ms": 67,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:28:11.824Z",
+      "ms": 90,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:28:11.888Z",
+      "ms": 63,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:28:11.949Z",
+      "ms": 59,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:28:11.989Z",
+      "ms": 39,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:28:12.053Z",
+      "ms": 61,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:28:12.108Z",
+      "ms": 52,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:28:12.164Z",
+      "ms": 54,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:28:12.223Z",
+      "ms": 57,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:28:12.275Z",
+      "ms": 51,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:28:12.336Z",
+      "ms": 60,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:28:12.389Z",
+      "ms": 51,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:28:12.432Z",
+      "ms": 40,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "openai/gpt-6.1-sol",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:28:12.512Z",
+      "ms": 80,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:28:12.559Z",
+      "ms": 46,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:28:12.631Z",
+      "ms": 70,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:28:12.673Z",
+      "ms": 41,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:28:12.718Z",
+      "ms": 44,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:28:12.788Z",
+      "ms": 69,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:28:12.843Z",
+      "ms": 55,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:28:12.904Z",
+      "ms": 60,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:28:12.948Z",
+      "ms": 43,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:28:12.996Z",
+      "ms": 46,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:28:13.041Z",
+      "ms": 44,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:28:13.086Z",
+      "ms": 44,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:28:13.140Z",
+      "ms": 53,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:28:13.188Z",
+      "ms": 47,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:28:13.245Z",
+      "ms": 55,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:28:13.312Z",
+      "ms": 65,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:28:13.381Z",
+      "ms": 68,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:28:13.457Z",
+      "ms": 74,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:28:13.553Z",
+      "ms": 94,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:28:13.615Z",
+      "ms": 61,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "anthropic/claude-sonnet-5.5",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:28:13.673Z",
+      "ms": 57,
+      "status": 402,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": null,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit",
+        "code": 402,
+        "metadata": {
+          "limit_source": "openrouter_credits",
+          "remedy_hint": "Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.",
+          "provider_name": null,
+          "previous_errors": [
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            },
+            {
+              "code": 402,
+              "message": "This request requires more credits, or fewer max_tokens. You requested up to 4000 tokens, but can only afford 3992. To increase, visit https://openrouter.ai/workspaces/default/keys/98869031e1bee1aabec92ee1947f413f6fc72b3b8b891413020e296bf9502574 and adjust the key's total limit"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:28:17.391Z",
+      "ms": 3717,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 206,
+        "total_tokens": 516,
+        "cost": 0.001005,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.001005,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.0007725
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 181,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:28:20.630Z",
+      "ms": 3237,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 207,
+        "total_tokens": 517,
+        "cost": 0.00100875,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00100875,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00077625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 182,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:28:24.608Z",
+      "ms": 3977,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 141,
+        "total_tokens": 451,
+        "cost": 0.00076125,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00076125,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00052875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 116,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:28:34.248Z",
+      "ms": 9635,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 191,
+        "total_tokens": 501,
+        "cost": 0.00094875,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00094875,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00071625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 166,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:28:39.144Z",
+      "ms": 4894,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 195,
+        "total_tokens": 505,
+        "cost": 0.00096375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00096375,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00073125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 170,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:28:42.753Z",
+      "ms": 3607,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 179,
+        "total_tokens": 489,
+        "cost": 0.00090375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00090375,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00067125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 154,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:28:46.983Z",
+      "ms": 4228,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 176,
+        "total_tokens": 486,
+        "cost": 0.0008925,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0008925,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00066
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 151,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:28:51.412Z",
+      "ms": 4428,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 216,
+        "total_tokens": 526,
+        "cost": 0.0010425,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0010425,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00081
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 191,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:28:57.395Z",
+      "ms": 5981,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 219,
+        "total_tokens": 529,
+        "cost": 0.00105375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00105375,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00082125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 194,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:29:01.523Z",
+      "ms": 4123,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 310,
+        "completion_tokens": 211,
+        "total_tokens": 521,
+        "cost": 0.00102375,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00102375,
+          "upstream_inference_prompt_cost": 0.0002325,
+          "upstream_inference_completions_cost": 0.00079125
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 186,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:29:14.455Z",
+      "ms": 12926,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 951,
+        "total_tokens": 973,
+        "cost": 0.00358275,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00358275,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.00356625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 750,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Sinto muito em saber que você deseja cancelar, mas vou te ajudar com isso agora mesmo.\n\nPara que eu possa localizar a sua assinatura e dar andamento ao processo, por favor, me informe:\n\n1. O **e-mail cadastrado** na sua conta (ou CPF);\n2. O **motivo** pelo qual você está solicitando o reembolso do mês passado (ex: cobrança indevida, problemas de acesso, não utilização do serviço).\n\n**Sobre o cancelamento:** Assim que eu localizar seus dados, farei o cancelamento imediato para garantir que nenhuma nova cobrança seja gerada.\n\n**Sobre o reembolso:** Como se trata de um ciclo anterior, nossa equipe financeira precisará analisar o histórico da conta para verificar a viabilidade da devolução, de acordo com a nossa política de cancelamento. Explicar o motivo nos ajuda a agilizar essa análise.\n\nFico no aguardo das suas informações para prosseguirmos!",
+      "sha256": "c0b4492d9450e5ebad2c9806cd25b3af5c4233d3f326522d62d214e69983bf3a",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:29:23.670Z",
+      "ms": 9212,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 928,
+        "total_tokens": 950,
+        "cost": 0.0034965,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0034965,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.00348
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 729,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Sinto muito que queira nos deixar, mas compreendo perfeitamente e estou aqui para te ajudar com esse processo.\n\nPara que eu possa localizar o seu cadastro e prosseguir com o **cancelamento**, por favor, me informe:\n* O seu **e-mail cadastrado** (ou CPF).\n\nSobre o **reembolso do mês passado**: \nGeralmente, nossa política de estorno cobre cobranças recentes (dentro do prazo legal de 7 dias) ou casos de falha no serviço. Como você mencionou o mês passado, preciso entender um pouco melhor o que houve. Você teve algum problema de acesso, cobrança duplicada ou outro motivo específico?\n\nAssim que você me responder com seus dados e esse detalhe, eu já inicio o processo para garantir que **nenhuma nova cobrança seja feita** e verifico com o setor financeiro a possibilidade do estorno, combinado?\n\nFico no aguardo!",
+      "sha256": "7781da79b86fc60c4115b57fbde5f2f099f035cb33b2442494d9fa23bd6820fa",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:29:46.338Z",
+      "ms": 22664,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 1116,
+        "total_tokens": 1138,
+        "cost": 0.0042015,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0042015,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.004185
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 902,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Lamento que queira cancelar o nosso serviço, mas estou aqui para te ajudar com esse processo.\n\nCom certeza posso efetuar o **cancelamento** da sua assinatura para que não haja nenhuma cobrança futura.\n\nSobre o **reembolso do mês passado**, eu preciso analisar o seu cadastro. Geralmente, períodos que já foram concluídos ou que estão fora do prazo inicial de garantia (como os 7 dias previstos pelo Código de Defesa do Consumidor) não são reembolsáveis. No entanto, quero verificar o histórico da sua conta e entender o seu caso para ver o que posso fazer.\n\nPara que eu possa localizar a sua assinatura, por favor, me informe:\n\n1. **E-mail cadastrado** na conta;\n2. **CPF** ou nome completo do titular;\n3. Poderia me contar o motivo do pedido de reembolso do mês anterior? (Ex: cobrança indevida, não conseguiu acessar, etc.)\n\nFico no aguardo dessas informações para darmos andamento!",
+      "sha256": "b020bc2ad8aa4d2226ee3bb872f789dcca1361022a5ff68121cbafd546845458",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:29:55.943Z",
+      "ms": 9603,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 812,
+        "total_tokens": 834,
+        "cost": 0.0030615,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0030615,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.003045
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 691,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Lamento que queira nos deixar, mas estou aqui para te ajudar com esse processo.\n\nPara que eu possa localizar a sua conta, efetuar o cancelamento e analisar a solicitação de estorno do mês passado, você poderia me informar:\n\n1. **O e-mail cadastrado na assinatura** (ou CPF/código de cliente);\n2. **O motivo da solicitação de reembolso** do mês anterior (para eu anexar na análise financeira).\n\nAssim que você me passar essas informações, eu já inicio o procedimento por aqui. Fico no aguardo!",
+      "sha256": "5191d091260e88a867ef9e4f17ffd4c8728f21261759a647c7ed32019ff8bdb6",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:30:06.413Z",
+      "ms": 10467,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 1030,
+        "total_tokens": 1052,
+        "cost": 0.003879,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003879,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.0038625
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 846,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Compreendo o seu pedido e vou te ajudar com isso.\n\nPara que eu possa localizar a sua assinatura e dar andamento ao **cancelamento** (garantindo que não ocorram novas cobranças), por favor, me informe:\n\n* O **e-mail** cadastrado na sua conta (ou CPF/nome completo);\n\n---\n\n**Sobre o reembolso do mês passado:**\nNormalmente, as políticas de assinatura cobrem cancelamentos e estornos apenas para cobranças recentes (dentro do prazo de arrependimento de 7 dias) e não para ciclos que já foram encerrados. \n\nNo entanto, para que eu possa avaliar o seu caso junto ao setor responsável, você poderia me detalhar o que aconteceu? *(Por exemplo: você teve problemas de acesso, cobrança duplicada ou algum erro técnico no mês passado?)*\n\nAguardo seus dados para prosseguir!",
+      "sha256": "4ef404d57c6d3c136719265302473e186d5582bf390e7c8a748e47df13b92e41",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:30:21.436Z",
+      "ms": 15021,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 1066,
+        "total_tokens": 1088,
+        "cost": 0.004014,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.004014,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.0039975
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 866,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Lamento que queira cancelar a sua assinatura, mas compreendo e vou te ajudar com isso.\n\nPara que eu possa localizar a sua conta e já providenciar o **cancelamento** (evitando qualquer cobrança futura), você poderia me informar:\n\n1. O **e-mail cadastrado** na sua assinatura;\n2. Seu **nome completo** (ou CPF).\n\nSobre o **reembolso do mês passado**: assim que eu acessar o seu cadastro, vou verificar o seu histórico. Como se trata de um ciclo que já foi encerrado, preciso checar as diretrizes da nossa política de reembolso para ver o que é possível fazer no seu caso. \n\nSe você puder me adiantar o motivo do pedido de reembolso (por exemplo, se houve algum problema técnico ou cobrança indevida), isso me ajuda a agilizar a análise com o setor financeiro.\n\nFico no aguardo dos seus dados para dar andamento!",
+      "sha256": "8733c9c3b4d74db889bb988fed601ac2e1afccb0b9cc638f8c6474877fb0e223",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:30:31.761Z",
+      "ms": 10323,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 984,
+        "total_tokens": 1006,
+        "cost": 0.0037065,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0037065,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.00369
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 801,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Lamento saber que você deseja cancelar, mas vou te ajudar com essa solicitação agora mesmo.\n\nPara que eu possa localizar sua assinatura e dar início ao **cancelamento**, por favor, me informe:\n- O **e-mail cadastrado** na conta;\n- O **nome completo** ou **CPF** do titular.\n\nSobre o **pedido de reembolso do mês passado**:\nComo regra geral de assinaturas, períodos que já foram concluídos e disponibilizados para uso não costumam ser elegíveis para estorno. No entanto, para que eu possa analisar o seu caso com o nosso setor financeiro e verificar se cabe alguma exceção, **você poderia me contar o que aconteceu?** (Por exemplo: cobrança duplicada, falha técnica no serviço, ou não conseguiu utilizar a plataforma?)\n\nFico no aguardo dessas informações para te ajudar da melhor forma!",
+      "sha256": "3d2441d4e2c2987f58e2a2ed3d0099e63b0c8031bf2944099d5f4e2ea3f177ac",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:30:43.875Z",
+      "ms": 12112,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 1000,
+        "total_tokens": 1022,
+        "cost": 0.0037665,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0037665,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.00375
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 808,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Sinto muito em saber que você deseja cancelar a sua assinatura, mas vou te ajudar com isso agora mesmo.\n\nPodemos realizar o **cancelamento imediato** para garantir que nenhuma nova cobrança seja feita no seu cartão. \n\nEm relação ao **reembolso do mês passado**, eu preciso analisar o seu histórico. Como o serviço já esteve disponível durante esse período, o estorno de mensalidades anteriores costuma ser avaliado em casos específicos (como cobrança indevida após pedido de cancelamento ou falha no acesso à plataforma). \n\nPara que eu possa verificar o seu caso e prosseguir com o cancelamento, você poderia me informar:\n\n1. O **e-mail cadastrado** na conta (ou CPF);\n2. O **motivo** pelo qual você está solicitando o reembolso do mês anterior.\n\nFico no aguardo dessas informações para resolver isso para você o mais rápido possível!",
+      "sha256": "a55abb44b8bb17664c5586468a8dbaf18d9060e42c9ab7fb72b06a446ae2fe25",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:30:53.735Z",
+      "ms": 9859,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 938,
+        "total_tokens": 960,
+        "cost": 0.003534,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003534,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.0035175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 762,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Sinto muito em saber que você deseja cancelar, mas vou te ajudar com essa solicitação.\n\nPara que eu possa localizar sua conta e prosseguir com o **cancelamento**, você poderia me informar o **e-mail cadastrado** (ou CPF/código de assinante)?\n\nSobre o **reembolso do mês passado**: \nComo se trata de um ciclo que já foi encerrado, preciso verificar as condições da sua conta. Geralmente, reembolsos são concedidos em casos de cobrança indevida, falha no acesso ao serviço ou dentro do prazo de arrependimento legal. \n\nPoderia me contar um pouco melhor o que aconteceu para você solicitar o estorno do mês anterior? \n\nAssim que você me passar seus dados e o motivo, já verifico o cancelamento e as possibilidades de reembolso para você!",
+      "sha256": "fc9c2343070a01251f5834ce9dabde08b9f67c3e27d29322e4ba2180634870b1",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:31:09.876Z",
+      "ms": 16138,
+      "status": 200,
+      "ok": true,
+      "servedBy": "google/gemini-3.8-flash",
+      "provider": "Google",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 958,
+        "total_tokens": 980,
+        "cost": 0.003609,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.003609,
+          "upstream_inference_prompt_cost": 0.0000165,
+          "upstream_inference_completions_cost": 0.0035925
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 764,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Olá! Sinto muito que você queira cancelar a sua assinatura, mas estou aqui para te ajudar com isso da forma mais rápida possível.\n\nPara que eu possa localizar o seu cadastro e dar andamento ao **cancelamento**, por favor, me informe:\n- O **e-mail cadastrado** na conta (ou CPF).\n\nQuanto ao **reembolso do mês passado**:\nNormalmente, assinaturas cobrem o período de acesso já disponibilizado. Por isso, reembolsos de mensalidades anteriores não são automáticos e dependem de análise (por exemplo, se houve alguma cobrança duplicada, falha no serviço ou se você solicitou o cancelamento anteriormente e continuou sendo cobrado). \n\nVocê poderia me detalhar o motivo do pedido de estorno do mês passado? Assim, posso abrir um chamado diretamente com a nossa equipe financeira para avaliar a sua situação.\n\nFico no aguardo dos seus dados para te ajudar!",
+      "sha256": "588eca01ccb5d6ab6c9a61cd6454421a7da8b0f6524e3c18ed2506afe5576b20",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T16:31:13.196Z",
+      "ms": 3318,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00004368,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00004368,
+          "upstream_inference_prompt_cost": 0.0000260625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T16:31:16.425Z",
+      "ms": 3226,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00002608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00002608,
+          "upstream_inference_prompt_cost": 0.0000084625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T16:31:20.347Z",
+      "ms": 3920,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00002608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00002608,
+          "upstream_inference_prompt_cost": 0.0000084625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T16:31:23.236Z",
+      "ms": 2888,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 29,
+        "total_tokens": 168,
+        "cost": 0.00007765,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007765,
+          "upstream_inference_prompt_cost": 0.00004865,
+          "upstream_inference_completions_cost": 0.000029
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\": \"billing_agent\", \"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"refund_cycle\": \"previous\"}",
+      "sha256": "b31a5c064ca8a7369a234565f729d00bbed18ca2cf876a24b0374fc9f0e1b685",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T16:31:25.609Z",
+      "ms": 2371,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 29,
+        "total_tokens": 168,
+        "cost": 0.00007765,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007765,
+          "upstream_inference_prompt_cost": 0.00004865,
+          "upstream_inference_completions_cost": 0.000029
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\": \"billing_agent\", \"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"refund_cycle\": \"previous\"}",
+      "sha256": "b31a5c064ca8a7369a234565f729d00bbed18ca2cf876a24b0374fc9f0e1b685",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T16:31:29.420Z",
+      "ms": 3809,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00002608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00002608,
+          "upstream_inference_prompt_cost": 0.0000084625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T16:31:33.135Z",
+      "ms": 3714,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00002608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00002608,
+          "upstream_inference_prompt_cost": 0.0000084625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T16:31:34.014Z",
+      "ms": 878,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "DigitalOcean",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing",
+          "previous_errors": [
+            {
+              "code": 429,
+              "message": "Provider returned error",
+              "provider_name": "Parasail",
+              "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T16:31:37.103Z",
+      "ms": 3086,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00002608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00002608,
+          "upstream_inference_prompt_cost": 0.0000084625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T16:31:40.298Z",
+      "ms": 3193,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 27,
+        "total_tokens": 166,
+        "cost": 0.00002608,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00002608,
+          "upstream_inference_prompt_cost": 0.0000084625,
+          "upstream_inference_completions_cost": 0.0000176175
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"intent\": \"billing_agent\", \"refund_cycle\": \"previous\"}",
+      "sha256": "ea1dd63cc6bef770b8fd08a47ffb5f25000780f54855b6b28bad8f8b3d9586df",
+      "canonicalSha256": "cb3909baed7dc2190db708abe552bbb247864391e1f75489f003d76ff166a99f",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T16:31:45.680Z",
+      "ms": 5380,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 280,
+        "total_tokens": 319,
+        "cost": 0.00029365,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00029365,
+          "upstream_inference_prompt_cost": 0.00001365,
+          "upstream_inference_completions_cost": 0.00028
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso confirmar se você já foi cobrado pelo mês atual. Se sim, o reembolso será processado de acordo com nossa política de reembolso. Normalmente, reembolsos são processados dentro de [inserir período, por exemplo, 5-7 dias úteis]. Você gostaria de saber mais detalhes sobre nossa política de reembolso?\n\n4. **Passos para Cancelamento**: Uma vez que eu tenha as informações necessárias, posso guiá-lo pelo processo de cancelamento. Isso geralmente envolve cancelar a renovação automática da assinatura. Posso fazer isso por você ou você prefere seguir as instruções que eu fornecer?\n\nPor favor, responda com as informações solicitadas para que eu possa ajudar da melhor forma possível.",
+      "sha256": "7f030b03f12a1d3087f2fa0d7cdbe2e456d78956903e8290cb8eeac84754fc80",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T16:32:12.352Z",
+      "ms": 26671,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "DigitalOcean",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 274,
+        "total_tokens": 313,
+        "cost": 0.0001860975,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001860975,
+          "upstream_inference_prompt_cost": 0.0000073125,
+          "upstream_inference_completions_cost": 0.000178785
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Lamento saber que você deseja cancelar sua assinatura. Para prosseguir com o cancelamento e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Você poderia me dizer por que deseja cancelar?\n\n2. **Detalhes da Assinatura**: Por favor, forneça o nome da sua conta ou o e-mail associado à assinatura para que eu possa localizar sua conta corretamente.\n\n3. **Reembolso do Mês Passado**: Para solicitar o reembolso, preciso confirmar se você já foi cobrado pelo mês passado. Você poderia confirmar se o pagamento do mês passado foi realizado e se foi bem-sucedido?\n\n4. **Política de Reembolso**: Nossa política de reembolso geralmente permite reembolsos dentro de um certo período após o pagamento. Vou verificar se você está dentro desse período e se há alguma condição específica que precisa ser atendida para o reembolso.\n\nUma vez que eu tenha essas informações, poderei ajudá-lo a:\n- Cancelar sua assinatura imediatamente.\n- Processar o reembolso do mês passado, se aplicável, de acordo com nossas políticas.\n\nPor favor, forneça os detalhes solicitados para que eu possa prosseguir com sua solicitação.",
+      "sha256": "af5693819da51c53f8cade00a598d0f44f33edfd79fccb32d6ecafb9025545e3",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T16:32:17.777Z",
+      "ms": 5422,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 238,
+        "total_tokens": 277,
+        "cost": 0.00024589,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00024589,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.000238
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você já utilizou os serviços durante esse período. Nossa política de reembolso pode variar dependendo do uso dos serviços. Você poderia me informar se houve algum uso significativo dos nossos serviços no mês passado?\n\n4. **Procedimento de Cancelamento**: Uma vez que eu tenha as informações necessárias, eu posso guiar você através do processo de cancelamento e solicitar o reembolso, se aplicável, de acordo com nossas políticas.\n\nPor favor, forneça as informações solicitadas para que eu possa ajudar da melhor forma possível.",
+      "sha256": "853689f96afcc3ba45830c6b9513369bd2d3312a9a0f371c5515bd73c673c93a",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T16:32:24.809Z",
+      "ms": 7031,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 311,
+        "total_tokens": 350,
+        "cost": 0.00031889,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00031889,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.000311
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação da Assinatura**: Você poderia me informar qual é o nome do serviço ou produto que você está assinando conosco? Isso ajudará a localizar sua conta de forma mais eficiente.\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento pode nos ajudar a melhorar nossos serviços. Se você se sentir confortável, poderia compartilhar por que deseja cancelar?\n\n3. **Reembolso**: Para processar o reembolso do mês passado, preciso confirmar se você já pagou pela assinatura desse período. Você poderia verificar seu histórico de pagamentos e me informar se o pagamento foi efetuado?\n\n4. **Política de Reembolso**: Nossa política de reembolso geralmente permite que os clientes solicitem reembolsos dentro de um certo período após o pagamento. Você poderia me dizer quando foi realizado o pagamento do mês passado para que eu possa verificar se você está dentro do prazo permitido para solicitar um reembolso?\n\nUma vez que eu tenha essas informações, poderei ajudá-lo a:\n- Cancelar sua assinatura de forma eficaz.\n- Processar o reembolso do mês passado, se aplicável.\n- Oferecer qualquer outra assistência necessária para garantir que o processo seja o mais suave possível.\n\nPor favor, forneça as informações solicitadas para que eu possa prosseguir com sua solicitação.",
+      "sha256": "05299dbb26410e0f81557e9076762490d7cb8f25891c024292e484a9ee984416",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T16:32:29.667Z",
+      "ms": 4856,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 230,
+        "total_tokens": 269,
+        "cost": 0.00023789,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00023789,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.00023
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você está dentro do período permitido para solicitar reembolsos de acordo com nossas políticas. Normalmente, isso é possível dentro de um certo período após o pagamento. Vou verificar isso para você.\n\n4. **Passos para Cancelamento**: Uma vez que eu tenha as informações necessárias, posso guiá-lo pelo processo de cancelamento e solicitar o reembolso em seu nome.\n\nPor favor, responda com as informações solicitadas para que eu possa ajudar da melhor forma possível.",
+      "sha256": "2aa606d5e12a992cd8e9c07ee26734661bdf69c79b5e3f7fb7d8b3b1e827f375",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T16:32:39.893Z",
+      "ms": 10222,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 320,
+        "total_tokens": 359,
+        "cost": 0.00033365,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00033365,
+          "upstream_inference_prompt_cost": 0.00001365,
+          "upstream_inference_completions_cost": 0.00032
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você já foi cobrado pelo período. Se sim, farei o possível para processar o reembolso de acordo com nossas políticas. O reembolso geralmente é feito no mesmo método de pagamento utilizado para a compra.\n\n4. **Política de Reembolso**: Nossa política de reembolso permite [insira aqui a política de reembolso da empresa, por exemplo, reembolso dentro de X dias após o cancelamento]. Você será notificado assim que o reembolso for processado.\n\n**Passos para Cancelamento**:\n- Vou verificar sua conta e confirmar se está ativa.\n- Irei cancelar a assinatura imediatamente após a confirmação.\n- Se você tiver direito a um reembolso, farei a solicitação do mesmo.\n\nPor favor, aguarde um momento enquanto verifico as informações necessárias. Se tiver mais alguma dúvida ou precisar de assistência adicional, sinta-se à vontade para perguntar.",
+      "sha256": "d0af541f9b1d0b26d201ff100564a6e64457982607c81a09aa124fd8e4b12e9d",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T16:32:45.142Z",
+      "ms": 5247,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 282,
+        "total_tokens": 321,
+        "cost": 0.00028989,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00028989,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.000282
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação da Assinatura**: Você poderia me informar qual é o nome exato do serviço ou produto que você está assinando conosco? Isso ajudará a localizar sua conta de forma mais eficiente.\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento pode nos ajudar a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Detalhes da Conta**: Para facilitar o processo, poderia fornecer o e-mail associado à sua conta ou qualquer outro identificador que você use para acessar nossos serviços?\n\n4. **Reembolso**: Quanto ao reembolso do mês passado, nossa política de reembolso geralmente permite que os clientes solicitem reembolsos dentro de um certo período após o pagamento. Você poderia me dizer a data aproximada em que foi cobrado pela última vez?\n\nAssim que receber essas informações, poderei guiar você pelo processo de cancelamento e reembolso de acordo com nossas políticas e procedimentos. Se houver alguma taxa ou condição específica relacionada ao seu caso, farei questão de informá-lo claramente.\n\nPor favor, forneça as informações solicitadas para que eu possa ajudar da melhor forma possível.",
+      "sha256": "f7b589348f75de29dd38a4a2868502becce317c6b55b93eb99ad546f5f7fd2a7",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T16:32:49.673Z",
+      "ms": 4529,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 216,
+        "total_tokens": 255,
+        "cost": 0.00022389,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00022389,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.000216
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você já utilizou algum dos nossos serviços durante esse período. Nossa política de reembolso pode variar dependendo do uso dos serviços.\n\n4. **Passos para Cancelamento**: Uma vez que eu tenha as informações necessárias, posso guiá-lo pelo processo de cancelamento e solicitar o reembolso, se aplicável.\n\nPor favor, forneça as informações solicitadas para que eu possa ajudar da melhor forma possível.",
+      "sha256": "111401ac31369224aab41624f41c8acd2763da01e4383cc1f8e72d3c8586f721",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T16:32:55.341Z",
+      "ms": 5666,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 303,
+        "total_tokens": 342,
+        "cost": 0.00031089,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00031089,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.000303
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o nome associado à conta ou o e-mail utilizado para a criação da assinatura? Isso ajudará a localizar sua conta de forma mais eficiente.\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento pode ajudar a melhorar nossos serviços. Se você se sentir confortável, poderia compartilhar por que deseja cancelar?\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você já foi cobrado pelo período. Se sim, farei o possível para processar o reembolso de acordo com nossas políticas. O reembolso geralmente é processado dentro de [inserir prazo, por exemplo, 5-7 dias úteis], mas isso pode variar dependendo do método de pagamento utilizado.\n\n4. **Passos para Cancelamento**: Após a confirmação da sua identidade, eu irei:\n   - Cancelar sua assinatura imediatamente.\n   - Verificar se você está qualificado para um reembolso do mês passado.\n   - Iniciar o processo de reembolso, se aplicável.\n\nPor favor, responda com as informações solicitadas para que eu possa ajudar da melhor forma possível. Se houver alguma outra questão ou precisar de assistência adicional, não hesite em perguntar.",
+      "sha256": "da4c9a3c761b95c18d46a19d0927cecf6b2e49e070487533062b07003bb9c52f",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T16:33:01.519Z",
+      "ms": 6177,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 279,
+        "total_tokens": 318,
+        "cost": 0.00028689,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00028689,
+          "upstream_inference_prompt_cost": 0.00000789,
+          "upstream_inference_completions_cost": 0.000279
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável, poderia compartilhar por que deseja cancelar?\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você já utilizou os serviços durante esse período. Nossa política de reembolso é [insira a política de reembolso aqui, por exemplo, \"não oferecemos reembolso proporcional para o mês em curso se os serviços já foram utilizados\"]. Você gostaria que eu verificasse se você é elegível para um reembolso de acordo com nossa política?\n\n4. **Passos para Cancelamento**: Uma vez que eu tenha as informações necessárias, posso guiá-lo pelo processo de cancelamento. Isso geralmente envolve cancelar a renovação automática da assinatura e, se aplicável, processar o reembolso.\n\nPor favor, responda com as informações solicitadas para que eu possa ajudar da melhor forma possível.",
+      "sha256": "8ab2dedfe8798823d1f7cc293ac07c282893a83ed5a62af65d98f9c62db1e3ab",
+      "canonicalSha256": null,
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-20T16:33:01.520Z"
+}

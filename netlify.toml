@@ -4,11 +4,22 @@
 
 # A apresentação mostra os slides em iframes da própria página (prévia do controle)
 [[headers]]
-  for = "/web/determinismo"
+  for = "/determinismo"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
 
 [[headers]]
-  for = "/web/determinismo/*"
+  for = "/determinismo/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
+
+# Endereço antigo da apresentação
+[[redirects]]
+  from = "/web/determinismo"
+  to = "/determinismo"
+  status = 301
+
+[[redirects]]
+  from = "/web/determinismo/*"
+  to = "/determinismo/:splat"
+  status = 301

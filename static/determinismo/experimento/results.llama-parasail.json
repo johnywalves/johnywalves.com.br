@@ -1,0 +1,731 @@
+{
+  "startedAt": "2026-10-20T17:00:48.938Z",
+  "input": "quero cancelar e pedir reembolso do mês passado",
+  "runsPerModel": 10,
+  "models": [
+    {
+      "label": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "model": "meta-llama/llama-4-maverick",
+      "provider": {
+        "order": [
+          "Parasail"
+        ],
+        "allow_fallbacks": false
+      },
+      "exists": true,
+      "temperature": true,
+      "pricing": {
+        "prompt": "0.0000001875",
+        "completion": "0.0000006525",
+        "input_cache_read": "0.00000005"
+      }
+    }
+  ],
+  "prompts": {
+    "specSystem": "Você é o módulo de classificação de um chat de suporte. Siga a política billing.cancellation.v3.\nPolítica:\n- \"cancelar\" significa encerrar a assinatura ao fim do ciclo atual.\n- \"reembolso do mês passado\" significa reembolsar o ciclo de cobrança anterior.\n- Intenções permitidas: billing_agent, tech_support, security_review.\n- Ações permitidas: cancel_subscription, refund_previous_cycle. Liste em ordem alfabética.\nResponda somente com o JSON do schema. Nunca escreva texto fora do JSON.",
+    "specSchema": {
+      "name": "decisao",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intent",
+          "actions",
+          "refund_cycle"
+        ],
+        "properties": {
+          "intent": {
+            "type": "string",
+            "enum": [
+              "billing_agent",
+              "tech_support",
+              "security_review"
+            ]
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "cancel_subscription",
+                "refund_previous_cycle"
+              ]
+            }
+          },
+          "refund_cycle": {
+            "type": "string",
+            "enum": [
+              "previous"
+            ]
+          }
+        }
+      }
+    },
+    "controlSystem": "Você atende clientes de uma assinatura. Responda ao cliente."
+  },
+  "runs": [
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 1,
+      "at": "2026-10-20T17:00:52.240Z",
+      "ms": 3302,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 29,
+        "total_tokens": 168,
+        "cost": 0.00007765,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007765,
+          "upstream_inference_prompt_cost": 0.00004865,
+          "upstream_inference_completions_cost": 0.000029
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\": \"billing_agent\", \"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"refund_cycle\": \"previous\"}",
+      "sha256": "b31a5c064ca8a7369a234565f729d00bbed18ca2cf876a24b0374fc9f0e1b685",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 2,
+      "at": "2026-10-20T17:00:53.435Z",
+      "ms": 1193,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 29,
+        "total_tokens": 168,
+        "cost": 0.00007765,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00007765,
+          "upstream_inference_prompt_cost": 0.00004865,
+          "upstream_inference_completions_cost": 0.000029
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\": \"billing_agent\", \"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"refund_cycle\": \"previous\"}",
+      "sha256": "b31a5c064ca8a7369a234565f729d00bbed18ca2cf876a24b0374fc9f0e1b685",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 3,
+      "at": "2026-10-20T17:00:54.056Z",
+      "ms": 620,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 4,
+      "at": "2026-10-20T17:00:54.483Z",
+      "ms": 426,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 5,
+      "at": "2026-10-20T17:00:54.900Z",
+      "ms": 416,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 6,
+      "at": "2026-10-20T17:00:55.397Z",
+      "ms": 495,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 7,
+      "at": "2026-10-20T17:00:56.815Z",
+      "ms": 1417,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 29,
+        "total_tokens": 168,
+        "cost": 0.00005461,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005461,
+          "upstream_inference_prompt_cost": 0.00002561,
+          "upstream_inference_completions_cost": 0.000029
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\": \"billing_agent\", \"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"refund_cycle\": \"previous\"}",
+      "sha256": "b31a5c064ca8a7369a234565f729d00bbed18ca2cf876a24b0374fc9f0e1b685",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 8,
+      "at": "2026-10-20T17:00:58.302Z",
+      "ms": 1486,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 29,
+        "total_tokens": 168,
+        "cost": 0.00005461,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00005461,
+          "upstream_inference_prompt_cost": 0.00002561,
+          "upstream_inference_completions_cost": 0.000029
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "{\"intent\": \"billing_agent\", \"actions\": [\"cancel_subscription\", \"refund_previous_cycle\"], \"refund_cycle\": \"previous\"}",
+      "sha256": "b31a5c064ca8a7369a234565f729d00bbed18ca2cf876a24b0374fc9f0e1b685",
+      "canonicalSha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 9,
+      "at": "2026-10-20T17:00:59.119Z",
+      "ms": 815,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "spec",
+      "run": 10,
+      "at": "2026-10-20T17:00:59.901Z",
+      "ms": 781,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 1,
+      "at": "2026-10-20T17:01:00.298Z",
+      "ms": 396,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 2,
+      "at": "2026-10-20T17:01:00.711Z",
+      "ms": 412,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 3,
+      "at": "2026-10-20T17:01:01.154Z",
+      "ms": 442,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 4,
+      "at": "2026-10-20T17:01:01.592Z",
+      "ms": 437,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 5,
+      "at": "2026-10-20T17:01:02.037Z",
+      "ms": 444,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 6,
+      "at": "2026-10-20T17:01:02.486Z",
+      "ms": 447,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 7,
+      "at": "2026-10-20T17:01:03.122Z",
+      "ms": 635,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 8,
+      "at": "2026-10-20T17:01:03.890Z",
+      "ms": 766,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 9,
+      "at": "2026-10-20T17:01:11.856Z",
+      "ms": 7965,
+      "status": 200,
+      "ok": true,
+      "servedBy": "meta-llama/llama-4-maverick",
+      "provider": "Parasail",
+      "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 320,
+        "total_tokens": 359,
+        "cost": 0.00033365,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00033365,
+          "upstream_inference_prompt_cost": 0.00001365,
+          "upstream_inference_completions_cost": 0.00032
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "temperatureSent": 0,
+      "content": "Claro, posso ajudar com isso! Para prosseguir com o cancelamento da sua assinatura e solicitar o reembolso do mês passado, preciso de algumas informações adicionais.\n\n1. **Confirmação de Identidade**: Por favor, poderia me fornecer o seu nome completo ou o e-mail associado à conta para que eu possa localizar sua assinatura em nosso sistema?\n\n2. **Motivo do Cancelamento**: Embora não seja obrigatório, entender o motivo do cancelamento nos ajuda a melhorar nossos serviços. Se você se sentir confortável em compartilhar, isso pode ser útil.\n\n3. **Reembolso**: Para o reembolso do mês passado, preciso verificar se você já foi cobrado pelo período. Se sim, farei o possível para processar o reembolso de acordo com nossas políticas. O reembolso geralmente é feito no mesmo método de pagamento utilizado para a compra.\n\n4. **Política de Reembolso**: Nossa política de reembolso permite [insira aqui a política de reembolso da empresa, por exemplo, reembolso dentro de X dias após o cancelamento]. Você será notificado assim que o reembolso for processado.\n\n**Passos para Cancelamento**:\n- Vou verificar sua conta e confirmar se está ativa.\n- Irei cancelar a assinatura imediatamente após a confirmação.\n- Se você tiver direito a um reembolso, farei a solicitação do mesmo.\n\nPor favor, aguarde um momento enquanto verifico as informações necessárias. Se tiver mais alguma dúvida ou precisar de assistência adicional, sinta-se à vontade para perguntar.",
+      "sha256": "d0af541f9b1d0b26d201ff100564a6e64457982607c81a09aa124fd8e4b12e9d",
+      "canonicalSha256": null,
+      "error": null
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "via": "openrouter",
+      "requested": "meta-llama/llama-4-maverick",
+      "providerPinned": "Parasail",
+      "group": "control",
+      "run": 10,
+      "at": "2026-10-20T17:01:12.249Z",
+      "ms": 391,
+      "status": 429,
+      "ok": false,
+      "servedBy": null,
+      "provider": null,
+      "usage": null,
+      "temperatureSent": 0,
+      "content": null,
+      "sha256": null,
+      "canonicalSha256": null,
+      "error": {
+        "message": "Provider returned error",
+        "code": 429,
+        "metadata": {
+          "raw": "meta-llama/llama-4-maverick is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations",
+          "provider_name": "Parasail",
+          "is_byok": false,
+          "limit_source": "upstream_provider_shared_pool",
+          "remedy_hint": "Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or route to another provider with provider routing: https://openrouter.ai/docs/features/provider-routing"
+        }
+      }
+    }
+  ],
+  "finishedAt": "2026-10-20T17:01:12.250Z"
+}
