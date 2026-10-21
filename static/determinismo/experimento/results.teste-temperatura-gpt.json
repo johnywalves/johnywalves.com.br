@@ -1,0 +1,140 @@
+{
+  "startedAt": "2026-10-21T00:19:21.794Z",
+  "model": "gpt-6.1-sol",
+  "base": "https://api.openai.com/v1",
+  "results": [
+    {
+      "caso": "sem temperature (como no experimento)",
+      "temperatureSent": null,
+      "rep": 1,
+      "at": "2026-10-21T00:19:26.014Z",
+      "ms": 4213,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "error": null
+    },
+    {
+      "caso": "sem temperature (como no experimento)",
+      "temperatureSent": null,
+      "rep": 2,
+      "at": "2026-10-21T00:19:28.935Z",
+      "ms": 2921,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "error": null
+    },
+    {
+      "caso": "sem temperature (como no experimento)",
+      "temperatureSent": null,
+      "rep": 3,
+      "at": "2026-10-21T00:19:30.982Z",
+      "ms": 2046,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "error": null
+    },
+    {
+      "caso": "temperature: 0",
+      "temperatureSent": 0,
+      "rep": 1,
+      "at": "2026-10-21T00:19:31.696Z",
+      "ms": 714,
+      "status": 400,
+      "ok": false,
+      "servedBy": null,
+      "sha256": null,
+      "content": null,
+      "error": {
+        "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+        "type": "invalid_request_error",
+        "param": "temperature",
+        "code": "unsupported_value"
+      }
+    },
+    {
+      "caso": "temperature: 0",
+      "temperatureSent": 0,
+      "rep": 2,
+      "at": "2026-10-21T00:19:32.254Z",
+      "ms": 558,
+      "status": 400,
+      "ok": false,
+      "servedBy": null,
+      "sha256": null,
+      "content": null,
+      "error": {
+        "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+        "type": "invalid_request_error",
+        "param": "temperature",
+        "code": "unsupported_value"
+      }
+    },
+    {
+      "caso": "temperature: 0",
+      "temperatureSent": 0,
+      "rep": 3,
+      "at": "2026-10-21T00:19:32.989Z",
+      "ms": 735,
+      "status": 400,
+      "ok": false,
+      "servedBy": null,
+      "sha256": null,
+      "content": null,
+      "error": {
+        "message": "Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.",
+        "type": "invalid_request_error",
+        "param": "temperature",
+        "code": "unsupported_value"
+      }
+    },
+    {
+      "caso": "temperature: 1 (valor padrão)",
+      "temperatureSent": 1,
+      "rep": 1,
+      "at": "2026-10-21T00:19:35.428Z",
+      "ms": 2438,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "error": null
+    },
+    {
+      "caso": "temperature: 1 (valor padrão)",
+      "temperatureSent": 1,
+      "rep": 2,
+      "at": "2026-10-21T00:19:37.126Z",
+      "ms": 1697,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "error": null
+    },
+    {
+      "caso": "temperature: 1 (valor padrão)",
+      "temperatureSent": 1,
+      "rep": 3,
+      "at": "2026-10-21T00:19:39.144Z",
+      "ms": 2018,
+      "status": 200,
+      "ok": true,
+      "servedBy": "gpt-6.1-sol",
+      "sha256": "0ff2f8505cd956dfc72190359faef30e8ed3ddc50dbd471d43e72167a2d02185",
+      "content": "{\"intent\":\"billing_agent\",\"actions\":[\"cancel_subscription\",\"refund_previous_cycle\"],\"refund_cycle\":\"previous\"}",
+      "error": null
+    }
+  ],
+  "finishedAt": "2026-10-21T00:19:39.144Z"
+}

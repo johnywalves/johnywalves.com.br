@@ -2531,7 +2531,12 @@
         <p class="sim-note">
           Mesmo com temperature=0, a execução de amanhã pode ser diferente. Por
           quê?
+          <small
+            >SHA-256 = impressão digital do texto: texto igual, código igual;
+            uma letra diferente, código outro.</small
+          >
         </p>
+
       </section>
 
       <!-- 9 TRANSIÇÃO -->
@@ -2774,6 +2779,14 @@
           <span style="color: var(--accent); font-weight: 800">System One</span
           >.
         </p>
+        <div class="outs-stat" style="margin-top: 1.6rem">
+          <span><b>1</b> System One decide</span>
+          <span><b>2</b> Especificação fecha o sentido</span>
+          <span><b>3</b> System Two executa</span>
+        </div>
+        <p class="mx-note" style="margin-top: 0.9rem">
+          São três camadas. Hoje começamos pela primeira.
+        </p>
       </section>
 
       <!-- 19 DEFINIÇÃO -->
@@ -2792,6 +2805,11 @@
             antes do LLM.
           </p>
         </div>
+        <p style="margin-top: 1.6rem; font-size: 1.35rem; max-width: 62rem">
+          Nos dados deste deck, o System One é o
+          <strong style="color: var(--accent)">Jev 1.13</strong>: recebe uma
+          mensagem e perguntas, e responde só dentro de opções fechadas.
+        </p>
       </section>
 
       <!-- 20 FUNÇÃO 1 -->
@@ -3039,6 +3057,56 @@
         </table>
       </section>
 
+      <!-- 25A FLUXO: VISÃO GERAL -->
+      <section class="slide">
+        <h2>Como as camadas <span class="accent">conversam</span></h2>
+        <div class="pf">
+          <div class="pf-row pf-in">
+            <div class="pf-n">1</div>
+            <div class="pf-name">Entrada<small>texto aberto</small></div>
+            <div class="pf-txt">
+              O cliente escreve: <code>quero cancelar e pedir reembolso do mês passado</code>.
+              Nada foi decidido ainda.
+            </div>
+          </div>
+          <div class="pf-row pf-s1">
+            <div class="pf-n">2</div>
+            <div class="pf-name">System One<small>decide · registra · limita</small></div>
+            <div class="pf-txt">
+              Classifica em <code>billing_agent</code> (confiança 0,94) e grava no ledger.
+              A faixa de confiança define o destino:
+              <div class="pf-chips">
+                <span class="pf-chip hi">Alta: segue</span>
+                <span class="pf-chip md">Média: humano confirma</span>
+                <span class="pf-chip lo">Baixa: LLM ou humano</span>
+              </div>
+            </div>
+          </div>
+          <div class="pf-row pf-spec">
+            <div class="pf-n">3</div>
+            <div class="pf-name">Especificação<small>política + schema</small></div>
+            <div class="pf-txt">
+              Só o que passou na faixa Alta chega aqui. Fecha o sentido do pedido:
+              <code>billing.cancellation.v3</code> define o que é "cancelar" e "reembolso do mês passado".
+            </div>
+          </div>
+          <div class="pf-row pf-s2">
+            <div class="pf-n">4</div>
+            <div class="pf-name">System Two<small>raciocínio · tools</small></div>
+            <div class="pf-txt">
+              O LLM raciocina e chama ferramentas, só dentro do que a especificação permite.
+            </div>
+          </div>
+          <div class="pf-row pf-out">
+            <div class="pf-n">5</div>
+            <div class="pf-name">Saída + Ledger<small>validada e auditável</small></div>
+            <div class="pf-txt">
+              O schema é conferido, a ação executa e a decisão fica registrada para reconstruir depois.
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 25B ESPECIFICAÇÃO: O QUE OS MODELOS RECEBEM -->
       <section class="slide">
         <div class="real-badge">
@@ -3072,7 +3140,7 @@ Responda somente com o JSON do schema. Nunca escreva texto fora do JSON.</pre>
         refund_previous_cycle],
       "refund_cycle": enum ["previous"],
       "additionalProperties": false } },
-  <i>"temperature"</i>: 0 <u>// GPT 6.1 Sol não aceita</u>
+  <i>"temperature"</i>: 0 <u>// GPT 6.1 Sol recusa 0 (só aceita 1)</u>
 }</pre>
           </div>
         </div>
@@ -3266,56 +3334,6 @@ Responda somente com o JSON do schema. Nunca escreva texto fora do JSON.</pre>
           Métricas: taxa de fallback · acerto na faixa Alta · estabilidade da
           intenção
         </p>
-      </section>
-
-      <!-- 28 FLUXO -->
-      <section class="slide">
-        <h2>Como as camadas <span class="accent">conversam</span></h2>
-        <div class="pf">
-          <div class="pf-row pf-in">
-            <div class="pf-n">1</div>
-            <div class="pf-name">Entrada<small>texto aberto</small></div>
-            <div class="pf-txt">
-              O cliente escreve: <code>quero cancelar e pedir reembolso do mês passado</code>.
-              Nada foi decidido ainda.
-            </div>
-          </div>
-          <div class="pf-row pf-s1">
-            <div class="pf-n">2</div>
-            <div class="pf-name">System One<small>decide · registra · limita</small></div>
-            <div class="pf-txt">
-              Classifica em <code>billing_agent</code> (confiança 0,94) e grava no ledger.
-              A faixa de confiança define o destino:
-              <div class="pf-chips">
-                <span class="pf-chip hi">Alta: segue</span>
-                <span class="pf-chip md">Média: humano confirma</span>
-                <span class="pf-chip lo">Baixa: LLM ou humano</span>
-              </div>
-            </div>
-          </div>
-          <div class="pf-row pf-spec">
-            <div class="pf-n">3</div>
-            <div class="pf-name">Especificação<small>política + schema</small></div>
-            <div class="pf-txt">
-              Só o que passou na faixa Alta chega aqui. Fecha o sentido do pedido:
-              <code>billing.cancellation.v3</code> define o que é "cancelar" e "reembolso do mês passado".
-            </div>
-          </div>
-          <div class="pf-row pf-s2">
-            <div class="pf-n">4</div>
-            <div class="pf-name">System Two<small>raciocínio · tools</small></div>
-            <div class="pf-txt">
-              O LLM raciocina e chama ferramentas, só dentro do que a especificação permite.
-            </div>
-          </div>
-          <div class="pf-row pf-out">
-            <div class="pf-n">5</div>
-            <div class="pf-name">Saída + Ledger<small>validada e auditável</small></div>
-            <div class="pf-txt">
-              O schema é conferido, a ação executa e a decisão fica registrada para reconstruir depois.
-            </div>
-          </div>
-        </div>
       </section>
 
       <!-- 29 SÍNTESE -->
