@@ -78,13 +78,26 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+      }
+      .masonry {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        margin-bottom: 6px;
+      }
+      .masonry-col {
+        flex: 1;
+        min-width: 0;
+      }
+      .masonry-col .box:last-child {
+        margin-bottom: 0;
       }
       .box {
         border: 1px solid #ccc;
-        padding: 6px 8px;
+        padding: 4px 8px;
         border-radius: 5px;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
       .attributes {
         display: flex;
@@ -150,7 +163,7 @@
       }
       .line {
         border-bottom: 1px dashed #ccc;
-        height: 16px;
+        height: 14px;
         display: flex;
         align-items: center;
         font-size: 10px;
@@ -182,7 +195,7 @@
   </head>
   <body>
     <div class="page">
-      <h1>MADELINE D´HARLAPH</h1>
+      <h1>MADELINE D'HARLAPH</h1>
 
       <div class="header-info">
         <div style="margin-bottom: 4px; font-size: 12px">
@@ -199,8 +212,8 @@
         </div>
       </div>
 
-      <div class="grid-2col">
-        <!-- Atributos e Status -->
+      <div class="masonry">
+        <div class="masonry-col">
         <div class="box">
           <h2>Atributos e Status</h2>
           <div class="attributes">
@@ -237,12 +250,52 @@
               <input type="checkbox" /> POISONED (Envenenado)
             </div>
           </div>
-          <div class="status-grid">
-            Zero - Trigger Crise | Power Limitless 
+          <div
+            style="
+              margin-top: 6px;
+              font-size: 9px;
+              border-top: 1px dashed #ccc;
+              padding-top: 5px;
+            "
+          >
+            <p>
+              <strong>Zero Trigger (Revenge):</strong> 1ª Crise na cena (+3).
+              <strong>Zero Limits:</strong> até o fim da cena, Atributos +1
+              dado (máx. d12) e ação adicional.
+            </p>
           </div>
         </div>
-
-        <!-- Defesas, Pontos e Condições Extras -->
+        <div class="box resources">
+          <h2>Recursos Vitalícios</h2>
+          <table>
+            <tr>
+              <th width="25%">Recurso</th>
+              <th width="20%">Máximo</th>
+              <th width="20%">Crise</th>
+              <th width="35%">Atual</th>
+            </tr>
+            <tr>
+              <td><strong>HP</strong> (Vida)</td>
+              <td>77</td>
+              <td>38</td>
+              <td class="track-box"></td>
+            </tr>
+            <tr>
+              <td><strong>MP</strong> (Mente)</td>
+              <td>62</td>
+              <td>-</td>
+              <td class="track-box"></td>
+            </tr>
+            <tr>
+              <td><strong>IP</strong> (Inventário)</td>
+              <td>6</td>
+              <td>-</td>
+              <td class="track-box"></td>
+            </tr>
+          </table>
+        </div>
+        </div>
+        <div class="masonry-col">
         <div class="box">
           <h2>Defesa, Pontos e Extras</h2>
           <div style="display: flex; justify-content: space-between">
@@ -275,7 +328,7 @@
                   align-items: center;
                 "
               >
-                <span><strong>Iniciativa:</strong> -2</span>
+                <span><strong>Iniciativa:</strong> -2 | M 0</span>
                 <span class="stat-box" style="width: 26px"></span>
               </p>
             </div>
@@ -337,55 +390,31 @@
             </label>
           </div>
         </div>
-      </div>
-
-      <div class="grid-2col">
-        <!-- Recursos: HP, MP, IP -->
-        <div class="box resources" style="margin-bottom: 0">
-          <h2>Recursos Vitalícios</h2>
-          <table>
-            <tr>
-              <th width="25%">Recurso</th>
-              <th width="20%">Máximo</th>
-              <th width="20%">Crise</th>
-              <th width="35%">Atual</th>
-            </tr>
-            <tr>
-              <td><strong>HP</strong> (Vida)</td>
-              <td>83</td>
-              <td>41</td>
-              <td class="track-box"></td>
-            </tr>
-            <tr>
-              <td><strong>MP</strong> (Mente)</td>
-              <td>59</td>
-              <td>-</td>
-              <td class="track-box"></td>
-            </tr>
-            <tr>
-              <td><strong>IP</strong> (Inventário)</td>
-              <td>6</td>
-              <td>-</td>
-              <td class="track-box"></td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- Veículo Pessoal -->
-        <div class="box vehicle" style="margin-bottom: 0">
+        <div class="box vehicle">
           <h2>Veículo Pessoal: Chokka</h2>
           <p>
             <strong>Moldura:</strong> Steed (Montaria, viaja x2, 1 passageiro
             extra).
           </p>
-          <p style="margin-bottom: 2px"><strong>Módulos (4 slots):</strong></p>
+          <p style="margin-bottom: 2px"><strong>Módulos (5 slots):</strong></p>
           <ul style="margin: 2px 0; padding-left: 16px">
             <li>
-              <strong>Aerial Module (2):</strong> Voo, foco corpo a corpo aéreo.
+              <strong>Aerial Module (2):</strong> Voa, distância ×3; melee atinge
+              voadores e ninguém a bordo sofre melee (salvo voadores). Sem
+              efeito: Crise (HP ≤ 38), Guard cobrindo, ou dano de ar/raio/gelo
+              a bordo (até seu próximo turno).
             </li>
-            <li><strong>Standard Plating (1):</strong> Def 11 / M.DEF 10.</li>
-            <li><strong>Advanced Targeting (1):</strong> +2 Precisão.</li>
+            <li><strong>Standard Plating (1):</strong> Marcial (E), Def 11 / M.DEF 10 fixos; só vale para o piloto. Substitui a Brigandine.</li>
+            <li>
+              <strong>Advanced Targeting (1):</strong> Pilotando: +2 em Testes
+              de Precisão e em Testes Mágicos de magias ofensivas.
+            </li>
+            <li>
+              <strong>Garras Chokka (1):</strong> Scythe 【DEX + INS】 (Strong Grip: 【DEX + MIG】) 【HR + 16】
+              físico, pesada, corpo a corpo. Impede outros módulos de arma.
+            </li>
           </ul>
+        </div>
         </div>
       </div>
 
@@ -399,44 +428,50 @@
               <em>Elemental Magic (SL 1) - Elemental Weapon:</em> Gasta 10 MP.
               Alvo: Uma Arma. Duração: Cena. Imbui uma arma com Ar, Raio, Terra,
               Fogo ou Gelo. Dano se torna o elemento escolhido. Pode fazer
-              ataque livre ao conjurar na própria arma.
+              ataque livre ao conjurar na arma equipada. Só em arma de criatura
+              disposta.
             </li>
           </ul>
         </div>
         <div class="skill-item">
-          <strong>Weaponmaster (Nv 4):</strong>
+          <strong>Weaponmaster (Nv 6):</strong>
           <ul>
             <li>
-              <em>Bladestorm:</em> Gasta 10 MP para atingir até dois alvos num
-              único ataque.
+              <em>Bladestorm:</em> Em ataque corpo a corpo, gasta 10 MP: o
+              ataque ganha multi (2) ou aumenta o multi em 1 (máx. multi (3)).
             </li>
             <li>
               <em>Melee Weapon Mastery (SL 3):</em> +3 Precisão corpo a corpo.
             </li>
             <li>
-              <em>Breach (SL 1):</em> Gasta 5 MP para ataque livre sem dano que
-              pode destruir escudo/armadura ou aumentar dano recebido pelo alvo.
+              <em>Breach (SL 1):</em> Ação + 5 MP: ataque livre corpo a corpo
+              contra um único alvo, sem dano. Se acertar, escolha: destruir
+              o escudo do alvo; <strong>OU</strong> destruir a armadura dele;
+              <strong>OU</strong> até seu próximo turno, toda fonte que causar
+              dano ao alvo causa +2 de dano.
             </li>
             <li>
               <em>Counterattack:</em> Se um inimigo errar ou acertar um ataque
               corpo a corpo contra você com um <strong>número PAR</strong> na
-              precisão, faça um contra-ataque livre<br/>(HR = 0 -> 12 | M 14 de dano fixo).
+              precisão, faça um contra-ataque livre<br/>(HR = 0 → 10 com a Greatsword | M 16 com Garras Chokka, dano fixo).
             </li>
           </ul>
         </div>
         <div class="skill-item" style="margin-bottom: 0">
           <strong>Pilot (Nv 4):</strong>
           <ul>
-            <li><em>Personal Vehicle (SL 1):</em> Montaria Chokka.</li>
+            <li><em>Personal Vehicle (SL 2):</em> Montaria Chokka (5 módulos ativos).</li>
             <li>
-              <em>Heart in the Engine (SL 2):</em> Custo 10 MP. Escolha no
-              início do turno montado: +4 Dano no próximo ataque
-              <strong>no turno</strong>; <strong>OU</strong> Reduz 4 do próximo
-              dano recebido; <strong>OU</strong> Cura Slow/Weak.
+              <em>Heart in the Engine (SL 1):</em> Custo 10 MP, <strong>0 MP
+              na Steed</strong>. Escolha no início do turno montado:
+              +2 Dano na próxima vez que causar dano
+              <strong>no turno</strong>; <strong>OU</strong> Reduz 2 do próximo
+              dano sofrido antes do início do próximo turno (antes das
+              Afinidades); <strong>OU</strong> Cura Slow/Weak.
             </li>
             <li>
-              <em>Strong Grip (Garras Chokka):</em> Ao fazer Teste de Precisão com módulo de
-              arma, pode substituir um Atributo por Might.
+              <em>Strong Grip:</em> Em Teste de Precisão com módulo de arma,
+              pode trocar um Atributo por MIG.
             </li>
           </ul>
         </div>
@@ -446,19 +481,22 @@
       <div class="box equipment">
         <h2>Equipamento & Combate</h2>
         <p>
-          <strong>Arma: Espada Grande (Greatsword)</strong> — Precisão: 【DEX +
-          MIG】+4 | Dano: 【HR + 10】 físico
+          <strong>Arma: Espada Grande (Greatsword)</strong>: Precisão: 【DEX +
+          MIG】+4 (+1 arma, +3 Melee Mastery) | Dano: 【HR + 10】 físico | Duas
+          mãos | Contra-ataque <strong>10 físico fixo</strong>
         </p>
         <p>
-          <strong>🔥 ATAQUE MONTADO</strong> (Adv. Targeting + Heart Engine):
-          Precisão <strong>【DEX + MIG】+6</strong> | Dano no turno
-          <strong>【HR + 12】 físico</strong> | Contra-ataque
-          <strong>10 físico fixo (+2 montada)</strong>
-          <span style="font-size: 9px"><em>(fora do turno HR=0)</em></span>
+          <strong>ATAQUE MONTADO (Garras Chokka)</strong> (Scythe + Adv.
+          Targeting + Heart Engine): Precisão <strong>【DEX + MIG】+5</strong> (Strong Grip) |
+          Dano <strong>【HR + 16】 físico</strong>
+          (<strong>【HR + 18】</strong> com Heart in the Engine no turno) |
+          Contra-ataque
+          <strong>16 físico fixo</strong>
         </p>
         <p>
-          <strong>Armadura: Brigandine (Marcial)</strong> — DEF 10, M.DEF +0,
-          Init -2.
+          <strong>Armadura: Brigandine (Marcial)</strong>: DEF 10, M.DEF = INS
+          (d6), Init -2. Montada: substituída pela Standard Plating (sem
+          penalidade de Init).
         </p>
       </div>
 
